@@ -295,8 +295,8 @@ footer{background:var(--ink);border-top:1px solid rgba(255,255,255,.08);padding:
       <p class="cap-l">Get your neighborhood guide</p>
       <p class="cap-t">What's best near you — free.</p>
       <p class="cap-d">We'll send you the top wellness spaces in your area plus first notice of everything opening near you.</p>
-      <form class="cap-f" onsubmit="submitEmail(event)">
-        <input type="email" placeholder="your@email.com" required/>
+      <form class="cap-f" action="https://fund.us13.list-manage.com/subscribe/post?u=10d65743c5e2fcb6f0e93121c&amp;id=0fcf95b99f&amp;f_id=00647de9f0" method="post" target="_blank">
+        <input type="email" name="EMAIL" placeholder="your@email.com" required/>
         <button type="submit">Send My Guide</button>
       </form>
       <p class="cap-n">Free. One email. Unsubscribe any time.</p>
@@ -407,8 +407,8 @@ footer{background:var(--ink);border-top:1px solid rgba(255,255,255,.08);padding:
       <p class="cs-bl">Be a founding member</p>
       <p class="cs-bt">Get notified when we launch.</p>
       <p class="cs-bd">We'll also send you a free neighborhood guide — the best spaces near you, plus everything opening in your city this year.</p>
-      <form class="cs-form" onsubmit="submitEmail(event)">
-        <input type="email" placeholder="your@email.com" required/>
+      <form class="cs-form" action="https://fund.us13.list-manage.com/subscribe/post?u=10d65743c5e2fcb6f0e93121c&amp;id=0fcf95b99f&amp;f_id=00647de9f0" method="post" target="_blank">
+        <input type="email" name="EMAIL" placeholder="your@email.com" required/>
         <button type="submit">Send Me the Guide + Notify Me</button>
       </form>
       <p class="cs-note">Free. One email. Unsubscribe any time.</p>
@@ -1229,8 +1229,8 @@ function renderDirectory(cid) {
     dir.innerHTML = `<div class="coming-city">
       <h2 class="cc-title">${CITY_NAMES[cid]} — Coming Soon</h2>
       <p class="cc-sub">We're curating the best wellness spaces in ${CITY_NAMES[cid]}. Be first to know when it drops.</p>
-      <form class="cc-form" onsubmit="submitEmail(event)">
-        <input type="email" placeholder="your@email.com" required/>
+      <form class="cc-form" action="https://fund.us13.list-manage.com/subscribe/post?u=10d65743c5e2fcb6f0e93121c&amp;id=0fcf95b99f&amp;f_id=00647de9f0" method="post" target="_blank">
+        <input type="email" name="EMAIL" placeholder="your@email.com" required/>
         <button type="submit">Notify Me When Live</button>
       </form>
     </div>`;
@@ -1272,9 +1272,77 @@ function getGrad(type) {
   return GRAD[type] || GRAD.spa;
 }
 
+function getVenueImageRequest(url) {
+  // Card images render at ~240px wide on desktop; provide 1x/2x variants.
+  const widths = [320, 480];
+  try {
+    const u = new URL(url);
+    const h = u.hostname;
+    const make = (w) => {
+      const x = new URL(url);
+      if (h.includes('images.unsplash.com')) {
+        x.searchParams.set('w', String(w));
+        x.searchParams.set('h', String(Math.round(w * 0.7)));
+        x.searchParams.set('fit', 'crop');
+        x.searchParams.set('q', '70');
+        x.searchParams.set('auto', 'format');
+        return x.toString();
+      }
+      if (h.includes('cdn.sanity.io')) {
+        x.searchParams.set('w', String(w));
+        x.searchParams.set('h', String(Math.round(w * 0.7)));
+        x.searchParams.set('q', '70');
+        x.searchParams.set('fit', 'crop');
+        x.searchParams.set('auto', 'format');
+        return x.toString();
+      }
+      if (h.includes('cdn.prod.website-files.com')) {
+        x.searchParams.set('w', String(w));
+        x.searchParams.set('q', '70');
+        x.searchParams.set('auto', 'format');
+        return x.toString();
+      }
+      if (h.includes('images.squarespace-cdn.com')) {
+        x.searchParams.set('format', `${w}w`);
+        return x.toString();
+      }
+      if (h.includes('framerusercontent.com')) {
+        x.searchParams.set('width', String(w));
+        x.searchParams.set('quality', '70');
+        return x.toString();
+      }
+      if (h.includes('wixstatic.com')) {
+        x.searchParams.set('w', String(w));
+        x.searchParams.set('q', '75');
+        return x.toString();
+      }
+      return null;
+    };
+
+    const src320 = make(widths[0]);
+    const src480 = make(widths[1]);
+    if (src320 && src480) {
+      return {
+        src: src480,
+        srcset: `${src320} 320w, ${src480} 480w`,
+        sizes: '(max-width: 900px) 100vw, 240px'
+      };
+    }
+  } catch (_) {
+    // Non-URL or malformed input: fall back to original.
+  }
+
+  return {
+    src: url,
+    srcset: '',
+    sizes: '(max-width: 900px) 100vw, 240px'
+  };
+}
+
 function renderCard(v) {
   const isUp = v.type === 'upcoming';
   const hasColdPlunge = venueHasColdPlunge(v);
+  const imgReq = getVenueImageRequest(v.img);
   const scoreHtml = isUp
     ? `<div class="cscore w"><span class="cop-lbl">Opening</span><span class="cop-when">${v.openWhen}</span></div>`
     : v.score != null
@@ -1290,7 +1358,7 @@ function renderCard(v) {
   const occBadges = occs.map(o=>`<span class="occ-badge occ-${o}">${occLabels[o]||o}</span>`).join('');
   return `<article class="vcard${isUp?' upc':''}" id="${v.id}" data-type="${v.type}" data-occ="${occs.join(' ')}" data-coldplunge="${hasColdPlunge ? '1' : '0'}">
     <div class="cimg">
-      <img src="${v.img}" alt="${v.name}" loading="lazy" decoding="async" width="500" height="350" sizes="(max-width: 900px) 100vw, 240px"
+      <img src="${imgReq.src}"${imgReq.srcset ? ` srcset="${imgReq.srcset}"` : ''} alt="${v.name}" loading="lazy" decoding="async" width="500" height="350" sizes="${imgReq.sizes}"
         onerror="this.style.display='none';this.parentElement.style.background='${grad}'"
         style="width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s"/>
       <div class="cnum${isUp?' w':''}">${v.num}</div>
