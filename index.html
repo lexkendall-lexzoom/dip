@@ -36,6 +36,17 @@ nav{position:sticky;top:0;z-index:400;display:flex;align-items:center;justify-co
 .nav-cta{padding:9px 20px;background:var(--ink);color:#fff;text-decoration:none;font-size:10px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;transition:background .2s}
 .nav-cta:hover{background:var(--teal)}
 
+.nav-item-dd{position:relative}
+.nav-link-btn{font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--stone);background:none;border:none;font-family:var(--font-sans);cursor:pointer;padding:0;display:flex;align-items:center;gap:6px}
+.nav-link-btn:hover{color:var(--ink)}
+.nav-link-btn .car{font-size:9px;transform:translateY(-1px)}
+.venues-menu{position:absolute;top:calc(100% + 14px);right:0;min-width:280px;max-height:360px;overflow:auto;background:#fff;border:2px solid var(--ink);box-shadow:6px 6px 0 var(--ink);padding:8px;display:none;z-index:500}
+.venues-menu.open{display:block}
+.venues-menu a,.venues-menu .vm-empty{display:block;padding:10px 10px;font-size:11px;letter-spacing:.05em;text-decoration:none;color:var(--ink);border-bottom:1px solid var(--mist)}
+.venues-menu a:last-child,.venues-menu .vm-empty:last-child{border-bottom:none}
+.venues-menu a:hover{background:var(--teal-bg);color:var(--teal)}
+.vm-city{padding:8px 10px;font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:var(--stone);font-weight:700}
+
 /* HERO */
 .hero{padding:60px 44px 52px;max-width:1280px;margin:0 auto;display:grid;grid-template-columns:1.1fr .9fr;gap:60px;align-items:start}
 .h-ey{font-size:10px;letter-spacing:.26em;text-transform:uppercase;color:var(--teal);margin-bottom:16px;display:flex;align-items:center;gap:10px}
@@ -282,7 +293,10 @@ footer{background:var(--ink);border-top:1px solid rgba(255,255,255,.08);padding:
     <ul class="nav-links">
       <li><a href="#mapbox">Map</a></li>
       <li><a href="#dir">Directory</a></li>
-      <li><a href="/new-york-city/">Venues</a></li>
+      <li class="nav-item-dd">
+        <button class="nav-link-btn" id="venues-toggle" type="button" aria-expanded="false" aria-controls="venues-menu">Venues <span class="car">▾</span></button>
+        <div class="venues-menu" id="venues-menu" role="menu" aria-label="Venue pages for current city"></div>
+      </li>
     </ul>
     <a href="#cs" class="nav-cta">Get Notified</a>
   </div>
@@ -1176,6 +1190,7 @@ let markers = [];
 document.addEventListener('DOMContentLoaded', () => {
   buildCityTabs();
   buildHeroList();
+  initVenuesDropdown();
   switchCity('nyc', { scrollToDirectory: false });
   loadLeaflet();
 });
@@ -1209,6 +1224,39 @@ function buildHeroList() {
   }).join('');
 }
 
+
+function updateVenuesMenu(cid) {
+  const menu = document.getElementById('venues-menu');
+  const toggle = document.getElementById('venues-toggle');
+  if(!menu || !toggle) return;
+  const city = CITIES[cid];
+  const all = city ? [...(city.venues||[]), ...(city.upcoming||[])] : [];
+  const links = all.filter(v => VENUE_PAGE_PATHS[v.id]).map(v => ({name:v.name, href:VENUE_PAGE_PATHS[v.id]}));
+  menu.innerHTML = `<div class="vm-city">${CITY_NAMES[cid] || 'City'} Venues</div>` +
+    (links.length
+      ? links.map(v => `<a href="${v.href}" role="menuitem">${v.name}</a>`).join('')
+      : '<div class="vm-empty">No venue pages live for this city yet.</div>');
+  toggle.setAttribute('aria-expanded', 'false');
+  menu.classList.remove('open');
+}
+
+function initVenuesDropdown() {
+  const toggle = document.getElementById('venues-toggle');
+  const menu = document.getElementById('venues-menu');
+  if(!toggle || !menu) return;
+  toggle.addEventListener('click', (e) => {
+    e.stopPropagation();
+    const open = menu.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  document.addEventListener('click', (e) => {
+    if(!menu.classList.contains('open')) return;
+    if(menu.contains(e.target) || toggle.contains(e.target)) return;
+    menu.classList.remove('open');
+    toggle.setAttribute('aria-expanded', 'false');
+  });
+}
+
 function switchCity(cid, opts = {}) {
   const { scrollToDirectory = true } = opts;
   currentCity = cid;
@@ -1231,6 +1279,7 @@ function switchCity(cid, opts = {}) {
   }
   // Render directory
   renderDirectory(cid);
+  updateVenuesMenu(cid);
   // Scroll to top of directory on user-initiated city changes only
   if (scrollToDirectory) {
     document.getElementById('dir').scrollIntoView({behavior:'smooth', block:'start'});
