@@ -27,17 +27,17 @@ body{background:var(--page);color:var(--ink);font-family:var(--font-sans);overfl
 /* NAV */
 nav{position:sticky;top:0;z-index:400;display:flex;align-items:center;justify-content:space-between;padding:0 44px;height:60px;background:var(--page);border-bottom:2px solid var(--ink)}
 .logo{text-decoration:none;font-family:var(--font-sans);font-size:27.456px;font-weight:800;letter-spacing:-.02em;color:var(--ink)}
-.logo{text-decoration:none;font-family:var(--font-sans);font-size:21.12px;font-weight:800;letter-spacing:-.02em;color:var(--ink)}
 .logo span{color:var(--teal)}
 .nav-r{display:flex;align-items:center;gap:28px}
-.nav-links{display:flex;gap:24px;list-style:none}
-.nav-links a{font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--stone);text-decoration:none;transition:color .2s}
+.nav-links{display:flex;align-items:stretch;gap:24px;list-style:none;height:100%}
+.nav-links li{display:flex;align-items:stretch}
+.nav-links a{display:flex;align-items:center;height:100%;font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--stone);text-decoration:none;transition:color .2s}
 .nav-links a:hover{color:var(--ink)}
 .nav-cta{padding:9px 20px;background:var(--ink);color:#fff;text-decoration:none;font-size:10px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;transition:background .2s}
 .nav-cta:hover{background:var(--teal)}
 
 .nav-item-dd{position:relative}
-.nav-link-btn{font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--stone);background:none;border:none;font-family:var(--font-sans);cursor:pointer;padding:0;display:flex;align-items:center;gap:6px}
+.nav-link-btn{font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--stone);background:none;border:none;font-family:var(--font-sans);cursor:pointer;padding:0;display:flex;align-items:center;height:100%;gap:6px}
 .nav-link-btn:hover{color:var(--ink)}
 .nav-link-btn .car{font-size:9px;transform:translateY(-1px)}
 .venues-menu{position:absolute;top:calc(100% + 14px);right:0;min-width:280px;max-height:360px;overflow:auto;background:#fff;border:2px solid var(--ink);box-shadow:6px 6px 0 var(--ink);padding:8px;display:none;z-index:500}
@@ -1079,7 +1079,17 @@ const VENUE_PAGE_PATHS = {
   nyc3:'/new-york-city/aire-ancient-baths/',
   nyc4:'/new-york-city/russian-and-turkish-baths/',
   nyc5:'/new-york-city/world-spa/',
-  nyc6:'/new-york-city/othership-flatiron/'
+  nyc6:'/new-york-city/othership-flatiron/',
+  nyc6b:'/new-york-city/othership-williamsburg/',
+  nyc7:'/new-york-city/remedy-place/',
+  nyc8:'/new-york-city/great-jones-spa/',
+  nyc9:'/new-york-city/sojo-spa-club/',
+  nyc10:'/new-york-city/spa-castle/',
+  nyc11:'/new-york-city/lift-next-level-floats/',
+  nycu1:'/new-york-city/schwet/',
+  nycu2:'/new-york-city/the-altar/',
+  nycu3:'/new-york-city/lore-bathing-club/',
+  nycu4:'/new-york-city/saint/'
 };
 
 
