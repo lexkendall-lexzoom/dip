@@ -12,7 +12,7 @@
   <meta property="og:url" content="https://dipdays.com/new-york-city/sojo-spa-club/" />
   <meta property="og:image" content="https://sojospaclub.com/wp-content/uploads/2023/02/sojo-loop-fallback.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
-  <style>body{font-family:Arial,sans-serif;max-width:900px;margin:0 auto;padding:40px 20px;line-height:1.6;background:#f3f0e8;color:#111}a{color:#0b7c78}.box{background:#fff;border:2px solid #111;padding:18px;margin-top:16px}</style>
+  <style>body{font-family:Arial,sans-serif;max-width:900px;margin:0 auto;padding:40px 20px;line-height:1.6;background:#f3f0e8;color:#111}a{color:#0b7c78}.box{background:#fff;border:2px solid #111;padding:18px;margin-top:16px}.carousel{position:relative;margin-top:16px}.carousel-track{display:flex;overflow:hidden;border:2px solid #111;aspect-ratio:16/9;background:#111}.slide{min-width:100%;height:100%}.slide img{width:100%;height:100%;object-fit:cover;display:block}.controls{display:flex;justify-content:space-between;align-items:center;margin-top:10px}.btn{background:#111;color:#fff;border:none;padding:9px 12px;font-size:11px;letter-spacing:.12em;text-transform:uppercase;cursor:pointer}.dots{display:flex;gap:8px}.dot{width:9px;height:9px;border-radius:50%;background:#c7c2b8;border:none;cursor:pointer}.dot.active{background:#0b7c78}</style>
 </head>
 <body>
   <p><a href="/new-york-city/">← Back to New York City guide</a></p>
@@ -25,6 +25,50 @@
     <p>Technically New Jersey, spiritually New York. The rooftop infinity pool with Manhattan views is one of the genuinely great moments in this metro area. 240,000 sq ft, 19 water features, seven sauna rooms. Take the NJ Transit bus from Port Authority — it's fifteen minutes and completely worth it.</p>
     <p><a href="https://sojospa.com" target="_blank" rel="noopener noreferrer">Official Website →</a></p>
   </div>
-  <p><img src="https://sojospaclub.com/wp-content/uploads/2023/02/sojo-loop-fallback.jpg" alt="SoJo Spa Club image" style="max-width:100%;border:2px solid #111" loading="lazy"></p>
+  <section class="carousel" data-carousel>
+  <h2 style="margin:0 0 10px;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:#666">Venue Photos</h2>
+  <div class="carousel-track" data-track>
+    <div class="slide"><img src="https://sojospaclub.com/wp-content/uploads/2023/02/sojo-loop-fallback.jpg" alt="SoJo Spa Club image photo 1" loading="lazy"/></div>
+    <div class="slide"><img src="https://images.unsplash.com/photo-1600334129128-685c5582fd35?auto=format&fit=crop&w=1600&q=80" alt="SoJo Spa Club image photo 2" loading="lazy"/></div>
+    <div class="slide"><img src="https://images.unsplash.com/photo-1621275471769-e6aa344546d5?auto=format&fit=crop&w=1600&q=80" alt="SoJo Spa Club image photo 3" loading="lazy"/></div>
+  </div>
+  <div class="controls">
+    <button class="btn" type="button" data-prev>← Prev</button>
+    <div class="dots">
+      <button class="dot active" type="button" data-dot="0" aria-label="Slide 1"></button>
+      <button class="dot" type="button" data-dot="1" aria-label="Slide 2"></button>
+      <button class="dot" type="button" data-dot="2" aria-label="Slide 3"></button>
+    </div>
+    <button class="btn" type="button" data-next>Next →</button>
+  </div>
+</section>
+<script>
+(function() {
+  document.querySelectorAll('[data-carousel]').forEach((carousel) => {
+    const track = carousel.querySelector('[data-track]');
+    const slides = Array.from(track.children);
+    const dots = Array.from(carousel.querySelectorAll('[data-dot]'));
+    let index = 0;
+
+    function render() {
+      track.style.transform = `translateX(-${index * 100}%)`;
+      track.style.transition = 'transform 260ms ease';
+      dots.forEach((d, i) => d.classList.toggle('active', i === index));
+    }
+
+    carousel.querySelector('[data-prev]').addEventListener('click', () => {
+      index = (index - 1 + slides.length) % slides.length;
+      render();
+    });
+
+    carousel.querySelector('[data-next]').addEventListener('click', () => {
+      index = (index + 1) % slides.length;
+      render();
+    });
+
+    dots.forEach((dot, i) => dot.addEventListener('click', () => { index = i; render(); }));
+  });
+})();
+</script>
 </body>
 </html>
