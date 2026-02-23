@@ -4,6 +4,13 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Dip Days — The Best Sweats in Your City</title>
+<meta name="description" content="Find the best bathhouses, saunas, thermal baths, and cold plunges in top US cities with Dip's editorial directory."/>
+<link rel="canonical" href="https://dipdays.com/"/>
+<meta property="og:title" content="Dip Days — The Best Sweats in Your City"/>
+<meta property="og:description" content="The best bathhouses, saunas, thermal baths, and cold plunges in your city."/>
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://dipdays.com/"/>
+<meta name="twitter:card" content="summary"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Playfair+Display:ital,wght@0,500;1,400;1,500&display=swap"/>
@@ -28,6 +35,17 @@ nav{position:sticky;top:0;z-index:400;display:flex;align-items:center;justify-co
 .nav-links a:hover{color:var(--ink)}
 .nav-cta{padding:9px 20px;background:var(--ink);color:#fff;text-decoration:none;font-size:10px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;transition:background .2s}
 .nav-cta:hover{background:var(--teal)}
+
+.nav-item-dd{position:relative}
+.nav-link-btn{font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--stone);background:none;border:none;font-family:var(--font-sans);cursor:pointer;padding:0;display:flex;align-items:center;gap:6px}
+.nav-link-btn:hover{color:var(--ink)}
+.nav-link-btn .car{font-size:9px;transform:translateY(-1px)}
+.venues-menu{position:absolute;top:calc(100% + 14px);right:0;min-width:280px;max-height:360px;overflow:auto;background:#fff;border:2px solid var(--ink);box-shadow:6px 6px 0 var(--ink);padding:8px;display:none;z-index:500}
+.venues-menu.open{display:block}
+.venues-menu a,.venues-menu .vm-empty{display:block;padding:10px 10px;font-size:11px;letter-spacing:.05em;text-decoration:none;color:var(--ink);border-bottom:1px solid var(--mist)}
+.venues-menu a:last-child,.venues-menu .vm-empty:last-child{border-bottom:none}
+.venues-menu a:hover{background:var(--teal-bg);color:var(--teal)}
+.vm-city{padding:8px 10px;font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:var(--stone);font-weight:700}
 
 /* HERO */
 .hero{padding:60px 44px 52px;max-width:1280px;margin:0 auto;display:grid;grid-template-columns:1.1fr .9fr;gap:60px;align-items:start}
@@ -275,6 +293,10 @@ footer{background:var(--ink);border-top:1px solid rgba(255,255,255,.08);padding:
     <ul class="nav-links">
       <li><a href="#mapbox">Map</a></li>
       <li><a href="#dir">Directory</a></li>
+      <li class="nav-item-dd">
+        <button class="nav-link-btn" id="venues-toggle" type="button" aria-expanded="false" aria-controls="venues-menu">Venues <span class="car">▾</span></button>
+        <div class="venues-menu" id="venues-menu" role="menu" aria-label="Venue pages for current city"></div>
+      </li>
     </ul>
     <a href="#cs" class="nav-cta">Get Notified</a>
   </div>
@@ -312,6 +334,7 @@ footer{background:var(--ink);border-top:1px solid rgba(255,255,255,.08);padding:
 <div class="city-nav" id="city-nav">
   <div class="city-tabs" id="city-tabs"></div>
 </div>
+<p style="max-width:1280px;margin:14px auto 0;padding:0 44px;font-size:12px;color:#555">Prefer city-specific pages? <a href="/cities/" style="color:#0b7c78;font-weight:700">Browse all Dip city guides →</a></p>
 
 <!-- MAP -->
 <div class="map-wrap">
@@ -1050,6 +1073,15 @@ const CITIES = {
 // Cities order
 const CITY_ORDER = ['nyc','la','miami','sf','chicago','scottsdale','austin','dc','seattle','boston','denver','boulder','sandiego','aspen','napa','sonoma','hamptons','sedona','palmbeach','nantucket','jacksonhole','nashville','charlotte','irvine','arlington'];
 const CITY_NAMES = {nyc:'New York City',la:'Los Angeles',miami:'Miami',sf:'San Francisco',chicago:'Chicago',scottsdale:'Scottsdale',austin:'Austin',dc:'Washington DC',seattle:'Seattle',boston:'Boston',denver:'Denver',boulder:'Boulder',sandiego:'San Diego',aspen:'Aspen',napa:'Napa Valley',sonoma:'Sonoma',hamptons:'The Hamptons',sedona:'Sedona',palmbeach:'Palm Beach',nantucket:'Nantucket',jacksonhole:'Jackson Hole',nashville:'Nashville',charlotte:'Charlotte',irvine:'Irvine',arlington:'Arlington'};
+const VENUE_PAGE_PATHS = {
+  nyc1:'/new-york-city/bathhouse-williamsburg/',
+  nyc2:'/new-york-city/akari-sauna/',
+  nyc3:'/new-york-city/aire-ancient-baths/',
+  nyc4:'/new-york-city/russian-and-turkish-baths/',
+  nyc5:'/new-york-city/world-spa/',
+  nyc6:'/new-york-city/othership-flatiron/'
+};
+
 
 // ─── OCCASIONS MAP ────────────────────────────────────
 // date=Date Night, meeting=Business Meeting, solo=Solo Unwind,
@@ -1158,6 +1190,7 @@ let markers = [];
 document.addEventListener('DOMContentLoaded', () => {
   buildCityTabs();
   buildHeroList();
+  initVenuesDropdown();
   switchCity('nyc', { scrollToDirectory: false });
   loadLeaflet();
 });
@@ -1191,6 +1224,39 @@ function buildHeroList() {
   }).join('');
 }
 
+
+function updateVenuesMenu(cid) {
+  const menu = document.getElementById('venues-menu');
+  const toggle = document.getElementById('venues-toggle');
+  if(!menu || !toggle) return;
+  const city = CITIES[cid];
+  const all = city ? [...(city.venues||[]), ...(city.upcoming||[])] : [];
+  const links = all.filter(v => VENUE_PAGE_PATHS[v.id]).map(v => ({name:v.name, href:VENUE_PAGE_PATHS[v.id]}));
+  menu.innerHTML = `<div class="vm-city">${CITY_NAMES[cid] || 'City'} Venues</div>` +
+    (links.length
+      ? links.map(v => `<a href="${v.href}" role="menuitem">${v.name}</a>`).join('')
+      : '<div class="vm-empty">No venue pages live for this city yet.</div>');
+  toggle.setAttribute('aria-expanded', 'false');
+  menu.classList.remove('open');
+}
+
+function initVenuesDropdown() {
+  const toggle = document.getElementById('venues-toggle');
+  const menu = document.getElementById('venues-menu');
+  if(!toggle || !menu) return;
+  toggle.addEventListener('click', (e) => {
+    e.stopPropagation();
+    const open = menu.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  document.addEventListener('click', (e) => {
+    if(!menu.classList.contains('open')) return;
+    if(menu.contains(e.target) || toggle.contains(e.target)) return;
+    menu.classList.remove('open');
+    toggle.setAttribute('aria-expanded', 'false');
+  });
+}
+
 function switchCity(cid, opts = {}) {
   const { scrollToDirectory = true } = opts;
   currentCity = cid;
@@ -1213,6 +1279,7 @@ function switchCity(cid, opts = {}) {
   }
   // Render directory
   renderDirectory(cid);
+  updateVenuesMenu(cid);
   // Scroll to top of directory on user-initiated city changes only
   if (scrollToDirectory) {
     document.getElementById('dir').scrollIntoView({behavior:'smooth', block:'start'});
@@ -1347,15 +1414,18 @@ function renderCard(v) {
       ? `<div class="cscore"><span class="cscore-n">${v.score.toFixed(1)}</span><span class="cscore-d">/ 10</span></div>`
       : `<div class="cscore"><span class="cop-lbl" style="color:var(--teal)">Now Open</span></div>`;
   const gfTags = v.gf.map(g => `<span class="gft${isUp?' w':''}">${g}</span>`).join('');
+  const detailUrl = VENUE_PAGE_PATHS[v.id] || '';
   const visitLink = isUp
     ? `<a href="${v.url}" target="_blank" rel="noopener noreferrer" class="cvisit w" aria-label="Follow ${v.name} (opens in a new tab)">Follow →</a>`
-    : `<a href="${v.url}" target="_blank" rel="noopener noreferrer" class="cvisit" aria-label="Visit ${v.name} website (opens in a new tab)">Website →</a>`;
+    : detailUrl
+      ? `<a href="${detailUrl}" class="cvisit" aria-label="Read Dip review for ${v.name}">Dip Review →</a>`
+      : `<a href="${v.url}" target="_blank" rel="noopener noreferrer" class="cvisit" aria-label="Visit ${v.name} website (opens in a new tab)">Website →</a>`;
   const grad = getGrad(isUp ? 'upcoming' : v.type);
   const occs = OCC[v.id] || [];
   const occLabels = {date:'🕯️ Date Night',meeting:'🤝 Business Meeting',solo:'🧘 Solo Unwind',scene:'🎉 The Scene',group:'👥 Group Day',recovery:'⚡ Recovery'};
   const occBadges = occs.map(o=>`<span class="occ-badge occ-${o}">${occLabels[o]||o}</span>`).join('');
   return `<article class="vcard${isUp?' upc':''}" id="${v.id}" data-type="${v.type}" data-occ="${occs.join(' ')}" data-coldplunge="${hasColdPlunge ? '1' : '0'}">
-    <div class="cimg">
+    <div class="cimg" ${detailUrl ? `onclick="window.location.href='${detailUrl}'" style="cursor:pointer"` : ""}>
       <img src="${imgReq.src}"${imgReq.srcset ? ` srcset="${imgReq.srcset}"` : ''} alt="${v.name}" loading="lazy" decoding="async" width="500" height="350" sizes="${imgReq.sizes}"
         onerror="this.style.display='none';this.parentElement.style.background='${grad}'"
         style="width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s"/>
@@ -1366,7 +1436,7 @@ function renderCard(v) {
       <div class="ctop">
         <div>
           <div class="chood${isUp?' w':''}">${v.hood}</div>
-          <h3 class="cname">${v.name}</h3>
+          <h3 class="cname">${detailUrl ? `<a href="${detailUrl}" style="color:inherit;text-decoration:none">${v.name}</a>` : v.name}</h3>
         </div>
         ${scoreHtml}
       </div>

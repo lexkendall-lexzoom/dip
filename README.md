@@ -4,8 +4,10 @@ DIP is a directory for bathhouses, contrast bathing, and other wellness faciliti
 
 ## Current state
 
-- Static single-page prototype in `index.html`
+- Static homepage in `index.html` plus crawlable city landing pages
 - Includes city tabs, map integration (Leaflet), filters, and venue cards
+- Phase 1 SEO pages added: `/cities/`, `/new-york-city/`, `/los-angeles/`, `/miami/`, `/san-francisco/`, `/chicago/`
+- NYC venue pages added (Phase 1b): `/new-york-city/bathhouse-williamsburg/`, `/new-york-city/akari-sauna/`, `/new-york-city/aire-ancient-baths/`, `/new-york-city/russian-and-turkish-baths/`, `/new-york-city/world-spa/`, `/new-york-city/othership-flatiron/`
 - Venue data is embedded in the page script
 
 ## Run locally
