@@ -1163,7 +1163,7 @@ let markers = [];
 document.addEventListener('DOMContentLoaded', () => {
   buildCityTabs();
   buildHeroList();
-  switchCity('nyc');
+  switchCity('nyc', { scrollToDirectory: false });
   loadLeaflet();
 });
 
@@ -1196,7 +1196,8 @@ function buildHeroList() {
   }).join('');
 }
 
-function switchCity(cid) {
+function switchCity(cid, opts = {}) {
+  const { scrollToDirectory = true } = opts;
   currentCity = cid;
   activeFilter = 'all';
   activeOccasion = null;
@@ -1217,8 +1218,10 @@ function switchCity(cid) {
   }
   // Render directory
   renderDirectory(cid);
-  // Scroll to top of directory
-  document.getElementById('dir').scrollIntoView({behavior:'smooth', block:'start'});
+  // Scroll to top of directory on user-initiated city changes only
+  if (scrollToDirectory) {
+    document.getElementById('dir').scrollIntoView({behavior:'smooth', block:'start'});
+  }
 }
 
 // ─── DIRECTORY RENDERING ───────────────────────────────
