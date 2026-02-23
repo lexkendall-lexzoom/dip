@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>BathPass — The Best Sweats in Your City</title>
+<title>DIP — The Best Sweats in Your City</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Playfair+Display:ital,wght@0,500;1,400;1,500&display=swap"/>
@@ -22,8 +22,8 @@ body{background:var(--page);color:var(--ink);font-family:var(--font-sans);overfl
 .ann em{font-style:normal;opacity:.6}
 
 /* NAV */
-nav{position:sticky;top:0;z-index:400;display:flex;align-items:center;justify-content:space-between;padding:0 44px;height:60px;background:var(--page);border-bottom:2px solid var(--ink)}
-.logo{text-decoration:none;font-family:var(--font-sans);font-size:22px;font-weight:800;letter-spacing:-.02em;color:var(--ink)}
+nav{position:sticky;top:0;z-index:400;display:flex;align-items:center;justify-content:space-between;padding:8px 44px;height:auto;background:var(--page);border-bottom:2px solid var(--ink)}
+.logo{text-decoration:none;font-family:var(--font-sans);font-size:clamp(35px,4.4vw,61px);font-weight:800;line-height:.94;letter-spacing:-.03em;color:var(--ink)}
 .logo span{color:var(--teal)}
 .nav-r{display:flex;align-items:center;gap:28px}
 .nav-links{display:flex;gap:24px;list-style:none}
@@ -261,7 +261,7 @@ footer{background:var(--ink);border-top:1px solid rgba(255,255,255,.08);padding:
 @media(max-width:900px){
   .hero{grid-template-columns:1fr;padding:72px 22px 40px;gap:36px}
   .hero-right-col{display:none}
-  nav{padding:0 18px}.nav-links{display:none}
+  nav{padding:8px 18px}.nav-links{display:none}
   .map-wrap,.dir,.fbar{padding-left:18px;padding-right:18px}
   .vcard{flex-direction:column}.cimg{width:100%;height:180px}
   .cs-in{grid-template-columns:1fr;gap:32px}.cs{padding:48px 18px}
@@ -272,16 +272,16 @@ footer{background:var(--ink);border-top:1px solid rgba(255,255,255,.08);padding:
 </head>
 <body>
 
-<div class="ann">BathPass Membership — Coming Soon &nbsp;·&nbsp; <em>Your passport to best prices at the best venues</em> ✦</div>
+<div class="ann">DIP Partner Alerts &nbsp;·&nbsp; <em>New openings and exclusive offers from top venues</em> ✦</div>
 
 <nav>
-  <a href="#" class="logo">Bath<span>Pass</span></a>
+  <a href="#" class="logo">DIP</a>
   <div class="nav-r">
     <ul class="nav-links">
       <li><a href="#mapbox">Map</a></li>
       <li><a href="#dir">Directory</a></li>
     </ul>
-    <a href="#cs" class="nav-cta">Get Early Access</a>
+    <a href="#cs" class="nav-cta">Get Notified</a>
   </div>
 </nav>
 
@@ -292,12 +292,12 @@ footer{background:var(--ink);border-top:1px solid rgba(255,255,255,.08);padding:
     <h1 class="h-title">The Best<br/><span>Sweats</span><br/>In Your<br/>City.</h1>
     <p class="h-sub">Every bathhouse, sauna, thermal bath, and cold plunge worth your time — with prices, honest reviews, and everything you need.</p>
     <div class="capture">
-      <p class="cap-l">Get your neighborhood guide</p>
-      <p class="cap-t">What's best near you — free.</p>
-      <p class="cap-d">We'll send you the top wellness spaces in your area plus first notice of everything opening near you.</p>
+      <p class="cap-l">Stay in the loop</p>
+      <p class="cap-t">Be the first to know about new openings and exclusive offers from Dip partners.</p>
+      <p class="cap-d">Get alerts about newly opened venues in your city, plus exclusive partner offers sent straight to your inbox.</p>
       <form class="cap-f" action="https://fund.us13.list-manage.com/subscribe/post?u=10d65743c5e2fcb6f0e93121c&amp;id=0fcf95b99f&amp;f_id=00647de9f0" method="post" target="_blank">
         <input type="email" name="EMAIL" placeholder="your@email.com" required/>
-        <button type="submit">Send My Guide</button>
+        <button type="submit">Notify Me</button>
       </form>
       <p class="cap-n">Free. One email. Unsubscribe any time.</p>
     </div>
@@ -399,17 +399,17 @@ footer{background:var(--ink);border-top:1px solid rgba(255,255,255,.08);padding:
 <section class="cs" id="cs">
   <div class="cs-in">
     <div>
-      <p class="cs-ey">BathPass Membership</p>
-      <h2 class="cs-t">One Pass.<br/><span>Every Space.</span></h2>
-      <p class="cs-s">We're building a membership that gives you access to every venue in this directory at the best available prices — plus exclusive events, community dinners, and experiences built around ritual and connection.</p>
+      <p class="cs-ey">Dip Partner Alerts</p>
+      <h2 class="cs-t">New Openings.<br/><span>Exclusive Offers.</span></h2>
+      <p class="cs-s">Get first notice when new venues open in your city, plus limited-time offers from Dip partners.</p>
     </div>
     <div class="cs-box">
-      <p class="cs-bl">Be a founding member</p>
-      <p class="cs-bt">Get notified when we launch.</p>
-      <p class="cs-bd">We'll also send you a free neighborhood guide — the best spaces near you, plus everything opening in your city this year.</p>
+      <p class="cs-bl">Subscriber updates</p>
+      <p class="cs-bt">Get notified about new openings and partner offers.</p>
+      <p class="cs-bd">Subscribers get alerts for new venue openings and exclusive offers from Dip partners.</p>
       <form class="cs-form" action="https://fund.us13.list-manage.com/subscribe/post?u=10d65743c5e2fcb6f0e93121c&amp;id=0fcf95b99f&amp;f_id=00647de9f0" method="post" target="_blank">
         <input type="email" name="EMAIL" placeholder="your@email.com" required/>
-        <button type="submit">Send Me the Guide + Notify Me</button>
+        <button type="submit">Notify Me</button>
       </form>
       <p class="cs-note">Free. One email. Unsubscribe any time.</p>
     </div>
@@ -418,7 +418,7 @@ footer{background:var(--ink);border-top:1px solid rgba(255,255,255,.08);padding:
 </main>
 
 <footer>
-  <span class="fc">© 2025 BathPass · bathpass.co</span>
+  <span class="fc">© 2025 DIP · dipdays.co</span>
   <ul class="fl"><li><a href="#">About</a></li><li><a href="#">Contact</a></li></ul>
 </footer>
 
@@ -545,7 +545,7 @@ const CITIES = {
        hours:'Mon-Fri 7am-11pm · Sat-Sun 8am-11pm',
        url:'https://www.lorebathingclub.com',
        lat:40.7273,lng:-73.9930,
-       img:'https://images.unsplash.com/photo-1584650000082-7e6c78f17b4a?w=500&h=350&fit=crop&q=80'},
+       img:'https://image.thum.io/get/width/1000/crop/700/noanimate/https://www.lorebathingclub.com'},
     ],
     upcoming:[
       {id:'nycu1',num:12,name:'Schwet',hood:'Tribeca, Manhattan',type:'upcoming',price:'$150 / 2.5 hrs',score:null,
@@ -632,21 +632,21 @@ const CITIES = {
        review:'Seventy thousand square feet of wellness on the north end of Miami Beach, and more serious about it than most. The thermal circuit is the anchor — hydrotherapy pools, sauna, steam — plus a roster of treatments that leans functional over indulgent.',
        hours:'Daily · Day pass from $75',url:'https://carillonhotel.com',
        lat:25.8631,lng:-80.1203,
-       img:'https://images.unsplash.com/photo-1551882547-ff40c63fe2e2?w=500&h=350&fit=crop&q=80'},
+       img:'https://image.thum.io/get/width/1000/crop/700/noanimate/https://carillonhotel.com'},
 
       {id:'mia2',num:2,name:'The Spa at The Standard',hood:'Belle Isle, Miami Beach',type:'bathhouse',price:'from $75',score:8.2,
        gf:['The scene','Poolside','Turkish hammam','Visitors'],
        review:'The Standard\'s spa has always punched above its weight. The hammam and cold plunge ritual is genuinely good. The pool deck is genuinely the place to be on a Tuesday afternoon in Miami. It\'s both things at once and makes no apology for it.',
        hours:'Daily · Hotel + non-guest access',url:'https://standardhotels.com',
        lat:25.7850,lng:-80.1430,
-       img:'https://images.unsplash.com/photo-1560185007-c5ca9d2c014d?w=500&h=350&fit=crop&q=80'},
+       img:'https://image.thum.io/get/width/1000/crop/700/noanimate/https://standardhotels.com'},
 
       {id:'mia3',num:3,name:'Faena Spa',hood:'Mid-Beach, Miami Beach',type:'spa',price:'from $100',score:8.0,
        gf:['Luxury',  'Special occasions','Argentine ritual'],
        review:'Alan Faena built a hotel that doesn\'t look like anything else, and the spa follows. The treatments lean into Argentine wellness traditions with signature rituals that you won\'t find at another property. Book the pools even if you do nothing else.',
        hours:'Daily · Reservation required',url:'https://faena.com',
        lat:25.8080,lng:-80.1230,
-       img:'https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=500&h=350&fit=crop&q=80'},
+       img:'https://image.thum.io/get/width/1000/crop/700/noanimate/https://faena.com'},
     ],upcoming:[]
   },
 
@@ -658,21 +658,21 @@ const CITIES = {
        review:'An authentic Russian banya in Dogpatch that the Bay Area genuinely does not deserve but is very lucky to have. Three saunas including a banya at 200°F, cold plunge pools, eucalyptus steam, and a full menu of massage and body treatments. The platza service is the real deal.',
        hours:'Tue–Sun 10am–10pm · Mon 12pm–10pm',url:'https://archimedesbanya.com',
        lat:37.7556,lng:-122.3872,
-       img:'https://images.unsplash.com/photo-1527637040694-60b17b13f9df?w=500&h=350&fit=crop&q=80'},
+       img:'https://image.thum.io/get/width/1000/crop/700/noanimate/https://archimedesbanya.com'},
 
       {id:'sf2',num:2,name:'Kabuki Springs & Spa',hood:'Japantown',type:'bathhouse',price:'from $35',score:8.5,
        gf:['Japanese tradition','Value','Communal bathing','Locals'],
        review:'A Japanese communal bath in the heart of Japantown that has been doing this for decades. Alternating gender-separated and co-ed days. The soaking pool, sauna, and cold plunge circuit is $35 and worth twice that. A San Francisco institution.',
        hours:'Daily · Check gender schedule',url:'https://kabukisprings.com',
        lat:37.7849,lng:-122.4313,
-       img:'https://images.unsplash.com/photo-1545205597-3d9d02c29597?w=500&h=350&fit=crop&q=80'},
+       img:'https://image.thum.io/get/width/1000/crop/700/noanimate/https://kabukisprings.com'},
 
       {id:'sf3',num:3,name:'International Orange',hood:'Fillmore',type:'spa',price:'from $135',score:7.8,
        gf:['Boutique','Intimate','Treatments'],
        review:'A small, seriously curated spa on Fillmore that has built a devoted following by being good at exactly what it does — skilled therapists, thoughtful product, and none of the sprawl. The most boutique experience on this list.',
        hours:'Daily · By appointment',url:'https://internationalorange.com',
        lat:37.7882,lng:-122.4328,
-       img:'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=500&h=350&fit=crop&q=80'},
+       img:'https://image.thum.io/get/width/1000/crop/700/noanimate/https://internationalorange.com'},
     ],upcoming:[]
   },
 
@@ -684,21 +684,21 @@ const CITIES = {
        review:'A neighborhood Russian banya on Division Street that\'s been sweating Chicagoans since 1914. The schvitz room, oak-leaf platza, and cold pool are the entire experience — no upgrades, no wellness branding, no apologies. The most authentic bathhouse between New York and Los Angeles.',
        hours:'Daily · Call ahead',url:'https://www.russianvaporbaths.com',
        lat:41.9060,lng:-87.6720,
-       img:'https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=500&h=350&fit=crop&q=80'},
+       img:'https://image.thum.io/get/width/1000/crop/700/noanimate/https://www.russianvaporbaths.com'},
 
       {id:'chi2',num:2,name:'Chuan Spa at The Langham',hood:'River North',type:'spa',price:'from $85',score:8.0,
        gf:['Luxury hotel spa','Business travel','Full service'],
        review:'The best hotel spa in Chicago by a comfortable margin. Traditional Chinese wellness philosophy applied with modern precision — the contrast pools and heated stone loungers in the thermal suite are reason enough to come. The Langham just does things properly.',
        hours:'Daily · Hotel + external booking',url:'https://chicago.langhamhotels.com',
        lat:41.8878,lng:-87.6262,
-       img:'https://images.unsplash.com/photo-1574478839902-9135bc39bc99?w=500&h=350&fit=crop&q=80'},
+       img:'https://image.thum.io/get/width/1000/crop/700/noanimate/https://chicago.langhamhotels.com'},
 
       {id:'chi3',num:3,name:'Den Wellness',hood:'River North',type:'sauna',price:'from $45',score:7.8,
        gf:['Sauna + cold plunge','Community','After work'],
        review:'Chicago\'s cleanest answer to the sauna-and-cold-plunge trend. Infrared and traditional Finnish sauna, ice plunge, and a social lounge designed around community rather than isolation. Sessions book fast — plan ahead.',
        hours:'Daily · Session-based',url:'https://denwellness.com',
        lat:41.8920,lng:-87.6290,
-       img:'https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=500&h=350&fit=crop&q=80'},
+       img:'https://image.thum.io/get/width/1000/crop/700/noanimate/https://denwellness.com'},
     ],upcoming:[]
   },
 
@@ -710,21 +710,21 @@ const CITIES = {
        review:'Set into the south slope of Camelback Mountain with views that make the $150 day-pass feel modest. The outdoor desert pools, the sound of nothing, and a treatment menu built around Indigenous desert healing traditions. The best full-day spa experience in the Southwest.',
        hours:'Daily · Reservation recommended',url:'https://www.sanctuaryoncamelback.com',
        lat:33.5320,lng:-111.9740,
-       img:'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=500&h=350&fit=crop&q=80'},
+       img:'https://image.thum.io/get/width/1000/crop/700/noanimate/https://www.sanctuaryoncamelback.com'},
 
       {id:'sco2',num:2,name:'CIVANA Wellness Resort',hood:'Carefree',type:'resort',price:'from $85',score:8.5,
        gf:['Desert wellness','Full programming','Groups','Mindfulness'],
        review:'A serious wellness resort north of Scottsdale that does the programming — yoga, meditation, nutrition, spa — with genuine conviction rather than resort-hotel checkbox energy. Day passes available. Worth the drive to Carefree.',
        hours:'Daily · Day passes + resort stays',url:'https://civanaresort.com',
        lat:33.8261,lng:-111.9157,
-       img:'https://images.unsplash.com/photo-1501854140801-50d01698950b?w=500&h=350&fit=crop&q=80'},
+       img:'https://image.thum.io/get/width/1000/crop/700/noanimate/https://civanaresort.com'},
 
       {id:'sco3',num:3,name:'Spa at Four Seasons Troon North',hood:'North Scottsdale',type:'spa',price:'from $120',score:8.0,
        gf:['Golf + spa','Saguaro views','Luxury resort'],
        review:'The Four Seasons Troon North spa sits in the middle of the Sonoran Desert with giant saguaros outside every window, and knows how to use its setting. The desert stone massage is legitimately good. The outdoor soaking pool is a strong life choice.',
        hours:'Daily · Reservation required',url:'https://www.fourseasons.com/scottsdale',
        lat:33.6540,lng:-111.8330,
-       img:'https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=500&h=350&fit=crop&q=80'},
+       img:'https://image.thum.io/get/width/1000/crop/700/noanimate/https://www.fourseasons.com/scottsdale'},
     ],upcoming:[]
   },
 
@@ -736,21 +736,21 @@ const CITIES = {
        review:'An all-inclusive spa resort on the banks of Lake Austin that consistently ranks among the best in the country, and earns it. The LakeHouse Spa, outdoor pools, botanical gardens, and treatment options are all exceptional. Day passes exist. Staying is better.',
        hours:'Daily · Reservation required',url:'https://lakeaustin.com',
        lat:30.3540,lng:-97.8580,
-       img:'https://images.unsplash.com/photo-1535530992830-e25d07cfa780?w=500&h=350&fit=crop&q=80'},
+       img:'https://image.thum.io/get/width/1000/crop/700/noanimate/https://lakeaustin.com'},
 
       {id:'aus2',num:2,name:'Hiatus Spa + Retreat',hood:'South Austin',type:'spa',price:'from $75',score:8.0,
        gf:['Urban wellness','Locals\' pick','Treatments'],
        review:'Austin\'s most consistently excellent urban day spa. Not a resort, not a hotel amenity — a standalone spa that takes its craft seriously. The thermal circuit access with cold plunge and steam is solid, the treatment menu is thoughtful.',
        hours:'Daily · By appointment',url:'https://hiatus-spa.com',
        lat:30.2373,lng:-97.7888,
-       img:'https://images.unsplash.com/photo-1519167758481-83f550bb8eb2?w=500&h=350&fit=crop&q=80'},
+       img:'https://image.thum.io/get/width/1000/crop/700/noanimate/https://hiatus-spa.com'},
 
       {id:'aus3',num:3,name:'Austin Float Center',hood:'East Austin',type:'float',price:'from $79',score:7.8,
        gf:['Sensory deprivation','Post-festival reset','East Austin'],
        review:'Austin\'s most dedicated float operation. Multiple tank options, clean facilities, and a staff that actually knows what float therapy does to your nervous system. East Austin location means you can go after dinner and walk to something good.',
        hours:'Daily 9am–10pm · By appointment',url:'https://austinfloatcenter.com',
        lat:30.2660,lng:-97.7210,
-       img:'https://images.unsplash.com/photo-1518732714860-b62714ce0c59?w=500&h=350&fit=crop&q=80'},
+       img:'https://image.thum.io/get/width/1000/crop/700/noanimate/https://austinfloatcenter.com'},
     ],upcoming:[]
   },
 
@@ -762,14 +762,14 @@ const CITIES = {
        review:'The best hotel spa in DC by a clear margin. Oriental-inspired thermal circuit with heated marble loungers, vitality pool, and sauna. The kind of place where K Street attorneys decompress before flying back to their districts. Impeccable service.',
        hours:'Daily · Reservation recommended',url:'https://www.mandarinoriental.com/washington-dc',
        lat:38.8815,lng:-77.0232,
-       img:'https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=500&h=350&fit=crop&q=80'},
+       img:'https://image.thum.io/get/width/1000/crop/700/noanimate/https://www.mandarinoriental.com/washington-dc'},
 
       {id:'dc2',num:2,name:'Salt & Juniper',hood:'Shaw / 14th Street',type:'spa',price:'from $55',score:7.8,
        gf:['Locals\' pick','Halotherapy','Intimate'],
        review:'A neighborhood wellness studio on 14th Street doing salt therapy, infrared sauna, and IV drips for the Shaw crowd. Small, well-curated, and genuinely useful for the urban body under chronic stress.',
        hours:'Daily · By appointment',url:'https://saltandjuniper.com',
        lat:38.9162,lng:-77.0301,
-       img:'https://images.unsplash.com/photo-1607962837359-5e7e89f86776?w=500&h=350&fit=crop&q=80'},
+       img:'https://image.thum.io/get/width/1000/crop/700/noanimate/https://saltandjuniper.com'},
     ],upcoming:[]
   },
 
@@ -781,14 +781,14 @@ const CITIES = {
        review:'A proper Russian banya in Belltown that does it right — banya room at a genuine 200°F, cold plunge, outdoor pool, salt scrubs, and platza service. The rooftop deck with Puget Sound views in the summer is one of the better arguments for living in Seattle.',
        hours:'Mon–Thu 1pm–12am · Fri–Sun 11am–12am',url:'https://banya5.com',
        lat:47.6150,lng:-122.3490,
-       img:'https://images.unsplash.com/photo-1527637040694-60b17b13f9df?w=500&h=350&fit=crop&q=80'},
+       img:'https://image.thum.io/get/width/1000/crop/700/noanimate/https://banya5.com'},
 
       {id:'sea2',num:2,name:'Olympus Spa',hood:'Lynnwood (20 min north)',type:'korean',price:'from $40',score:9.0,
        gf:['Korean jjimjilbang','Full day','Women only','The real thing'],
        review:'Women-only Korean jjimjilbang twenty minutes north of Seattle that routinely gets called one of the best in the country. The body scrubs, jade room, and charcoal sauna are exceptional. Worth every minute of the drive.',
        hours:'Daily 9am–9pm · Women only',url:'https://olympusspa.net',
        lat:47.8262,lng:-122.2685,
-       img:'https://images.unsplash.com/photo-1580274455191-1c62613f4cc5?w=500&h=350&fit=crop&q=80'},
+       img:'https://image.thum.io/get/width/1000/crop/700/noanimate/https://olympusspa.net'},
     ],upcoming:[]
   },
 
@@ -800,14 +800,14 @@ const CITIES = {
        review:'Boston\'s most interesting wellness destination — a halotherapy salt cave and infrared sauna complex in Somerville with serious credentials and a devoted local following. The signature experience is 45 minutes in the hand-carved Himalayan salt cave. Genuinely unusual and genuinely effective.',
        hours:'Daily · By appointment',url:'https://bodhispa.com',
        lat:42.3802,lng:-71.0961,
-       img:'https://images.unsplash.com/photo-1607962837359-5e7e89f86776?w=500&h=350&fit=crop&q=80'},
+       img:'https://image.thum.io/get/width/1000/crop/700/noanimate/https://bodhispa.com'},
 
       {id:'bos2',num:2,name:'The Spa at Mandarin Oriental Boston',hood:'Back Bay',type:'spa',price:'from $95',score:8.2,
        gf:['Luxury','Business travel','Boylston St'],
        review:'The Mandarin formula applied to Back Bay, which means it\'s excellent. Heated vitality pool, thermal suite, skilled therapists. The outdoor terrace in warmer months is a pleasant surprise. Boston\'s gold standard for hotel spa.',
        hours:'Daily · Reservation required',url:'https://www.mandarinoriental.com/boston',
        lat:42.3487,lng:-71.0844,
-       img:'https://images.unsplash.com/photo-1574478839902-9135bc39bc99?w=500&h=350&fit=crop&q=80'},
+       img:'https://image.thum.io/get/width/1000/crop/700/noanimate/https://www.mandarinoriental.com/boston'},
     ],upcoming:[]
   },
 
@@ -819,14 +819,14 @@ const CITIES = {
        review:'The Brown Palace has been standing at the corner of Tremont and 17th since 1892, and the spa belongs in that tradition. Artesian spring water sourced from 720 feet below the hotel runs through the hydrotherapy treatments. Genuinely historic, genuinely good.',
        hours:'Daily · Reservation recommended',url:'https://www.brownpalace.com',
        lat:39.7427,lng:-104.9869,
-       img:'https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=500&h=350&fit=crop&q=80'},
+       img:'https://image.thum.io/get/width/1000/crop/700/noanimate/https://www.brownpalace.com'},
 
       {id:'den2',num:2,name:'Glow Float',hood:'Cherry Creek',type:'float',price:'from $69',score:7.8,
        gf:['Float therapy','Pre-ski reset','Altitude recovery'],
        review:'The best float center in Colorado, and particularly useful at 5,280 feet where altitude does things to your body. The zero-gravity tanks are serious — one of the better places to decompress before or after a ski weekend.',
        hours:'Daily 9am–9pm · By appointment',url:'https://glowfloat.com',
        lat:39.7196,lng:-104.9513,
-       img:'https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?w=500&h=350&fit=crop&q=80'},
+       img:'https://image.thum.io/get/width/1000/crop/700/noanimate/https://glowfloat.com'},
     ],upcoming:[]
   },
 
@@ -838,14 +838,14 @@ const CITIES = {
        review:'Set on the cliffs above the Torrey Pines golf course with views of the Pacific that you\'d pay just to sit and look at. The spa experience matches the setting — the outdoor eucalyptus steam garden alone is worth the drive from downtown. One of the best resort spas on the West Coast.',
        hours:'Daily · Reservation required',url:'https://www.torreypinesinn.com',
        lat:32.8979,lng:-117.2468,
-       img:'https://images.unsplash.com/photo-1602002418082-a4443978a5d5?w=500&h=350&fit=crop&q=80'},
+       img:'https://image.thum.io/get/width/1000/crop/700/noanimate/https://www.torreypinesinn.com'},
 
       {id:'sd2',num:2,name:'Kure Spa',hood:'Gaslamp / Little Italy',type:'sauna',price:'from $55',score:7.8,
        gf:['Infrared sauna','Cold plunge','Downtown'],
        review:'San Diego\'s most polished urban wellness studio, with infrared saunas, cold plunge, and recovery treatments designed for the active person. Two downtown locations. The contrast therapy sessions are well-programmed.',
        hours:'Daily · Session-based',url:'https://kurespa.com',
        lat:32.7190,lng:-117.1691,
-       img:'https://images.unsplash.com/photo-1574482620816-c13b8b19f7d1?w=500&h=350&fit=crop&q=80'},
+       img:'https://image.thum.io/get/width/1000/crop/700/noanimate/https://kurespa.com'},
     ],upcoming:[]
   },
 
@@ -857,14 +857,14 @@ const CITIES = {
        review:'At the base of Ajax mountain in the most expensive zip code in Colorado. The hydrothermal suite — hot tub, sauna, steam, cold plunge — is what you want after a hard day of powder. The altitude-specific treatments are thoughtfully designed and genuinely effective at 8,000 feet.',
        hours:'Daily · Reservation required',url:'https://www.thelittlenell.com',
        lat:39.1863,lng:-106.8196,
-       img:'https://images.unsplash.com/photo-1551830820-330a71b99659?w=500&h=350&fit=crop&q=80'},
+       img:'https://image.thum.io/get/width/1000/crop/700/noanimate/https://www.thelittlenell.com'},
 
       {id:'asp2',num:2,name:'The Spa at The St. Regis Aspen',hood:'Downtown Aspen',type:'resort',price:'from $150',score:8.8,
        gf:['Full luxury','Après ski','Couples','Year-round'],
        review:'The St. Regis spa in Aspen delivers what you come to Aspen for — exceptional everything, in a mountain setting, without visible effort. The heated outdoor pool in winter with snowflakes falling is one of the genuinely great spa moments you can have in the American West.',
        hours:'Daily · Reservation required',url:'https://www.stregisaspen.com',
        lat:39.1910,lng:-106.8200,
-       img:'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=500&h=350&fit=crop&q=80'},
+       img:'https://image.thum.io/get/width/1000/crop/700/noanimate/https://www.stregisaspen.com'},
     ],upcoming:[]
   },
 
@@ -876,14 +876,14 @@ const CITIES = {
        review:'The oldest operating spa in California and still the best reason to drive to Calistoga. Volcanic ash mud baths heated by geothermal springs, mineral pools, and a main pool that\'s been in continuous use since 1860. Nothing in wine country feels more earned than this.',
        hours:'Daily · Reservation required',url:'https://indianspringscalistoga.com',
        lat:38.5791,lng:-122.5796,
-       img:'https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=500&h=350&fit=crop&q=80'},
+       img:'https://image.thum.io/get/width/1000/crop/700/noanimate/https://indianspringscalistoga.com'},
 
       {id:'nap2',num:2,name:'Solage Calistoga',hood:'Calistoga',type:'resort',price:'from $85',score:8.8,
        gf:['The Mudslide','Modern resort','Geothermal pools'],
        review:'Solage modernized the Calistoga mud bath without losing the point. The signature Mudslide ritual — volcanic mud, mineral soak, blanket wrap — is a proper multi-step treatment. The geothermal pools are excellent. Worth the step up from Indian Springs in budget.',
        hours:'Daily · Reservation required',url:'https://solagecalistoga.com',
        lat:38.5810,lng:-122.5770,
-       img:'https://images.unsplash.com/photo-1601918774741-5b20e01c3f00?w=500&h=350&fit=crop&q=80'},
+       img:'https://image.thum.io/get/width/1000/crop/700/noanimate/https://solagecalistoga.com'},
     ],upcoming:[]
   },
 
@@ -895,14 +895,14 @@ const CITIES = {
        review:'The only cedar enzyme bath in the United States, and that alone is reason to drive to Freestone. You\'re buried in fragrant cedar, rice bran, and plant enzymes that generate their own heat as they ferment around you. The Japanese garden meditation that follows is not optional. One of the most unique wellness experiences in the country.',
        hours:'Daily · Reservation required',url:'https://osmosis.com',
        lat:38.3920,lng:-123.0020,
-       img:'https://images.unsplash.com/photo-1501854140801-50d01698950b?w=500&h=350&fit=crop&q=80'},
+       img:'https://image.thum.io/get/width/1000/crop/700/noanimate/https://osmosis.com'},
 
       {id:'son2',num:2,name:'Fairmont Sonoma Mission Inn Spa',hood:'Boyes Hot Springs',type:'springs',price:'from $90',score:8.5,
        gf:['Natural hot springs','Wine country hotel','Full day'],
        review:'Built over natural artesian mineral springs with water at 112°F. The thermal mineral pools are the draw — five of them, set in a mission-style courtyard. A full-day experience that pairs perfectly with a tasting appointment down the road.',
        hours:'Daily · Reservation recommended',url:'https://www.fairmont.com/sonoma',
        lat:38.3051,lng:-122.4750,
-       img:'https://images.unsplash.com/photo-1476124369491-e7addf5db371?w=500&h=350&fit=crop&q=80'},
+       img:'https://image.thum.io/get/width/1000/crop/700/noanimate/https://www.fairmont.com/sonoma'},
     ],upcoming:[]
   },
 
@@ -914,14 +914,14 @@ const CITIES = {
        review:"The seawater infinity pool overlooking the Atlantic Ocean at Gurney's Montauk is the kind of thing people build their weekend plans around. The spa uses Atlantic seawater in its thermal circuits — genuinely mineral-rich, genuinely unusual. The full Gurney's day is one of the better arguments for leaving the city.",
        hours:'Daily · Day passes available',url:'https://gurneysmontauk.com',
        lat:41.0460,lng:-71.9350,
-       img:'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=500&h=350&fit=crop&q=80'},
+       img:'https://image.thum.io/get/width/1000/crop/700/noanimate/https://gurneysmontauk.com'},
 
       {id:'hmp2',num:2,name:'Shou Sugi Ban House',hood:'Water Mill',type:'resort',price:'from $200',score:9.1,
        gf:['Destination wellness','Japanese architecture','Full immersion','Multi-day'],
        review:'A destination wellness retreat in Water Mill inspired by Japanese architecture and healing philosophy, with the serious wellness programming to back it up — sauna, cold plunge, sound baths, forest bathing, and exceptional food. This is not a spa day. This is a life recalibration.',
        hours:'By reservation · Multi-day and day programs',url:'https://shousugiban.com',
        lat:40.9240,lng:-72.3310,
-       img:'https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=500&h=350&fit=crop&q=80'},
+       img:'https://image.thum.io/get/width/1000/crop/700/noanimate/https://shousugiban.com'},
     ],upcoming:[]
   },
 
@@ -933,14 +933,14 @@ const CITIES = {
        review:'Set inside Boynton Canyon in the red rock country, Mii amo is one of the best destination spas in the Western hemisphere — and not by a little. The setting is sacred Yavapai land, the treatments draw on Indigenous healing traditions, and the experience of soaking in an outdoor mineral pool with canyon walls on all sides is something you carry with you.',
        hours:'Guests and day visitors · Reservation required',url:'https://miiamo.com',
        lat:34.9046,lng:-111.8364,
-       img:'https://images.unsplash.com/photo-1501854140801-50d01698950b?w=500&h=350&fit=crop&q=80'},
+       img:'https://image.thum.io/get/width/1000/crop/700/noanimate/https://miiamo.com'},
 
       {id:'sed2',num:2,name:'The Spa at L\'Auberge de Sedona',hood:'Uptown Sedona / Oak Creek',type:'spa',price:'from $120',score:8.7,
        gf:['Creek-side','Couples','Accessible Sedona'],
        review:'Creekside in the cottonwood trees along Oak Creek, with red rock views from the outdoor pools. The most accessible of Sedona\'s spa experiences without compromising on quality. The desert heat treatments are designed specifically for this landscape.',
        hours:'Daily · Reservation recommended',url:'https://lauberge.com',
        lat:34.8693,lng:-111.7650,
-       img:'https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=500&h=350&fit=crop&q=80'},
+       img:'https://image.thum.io/get/width/1000/crop/700/noanimate/https://lauberge.com'},
     ],upcoming:[]
   },
 
@@ -952,14 +952,14 @@ const CITIES = {
        review:'The Breakers spa is where old Palm Beach money has gone to sweat since 1926. The thermal mineral pools, the lagoon pool, and the full treatment menu operate at the level of the address. One of the most complete resort spa experiences in the country.',
        hours:'Daily · Reservation recommended',url:'https://www.thebreakers.com',
        lat:26.7053,lng:-80.0340,
-       img:'https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=500&h=350&fit=crop&q=80'},
+       img:'https://image.thum.io/get/width/1000/crop/700/noanimate/https://www.thebreakers.com'},
 
       {id:'pb2',num:2,name:'Eau Spa at Eau Palm Beach',hood:'Palm Beach Shores',type:'spa',price:'from $100',score:8.5,
        gf:['Oceanfront','Modern luxury','Date night'],
        review:'Eau Palm Beach brings a more contemporary take to the Palm Beach spa formula — the oceanfront setting, the contrast hydrotherapy pools, and the whimsical design language make it the younger, louder counterpart to The Breakers a mile up the coast.',
        hours:'Daily · Reservation required',url:'https://eaupalmbeach.com',
        lat:26.7220,lng:-80.0360,
-       img:'https://images.unsplash.com/photo-1551882547-ff40c63fe2e2?w=500&h=350&fit=crop&q=80'},
+       img:'https://image.thum.io/get/width/1000/crop/700/noanimate/https://eaupalmbeach.com'},
     ],upcoming:[]
   },
 
@@ -971,14 +971,14 @@ const CITIES = {
        review:'Amangani sits above the Snake River valley with Grand Teton views that make the $180 entry feel like a reasonable trade. The heated outdoor pool in winter is one of the defining spa experiences in the American West — you\'re floating in hot water while the Tetons sit across the valley in snow. There is nothing else like it.',
        hours:'Daily · Reservation required',url:'https://www.aman.com/resorts/amangani',
        lat:43.4951,lng:-110.7399,
-       img:'https://images.unsplash.com/photo-1551830820-330a71b99659?w=500&h=350&fit=crop&q=80'},
+       img:'https://image.thum.io/get/width/1000/crop/700/noanimate/https://www.aman.com/resorts/amangani'},
 
       {id:'jh2',num:2,name:'Spa Soleil at Snake River Lodge',hood:'Teton Village',type:'resort',price:'from $120',score:8.5,
        gf:['Ski-in access','Mountain views','Après ski','Groups'],
        review:'At the base of Jackson Hole Mountain Resort in Teton Village, which means you can ski to it. The rooftop hot tubs with Teton views are the move after a powder day. A more accessible entry point to Jackson Hole spa than Amangani without compromising on setting.',
        hours:'Daily · Reservation recommended',url:'https://snakeriverlodge.com',
        lat:43.5873,lng:-110.8278,
-       img:'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=500&h=350&fit=crop&q=80'},
+       img:'https://image.thum.io/get/width/1000/crop/700/noanimate/https://snakeriverlodge.com'},
     ],upcoming:[]
   },
 
@@ -990,7 +990,7 @@ const CITIES = {
        review:'The best hotel spa in Nashville — which is not a deeply competitive category yet, making this a reasonable default for anyone who takes wellness seriously in a city that is still figuring out that part of itself. The massage program is particularly strong.',
        hours:'Daily · Reservation required',url:'https://loewshotels.com/vanderbilt-hotel',
        lat:36.1481,lng:-86.8002,
-       img:'https://images.unsplash.com/photo-1574478839902-9135bc39bc99?w=500&h=350&fit=crop&q=80'},
+       img:'https://image.thum.io/get/width/1000/crop/700/noanimate/https://loewshotels.com/vanderbilt-hotel'},
 
       {id:'nas2',num:2,name:'Salt Cave Nashville',hood:'East Nashville',type:'spa',price:'from $45',score:7.8,
        gf:['Halotherapy','East Nashville crowd','Affordable','First-timers'],
@@ -1009,7 +1009,7 @@ const CITIES = {
        review:'A boutique spa at one of Nantucket\'s most storied properties, set directly on the harbor. The treatments use sea-derived products and the setting does the rest. A proper Nantucket day: ferry in the morning, spa mid-day, raw bar in the evening.',
        hours:'Daily · Reservation required',url:'https://whiteelephanthotel.com',
        lat:41.2870,lng:-70.0960,
-       img:'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=500&h=350&fit=crop&q=80'},
+       img:'https://image.thum.io/get/width/1000/crop/700/noanimate/https://whiteelephanthotel.com'},
     ],upcoming:[]
   },
 
@@ -1021,7 +1021,7 @@ const CITIES = {
        review:'Boulder\'s most accessible full-service spa, with the Flatirons visible from the outdoor hot tub and a treatment menu built for people who also run ultras on weekends. The sports recovery and altitude-specific treatments are genuinely useful here.',
        hours:'Daily · Reservation recommended',url:'https://stjulien.com',
        lat:40.0178,lng:-105.2830,
-       img:'https://images.unsplash.com/photo-1501854140801-50d01698950b?w=500&h=350&fit=crop&q=80'},
+       img:'https://image.thum.io/get/width/1000/crop/700/noanimate/https://stjulien.com'},
     ],upcoming:[]
   },
 
@@ -1033,7 +1033,7 @@ const CITIES = {
        review:'The anchor spa of the Ballantyne resort complex, with a full hydrothermal circuit — warm pool, sauna, steam, cold plunge — and a treatment program that consistently ranks among the best in the Carolinas. The most complete spa experience in Charlotte.',
        hours:'Daily · Reservation recommended',url:'https://theballantynehotel.com',
        lat:35.0420,lng:-80.8455,
-       img:'https://images.unsplash.com/photo-1566073771259-6a8506099945?w=500&h=350&fit=crop&q=80'},
+       img:'https://image.thum.io/get/width/1000/crop/700/noanimate/https://theballantynehotel.com'},
     ],upcoming:[]
   },
 
@@ -1045,7 +1045,7 @@ const CITIES = {
        review:'Orange County\'s most dedicated float operation — clean, professionally run, with multiple tank options and a staff that understands what they\'re doing. In a county not exactly overflowing with serious wellness options, Papakea stands clearly apart.',
        hours:'Daily · By appointment',url:'https://papakeafloat.com',
        lat:33.6846,lng:-117.8265,
-       img:'https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?w=500&h=350&fit=crop&q=80'},
+       img:'https://image.thum.io/get/width/1000/crop/700/noanimate/https://papakeafloat.com'},
     ],upcoming:[]
   },
 
