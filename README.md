@@ -1,6 +1,6 @@
-# BathPass
+# Dip Days
 
-BathPass is a directory for bathhouses, contrast bathing, and other wellness facilities.
+Dip Days is a directory for bathhouses, contrast bathing, and other wellness facilities.
 
 ## Current state
 
