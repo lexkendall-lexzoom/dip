@@ -1,6 +1,6 @@
-# BathPass
+# DIP
 
-BathPass is a directory for bathhouses, contrast bathing, and other wellness facilities.
+DIP is a directory for bathhouses, contrast bathing, and other wellness facilities.
 
 ## Current state
 
