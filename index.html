@@ -1545,5 +1545,68 @@ function submitEmail(e) {
   setTimeout(()=>{btn.textContent=orig;inp.disabled=false;btn.disabled=false;},4000);
 }
 </script>
+<script>
+// Mailchimp background submit (prevents page redirect)
+(function () {
+  const MAILCHIMP_ACTION = 'https://fund.us13.list-manage.com/subscribe/post?u=10d65743c5e2fcb6f0e93121c&id=0fcf95b99f&f_id=00647de9f0';
+  const HONEYPOT = 'b_10d65743c5e2fcb6f0e93121c_0fcf95b99f';
+
+  function isMailchimpForm(form) {
+    if (!form || form.tagName !== 'FORM') return false;
+    const action = form.getAttribute('action') || '';
+    return action.includes('fund.us13.list-manage.com/subscribe/post');
+  }
+
+  async function submitMailchimpForm(form) {
+    const emailInput = form.querySelector('input[type="email"], input[name="EMAIL"]');
+    const btn = form.querySelector('button[type="submit"], button');
+    if (!emailInput || !btn) return;
+
+    const email = (emailInput.value || '').trim();
+    if (!email) {
+      emailInput.setAttribute('aria-invalid', 'true');
+      const prevPh = emailInput.placeholder;
+      emailInput.placeholder = 'Enter your email';
+      setTimeout(() => {
+        emailInput.placeholder = prevPh || 'your@email.com';
+        emailInput.removeAttribute('aria-invalid');
+      }, 1200);
+      return;
+    }
+
+    const originalText = btn.textContent;
+    btn.disabled = true;
+    emailInput.disabled = true;
+    btn.textContent = 'Sending...';
+
+    try {
+      const body = new URLSearchParams();
+      body.set('EMAIL', email);
+      body.set(HONEYPOT, '');
+
+      await fetch(MAILCHIMP_ACTION, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8' },
+        body: body.toString()
+      });
+
+      emailInput.value = '';
+      btn.textContent = "You're in! ✓";
+    } catch (e) {
+      btn.disabled = false;
+      emailInput.disabled = false;
+      btn.textContent = originalText;
+    }
+  }
+
+  document.addEventListener('submit', function (event) {
+    const form = event.target;
+    if (!isMailchimpForm(form)) return;
+    event.preventDefault();
+    submitMailchimpForm(form);
+  });
+})();
+</script>
 </body>
 </html>
