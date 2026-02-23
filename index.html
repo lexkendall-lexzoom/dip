@@ -282,6 +282,7 @@ footer{background:var(--ink);border-top:1px solid rgba(255,255,255,.08);padding:
     <ul class="nav-links">
       <li><a href="#mapbox">Map</a></li>
       <li><a href="#dir">Directory</a></li>
+      <li><a href="/new-york-city/">Venues</a></li>
     </ul>
     <a href="#cs" class="nav-cta">Get Notified</a>
   </div>
@@ -1058,6 +1059,15 @@ const CITIES = {
 // Cities order
 const CITY_ORDER = ['nyc','la','miami','sf','chicago','scottsdale','austin','dc','seattle','boston','denver','boulder','sandiego','aspen','napa','sonoma','hamptons','sedona','palmbeach','nantucket','jacksonhole','nashville','charlotte','irvine','arlington'];
 const CITY_NAMES = {nyc:'New York City',la:'Los Angeles',miami:'Miami',sf:'San Francisco',chicago:'Chicago',scottsdale:'Scottsdale',austin:'Austin',dc:'Washington DC',seattle:'Seattle',boston:'Boston',denver:'Denver',boulder:'Boulder',sandiego:'San Diego',aspen:'Aspen',napa:'Napa Valley',sonoma:'Sonoma',hamptons:'The Hamptons',sedona:'Sedona',palmbeach:'Palm Beach',nantucket:'Nantucket',jacksonhole:'Jackson Hole',nashville:'Nashville',charlotte:'Charlotte',irvine:'Irvine',arlington:'Arlington'};
+const VENUE_PAGE_PATHS = {
+  nyc1:'/new-york-city/bathhouse-williamsburg/',
+  nyc2:'/new-york-city/akari-sauna/',
+  nyc3:'/new-york-city/aire-ancient-baths/',
+  nyc4:'/new-york-city/russian-and-turkish-baths/',
+  nyc5:'/new-york-city/world-spa/',
+  nyc6:'/new-york-city/othership-flatiron/'
+};
+
 
 // ─── OCCASIONS MAP ────────────────────────────────────
 // date=Date Night, meeting=Business Meeting, solo=Solo Unwind,
@@ -1355,15 +1365,18 @@ function renderCard(v) {
       ? `<div class="cscore"><span class="cscore-n">${v.score.toFixed(1)}</span><span class="cscore-d">/ 10</span></div>`
       : `<div class="cscore"><span class="cop-lbl" style="color:var(--teal)">Now Open</span></div>`;
   const gfTags = v.gf.map(g => `<span class="gft${isUp?' w':''}">${g}</span>`).join('');
+  const detailUrl = VENUE_PAGE_PATHS[v.id] || '';
   const visitLink = isUp
     ? `<a href="${v.url}" target="_blank" rel="noopener noreferrer" class="cvisit w" aria-label="Follow ${v.name} (opens in a new tab)">Follow →</a>`
-    : `<a href="${v.url}" target="_blank" rel="noopener noreferrer" class="cvisit" aria-label="Visit ${v.name} website (opens in a new tab)">Website →</a>`;
+    : detailUrl
+      ? `<a href="${detailUrl}" class="cvisit" aria-label="Read Dip review for ${v.name}">Dip Review →</a>`
+      : `<a href="${v.url}" target="_blank" rel="noopener noreferrer" class="cvisit" aria-label="Visit ${v.name} website (opens in a new tab)">Website →</a>`;
   const grad = getGrad(isUp ? 'upcoming' : v.type);
   const occs = OCC[v.id] || [];
   const occLabels = {date:'🕯️ Date Night',meeting:'🤝 Business Meeting',solo:'🧘 Solo Unwind',scene:'🎉 The Scene',group:'👥 Group Day',recovery:'⚡ Recovery'};
   const occBadges = occs.map(o=>`<span class="occ-badge occ-${o}">${occLabels[o]||o}</span>`).join('');
   return `<article class="vcard${isUp?' upc':''}" id="${v.id}" data-type="${v.type}" data-occ="${occs.join(' ')}" data-coldplunge="${hasColdPlunge ? '1' : '0'}">
-    <div class="cimg">
+    <div class="cimg" ${detailUrl ? `onclick="window.location.href='${detailUrl}'" style="cursor:pointer"` : ""}>
       <img src="${imgReq.src}"${imgReq.srcset ? ` srcset="${imgReq.srcset}"` : ''} alt="${v.name}" loading="lazy" decoding="async" width="500" height="350" sizes="${imgReq.sizes}"
         onerror="this.style.display='none';this.parentElement.style.background='${grad}'"
         style="width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s"/>
@@ -1374,7 +1387,7 @@ function renderCard(v) {
       <div class="ctop">
         <div>
           <div class="chood${isUp?' w':''}">${v.hood}</div>
-          <h3 class="cname">${v.name}</h3>
+          <h3 class="cname">${detailUrl ? `<a href="${detailUrl}" style="color:inherit;text-decoration:none">${v.name}</a>` : v.name}</h3>
         </div>
         ${scoreHtml}
       </div>
