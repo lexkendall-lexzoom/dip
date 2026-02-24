@@ -1,0 +1,22 @@
+seo:
+  title: "Remedy Place Review: Price, Hours, What to Know | Dip"
+  description: "Dip review of Remedy Place in New York City with pricing, hours, and what to expect before booking."
+  social_image: "https://cdn.sanity.io/images/jptxcgmn/production/3158497d1fca43ce863df9e06c8c97763d6c44c1-6123x4082.jpg?w=1200&q=85&fit=clip&auto=format"
+venue:
+  name: "Remedy Place"
+  city: "New York City"
+  slug: "remedy-place"
+  subtitle: "Editorial review, practical details, and booking context from Dip."
+  hero_image: "https://cdn.sanity.io/images/jptxcgmn/production/3158497d1fca43ce863df9e06c8c97763d6c44c1-6123x4082.jpg?w=1200&q=85&fit=clip&auto=format"
+  neighborhood: "Flatiron + SoHo"
+  price: "from $30"
+  score: "7.5"
+  date_reviewed: "February 2026"
+  hours: "Daily · Members + walk-ins"
+  best_for: "Contrast therapy routines, recovery sessions, and reset days."
+  website_url: "https://remedyplace.com"
+  review: "Ice baths, infrared, hyperbaric O₂, NAD+ drips — the menu reads like a longevity conference agenda, and it delivers. The social club concept is real. Two Manhattan locations. Walk-ins from $30, memberships from $9,000/year if you're in that world."
+  gallery_images:
+    - "https://cdn.sanity.io/images/jptxcgmn/production/3158497d1fca43ce863df9e06c8c97763d6c44c1-6123x4082.jpg?w=1200&q=85&fit=clip&auto=format"
+    - "https://images.unsplash.com/photo-1600334129128-685c5582fd35?auto=format&fit=crop&w=1600&q=80"
+    - "https://images.unsplash.com/photo-1621275471769-e6aa344546d5?auto=format&fit=crop&w=1600&q=80"
