@@ -12,6 +12,7 @@
 <meta property="og:url" content="https://dipdays.com/"/>
 <meta name="twitter:card" content="summary"/>
 <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/js-yaml@4.1.0/dist/js-yaml.min.js"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Playfair+Display:ital,wght@0,500;1,400;1,500&display=swap"/>
@@ -306,13 +307,13 @@ footer{background:var(--ink);border-top:1px solid rgba(255,255,255,.08);padding:
 <main id="main-content">
 <div class="hero">
   <div>
-    <p class="h-ey">25 Cities · 100+ Venues · Expanding</p>
-    <h1 class="h-title">The Definitive<br/><span>Bathhouse</span><br/>Guide.</h1>
-    <p class="h-sub">Every bathhouse, sauna, thermal bath, and cold plunge worth your time — with prices, honest reviews, and everything you need.</p>
+    <p class="h-ey" id="cms-hero-eyebrow">25 Cities · 100+ Venues · Expanding</p>
+    <h1 class="h-title" id="cms-hero-headline">The Definitive<br/><span>Bathhouse</span><br/>Guide.</h1>
+    <p class="h-sub" id="cms-hero-subheading">Every bathhouse, sauna, thermal bath, and cold plunge worth your time — with prices, honest reviews, and everything you need.</p>
     <div class="capture">
-      <p class="cap-l">Stay in the loop</p>
-      <p class="cap-t">Be the first to know about new openings and exclusive offers from Dip partners.</p>
-      <p class="cap-d">Get alerts about newly opened venues in your city, plus exclusive partner offers sent straight to your inbox.</p>
+      <p class="cap-l" id="cms-newsletter-eyebrow">Stay in the loop</p>
+      <p class="cap-t" id="cms-newsletter-headline">Be the first to know about new openings and exclusive offers from Dip partners.</p>
+      <p class="cap-d" id="cms-newsletter-description">Get alerts about newly opened venues in your city, plus exclusive partner offers sent straight to your inbox.</p>
       <form class="cap-f" action="https://fund.us13.list-manage.com/subscribe/post?u=10d65743c5e2fcb6f0e93121c&amp;id=0fcf95b99f&amp;f_id=00647de9f0" method="post" target="_blank">
         <input type="email" name="EMAIL" placeholder="your@email.com" required/>
         <button type="submit">Notify Me</button>
@@ -335,7 +336,7 @@ footer{background:var(--ink);border-top:1px solid rgba(255,255,255,.08);padding:
 <div class="city-nav" id="city-nav">
   <div class="city-tabs" id="city-tabs"></div>
 </div>
-<p style="max-width:1280px;margin:14px auto 0;padding:0 44px;font-size:12px;color:#555">Prefer city-specific pages? <a href="/cities/" style="color:#0b7c78;font-weight:700">Browse all Dip city guides →</a></p>
+<p style="max-width:1280px;margin:14px auto 0;padding:0 44px;font-size:12px;color:#555"><span id="cms-cities-cta-prefix">Prefer city-specific pages?</span> <a href="/cities/" style="color:#0b7c78;font-weight:700">Browse all Dip city guides →</a></p>
 
 <!-- MAP -->
 <div class="map-wrap">
@@ -1196,11 +1197,68 @@ let activeFilter = 'all';
 let currentCity = 'nyc';
 let leafletMap = null;
 let markers = [];
+async function applyHomepageCmsContent() {
+  try {
+    const response = await fetch('/content/homepage.yml', { cache: 'no-store' });
+    if (!response.ok) return;
+    const text = await response.text();
+    const data = window.jsyaml.load(text) || {};
+    const seo = data.seo || {};
+    const hero = data.hero || {};
+    const newsletter = data.newsletter || {};
+
+    if (seo.title) document.title = seo.title;
+    if (seo.description) {
+      const desc = document.querySelector('meta[name="description"]');
+      const ogDesc = document.querySelector('meta[property="og:description"]');
+      if (desc) desc.setAttribute('content', seo.description);
+      if (ogDesc) ogDesc.setAttribute('content', seo.description);
+    }
+    if (seo.title) {
+      const ogTitle = document.querySelector('meta[property="og:title"]');
+      if (ogTitle) ogTitle.setAttribute('content', seo.title);
+    }
+    const socialImage = seo.social_image || '';
+    if (socialImage) {
+      let ogImage = document.querySelector('meta[property="og:image"]');
+      if (!ogImage) {
+        ogImage = document.createElement('meta');
+        ogImage.setAttribute('property', 'og:image');
+        document.head.appendChild(ogImage);
+      }
+      ogImage.setAttribute('content', socialImage);
+    }
+
+    if (hero.eyebrow) document.getElementById('cms-hero-eyebrow').textContent = hero.eyebrow;
+    if (hero.headline) document.getElementById('cms-hero-headline').innerHTML = hero.headline.replace(/\n/g, '<br/>');
+    if (hero.subheading) document.getElementById('cms-hero-subheading').textContent = hero.subheading;
+    if (newsletter.eyebrow) document.getElementById('cms-newsletter-eyebrow').textContent = newsletter.eyebrow;
+    if (newsletter.headline) document.getElementById('cms-newsletter-headline').textContent = newsletter.headline;
+    if (newsletter.description) document.getElementById('cms-newsletter-description').textContent = newsletter.description;
+
+    if (Array.isArray(hero.quick_list) && hero.quick_list.length) {
+      const list = document.getElementById('hero-list');
+      list.innerHTML = hero.quick_list.map((item, i) => `
+        <div class="h-qr" onclick="switchCity('nyc');setTimeout(()=>scrollToCard('ny${i+1}'),300)">
+          <div class="h-qn">${i + 1}</div>
+          <span class="h-qname">${item.venue_name || ''}</span>
+          <span class="h-qhood">NYC</span>
+          <span class="h-qprice">Featured</span>
+        </div>
+      `).join('');
+      window.__cmsHeroQuickList = true;
+    }
+  } catch (error) {
+    console.error('Homepage CMS content load failed:', error);
+  }
+}
+
 
 // ─── INIT ──────────────────────────────────────────────
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', async () => {
+  await applyHomepageCmsContent();
   buildCityTabs();
-  buildHeroList();
+  if (!window.__cmsHeroQuickList) buildHeroList();
   initVenuesDropdown();
   switchCity('nyc', { scrollToDirectory: false });
   loadLeaflet();

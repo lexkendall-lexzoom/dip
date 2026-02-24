@@ -1,14 +1,17 @@
-seo_title: "Dip Days — The Best Sweats in Your City"
-seo_description: "Find the best bathhouses, saunas, thermal baths, and cold plunges in top US cities with Dip's editorial directory."
-social_image: ""
-hero_eyebrow: "25 Cities · 100+ Venues · Expanding"
-hero_headline: "The Definitive Bathhouse Guide"
-hero_subheading: "The best bathhouses, saunas, thermal baths, and cold plunges in your city."
-hero_quick_list:
-  - venue_name: "Bathhouse Williamsburg"
-  - venue_name: "AIRE Ancient Baths"
-  - venue_name: "World Spa"
-  - venue_name: "Othership Flatiron"
-newsletter_eyebrow: "Stay in the loop"
-newsletter_headline: "Get opening alerts + exclusive partner offers"
-newsletter_description: "Get first notice when new venues open in your city, plus limited-time offers from Dip partners."
+seo:
+  title: "Dip Days — The Best Sweats in Your City"
+  description: "Find the best bathhouses, saunas, thermal baths, and cold plunges in top US cities with Dip's editorial directory."
+  social_image: ""
+hero:
+  eyebrow: "25 Cities · 100+ Venues · Expanding"
+  headline: "The Definitive Bathhouse Guide"
+  subheading: "Every bathhouse, sauna, thermal bath, and cold plunge worth your time — with prices, honest reviews, and everything you need."
+  quick_list:
+    - venue_name: "Bathhouse Williamsburg"
+    - venue_name: "AIRE Ancient Baths"
+    - venue_name: "World Spa"
+    - venue_name: "Othership Flatiron"
+newsletter:
+  eyebrow: "Stay in the loop"
+  headline: "Be the first to know about new openings and exclusive offers from Dip partners."
+  description: "Get alerts about newly opened venues in your city, plus exclusive partner offers sent straight to your inbox."
