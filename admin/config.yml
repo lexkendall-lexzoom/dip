@@ -2,25 +2,39 @@ backend:
   name: git-gateway
   branch: main
 
+local_backend: true
+
 media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+editor:
+  preview: true
 
 collections:
-  - name: "pages"
-    label: "Pages"
+  - name: "site_content"
+    label: "Site Content"
+    format: "yaml"
+    extension: "yml"
     files:
-      - name: "home"
-        label: "Homepage"
-        file: "index.html"
+      - name: "homepage"
+        label: "Homepage Content"
+        file: "content/homepage.yml"
+        preview_path: "/"
         fields:
-          - { label: "Hero Eyebrow", name: "hero_eyebrow", widget: "string", hint: "Current: 25 Cities · 100+ Venues · Expanding" }
-          - { label: "Hero Headline", name: "hero_headline", widget: "string", hint: "Current: The Definitive Bathhouse Guide" }
-          - { label: "Hero Subheading", name: "hero_subheading", widget: "text", hint: "Current intro paragraph below the hero headline" }
+          - { label: "SEO Title", name: "seo_title", widget: "string" }
+          - { label: "SEO Description", name: "seo_description", widget: "text" }
+          - { label: "Social Share Image", name: "social_image", widget: "image", required: false, hint: "Used for social previews (Open Graph/Twitter)." }
+
+          - { label: "Hero Eyebrow", name: "hero_eyebrow", widget: "string" }
+          - { label: "Hero Headline", name: "hero_headline", widget: "string" }
+          - { label: "Hero Subheading", name: "hero_subheading", widget: "text" }
+
           - label: "Quick List Venue Names"
             name: "hero_quick_list"
             widget: "list"
-            hint: "Update repeating venue names shown in the right-side hero quick list"
+            summary: "{{fields.venue_name}}"
             field: { label: "Venue Name", name: "venue_name", widget: "string" }
-          - label: "Directory Section Headline"
-            name: "directory_headline"
-            widget: "string"
-            hint: "Main heading above the card directory section"
+
+          - { label: "Newsletter Eyebrow", name: "newsletter_eyebrow", widget: "string" }
+          - { label: "Newsletter Headline", name: "newsletter_headline", widget: "string" }
+          - { label: "Newsletter Description", name: "newsletter_description", widget: "text" }
