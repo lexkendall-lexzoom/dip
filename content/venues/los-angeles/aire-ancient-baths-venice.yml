@@ -1,0 +1,20 @@
+seo:
+  title: "AIRE Ancient Baths Venice Review | Dip"
+  description: "Editorial venue profile for AIRE Ancient Baths Venice in Los Angeles."
+  social_image: "https://beaire.com/sites/default/files/styles/hero/public/2022-06/aire-ancient-baths-venice-beach.jpg"
+venue:
+  name: "AIRE Ancient Baths Venice"
+  city: "Los Angeles"
+  slug: "aire-ancient-baths-venice"
+  subtitle: ""
+  hero_image: "https://beaire.com/sites/default/files/styles/hero/public/2022-06/aire-ancient-baths-venice-beach.jpg"
+  neighborhood: "Venice"
+  price: "from $65"
+  score: "8.8"
+  date_reviewed: ""
+  hours: "Daily 9am–11pm · Reservation required"
+  best_for: ""
+  website_url: "https://beaire.com"
+  review: ""
+  gallery_images:
+    - "https://beaire.com/sites/default/files/styles/hero/public/2022-06/aire-ancient-baths-venice-beach.jpg"

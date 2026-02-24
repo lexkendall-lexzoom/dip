@@ -1,0 +1,20 @@
+seo:
+  title: "Den Wellness Review | Dip"
+  description: "Editorial venue profile for Den Wellness in Chicago."
+  social_image: "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=500&h=350&fit=crop&q=80"
+venue:
+  name: "Den Wellness"
+  city: "Chicago"
+  slug: "den-wellness"
+  subtitle: ""
+  hero_image: "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=500&h=350&fit=crop&q=80"
+  neighborhood: "River North"
+  price: "from $45"
+  score: "7.8"
+  date_reviewed: ""
+  hours: "Daily · Session-based"
+  best_for: ""
+  website_url: "https://denwellness.com"
+  review: ""
+  gallery_images:
+    - "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=500&h=350&fit=crop&q=80"

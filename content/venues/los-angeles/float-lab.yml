@@ -1,0 +1,20 @@
+seo:
+  title: "Float Lab Review | Dip"
+  description: "Editorial venue profile for Float Lab in Los Angeles."
+  social_image: "https://floatlab.com/wp-content/uploads/float-lab-chamber.jpg"
+venue:
+  name: "Float Lab"
+  city: "Los Angeles"
+  slug: "float-lab"
+  subtitle: ""
+  hero_image: "https://floatlab.com/wp-content/uploads/float-lab-chamber.jpg"
+  neighborhood: "West Los Angeles"
+  price: "from $75"
+  score: "7.5"
+  date_reviewed: ""
+  hours: "Daily · By appointment"
+  best_for: ""
+  website_url: "#"
+  review: ""
+  gallery_images:
+    - "https://floatlab.com/wp-content/uploads/float-lab-chamber.jpg"
