@@ -11,12 +11,6 @@
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://dipdays.com/cities/" />
   <meta name="twitter:card" content="summary" />
-  <style>
-    body{font-family:Arial,sans-serif;max-width:860px;margin:0 auto;padding:40px 20px;line-height:1.6;color:#111;background:#f3f0e8}
-    h1{line-height:1.2}
-    .card{background:#fff;border:2px solid #111;padding:16px;margin:12px 0}
-    a{color:#0b7c78;font-weight:700}
-  </style>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -33,16 +27,42 @@
     ]
   }
   </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Playfair+Display:ital,wght@0,500;1,400;1,500&display=swap"/>
+  <style>
+    :root{--ink:#111;--page:#f3f0e8;--card:#fff;--mist:#d8d4ca;--teal:#0b7c78;--teal-dark:#085a57;--font-sans:'Syne',ui-sans-serif,system-ui,-apple-system,'Segoe UI',sans-serif;--font-serif:'Playfair Display',Georgia,serif;}
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--page);color:var(--ink);font-family:var(--font-sans)}
+    .shell{max-width:1040px;margin:0 auto;padding:36px 24px 64px}
+    .back{display:inline-block;color:var(--teal);font-size:12px;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;font-weight:700;margin-bottom:20px}
+    h1{margin:0 0 14px;font-size:clamp(36px,4.3vw,62px);line-height:.95;letter-spacing:-.03em}
+    .intro{margin:0 0 22px;font-family:var(--font-serif);font-style:italic;color:#555;line-height:1.7;max-width:820px}
+    .cards{display:grid;gap:14px}
+    .card{display:block;background:var(--card);border:2px solid var(--ink);padding:20px;text-decoration:none;color:inherit;transition:transform .15s ease, box-shadow .15s ease, border-color .15s ease}
+    .card:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 rgba(0,0,0,.16);border-color:var(--teal)}
+    .card h2{margin:0 0 8px;font-size:clamp(26px,2.6vw,40px);line-height:1;letter-spacing:-.02em}
+    .card p{margin:0;color:#444;line-height:1.65}
+    .eyebrow{margin:0 0 8px;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:#666}
+    @media (max-width: 760px){
+      .shell{padding:28px 16px 44px}
+      .card{padding:16px}
+      .card h2{font-size:28px}
+    }
+  </style>
 </head>
 <body>
-  <p><a href="/">← Back to Dip homepage</a></p>
-  <h1>Dip City Guides</h1>
-  <p>Browse city-specific guides for the best bathhouses, saunas, thermal circuits, and cold plunges. We are rolling out cities in phases.</p>
-
-  <div class="card"><h2><a href="/new-york-city/">New York City</a></h2><p>Deep thermal options, iconic banyas, and full-day reset picks.</p></div>
-  <div class="card"><h2><a href="/los-angeles/">Los Angeles</a></h2><p>Korean spas, float centers, and low-key neighborhood gems.</p></div>
-  <div class="card"><h2><a href="/miami/">Miami</a></h2><p>Steam, contrast therapy, and resort-level thermal experiences.</p></div>
-  <div class="card"><h2><a href="/san-francisco/">San Francisco</a></h2><p>Historic bath traditions and modern wellness spaces.</p></div>
-  <div class="card"><h2><a href="/chicago/">Chicago</a></h2><p>Strong hotel spa options and high-quality thermal circuits.</p></div>
+  <main class="shell">
+    <a class="back" href="/">← Back to Dip homepage</a>
+    <h1>Dip City Guides</h1>
+    <p class="intro">Browse city-specific guides for the best bathhouses, saunas, thermal circuits, and cold plunges.</p>
+    <section class="cards">
+    <a class="card" href="/new-york-city/"><p class="eyebrow">City Guide</p><h2>New York City</h2><p>Deep thermal options, iconic banyas, and full-day reset picks.</p></a>
+    <a class="card" href="/los-angeles/"><p class="eyebrow">City Guide</p><h2>Los Angeles</h2><p>Korean spas, float centers, and low-key neighborhood gems.</p></a>
+    <a class="card" href="/miami/"><p class="eyebrow">City Guide</p><h2>Miami</h2><p>Steam, contrast therapy, and resort-level thermal experiences.</p></a>
+    <a class="card" href="/san-francisco/"><p class="eyebrow">City Guide</p><h2>San Francisco</h2><p>Historic bath traditions and modern wellness spaces.</p></a>
+    <a class="card" href="/chicago/"><p class="eyebrow">City Guide</p><h2>Chicago</h2><p>Strong hotel spa options and high-quality thermal circuits.</p></a>
+    </section>
+  </main>
 </body>
 </html>
