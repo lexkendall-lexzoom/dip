@@ -1,0 +1,22 @@
+seo:
+  title: "Great Jones Spa Review: Price, Hours, What to Know | Dip"
+  description: "Dip review of Great Jones Spa in New York City with pricing, hours, and what to expect before booking."
+  social_image: "https://media.timeout.com/images/100539965/750/422/image.jpg"
+venue:
+  name: "Great Jones Spa"
+  city: "New York City"
+  slug: "great-jones-spa"
+  subtitle: "Editorial review, practical details, and booking context from Dip."
+  hero_image: "https://media.timeout.com/images/100539965/750/422/image.jpg"
+  neighborhood: "NoHo, Manhattan"
+  price: "from $60"
+  score: "7.8"
+  date_reviewed: "February 2026"
+  hours: "Mon,Thu–Sun 9am–9:30pm · Wed from 2pm"
+  best_for: "Contrast therapy routines, recovery sessions, and reset days."
+  website_url: "https://gjspa.com"
+  review: "A NoHo classic running the same play for twenty years, and it still works. The three-story indoor waterfall is absurdly good for a city spa. Weekday passes are some of the best value in Manhattan wellness. Unpretentious, reliable, and right there on Great Jones Street."
+  gallery_images:
+    - "https://media.timeout.com/images/100539965/750/422/image.jpg"
+    - "https://images.unsplash.com/photo-1600334129128-685c5582fd35?auto=format&fit=crop&w=1600&q=80"
+    - "https://images.unsplash.com/photo-1621275471769-e6aa344546d5?auto=format&fit=crop&w=1600&q=80"

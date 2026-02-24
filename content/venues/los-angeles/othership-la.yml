@@ -1,0 +1,20 @@
+seo:
+  title: "Othership LA Review | Dip"
+  description: "Editorial venue profile for Othership LA in Los Angeles."
+  social_image: "https://cdn.prod.website-files.com/67c208983c2848098aa364f1/683e3fec9b02873351d4e675_othership-relaxing-sauna-group-session.webp"
+venue:
+  name: "Othership LA"
+  city: "Los Angeles"
+  slug: "othership-la"
+  subtitle: ""
+  hero_image: "https://cdn.prod.website-files.com/67c208983c2848098aa364f1/683e3fec9b02873351d4e675_othership-relaxing-sauna-group-session.webp"
+  neighborhood: "West Hollywood"
+  price: "from $55"
+  score: "7.8"
+  date_reviewed: ""
+  hours: "Daily · Session-based booking"
+  best_for: ""
+  website_url: "https://othership.us"
+  review: ""
+  gallery_images:
+    - "https://cdn.prod.website-files.com/67c208983c2848098aa364f1/683e3fec9b02873351d4e675_othership-relaxing-sauna-group-session.webp"

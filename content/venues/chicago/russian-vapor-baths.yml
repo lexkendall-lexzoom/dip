@@ -1,0 +1,20 @@
+seo:
+  title: "Russian Vapor Baths Review | Dip"
+  description: "Editorial venue profile for Russian Vapor Baths in Chicago."
+  social_image: "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=500&h=350&fit=crop&q=80"
+venue:
+  name: "Russian Vapor Baths"
+  city: "Chicago"
+  slug: "russian-vapor-baths"
+  subtitle: ""
+  hero_image: "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=500&h=350&fit=crop&q=80"
+  neighborhood: "Ukrainian Village"
+  price: "from $45"
+  score: "8.8"
+  date_reviewed: ""
+  hours: "Daily · Call ahead"
+  best_for: ""
+  website_url: "https://www.russianvaporbaths.com"
+  review: ""
+  gallery_images:
+    - "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=500&h=350&fit=crop&q=80"
