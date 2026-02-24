@@ -1,0 +1,26 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "images/uploads"
+
+collections:
+  - name: "pages"
+    label: "Pages"
+    files:
+      - name: "home"
+        label: "Homepage"
+        file: "index.html"
+        fields:
+          - { label: "Hero Eyebrow", name: "hero_eyebrow", widget: "string", hint: "Current: 25 Cities · 100+ Venues · Expanding" }
+          - { label: "Hero Headline", name: "hero_headline", widget: "string", hint: "Current: The Definitive Bathhouse Guide" }
+          - { label: "Hero Subheading", name: "hero_subheading", widget: "text", hint: "Current intro paragraph below the hero headline" }
+          - label: "Quick List Venue Names"
+            name: "hero_quick_list"
+            widget: "list"
+            hint: "Update repeating venue names shown in the right-side hero quick list"
+            field: { label: "Venue Name", name: "venue_name", widget: "string" }
+          - label: "Directory Section Headline"
+            name: "directory_headline"
+            widget: "string"
+            hint: "Main heading above the card directory section"
