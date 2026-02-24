@@ -11,22 +11,6 @@
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://dipdays.com/cities/" />
   <meta name="twitter:card" content="summary" />
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "CollectionPage",
-    "name": "Dip Cities",
-    "url": "https://dipdays.com/cities/",
-    "description": "City guides to bathhouses, saunas, thermal baths, and cold plunge spots.",
-    "hasPart": [
-      {"@type":"WebPage","name":"New York City","url":"https://dipdays.com/new-york-city/"},
-      {"@type":"WebPage","name":"Los Angeles","url":"https://dipdays.com/los-angeles/"},
-      {"@type":"WebPage","name":"Miami","url":"https://dipdays.com/miami/"},
-      {"@type":"WebPage","name":"San Francisco","url":"https://dipdays.com/san-francisco/"},
-      {"@type":"WebPage","name":"Chicago","url":"https://dipdays.com/chicago/"}
-    ]
-  }
-  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Playfair+Display:ital,wght@0,500;1,400;1,500&display=swap"/>
@@ -38,31 +22,32 @@
     .back{display:inline-block;color:var(--teal);font-size:12px;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;font-weight:700;margin-bottom:20px}
     h1{margin:0 0 14px;font-size:clamp(36px,4.3vw,62px);line-height:.95;letter-spacing:-.03em}
     .intro{margin:0 0 22px;font-family:var(--font-serif);font-style:italic;color:#555;line-height:1.7;max-width:820px}
+    .hero-media{width:100%;aspect-ratio:16/7;object-fit:cover;border:2px solid var(--ink);margin:8px 0 20px}
     .cards{display:grid;gap:14px}
     .card{display:block;background:var(--card);border:2px solid var(--ink);padding:20px;text-decoration:none;color:inherit;transition:transform .15s ease, box-shadow .15s ease, border-color .15s ease}
+    .card-media{display:block;width:100%;aspect-ratio:16/8;object-fit:cover;border:1px solid var(--mist);margin-bottom:12px}
     .card:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 rgba(0,0,0,.16);border-color:var(--teal)}
     .card h2{margin:0 0 8px;font-size:clamp(26px,2.6vw,40px);line-height:1;letter-spacing:-.02em}
     .card p{margin:0;color:#444;line-height:1.65}
     .eyebrow{margin:0 0 8px;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:#666}
-    @media (max-width: 760px){
-      .shell{padding:28px 16px 44px}
-      .card{padding:16px}
-      .card h2{font-size:28px}
-    }
   </style>
 </head>
 <body>
   <main class="shell">
     <a class="back" href="/">← Back to Dip homepage</a>
-    <h1>Dip City Guides</h1>
-    <p class="intro">Browse city-specific guides for the best bathhouses, saunas, thermal circuits, and cold plunges.</p>
-    <section class="cards">
-    <a class="card" href="/new-york-city/"><p class="eyebrow">City Guide</p><h2>New York City</h2><p>Deep thermal options, iconic banyas, and full-day reset picks.</p></a>
-    <a class="card" href="/los-angeles/"><p class="eyebrow">City Guide</p><h2>Los Angeles</h2><p>Korean spas, float centers, and low-key neighborhood gems.</p></a>
-    <a class="card" href="/miami/"><p class="eyebrow">City Guide</p><h2>Miami</h2><p>Steam, contrast therapy, and resort-level thermal experiences.</p></a>
-    <a class="card" href="/san-francisco/"><p class="eyebrow">City Guide</p><h2>San Francisco</h2><p>Historic bath traditions and modern wellness spaces.</p></a>
-    <a class="card" href="/chicago/"><p class="eyebrow">City Guide</p><h2>Chicago</h2><p>Strong hotel spa options and high-quality thermal circuits.</p></a>
+    <h1 id="cms-page-heading">Dip City Guides</h1>
+    <img id="cms-page-hero-image" class="hero-media" alt="Cities hero" hidden />
+    <p id="cms-page-intro" class="intro">Browse city-specific guides for the best bathhouses, saunas, thermal circuits, and cold plunges.</p>
+    <section id="cms-page-cards" class="cards">
+      <a class="card" href="/new-york-city/"><p class="eyebrow">City Guide</p><h2>New York City</h2><p>Deep thermal options, iconic banyas, and full-day reset picks.</p></a>
+      <a class="card" href="/los-angeles/"><p class="eyebrow">City Guide</p><h2>Los Angeles</h2><p>Korean spas, float centers, and low-key neighborhood gems.</p></a>
+      <a class="card" href="/miami/"><p class="eyebrow">City Guide</p><h2>Miami</h2><p>Steam, contrast therapy, and resort-level thermal experiences.</p></a>
+      <a class="card" href="/san-francisco/"><p class="eyebrow">City Guide</p><h2>San Francisco</h2><p>Historic bath traditions and modern wellness spaces.</p></a>
+      <a class="card" href="/chicago/"><p class="eyebrow">City Guide</p><h2>Chicago</h2><p>Strong hotel spa options and high-quality thermal circuits.</p></a>
     </section>
   </main>
+  <script src="https://cdn.jsdelivr.net/npm/js-yaml@4.1.0/dist/js-yaml.min.js"></script>
+  <script src="/assets/cms-content.js"></script>
+  <script>initCmsPageContent('/content/pages/cities.yml');</script>
 </body>
 </html>

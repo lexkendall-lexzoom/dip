@@ -17,24 +17,93 @@ collections:
     extension: "yml"
     files:
       - name: "homepage"
-        label: "Homepage Content"
+        label: "Homepage"
         file: "content/homepage.yml"
         preview_path: "/"
         fields:
-          - { label: "SEO Title", name: "seo_title", widget: "string" }
-          - { label: "SEO Description", name: "seo_description", widget: "text" }
-          - { label: "Social Share Image", name: "social_image", widget: "image", required: false, hint: "Used for social previews (Open Graph/Twitter)." }
+          - label: "SEO"
+            name: "seo"
+            widget: "object"
+            fields:
+              - { label: "Page Title", name: "title", widget: "string" }
+              - { label: "Meta Description", name: "description", widget: "text" }
+              - { label: "Social Image", name: "social_image", widget: "image", required: false }
+          - label: "Hero"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+              - { label: "Headline", name: "headline", widget: "string" }
+              - { label: "Subheading", name: "subheading", widget: "text" }
+              - label: "Quick List Venues"
+                name: "quick_list"
+                widget: "list"
+                summary: "{{fields.venue_name}}"
+                field: { label: "Venue Name", name: "venue_name", widget: "string" }
+          - label: "Newsletter Callout"
+            name: "newsletter"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+              - { label: "Headline", name: "headline", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
 
-          - { label: "Hero Eyebrow", name: "hero_eyebrow", widget: "string" }
-          - { label: "Hero Headline", name: "hero_headline", widget: "string" }
-          - { label: "Hero Subheading", name: "hero_subheading", widget: "text" }
-
-          - label: "Quick List Venue Names"
-            name: "hero_quick_list"
+      - name: "cities"
+        label: "Cities Page"
+        file: "content/pages/cities.yml"
+        preview_path: "/cities/"
+        fields: &page_fields
+          - label: "SEO"
+            name: "seo"
+            widget: "object"
+            fields:
+              - { label: "Page Title", name: "title", widget: "string" }
+              - { label: "Meta Description", name: "description", widget: "text" }
+              - { label: "Social Image", name: "social_image", widget: "image", required: false }
+          - label: "Page Content"
+            name: "page"
+            widget: "object"
+            fields:
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Intro", name: "intro", widget: "text" }
+              - { label: "Hero Image", name: "hero_image", widget: "image", required: false }
+          - label: "Cards"
+            name: "cards"
             widget: "list"
-            summary: "{{fields.venue_name}}"
-            field: { label: "Venue Name", name: "venue_name", widget: "string" }
+            summary: "{{fields.title}}"
+            fields:
+              - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+              - { label: "Link URL", name: "url", widget: "string" }
+              - { label: "Card Image", name: "image", widget: "image", required: false }
 
-          - { label: "Newsletter Eyebrow", name: "newsletter_eyebrow", widget: "string" }
-          - { label: "Newsletter Headline", name: "newsletter_headline", widget: "string" }
-          - { label: "Newsletter Description", name: "newsletter_description", widget: "text" }
+      - name: "new_york_city"
+        label: "New York City Page"
+        file: "content/pages/new-york-city.yml"
+        preview_path: "/new-york-city/"
+        fields: *page_fields
+
+      - name: "los_angeles"
+        label: "Los Angeles Page"
+        file: "content/pages/los-angeles.yml"
+        preview_path: "/los-angeles/"
+        fields: *page_fields
+
+      - name: "miami"
+        label: "Miami Page"
+        file: "content/pages/miami.yml"
+        preview_path: "/miami/"
+        fields: *page_fields
+
+      - name: "san_francisco"
+        label: "San Francisco Page"
+        file: "content/pages/san-francisco.yml"
+        preview_path: "/san-francisco/"
+        fields: *page_fields
+
+      - name: "chicago"
+        label: "Chicago Page"
+        file: "content/pages/chicago.yml"
+        preview_path: "/chicago/"
+        fields: *page_fields
