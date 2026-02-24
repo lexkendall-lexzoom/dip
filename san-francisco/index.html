@@ -12,14 +12,40 @@
   <meta property="og:url" content="https://dipdays.com/san-francisco/" />
   <meta name="twitter:card" content="summary" />
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"CollectionPage","name":"Best Bathhouses, Saunas & Cold Plunge in San Francisco","url":"https://dipdays.com/san-francisco/"}</script>
-  <style>body{font-family:Arial,sans-serif;max-width:840px;margin:0 auto;padding:40px 20px;line-height:1.6;background:#f3f0e8;color:#111}a{color:#0b7c78}.venue{background:#fff;border:2px solid #111;padding:14px;margin:10px 0}</style>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Playfair+Display:ital,wght@0,500;1,400;1,500&display=swap"/>
+  <style>
+    :root{--ink:#111;--page:#f3f0e8;--card:#fff;--mist:#d8d4ca;--teal:#0b7c78;--teal-dark:#085a57;--font-sans:'Syne',ui-sans-serif,system-ui,-apple-system,'Segoe UI',sans-serif;--font-serif:'Playfair Display',Georgia,serif;}
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--page);color:var(--ink);font-family:var(--font-sans)}
+    .shell{max-width:1040px;margin:0 auto;padding:36px 24px 64px}
+    .back{display:inline-block;color:var(--teal);font-size:12px;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;font-weight:700;margin-bottom:20px}
+    h1{margin:0 0 14px;font-size:clamp(36px,4.3vw,62px);line-height:.95;letter-spacing:-.03em}
+    .intro{margin:0 0 22px;font-family:var(--font-serif);font-style:italic;color:#555;line-height:1.7;max-width:820px}
+    .cards{display:grid;gap:14px}
+    .card{display:block;background:var(--card);border:2px solid var(--ink);padding:20px;text-decoration:none;color:inherit;transition:transform .15s ease, box-shadow .15s ease, border-color .15s ease}
+    .card:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 rgba(0,0,0,.16);border-color:var(--teal)}
+    .card h2{margin:0 0 8px;font-size:clamp(26px,2.6vw,40px);line-height:1;letter-spacing:-.02em}
+    .card p{margin:0;color:#444;line-height:1.65}
+    .eyebrow{margin:0 0 8px;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:#666}
+    @media (max-width: 760px){
+      .shell{padding:28px 16px 44px}
+      .card{padding:16px}
+      .card h2{font-size:28px}
+    }
+  </style>
 </head>
 <body>
-<p><a href="/cities/">← All cities</a></p>
-<h1>Best Bathhouses, Saunas & Cold Plunge in San Francisco</h1>
-<p>San Francisco blends classic bathhouse traditions with boutique recovery spaces. This page establishes city-level discoverability while content depth grows.</p>
-<div class="venue"><h2>Archimedes Banya</h2><p>Large thermal variety and social banya energy.</p></div>
-<div class="venue"><h2>Kabuki Springs & Spa</h2><p>A quieter, ritual-focused city option with strong regulars.</p></div>
-<div class="venue"><h2>Almonte Spa (Marin)</h2><p>A premium nearby option for full thermal reset days.</p></div>
+  <main class="shell">
+    <a class="back" href="/cities/">← All cities</a>
+    <h1>Best Bathhouses, Saunas & Cold Plunge in San Francisco</h1>
+    <p class="intro">San Francisco blends classic bathhouse traditions with boutique recovery spaces and ritual-focused options.</p>
+    <section class="cards">
+    <a class="card" href="#"><p class="eyebrow">Venue Page</p><h2>Archimedes Banya</h2><p>Large thermal variety and social banya energy.</p></a>
+    <a class="card" href="#"><p class="eyebrow">Venue Page</p><h2>Kabuki Springs & Spa</h2><p>A quieter, ritual-focused city option with strong regulars.</p></a>
+    <a class="card" href="#"><p class="eyebrow">Venue Page</p><h2>Almonte Spa (Marin)</h2><p>A premium nearby option for full thermal reset days.</p></a>
+    </section>
+  </main>
 </body>
 </html>

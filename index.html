@@ -11,6 +11,7 @@
 <meta property="og:type" content="website"/>
 <meta property="og:url" content="https://dipdays.com/"/>
 <meta name="twitter:card" content="summary"/>
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Playfair+Display:ital,wght@0,500;1,400;1,500&display=swap"/>
@@ -306,7 +307,7 @@ footer{background:var(--ink);border-top:1px solid rgba(255,255,255,.08);padding:
 <div class="hero">
   <div>
     <p class="h-ey">25 Cities · 100+ Venues · Expanding</p>
-    <h1 class="h-title">The Best<br/><span>Sweats</span><br/>In Your<br/>City.</h1>
+    <h1 class="h-title">The Definitive<br/><span>Bathhouse</span><br/>Guide.</h1>
     <p class="h-sub">Every bathhouse, sauna, thermal bath, and cold plunge worth your time — with prices, honest reviews, and everything you need.</p>
     <div class="capture">
       <p class="cap-l">Stay in the loop</p>
@@ -1685,6 +1686,17 @@ function submitEmail(e) {
     submitMailchimpForm(form);
   });
 })();
+</script>
+<script>
+if (window.netlifyIdentity) {
+  window.netlifyIdentity.on('init', function(user) {
+    if (!user) {
+      window.netlifyIdentity.on('login', function() {
+        document.location.href = '/admin/';
+      });
+    }
+  });
+}
 </script>
 </body>
 </html>
