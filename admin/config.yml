@@ -107,3 +107,127 @@ collections:
         file: "content/pages/chicago.yml"
         preview_path: "/chicago/"
         fields: *page_fields
+
+      - name: "bathhouse_williamsburg"
+        label: "Venue · Bathhouse Williamsburg"
+        file: "content/venues/new-york-city/bathhouse-williamsburg.yml"
+        preview_path: "/new-york-city/bathhouse-williamsburg/"
+        fields: &venue_fields
+          - label: "SEO"
+            name: "seo"
+            widget: "object"
+            fields:
+              - { label: "Page Title", name: "title", widget: "string" }
+              - { label: "Meta Description", name: "description", widget: "text" }
+              - { label: "Social Image", name: "social_image", widget: "image", required: false }
+          - label: "Venue Content"
+            name: "venue"
+            widget: "object"
+            fields:
+              - { label: "Venue Name", name: "name", widget: "string" }
+              - { label: "City", name: "city", widget: "string" }
+              - { label: "Slug", name: "slug", widget: "string" }
+              - { label: "Subtitle", name: "subtitle", widget: "string" }
+              - { label: "Hero Image", name: "hero_image", widget: "image", required: false }
+              - { label: "Neighborhood", name: "neighborhood", widget: "string" }
+              - { label: "Price", name: "price", widget: "string" }
+              - { label: "Score", name: "score", widget: "string" }
+              - { label: "Date Reviewed", name: "date_reviewed", widget: "string" }
+              - { label: "Hours", name: "hours", widget: "string" }
+              - { label: "Best For", name: "best_for", widget: "string" }
+              - { label: "Official Website URL", name: "website_url", widget: "string" }
+              - { label: "Dip Review", name: "review", widget: "text" }
+              - label: "Gallery Images"
+                name: "gallery_images"
+                widget: "list"
+                field: { label: "Image", name: "image", widget: "image" }
+
+      - name: "aire_ancient_baths"
+        label: "Venue · Aire Ancient Baths"
+        file: "content/venues/new-york-city/aire-ancient-baths.yml"
+        preview_path: "/new-york-city/aire-ancient-baths/"
+        fields: *venue_fields
+
+      - name: "akari_sauna"
+        label: "Venue · Akari Sauna"
+        file: "content/venues/new-york-city/akari-sauna.yml"
+        preview_path: "/new-york-city/akari-sauna/"
+        fields: *venue_fields
+
+      - name: "great_jones_spa"
+        label: "Venue · Great Jones Spa"
+        file: "content/venues/new-york-city/great-jones-spa.yml"
+        preview_path: "/new-york-city/great-jones-spa/"
+        fields: *venue_fields
+
+      - name: "lift_next_level_floats"
+        label: "Venue · Lift Next Level Floats"
+        file: "content/venues/new-york-city/lift-next-level-floats.yml"
+        preview_path: "/new-york-city/lift-next-level-floats/"
+        fields: *venue_fields
+
+      - name: "lore_bathing_club"
+        label: "Venue · Lore Bathing Club"
+        file: "content/venues/new-york-city/lore-bathing-club.yml"
+        preview_path: "/new-york-city/lore-bathing-club/"
+        fields: *venue_fields
+
+      - name: "othership_flatiron"
+        label: "Venue · Othership Flatiron"
+        file: "content/venues/new-york-city/othership-flatiron.yml"
+        preview_path: "/new-york-city/othership-flatiron/"
+        fields: *venue_fields
+
+      - name: "othership_williamsburg"
+        label: "Venue · Othership Williamsburg"
+        file: "content/venues/new-york-city/othership-williamsburg.yml"
+        preview_path: "/new-york-city/othership-williamsburg/"
+        fields: *venue_fields
+
+      - name: "remedy_place"
+        label: "Venue · Remedy Place"
+        file: "content/venues/new-york-city/remedy-place.yml"
+        preview_path: "/new-york-city/remedy-place/"
+        fields: *venue_fields
+
+      - name: "russian_and_turkish_baths"
+        label: "Venue · Russian and Turkish Baths"
+        file: "content/venues/new-york-city/russian-and-turkish-baths.yml"
+        preview_path: "/new-york-city/russian-and-turkish-baths/"
+        fields: *venue_fields
+
+      - name: "saint"
+        label: "Venue · Saint"
+        file: "content/venues/new-york-city/saint.yml"
+        preview_path: "/new-york-city/saint/"
+        fields: *venue_fields
+
+      - name: "schwet"
+        label: "Venue · Schwet"
+        file: "content/venues/new-york-city/schwet.yml"
+        preview_path: "/new-york-city/schwet/"
+        fields: *venue_fields
+
+      - name: "sojo_spa_club"
+        label: "Venue · Sojo Spa Club"
+        file: "content/venues/new-york-city/sojo-spa-club.yml"
+        preview_path: "/new-york-city/sojo-spa-club/"
+        fields: *venue_fields
+
+      - name: "spa_castle"
+        label: "Venue · Spa Castle"
+        file: "content/venues/new-york-city/spa-castle.yml"
+        preview_path: "/new-york-city/spa-castle/"
+        fields: *venue_fields
+
+      - name: "the_altar"
+        label: "Venue · The Altar"
+        file: "content/venues/new-york-city/the-altar.yml"
+        preview_path: "/new-york-city/the-altar/"
+        fields: *venue_fields
+
+      - name: "world_spa"
+        label: "Venue · World Spa"
+        file: "content/venues/new-york-city/world-spa.yml"
+        preview_path: "/new-york-city/world-spa/"
+        fields: *venue_fields
