@@ -1,5 +1,6 @@
 async function loadVenueYaml(path) {
-  const response = await fetch(path, { cache: 'no-store' });
+  const cacheBustPath = `${path}${path.includes('?') ? '&' : '?'}v=${Date.now()}`;
+  const response = await fetch(cacheBustPath, { cache: 'no-store' });
   if (!response.ok) throw new Error(`Failed to load ${path}: ${response.status}`);
   const text = await response.text();
   return window.jsyaml.load(text) || {};
@@ -46,18 +47,32 @@ function renderBestFor(value) {
   row.innerHTML = `<strong>Best for:</strong> ${value}`;
 }
 
+
+
+function normalizeGalleryImages(images = []) {
+  if (!Array.isArray(images)) return [];
+  return images
+    .map((item) => {
+      if (typeof item === 'string') return item;
+      if (item && typeof item === 'object') return item.image || item.src || '';
+      return '';
+    })
+    .filter((src) => typeof src === 'string' && src.trim());
+}
+
 function renderGallery(images = [], venueName = 'Venue') {
   const track = document.querySelector('[data-track]');
   const dotsWrap = document.querySelector('.dots');
-  if (!track || !dotsWrap || !Array.isArray(images) || !images.length) return;
+  const normalizedImages = normalizeGalleryImages(images);
+  if (!track || !dotsWrap || !normalizedImages.length) return;
 
-  track.innerHTML = images
+  track.innerHTML = normalizedImages
     .map(
       (src, i) => `<div class="slide"><img src="${src}" alt="${venueName} photo ${i + 1}" loading="lazy"/></div>`
     )
     .join('');
 
-  dotsWrap.innerHTML = images
+  dotsWrap.innerHTML = normalizedImages
     .map(
       (_, i) =>
         `<button class="dot${i === 0 ? ' active' : ''}" type="button" data-dot="${i}" aria-label="Slide ${i + 1}"></button>`
@@ -122,6 +137,9 @@ async function initCmsVenueContent() {
     setAttr('.hero-media > img', 'alt', `${venue.name || 'Venue'} hero image`);
 
     setAttr('.cta', 'href', venue.website_url);
+
+    const chipLabels = Array.from(document.querySelectorAll('.chip'));
+    if (chipLabels.length > 0) setText('.chip:first-child', venue.category || venue.type);
 
     setAttr('meta[name="description"]', 'content', seo.description);
     setAttr('meta[property="og:title"]', 'content', seo.title);
