@@ -1,0 +1,20 @@
+seo:
+  title: "Beverly Hot Springs Review | Dip"
+  description: "Editorial venue profile for Beverly Hot Springs in Los Angeles."
+  social_image: "https://beverlyhotsprings.com/wp-content/uploads/2018/10/women-936549_1920.jpg"
+venue:
+  name: "Beverly Hot Springs"
+  city: "Los Angeles"
+  slug: "beverly-hot-springs"
+  subtitle: ""
+  hero_image: "https://beverlyhotsprings.com/wp-content/uploads/2018/10/women-936549_1920.jpg"
+  neighborhood: "East Hollywood"
+  price: "from $40"
+  score: "8.2"
+  date_reviewed: ""
+  hours: "Daily 9am–9pm"
+  best_for: ""
+  website_url: "https://beverlyhotsprings.com"
+  review: ""
+  gallery_images:
+    - "https://beverlyhotsprings.com/wp-content/uploads/2018/10/women-936549_1920.jpg"
