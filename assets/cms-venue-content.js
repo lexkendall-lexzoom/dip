@@ -68,6 +68,9 @@ function normalizeGalleryImages(images = []) {
       return '';
     })
     .map((src) => normalizeMediaUrl(src))
+      if (item && typeof item === 'object') return item.image || item.src || '';
+      return '';
+    })
     .filter((src) => typeof src === 'string' && src.trim());
 }
 
@@ -145,6 +148,7 @@ async function initCmsVenueContent() {
     setText('.desc', venue.review);
 
     setAttr('.hero-media > img', 'src', normalizeMediaUrl(venue.hero_image || seo.social_image));
+    setAttr('.hero-media > img', 'src', venue.hero_image || seo.social_image);
     setAttr('.hero-media > img', 'alt', `${venue.name || 'Venue'} hero image`);
 
     setAttr('.cta', 'href', venue.website_url);
@@ -156,6 +160,7 @@ async function initCmsVenueContent() {
     setAttr('meta[property="og:title"]', 'content', seo.title);
     setAttr('meta[property="og:description"]', 'content', seo.description);
     setAttr('meta[property="og:image"]', 'content', normalizeMediaUrl(seo.social_image || venue.hero_image));
+    setAttr('meta[property="og:image"]', 'content', seo.social_image || venue.hero_image);
 
     if (typeof seo.title === 'string' && seo.title.trim()) document.title = seo.title;
 
