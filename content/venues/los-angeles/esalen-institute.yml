@@ -1,0 +1,20 @@
+seo:
+  title: "Esalen Institute Review | Dip"
+  description: "Editorial venue profile for Esalen Institute in Los Angeles."
+  social_image: "https://cdn.prod.website-files.com/602d8561ae2fe6ec8347c903/694821f6e4ea152155821bfb_6941d327802703cecfad78e5_2026-Esalen_Cliffside_Emily-Miller-1500x775.jpeg"
+venue:
+  name: "Esalen Institute"
+  city: "Los Angeles"
+  slug: "esalen-institute"
+  subtitle: ""
+  hero_image: "https://cdn.prod.website-files.com/602d8561ae2fe6ec8347c903/694821f6e4ea152155821bfb_6941d327802703cecfad78e5_2026-Esalen_Cliffside_Emily-Miller-1500x775.jpeg"
+  neighborhood: "Big Sur, California"
+  price: "from $30"
+  score: "9.5"
+  date_reviewed: ""
+  hours: "Guests all day · Public 1am–3am"
+  best_for: ""
+  website_url: "https://www.esalen.org"
+  review: ""
+  gallery_images:
+    - "https://cdn.prod.website-files.com/602d8561ae2fe6ec8347c903/694821f6e4ea152155821bfb_6941d327802703cecfad78e5_2026-Esalen_Cliffside_Emily-Miller-1500x775.jpeg"
