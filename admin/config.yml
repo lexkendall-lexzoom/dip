@@ -107,3 +107,86 @@ collections:
         file: "content/pages/chicago.yml"
         preview_path: "/chicago/"
         fields: *page_fields
+
+  - name: "venues_new_york_city"
+    label: "Venues · New York City"
+    format: "yaml"
+    extension: "yml"
+    folder: "content/venues/new-york-city"
+    create: true
+    slug: "{{slug}}"
+    preview_path: "/new-york-city/{{slug}}/"
+    summary: "{{venue.name}}"
+    fields: &venue_fields
+      - label: "SEO"
+        name: "seo"
+        widget: "object"
+        fields:
+          - { label: "Page Title", name: "title", widget: "string" }
+          - { label: "Meta Description", name: "description", widget: "text" }
+          - { label: "Social Image", name: "social_image", widget: "image", required: false }
+      - label: "Venue Content"
+        name: "venue"
+        widget: "object"
+        fields:
+          - { label: "Venue Name", name: "name", widget: "string" }
+          - { label: "City", name: "city", widget: "string" }
+          - { label: "Slug", name: "slug", widget: "string" }
+          - { label: "Subtitle", name: "subtitle", widget: "string", required: false }
+          - { label: "Hero Image", name: "hero_image", widget: "image", required: false }
+          - { label: "Neighborhood", name: "neighborhood", widget: "string", required: false }
+          - { label: "Price", name: "price", widget: "string", required: false }
+          - { label: "Score", name: "score", widget: "string", required: false }
+          - { label: "Date Reviewed", name: "date_reviewed", widget: "string", required: false }
+          - { label: "Hours", name: "hours", widget: "string", required: false }
+          - { label: "Best For", name: "best_for", widget: "string", required: false }
+          - { label: "Official Website URL", name: "website_url", widget: "string", required: false }
+          - { label: "Dip Review", name: "review", widget: "text", required: false }
+          - label: "Gallery Images"
+            name: "gallery_images"
+            widget: "list"
+            field: { label: "Image", name: "image", widget: "image" }
+
+  - name: "venues_los_angeles"
+    label: "Venues · Los Angeles"
+    format: "yaml"
+    extension: "yml"
+    folder: "content/venues/los-angeles"
+    create: true
+    slug: "{{slug}}"
+    preview_path: "/los-angeles/{{slug}}/"
+    summary: "{{venue.name}}"
+    fields: *venue_fields
+
+  - name: "venues_miami"
+    label: "Venues · Miami"
+    format: "yaml"
+    extension: "yml"
+    folder: "content/venues/miami"
+    create: true
+    slug: "{{slug}}"
+    preview_path: "/miami/{{slug}}/"
+    summary: "{{venue.name}}"
+    fields: *venue_fields
+
+  - name: "venues_san_francisco"
+    label: "Venues · San Francisco"
+    format: "yaml"
+    extension: "yml"
+    folder: "content/venues/san-francisco"
+    create: true
+    slug: "{{slug}}"
+    preview_path: "/san-francisco/{{slug}}/"
+    summary: "{{venue.name}}"
+    fields: *venue_fields
+
+  - name: "venues_chicago"
+    label: "Venues · Chicago"
+    format: "yaml"
+    extension: "yml"
+    folder: "content/venues/chicago"
+    create: true
+    slug: "{{slug}}"
+    preview_path: "/chicago/{{slug}}/"
+    summary: "{{venue.name}}"
+    fields: *venue_fields
