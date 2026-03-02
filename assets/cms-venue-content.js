@@ -16,6 +16,16 @@ function setAttr(selector, attr, value) {
   if (el && typeof value === 'string' && value.trim()) el.setAttribute(attr, value);
 }
 
+
+function normalizeMediaUrl(value) {
+  if (typeof value !== 'string') return '';
+  const src = value.trim();
+  if (!src) return '';
+  if (/^(https?:)?\/\//i.test(src) || src.startsWith('data:') || src.startsWith('blob:')) return src;
+  if (src.startsWith('/')) return src;
+  return `/${src}`;
+}
+
 function inferVenueContentPath() {
   const parts = window.location.pathname.split('/').filter(Boolean);
   if (parts.length < 2) return null;
@@ -54,6 +64,10 @@ function normalizeGalleryImages(images = []) {
   return images
     .map((item) => {
       if (typeof item === 'string') return item;
+      if (item && typeof item === 'object') return item.image || item.src || item.url || '';
+      return '';
+    })
+    .map((src) => normalizeMediaUrl(src))
       if (item && typeof item === 'object') return item.image || item.src || '';
       return '';
     })
@@ -133,6 +147,7 @@ async function initCmsVenueContent() {
     setText('.sub', venue.subtitle);
     setText('.desc', venue.review);
 
+    setAttr('.hero-media > img', 'src', normalizeMediaUrl(venue.hero_image || seo.social_image));
     setAttr('.hero-media > img', 'src', venue.hero_image || seo.social_image);
     setAttr('.hero-media > img', 'alt', `${venue.name || 'Venue'} hero image`);
 
@@ -144,6 +159,7 @@ async function initCmsVenueContent() {
     setAttr('meta[name="description"]', 'content', seo.description);
     setAttr('meta[property="og:title"]', 'content', seo.title);
     setAttr('meta[property="og:description"]', 'content', seo.description);
+    setAttr('meta[property="og:image"]', 'content', normalizeMediaUrl(seo.social_image || venue.hero_image));
     setAttr('meta[property="og:image"]', 'content', seo.social_image || venue.hero_image);
 
     if (typeof seo.title === 'string' && seo.title.trim()) document.title = seo.title;

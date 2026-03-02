@@ -1,8 +1,18 @@
 async function loadCmsYaml(path) {
-  const response = await fetch(path, { cache: 'no-store' });
+  const cacheBustPath = `${path}${path.includes('?') ? '&' : '?'}v=${Date.now()}`;
+  const response = await fetch(cacheBustPath, { cache: 'no-store' });
   if (!response.ok) throw new Error(`Failed to load ${path}: ${response.status}`);
   const text = await response.text();
   return window.jsyaml.load(text) || {};
+}
+
+function normalizeMediaUrl(value) {
+  if (typeof value !== 'string') return '';
+  const src = value.trim();
+  if (!src) return '';
+  if (/^(https?:)?\/\//i.test(src) || src.startsWith('data:') || src.startsWith('blob:')) return src;
+  if (src.startsWith('/')) return src;
+  return `/${src}`;
 }
 
 function setText(selector, value) {
@@ -19,7 +29,7 @@ function setHeroImage(selector, src) {
   const el = document.querySelector(selector);
   if (!el) return;
   if (typeof src === 'string' && src.trim()) {
-    el.src = src;
+    el.src = normalizeMediaUrl(src);
     el.hidden = false;
   } else {
     el.hidden = true;
@@ -32,7 +42,7 @@ function renderCards(selector, cards = []) {
   container.innerHTML = cards
     .map(
       (card) => `<a class="card" href="${card.url || '#'}">
-        ${card.image ? `<img class="card-media" src="${card.image}" alt="${card.title || ''}" loading="lazy"/>` : ''}
+        ${card.image ? `<img class="card-media" src="${normalizeMediaUrl(card.image)}" alt="${card.title || ''}" loading="lazy"/>` : ''}
         <p class="eyebrow">${card.eyebrow || ''}</p>
         <h2>${card.title || ''}</h2>
         <p>${card.description || ''}</p>
