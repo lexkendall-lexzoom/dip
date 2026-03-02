@@ -1,15 +1,21 @@
+---
+permalink: /cities/
+---
+{%- set pg = citiesPage.page -%}
+{%- set seo = citiesPage.seo -%}
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Best Bathhouses, Saunas & Cold Plunge in San Francisco (2026) | Dip</title>
-  <meta name="description" content="Dip's San Francisco guide to bathhouses, saunas, and thermal experiences with editorial recommendations and context." />
-  <link rel="canonical" href="https://dipdays.com/san-francisco/" />
-  <meta property="og:title" content="Best Bathhouses, Saunas & Cold Plunge in San Francisco | Dip" />
-  <meta property="og:description" content="Find top San Francisco sauna and thermal experiences with Dip's city guide." />
-  <meta property="og:type" content="article" />
-  <meta property="og:url" content="https://dipdays.com/san-francisco/" />
+  <title>{{ seo.title | default("Dip Cities | Bathhouse, Sauna, and Cold Plunge Guides") }}</title>
+  <meta name="description" content="{{ seo.description | default('') }}" />
+  <link rel="canonical" href="https://dipdays.com/cities/" />
+  <meta property="og:title" content="{{ seo.title | default('Dip Cities') }}" />
+  <meta property="og:description" content="{{ seo.description | default('') }}" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://dipdays.com/cities/" />
+  {% if seo.social_image %}<meta property="og:image" content="{{ seo.social_image }}" />{% endif %}
   <meta name="twitter:card" content="summary" />
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
@@ -34,18 +40,22 @@
 </head>
 <body>
   <main class="shell">
-    <a class="back" href="/cities/">← All cities</a>
-    <h1 id="cms-page-heading">Best Bathhouses, Saunas & Cold Plunge in San Francisco</h1>
-    <img id="cms-page-hero-image" class="hero-media" alt="Best Bathhouses, Saunas & Cold Plunge in San Francisco" hidden />
-    <p id="cms-page-intro" class="intro">San Francisco blends classic bathhouse traditions with boutique recovery spaces and ritual-focused options.</p>
-    <section id="cms-page-cards" class="cards">
-      <a class="card" href="#"><p class="eyebrow">Venue Page</p><h2>Archimedes Banya</h2><p>Large thermal variety and social banya energy.</p></a>
-      <a class="card" href="#"><p class="eyebrow">Venue Page</p><h2>Kabuki Springs & Spa</h2><p>A quieter, ritual-focused city option with strong regulars.</p></a>
-      <a class="card" href="#"><p class="eyebrow">Venue Page</p><h2>Almonte Spa (Marin)</h2><p>A premium nearby option for full thermal reset days.</p></a>
+    <a class="back" href="/">← Back to Dip homepage</a>
+    <h1>{{ pg.heading | default("Dip City Guides") }}</h1>
+    {% if pg.hero_image %}<img class="hero-media" src="{{ pg.hero_image }}" alt="Cities hero" />{% endif %}
+    <p class="intro">{{ pg.intro | default("Browse city-specific guides for the best bathhouses, saunas, thermal circuits, and cold plunges.") }}</p>
+    <section class="cards">
+      {% if citiesPage.cards %}
+        {% for card in citiesPage.cards %}
+      <a class="card" href="{{ card.url }}">
+        {% if card.image %}<img class="card-media" src="{{ card.image }}" alt="{{ card.title }}" loading="lazy" />{% endif %}
+        <p class="eyebrow">{{ card.eyebrow }}</p>
+        <h2>{{ card.title }}</h2>
+        <p>{{ card.description }}</p>
+      </a>
+        {% endfor %}
+      {% endif %}
     </section>
   </main>
-  <script src="https://cdn.jsdelivr.net/npm/js-yaml@4.1.0/dist/js-yaml.min.js"></script>
-  <script src="/assets/cms-content.js"></script>
-  <script>initCmsPageContent('/content/pages/san-francisco.yml');</script>
 </body>
 </html>

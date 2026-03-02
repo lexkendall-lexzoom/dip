@@ -1,18 +1,21 @@
+---
+permalink: /
+---
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Dip Days — The Best Sweats in Your City</title>
-<meta name="description" content="Find the best bathhouses, saunas, thermal baths, and cold plunges in top US cities with Dip's editorial directory."/>
+<title>{{ homepage.seo.title | default("Dip Days — The Best Sweats in Your City") }}</title>
+<meta name="description" content="{{ homepage.seo.description | default('Find the best bathhouses, saunas, thermal baths, and cold plunges in top US cities.') }}"/>
 <link rel="canonical" href="https://dipdays.com/"/>
-<meta property="og:title" content="Dip Days — The Best Sweats in Your City"/>
-<meta property="og:description" content="The best bathhouses, saunas, thermal baths, and cold plunges in your city."/>
+<meta property="og:title" content="{{ homepage.seo.title | default('Dip Days — The Best Sweats in Your City') }}"/>
+<meta property="og:description" content="{{ homepage.seo.description | default('The best bathhouses, saunas, thermal baths, and cold plunges in your city.') }}"/>
 <meta property="og:type" content="website"/>
 <meta property="og:url" content="https://dipdays.com/"/>
+{% if homepage.seo.social_image %}<meta property="og:image" content="{{ homepage.seo.social_image }}"/>{% endif %}
 <meta name="twitter:card" content="summary"/>
 <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/js-yaml@4.1.0/dist/js-yaml.min.js"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Playfair+Display:ital,wght@0,500;1,400;1,500&display=swap"/>
@@ -307,13 +310,13 @@ footer{background:var(--ink);border-top:1px solid rgba(255,255,255,.08);padding:
 <main id="main-content">
 <div class="hero">
   <div>
-    <p class="h-ey" id="cms-hero-eyebrow">25 Cities · 100+ Venues · Expanding</p>
-    <h1 class="h-title" id="cms-hero-headline">The Definitive<br/><span>Bathhouse</span><br/>Guide.</h1>
-    <p class="h-sub" id="cms-hero-subheading">Every bathhouse, sauna, thermal bath, and cold plunge worth your time — with prices, honest reviews, and everything you need.</p>
+    <p class="h-ey">{{ homepage.hero.eyebrow | default("25 Cities · 100+ Venues · Expanding") }}</p>
+    <h1 class="h-title">The Definitive<br/><span>Bathhouse</span><br/>Guide.</h1>
+    <p class="h-sub">{{ homepage.hero.subheading | default("Every bathhouse, sauna, thermal bath, and cold plunge worth your time — with prices, honest reviews, and everything you need.") }}</p>
     <div class="capture">
-      <p class="cap-l" id="cms-newsletter-eyebrow">Stay in the loop</p>
-      <p class="cap-t" id="cms-newsletter-headline">Be the first to know about new openings and exclusive offers from Dip partners.</p>
-      <p class="cap-d" id="cms-newsletter-description">Get alerts about newly opened venues in your city, plus exclusive partner offers sent straight to your inbox.</p>
+      <p class="cap-l">{{ homepage.newsletter.eyebrow | default("Stay in the loop") }}</p>
+      <p class="cap-t">{{ homepage.newsletter.headline | default("Be the first to know about new openings and exclusive offers from Dip partners.") }}</p>
+      <p class="cap-d">{{ homepage.newsletter.description | default("Get alerts about newly opened venues in your city, plus exclusive partner offers sent straight to your inbox.") }}</p>
       <form class="cap-f" action="https://fund.us13.list-manage.com/subscribe/post?u=10d65743c5e2fcb6f0e93121c&amp;id=0fcf95b99f&amp;f_id=00647de9f0" method="post" target="_blank">
         <input type="email" name="EMAIL" placeholder="your@email.com" required/>
         <button type="submit">Notify Me</button>
@@ -1197,68 +1200,11 @@ let activeFilter = 'all';
 let currentCity = 'nyc';
 let leafletMap = null;
 let markers = [];
-async function applyHomepageCmsContent() {
-  try {
-    const response = await fetch('/content/homepage.yml', { cache: 'no-store' });
-    if (!response.ok) return;
-    const text = await response.text();
-    const data = window.jsyaml.load(text) || {};
-    const seo = data.seo || {};
-    const hero = data.hero || {};
-    const newsletter = data.newsletter || {};
-
-    if (seo.title) document.title = seo.title;
-    if (seo.description) {
-      const desc = document.querySelector('meta[name="description"]');
-      const ogDesc = document.querySelector('meta[property="og:description"]');
-      if (desc) desc.setAttribute('content', seo.description);
-      if (ogDesc) ogDesc.setAttribute('content', seo.description);
-    }
-    if (seo.title) {
-      const ogTitle = document.querySelector('meta[property="og:title"]');
-      if (ogTitle) ogTitle.setAttribute('content', seo.title);
-    }
-    const socialImage = seo.social_image || '';
-    if (socialImage) {
-      let ogImage = document.querySelector('meta[property="og:image"]');
-      if (!ogImage) {
-        ogImage = document.createElement('meta');
-        ogImage.setAttribute('property', 'og:image');
-        document.head.appendChild(ogImage);
-      }
-      ogImage.setAttribute('content', socialImage);
-    }
-
-    if (hero.eyebrow) document.getElementById('cms-hero-eyebrow').textContent = hero.eyebrow;
-    if (hero.headline) document.getElementById('cms-hero-headline').innerHTML = hero.headline.replace(/\n/g, '<br/>');
-    if (hero.subheading) document.getElementById('cms-hero-subheading').textContent = hero.subheading;
-    if (newsletter.eyebrow) document.getElementById('cms-newsletter-eyebrow').textContent = newsletter.eyebrow;
-    if (newsletter.headline) document.getElementById('cms-newsletter-headline').textContent = newsletter.headline;
-    if (newsletter.description) document.getElementById('cms-newsletter-description').textContent = newsletter.description;
-
-    if (Array.isArray(hero.quick_list) && hero.quick_list.length) {
-      const list = document.getElementById('hero-list');
-      list.innerHTML = hero.quick_list.map((item, i) => `
-        <div class="h-qr" onclick="switchCity('nyc');setTimeout(()=>scrollToCard('ny${i+1}'),300)">
-          <div class="h-qn">${i + 1}</div>
-          <span class="h-qname">${item.venue_name || ''}</span>
-          <span class="h-qhood">NYC</span>
-          <span class="h-qprice">Featured</span>
-        </div>
-      `).join('');
-      window.__cmsHeroQuickList = true;
-    }
-  } catch (error) {
-    console.error('Homepage CMS content load failed:', error);
-  }
-}
-
 
 // ─── INIT ──────────────────────────────────────────────
 document.addEventListener('DOMContentLoaded', async () => {
-  await applyHomepageCmsContent();
   buildCityTabs();
-  if (!window.__cmsHeroQuickList) buildHeroList();
+  buildHeroList();
   initVenuesDropdown();
   switchCity('nyc', { scrollToDirectory: false });
   loadLeaflet();

@@ -1,15 +1,25 @@
+---
+pagination:
+  data: cityPages
+  size: 1
+  alias: cityPage
+permalink: "/{{ cityPage.slug }}/"
+---
+{%- set pg = cityPage.page -%}
+{%- set seo = cityPage.seo -%}
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dip Cities | Bathhouse, Sauna, and Cold Plunge Guides</title>
-  <meta name="description" content="Explore Dip city guides for bathhouses, saunas, thermal spas, and cold plunge spots. Start with New York City, Los Angeles, Miami, San Francisco, and Chicago." />
-  <link rel="canonical" href="https://dipdays.com/cities/" />
-  <meta property="og:title" content="Dip Cities | Bathhouse, Sauna, and Cold Plunge Guides" />
-  <meta property="og:description" content="Explore Dip city guides for bathhouses, saunas, thermal spas, and cold plunge spots." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://dipdays.com/cities/" />
+  <title>{{ seo.title | default(pg.heading + " | Dip") }}</title>
+  <meta name="description" content="{{ seo.description | default('') }}" />
+  <link rel="canonical" href="https://dipdays.com/{{ cityPage.slug }}/" />
+  <meta property="og:title" content="{{ seo.title | default(pg.heading + ' | Dip') }}" />
+  <meta property="og:description" content="{{ seo.description | default('') }}" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://dipdays.com/{{ cityPage.slug }}/" />
+  {% if seo.social_image %}<meta property="og:image" content="{{ seo.social_image }}" />{% endif %}
   <meta name="twitter:card" content="summary" />
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
@@ -34,20 +44,22 @@
 </head>
 <body>
   <main class="shell">
-    <a class="back" href="/">← Back to Dip homepage</a>
-    <h1 id="cms-page-heading">Dip City Guides</h1>
-    <img id="cms-page-hero-image" class="hero-media" alt="Cities hero" hidden />
-    <p id="cms-page-intro" class="intro">Browse city-specific guides for the best bathhouses, saunas, thermal circuits, and cold plunges.</p>
-    <section id="cms-page-cards" class="cards">
-      <a class="card" href="/new-york-city/"><p class="eyebrow">City Guide</p><h2>New York City</h2><p>Deep thermal options, iconic banyas, and full-day reset picks.</p></a>
-      <a class="card" href="/los-angeles/"><p class="eyebrow">City Guide</p><h2>Los Angeles</h2><p>Korean spas, float centers, and low-key neighborhood gems.</p></a>
-      <a class="card" href="/miami/"><p class="eyebrow">City Guide</p><h2>Miami</h2><p>Steam, contrast therapy, and resort-level thermal experiences.</p></a>
-      <a class="card" href="/san-francisco/"><p class="eyebrow">City Guide</p><h2>San Francisco</h2><p>Historic bath traditions and modern wellness spaces.</p></a>
-      <a class="card" href="/chicago/"><p class="eyebrow">City Guide</p><h2>Chicago</h2><p>Strong hotel spa options and high-quality thermal circuits.</p></a>
+    <a class="back" href="/cities/">← All cities</a>
+    <h1>{{ pg.heading }}</h1>
+    {% if pg.hero_image %}<img class="hero-media" src="{{ pg.hero_image }}" alt="{{ pg.heading }}" />{% endif %}
+    <p class="intro">{{ pg.intro }}</p>
+    <section class="cards">
+      {% if cityPage.cards %}
+        {% for card in cityPage.cards %}
+      <a class="card" href="{{ card.url }}">
+        {% if card.image %}<img class="card-media" src="{{ card.image }}" alt="{{ card.title }}" loading="lazy" />{% endif %}
+        <p class="eyebrow">{{ card.eyebrow }}</p>
+        <h2>{{ card.title }}</h2>
+        <p>{{ card.description }}</p>
+      </a>
+        {% endfor %}
+      {% endif %}
     </section>
   </main>
-  <script src="https://cdn.jsdelivr.net/npm/js-yaml@4.1.0/dist/js-yaml.min.js"></script>
-  <script src="/assets/cms-content.js"></script>
-  <script>initCmsPageContent('/content/pages/cities.yml');</script>
 </body>
 </html>
