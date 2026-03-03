@@ -1742,7 +1742,7 @@ function updateMapMarkers(cid) {
       <p class="lp-hood">${v.hood}</p>
       <div class="lp-bot">
         <span class="lp-price${isUp?' w':''}">${isUp?v.openWhen:v.price}</span>
-        <button class="lp-go" onclick="scrollToCard('${v.id}');this.closest('.leaflet-popup').querySelector('.leaflet-popup-close-button').click()">View Review →</button>
+        <button class="lp-go" onclick="openMapVenueReview('${v.id}')">View Review →</button>
       </div>
     </div>`;
     const m = L.marker([v.lat,v.lng],{icon:makeIcon(v)})
@@ -1750,6 +1750,22 @@ function updateMapMarkers(cid) {
       .bindPopup(popup,{maxWidth:230,closeButton:true,className:''});
     markers.push(m);
   });
+}
+
+function openMapVenueReview(id) {
+  const city = CITIES[currentCity];
+  const pool = city ? [...(city.venues || []), ...(city.upcoming || [])] : [];
+  const venue = pool.find((item) => item.id === id);
+  const detailUrl = (venue && venue._detailUrl) || VENUE_PAGE_PATHS[id] || '';
+
+  if (detailUrl) {
+    window.location.href = detailUrl;
+    return;
+  }
+
+  scrollToCard(id);
+  const closeBtn = document.querySelector('.leaflet-popup-close-button');
+  if (closeBtn) closeBtn.click();
 }
 
 function scrollToCard(id) {
