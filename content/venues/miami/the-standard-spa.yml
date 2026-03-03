@@ -1,19 +1,22 @@
 seo:
-  title: "The Standard Spa Review | Dip"
-  description: "Editorial venue profile for The Standard Spa in Miami."
-  social_image: ""
+  title: The Standard Spa Review | Dip
+  description: Editorial venue profile for The Standard Spa in Miami.
+  social_image: https://duvx7h32ggrur.cloudfront.net/attachments/682c9ca8a8ef052db9f572522853f9ea1a0803f8/store/optimize_v1/480/60/jpeg/47b86bbb0afa3995e74894a77ee9353838011d3d8ee89c67eab28c62f163/stmia_2024_johannvazquez_spa_09-1-.jpg
 venue:
-  name: "The Standard Spa"
-  city: "Miami"
-  slug: "the-standard-spa"
+  name: The Standard Spa
+  city: Miami
+  slug: the-standard-spa
   subtitle: ""
-  hero_image: ""
+  hero_image: https://duvx7h32ggrur.cloudfront.net/attachments/682c9ca8a8ef052db9f572522853f9ea1a0803f8/store/optimize_v1/480/60/jpeg/47b86bbb0afa3995e74894a77ee9353838011d3d8ee89c67eab28c62f163/stmia_2024_johannvazquez_spa_09-1-.jpg
   neighborhood: ""
   price: ""
   score: ""
   date_reviewed: ""
   hours: ""
   best_for: ""
-  website_url: ""
+  website_url: https://www.standardhotels.com/miami/properties/miami-beach
   review: ""
-  gallery_images: []
+  gallery_images:
+    - https://duvx7h32ggrur.cloudfront.net/attachments/682c9ca8a8ef052db9f572522853f9ea1a0803f8/store/optimize_v1/480/60/jpeg/47b86bbb0afa3995e74894a77ee9353838011d3d8ee89c67eab28c62f163/stmia_2024_johannvazquez_spa_09-1-.jpg
+    - https://duvx7h32ggrur.cloudfront.net/attachments/b8deb1a49e806bf802dfd81ad0ed6b8b8a091e9e/store/optimize_v1/480/60/jpeg/581f9c7088044e5473c97c86efa99a50921495e2853782cba444991981fe/thestandardspamiami_pool.jpg
+    - https://duvx7h32ggrur.cloudfront.net/attachments/5ce802c61221789ea1043a5c74dd59a84fa8f7bb/store/optimize_v1_landscape/480/270/60/jpeg/6bd7e9c0d1e8561178be80bcaf3a59705d35cbb843e75e059cfe54c47b9e/stmia_2024_johannvazquez_gardens_04.jpg

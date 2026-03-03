@@ -1,19 +1,22 @@
 seo:
-  title: "AIRE Ancient Baths Chicago Review | Dip"
-  description: "Editorial venue profile for AIRE Ancient Baths Chicago in Chicago."
-  social_image: ""
+  title: AIRE Ancient Baths Chicago Review | Dip
+  description: Editorial venue profile for AIRE Ancient Baths Chicago in Chicago.
+  social_image: https://beaire.com/sites/all/modules/beaire/img/centros/_CHI_1.jpg
 venue:
-  name: "AIRE Ancient Baths Chicago"
-  city: "Chicago"
-  slug: "aire-ancient-baths-chicago"
+  name: AIRE Ancient Baths Chicago
+  city: Chicago
+  slug: aire-ancient-baths-chicago
   subtitle: ""
-  hero_image: ""
+  hero_image: https://beaire.com/sites/all/modules/beaire/img/centros/_CHI_1.jpg
   neighborhood: ""
   price: ""
   score: ""
   date_reviewed: ""
   hours: ""
   best_for: ""
-  website_url: ""
+  website_url: https://beaire.com/en/aire-ancient-baths-chicago/airechicago_746/
   review: ""
-  gallery_images: []
+  gallery_images:
+    - https://beaire.com/sites/all/modules/beaire/img/centros/_CHI_1.jpg
+    - https://beaire.com/sites/all/modules/beaire/img/centros/_CHI_2.jpg
+    - https://beaire.com/sites/all/modules/beaire/img/centros/_CHI_3.jpg

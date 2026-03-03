@@ -1,19 +1,22 @@
 seo:
-  title: "HigherDOSE at 1 Hotel Review | Dip"
-  description: "Editorial venue profile for HigherDOSE at 1 Hotel in Miami."
-  social_image: ""
+  title: HigherDOSE at 1 Hotel Review | Dip
+  description: Editorial venue profile for HigherDOSE at 1 Hotel in Miami.
+  social_image: https://cdn.bfldr.com/TU9NUD0C/at/gxgr3jbfpmkhktx3gh8xz/1_Hotels_MIA_Poolside_02_0370.jpg
 venue:
-  name: "HigherDOSE at 1 Hotel"
-  city: "Miami"
-  slug: "higherdose-at-1-hotel"
-  subtitle: ""
-  hero_image: ""
-  neighborhood: ""
-  price: ""
-  score: ""
-  date_reviewed: ""
-  hours: ""
-  best_for: ""
-  website_url: ""
-  review: ""
-  gallery_images: []
+  name: HigherDOSE at 1 Hotel
+  city: Miami
+  slug: higherdose-at-1-hotel
+  subtitle: ''
+  hero_image: https://cdn.bfldr.com/TU9NUD0C/at/gxgr3jbfpmkhktx3gh8xz/1_Hotels_MIA_Poolside_02_0370.jpg
+  neighborhood: ''
+  price: ''
+  score: ''
+  date_reviewed: ''
+  hours: ''
+  best_for: ''
+  website_url: https://www.1hotels.com/south-beach
+  review: ''
+  gallery_images:
+    - https://cdn.bfldr.com/TU9NUD0C/at/gxgr3jbfpmkhktx3gh8xz/1_Hotels_MIA_Poolside_02_0370.jpg
+    - https://cdn.crowdriff.com/in-use/1a9571de-dd45-f3d4-8817-011046f58a00/orig.jpg
+    - https://cdn.crowdriff.com/in-use/8ce25659-0460-e7e3-b69f-27cf390e7f6c/orig.jpg

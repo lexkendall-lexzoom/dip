@@ -1,19 +1,22 @@
 seo:
-  title: "Kabuki Springs & Spa Review | Dip"
-  description: "Editorial venue profile for Kabuki Springs & Spa in San Francisco."
-  social_image: ""
+  title: Kabuki Springs & Spa Review | Dip
+  description: Editorial venue profile for Kabuki Springs & Spa in San Francisco.
+  social_image: https://kabukisprings.com/wp-content/uploads/2018/07/KAB_Massage_01_light-320x202.jpg
 venue:
-  name: "Kabuki Springs & Spa"
-  city: "San Francisco"
-  slug: "kabuki-springs-spa"
+  name: Kabuki Springs & Spa
+  city: San Francisco
+  slug: kabuki-springs-spa
   subtitle: ""
-  hero_image: ""
+  hero_image: https://kabukisprings.com/wp-content/uploads/2018/07/KAB_Massage_01_light-320x202.jpg
   neighborhood: ""
   price: ""
   score: ""
   date_reviewed: ""
   hours: ""
   best_for: ""
-  website_url: ""
+  website_url: https://kabukisprings.com/
   review: ""
-  gallery_images: []
+  gallery_images:
+    - https://kabukisprings.com/wp-content/uploads/2018/07/KAB_Massage_01_light-320x202.jpg
+    - https://kabukisprings.com/wp-content/uploads/2018/07/Kabuki_poultice_2_light-320x202.jpg
+    - https://kabukisprings.com/wp-content/uploads/2018/07/KAB_Facial_01_light-320x202.jpg

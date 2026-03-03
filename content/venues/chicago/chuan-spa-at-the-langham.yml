@@ -1,19 +1,22 @@
 seo:
-  title: "Chuan Spa at The Langham Review | Dip"
-  description: "Editorial venue profile for Chuan Spa at The Langham in Chicago."
-  social_image: ""
+  title: Chuan Spa at The Langham Review | Dip
+  description: Editorial venue profile for Chuan Spa at The Langham in Chicago.
+  social_image: https://www.langhamhotels.com/content/dam/langhamhotels/dynamicmedia/global/wellness/chuan-spa/lhr-chuan-metal.jpeg
 venue:
-  name: "Chuan Spa at The Langham"
-  city: "Chicago"
-  slug: "chuan-spa-at-the-langham"
+  name: Chuan Spa at The Langham
+  city: Chicago
+  slug: chuan-spa-at-the-langham
   subtitle: ""
-  hero_image: ""
+  hero_image: https://www.langhamhotels.com/content/dam/langhamhotels/dynamicmedia/global/wellness/chuan-spa/lhr-chuan-metal.jpeg
   neighborhood: ""
   price: ""
   score: ""
   date_reviewed: ""
   hours: ""
   best_for: ""
-  website_url: ""
+  website_url: https://www.langhamhotels.com/en/the-langham/chicago/wellness/chuan-spa/
   review: ""
-  gallery_images: []
+  gallery_images:
+    - https://www.langhamhotels.com/content/dam/langhamhotels/dynamicmedia/global/wellness/chuan-spa/lhr-chuan-metal.jpeg
+    - https://www.langhamhotels.com/content/dam/langhamhotels/dynamicmedia/global/wellness/chuan-spa/lhr-chuan-wood.jpeg
+    - https://www.langhamhotels.com/content/dam/langhamhotels/dynamicmedia/global/wellness/chuan-spa/lhr-chuan-water.jpeg

@@ -1,19 +1,22 @@
 seo:
-  title: "Almonte Spa (Marin) Review | Dip"
-  description: "Editorial venue profile for Almonte Spa (Marin) in San Francisco."
-  social_image: ""
+  title: Almonte Spa (Marin) Review | Dip
+  description: Editorial venue profile for Almonte Spa (Marin) in San Francisco.
+  social_image: https://static.wixstatic.com/media/906110_24f3c3e8d1ed4e57abbdcb270bf9e276%7Emv2_d_4134_3563_s_4_2.png/v1/fit/w_2500,h_1330,al_c/906110_24f3c3e8d1ed4e57abbdcb270bf9e276%7Emv2_d_4134_3563_s_4_2.png
 venue:
-  name: "Almonte Spa (Marin)"
-  city: "San Francisco"
-  slug: "almonte-spa-marin"
-  subtitle: ""
-  hero_image: ""
-  neighborhood: ""
-  price: ""
-  score: ""
-  date_reviewed: ""
-  hours: ""
-  best_for: ""
-  website_url: ""
-  review: ""
-  gallery_images: []
+  name: Almonte Spa (Marin)
+  city: San Francisco
+  slug: almonte-spa-marin
+  subtitle: ''
+  hero_image: https://static.wixstatic.com/media/906110_24f3c3e8d1ed4e57abbdcb270bf9e276%7Emv2_d_4134_3563_s_4_2.png/v1/fit/w_2500,h_1330,al_c/906110_24f3c3e8d1ed4e57abbdcb270bf9e276%7Emv2_d_4134_3563_s_4_2.png
+  neighborhood: ''
+  price: ''
+  score: ''
+  date_reviewed: ''
+  hours: ''
+  best_for: ''
+  website_url: https://www.almontespa.com/
+  review: ''
+  gallery_images:
+    - https://static.wixstatic.com/media/906110_24f3c3e8d1ed4e57abbdcb270bf9e276%7Emv2_d_4134_3563_s_4_2.png/v1/fit/w_2500,h_1330,al_c/906110_24f3c3e8d1ed4e57abbdcb270bf9e276%7Emv2_d_4134_3563_s_4_2.png
+    - https://static.wixstatic.com/media/906110_736e297926334f7a8f02b7f54476553b~mv2_d_4200_2803_s_4_2.jpeg/v1/fit/w_2500,h_1330,al_c/906110_736e297926334f7a8f02b7f54476553b~mv2_d_4200_2803_s_4_2.jpeg
+    - https://static.wixstatic.com/media/906110_dbe7f3eae9c943fb97c5a5dbabb3c57b~mv2_d_4134_3563_s_4_2.png/v1/fit/w_2500,h_1330,al_c/906110_dbe7f3eae9c943fb97c5a5dbabb3c57b~mv2_d_4134_3563_s_4_2.png

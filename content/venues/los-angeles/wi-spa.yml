@@ -1,19 +1,22 @@
 seo:
-  title: "Wi Spa Review | Dip"
-  description: "Editorial venue profile for Wi Spa in Los Angeles."
-  social_image: ""
+  title: Wi Spa Review | Dip
+  description: Editorial venue profile for Wi Spa in Los Angeles.
+  social_image: https://wispausa.com/wp-content/uploads/2021/08/slide_2-scaled.jpg
 venue:
-  name: "Wi Spa"
-  city: "Los Angeles"
-  slug: "wi-spa"
-  subtitle: ""
-  hero_image: ""
-  neighborhood: ""
-  price: ""
-  score: ""
-  date_reviewed: ""
-  hours: ""
-  best_for: ""
-  website_url: ""
-  review: ""
-  gallery_images: []
+  name: Wi Spa
+  city: Los Angeles
+  slug: wi-spa
+  subtitle: ''
+  hero_image: https://wispausa.com/wp-content/uploads/2021/08/slide_2-scaled.jpg
+  neighborhood: ''
+  price: ''
+  score: ''
+  date_reviewed: ''
+  hours: ''
+  best_for: ''
+  website_url: https://wispausa.com/
+  review: ''
+  gallery_images:
+    - https://wispausa.com/wp-content/uploads/2021/08/slide_2-scaled.jpg
+    - https://wispausa.com/wp-content/uploads/2021/08/home-slide-roof-768x511.jpg
+    - https://wispausa.com/wp-content/uploads/2021/08/home-slide-eat-768x511.jpg

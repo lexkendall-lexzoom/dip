@@ -1,20 +1,22 @@
 seo:
   title: Faena Spa Review | Dip
   description: Editorial venue profile for Faena Spa in Miami.
-  social_image: https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=500&h=350&fit=crop&q=80
+  social_image: https://www.faena.com/sites/default/files/styles/big_callout_d/public/2026-01/20251201-DJI_0184.jpg?h=24bee1e6&itok=haw6OXCR
 venue:
   name: Faena Spa
   city: Miami
   slug: faena-spa
   subtitle: ""
-  hero_image: https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=500&h=350&fit=crop&q=80
+  hero_image: https://www.faena.com/sites/default/files/styles/big_callout_d/public/2026-01/20251201-DJI_0184.jpg?h=24bee1e6&itok=haw6OXCR
   neighborhood: Mid-Beach, Miami Beach
   price: from $100
   score: "8.0"
   date_reviewed: ""
   hours: Daily · Reservation required
   best_for: ""
-  website_url: https://faena.com
+  website_url: https://www.faena.com/miami-beach/wellness/faena-spa
   review: ""
   gallery_images:
-    - https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=500&h=350&fit=crop&q=80
+    - https://www.faena.com/sites/default/files/styles/big_callout_d/public/2026-01/20251201-DJI_0184.jpg?h=24bee1e6&itok=haw6OXCR
+    - https://www.faena.com/sites/default/files/styles/split_callout_d/public/2025-10/TK_POOL_FAENA_GRV_02%20copy.jpg?h=3f0ecbee&itok=64rGY9L5
+    - https://www.faena.com/sites/default/files/styles/split_callout_d/public/2025-10/01.%20Hotel%20Exterior.jpg?h=3e8da8cb&itok=chBMvq7D

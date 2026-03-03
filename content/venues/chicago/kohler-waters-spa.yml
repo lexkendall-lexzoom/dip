@@ -1,19 +1,22 @@
 seo:
-  title: "Kohler Waters Spa Review | Dip"
-  description: "Editorial venue profile for Kohler Waters Spa in Chicago."
-  social_image: ""
+  title: Kohler Waters Spa Review | Dip
+  description: Editorial venue profile for Kohler Waters Spa in Chicago.
+  social_image: https://images.squarespace-cdn.com/content/v1/5c801398d86cc97e04f15346/e648fa1c-c462-4c32-a29b-c29755f8f6eb/SpotlightHero.jpg?format=1500w
 venue:
-  name: "Kohler Waters Spa"
-  city: "Chicago"
-  slug: "kohler-waters-spa"
-  subtitle: ""
-  hero_image: ""
-  neighborhood: ""
-  price: ""
-  score: ""
-  date_reviewed: ""
-  hours: ""
-  best_for: ""
-  website_url: ""
-  review: ""
-  gallery_images: []
+  name: Kohler Waters Spa
+  city: Chicago
+  slug: kohler-waters-spa
+  subtitle: ''
+  hero_image: https://images.squarespace-cdn.com/content/v1/5c801398d86cc97e04f15346/e648fa1c-c462-4c32-a29b-c29755f8f6eb/SpotlightHero.jpg?format=1500w
+  neighborhood: ''
+  price: ''
+  score: ''
+  date_reviewed: ''
+  hours: ''
+  best_for: ''
+  website_url: https://www.kohlerwatersspaburrridge.com/
+  review: ''
+  gallery_images:
+    - https://images.squarespace-cdn.com/content/v1/5c801398d86cc97e04f15346/e648fa1c-c462-4c32-a29b-c29755f8f6eb/SpotlightHero.jpg?format=1500w
+    - https://images.squarespace-cdn.com/content/v1/5c801398d86cc97e04f15346/6f6ecd48-096c-4d2f-b53f-b1b11fcb334a/Spotlight1.2.jpg?format=1500w
+    - https://images.squarespace-cdn.com/content/v1/5c801398d86cc97e04f15346/4cc66124-e90a-4cb9-9e3d-279f8e01aba9/Hydrotherapy.jpg?format=1500w

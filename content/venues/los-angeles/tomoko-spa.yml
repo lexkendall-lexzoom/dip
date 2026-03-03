@@ -1,19 +1,20 @@
 seo:
-  title: "Tomoko Spa Review | Dip"
-  description: "Editorial venue profile for Tomoko Spa in Los Angeles."
-  social_image: ""
+  title: Tomoko Spa Review | Dip
+  description: Editorial venue profile for Tomoko Spa in Los Angeles.
+  social_image: https://img1.wsimg.com/isteam/ip/ab64c5f9-8201-4e2a-ba60-0996a71d0e0b/romantic-japanese-spa-in-beverly-hills.png
 venue:
-  name: "Tomoko Spa"
-  city: "Los Angeles"
-  slug: "tomoko-spa"
-  subtitle: ""
-  hero_image: ""
-  neighborhood: ""
-  price: ""
-  score: ""
-  date_reviewed: ""
-  hours: ""
-  best_for: ""
-  website_url: ""
-  review: ""
-  gallery_images: []
+  name: Tomoko Spa
+  city: Los Angeles
+  slug: tomoko-spa
+  subtitle: ''
+  hero_image: https://img1.wsimg.com/isteam/ip/ab64c5f9-8201-4e2a-ba60-0996a71d0e0b/romantic-japanese-spa-in-beverly-hills.png
+  neighborhood: ''
+  price: ''
+  score: ''
+  date_reviewed: ''
+  hours: ''
+  best_for: ''
+  website_url: https://tomokojapanesespa.com/
+  review: ''
+  gallery_images:
+    - https://img1.wsimg.com/isteam/ip/ab64c5f9-8201-4e2a-ba60-0996a71d0e0b/romantic-japanese-spa-in-beverly-hills.png

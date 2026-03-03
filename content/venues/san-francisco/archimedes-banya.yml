@@ -1,19 +1,22 @@
 seo:
-  title: "Archimedes Banya Review | Dip"
-  description: "Editorial venue profile for Archimedes Banya in San Francisco."
-  social_image: ""
+  title: Archimedes Banya Review | Dip
+  description: Editorial venue profile for Archimedes Banya in San Francisco.
+  social_image: https://banyasf.com/wp-content/uploads/2023/02/Yoga-Veritcal.jpeg
 venue:
-  name: "Archimedes Banya"
-  city: "San Francisco"
-  slug: "archimedes-banya"
-  subtitle: ""
-  hero_image: ""
-  neighborhood: ""
-  price: ""
-  score: ""
-  date_reviewed: ""
-  hours: ""
-  best_for: ""
-  website_url: ""
-  review: ""
-  gallery_images: []
+  name: Archimedes Banya
+  city: San Francisco
+  slug: archimedes-banya
+  subtitle: ''
+  hero_image: https://banyasf.com/wp-content/uploads/2023/02/Yoga-Veritcal.jpeg
+  neighborhood: ''
+  price: ''
+  score: ''
+  date_reviewed: ''
+  hours: ''
+  best_for: ''
+  website_url: https://banyasf.com/
+  review: ''
+  gallery_images:
+    - https://banyasf.com/wp-content/uploads/2023/02/Yoga-Veritcal.jpeg
+    - https://i0.wp.com/banyasf.com/wp-content/uploads/2022/12/cold_tub6-1.webp?fit=768%2C512&ssl=1
+    - https://i0.wp.com/banyasf.com/wp-content/uploads/2022/12/parnaya8.jpg?fit=1024%2C683&ssl=1
