@@ -27,9 +27,11 @@ permalink: "/{{ item.citySlug }}/{{ item.venue.slug | default(item.fileSlug) }}/
   <link rel="preload" href="/fonts/playfair-display-400-italic.ttf" as="font" type="font/ttf" crossorigin/>
   <link rel="stylesheet" href="/fonts/fonts.css"/>
     <style>
-          :root{--ink:#111;--page:#f3f0e8;--card:#fff;--mist:#d8d4ca;--teal:#0b7c78;--font-sans:'Syne',ui-sans-serif,system-ui,-apple-system,'Segoe UI',sans-serif;--font-serif:'Playfair Display',Georgia,serif;}
+          :root{--ink:#111;--page:#f3f0e8;--card:#fff;--mist:#d8d4ca;--teal:#0b7c78;--font-sans:'Syne',ui-sans-serif,system-ui,-apple-system,'Segoe UI',sans-serif;--font-serif:'Playfair Display',Georgia,'Times New Roman',serif;}
           *{box-sizing:border-box}
-          body{margin:0;background:var(--page);color:var(--ink);font-family:var(--font-sans)}
+          body{margin:0;background:var(--page);color:var(--ink);font-family:var(--font-sans);font-size-adjust:.52}
+          @supports not (font-size-adjust:1){body{font-size-adjust:none}}
+          .sub,.desc{font-size-adjust:.48}
           .shell{max-width:1240px;margin:0 auto;padding:30px 24px 64px}
           .back{display:inline-block;margin-bottom:16px;color:var(--teal);font-size:11px;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;font-weight:700}
           .hero-media{position:relative;border:2px solid var(--ink);aspect-ratio:16/9;overflow:hidden;background:#ddd}
@@ -41,7 +43,7 @@ permalink: "/{{ item.citySlug }}/{{ item.venue.slug | default(item.fileSlug) }}/
           .box{background:var(--card);border:2px solid var(--ink);padding:20px}
           .fieldbox{min-height:270px}
           .reviewbox{min-height:340px}
-          h1{margin:0 0 10px;font-size:clamp(32px,3.4vw,52px);line-height:.95;letter-spacing:-.03em}
+          h1{margin:0 0 10px;font-family:var(--font-sans);font-weight:800;font-size:clamp(32px,3.4vw,52px);line-height:.95;letter-spacing:-.03em;text-rendering:geometricPrecision;-webkit-font-smoothing:antialiased}
           .sub{font-family:var(--font-serif);font-style:italic;color:#555;margin:0 0 14px}
           .facts{display:grid;grid-template-columns:1fr 1fr;gap:10px}
           .fact{border:1px solid var(--mist);background:#faf8f3;padding:10px;min-height:72px}
