@@ -6,8 +6,8 @@ seo:
 venue:
   gallery_images:
     - https://beaire.com/sites/default/files/bg_banner_reserva_h.jpg
-    - https://images.unsplash.com/photo-1600334129128-685c5582fd35?auto=format&fit=crop&w=1600&q=80
-    - https://images.unsplash.com/photo-1621275471769-e6aa344546d5?auto=format&fit=crop&w=1600&q=80
+    - /images/uploads/lore-1.webp
+    - /images/uploads/lore-2.webp
   date_reviewed: February 2026
   price: from $150
   city: New York City
