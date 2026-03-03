@@ -1,13 +1,11 @@
 seo:
   title: "Lore Bathing Club Preview: Opening, Pricing, What to Know | Dip"
-  description: Dip review of Lore Bathing Club in New York City with pricing,
-    hours, and what to expect before booking.
+  description: Dip review of Lore Bathing Club in New York City with pricing, hours, and what to expect before booking.
   social_image: /images/uploads/lore-2.webp
 venue:
   gallery_images:
     - /images/uploads/lore-1.webp
     - /images/uploads/lore-2.webp
-    - /images/uploads/lore-1.webp
   date_reviewed: February 2026
   price: $225/mo · $55/session · $149/7-day pass
   city: New York City
@@ -20,7 +18,4 @@ venue:
   score: "7.2"
   hero_image: /images/uploads/lore-1.webp
   subtitle: Editorial review, practical details, and booking context from Dip.
-  review: Designed for frequency, not occasion. Dry sauna, infrared sauna, and a
-    serious cold plunge pool — built by alumni of Lifetime Fitness and NeueHouse
-    who understand daily-use design. At $225/month for unlimited weekday access,
-    it reframes bathing as routine rather than indulgence.
+  review: Designed for frequency, not occasion. Dry sauna, infrared sauna, and a serious cold plunge pool — built by alumni of Lifetime Fitness and NeueHouse who understand daily-use design. At $225/month for unlimited weekday access, it reframes bathing as routine rather than indulgence.
