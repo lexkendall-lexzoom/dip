@@ -52,8 +52,9 @@ permalink: "/{{ item.citySlug }}/{{ item.venue.slug | default(item.fileSlug) }}/
           .desc{line-height:1.75;margin:0;font-size:16px}
           .carousel-box{margin-top:16px}
           .carousel{position:relative}
-          .carousel-track{display:flex;overflow:hidden;border:2px solid var(--ink);background:#111;aspect-ratio:16/9}
-          .slide{min-width:100%;height:100%;position:relative;display:flex;align-items:center;justify-content:center;color:#fff;text-transform:uppercase;letter-spacing:.08em}
+          .carousel-track{position:relative;overflow:hidden;border:2px solid var(--ink);background:#111;aspect-ratio:16/9}
+          .slide{position:absolute;inset:0;display:none;align-items:center;justify-content:center;color:#fff;text-transform:uppercase;letter-spacing:.08em}
+          .slide.active{display:flex}
           .slide img{width:100%;height:100%;object-fit:cover;display:block}
           .slide.placeholder{background:linear-gradient(135deg,#20403f,#3e6662);font-size:12px}
           .controls{display:flex;justify-content:space-between;align-items:center;margin-top:10px}
@@ -142,8 +143,7 @@ permalink: "/{{ item.citySlug }}/{{ item.venue.slug | default(item.fileSlug) }}/
               }
               let index = 0;
               function render() {
-                      track.style.transform = `translateX(-${index * 100}%)`;
-                      track.style.transition = 'transform 260ms ease';
+                      slides.forEach((slide, i) => slide.classList.toggle('active', i === index));
                       dots.forEach((d, i) => d.classList.toggle('active', i === index));
               }
               if (prevBtn) {
