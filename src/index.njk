@@ -16,11 +16,9 @@ permalink: /
 {% if homepage.seo.social_image %}<meta property="og:image" content="{{ homepage.seo.social_image }}"/>{% endif %}
 <meta name="twitter:card" content="summary"/>
 <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-<link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Playfair+Display:ital,wght@0,500;1,400;1,500&display=swap"/>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Playfair+Display:ital,wght@0,500;1,400;1,500&display=swap" media="print" onload="this.media='all'"/>
-<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Playfair+Display:ital,wght@0,500;1,400;1,500&display=swap"/></noscript>
+<link rel="preload" href="/fonts/syne-700.ttf" as="font" type="font/ttf" crossorigin/>
+<link rel="preload" href="/fonts/playfair-display-400-italic.ttf" as="font" type="font/ttf" crossorigin/>
+<link rel="stylesheet" href="/fonts/fonts.css"/>
 <style>
 :root{--ink:#111;--page:#f3f0e8;--card:#fff;--stone:#777;--mist:#e0ddd4;--teal:#0b7c78;--teal-d:#085a57;--teal-bg:#eaf4f3;--warm:#c49a4a;--warm-bg:#faf5ec;--font-sans:'Syne',ui-sans-serif,system-ui,-apple-system,'Segoe UI',sans-serif;--font-serif:'Playfair Display',Georgia,'Times New Roman',serif;}
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -31,7 +29,7 @@ body{background:var(--page);color:var(--ink);font-family:var(--font-sans);overfl
 
 /* NAV */
 nav{position:sticky;top:0;z-index:400;display:flex;align-items:center;justify-content:space-between;padding:0 44px;height:60px;background:var(--page);border-bottom:2px solid var(--ink)}
-.logo{text-decoration:none;font-family:var(--font-sans);font-size:27.456px;font-weight:800;letter-spacing:-.02em;color:var(--ink)}
+.logo{text-decoration:none;font-family:var(--font-sans);font-size:27.456px;font-weight:800;letter-spacing:-.02em;color:var(--ink);display:inline-flex;align-items:center;line-height:1;text-rendering:geometricPrecision;-webkit-font-smoothing:antialiased}
 .logo span{color:var(--teal)}
 .nav-r{display:flex;align-items:center;gap:28px}
 .nav-links{display:flex;align-items:stretch;gap:24px;list-style:none;height:100%}
@@ -293,7 +291,7 @@ footer{background:var(--ink);border-top:1px solid rgba(255,255,255,.08);padding:
 <body>
 
 <nav>
-  <a href="#" class="logo">DIP</a>
+  <a href="/" class="logo" aria-label="Dip homepage">DIP</a>
   <div class="nav-r">
     <ul class="nav-links">
       <li><a href="#mapbox">Map</a></li>

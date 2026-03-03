@@ -21,9 +21,9 @@ permalink: "/{{ cityPage.slug }}/"
   <meta property="og:url" content="https://dipdays.com/{{ cityPage.slug }}/" />
   {% if seo.social_image %}<meta property="og:image" content="{{ seo.social_image }}" />{% endif %}
   <meta name="twitter:card" content="summary" />
-  <link rel="preconnect" href="https://fonts.googleapis.com"/>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Playfair+Display:ital,wght@0,500;1,400;1,500&display=swap"/>
+  <link rel="preload" href="/fonts/syne-700.ttf" as="font" type="font/ttf" crossorigin/>
+  <link rel="preload" href="/fonts/playfair-display-400-italic.ttf" as="font" type="font/ttf" crossorigin/>
+  <link rel="stylesheet" href="/fonts/fonts.css"/>
   <style>
     :root{--ink:#111;--page:#f3f0e8;--card:#fff;--mist:#d8d4ca;--teal:#0b7c78;--teal-dark:#085a57;--font-sans:'Syne',ui-sans-serif,system-ui,-apple-system,'Segoe UI',sans-serif;--font-serif:'Playfair Display',Georgia,serif;}
     *{box-sizing:border-box}

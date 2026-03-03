@@ -23,9 +23,9 @@ permalink: "/{{ item.citySlug }}/{{ item.venue.slug | default(item.fileSlug) }}/
     {% if seo.social_image %}<meta property="og:image" content="{{ seo.social_image | assetUrl }}" />{% endif %}
     <meta name="twitter:card" content="summary_large_image" />
     {% if v.website_url %}<script type="application/ld+json">{"@context":"https://schema.org","@type":"LocalBusiness","name":"{{ v.name }}","url":"{{ v.website_url }}","address":{"@type":"PostalAddress","addressLocality":"{{ v.city }}"},"areaServed":"{{ v.city }}"}</script>{% endif %}
-    <link rel="preconnect" href="https://fonts.googleapis.com"/>
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Playfair+Display:ital,wght@0,500;1,400;1,500&display=swap"/>
+    <link rel="preload" href="/fonts/syne-700.ttf" as="font" type="font/ttf" crossorigin/>
+  <link rel="preload" href="/fonts/playfair-display-400-italic.ttf" as="font" type="font/ttf" crossorigin/>
+  <link rel="stylesheet" href="/fonts/fonts.css"/>
     <style>
           :root{--ink:#111;--page:#f3f0e8;--card:#fff;--mist:#d8d4ca;--teal:#0b7c78;--font-sans:'Syne',ui-sans-serif,system-ui,-apple-system,'Segoe UI',sans-serif;--font-serif:'Playfair Display',Georgia,serif;}
           *{box-sizing:border-box}
