@@ -1620,6 +1620,7 @@ function setFilter(type, btn) {
   document.querySelectorAll('.pf-card').forEach(c => c.classList.remove('on'));
   document.getElementById('pf-clear').classList.remove('vis');
   applyVisibility();
+  scrollToFirstVisibleVenue();
 }
 
 function setOccasion(occ, card) {
@@ -1630,8 +1631,7 @@ function setOccasion(occ, card) {
   document.getElementById('pf-clear').classList.add('vis');
   document.querySelectorAll('.fb').forEach(b => b.classList.toggle('on', b.textContent.trim()==='All'));
   applyVisibility();
-  // Scroll to directory
-  document.getElementById('dir').scrollIntoView({behavior:'smooth',block:'start'});
+  scrollToFirstVisibleVenue();
 }
 
 function clearOccasion() {
@@ -1640,6 +1640,16 @@ function clearOccasion() {
   document.getElementById('pf-clear').classList.remove('vis');
   document.querySelectorAll('.fb').forEach(b => b.classList.toggle('on', b.textContent.trim()==='All'));
   applyVisibility();
+}
+
+function scrollToFirstVisibleVenue() {
+  const firstVisible = Array.from(document.querySelectorAll('.vcard')).find((card) => card.style.display !== 'none');
+  const anchor = firstVisible || document.getElementById('dir');
+  if (!anchor) return;
+  window.scrollTo({
+    top: Math.max(0, anchor.getBoundingClientRect().top + window.scrollY - 130),
+    behavior: 'smooth'
+  });
 }
 
 function applyVisibility() {
