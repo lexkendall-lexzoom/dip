@@ -81,6 +81,23 @@ module.exports = function(eleventyConfig) {
     return new nunjucks.runtime.SafeString(JSON.stringify(value));
   });
 
+  // ── Nunjucks filter: normalize CMS image values to public paths ──
+  eleventyConfig.addFilter("assetUrl", function(value) {
+    if (typeof value !== "string") return "";
+    const v = value.trim();
+    if (!v) return "";
+    if (
+      v.startsWith("/") ||
+      v.startsWith("http://") ||
+      v.startsWith("https://") ||
+      v.startsWith("data:") ||
+      v.startsWith("blob:")
+    ) {
+      return v;
+    }
+    return `/images/uploads/${v.replace(/^\.?\/*/, "")}`;
+  });
+
   return {
     dir: {
       input: "src",
