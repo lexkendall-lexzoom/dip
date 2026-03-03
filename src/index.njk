@@ -1282,7 +1282,10 @@ document.addEventListener('DOMContentLoaded', async () => {
   buildCityTabs();
   buildHeroList();
   initVenuesDropdown();
-  switchCity('nyc', { scrollToDirectory: false });
+  const restored = restoreVenueFromHash();
+  if (!restored) {
+    switchCity('nyc', { scrollToDirectory: false });
+  }
   loadLeaflet();
 });
 
@@ -1346,6 +1349,50 @@ function initVenuesDropdown() {
     menu.classList.remove('open');
     toggle.setAttribute('aria-expanded', 'false');
   });
+}
+
+const CITY_SLUG_TO_KEY = Object.entries(CITY_KEY_TO_SLUG).reduce((acc, [key, slug]) => {
+  acc[slug] = key;
+  return acc;
+}, {});
+
+function getVenuePathFromHash() {
+  const rawHash = window.location.hash || '';
+  if (!rawHash.startsWith('#venue=')) return '';
+  const rawPath = rawHash.slice('#venue='.length);
+  if (!rawPath) return '';
+  try {
+    return decodeURIComponent(rawPath);
+  } catch (_) {
+    return rawPath;
+  }
+}
+
+function restoreVenueFromHash() {
+  const rawPath = getVenuePathFromHash();
+  if (!rawPath) return false;
+  const venuePath = rawPath.endsWith('/') ? rawPath : `${rawPath}/`;
+  const citySlug = venuePath.split('/').filter(Boolean)[0] || '';
+  const cityKey = CITY_SLUG_TO_KEY[citySlug] || 'nyc';
+  switchCity(cityKey, { scrollToDirectory: false });
+
+  const cards = Array.from(document.querySelectorAll('.vcard[data-detail-url]'));
+  const target = cards.find((card) => card.dataset.detailUrl === venuePath);
+  if (!target) return false;
+
+  window.requestAnimationFrame(() => {
+    window.scrollTo({
+      top: target.getBoundingClientRect().top + window.scrollY - 130,
+      behavior: 'smooth'
+    });
+    target.classList.add('flash');
+    setTimeout(() => target.classList.remove('flash'), 900);
+  });
+
+  if (window.history && window.history.replaceState) {
+    window.history.replaceState(null, '', `${window.location.pathname}${window.location.search}`);
+  }
+  return true;
 }
 
 function switchCity(cid, opts = {}) {
@@ -1527,7 +1574,7 @@ function renderCard(v) {
   const occs = OCC[v.id] || [];
   const occLabels = {date:'🕯️ Date Night',meeting:'🤝 Business Meeting',solo:'🧘 Solo Unwind',scene:'🎉 The Scene',group:'👥 Group Day',recovery:'⚡ Recovery'};
   const occBadges = occs.map(o=>`<span class="occ-badge occ-${o}">${occLabels[o]||o}</span>`).join('');
-  return `<article class="vcard${isUp?' upc':''}" id="${v.id}" data-type="${v.type}" data-occ="${occs.join(' ')}" data-coldplunge="${hasColdPlunge ? '1' : '0'}">
+  return `<article class="vcard${isUp?' upc':''}" id="${v.id}" data-type="${v.type}" data-occ="${occs.join(' ')}" data-coldplunge="${hasColdPlunge ? '1' : '0'}" data-detail-url="${detailUrl}">
     <div class="cimg" ${detailUrl ? `onclick="window.location.href='${detailUrl}'" style="cursor:pointer"` : ""}>
       <img src="${imgReq.src}"${imgReq.srcset ? ` srcset="${imgReq.srcset}"` : ''} alt="${v.name}" loading="lazy" decoding="async" width="500" height="350" sizes="${imgReq.sizes}"
         onerror="this.style.display='none';this.parentElement.style.background='${grad}'"
