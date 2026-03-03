@@ -1,6 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const yaml = require('js-yaml');
+const nunjucks = require('nunjucks');
 
 module.exports = function(eleventyConfig) {
 
@@ -73,6 +74,11 @@ module.exports = function(eleventyConfig) {
   // ── Nunjucks filter: safe output for HTML ───────────────
   eleventyConfig.addFilter("safe", function(value) {
     return value;
+  });
+
+  // ── Nunjucks filter: JSON output without HTML escaping ───
+  eleventyConfig.addFilter("json", function(value) {
+    return new nunjucks.runtime.SafeString(JSON.stringify(value));
   });
 
   return {

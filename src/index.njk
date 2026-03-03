@@ -1097,6 +1097,50 @@ const VENUE_PAGE_PATHS = {
   nycu4:'/new-york-city/saint/'
 };
 
+const VENUE_PAGE_DATA_BY_PATH = {
+{% for item in venues %}
+  "/{{ item.citySlug }}/{{ item.venue.slug | default(item.fileSlug) }}/": {{ {
+    score: item.venue.score,
+    review: item.venue.review | default(""),
+    price: item.venue.price | default(""),
+    hours: item.venue.hours | default(""),
+    img: item.venue.hero_image | default(""),
+    name: item.venue.name | default(""),
+    hood: item.venue.neighborhood | default(""),
+    bestFor: item.venue.best_for | default("")
+  } | json }}{% if not loop.last %},{% endif %}
+{% endfor %}
+};
+
+function applyVenuePageOverrides() {
+  const mergeVenue = (v) => {
+    const detailUrl = VENUE_PAGE_PATHS[v.id];
+    if (!detailUrl) return;
+    const source = VENUE_PAGE_DATA_BY_PATH[detailUrl];
+    if (!source) return;
+
+    const parsedScore = source.score == null || source.score === '' ? null : Number(source.score);
+    if (Number.isFinite(parsedScore)) v.score = parsedScore;
+    if (source.review) v.review = source.review;
+    if (source.price) v.price = source.price;
+    if (source.hours) v.hours = source.hours;
+    if (source.img) v.img = source.img;
+    if (source.name) v.name = source.name;
+    if (source.hood) v.hood = source.hood;
+    if (source.bestFor && (!Array.isArray(v.gf) || v.gf.length === 0)) {
+      v.gf = String(source.bestFor).split(',').map((t) => t.trim()).filter(Boolean);
+    }
+  };
+
+  Object.values(CITIES).forEach((city) => {
+    if (!city) return;
+    (city.venues || []).forEach(mergeVenue);
+    (city.upcoming || []).forEach(mergeVenue);
+  });
+}
+
+applyVenuePageOverrides();
+
 
 // ─── OCCASIONS MAP ────────────────────────────────────
 // date=Date Night, meeting=Business Meeting, solo=Solo Unwind,
@@ -1423,10 +1467,11 @@ function renderCard(v) {
   const isUp = v.type === 'upcoming';
   const hasColdPlunge = venueHasColdPlunge(v);
   const imgReq = getVenueImageRequest(v.img);
+  const scoreValue = typeof v.score === 'number' ? v.score : Number(v.score);
   const scoreHtml = isUp
     ? `<div class="cscore w"><span class="cop-lbl">Opening</span><span class="cop-when">${v.openWhen}</span></div>`
-    : v.score != null
-      ? `<div class="cscore"><span class="cscore-n">${v.score.toFixed(1)}</span><span class="cscore-d">/ 10</span></div>`
+    : Number.isFinite(scoreValue)
+      ? `<div class="cscore"><span class="cscore-n">${scoreValue.toFixed(1)}</span><span class="cscore-d">/ 10</span></div>`
       : `<div class="cscore"><span class="cop-lbl" style="color:var(--teal)">Now Open</span></div>`;
   const gfTags = v.gf.map(g => `<span class="gft${isUp?' w':''}">${g}</span>`).join('');
   const detailUrl = VENUE_PAGE_PATHS[v.id] || '';
