@@ -29,10 +29,12 @@ permalink: "/{{ item.citySlug }}/{{ item.venue.slug | default(item.fileSlug) }}/
     <style>
           :root{--ink:#111;--page:#f3f0e8;--card:#fff;--mist:#d8d4ca;--teal:#0b7c78;--font-sans:'Syne',ui-sans-serif,system-ui,-apple-system,'Segoe UI',sans-serif;--font-serif:'Playfair Display',Georgia,'Times New Roman',serif;}
           *{box-sizing:border-box}
-          body{margin:0;background:var(--page);color:var(--ink);font-family:var(--font-sans);font-size-adjust:.52}
+          html{max-width:100%;overflow-x:hidden}
+          body{margin:0;background:var(--page);color:var(--ink);font-family:var(--font-sans);font-size-adjust:.52;max-width:100%;overflow-x:hidden}
+          main{max-width:100%;overflow-x:hidden}
           @supports not (font-size-adjust:1){body{font-size-adjust:none}}
           .sub,.desc{font-size-adjust:.48}
-          .shell{max-width:1240px;margin:0 auto;padding:30px 24px 64px}
+          .shell{max-width:1240px;width:100%;margin:0 auto;padding:30px 24px 64px;overflow-x:hidden}
           .back{display:inline-block;margin-bottom:16px;color:var(--teal);font-size:11px;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;font-weight:700}
           .hero-media{position:relative;border:2px solid var(--ink);aspect-ratio:16/9;overflow:hidden;background:#ddd}
           .hero-media::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.2),rgba(0,0,0,.45));pointer-events:none}
@@ -65,9 +67,12 @@ permalink: "/{{ item.citySlug }}/{{ item.venue.slug | default(item.fileSlug) }}/
           .dot{width:9px;height:9px;border-radius:50%;background:#c7c2b8;border:none;cursor:pointer}
           .dot.active{background:#0b7c78}
           @media (max-width: 980px){
+                  .shell{padding:20px 12px 40px}
                   .details-grid{grid-template-columns:1fr}
+                  .facts{grid-template-columns:1fr}
                   .fieldbox,.reviewbox{min-height:auto}
                   .desc{font-size:15px}
+                  .btn{padding:8px 10px;font-size:10px}
           }
         </style>
   </head>
