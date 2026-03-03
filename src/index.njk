@@ -22,8 +22,9 @@ permalink: /
 <style>
 :root{--ink:#111;--page:#f3f0e8;--card:#fff;--stone:#777;--mist:#e0ddd4;--teal:#0b7c78;--teal-d:#085a57;--teal-bg:#eaf4f3;--warm:#c49a4a;--warm-bg:#faf5ec;--font-sans:'Syne',ui-sans-serif,system-ui,-apple-system,'Segoe UI',sans-serif;--font-serif:'Playfair Display',Georgia,'Times New Roman',serif;}
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{background:var(--page);color:var(--ink);font-family:var(--font-sans);overflow-x:hidden;font-size-adjust:.52}
+html{scroll-behavior:smooth;max-width:100%;overflow-x:hidden}
+body{background:var(--page);color:var(--ink);font-family:var(--font-sans);overflow-x:hidden;max-width:100%;font-size-adjust:.52}
+main{max-width:100%;overflow-x:hidden}
 @supports not (font-size-adjust:1){body{font-size-adjust:none}}
 .h-sub,.cap-t,.crev,.cc-sub,.cs-s,.cop-when,.cscore-n{font-size-adjust:.48}
 
@@ -86,7 +87,7 @@ nav{position:sticky;top:0;z-index:400;display:flex;align-items:center;justify-co
 .h-qprice.w{color:var(--warm)}
 
 /* CITY NAV */
-.city-nav{border-top:2px solid var(--ink);border-bottom:2px solid var(--ink);overflow-x:auto;white-space:nowrap;-webkit-overflow-scrolling:touch}
+.city-nav{border-top:2px solid var(--ink);border-bottom:2px solid var(--ink);overflow-x:auto;white-space:nowrap;-webkit-overflow-scrolling:touch;max-width:100%;}
 .city-nav::-webkit-scrollbar{height:3px}
 .city-nav::-webkit-scrollbar-thumb{background:var(--teal)}
 .city-tabs{display:inline-flex;gap:0;padding:0}
