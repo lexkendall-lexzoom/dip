@@ -105,7 +105,7 @@ permalink: "/{{ item.citySlug }}/{{ item.venue.slug | default(item.fileSlug) }}/
                   {% for img in v.gallery_images %}
                     {%- set imgSrc = (img.image | default(img.src) | default(img.url) | default(img)) | assetUrl -%}
                     {% if imgSrc %}
-                        <div class="slide"><img src="{{ imgSrc }}" alt="{{ v.name }} photo {{ loop.index }}" loading="lazy"/></div>
+                        <div class="slide"><img src="{{ imgSrc }}" alt="{{ v.name }} photo {{ loop.index }}" loading="eager" decoding="async" onerror="this.remove();this.closest('.slide').classList.add('placeholder');this.closest('.slide').textContent='Photo unavailable';"/></div>
                     {% else %}
                         <div class="slide placeholder">Photo Unavailable</div>
                     {% endif %}
