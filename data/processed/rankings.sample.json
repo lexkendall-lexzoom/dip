@@ -1,0 +1,29 @@
+{
+  "top_bathhouses_worldwide": [
+    {
+      "slug": "vabali-spa-berlin",
+      "name": "Vabali Spa Berlin",
+      "city": "Berlin",
+      "overall": 8.86,
+      "confidence_score": 0.73
+    }
+  ],
+  "best_social_saunas": [
+    {
+      "slug": "vabali-spa-berlin",
+      "name": "Vabali Spa Berlin",
+      "city": "Berlin",
+      "social_energy": 8.1,
+      "confidence_score": 0.73
+    }
+  ],
+  "best_contrast_therapy_venues": [
+    {
+      "slug": "vabali-spa-berlin",
+      "name": "Vabali Spa Berlin",
+      "city": "Berlin",
+      "overall": 8.86,
+      "confidence_score": 0.73
+    }
+  ]
+}

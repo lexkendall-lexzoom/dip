@@ -1,0 +1,37 @@
+name: Vabali Spa Berlin
+slug: vabali-spa-berlin
+city: Berlin
+country: Germany
+categories:
+  - Social Sauna
+  - Contrast Therapy
+  - Ritual Bathhouse
+  - Recovery Studio
+features:
+  - sauna
+  - steam_room
+  - cold_plunge
+  - thermal_pool
+  - aufguss
+  - ritual_programming
+  - guided_sessions
+  - social_lounges
+  - community_events
+  - group_ritual
+  - massage
+  - breathwork
+  - classes
+  - recovery_therapy
+dip_scores:
+  ritual_quality: 9.01
+  aesthetic_design: 9
+  social_energy: 8.1
+  facilities: 9.2
+  recovery_wellness: 8.3
+  overall: 8.86
+ranking_metadata:
+  score_version: v1.1
+  ranking_eligible: true
+  confidence_score: 0.73
+  coverage_score: 0.79
+last_verified_at: '2026-03-06T00:00:00.000Z'

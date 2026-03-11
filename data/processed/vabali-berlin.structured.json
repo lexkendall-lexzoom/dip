@@ -1,0 +1,57 @@
+{
+  "name": "Vabali Spa Berlin",
+  "slug": "vabali-spa-berlin",
+  "city": "Berlin",
+  "country": "Germany",
+  "coordinates": {
+    "lat": 52.5314,
+    "lng": 13.3696
+  },
+  "categories": [
+    "Social Sauna",
+    "Contrast Therapy",
+    "Recovery Studio",
+    "Ritual Bathhouse"
+  ],
+  "features": [
+    "sauna",
+    "steam_room",
+    "cold_plunge",
+    "thermal_pool",
+    "aufguss",
+    "ritual_programming",
+    "guided_sessions",
+    "social_lounges",
+    "community_events",
+    "group_ritual",
+    "massage",
+    "breathwork",
+    "classes",
+    "recovery_therapy"
+  ],
+  "website": "https://www.vabali.de",
+  "ratings": {
+    "google_rating": 4.6,
+    "review_count": 8600
+  },
+  "scoring_signals": {
+    "ritual_programming": 9.2,
+    "guided_sessions": 8.7,
+    "cultural_authenticity": 8.4,
+    "architecture": 9.1,
+    "lighting": 8.5,
+    "materials": 8.9,
+    "interior_design": 9.3,
+    "conversation_friendliness": 8.1,
+    "group_ritual_participation": 9,
+    "community_vibe": 8.6,
+    "sauna_count": 8,
+    "cold_plunge_count": 3,
+    "thermal_pool_count": 2,
+    "steam_room_count": 2,
+    "massage": 8.2,
+    "breathwork": 8.4,
+    "classes": 8,
+    "recovery_therapies": 8.6
+  }
+}
