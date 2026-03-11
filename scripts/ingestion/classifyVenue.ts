@@ -2,6 +2,8 @@ import fs from "fs";
 import path from "path";
 import type { CanonicalVenue, EvidenceRecord, VenueType } from "../../lib/schema/models.ts";
 import { validateCanonicalVenue, validateEvidenceRecord } from "../../lib/schema/validation.ts";
+import { CanonicalVenue, EvidenceRecord, VenueType } from "../../lib/schema/models";
+import { validateCanonicalVenue, validateEvidenceRecord } from "../../lib/schema/validation";
 
 type RawVenue = {
   name: string;

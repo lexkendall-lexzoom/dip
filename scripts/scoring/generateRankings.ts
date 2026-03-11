@@ -7,6 +7,8 @@ import {
   rankVenues,
 } from "../../lib/ranking/rankings.ts";
 import type { CanonicalVenue, ScoreRecord } from "../../lib/schema/models.ts";
+} from "../../lib/ranking/rankings";
+import { CanonicalVenue, ScoreRecord } from "../../lib/schema/models";
 
 type RankingsOutput = {
   top_bathhouses_worldwide: Array<{ slug: string; name: string; city: string; overall: number; confidence_score: number }>;

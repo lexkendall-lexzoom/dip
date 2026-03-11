@@ -11,6 +11,15 @@ import type {
   ScoreExplanation,
   ScoreRecord,
 } from "./models.ts";
+  CanonicalVenue,
+  EDITORIAL_STATUSES,
+  EvidenceRecord,
+  SOURCE_TYPES,
+  ScoreCategory,
+  ScoreExplanation,
+  ScoreRecord,
+  VENUE_TYPES,
+} from "./models";
 
 const isNonEmptyString = (value: unknown): value is string => typeof value === "string" && value.trim().length > 0;
 const isFiniteNumber = (value: unknown): value is number => typeof value === "number" && Number.isFinite(value);

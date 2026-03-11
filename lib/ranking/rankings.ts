@@ -1,4 +1,5 @@
 import type { CanonicalVenue, ScoreRecord } from "../schema/models.ts";
+import { CanonicalVenue, ScoreRecord } from "../schema/models";
 
 export type RankingFilter = {
   category?: string;
