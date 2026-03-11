@@ -1,0 +1,27 @@
+{
+  "city": "New York",
+  "generated_at": "2026-03-11T00:00:00.000Z",
+  "ambiguous_duplicates": [
+    {
+      "city": "New York",
+      "candidate_a": {
+        "name": "AIRE Ancient Baths",
+        "website": "https://beaire.com/en/aire-ancient-baths-new-york",
+        "source_urls": [
+          "file:///workspace/dip/content/venues/new-york-city/aire-ancient-baths.yml",
+          "https://beaire.com/en/aire-ancient-baths-new-york"
+        ]
+      },
+      "candidate_b": {
+        "name": "Ancient Aire Baths Tribeca",
+        "website": "https://beaire.com/en/aire-ancient-baths-newyork",
+        "address": "88 Franklin St, New York, NY",
+        "source_urls": [
+          "https://beaire.com/en/aire-ancient-baths-newyork"
+        ]
+      },
+      "reason": "Name similarity in same city exceeds ambiguity threshold.",
+      "similarity_score": 0.75
+    }
+  ]
+}

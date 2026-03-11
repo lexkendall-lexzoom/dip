@@ -1,0 +1,42 @@
+{
+  "venue_id": "vabali-spa-berlin",
+  "score_version": "v1.1",
+  "ritual_quality": 9.01,
+  "aesthetic_design": 9,
+  "social_energy": 8.1,
+  "facilities": 9.2,
+  "recovery_wellness": 8.3,
+  "overall": 8.86,
+  "coverage_score": 0.79,
+  "confidence_score": 0.73,
+  "ranking_eligible": true,
+  "explanation": {
+    "top_contributors": [
+      {
+        "category": "facilities",
+        "score": 9.2,
+        "reason": "1 facilities evidence records."
+      },
+      {
+        "category": "ritual_quality",
+        "score": 9.01,
+        "reason": "2 ritual evidence records."
+      },
+      {
+        "category": "aesthetic_design",
+        "score": 9,
+        "reason": "1 aesthetic evidence records."
+      }
+    ],
+    "missing_data_warnings": [],
+    "evidence_counts": {
+      "ritual": 2,
+      "aesthetic": 1,
+      "social": 1,
+      "facilities": 1,
+      "recovery": 1,
+      "factual": 1
+    }
+  },
+  "computed_at": "2026-03-06T00:00:00.000Z"
+}

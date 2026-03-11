@@ -1,0 +1,32 @@
+[
+  {
+    "id": "vabali-spa-berlin-ed-1",
+    "venue_id": "vabali-spa-berlin",
+    "source_type": "editorial",
+    "source_url": "https://dipdays.com/reviews/vabali-spa-berlin",
+    "source_label": "DipDays editorial review",
+    "extracted_at": "2026-03-06T00:00:00.000Z",
+    "claim_type": "ritual",
+    "claim_key": "aufguss_quality",
+    "claim_value": 8.9,
+    "confidence": 0.92,
+    "excerpt": "Daily guided aufguss sessions with high ritual quality.",
+    "agent_name": "editorial-ingestion",
+    "human_verified": true
+  },
+  {
+    "id": "vabali-spa-berlin-ed-2",
+    "venue_id": "vabali-spa-berlin",
+    "source_type": "review",
+    "source_url": "https://example.com/reviews/vabali",
+    "source_label": "Public review aggregate",
+    "extracted_at": "2026-03-06T00:00:00.000Z",
+    "claim_type": "social",
+    "claim_key": "community_vibe",
+    "claim_value": 8.1,
+    "confidence": 0.73,
+    "excerpt": "Reviewers note a social but calm atmosphere.",
+    "agent_name": "review-aggregation-agent",
+    "human_verified": false
+  }
+]
