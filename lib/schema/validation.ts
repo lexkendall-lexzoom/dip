@@ -1,5 +1,16 @@
 import {
   CLAIM_TYPES,
+  EDITORIAL_STATUSES,
+  SOURCE_TYPES,
+  VENUE_TYPES,
+} from "./models.ts";
+import type {
+  CanonicalVenue,
+  EvidenceRecord,
+  ScoreCategory,
+  ScoreExplanation,
+  ScoreRecord,
+} from "./models.ts";
   CanonicalVenue,
   EDITORIAL_STATUSES,
   EvidenceRecord,

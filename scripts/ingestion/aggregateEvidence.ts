@@ -1,5 +1,7 @@
 import fs from "fs";
 import path from "path";
+import type { EvidenceRecord } from "../../lib/schema/models.ts";
+import { validateEvidenceRecord } from "../../lib/schema/validation.ts";
 import { EvidenceRecord } from "../../lib/schema/models";
 import { validateEvidenceRecord } from "../../lib/schema/validation";
 

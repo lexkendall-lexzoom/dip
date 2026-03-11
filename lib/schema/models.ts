@@ -107,3 +107,23 @@ export interface ScoreRecord {
   };
   computed_at: string;
 }
+
+export interface CandidateVenueRaw {
+  name: string;
+  website?: string;
+  address?: string;
+  city: string;
+  country: string;
+  source_urls: string[];
+  snippets: Array<{
+    source_url: string;
+    text: string;
+  }>;
+  candidate_categories: string[];
+  source_provenance: Array<{
+    source_type: SourceType | "directory_seed";
+    source_url: string;
+    source_label: string;
+    discovered_at: string;
+  }>;
+}

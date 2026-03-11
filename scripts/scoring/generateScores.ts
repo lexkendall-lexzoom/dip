@@ -1,5 +1,9 @@
 import fs from "fs";
 import path from "path";
+import { fileURLToPath } from "url";
+import { calculateDipScore } from "../../lib/ranking/dipscore.ts";
+import type { CanonicalVenue, EvidenceRecord } from "../../lib/schema/models.ts";
+import { validateCanonicalVenue, validateEvidenceRecord, validateScoreRecord } from "../../lib/schema/validation.ts";
 import { calculateDipScore } from "../../lib/ranking/dipscore";
 import { CanonicalVenue, EvidenceRecord } from "../../lib/schema/models";
 import { validateCanonicalVenue, validateEvidenceRecord, validateScoreRecord } from "../../lib/schema/validation";
@@ -31,6 +35,9 @@ export function generateScores(venues: CanonicalVenue[], evidenceByVenue: Record
   });
 }
 
+const isMain = process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url);
+
+if (isMain) {
 if (require.main === module) {
   const [venueDir = "data/processed/venues", evidenceDir = "data/processed/evidence", outputDir = "data/processed/scores"] = process.argv.slice(2);
 

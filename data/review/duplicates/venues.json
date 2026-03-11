@@ -1,0 +1,22 @@
+{
+  "generated_at": "2026-03-11T00:00:00.000Z",
+  "count": 1,
+  "duplicates": [
+    {
+      "venue_a": {
+        "id": "aire-ancient-baths-new-york",
+        "slug": "aire-ancient-baths-new-york",
+        "name": "AIRE Ancient Baths",
+        "city": "New York"
+      },
+      "venue_b": {
+        "id": "ancient-aire-baths-tribeca-new-york",
+        "slug": "ancient-aire-baths-tribeca-new-york",
+        "name": "Ancient Aire Baths Tribeca",
+        "city": "New York"
+      },
+      "similarity_score": 0.75,
+      "reason": "High name similarity in same city"
+    }
+  ]
+}

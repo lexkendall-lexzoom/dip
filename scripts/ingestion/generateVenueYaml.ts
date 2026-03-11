@@ -1,5 +1,9 @@
 import fs from "fs";
 import path from "path";
+import { fileURLToPath } from "url";
+import yaml from "js-yaml";
+import type { CanonicalVenue, ScoreRecord } from "../../lib/schema/models.ts";
+import { validateCanonicalVenue, validateScoreRecord, validateYamlPublishability } from "../../lib/schema/validation.ts";
 import yaml from "js-yaml";
 import { CanonicalVenue, ScoreRecord } from "../../lib/schema/models";
 import { validateCanonicalVenue, validateScoreRecord, validateYamlPublishability } from "../../lib/schema/validation";
@@ -40,6 +44,9 @@ export function generateVenueYaml(venue: CanonicalVenue, score: ScoreRecord, edi
   return yaml.dump(payload, { noRefs: true, lineWidth: 120 });
 }
 
+const isMain = process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url);
+
+if (isMain) {
 if (require.main === module) {
   const [canonicalPath, scorePath, outputRoot = "content/venues", editorialPath] = process.argv.slice(2);
 

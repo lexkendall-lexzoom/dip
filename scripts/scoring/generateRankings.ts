@@ -5,6 +5,8 @@ import {
   getBestSocialSaunas,
   getTopBathhousesWorldwide,
   rankVenues,
+} from "../../lib/ranking/rankings.ts";
+import type { CanonicalVenue, ScoreRecord } from "../../lib/schema/models.ts";
 } from "../../lib/ranking/rankings";
 import { CanonicalVenue, ScoreRecord } from "../../lib/schema/models";
 

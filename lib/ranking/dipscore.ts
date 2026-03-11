@@ -1,3 +1,4 @@
+import type { CanonicalVenue, EvidenceRecord, ScoreCategory, ScoreExplanation, ScoreRecord } from "../schema/models.ts";
 import { CanonicalVenue, EvidenceRecord, ScoreCategory, ScoreExplanation, ScoreRecord } from "../schema/models";
 
 export const DIPSCORE_VERSION = "v1.2";
