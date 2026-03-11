@@ -1,0 +1,10 @@
+{
+  "name": "Vabali Spa Berlin",
+  "slug": "vabali-spa-berlin",
+  "city": "Berlin",
+  "country": "Germany",
+  "description": "Urban resort with saunas, thermal pools, aufguss ceremonies, breathwork classes, and massage treatments.",
+  "amenities": ["sauna village", "steam bath", "cold plunge", "thermal pools"],
+  "tags": ["ritual", "social", "wellness"],
+  "offerings": ["guided aufguss", "breathwork class", "massage therapy"]
+}
