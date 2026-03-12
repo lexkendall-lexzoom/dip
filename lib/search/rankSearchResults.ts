@@ -2,12 +2,14 @@ import fs from "node:fs";
 import path from "node:path";
 import type { CanonicalVenue, ScoreRecord } from "../schema/models.ts";
 import type { QueryIntent } from "./resolveQuery.ts";
+import { deriveIntentWeights, hasMeaningfulIntent } from "./intentWeights.ts";
 
 export type SearchResult = {
   venue: string;
   venue_slug: string;
   score: number;
   reasons: string[];
+  boost_breakdown?: string[];
 };
 
 export type ReviewEvidenceArtifact = {
@@ -19,12 +21,16 @@ export type ReviewEvidenceArtifact = {
 
 const readJson = <T>(p: string): T => JSON.parse(fs.readFileSync(p, "utf8")) as T;
 
-
 export type ReviewEvidenceArtifactMap = Record<string, ReviewEvidenceArtifact>;
 
 type RankSearchOptions = {
   scores?: Map<string, ScoreRecord>;
   reviewEvidence?: ReviewEvidenceArtifactMap;
+};
+
+type BoostComputation = {
+  amount: number;
+  reasons: string[];
 };
 
 const loadScores = (): Map<string, ScoreRecord> => {
@@ -40,18 +46,17 @@ const loadScores = (): Map<string, ScoreRecord> => {
   return scores;
 };
 
-const reviewConfidence = (venueSlug: string, reviewEvidence?: ReviewEvidenceArtifactMap): number => {
-  if (reviewEvidence) {
-    const inline = reviewEvidence[venueSlug];
-    if (!inline || !inline.signals.length) return 0;
-    const inlineTotal = inline.signals.reduce((sum, signal) => sum + signal.confidence, 0);
-    return Number((inlineTotal / inline.signals.length).toFixed(4));
-  }
+const getReviewArtifact = (venueSlug: string, reviewEvidence?: ReviewEvidenceArtifactMap): ReviewEvidenceArtifact | null => {
+  if (reviewEvidence) return reviewEvidence[venueSlug] ?? null;
 
   const file = path.resolve("data/processed/evidence", `${venueSlug}.reviews.evidence.json`);
-  if (!fs.existsSync(file)) return 0;
-  const artifact = readJson<ReviewEvidenceArtifact>(file);
-  if (!artifact.signals.length) return 0;
+  if (!fs.existsSync(file)) return null;
+  return readJson<ReviewEvidenceArtifact>(file);
+};
+
+const reviewConfidence = (venueSlug: string, reviewEvidence?: ReviewEvidenceArtifactMap): number => {
+  const artifact = getReviewArtifact(venueSlug, reviewEvidence);
+  if (!artifact || !artifact.signals.length) return 0;
   const total = artifact.signals.reduce((sum, signal) => sum + signal.confidence, 0);
   return Number((total / artifact.signals.length).toFixed(4));
 };
@@ -64,7 +69,55 @@ const facilityCompleteness = (venue: CanonicalVenue): number => {
   return Number((values.filter(Boolean).length / values.length).toFixed(4));
 };
 
-const buildReasons = (venue: CanonicalVenue, intent: QueryIntent): string[] => {
+const computeIntentBoost = (venue: CanonicalVenue, intent: QueryIntent, reviewEvidence?: ReviewEvidenceArtifactMap): BoostComputation => {
+  if (!hasMeaningfulIntent(intent)) {
+    return { amount: 0, reasons: [] };
+  }
+
+  const weights = deriveIntentWeights(intent);
+  const reasons: string[] = [];
+  let boost = 0;
+
+  for (const [facetKey, facetBoost] of Object.entries(weights.facet_boosts)) {
+    if ((venue.search_facets as Record<string, unknown>)[facetKey] === true) {
+      boost += facetBoost ?? 0;
+      reasons.push(`Boosted for ${facetKey.replace(/^has_/, "").replace(/_/g, " ")}`);
+    }
+  }
+
+  if (weights.category_boosts[venue.primary_category]) {
+    boost += weights.category_boosts[venue.primary_category] ?? 0;
+    reasons.push(`Boosted for ${venue.primary_category.toLowerCase()} category match`);
+  }
+
+  const venueTags = new Set(venue.search_tags.map((tag) => tag.toLowerCase()));
+  for (const [tag, tagBoost] of Object.entries(weights.tag_boosts)) {
+    if (venueTags.has(tag.toLowerCase())) {
+      boost += tagBoost;
+      reasons.push(`Boosted for ${tag} tag match`);
+    }
+  }
+
+  const artifact = getReviewArtifact(venue.slug, reviewEvidence);
+  if (artifact && artifact.signals.length > 0) {
+    for (const signal of artifact.signals) {
+      const signalWeight = weights.signal_weights[signal.signal];
+      if (!signalWeight) continue;
+      const sentimentFactor = Math.max(0, (signal.sentiment + 1) / 2);
+      const signalBoost = signalWeight * signal.confidence * sentimentFactor;
+      if (signalBoost <= 0) continue;
+      boost += signalBoost;
+      reasons.push(`Boosted for ${signal.signal.replace(/_/g, " ")} evidence`);
+    }
+  }
+
+  return {
+    amount: Number(Math.min(weights.max_total_boost, boost).toFixed(4)),
+    reasons,
+  };
+};
+
+const buildReasons = (venue: CanonicalVenue, intent: QueryIntent, boostReasons: string[]): string[] => {
   const reasons: string[] = [];
 
   if (intent.preferred_category && venue.primary_category === intent.preferred_category) {
@@ -86,6 +139,10 @@ const buildReasons = (venue: CanonicalVenue, intent: QueryIntent): string[] => {
     reasons.push(`Located in ${venue.city}`);
   }
 
+  if (boostReasons.length > 0) {
+    reasons.push(...boostReasons.slice(0, 2));
+  }
+
   if (reasons.length === 0) {
     reasons.push("Matched structured search filters");
   }
@@ -96,26 +153,34 @@ const buildReasons = (venue: CanonicalVenue, intent: QueryIntent): string[] => {
 export const rankSearchResults = (filteredVenues: CanonicalVenue[], intent: QueryIntent, options: RankSearchOptions = {}): SearchResult[] => {
   const scores = options.scores ?? loadScores();
 
-  return [...filteredVenues]
+  const scored = filteredVenues.map((venue) => {
+    const baseScore = scores.get(venue.id)?.overall ?? 0;
+    const intentBoost = computeIntentBoost(venue, intent, options.reviewEvidence);
+    const finalSearchScore = Number((baseScore + intentBoost.amount).toFixed(4));
+
+    return {
+      venue,
+      baseScore,
+      finalSearchScore,
+      intentBoost,
+      reviewConfidence: reviewConfidence(venue.slug, options.reviewEvidence),
+      facilityCompleteness: facilityCompleteness(venue),
+    };
+  });
+
+  return scored
     .sort((a, b) => {
-      const scoreA = scores.get(a.id)?.overall ?? 0;
-      const scoreB = scores.get(b.id)?.overall ?? 0;
-      if (scoreA !== scoreB) return scoreB - scoreA;
-
-      const reviewA = reviewConfidence(a.slug, options.reviewEvidence);
-      const reviewB = reviewConfidence(b.slug, options.reviewEvidence);
-      if (reviewA !== reviewB) return reviewB - reviewA;
-
-      const facilityA = facilityCompleteness(a);
-      const facilityB = facilityCompleteness(b);
-      if (facilityA !== facilityB) return facilityB - facilityA;
-
-      return a.slug.localeCompare(b.slug);
+      if (a.finalSearchScore !== b.finalSearchScore) return b.finalSearchScore - a.finalSearchScore;
+      if (a.baseScore !== b.baseScore) return b.baseScore - a.baseScore;
+      if (a.reviewConfidence !== b.reviewConfidence) return b.reviewConfidence - a.reviewConfidence;
+      if (a.facilityCompleteness !== b.facilityCompleteness) return b.facilityCompleteness - a.facilityCompleteness;
+      return a.venue.slug.localeCompare(b.venue.slug);
     })
-    .map((venue) => ({
-      venue: venue.name,
-      venue_slug: venue.slug,
-      score: Number((scores.get(venue.id)?.overall ?? 0).toFixed(2)),
-      reasons: buildReasons(venue, intent),
+    .map((row) => ({
+      venue: row.venue.name,
+      venue_slug: row.venue.slug,
+      score: Number(row.finalSearchScore.toFixed(2)),
+      reasons: buildReasons(row.venue, intent, row.intentBoost.reasons),
+      boost_breakdown: row.intentBoost.reasons,
     }));
 };
