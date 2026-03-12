@@ -1,4 +1,5 @@
 import { searchVenues } from "../../lib/search/searchVenues.ts";
+import { SearchDataLoadError } from "../../lib/search/loadSearchData.ts";
 
 const json = (statusCode: number, body: unknown) => ({
   statusCode,
@@ -28,6 +29,27 @@ export const handler = async (event: { queryStringParameters?: Record<string, st
     });
   }
 
-  const response = searchVenues(query);
-  return json(200, response);
+  try {
+    const response = searchVenues(query);
+    return json(200, response);
+  } catch (error) {
+    if (error instanceof SearchDataLoadError) {
+      console.error("[search] dataset load failed", {
+        message: error.message,
+        diagnostics: error.details,
+      });
+      return json(500, {
+        error: "SEARCH_DATA_LOAD_FAILED",
+        message: "Search dataset could not be loaded.",
+      });
+    }
+
+    console.error("[search] request failed", {
+      error: error instanceof Error ? error.message : String(error),
+    });
+    return json(500, {
+      error: "SEARCH_INTERNAL_ERROR",
+      message: "Search request failed.",
+    });
+  }
 };
