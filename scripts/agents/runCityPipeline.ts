@@ -145,6 +145,15 @@ export async function runCityPipeline(citySlug: string, publish = false): Promis
 
     const config = readJson<CityConfig>(configPath);
 
+    const limitOverrideRaw = process.env.CITY_PIPELINE_MAX_CANDIDATES;
+    if (limitOverrideRaw) {
+      const limitOverride = Number(limitOverrideRaw);
+      if (Number.isFinite(limitOverride) && limitOverride > 0) {
+        config.max_candidates = Math.floor(limitOverride);
+        process.stdout.write(`Applying CITY_PIPELINE_MAX_CANDIDATES=${config.max_candidates} for ${citySlug}\n`);
+      }
+    }
+
     // 1) discovery
     const candidates = await runDiscovery(config);
     metrics.candidates_found = candidates.length;

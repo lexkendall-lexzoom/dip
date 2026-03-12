@@ -183,22 +183,10 @@ export const searchVenues = (query: string, limit = 20): SearchVenueResponse => 
       results: toResultShape(boroughRelaxed, venueMap),
     };
   }
-export const searchVenues = (query: string, limit = 20): SearchVenueResponse => {
-  const intent = resolveQuery(query);
-  const venues = loadCanonicalVenues();
-  const filtered = filterVenues(venues, intent);
-
-  const scores = loadScores();
-  const reviewEvidence = loadReviewEvidence();
-  const ranked = rankSearchResults(filtered, intent, { scores, reviewEvidence }).slice(0, Math.max(0, limit));
-
-  const venueMap = new Map(venues.map((venue) => [venue.slug, venue]));
-
-  return {
+ return {
     query,
     intent,
     fallback_applied: false,
     results: [],
-    results: toResultShape(ranked, venueMap),
   };
 };
