@@ -1,0 +1,67 @@
+{
+  "venue_id": "othership-flatiron-new-york",
+  "source": "google_reviews",
+  "review_count": 4,
+  "signals": [
+    {
+      "signal": "sauna_quality",
+      "sentiment": 1,
+      "confidence": 0.15,
+      "evidence": "2 reviews mention sauna quality."
+    },
+    {
+      "signal": "cold_plunge_quality",
+      "sentiment": 0.7,
+      "confidence": 0.15,
+      "evidence": "1 reviews mention cold plunge quality."
+    },
+    {
+      "signal": "cold_plunge_access",
+      "sentiment": 0.25,
+      "confidence": 0.15,
+      "evidence": "2 reviews mention cold plunge access."
+    },
+    {
+      "signal": "ritual_quality",
+      "sentiment": 1,
+      "confidence": 0.15,
+      "evidence": "1 reviews mention ritual quality."
+    },
+    {
+      "signal": "cleanliness",
+      "sentiment": -0.2,
+      "confidence": 0.15,
+      "evidence": "1 reviews mention cleanliness."
+    },
+    {
+      "signal": "facility_condition",
+      "sentiment": -0.2,
+      "confidence": 0.15,
+      "evidence": "1 reviews mention facility condition."
+    },
+    {
+      "signal": "crowd_density",
+      "sentiment": -0.2,
+      "confidence": 0.15,
+      "evidence": "1 reviews mention crowd density."
+    },
+    {
+      "signal": "staff_friendliness",
+      "sentiment": 1,
+      "confidence": 0.15,
+      "evidence": "2 reviews mention staff friendliness."
+    },
+    {
+      "signal": "design_ambience",
+      "sentiment": 0.85,
+      "confidence": 0.15,
+      "evidence": "2 reviews mention design ambience."
+    },
+    {
+      "signal": "value_perception",
+      "sentiment": -0.2,
+      "confidence": 0.15,
+      "evidence": "1 reviews mention value perception."
+    }
+  ]
+}

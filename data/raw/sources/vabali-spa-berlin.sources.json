@@ -1,0 +1,14 @@
+[
+  {
+    "source_type": "official_site",
+    "source_url": "https://www.vabali.de",
+    "source_label": "Vabali official site",
+    "text": "Vabali offers saunas, thermal pools, steam rooms, and guided ritual sessions including aufguss. Guests can book massage and wellness recovery treatments."
+  },
+  {
+    "source_type": "review",
+    "source_url": "https://example.com/reviews/vabali",
+    "source_label": "Public review snippets",
+    "text": "Visitors describe a social yet relaxed atmosphere, strong architectural design, and diverse facility options."
+  }
+]

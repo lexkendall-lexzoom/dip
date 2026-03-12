@@ -1,0 +1,33 @@
+[
+  {
+    "query": "best sauna in Brooklyn",
+    "expect": {
+      "location": { "borough": "brooklyn" },
+      "required_facets": { "has_sauna": true },
+      "sort": "best"
+    }
+  },
+  {
+    "query": "best cold plunge in Berlin",
+    "expect": {
+      "location": { "city": "berlin" },
+      "required_facets": { "has_cold_plunge": true },
+      "sort": "best"
+    }
+  },
+  {
+    "query": "social sauna in Manhattan",
+    "expect": {
+      "location": { "borough": "manhattan" },
+      "preferred_category": "Social Sauna"
+    }
+  },
+  {
+    "query": "luxury wellness club with hyperbaric in LA",
+    "expect": {
+      "location": { "city": "los-angeles" },
+      "required_facets": { "has_hyperbaric": true },
+      "preferred_tags": ["luxury"]
+    }
+  }
+]

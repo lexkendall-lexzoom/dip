@@ -1,0 +1,36 @@
+{
+  "othership-flatiron-new-york": [
+    {
+      "source": "google_reviews",
+      "author": "A",
+      "rating": 5,
+      "text": "Great guided ritual and friendly staff. Cold plunge line can be long.",
+      "reviewed_at": "2025-01-10T10:00:00Z"
+    },
+    {
+      "source": "google_reviews",
+      "author": "B",
+      "rating": 4,
+      "text": "Beautiful design and excellent sauna heat.",
+      "reviewed_at": "2025-01-11T10:00:00Z"
+    }
+  ],
+  "remedy-place-new-york": [
+    {
+      "source": "google_reviews",
+      "author": "C",
+      "rating": 4,
+      "text": "Recovery-focused spot with clean facilities and great service.",
+      "reviewed_at": "2025-01-12T10:00:00Z"
+    }
+  ],
+  "__default": [
+    {
+      "source": "google_reviews",
+      "author": null,
+      "rating": 4,
+      "text": "Good sauna and clean space.",
+      "reviewed_at": null
+    }
+  ]
+}
