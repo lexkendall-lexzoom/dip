@@ -1,0 +1,65 @@
+{
+  "id": "saint-new-york-city",
+  "slug": "saint-new-york-city",
+  "name": "SAINT",
+  "city": "New York",
+  "country": "USA",
+  "coordinates": {
+    "lat": 40.7128,
+    "lng": -74.006
+  },
+  "website": "https://www.instagram.com/saint__nyc",
+  "categories": [
+    "Sauna",
+    "Contrast Therapy"
+  ],
+  "features": [],
+  "venue_type": "contrast_therapy",
+  "primary_category": "Neighborhood Spa",
+  "search_facets": {
+    "neighborhood": "Chelsea",
+    "borough": "Manhattan",
+    "has_sauna": true,
+    "has_cold_plunge": true,
+    "has_steam_room": false,
+    "has_hot_pool": false,
+    "has_thermal_circuit": false,
+    "has_guided_rituals": false,
+    "has_breathwork": false,
+    "has_treatments": true,
+    "has_massages": false,
+    "has_bodywork": true,
+    "has_recovery_clinic": false,
+    "has_iv_therapy": false,
+    "has_hyperbaric": false,
+    "has_red_light": false,
+    "has_cryotherapy": false
+  },
+  "search_tags": [
+    "contrast-therapy",
+    "neighborhood-spa",
+    "sauna-culture"
+  ],
+  "provenance": {
+    "discovered_from": "directory_seed",
+    "last_canonicalized_at": "2026-03-12T21:17:18.201Z"
+  },
+  "source_urls": [
+    "file:///workspace/dip/content/venues/new-york-city/saint.yml",
+    "https://www.instagram.com/saint__nyc"
+  ],
+  "editorial_status": "draft",
+  "ranking_eligibility": {
+    "is_eligible": false,
+    "evaluated_at": "2026-03-12T21:13:47.501Z",
+    "reasons": [
+      "Awaiting evidence-backed scoring pass."
+    ],
+    "blockers": [
+      "No score record generated yet."
+    ]
+  },
+  "last_verified_at": "2026-03-12T21:17:18.201Z",
+  "created_at": "2026-03-12T21:13:47.501Z",
+  "updated_at": "2026-03-12T21:17:18.201Z"
+}

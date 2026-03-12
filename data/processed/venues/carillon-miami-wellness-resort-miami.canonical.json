@@ -1,0 +1,61 @@
+{
+  "id": "carillon-miami-wellness-resort-miami",
+  "slug": "carillon-miami-wellness-resort-miami",
+  "name": "Carillon Miami Wellness Resort",
+  "city": "Miami",
+  "country": "USA",
+  "coordinates": {
+    "lat": 25.7617,
+    "lng": -80.1918
+  },
+  "website": "https://www.carillonhotel.com/",
+  "categories": [],
+  "features": [],
+  "venue_type": "other",
+  "primary_category": "Regional Spa Resort",
+  "search_facets": {
+    "neighborhood": "Miami Beach",
+    "has_sauna": false,
+    "has_cold_plunge": false,
+    "has_steam_room": false,
+    "has_hot_pool": false,
+    "has_thermal_circuit": false,
+    "has_guided_rituals": false,
+    "has_breathwork": false,
+    "has_treatments": false,
+    "has_massages": false,
+    "has_bodywork": false,
+    "has_recovery_clinic": false,
+    "has_iv_therapy": false,
+    "has_hyperbaric": false,
+    "has_red_light": false,
+    "has_cryotherapy": false
+  },
+  "search_tags": [
+    "destination",
+    "other",
+    "regional-spa-resort"
+  ],
+  "provenance": {
+    "discovered_from": "directory_seed",
+    "last_canonicalized_at": "2026-03-12T21:18:35.236Z"
+  },
+  "source_urls": [
+    "file:///workspace/dip/content/venues/miami/carillon-miami-wellness-resort.yml",
+    "https://www.carillonhotel.com/"
+  ],
+  "editorial_status": "draft",
+  "ranking_eligibility": {
+    "is_eligible": false,
+    "evaluated_at": "2026-03-12T21:15:04.609Z",
+    "reasons": [
+      "Awaiting evidence-backed scoring pass."
+    ],
+    "blockers": [
+      "No score record generated yet."
+    ]
+  },
+  "last_verified_at": "2026-03-12T21:18:35.236Z",
+  "created_at": "2026-03-12T21:15:04.609Z",
+  "updated_at": "2026-03-12T21:18:35.236Z"
+}

@@ -1,0 +1,105 @@
+[
+  {
+    "name": "Almonte Spa (Marin)",
+    "website": "https://www.almontespa.com/",
+    "city": "San Francisco",
+    "country": "USA",
+    "source_urls": [
+      "file:///workspace/dip/content/venues/san-francisco/almonte-spa-marin.yml",
+      "https://www.almontespa.com/"
+    ],
+    "snippets": [
+      {
+        "source_url": "file:///workspace/dip/content/venues/san-francisco/almonte-spa-marin.yml",
+        "text": ""
+      }
+    ],
+    "candidate_categories": [],
+    "source_provenance": [
+      {
+        "source_type": "directory_seed",
+        "source_url": "file:///workspace/dip/content/venues/san-francisco/almonte-spa-marin.yml",
+        "source_label": "Existing DipDays venue directory",
+        "discovered_at": "2026-03-12T21:17:22.054Z"
+      }
+    ]
+  },
+  {
+    "name": "Archimedes Banya",
+    "website": "https://banyasf.com/",
+    "city": "San Francisco",
+    "country": "USA",
+    "source_urls": [
+      "file:///workspace/dip/content/venues/san-francisco/archimedes-banya.yml",
+      "https://banyasf.com/"
+    ],
+    "snippets": [
+      {
+        "source_url": "file:///workspace/dip/content/venues/san-francisco/archimedes-banya.yml",
+        "text": ""
+      }
+    ],
+    "candidate_categories": [
+      "Sauna"
+    ],
+    "source_provenance": [
+      {
+        "source_type": "directory_seed",
+        "source_url": "file:///workspace/dip/content/venues/san-francisco/archimedes-banya.yml",
+        "source_label": "Existing DipDays venue directory",
+        "discovered_at": "2026-03-12T21:17:22.056Z"
+      }
+    ]
+  },
+  {
+    "name": "International Orange",
+    "website": "https://internationalorange.com/",
+    "neighborhood": "Fillmore",
+    "city": "San Francisco",
+    "country": "USA",
+    "source_urls": [
+      "file:///workspace/dip/content/venues/san-francisco/international-orange.yml",
+      "https://internationalorange.com/"
+    ],
+    "snippets": [
+      {
+        "source_url": "file:///workspace/dip/content/venues/san-francisco/international-orange.yml",
+        "text": ""
+      }
+    ],
+    "candidate_categories": [],
+    "source_provenance": [
+      {
+        "source_type": "directory_seed",
+        "source_url": "file:///workspace/dip/content/venues/san-francisco/international-orange.yml",
+        "source_label": "Existing DipDays venue directory",
+        "discovered_at": "2026-03-12T21:17:22.057Z"
+      }
+    ]
+  },
+  {
+    "name": "Kabuki Springs & Spa",
+    "website": "https://kabukisprings.com/",
+    "city": "San Francisco",
+    "country": "USA",
+    "source_urls": [
+      "file:///workspace/dip/content/venues/san-francisco/kabuki-springs-spa.yml",
+      "https://kabukisprings.com/"
+    ],
+    "snippets": [
+      {
+        "source_url": "file:///workspace/dip/content/venues/san-francisco/kabuki-springs-spa.yml",
+        "text": ""
+      }
+    ],
+    "candidate_categories": [],
+    "source_provenance": [
+      {
+        "source_type": "directory_seed",
+        "source_url": "file:///workspace/dip/content/venues/san-francisco/kabuki-springs-spa.yml",
+        "source_label": "Existing DipDays venue directory",
+        "discovered_at": "2026-03-12T21:17:22.057Z"
+      }
+    ]
+  }
+]

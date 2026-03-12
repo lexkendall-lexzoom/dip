@@ -1,0 +1,129 @@
+[
+  {
+    "name": "AIRE Ancient Baths Chicago",
+    "website": "https://beaire.com/en/aire-ancient-baths-chicago/airechicago_746/",
+    "city": "Chicago",
+    "country": "USA",
+    "source_urls": [
+      "file:///workspace/dip/content/venues/chicago/aire-ancient-baths-chicago.yml",
+      "https://beaire.com/en/aire-ancient-baths-chicago/airechicago_746/"
+    ],
+    "snippets": [
+      {
+        "source_url": "file:///workspace/dip/content/venues/chicago/aire-ancient-baths-chicago.yml",
+        "text": ""
+      }
+    ],
+    "candidate_categories": [],
+    "source_provenance": [
+      {
+        "source_type": "directory_seed",
+        "source_url": "file:///workspace/dip/content/venues/chicago/aire-ancient-baths-chicago.yml",
+        "source_label": "Existing DipDays venue directory",
+        "discovered_at": "2026-03-12T21:18:38.745Z"
+      }
+    ]
+  },
+  {
+    "name": "Chuan Spa at The Langham",
+    "website": "https://www.langhamhotels.com/en/the-langham/chicago/wellness/chuan-spa/",
+    "city": "Chicago",
+    "country": "USA",
+    "source_urls": [
+      "file:///workspace/dip/content/venues/chicago/chuan-spa-at-the-langham.yml",
+      "https://www.langhamhotels.com/en/the-langham/chicago/wellness/chuan-spa/"
+    ],
+    "snippets": [
+      {
+        "source_url": "file:///workspace/dip/content/venues/chicago/chuan-spa-at-the-langham.yml",
+        "text": ""
+      }
+    ],
+    "candidate_categories": [],
+    "source_provenance": [
+      {
+        "source_type": "directory_seed",
+        "source_url": "file:///workspace/dip/content/venues/chicago/chuan-spa-at-the-langham.yml",
+        "source_label": "Existing DipDays venue directory",
+        "discovered_at": "2026-03-12T21:18:38.747Z"
+      }
+    ]
+  },
+  {
+    "name": "Den Wellness",
+    "website": "https://denwellness.com",
+    "neighborhood": "River North",
+    "city": "Chicago",
+    "country": "USA",
+    "source_urls": [
+      "file:///workspace/dip/content/venues/chicago/den-wellness.yml",
+      "https://denwellness.com"
+    ],
+    "snippets": [
+      {
+        "source_url": "file:///workspace/dip/content/venues/chicago/den-wellness.yml",
+        "text": ""
+      }
+    ],
+    "candidate_categories": [],
+    "source_provenance": [
+      {
+        "source_type": "directory_seed",
+        "source_url": "file:///workspace/dip/content/venues/chicago/den-wellness.yml",
+        "source_label": "Existing DipDays venue directory",
+        "discovered_at": "2026-03-12T21:18:38.747Z"
+      }
+    ]
+  },
+  {
+    "name": "Kohler Waters Spa",
+    "website": "https://www.kohlerwatersspaburrridge.com/",
+    "city": "Chicago",
+    "country": "USA",
+    "source_urls": [
+      "file:///workspace/dip/content/venues/chicago/kohler-waters-spa.yml",
+      "https://www.kohlerwatersspaburrridge.com/"
+    ],
+    "snippets": [
+      {
+        "source_url": "file:///workspace/dip/content/venues/chicago/kohler-waters-spa.yml",
+        "text": ""
+      }
+    ],
+    "candidate_categories": [],
+    "source_provenance": [
+      {
+        "source_type": "directory_seed",
+        "source_url": "file:///workspace/dip/content/venues/chicago/kohler-waters-spa.yml",
+        "source_label": "Existing DipDays venue directory",
+        "discovered_at": "2026-03-12T21:18:38.748Z"
+      }
+    ]
+  },
+  {
+    "name": "Russian Vapor Baths",
+    "website": "https://www.russianvaporbaths.com",
+    "neighborhood": "Ukrainian Village",
+    "city": "Chicago",
+    "country": "USA",
+    "source_urls": [
+      "file:///workspace/dip/content/venues/chicago/russian-vapor-baths.yml",
+      "https://www.russianvaporbaths.com"
+    ],
+    "snippets": [
+      {
+        "source_url": "file:///workspace/dip/content/venues/chicago/russian-vapor-baths.yml",
+        "text": ""
+      }
+    ],
+    "candidate_categories": [],
+    "source_provenance": [
+      {
+        "source_type": "directory_seed",
+        "source_url": "file:///workspace/dip/content/venues/chicago/russian-vapor-baths.yml",
+        "source_label": "Existing DipDays venue directory",
+        "discovered_at": "2026-03-12T21:18:38.749Z"
+      }
+    ]
+  }
+]

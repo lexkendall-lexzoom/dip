@@ -21,9 +21,23 @@ type CityDiscoveryConfig = {
 type VenueContentRecord = {
   name?: string;
   website?: string;
+  website_url?: string;
   address?: string;
   categories?: string[];
   description?: string;
+  neighborhood?: string;
+  city?: string;
+  country?: string;
+  venue?: {
+    name?: string;
+    website?: string;
+    website_url?: string;
+    address?: string;
+    categories?: string[];
+    review?: string;
+    neighborhood?: string;
+    city?: string;
+  };
 };
 
 const readJson = <T>(filePath: string): T => JSON.parse(fs.readFileSync(filePath, "utf8")) as T;
@@ -34,6 +48,23 @@ const normalizeKey = (candidate: Pick<CandidateVenueRaw, "name" | "website" | "a
   const normalizedWebsite = (candidate.website ?? "").toLowerCase().trim().replace(/^https?:\/\//, "").replace(/\/$/, "");
   const normalizedAddress = (candidate.address ?? "").toLowerCase().trim();
   return `${normalizedName}::${normalizedWebsite || normalizedAddress}`;
+};
+
+
+const parseNeighborhood = (raw?: string): { neighborhood?: string; borough?: string } => {
+  if (!raw) return {};
+  const cleaned = raw.trim();
+  if (!cleaned) return {};
+
+  const parts = cleaned.split(",").map((part) => part.trim()).filter(Boolean);
+  if (parts.length >= 2) {
+    return {
+      neighborhood: parts[0],
+      borough: parts[1],
+    };
+  }
+
+  return { neighborhood: cleaned };
 };
 
 const inferCandidateCategories = (text: string): string[] => {
@@ -57,15 +88,29 @@ const fromContentDirectory = (config: CityDiscoveryConfig): CandidateVenueRaw[] 
       const sourceFilePath = path.join(directory, file);
       const raw = yaml.load(fs.readFileSync(sourceFilePath, "utf8")) as VenueContentRecord;
       const localSourceUrl = `file://${sourceFilePath}`;
+      const venue = raw.venue ?? raw;
+      const website = venue.website ?? venue.website_url ?? raw.website ?? raw.website_url;
+      const city = config.city;
+      const country = config.country;
+      const neighborhoodData = parseNeighborhood(venue.neighborhood ?? raw.neighborhood);
+      const categories = venue.categories?.length
+        ? venue.categories
+        : raw.categories?.length
+          ? raw.categories
+          : inferCandidateCategories([venue.name, raw.description, venue.review].filter(Boolean).join(" "));
+      const name = venue.name ?? raw.name ?? file.replace(/\.ya?ml$/i, "");
+
       return {
-        name: raw.name ?? file.replace(/\.ya?ml$/i, ""),
-        website: raw.website,
-        address: raw.address,
-        city: config.city,
-        country: config.country,
-        source_urls: [localSourceUrl, ...(raw.website ? [raw.website] : [])],
-        snippets: [{ source_url: localSourceUrl, text: raw.description ?? `${raw.name ?? "Venue"} in ${config.city}` }],
-        candidate_categories: raw.categories?.length ? raw.categories : inferCandidateCategories([raw.name, raw.description].filter(Boolean).join(" ")),
+        name,
+        website,
+        address: venue.address ?? raw.address,
+        neighborhood: neighborhoodData.neighborhood,
+        borough: neighborhoodData.borough,
+        city,
+        country,
+        source_urls: [localSourceUrl, ...(website ? [website] : [])],
+        snippets: [{ source_url: localSourceUrl, text: raw.description ?? venue.review ?? `${name} in ${city}` }],
+        candidate_categories: categories,
         source_provenance: [{
           source_type: "directory_seed",
           source_url: localSourceUrl,
@@ -99,18 +144,35 @@ const fromManualCandidates = (config: CityDiscoveryConfig): CandidateVenueRaw[] 
   });
 
 export async function runDiscovery(config: CityDiscoveryConfig): Promise<CandidateVenueRaw[]> {
-  const osm = await runOsmDiscovery({
-    citySlug: config.city_slug,
-    resume: true,
-    fixturePath: process.env.OSM_FIXTURE_PATH,
-  });
-  const enriched = await runGoogleEnrich({
-    citySlug: config.city_slug,
-    skipGoogle: !process.env.GOOGLE_PLACES_API_KEY && !process.env.GOOGLE_FIXTURE_PATH,
-    fixturePath: process.env.GOOGLE_FIXTURE_PATH,
-  });
+  let osmCandidates: CandidateVenueRaw[] = [];
+  try {
+    const osm = await runOsmDiscovery({
+      citySlug: config.city_slug,
+      resume: true,
+      fixturePath: process.env.OSM_FIXTURE_PATH,
+    });
+    osmCandidates = osm.candidates;
+  } catch (error) {
+    const message = error instanceof Error ? error.message : String(error);
+    process.stdout.write(`warning: osm discovery failed for ${config.city_slug}, continuing with non-OSM sources (${message})
+`);
+  }
 
-  const candidates = [...osm.candidates, ...enriched.candidates, ...fromContentDirectory(config), ...fromManualCandidates(config)];
+  let enrichedCandidates: CandidateVenueRaw[] = [];
+  try {
+    const enriched = await runGoogleEnrich({
+      citySlug: config.city_slug,
+      skipGoogle: !process.env.GOOGLE_PLACES_API_KEY && !process.env.GOOGLE_FIXTURE_PATH,
+      fixturePath: process.env.GOOGLE_FIXTURE_PATH,
+    });
+    enrichedCandidates = enriched.candidates;
+  } catch (error) {
+    const message = error instanceof Error ? error.message : String(error);
+    process.stdout.write(`warning: google enrichment failed for ${config.city_slug}, continuing with non-google sources (${message})
+`);
+  }
+
+  const candidates = [...osmCandidates, ...enrichedCandidates, ...fromContentDirectory(config), ...fromManualCandidates(config)];
   const deduped = new Map<string, CandidateVenueRaw>();
 
   for (const candidate of candidates) {
@@ -131,6 +193,10 @@ export async function runDiscovery(config: CityDiscoveryConfig): Promise<Candida
       source_provenance: [...existing.source_provenance, ...candidate.source_provenance],
       website: existing.website ?? candidate.website,
       address: existing.address ?? candidate.address,
+      neighborhood: existing.neighborhood ?? candidate.neighborhood,
+      borough: existing.borough ?? candidate.borough,
+      lat: existing.lat ?? candidate.lat,
+      lng: existing.lng ?? candidate.lng,
     });
   }
 

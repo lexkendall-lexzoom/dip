@@ -2,7 +2,7 @@
   "id": "othership-flatiron-new-york",
   "slug": "othership-flatiron-new-york",
   "name": "Othership Flatiron",
-  "city": "New York",
+  "city": "Los Angeles",
   "country": "USA",
   "coordinates": {
     "lat": 40.7413,
@@ -11,7 +11,9 @@
   "website": "https://www.othership.us",
   "categories": [
     "Social Sauna",
-    "Contrast Therapy"
+    "Contrast Therapy",
+    "Sauna",
+    "Bathhouse"
   ],
   "features": [
     "sauna",
@@ -30,27 +32,38 @@
     "has_cold_plunge": true,
     "has_steam_room": false,
     "has_hot_pool": false,
-    "has_thermal_circuit": false,
+    "has_thermal_circuit": true,
     "has_guided_rituals": true,
     "has_breathwork": true,
-    "has_treatments": false,
+    "has_treatments": true,
     "has_massages": false,
-    "has_bodywork": false,
+    "has_bodywork": true,
     "has_recovery_clinic": false,
     "has_iv_therapy": false,
     "has_hyperbaric": false,
-    "has_red_light": true,
+    "has_red_light": false,
     "has_cryotherapy": false
   },
   "search_tags": [
-    "community-oriented",
+    "contrast-therapy",
     "ritual-led",
+    "sauna",
+    "sauna-culture",
     "social",
-    "social-sauna",
-    "urban"
+    "social-sauna"
   ],
+  "provenance": {
+    "discovered_from": "directory_seed",
+    "review_sources": [
+      "google_reviews"
+    ],
+    "last_canonicalized_at": "2026-03-12T21:18:09.508Z"
+  },
   "source_urls": [
-    "https://www.othership.us"
+    "https://www.othership.us",
+    "file:///workspace/dip/content/venues/new-york-city/othership-flatiron.yml",
+    "https://othership.us",
+    "file:///workspace/dip/content/venues/los-angeles/othership-la.yml"
   ],
   "editorial_status": "reviewed",
   "ranking_eligibility": {
@@ -63,14 +76,7 @@
       "No score record generated yet."
     ]
   },
-  "last_verified_at": "2026-03-12T00:00:00.000Z",
+  "last_verified_at": "2026-03-12T21:18:09.508Z",
   "created_at": "2026-03-12T00:00:00.000Z",
-  "updated_at": "2026-03-12T18:54:57.008Z",
-  "provenance": {
-    "discovered_from": "unknown",
-    "review_sources": [
-      "google_reviews"
-    ],
-    "last_canonicalized_at": "2026-03-12T00:00:00.000Z"
-  }
+  "updated_at": "2026-03-12T21:18:09.508Z"
 }

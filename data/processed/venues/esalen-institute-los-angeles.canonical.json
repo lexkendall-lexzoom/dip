@@ -1,0 +1,61 @@
+{
+  "id": "esalen-institute-los-angeles",
+  "slug": "esalen-institute-los-angeles",
+  "name": "Esalen Institute",
+  "city": "Los Angeles",
+  "country": "USA",
+  "coordinates": {
+    "lat": 34.0522,
+    "lng": -118.2437
+  },
+  "website": "https://www.esalen.org",
+  "categories": [],
+  "features": [],
+  "venue_type": "other",
+  "primary_category": "Neighborhood Spa",
+  "search_facets": {
+    "neighborhood": "Big Sur",
+    "borough": "California",
+    "has_sauna": false,
+    "has_cold_plunge": false,
+    "has_steam_room": false,
+    "has_hot_pool": false,
+    "has_thermal_circuit": false,
+    "has_guided_rituals": false,
+    "has_breathwork": false,
+    "has_treatments": false,
+    "has_massages": false,
+    "has_bodywork": false,
+    "has_recovery_clinic": false,
+    "has_iv_therapy": false,
+    "has_hyperbaric": false,
+    "has_red_light": false,
+    "has_cryotherapy": false
+  },
+  "search_tags": [
+    "neighborhood-spa",
+    "other"
+  ],
+  "provenance": {
+    "discovered_from": "directory_seed",
+    "last_canonicalized_at": "2026-03-12T21:18:09.507Z"
+  },
+  "source_urls": [
+    "file:///workspace/dip/content/venues/los-angeles/esalen-institute.yml",
+    "https://www.esalen.org"
+  ],
+  "editorial_status": "draft",
+  "ranking_eligibility": {
+    "is_eligible": false,
+    "evaluated_at": "2026-03-12T21:14:38.902Z",
+    "reasons": [
+      "Awaiting evidence-backed scoring pass."
+    ],
+    "blockers": [
+      "No score record generated yet."
+    ]
+  },
+  "last_verified_at": "2026-03-12T21:18:09.507Z",
+  "created_at": "2026-03-12T21:14:38.902Z",
+  "updated_at": "2026-03-12T21:18:09.507Z"
+}
