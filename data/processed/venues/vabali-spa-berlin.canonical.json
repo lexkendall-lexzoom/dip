@@ -44,6 +44,44 @@
       "minimum evidence met",
       "core fields complete",
       "review_count:8600"
+    ],
+    "evaluated_at": "2026-03-06T00:00:00.000Z",
+    "blockers": []
+  },
+  "last_verified_at": "2026-03-06T00:00:00.000Z",
+  "created_at": "2026-03-06T00:00:00.000Z",
+  "updated_at": "2026-03-06T00:00:00.000Z",
+  "primary_category": "Social Sauna",
+  "search_facets": {
+    "has_sauna": true,
+    "has_cold_plunge": true,
+    "has_steam_room": true,
+    "has_hot_pool": true,
+    "has_thermal_circuit": true,
+    "has_guided_rituals": true,
+    "has_breathwork": true,
+    "has_treatments": true,
+    "has_massages": true,
+    "has_bodywork": true,
+    "has_recovery_clinic": false,
+    "has_iv_therapy": false,
+    "has_hyperbaric": false,
+    "has_red_light": false,
+    "has_cryotherapy": false,
+    "neighborhood": "Mitte"
+  },
+  "search_tags": [
+    "community-oriented",
+    "high-design",
+    "recovery-focused",
+    "ritual-led",
+    "social",
+    "urban"
+  ],
+  "provenance": {
+    "discovered_from": "unknown",
+    "last_canonicalized_at": "2026-03-06T00:00:00.000Z"
+  }
     ]
   },
   "last_verified_at": "2026-03-06T00:00:00.000Z",

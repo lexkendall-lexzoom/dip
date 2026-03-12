@@ -138,3 +138,63 @@ for (const c of cases) {
 }
 NODE
 ```
+
+
+## 5) Match explanations
+
+Search results now include short `reasons[]` strings to explain why a venue matched and ranked:
+
+- location matches (city / borough / neighborhood)
+- matched required facets (sauna, cold plunge, hyperbaric, etc.)
+- preferred category/tag matches
+- strong positive review evidence signals (for example ritual quality, cold plunge quality, cleanliness)
+
+Reason generation is deterministic and compact (max 3–5 reasons), with deduping and no vague filler.
+
+### Example reason styles
+
+- **best sauna in Brooklyn**
+  - `Has sauna`
+  - `Located in Brooklyn`
+  - `Strong sauna quality signals`
+- **social sauna in Manhattan**
+  - `Matches social sauna archetype`
+  - `Has sauna`
+  - `Located in Manhattan`
+  - `Strong ritual quality signals`
+- **luxury wellness club with hyperbaric in LA**
+  - `Matches social wellness club archetype`
+  - `Has hyperbaric`
+  - `Matches Luxury vibe`
+  - `Strong design and ambience signals`
+
+These explanations improve user trust by making ranking decisions inspectable without exposing raw evidence payloads.
+
+
+## 6) Location normalization and zero-result fallback
+
+Search keeps strict location filtering by default, but borough-level terms are normalized to improve consistency:
+
+- Borough aliases normalize to: `manhattan`, `brooklyn`, `queens`, `bronx`, `staten island`.
+- NYC borough intent also sets `city = new-york` so borough searches stay anchored to New York.
+- City aliases continue to resolve deterministically (for example `nyc` -> `new-york`, `la` -> `los-angeles`).
+
+When strict location filtering returns zero rows, the orchestrator applies a narrow deterministic fallback:
+
+1. Drop `neighborhood` and retry.
+2. If still empty, drop `borough` and retry city-level while keeping required facets/category/tags.
+
+If fallback is used, payload metadata includes:
+
+- `fallback_applied: true`
+- `fallback_note` explaining the scope relaxation.
+
+### Verification examples
+
+- `best sauna in Brooklyn`
+  - In current sample data, strict borough match can be empty.
+  - Fallback returns New York city sauna candidates with a note.
+- `social sauna in Manhattan`
+  - Returns exact Manhattan matches (no fallback).
+- `best cold plunge in Brooklyn`
+  - Uses the same fallback behavior when strict borough results are empty.

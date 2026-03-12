@@ -30,6 +30,21 @@ const CITY_ALIASES: Record<string, string> = {
 
 const BOROUGHS = ["manhattan", "brooklyn", "queens", "bronx", "staten island"];
 
+const BOROUGH_ALIASES: Record<string, string> = {
+  manhattan: "manhattan",
+  brooklyn: "brooklyn",
+  bk: "brooklyn",
+  queens: "queens",
+  qns: "queens",
+  bronx: "bronx",
+  "the bronx": "bronx",
+  "staten island": "staten island",
+  "staten-island": "staten island",
+  si: "staten island",
+};
+
+const NYC_BOROUGH_SET = new Set(BOROUGHS);
+
 const FACET_KEYWORDS: Array<{ keywords: string[]; facet: keyof SearchFacets }> = [
   { keywords: ["sauna", "banya"], facet: "has_sauna" },
   { keywords: ["cold plunge", "ice bath", "plunge"], facet: "has_cold_plunge" },
@@ -63,6 +78,29 @@ const norm = (value: string): string => value.toLowerCase().trim().replace(/[^a-
 
 const includesAny = (value: string, keywords: string[]): boolean => keywords.some((keyword) => value.includes(keyword));
 
+const escapeRegExp = (value: string): string => value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+const containsTerm = (haystack: string, needle: string): boolean => {
+  const pattern = `(^|\\s)${escapeRegExp(needle)}(?=\\s|$)`;
+  return new RegExp(pattern).test(haystack);
+};
+
+const parseLocation = (normalized: string): QueryIntent["location"] => {
+  const location: QueryIntent["location"] = {};
+
+  const applyBorough = (raw: string): boolean => {
+    for (const [alias, borough] of Object.entries(BOROUGH_ALIASES)) {
+      if (containsTerm(raw, alias)) {
+        location.borough = borough;
+        if (NYC_BOROUGH_SET.has(borough)) {
+          location.city = "new-york";
+        }
+        return true;
+      }
+    }
+
+    return false;
+  };
+
 const parseLocation = (normalized: string): QueryIntent["location"] => {
   const location: QueryIntent["location"] = {};
 
@@ -70,6 +108,8 @@ const parseLocation = (normalized: string): QueryIntent["location"] => {
   const locationPhrase = inMatch?.[1]?.trim();
 
   if (locationPhrase) {
+    if (applyBorough(locationPhrase)) {
+      return location;
     for (const borough of BOROUGHS) {
       if (locationPhrase.includes(borough)) {
         location.borough = borough;
@@ -87,6 +127,14 @@ const parseLocation = (normalized: string): QueryIntent["location"] => {
     return location;
   }
 
+  if (applyBorough(normalized)) {
+    return location;
+  }
+
+  for (const borough of BOROUGHS) {
+    if (containsTerm(normalized, borough)) {
+      location.borough = borough;
+      location.city = "new-york";
   for (const borough of BOROUGHS) {
     if (normalized.includes(borough)) {
       location.borough = borough;
@@ -95,6 +143,7 @@ const parseLocation = (normalized: string): QueryIntent["location"] => {
   }
 
   for (const [alias, city] of Object.entries(CITY_ALIASES)) {
+    if (containsTerm(normalized, alias)) {
     if (normalized.includes(alias)) {
       location.city = city;
       return location;

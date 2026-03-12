@@ -8,5 +8,12 @@
       "source_url": "https://www.google.com/maps/search/san+francisco+sauna+bathhouse"
     }
   ],
+  "max_candidates": 250,
+  "bbox": [
+    37.6398,
+    -123.1738,
+    37.9298,
+    -122.2818
+  ]
   "max_candidates": 250
 }

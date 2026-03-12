@@ -3,6 +3,7 @@ import path from "node:path";
 import type { CanonicalVenue, ScoreRecord } from "../schema/models.ts";
 import type { QueryIntent } from "./resolveQuery.ts";
 import { deriveIntentWeights, hasMeaningfulIntent } from "./intentWeights.ts";
+import { buildMatchReasons } from "./matchReasons.ts";
 
 export type SearchResult = {
   venue: string;
@@ -81,12 +82,14 @@ const computeIntentBoost = (venue: CanonicalVenue, intent: QueryIntent, reviewEv
   for (const [facetKey, facetBoost] of Object.entries(weights.facet_boosts)) {
     if ((venue.search_facets as Record<string, unknown>)[facetKey] === true) {
       boost += facetBoost ?? 0;
+      reasons.push(`${facetKey.replace(/^has_/, "").replace(/_/g, " ")} intent match`);
       reasons.push(`Boosted for ${facetKey.replace(/^has_/, "").replace(/_/g, " ")}`);
     }
   }
 
   if (weights.category_boosts[venue.primary_category]) {
     boost += weights.category_boosts[venue.primary_category] ?? 0;
+    reasons.push(`${venue.primary_category} category match`);
     reasons.push(`Boosted for ${venue.primary_category.toLowerCase()} category match`);
   }
 
@@ -94,6 +97,7 @@ const computeIntentBoost = (venue: CanonicalVenue, intent: QueryIntent, reviewEv
   for (const [tag, tagBoost] of Object.entries(weights.tag_boosts)) {
     if (venueTags.has(tag.toLowerCase())) {
       boost += tagBoost;
+      reasons.push(`${tag.replace(/-/g, " ")} tag match`);
       reasons.push(`Boosted for ${tag} tag match`);
     }
   }
@@ -107,6 +111,7 @@ const computeIntentBoost = (venue: CanonicalVenue, intent: QueryIntent, reviewEv
       const signalBoost = signalWeight * signal.confidence * sentimentFactor;
       if (signalBoost <= 0) continue;
       boost += signalBoost;
+      reasons.push(`${signal.signal.replace(/_/g, " ")} evidence support`);
       reasons.push(`Boosted for ${signal.signal.replace(/_/g, " ")} evidence`);
     }
   }
@@ -117,6 +122,18 @@ const computeIntentBoost = (venue: CanonicalVenue, intent: QueryIntent, reviewEv
   };
 };
 
+const buildReasons = (
+  venue: CanonicalVenue,
+  intent: QueryIntent,
+  boostReasons: string[],
+  reviewArtifact: ReviewEvidenceArtifact | null,
+): string[] => buildMatchReasons({
+  venue,
+  intent,
+  boostReasons,
+  reviewArtifact,
+  maxReasons: 5,
+});
 const buildReasons = (venue: CanonicalVenue, intent: QueryIntent, boostReasons: string[]): string[] => {
   const reasons: string[] = [];
 
@@ -163,6 +180,7 @@ export const rankSearchResults = (filteredVenues: CanonicalVenue[], intent: Quer
       baseScore,
       finalSearchScore,
       intentBoost,
+      reviewArtifact: getReviewArtifact(venue.slug, options.reviewEvidence),
       reviewConfidence: reviewConfidence(venue.slug, options.reviewEvidence),
       facilityCompleteness: facilityCompleteness(venue),
     };
@@ -180,6 +198,7 @@ export const rankSearchResults = (filteredVenues: CanonicalVenue[], intent: Quer
       venue: row.venue.name,
       venue_slug: row.venue.slug,
       score: Number(row.finalSearchScore.toFixed(2)),
+      reasons: buildReasons(row.venue, intent, row.intentBoost.reasons, row.reviewArtifact),
       reasons: buildReasons(row.venue, intent, row.intentBoost.reasons),
       boost_breakdown: row.intentBoost.reasons,
     }));
