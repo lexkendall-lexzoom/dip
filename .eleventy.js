@@ -12,7 +12,6 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("content");
   eleventyConfig.addPassthroughCopy("fonts");
   eleventyConfig.addPassthroughCopy("robots.txt");
-  eleventyConfig.addPassthroughCopy("sitemap.xml");
 
   // ── Helper: read a YAML file ────────────────────────────
   function readYaml(filePath) {

@@ -1,0 +1,23 @@
+---
+permalink: /sitemap.xml
+eleventyExcludeFromCollections: true
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://dipdays.com/</loc>
+  </url>
+  <url>
+    <loc>https://dipdays.com/cities/</loc>
+  </url>
+  {% for city in cityPages %}
+  <url>
+    <loc>https://dipdays.com/{{ city.slug }}/</loc>
+  </url>
+  {% endfor %}
+  {% for item in venues %}
+  <url>
+    <loc>https://dipdays.com/{{ item.citySlug }}/{{ item.venue.slug | default(item.fileSlug) }}/</loc>
+  </url>
+  {% endfor %}
+</urlset>
