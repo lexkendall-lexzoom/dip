@@ -313,8 +313,36 @@ footer{background:var(--ink);border-top:1px solid rgba(255,255,255,.08);padding:
 .fl a{font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.2);text-decoration:none;transition:color .2s}
 .fl a:hover{color:var(--teal)}
 
+
+
+/* SEARCH V1 */
+.search-wrap{max-width:1280px;margin:0 auto;padding:0 44px 24px}
+.search-panel{background:#fff;border:2px solid var(--ink);box-shadow:6px 6px 0 var(--ink);padding:18px}
+.search-head{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:12px}
+.search-title{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--stone);font-weight:700}
+.search-note{font-size:12px;color:#666}
+.search-form{display:flex;gap:10px}
+.search-input{flex:1;padding:12px 14px;border:2px solid var(--ink);font-family:var(--font-sans);font-size:14px;outline:none}
+.search-input:focus{border-color:var(--teal)}
+.search-btn{padding:12px 16px;border:none;background:var(--teal);color:#fff;font-size:10px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;cursor:pointer;white-space:nowrap}
+.search-btn[disabled]{opacity:.7;cursor:wait}
+.search-status{margin-top:10px;font-size:12px;color:#555}
+.search-status.error{color:#a7342e}
+.search-results{margin-top:14px;display:grid;gap:10px}
+.search-card{background:var(--teal-bg);border:1px solid #cfe4e2;padding:12px}
+.search-card h3{font-size:17px;line-height:1.2;margin-bottom:4px}
+.search-meta{font-size:12px;color:#4b4b4b;margin-bottom:7px}
+.search-score{font-size:12px;font-weight:700;color:var(--teal);margin-bottom:6px}
+.search-reasons{margin:0;padding-left:16px;font-size:12px;color:#333;line-height:1.45}
+.search-tags{margin-top:8px;display:flex;gap:6px;flex-wrap:wrap}
+.search-tag{font-size:10px;letter-spacing:.08em;text-transform:uppercase;padding:4px 6px;background:#fff;border:1px solid #cdd8d7;color:#466}
+.search-link{font-size:11px;color:var(--teal);text-decoration:none;font-weight:700}
+
 @media(max-width:900px){
   .hero{grid-template-columns:1fr;padding:72px 22px 40px;gap:36px}
+  .search-wrap{padding:0 18px 18px}
+  .search-form{flex-direction:column}
+
   .hero-right-col{display:none}
   nav{padding:0 18px}.nav-links{display:none}
   .map-wrap,.dir,.fbar{padding-left:18px;padding-right:18px}
@@ -369,6 +397,21 @@ footer{background:var(--ink);border-top:1px solid rgba(255,255,255,.08);padding:
     <p class="h-cite">New York City — Now Open</p>
     <div class="h-ql" id="hero-list"></div>
   </div>
+</div>
+
+<div class="search-wrap" id="search">
+  <section class="search-panel" aria-label="Dip search">
+    <div class="search-head">
+      <p class="search-title">Search DipDays</p>
+      <p class="search-note">Try: “best sauna in Brooklyn”</p>
+    </div>
+    <form class="search-form" id="search-form">
+      <input id="search-input" class="search-input" type="text" placeholder="Search for “best sauna in Brooklyn”" autocomplete="off" />
+      <button id="search-submit" class="search-btn" type="submit">Search</button>
+    </form>
+    <p id="search-status" class="search-status" role="status" aria-live="polite"></p>
+    <div id="search-results" class="search-results"></div>
+  </section>
 </div>
 
 <!-- CITY NAVIGATION -->
@@ -1506,12 +1549,117 @@ document.addEventListener('DOMContentLoaded', async () => {
   buildCityTabs();
   buildHeroList();
   initVenuesDropdown();
+  initSearchUi();
   const restored = restoreVenueFromHash();
   if (!restored) {
     switchCity('nyc', { scrollToDirectory: false });
   }
   loadLeaflet();
 });
+
+
+function escapeHtml(value) {
+  return String(value)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
+}
+
+function renderSearchResults(payload) {
+  const status = document.getElementById('search-status');
+  const resultsNode = document.getElementById('search-results');
+  if (!status || !resultsNode) return;
+
+  const results = payload.results || [];
+  if (results.length === 0) {
+    status.classList.remove('error');
+    status.textContent = `No matches found for “${payload.query}”.`;
+    resultsNode.innerHTML = '';
+    return;
+  }
+
+  status.classList.remove('error');
+  status.textContent = `${results.length} match${results.length === 1 ? '' : 'es'} found.`;
+  resultsNode.innerHTML = results.map((item) => {
+    const locationBits = [item.neighborhood, item.borough, item.city].filter(Boolean).join(', ');
+    const reasons = (item.reasons || []).slice(0, 3).map((reason) => `<li>${escapeHtml(reason)}</li>`).join('');
+    const tags = (item.search_tags || []).slice(0, 4).map((tag) => `<span class="search-tag">${escapeHtml(tag)}</span>`).join('');
+    const website = item.website ? `<a class="search-link" href="${escapeHtml(item.website)}" target="_blank" rel="noopener noreferrer">Website ↗</a>` : '';
+
+    return `<article class="search-card">
+      <h3>${escapeHtml(item.name)}</h3>
+      <p class="search-meta">${escapeHtml(locationBits)} · ${escapeHtml(item.primary_category)}</p>
+      <p class="search-score">DipScore ${Number(item.score || 0).toFixed(1)} / 10</p>
+      <ul class="search-reasons">${reasons}</ul>
+      <div class="search-tags">${tags}</div>
+      ${website}
+    </article>`;
+  }).join('');
+}
+
+// Uses the deterministic v1 search API response shape from /api/search.
+async function submitSearchQuery(query, { updateUrl = true } = {}) {
+  const status = document.getElementById('search-status');
+  const button = document.getElementById('search-submit');
+
+  if (!status || !button) return;
+
+  const trimmed = (query || '').trim();
+  if (!trimmed) {
+    status.classList.add('error');
+    status.textContent = 'Please enter a search query.';
+    document.getElementById('search-results').innerHTML = '';
+    return;
+  }
+
+  if (updateUrl) {
+    const url = new URL(window.location.href);
+    url.searchParams.set('q', trimmed);
+    window.history.replaceState({}, '', `${url.pathname}?${url.searchParams.toString()}${url.hash}`);
+  }
+
+  button.disabled = true;
+  status.classList.remove('error');
+  status.textContent = 'Searching DipDays…';
+
+  try {
+    const response = await fetch(`/api/search?q=${encodeURIComponent(trimmed)}`);
+    const payload = await response.json();
+
+    if (!response.ok) {
+      throw new Error(payload.error || 'Search request failed.');
+    }
+
+    renderSearchResults(payload);
+  } catch (error) {
+    status.classList.add('error');
+    status.textContent = error instanceof Error ? error.message : 'Search unavailable right now.';
+    document.getElementById('search-results').innerHTML = '';
+  } finally {
+    button.disabled = false;
+  }
+}
+
+function initSearchUi() {
+  const form = document.getElementById('search-form');
+  const input = document.getElementById('search-input');
+  if (!form || !input) return;
+
+  form.addEventListener('submit', async (event) => {
+    event.preventDefault();
+    await submitSearchQuery(input.value);
+  });
+
+  const url = new URL(window.location.href);
+  const initialQuery = (url.searchParams.get('q') || '').trim();
+  if (initialQuery) {
+    input.value = initialQuery;
+    submitSearchQuery(initialQuery, { updateUrl: false });
+  }
+}
+
 
 function buildCityTabs() {
   const tabs = document.getElementById('city-tabs');

@@ -1,0 +1,49 @@
+{
+  "region": "Hudson Valley Additions",
+  "venues": [
+    {
+      "name": "Big Towel Spa",
+      "city": "Kingston",
+      "state": "NY",
+      "country": "USA",
+      "venue_type": "sauna",
+      "categories": ["mobile sauna", "social sauna"],
+      "features": ["wood-fired sauna", "cold plunge", "outdoor sauna"],
+      "website": "https://www.bigtowelspa.com",
+      "notes": "Mobile wood-fired sauna project operating around the Hudson Valley."
+    },
+    {
+      "name": "Piaule Spa",
+      "city": "Catskill",
+      "state": "NY",
+      "country": "USA",
+      "venue_type": "spa",
+      "categories": ["destination spa", "hotel spa"],
+      "features": ["sauna", "steam room", "cold plunge", "hot pool", "massage", "yoga"],
+      "website": "https://www.piaule.com",
+      "notes": "Spa at the Piaule Catskill landscape hotel featuring sauna, steam room, hot pool and plunge."
+    },
+    {
+      "name": "Hemlock Neversink Spa",
+      "city": "Neversink",
+      "state": "NY",
+      "country": "USA",
+      "venue_type": "spa",
+      "categories": ["spa resort", "wellness retreat"],
+      "features": ["sauna", "steam room", "indoor pool", "hot tub", "massage", "yoga"],
+      "website": "https://www.hemlockneversink.com",
+      "notes": "Catskills wellness resort spa with sauna, steam room, pool and treatment programming."
+    },
+    {
+      "name": "Alchemy",
+      "city": "Beacon",
+      "state": "NY",
+      "country": "USA",
+      "venue_type": "wellness spa",
+      "categories": ["urban spa"],
+      "features": ["sauna", "steam room", "massage", "holistic wellness"],
+      "website": "https://www.alchemybeacon.com",
+      "notes": "Holistic wellness center offering sauna, steam and bodywork in Beacon."
+    }
+  ]
+}

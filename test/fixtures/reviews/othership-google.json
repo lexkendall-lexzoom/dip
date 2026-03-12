@@ -1,0 +1,30 @@
+[
+  {
+    "source": "google_reviews",
+    "author": "A",
+    "rating": 5,
+    "text": "Amazing guided ritual and breathwork. Staff is friendly and the sauna quality is excellent.",
+    "reviewed_at": "2026-01-10T00:00:00Z"
+  },
+  {
+    "source": "google_reviews",
+    "author": "B",
+    "rating": 4,
+    "text": "Beautiful design ambience. Cold plunge was great but access had a short wait at peak time.",
+    "reviewed_at": "2026-01-13T00:00:00Z"
+  },
+  {
+    "source": "google_reviews",
+    "author": "C",
+    "rating": 3,
+    "text": "Crowded on weekends and a bit expensive, but facility condition is clean and well maintained.",
+    "reviewed_at": "2026-01-20T00:00:00Z"
+  },
+  {
+    "source": "google_reviews",
+    "author": "D",
+    "rating": 5,
+    "text": "Great social sauna atmosphere and very welcoming service team.",
+    "reviewed_at": "2026-01-24T00:00:00Z"
+  }
+]

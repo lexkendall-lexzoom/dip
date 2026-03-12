@@ -9,3 +9,9 @@
   for = "/content/*"
   [headers.values]
     Cache-Control = "no-cache, must-revalidate"
+
+[[redirects]]
+  from = "/api/search"
+  to = "/.netlify/functions/search"
+  status = 200
+

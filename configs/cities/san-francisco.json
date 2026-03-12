@@ -1,0 +1,12 @@
+{
+  "city": "San Francisco",
+  "city_slug": "san-francisco",
+  "country": "USA",
+  "seed_sources": [
+    {
+      "source_label": "SF wellness discovery sweep",
+      "source_url": "https://www.google.com/maps/search/san+francisco+sauna+bathhouse"
+    }
+  ],
+  "max_candidates": 250
+}

@@ -1,0 +1,76 @@
+{
+  "id": "othership-flatiron-new-york",
+  "slug": "othership-flatiron-new-york",
+  "name": "Othership Flatiron",
+  "city": "New York",
+  "country": "USA",
+  "coordinates": {
+    "lat": 40.7413,
+    "lng": -73.9897
+  },
+  "website": "https://www.othership.us",
+  "categories": [
+    "Social Sauna",
+    "Contrast Therapy"
+  ],
+  "features": [
+    "sauna",
+    "cold_plunge",
+    "breathwork",
+    "guided_sessions",
+    "group_ritual",
+    "community_events"
+  ],
+  "venue_type": "sauna",
+  "primary_category": "Social Sauna",
+  "search_facets": {
+    "neighborhood": "Flatiron",
+    "borough": "Manhattan",
+    "has_sauna": true,
+    "has_cold_plunge": true,
+    "has_steam_room": false,
+    "has_hot_pool": false,
+    "has_thermal_circuit": false,
+    "has_guided_rituals": true,
+    "has_breathwork": true,
+    "has_treatments": false,
+    "has_massages": false,
+    "has_bodywork": false,
+    "has_recovery_clinic": false,
+    "has_iv_therapy": false,
+    "has_hyperbaric": false,
+    "has_red_light": true,
+    "has_cryotherapy": false
+  },
+  "search_tags": [
+    "community-oriented",
+    "ritual-led",
+    "social",
+    "social-sauna",
+    "urban"
+  ],
+  "source_urls": [
+    "https://www.othership.us"
+  ],
+  "editorial_status": "reviewed",
+  "ranking_eligibility": {
+    "is_eligible": false,
+    "evaluated_at": "2026-03-12T00:00:00.000Z",
+    "reasons": [
+      "Awaiting evidence-backed scoring pass."
+    ],
+    "blockers": [
+      "No score record generated yet."
+    ]
+  },
+  "last_verified_at": "2026-03-12T00:00:00.000Z",
+  "created_at": "2026-03-12T00:00:00.000Z",
+  "updated_at": "2026-03-12T18:54:57.008Z",
+  "provenance": {
+    "discovered_from": "unknown",
+    "review_sources": [
+      "google_reviews"
+    ],
+    "last_canonicalized_at": "2026-03-12T00:00:00.000Z"
+  }
+}
