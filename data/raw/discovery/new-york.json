@@ -1,28 +1,56 @@
 [
   {
     "name": "AIRE Ancient Baths",
-    "website": "https://beaire.com/en/aire-ancient-baths-new-york",
+    "website": "https://beaire.com",
+    "neighborhood": "Tribeca",
+    "borough": "Manhattan",
     "city": "New York",
     "country": "USA",
     "source_urls": [
       "file:///workspace/dip/content/venues/new-york-city/aire-ancient-baths.yml",
-      "https://beaire.com/en/aire-ancient-baths-new-york"
+      "https://beaire.com"
     ],
     "snippets": [
       {
         "source_url": "file:///workspace/dip/content/venues/new-york-city/aire-ancient-baths.yml",
-        "text": "Existing DipDays NYC venue candidate."
+        "text": "Imagine this. You are in a 140-year-old textile factory, candlelit, moving between pools that swing from genuinely hot to actually cold, and it still does not feel theatrical. That is the trick AIRE pulls off. Do the wine bath once and respect the silence policy every time."
       }
     ],
-    "candidate_categories": [
-      "Bathhouse"
-    ],
+    "candidate_categories": [],
     "source_provenance": [
       {
         "source_type": "directory_seed",
         "source_url": "file:///workspace/dip/content/venues/new-york-city/aire-ancient-baths.yml",
         "source_label": "Existing DipDays venue directory",
-        "discovered_at": "2026-03-11T00:00:00.000Z"
+        "discovered_at": "2026-03-12T21:16:56.124Z"
+      }
+    ]
+  },
+  {
+    "name": "Akari Sauna",
+    "website": "https://www.akarisauna.com",
+    "neighborhood": "Williamsburg + Greenpoint",
+    "city": "New York",
+    "country": "USA",
+    "source_urls": [
+      "file:///workspace/dip/content/venues/new-york-city/akari-sauna.yml",
+      "https://www.akarisauna.com"
+    ],
+    "snippets": [
+      {
+        "source_url": "file:///workspace/dip/content/venues/new-york-city/akari-sauna.yml",
+        "text": "The hardest wellness membership to get in New York right now, and it is not close. Rooted in Japanese sentō tradition by a founder who grew up going to public baths in Tokyo, Akari is what that looks like when you bring it to Brooklyn and do it right. Small, quiet, currently sold out at both locations."
+      }
+    ],
+    "candidate_categories": [
+      "Sauna"
+    ],
+    "source_provenance": [
+      {
+        "source_type": "directory_seed",
+        "source_url": "file:///workspace/dip/content/venues/new-york-city/akari-sauna.yml",
+        "source_label": "Existing DipDays venue directory",
+        "discovered_at": "2026-03-12T21:16:56.126Z"
       }
     ]
   },
@@ -49,7 +77,418 @@
         "source_type": "manual",
         "source_url": "https://beaire.com/en/aire-ancient-baths-newyork",
         "source_label": "NYC wellness discovery sweep",
-        "discovered_at": "2026-03-11T00:00:00.000Z"
+        "discovered_at": "2026-03-12T21:16:56.141Z"
+      }
+    ]
+  },
+  {
+    "name": "Bathhouse Williamsburg",
+    "website": "https://www.abathhouse.com",
+    "neighborhood": "Williamsburg",
+    "borough": "Brooklyn",
+    "city": "New York",
+    "country": "USA",
+    "source_urls": [
+      "file:///workspace/dip/content/venues/new-york-city/bathhouse-williamsburg.yml",
+      "https://www.abathhouse.com"
+    ],
+    "snippets": [
+      {
+        "source_url": "file:///workspace/dip/content/venues/new-york-city/bathhouse-williamsburg.yml",
+        "text": "This is the one you bring someone you want to impress — or someone you already have. Eight thermal pools, a rooftop plunge open to the sky, and Aufguss ceremonies that feel closer to performance art than spa therapy. The banya hits 195°F and the cold plunge hits 45°F. That gap is the entire point."
+      }
+    ],
+    "candidate_categories": [
+      "Sauna",
+      "Bathhouse",
+      "Contrast Therapy"
+    ],
+    "source_provenance": [
+      {
+        "source_type": "directory_seed",
+        "source_url": "file:///workspace/dip/content/venues/new-york-city/bathhouse-williamsburg.yml",
+        "source_label": "Existing DipDays venue directory",
+        "discovered_at": "2026-03-12T21:16:56.128Z"
+      }
+    ]
+  },
+  {
+    "name": "Great Jones Spa",
+    "website": "https://gjspa.com",
+    "neighborhood": "NoHo",
+    "borough": "Manhattan",
+    "city": "New York",
+    "country": "USA",
+    "source_urls": [
+      "file:///workspace/dip/content/venues/new-york-city/great-jones-spa.yml",
+      "https://gjspa.com"
+    ],
+    "snippets": [
+      {
+        "source_url": "file:///workspace/dip/content/venues/new-york-city/great-jones-spa.yml",
+        "text": "A NoHo classic running the same play for twenty years, and it still works. The three-story indoor waterfall is absurdly good for a city spa. Weekday passes are some of the best value in Manhattan wellness. Unpretentious, reliable, and right there on Great Jones Street."
+      }
+    ],
+    "candidate_categories": [],
+    "source_provenance": [
+      {
+        "source_type": "directory_seed",
+        "source_url": "file:///workspace/dip/content/venues/new-york-city/great-jones-spa.yml",
+        "source_label": "Existing DipDays venue directory",
+        "discovered_at": "2026-03-12T21:16:56.129Z"
+      }
+    ]
+  },
+  {
+    "name": "Lift / Next Level Floats",
+    "website": "https://nextlevelfloats.com",
+    "neighborhood": "Midtown West",
+    "borough": "Manhattan",
+    "city": "New York",
+    "country": "USA",
+    "source_urls": [
+      "file:///workspace/dip/content/venues/new-york-city/lift-next-level-floats.yml",
+      "https://nextlevelfloats.com"
+    ],
+    "snippets": [
+      {
+        "source_url": "file:///workspace/dip/content/venues/new-york-city/lift-next-level-floats.yml",
+        "text": "Eight private float suites, each with a thousand pounds of pharmaceutical-grade Epsom salt. Total soundproofing, no light, no sound, no weight. Ninety minutes in here is worth more than three hours of sleep — that's not marketing copy, that's just what happens."
+      }
+    ],
+    "candidate_categories": [],
+    "source_provenance": [
+      {
+        "source_type": "directory_seed",
+        "source_url": "file:///workspace/dip/content/venues/new-york-city/lift-next-level-floats.yml",
+        "source_label": "Existing DipDays venue directory",
+        "discovered_at": "2026-03-12T21:16:56.130Z"
+      }
+    ]
+  },
+  {
+    "name": "Lore Bathing Club",
+    "website": "https://www.lorebathingclub.com",
+    "neighborhood": "NoHo",
+    "borough": "Manhattan",
+    "city": "New York",
+    "country": "USA",
+    "source_urls": [
+      "file:///workspace/dip/content/venues/new-york-city/lore-bathing-club.yml",
+      "https://www.lorebathingclub.com"
+    ],
+    "snippets": [
+      {
+        "source_url": "file:///workspace/dip/content/venues/new-york-city/lore-bathing-club.yml",
+        "text": "Designed for frequency, not occasion. Dry sauna, infrared sauna, and a serious cold plunge pool — built by alumni of Lifetime Fitness and NeueHouse who understand daily-use design. At $225/month for unlimited weekday access, it reframes bathing as routine rather than indulgence."
+      }
+    ],
+    "candidate_categories": [
+      "Sauna",
+      "Contrast Therapy"
+    ],
+    "source_provenance": [
+      {
+        "source_type": "directory_seed",
+        "source_url": "file:///workspace/dip/content/venues/new-york-city/lore-bathing-club.yml",
+        "source_label": "Existing DipDays venue directory",
+        "discovered_at": "2026-03-12T21:16:56.131Z"
+      }
+    ]
+  },
+  {
+    "name": "Othership Flatiron",
+    "website": "https://othership.us",
+    "neighborhood": "Flatiron",
+    "borough": "Manhattan",
+    "city": "New York",
+    "country": "USA",
+    "source_urls": [
+      "file:///workspace/dip/content/venues/new-york-city/othership-flatiron.yml",
+      "https://othership.us"
+    ],
+    "snippets": [
+      {
+        "source_url": "file:///workspace/dip/content/venues/new-york-city/othership-flatiron.yml",
+        "text": "Othership is more guided ritual than traditional bathhouse: breathwork, sauna, cold exposure, and facilitation designed for newcomers and regulars alike. It is one of the easiest entry points for people who want structure with their contrast work."
+      }
+    ],
+    "candidate_categories": [
+      "Sauna",
+      "Bathhouse",
+      "Contrast Therapy"
+    ],
+    "source_provenance": [
+      {
+        "source_type": "directory_seed",
+        "source_url": "file:///workspace/dip/content/venues/new-york-city/othership-flatiron.yml",
+        "source_label": "Existing DipDays venue directory",
+        "discovered_at": "2026-03-12T21:16:56.132Z"
+      }
+    ]
+  },
+  {
+    "name": "Othership Williamsburg",
+    "website": "https://www.othership.us/williamsburg",
+    "neighborhood": "Williamsburg",
+    "borough": "Brooklyn",
+    "city": "New York",
+    "country": "USA",
+    "source_urls": [
+      "file:///workspace/dip/content/venues/new-york-city/othership-williamsburg.yml",
+      "https://www.othership.us/williamsburg"
+    ],
+    "snippets": [
+      {
+        "source_url": "file:///workspace/dip/content/venues/new-york-city/othership-williamsburg.yml",
+        "text": "The Brooklyn outpost of Othership lands right by Domino Park — cedar sauna, ice baths kept at 0–4°C, guided breathwork sessions, and the same community-first ethos that made the brand. If you're in Brooklyn, this one's the move."
+      }
+    ],
+    "candidate_categories": [
+      "Sauna",
+      "Contrast Therapy"
+    ],
+    "source_provenance": [
+      {
+        "source_type": "directory_seed",
+        "source_url": "file:///workspace/dip/content/venues/new-york-city/othership-williamsburg.yml",
+        "source_label": "Existing DipDays venue directory",
+        "discovered_at": "2026-03-12T21:16:56.133Z"
+      }
+    ]
+  },
+  {
+    "name": "Remedy Place",
+    "website": "https://remedyplace.com",
+    "neighborhood": "Flatiron + SoHo",
+    "city": "New York",
+    "country": "USA",
+    "source_urls": [
+      "file:///workspace/dip/content/venues/new-york-city/remedy-place.yml",
+      "https://remedyplace.com"
+    ],
+    "snippets": [
+      {
+        "source_url": "file:///workspace/dip/content/venues/new-york-city/remedy-place.yml",
+        "text": "Ice baths, infrared, hyperbaric O₂, NAD+ drips — the menu reads like a longevity conference agenda, and it delivers. The social club concept is real. Two Manhattan locations. Walk-ins from $30, memberships from $9,000/year if you're in that world."
+      }
+    ],
+    "candidate_categories": [
+      "Contrast Therapy"
+    ],
+    "source_provenance": [
+      {
+        "source_type": "directory_seed",
+        "source_url": "file:///workspace/dip/content/venues/new-york-city/remedy-place.yml",
+        "source_label": "Existing DipDays venue directory",
+        "discovered_at": "2026-03-12T21:16:56.134Z"
+      }
+    ]
+  },
+  {
+    "name": "Reunion Baths",
+    "website": "https://reunionbaths.com/",
+    "neighborhood": "Brooklyn",
+    "city": "New York",
+    "country": "USA",
+    "source_urls": [
+      "file:///workspace/dip/content/venues/new-york-city/reunion-baths.yml",
+      "https://reunionbaths.com/"
+    ],
+    "snippets": [
+      {
+        "source_url": "file:///workspace/dip/content/venues/new-york-city/reunion-baths.yml",
+        "text": "Reunion Baths is positioning itself as a community-first bathhouse in Brooklyn, combining classic hot-cold contrast therapy with a less formal social energy than traditional destination spas."
+      }
+    ],
+    "candidate_categories": [
+      "Bathhouse",
+      "Contrast Therapy"
+    ],
+    "source_provenance": [
+      {
+        "source_type": "directory_seed",
+        "source_url": "file:///workspace/dip/content/venues/new-york-city/reunion-baths.yml",
+        "source_label": "Existing DipDays venue directory",
+        "discovered_at": "2026-03-12T21:16:56.135Z"
+      }
+    ]
+  },
+  {
+    "name": "Russian & Turkish Baths",
+    "website": "https://www.russianturkishbaths.com",
+    "neighborhood": "East Village",
+    "borough": "Manhattan",
+    "city": "New York",
+    "country": "USA",
+    "source_urls": [
+      "file:///workspace/dip/content/venues/new-york-city/russian-and-turkish-baths.yml",
+      "https://www.russianturkishbaths.com"
+    ],
+    "snippets": [
+      {
+        "source_url": "file:///workspace/dip/content/venues/new-york-city/russian-and-turkish-baths.yml",
+        "text": "Open since 1892, this remains one of the city’s most iconic real-deal bathhouse experiences. The granite room is unique, the Platza scrub is a rite of passage, and the whole place is unapologetically old-school."
+      }
+    ],
+    "candidate_categories": [
+      "Hammam",
+      "Bathhouse"
+    ],
+    "source_provenance": [
+      {
+        "source_type": "directory_seed",
+        "source_url": "file:///workspace/dip/content/venues/new-york-city/russian-and-turkish-baths.yml",
+        "source_label": "Existing DipDays venue directory",
+        "discovered_at": "2026-03-12T21:16:56.136Z"
+      }
+    ]
+  },
+  {
+    "name": "SAINT",
+    "website": "https://www.instagram.com/saint__nyc",
+    "neighborhood": "Chelsea",
+    "borough": "Manhattan",
+    "city": "New York",
+    "country": "USA",
+    "source_urls": [
+      "file:///workspace/dip/content/venues/new-york-city/saint.yml",
+      "https://www.instagram.com/saint__nyc"
+    ],
+    "snippets": [
+      {
+        "source_url": "file:///workspace/dip/content/venues/new-york-city/saint.yml",
+        "text": "Four private sauna and ice bath sanctuaries for up to three people, designed by architecture firm BOND. Less communal, more contemplative — built for stillness and deep recovery. The introvert's play. If you live nearby, this might be your whole routine."
+      }
+    ],
+    "candidate_categories": [
+      "Sauna",
+      "Contrast Therapy"
+    ],
+    "source_provenance": [
+      {
+        "source_type": "directory_seed",
+        "source_url": "file:///workspace/dip/content/venues/new-york-city/saint.yml",
+        "source_label": "Existing DipDays venue directory",
+        "discovered_at": "2026-03-12T21:16:56.137Z"
+      }
+    ]
+  },
+  {
+    "name": "Schwet",
+    "website": "https://www.instagram.com/getschwet",
+    "neighborhood": "Tribeca",
+    "borough": "Manhattan",
+    "city": "New York",
+    "country": "USA",
+    "source_urls": [
+      "file:///workspace/dip/content/venues/new-york-city/schwet.yml",
+      "https://www.instagram.com/getschwet"
+    ],
+    "snippets": [
+      {
+        "source_url": "file:///workspace/dip/content/venues/new-york-city/schwet.yml",
+        "text": "European bathing tradition meets New York club culture — a banya, mineral pool, Japanese scrub room, 48°F cold plunge, plus a Parcelle wine program, fireplace lounge, dinner parties, and artist takeovers. Building a clubhouse as much as a bathhouse."
+      }
+    ],
+    "candidate_categories": [
+      "Sauna",
+      "Bathhouse",
+      "Contrast Therapy"
+    ],
+    "source_provenance": [
+      {
+        "source_type": "directory_seed",
+        "source_url": "file:///workspace/dip/content/venues/new-york-city/schwet.yml",
+        "source_label": "Existing DipDays venue directory",
+        "discovered_at": "2026-03-12T21:16:56.138Z"
+      }
+    ]
+  },
+  {
+    "name": "SoJo Spa Club",
+    "website": "https://sojospa.com",
+    "neighborhood": "Edgewater",
+    "borough": "NJ · 15 min from Midtown",
+    "city": "New York",
+    "country": "USA",
+    "source_urls": [
+      "file:///workspace/dip/content/venues/new-york-city/sojo-spa-club.yml",
+      "https://sojospa.com"
+    ],
+    "snippets": [
+      {
+        "source_url": "file:///workspace/dip/content/venues/new-york-city/sojo-spa-club.yml",
+        "text": "Technically New Jersey, spiritually New York. The rooftop infinity pool with Manhattan views is one of the genuinely great moments in this metro area. 240,000 sq ft, 19 water features, seven sauna rooms. Take the NJ Transit bus from Port Authority — it's fifteen minutes and completely worth it."
+      }
+    ],
+    "candidate_categories": [
+      "Sauna"
+    ],
+    "source_provenance": [
+      {
+        "source_type": "directory_seed",
+        "source_url": "file:///workspace/dip/content/venues/new-york-city/sojo-spa-club.yml",
+        "source_label": "Existing DipDays venue directory",
+        "discovered_at": "2026-03-12T21:16:56.138Z"
+      }
+    ]
+  },
+  {
+    "name": "Spa Castle",
+    "website": "https://ny.spacastleusa.com/",
+    "neighborhood": "College Point",
+    "borough": "Queens",
+    "city": "New York",
+    "country": "USA",
+    "source_urls": [
+      "file:///workspace/dip/content/venues/new-york-city/spa-castle.yml",
+      "https://ny.spacastleusa.com/"
+    ],
+    "snippets": [
+      {
+        "source_url": "file:///workspace/dip/content/venues/new-york-city/spa-castle.yml",
+        "text": "Five floors of Korean spa in College Point with a gold pyramid sauna and no time limit. Not a cool place. A very good place — the kind you drive 45 minutes to and wonder why you don't go every week. Recently renovated, still completely no-frills."
+      }
+    ],
+    "candidate_categories": [
+      "Sauna"
+    ],
+    "source_provenance": [
+      {
+        "source_type": "directory_seed",
+        "source_url": "file:///workspace/dip/content/venues/new-york-city/spa-castle.yml",
+        "source_label": "Existing DipDays venue directory",
+        "discovered_at": "2026-03-12T21:16:56.139Z"
+      }
+    ]
+  },
+  {
+    "name": "The Altar",
+    "website": "https://www.instagram.com/thealtar_nyc",
+    "neighborhood": "Chelsea / Flatiron",
+    "city": "New York",
+    "country": "USA",
+    "source_urls": [
+      "file:///workspace/dip/content/venues/new-york-city/the-altar.yml",
+      "https://www.instagram.com/thealtar_nyc"
+    ],
+    "snippets": [
+      {
+        "source_url": "file:///workspace/dip/content/venues/new-york-city/the-altar.yml",
+        "text": "Fifty-person sauna, cold plunge suite, hyperbaric chambers, PEMF mats, and Aufguss instructors who also know how to cook. Going after the longevity crowd with a genuinely communal angle. The Fifth Avenue address positions it correctly."
+      }
+    ],
+    "candidate_categories": [
+      "Sauna",
+      "Contrast Therapy"
+    ],
+    "source_provenance": [
+      {
+        "source_type": "directory_seed",
+        "source_url": "file:///workspace/dip/content/venues/new-york-city/the-altar.yml",
+        "source_label": "Existing DipDays venue directory",
+        "discovered_at": "2026-03-12T21:16:56.140Z"
       }
     ]
   },
@@ -74,15 +513,46 @@
       }
     ],
     "candidate_categories": [
-      "Bathhouse",
-      "Sauna"
+      "Sauna",
+      "Bathhouse"
     ],
     "source_provenance": [
       {
         "source_type": "manual",
         "source_url": "https://www.wallstreetbath.com",
         "source_label": "NYC wellness discovery sweep",
-        "discovered_at": "2026-03-11T00:00:00.000Z"
+        "discovered_at": "2026-03-12T21:16:56.141Z"
+      }
+    ]
+  },
+  {
+    "name": "World Spa",
+    "website": "https://www.worldspanyc.com",
+    "neighborhood": "Bed-Stuy",
+    "borough": "Brooklyn",
+    "city": "New York",
+    "country": "USA",
+    "source_urls": [
+      "file:///workspace/dip/content/venues/new-york-city/world-spa.yml",
+      "https://www.worldspanyc.com"
+    ],
+    "snippets": [
+      {
+        "source_url": "file:///workspace/dip/content/venues/new-york-city/world-spa.yml",
+        "text": "America’s largest banya is a true full-day destination. Seven sauna rooms, a snow room, and a Moroccan hammam make this one of the most comprehensive thermal circuits in NYC. The value proposition improves the longer you stay."
+      }
+    ],
+    "candidate_categories": [
+      "Sauna",
+      "Hammam",
+      "Bathhouse"
+    ],
+    "source_provenance": [
+      {
+        "source_type": "directory_seed",
+        "source_url": "file:///workspace/dip/content/venues/new-york-city/world-spa.yml",
+        "source_label": "Existing DipDays venue directory",
+        "discovered_at": "2026-03-12T21:16:56.141Z"
       }
     ]
   }

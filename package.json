@@ -8,7 +8,8 @@
     "sync:supabase": "tsx scripts/supabase/syncProcessedData.ts",
     "sync:supabase:ci": "NODE_ENV=production npm run sync:supabase",
     "verify:supabase-schema": "tsx scripts/supabase/verifyCoreSchema.ts",
-    "import:seed:venues": "node scripts/import_seed_venues.ts"
+    "import:seed:venues": "node scripts/import_seed_venues.ts",
+    "qa:search-ready": "tsx scripts/qa/auditSearchReadiness.ts"
   },
   "dependencies": {
     "@11ty/eleventy": "^2.0.1",

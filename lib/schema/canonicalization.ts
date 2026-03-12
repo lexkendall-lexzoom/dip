@@ -223,6 +223,29 @@ export const inferVenueType = (categories: string[]): VenueType => {
 };
 
 
+
+const CITY_COORDINATE_FALLBACKS: Record<string, { lat: number; lng: number }> = {
+  "new-york": { lat: 40.7128, lng: -74.006 },
+  "san-francisco": { lat: 37.7749, lng: -122.4194 },
+  "los-angeles": { lat: 34.0522, lng: -118.2437 },
+  miami: { lat: 25.7617, lng: -80.1918 },
+  chicago: { lat: 41.8781, lng: -87.6298 },
+};
+
+const citySlug = (value: string): string => value.toLowerCase().trim().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+
+const withCoordinateFallback = (candidate: CandidateVenueRaw, existing?: CanonicalVenue): { lat: number; lng: number } => {
+  const existingCoordinates = existing?.coordinates;
+  if (existingCoordinates && existingCoordinates.lat !== 0 && existingCoordinates.lng !== 0) {
+    return existingCoordinates;
+  }
+  if (typeof candidate.lat === "number" && typeof candidate.lng === "number") {
+    return { lat: candidate.lat, lng: candidate.lng };
+  }
+
+  return CITY_COORDINATE_FALLBACKS[citySlug(candidate.city)] ?? { lat: 0, lng: 0 };
+};
+
 const inferDiscoveredFrom = (candidate: CandidateVenueRaw, existing?: CanonicalVenue): string => {
   if (existing?.provenance?.discovered_from && existing.provenance.discovered_from !== "unknown") return existing.provenance.discovered_from;
 
@@ -280,7 +303,11 @@ export const toCanonicalVenue = (candidate: CandidateVenueRaw, existing?: Canoni
     categories,
     features,
     venueType,
-    existing: existing?.search_facets,
+    existing: {
+      ...existing?.search_facets,
+      neighborhood: existing?.search_facets?.neighborhood ?? candidate.neighborhood,
+      borough: existing?.search_facets?.borough ?? candidate.borough,
+    },
   });
   const searchTags = buildSearchTags({
     name: existing?.name ?? candidate.name,
@@ -300,7 +327,7 @@ export const toCanonicalVenue = (candidate: CandidateVenueRaw, existing?: Canoni
     name: existing?.name ?? candidate.name,
     city: candidate.city,
     country: candidate.country,
-    coordinates: existing?.coordinates ?? { lat: 0, lng: 0 },
+    coordinates: withCoordinateFallback(candidate, existing),
     website: existing?.website ?? candidate.website,
     categories,
     features,

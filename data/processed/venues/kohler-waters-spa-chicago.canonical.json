@@ -1,0 +1,59 @@
+{
+  "id": "kohler-waters-spa-chicago",
+  "slug": "kohler-waters-spa-chicago",
+  "name": "Kohler Waters Spa",
+  "city": "Chicago",
+  "country": "USA",
+  "coordinates": {
+    "lat": 41.8781,
+    "lng": -87.6298
+  },
+  "website": "https://www.kohlerwatersspaburrridge.com/",
+  "categories": [],
+  "features": [],
+  "venue_type": "other",
+  "primary_category": "Neighborhood Spa",
+  "search_facets": {
+    "has_sauna": false,
+    "has_cold_plunge": false,
+    "has_steam_room": false,
+    "has_hot_pool": false,
+    "has_thermal_circuit": false,
+    "has_guided_rituals": false,
+    "has_breathwork": false,
+    "has_treatments": false,
+    "has_massages": false,
+    "has_bodywork": false,
+    "has_recovery_clinic": false,
+    "has_iv_therapy": false,
+    "has_hyperbaric": false,
+    "has_red_light": false,
+    "has_cryotherapy": false
+  },
+  "search_tags": [
+    "neighborhood-spa",
+    "other"
+  ],
+  "provenance": {
+    "discovered_from": "directory_seed",
+    "last_canonicalized_at": "2026-03-12T21:19:00.971Z"
+  },
+  "source_urls": [
+    "file:///workspace/dip/content/venues/chicago/kohler-waters-spa.yml",
+    "https://www.kohlerwatersspaburrridge.com/"
+  ],
+  "editorial_status": "draft",
+  "ranking_eligibility": {
+    "is_eligible": false,
+    "evaluated_at": "2026-03-12T21:15:30.249Z",
+    "reasons": [
+      "Awaiting evidence-backed scoring pass."
+    ],
+    "blockers": [
+      "No score record generated yet."
+    ]
+  },
+  "last_verified_at": "2026-03-12T21:19:00.971Z",
+  "created_at": "2026-03-12T21:15:30.249Z",
+  "updated_at": "2026-03-12T21:19:00.971Z"
+}

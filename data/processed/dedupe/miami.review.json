@@ -1,0 +1,27 @@
+{
+  "city": "Miami",
+  "generated_at": "2026-03-12T21:18:35.239Z",
+  "ambiguous_duplicates": [
+    {
+      "city": "Miami",
+      "candidate_a": {
+        "name": "The Spa at The Standard",
+        "website": "https://standardhotels.com",
+        "source_urls": [
+          "file:///workspace/dip/content/venues/miami/the-spa-at-the-standard.yml",
+          "https://standardhotels.com"
+        ]
+      },
+      "candidate_b": {
+        "name": "The Standard Spa",
+        "website": "https://www.standardhotels.com/miami/properties/miami-beach",
+        "source_urls": [
+          "file:///workspace/dip/content/venues/miami/the-standard-spa.yml",
+          "https://www.standardhotels.com/miami/properties/miami-beach"
+        ]
+      },
+      "reason": "Name similarity in same city exceeds ambiguity threshold.",
+      "similarity_score": 0.75
+    }
+  ]
+}

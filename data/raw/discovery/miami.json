@@ -1,0 +1,157 @@
+[
+  {
+    "name": "Âme Spa & Wellness",
+    "website": "https://www.amewellness.com/",
+    "city": "Miami",
+    "country": "USA",
+    "source_urls": [
+      "file:///workspace/dip/content/venues/miami/ame-spa-wellness.yml",
+      "https://www.amewellness.com/"
+    ],
+    "snippets": [
+      {
+        "source_url": "file:///workspace/dip/content/venues/miami/ame-spa-wellness.yml",
+        "text": ""
+      }
+    ],
+    "candidate_categories": [],
+    "source_provenance": [
+      {
+        "source_type": "directory_seed",
+        "source_url": "file:///workspace/dip/content/venues/miami/ame-spa-wellness.yml",
+        "source_label": "Existing DipDays venue directory",
+        "discovered_at": "2026-03-12T21:18:13.436Z"
+      }
+    ]
+  },
+  {
+    "name": "Carillon Miami Wellness Resort",
+    "website": "https://www.carillonhotel.com/",
+    "neighborhood": "Miami Beach",
+    "city": "Miami",
+    "country": "USA",
+    "source_urls": [
+      "file:///workspace/dip/content/venues/miami/carillon-miami-wellness-resort.yml",
+      "https://www.carillonhotel.com/"
+    ],
+    "snippets": [
+      {
+        "source_url": "file:///workspace/dip/content/venues/miami/carillon-miami-wellness-resort.yml",
+        "text": ""
+      }
+    ],
+    "candidate_categories": [],
+    "source_provenance": [
+      {
+        "source_type": "directory_seed",
+        "source_url": "file:///workspace/dip/content/venues/miami/carillon-miami-wellness-resort.yml",
+        "source_label": "Existing DipDays venue directory",
+        "discovered_at": "2026-03-12T21:18:13.438Z"
+      }
+    ]
+  },
+  {
+    "name": "Faena Spa",
+    "website": "https://www.faena.com/miami-beach/wellness/faena-spa",
+    "neighborhood": "Mid-Beach",
+    "borough": "Miami Beach",
+    "city": "Miami",
+    "country": "USA",
+    "source_urls": [
+      "file:///workspace/dip/content/venues/miami/faena-spa.yml",
+      "https://www.faena.com/miami-beach/wellness/faena-spa"
+    ],
+    "snippets": [
+      {
+        "source_url": "file:///workspace/dip/content/venues/miami/faena-spa.yml",
+        "text": ""
+      }
+    ],
+    "candidate_categories": [],
+    "source_provenance": [
+      {
+        "source_type": "directory_seed",
+        "source_url": "file:///workspace/dip/content/venues/miami/faena-spa.yml",
+        "source_label": "Existing DipDays venue directory",
+        "discovered_at": "2026-03-12T21:18:13.438Z"
+      }
+    ]
+  },
+  {
+    "name": "HigherDOSE at 1 Hotel",
+    "website": "https://www.1hotels.com/south-beach",
+    "city": "Miami",
+    "country": "USA",
+    "source_urls": [
+      "file:///workspace/dip/content/venues/miami/higherdose-at-1-hotel.yml",
+      "https://www.1hotels.com/south-beach"
+    ],
+    "snippets": [
+      {
+        "source_url": "file:///workspace/dip/content/venues/miami/higherdose-at-1-hotel.yml",
+        "text": ""
+      }
+    ],
+    "candidate_categories": [],
+    "source_provenance": [
+      {
+        "source_type": "directory_seed",
+        "source_url": "file:///workspace/dip/content/venues/miami/higherdose-at-1-hotel.yml",
+        "source_label": "Existing DipDays venue directory",
+        "discovered_at": "2026-03-12T21:18:13.439Z"
+      }
+    ]
+  },
+  {
+    "name": "The Spa at The Standard",
+    "website": "https://standardhotels.com",
+    "neighborhood": "Belle Isle",
+    "borough": "Miami Beach",
+    "city": "Miami",
+    "country": "USA",
+    "source_urls": [
+      "file:///workspace/dip/content/venues/miami/the-spa-at-the-standard.yml",
+      "https://standardhotels.com"
+    ],
+    "snippets": [
+      {
+        "source_url": "file:///workspace/dip/content/venues/miami/the-spa-at-the-standard.yml",
+        "text": ""
+      }
+    ],
+    "candidate_categories": [],
+    "source_provenance": [
+      {
+        "source_type": "directory_seed",
+        "source_url": "file:///workspace/dip/content/venues/miami/the-spa-at-the-standard.yml",
+        "source_label": "Existing DipDays venue directory",
+        "discovered_at": "2026-03-12T21:18:13.440Z"
+      }
+    ]
+  },
+  {
+    "name": "The Standard Spa",
+    "website": "https://www.standardhotels.com/miami/properties/miami-beach",
+    "city": "Miami",
+    "country": "USA",
+    "source_urls": [
+      "file:///workspace/dip/content/venues/miami/the-standard-spa.yml",
+      "https://www.standardhotels.com/miami/properties/miami-beach"
+    ],
+    "snippets": [
+      {
+        "source_url": "file:///workspace/dip/content/venues/miami/the-standard-spa.yml",
+        "text": ""
+      }
+    ],
+    "candidate_categories": [],
+    "source_provenance": [
+      {
+        "source_type": "directory_seed",
+        "source_url": "file:///workspace/dip/content/venues/miami/the-standard-spa.yml",
+        "source_label": "Existing DipDays venue directory",
+        "discovered_at": "2026-03-12T21:18:13.440Z"
+      }
+    ]
+  }
+]

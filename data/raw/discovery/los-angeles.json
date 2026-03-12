@@ -1,0 +1,210 @@
+[
+  {
+    "name": "AIRE Ancient Baths Venice",
+    "website": "https://beaire.com",
+    "neighborhood": "Venice",
+    "city": "Los Angeles",
+    "country": "USA",
+    "source_urls": [
+      "file:///workspace/dip/content/venues/los-angeles/aire-ancient-baths-venice.yml",
+      "https://beaire.com"
+    ],
+    "snippets": [
+      {
+        "source_url": "file:///workspace/dip/content/venues/los-angeles/aire-ancient-baths-venice.yml",
+        "text": ""
+      }
+    ],
+    "candidate_categories": [],
+    "source_provenance": [
+      {
+        "source_type": "directory_seed",
+        "source_url": "file:///workspace/dip/content/venues/los-angeles/aire-ancient-baths-venice.yml",
+        "source_label": "Existing DipDays venue directory",
+        "discovered_at": "2026-03-12T21:17:47.444Z"
+      }
+    ]
+  },
+  {
+    "name": "Beverly Hot Springs",
+    "website": "https://beverlyhotsprings.com",
+    "neighborhood": "East Hollywood",
+    "city": "Los Angeles",
+    "country": "USA",
+    "source_urls": [
+      "file:///workspace/dip/content/venues/los-angeles/beverly-hot-springs.yml",
+      "https://beverlyhotsprings.com"
+    ],
+    "snippets": [
+      {
+        "source_url": "file:///workspace/dip/content/venues/los-angeles/beverly-hot-springs.yml",
+        "text": ""
+      }
+    ],
+    "candidate_categories": [
+      "Bathhouse"
+    ],
+    "source_provenance": [
+      {
+        "source_type": "directory_seed",
+        "source_url": "file:///workspace/dip/content/venues/los-angeles/beverly-hot-springs.yml",
+        "source_label": "Existing DipDays venue directory",
+        "discovered_at": "2026-03-12T21:17:47.445Z"
+      }
+    ]
+  },
+  {
+    "name": "Esalen Institute",
+    "website": "https://www.esalen.org",
+    "neighborhood": "Big Sur",
+    "borough": "California",
+    "city": "Los Angeles",
+    "country": "USA",
+    "source_urls": [
+      "file:///workspace/dip/content/venues/los-angeles/esalen-institute.yml",
+      "https://www.esalen.org"
+    ],
+    "snippets": [
+      {
+        "source_url": "file:///workspace/dip/content/venues/los-angeles/esalen-institute.yml",
+        "text": ""
+      }
+    ],
+    "candidate_categories": [],
+    "source_provenance": [
+      {
+        "source_type": "directory_seed",
+        "source_url": "file:///workspace/dip/content/venues/los-angeles/esalen-institute.yml",
+        "source_label": "Existing DipDays venue directory",
+        "discovered_at": "2026-03-12T21:17:47.446Z"
+      }
+    ]
+  },
+  {
+    "name": "Float Lab",
+    "website": "#",
+    "neighborhood": "West Los Angeles",
+    "city": "Los Angeles",
+    "country": "USA",
+    "source_urls": [
+      "file:///workspace/dip/content/venues/los-angeles/float-lab.yml",
+      "#"
+    ],
+    "snippets": [
+      {
+        "source_url": "file:///workspace/dip/content/venues/los-angeles/float-lab.yml",
+        "text": ""
+      }
+    ],
+    "candidate_categories": [],
+    "source_provenance": [
+      {
+        "source_type": "directory_seed",
+        "source_url": "file:///workspace/dip/content/venues/los-angeles/float-lab.yml",
+        "source_label": "Existing DipDays venue directory",
+        "discovered_at": "2026-03-12T21:17:47.447Z"
+      }
+    ]
+  },
+  {
+    "name": "Othership LA",
+    "website": "https://othership.us",
+    "neighborhood": "West Hollywood",
+    "city": "Los Angeles",
+    "country": "USA",
+    "source_urls": [
+      "file:///workspace/dip/content/venues/los-angeles/othership-la.yml",
+      "https://othership.us"
+    ],
+    "snippets": [
+      {
+        "source_url": "file:///workspace/dip/content/venues/los-angeles/othership-la.yml",
+        "text": ""
+      }
+    ],
+    "candidate_categories": [],
+    "source_provenance": [
+      {
+        "source_type": "directory_seed",
+        "source_url": "file:///workspace/dip/content/venues/los-angeles/othership-la.yml",
+        "source_label": "Existing DipDays venue directory",
+        "discovered_at": "2026-03-12T21:17:47.448Z"
+      }
+    ]
+  },
+  {
+    "name": "Pause Studio",
+    "website": "https://pausestudio.com/",
+    "city": "Los Angeles",
+    "country": "USA",
+    "source_urls": [
+      "file:///workspace/dip/content/venues/los-angeles/pause-studio.yml",
+      "https://pausestudio.com/"
+    ],
+    "snippets": [
+      {
+        "source_url": "file:///workspace/dip/content/venues/los-angeles/pause-studio.yml",
+        "text": ""
+      }
+    ],
+    "candidate_categories": [],
+    "source_provenance": [
+      {
+        "source_type": "directory_seed",
+        "source_url": "file:///workspace/dip/content/venues/los-angeles/pause-studio.yml",
+        "source_label": "Existing DipDays venue directory",
+        "discovered_at": "2026-03-12T21:17:47.448Z"
+      }
+    ]
+  },
+  {
+    "name": "Tomoko Spa",
+    "website": "https://tomokojapanesespa.com/",
+    "city": "Los Angeles",
+    "country": "USA",
+    "source_urls": [
+      "file:///workspace/dip/content/venues/los-angeles/tomoko-spa.yml",
+      "https://tomokojapanesespa.com/"
+    ],
+    "snippets": [
+      {
+        "source_url": "file:///workspace/dip/content/venues/los-angeles/tomoko-spa.yml",
+        "text": ""
+      }
+    ],
+    "candidate_categories": [],
+    "source_provenance": [
+      {
+        "source_type": "directory_seed",
+        "source_url": "file:///workspace/dip/content/venues/los-angeles/tomoko-spa.yml",
+        "source_label": "Existing DipDays venue directory",
+        "discovered_at": "2026-03-12T21:17:47.448Z"
+      }
+    ]
+  },
+  {
+    "name": "Wi Spa",
+    "website": "https://wispausa.com/",
+    "city": "Los Angeles",
+    "country": "USA",
+    "source_urls": [
+      "file:///workspace/dip/content/venues/los-angeles/wi-spa.yml",
+      "https://wispausa.com/"
+    ],
+    "snippets": [
+      {
+        "source_url": "file:///workspace/dip/content/venues/los-angeles/wi-spa.yml",
+        "text": ""
+      }
+    ],
+    "candidate_categories": [],
+    "source_provenance": [
+      {
+        "source_type": "directory_seed",
+        "source_url": "file:///workspace/dip/content/venues/los-angeles/wi-spa.yml",
+        "source_label": "Existing DipDays venue directory",
+        "discovered_at": "2026-03-12T21:17:47.449Z"
+      }
+    ]
+  }
+]

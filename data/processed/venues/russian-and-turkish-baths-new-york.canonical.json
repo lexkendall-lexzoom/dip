@@ -11,7 +11,8 @@
   "website": "https://www.russianturkishbaths.com",
   "categories": [
     "Bathhouse",
-    "Traditional Banya"
+    "Traditional Banya",
+    "Hammam"
   ],
   "features": [
     "banya",
@@ -32,11 +33,11 @@
     "has_steam_room": true,
     "has_hot_pool": false,
     "has_thermal_circuit": true,
-    "has_guided_rituals": true,
+    "has_guided_rituals": false,
     "has_breathwork": false,
-    "has_treatments": true,
+    "has_treatments": false,
     "has_massages": true,
-    "has_bodywork": true,
+    "has_bodywork": false,
     "has_recovery_clinic": false,
     "has_iv_therapy": false,
     "has_hyperbaric": false,
@@ -44,14 +45,19 @@
     "has_cryotherapy": false
   },
   "search_tags": [
-    "banya",
-    "community-oriented",
+    "bathhouse",
+    "contrast-therapy",
+    "sauna-culture",
     "traditional",
-    "traditional-banya",
-    "urban"
+    "traditional-banya"
   ],
+  "provenance": {
+    "discovered_from": "directory_seed",
+    "last_canonicalized_at": "2026-03-12T21:17:18.200Z"
+  },
   "source_urls": [
-    "https://www.russianturkishbaths.com"
+    "https://www.russianturkishbaths.com",
+    "file:///workspace/dip/content/venues/new-york-city/russian-and-turkish-baths.yml"
   ],
   "editorial_status": "reviewed",
   "ranking_eligibility": {
@@ -64,11 +70,7 @@
       "No score record generated yet."
     ]
   },
-  "last_verified_at": "2026-03-12T00:00:00.000Z",
+  "last_verified_at": "2026-03-12T21:17:18.200Z",
   "created_at": "2026-03-12T00:00:00.000Z",
-  "updated_at": "2026-03-12T00:00:00.000Z",
-  "provenance": {
-    "discovered_from": "unknown",
-    "last_canonicalized_at": "2026-03-12T00:00:00.000Z"
-  }
+  "updated_at": "2026-03-12T21:17:18.200Z"
 }

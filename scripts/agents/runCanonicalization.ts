@@ -60,6 +60,10 @@ const mergeClearDuplicates = (candidates: CandidateVenueRaw[]): CandidateVenueRa
       source_provenance: [...current.source_provenance, ...candidate.source_provenance],
       website: current.website ?? candidate.website,
       address: current.address ?? candidate.address,
+      neighborhood: current.neighborhood ?? candidate.neighborhood,
+      borough: current.borough ?? candidate.borough,
+      lat: current.lat ?? candidate.lat,
+      lng: current.lng ?? candidate.lng,
     };
   });
 

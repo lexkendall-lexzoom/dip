@@ -1,20 +1,18 @@
 {
-  "id": "aire-ancient-baths-new-york",
-  "slug": "aire-ancient-baths-new-york",
+  "id": "aire-ancient-baths-new-york-city",
+  "slug": "aire-ancient-baths-new-york-city",
   "name": "AIRE Ancient Baths",
-  "city": "New York",
+  "city": "Los Angeles",
   "country": "USA",
   "coordinates": {
-    "lat": 0,
-    "lng": 0
+    "lat": 34.0522,
+    "lng": -118.2437
   },
-  "website": "https://beaire.com/en/aire-ancient-baths-new-york",
-  "categories": [
-    "Bathhouse"
-  ],
+  "website": "https://beaire.com",
+  "categories": [],
   "features": [],
-  "venue_type": "bathhouse",
-  "primary_category": "Luxury Bathhouse",
+  "venue_type": "other",
+  "primary_category": "Neighborhood Spa",
   "search_facets": {
     "neighborhood": "Tribeca",
     "borough": "Manhattan",
@@ -22,7 +20,7 @@
     "has_cold_plunge": false,
     "has_steam_room": false,
     "has_hot_pool": false,
-    "has_thermal_circuit": true,
+    "has_thermal_circuit": false,
     "has_guided_rituals": false,
     "has_breathwork": false,
     "has_treatments": false,
@@ -35,22 +33,23 @@
     "has_cryotherapy": false
   },
   "search_tags": [
-    "bathhouse",
     "luxury",
-    "luxury-bathhouse"
+    "neighborhood-spa",
+    "other"
   ],
   "provenance": {
-    "discovered_from": "unknown",
-    "last_canonicalized_at": "2026-03-12T18:55:19.553Z"
+    "discovered_from": "directory_seed",
+    "last_canonicalized_at": "2026-03-12T21:18:09.504Z"
   },
   "source_urls": [
     "file:///workspace/dip/content/venues/new-york-city/aire-ancient-baths.yml",
-    "https://beaire.com/en/aire-ancient-baths-new-york"
+    "https://beaire.com",
+    "file:///workspace/dip/content/venues/los-angeles/aire-ancient-baths-venice.yml"
   ],
   "editorial_status": "draft",
   "ranking_eligibility": {
     "is_eligible": false,
-    "evaluated_at": "2026-03-11T00:00:00.000Z",
+    "evaluated_at": "2026-03-12T21:13:47.494Z",
     "reasons": [
       "Awaiting evidence-backed scoring pass."
     ],
@@ -58,10 +57,7 @@
       "No score record generated yet."
     ]
   },
-  "last_verified_at": "2026-03-12T18:55:19.553Z",
-  "created_at": "2026-03-11T00:00:00.000Z",
-  "updated_at": "2026-03-12T18:55:19.553Z"
-  "last_verified_at": "2026-03-11T00:00:00.000Z",
-  "created_at": "2026-03-11T00:00:00.000Z",
-  "updated_at": "2026-03-11T00:00:00.000Z"
+  "last_verified_at": "2026-03-12T21:18:09.504Z",
+  "created_at": "2026-03-12T21:13:47.494Z",
+  "updated_at": "2026-03-12T21:18:09.504Z"
 }

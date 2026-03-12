@@ -1,0 +1,61 @@
+{
+  "id": "great-jones-spa-new-york-city",
+  "slug": "great-jones-spa-new-york-city",
+  "name": "Great Jones Spa",
+  "city": "New York",
+  "country": "USA",
+  "coordinates": {
+    "lat": 40.7128,
+    "lng": -74.006
+  },
+  "website": "https://gjspa.com",
+  "categories": [],
+  "features": [],
+  "venue_type": "other",
+  "primary_category": "Neighborhood Spa",
+  "search_facets": {
+    "neighborhood": "NoHo",
+    "borough": "Manhattan",
+    "has_sauna": false,
+    "has_cold_plunge": false,
+    "has_steam_room": false,
+    "has_hot_pool": false,
+    "has_thermal_circuit": false,
+    "has_guided_rituals": false,
+    "has_breathwork": false,
+    "has_treatments": false,
+    "has_massages": false,
+    "has_bodywork": false,
+    "has_recovery_clinic": false,
+    "has_iv_therapy": false,
+    "has_hyperbaric": false,
+    "has_red_light": false,
+    "has_cryotherapy": false
+  },
+  "search_tags": [
+    "neighborhood-spa",
+    "other"
+  ],
+  "provenance": {
+    "discovered_from": "directory_seed",
+    "last_canonicalized_at": "2026-03-12T21:17:18.198Z"
+  },
+  "source_urls": [
+    "file:///workspace/dip/content/venues/new-york-city/great-jones-spa.yml",
+    "https://gjspa.com"
+  ],
+  "editorial_status": "draft",
+  "ranking_eligibility": {
+    "is_eligible": false,
+    "evaluated_at": "2026-03-12T21:13:47.498Z",
+    "reasons": [
+      "Awaiting evidence-backed scoring pass."
+    ],
+    "blockers": [
+      "No score record generated yet."
+    ]
+  },
+  "last_verified_at": "2026-03-12T21:17:18.198Z",
+  "created_at": "2026-03-12T21:13:47.498Z",
+  "updated_at": "2026-03-12T21:17:18.198Z"
+}

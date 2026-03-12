@@ -144,6 +144,10 @@ export interface CandidateVenueRaw {
   name: string;
   website?: string;
   address?: string;
+  neighborhood?: string;
+  borough?: string;
+  lat?: number;
+  lng?: number;
   city: string;
   country: string;
   source_urls: string[];

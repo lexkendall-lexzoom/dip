@@ -97,3 +97,19 @@ Queries and editorial strategy already overlap with recovery-driven intent (e.g.
   - `city=Los Angeles`
 
 This schema enables search-bar intent matching in a future pass without changing scoring formulas or UI contracts.
+
+## City search-ready minimum data quality
+
+A launch city should be considered **search-ready** only when each canonical venue in that city passes all of the following checks:
+
+1. `primary_category` exists and is one of the canonical archetypes.
+2. `search_facets` exists (including boolean modality facets) and location facets are populated when available (`neighborhood`, `borough`).
+3. `search_tags` contains at least one normalized tag.
+4. Location fields are present: `city`, `country`, and non-zero `coordinates` (`lat`, `lng`).
+5. A score artifact exists at `data/processed/scores/{venue_id}.score.json`.
+
+Operationally, run:
+
+- `node --experimental-strip-types scripts/qa/auditSearchReadiness.ts new-york san-francisco los-angeles miami chicago`
+
+A city is search-ready when this report returns `issues: 0` for that city in `data/review/search-readiness/venues.json`.
