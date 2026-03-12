@@ -11,6 +11,7 @@
     "import:seed:venues": "node scripts/import_seed_venues.ts",
     "populate:launch": "node --experimental-strip-types scripts/agents/runLaunchCities.ts",
     "populate:city": "node --experimental-strip-types scripts/agents/runLaunchCities.ts --city"
+    "import:seed:venues": "node scripts/import_seed_venues.ts"
   },
   "dependencies": {
     "@11ty/eleventy": "^2.0.1",

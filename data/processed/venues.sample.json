@@ -23,6 +23,9 @@
       "google_rating": 4.6,
       "review_count": 8600
     },
+    "categories": ["Social Sauna", "Contrast Therapy"],
+    "features": ["sauna", "cold_plunge", "thermal_pool", "aufguss", "breathwork", "massage", "group_ritual", "community_events", "social_lounges"],
+    "ratings": { "google_rating": 4.6, "review_count": 8600 },
     "scoring_signals": {
       "ritual_programming": 9.2,
       "guided_sessions": 8.7,
@@ -69,6 +72,9 @@
       "google_rating": 4.8,
       "review_count": 1200
     },
+    "categories": ["Social Sauna", "Contrast Therapy"],
+    "features": ["sauna", "cold_plunge", "breathwork", "community_events", "group_ritual", "social_lounges"],
+    "ratings": { "google_rating": 4.8, "review_count": 1200 },
     "scoring_signals": {
       "ritual_programming": 8.9,
       "guided_sessions": 9.3,
@@ -113,6 +119,9 @@
       "google_rating": 4.7,
       "review_count": 4100
     },
+    "categories": ["Ritual Bathhouse", "Contrast Therapy"],
+    "features": ["thermal_pool", "steam_room", "massage", "guided_sessions"],
+    "ratings": { "google_rating": 4.7, "review_count": 4100 },
     "scoring_signals": {
       "ritual_programming": 8.2,
       "guided_sessions": 7.5,
