@@ -1,5 +1,5 @@
 {
-  "id": "russian-vapor-baths-chicago",
+  "id": "19c04b70-78db-5fbb-8cba-4cc65d129665",
   "slug": "russian-vapor-baths-chicago",
   "name": "Russian Vapor Baths",
   "city": "Chicago",
@@ -37,7 +37,7 @@
   ],
   "provenance": {
     "discovered_from": "directory_seed",
-    "last_canonicalized_at": "2026-03-12T21:19:00.972Z"
+    "last_canonicalized_at": "2026-03-12T22:04:02.002Z"
   },
   "source_urls": [
     "file:///workspace/dip/content/venues/chicago/russian-vapor-baths.yml",
@@ -54,7 +54,7 @@
       "No score record generated yet."
     ]
   },
-  "last_verified_at": "2026-03-12T21:19:00.972Z",
+  "last_verified_at": "2026-03-12T22:04:02.002Z",
   "created_at": "2026-03-12T21:15:30.251Z",
-  "updated_at": "2026-03-12T21:19:00.972Z"
+  "updated_at": "2026-03-12T22:04:02.002Z"
 }

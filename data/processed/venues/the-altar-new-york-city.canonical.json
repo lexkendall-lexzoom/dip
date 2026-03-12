@@ -1,5 +1,5 @@
 {
-  "id": "the-altar-new-york-city",
+  "id": "2b14586e-21ae-5e6d-bc4d-7d73f91b8327",
   "slug": "the-altar-new-york-city",
   "name": "The Altar",
   "city": "New York",
@@ -41,7 +41,7 @@
   ],
   "provenance": {
     "discovered_from": "directory_seed",
-    "last_canonicalized_at": "2026-03-12T21:17:18.201Z"
+    "last_canonicalized_at": "2026-03-12T22:04:03.272Z"
   },
   "source_urls": [
     "file:///workspace/dip/content/venues/new-york-city/the-altar.yml",
@@ -58,7 +58,7 @@
       "No score record generated yet."
     ]
   },
-  "last_verified_at": "2026-03-12T21:17:18.201Z",
+  "last_verified_at": "2026-03-12T22:04:03.272Z",
   "created_at": "2026-03-12T21:13:47.501Z",
-  "updated_at": "2026-03-12T21:17:18.201Z"
+  "updated_at": "2026-03-12T22:04:03.272Z"
 }

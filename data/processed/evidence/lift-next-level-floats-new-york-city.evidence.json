@@ -1,0 +1,47 @@
+[
+  {
+    "id": "8ef58642-284e-55c1-bd84-c24cfc2692e8",
+    "venue_id": "2c2d3d47-518a-5a06-9685-c13445e82240",
+    "source_type": "manual",
+    "source_url": "file:///workspace/dip/content/venues/new-york-city/lift-next-level-floats.yml",
+    "source_label": "Canonical venue metadata",
+    "extracted_at": "2026-03-12T22:04:07.786Z",
+    "claim_type": "factual",
+    "claim_key": "website_present",
+    "claim_value": true,
+    "confidence": 0.99,
+    "excerpt": "https://nextlevelfloats.com",
+    "agent_name": "evidence-extraction-agent-v1",
+    "human_verified": false
+  },
+  {
+    "id": "e7184d98-da53-5aa5-b72e-cfdc299d8820",
+    "venue_id": "2c2d3d47-518a-5a06-9685-c13445e82240",
+    "source_type": "manual",
+    "source_url": "file:///workspace/dip/content/venues/new-york-city/lift-next-level-floats.yml",
+    "source_label": "Canonical venue metadata",
+    "extracted_at": "2026-03-12T22:04:07.786Z",
+    "claim_type": "factual",
+    "claim_key": "source_url_count",
+    "claim_value": 2,
+    "confidence": 0.95,
+    "excerpt": "file:///workspace/dip/content/venues/new-york-city/lift-next-level-floats.yml, https://nextlevelfloats.com",
+    "agent_name": "evidence-extraction-agent-v1",
+    "human_verified": false
+  },
+  {
+    "id": "1ee45359-3b58-5281-b7bd-429a45b9fa27",
+    "venue_id": "2c2d3d47-518a-5a06-9685-c13445e82240",
+    "source_type": "manual",
+    "source_url": "file:///workspace/dip/content/venues/new-york-city/lift-next-level-floats.yml",
+    "source_label": "Canonical venue metadata",
+    "extracted_at": "2026-03-12T22:04:07.786Z",
+    "claim_type": "factual",
+    "claim_key": "venue_type",
+    "claim_value": "other",
+    "confidence": 0.98,
+    "excerpt": "other",
+    "agent_name": "evidence-extraction-agent-v1",
+    "human_verified": false
+  }
+]

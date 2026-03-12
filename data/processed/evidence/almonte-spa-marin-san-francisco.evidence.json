@@ -1,0 +1,47 @@
+[
+  {
+    "id": "d244851a-4016-5d6c-a70e-d20a5ebb3c6f",
+    "venue_id": "5f8622e6-ceb3-5d5b-9a74-7c344e3656a1",
+    "source_type": "manual",
+    "source_url": "file:///workspace/dip/content/venues/san-francisco/almonte-spa-marin.yml",
+    "source_label": "Canonical venue metadata",
+    "extracted_at": "2026-03-12T22:04:07.771Z",
+    "claim_type": "factual",
+    "claim_key": "website_present",
+    "claim_value": true,
+    "confidence": 0.99,
+    "excerpt": "https://www.almontespa.com/",
+    "agent_name": "evidence-extraction-agent-v1",
+    "human_verified": false
+  },
+  {
+    "id": "df1ce28e-803d-58ff-8a6c-51865b9a7755",
+    "venue_id": "5f8622e6-ceb3-5d5b-9a74-7c344e3656a1",
+    "source_type": "manual",
+    "source_url": "file:///workspace/dip/content/venues/san-francisco/almonte-spa-marin.yml",
+    "source_label": "Canonical venue metadata",
+    "extracted_at": "2026-03-12T22:04:07.771Z",
+    "claim_type": "factual",
+    "claim_key": "source_url_count",
+    "claim_value": 2,
+    "confidence": 0.95,
+    "excerpt": "file:///workspace/dip/content/venues/san-francisco/almonte-spa-marin.yml, https://www.almontespa.com/",
+    "agent_name": "evidence-extraction-agent-v1",
+    "human_verified": false
+  },
+  {
+    "id": "81191188-5d3e-598d-8f16-b00caac37134",
+    "venue_id": "5f8622e6-ceb3-5d5b-9a74-7c344e3656a1",
+    "source_type": "manual",
+    "source_url": "file:///workspace/dip/content/venues/san-francisco/almonte-spa-marin.yml",
+    "source_label": "Canonical venue metadata",
+    "extracted_at": "2026-03-12T22:04:07.771Z",
+    "claim_type": "factual",
+    "claim_key": "venue_type",
+    "claim_value": "other",
+    "confidence": 0.98,
+    "excerpt": "other",
+    "agent_name": "evidence-extraction-agent-v1",
+    "human_verified": false
+  }
+]

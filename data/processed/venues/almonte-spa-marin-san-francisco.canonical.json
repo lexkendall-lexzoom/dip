@@ -1,5 +1,5 @@
 {
-  "id": "almonte-spa-marin-san-francisco",
+  "id": "5f8622e6-ceb3-5d5b-9a74-7c344e3656a1",
   "slug": "almonte-spa-marin-san-francisco",
   "name": "Almonte Spa (Marin)",
   "city": "San Francisco",
@@ -36,7 +36,7 @@
   ],
   "provenance": {
     "discovered_from": "directory_seed",
-    "last_canonicalized_at": "2026-03-12T21:17:43.830Z"
+    "last_canonicalized_at": "2026-03-12T22:04:03.655Z"
   },
   "source_urls": [
     "file:///workspace/dip/content/venues/san-francisco/almonte-spa-marin.yml",
@@ -53,7 +53,7 @@
       "No score record generated yet."
     ]
   },
-  "last_verified_at": "2026-03-12T21:17:43.830Z",
+  "last_verified_at": "2026-03-12T22:04:03.655Z",
   "created_at": "2026-03-12T21:14:13.203Z",
-  "updated_at": "2026-03-12T21:17:43.830Z"
+  "updated_at": "2026-03-12T22:04:03.655Z"
 }

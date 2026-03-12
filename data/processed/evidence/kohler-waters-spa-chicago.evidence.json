@@ -1,0 +1,47 @@
+[
+  {
+    "id": "3a8d8311-e8a7-5f1e-bb63-febbab609726",
+    "venue_id": "41cad0d8-542c-5cf3-a569-0bd17de93a2c",
+    "source_type": "manual",
+    "source_url": "file:///workspace/dip/content/venues/chicago/kohler-waters-spa.yml",
+    "source_label": "Canonical venue metadata",
+    "extracted_at": "2026-03-12T22:04:07.786Z",
+    "claim_type": "factual",
+    "claim_key": "website_present",
+    "claim_value": true,
+    "confidence": 0.99,
+    "excerpt": "https://www.kohlerwatersspaburrridge.com/",
+    "agent_name": "evidence-extraction-agent-v1",
+    "human_verified": false
+  },
+  {
+    "id": "c5eac495-ffb4-58f0-9ca0-b4ba8bb5eaf3",
+    "venue_id": "41cad0d8-542c-5cf3-a569-0bd17de93a2c",
+    "source_type": "manual",
+    "source_url": "file:///workspace/dip/content/venues/chicago/kohler-waters-spa.yml",
+    "source_label": "Canonical venue metadata",
+    "extracted_at": "2026-03-12T22:04:07.786Z",
+    "claim_type": "factual",
+    "claim_key": "source_url_count",
+    "claim_value": 2,
+    "confidence": 0.95,
+    "excerpt": "file:///workspace/dip/content/venues/chicago/kohler-waters-spa.yml, https://www.kohlerwatersspaburrridge.com/",
+    "agent_name": "evidence-extraction-agent-v1",
+    "human_verified": false
+  },
+  {
+    "id": "7ed280d2-d589-5b53-ab91-4ab17c1f1880",
+    "venue_id": "41cad0d8-542c-5cf3-a569-0bd17de93a2c",
+    "source_type": "manual",
+    "source_url": "file:///workspace/dip/content/venues/chicago/kohler-waters-spa.yml",
+    "source_label": "Canonical venue metadata",
+    "extracted_at": "2026-03-12T22:04:07.786Z",
+    "claim_type": "factual",
+    "claim_key": "venue_type",
+    "claim_value": "other",
+    "confidence": 0.98,
+    "excerpt": "other",
+    "agent_name": "evidence-extraction-agent-v1",
+    "human_verified": false
+  }
+]

@@ -5,6 +5,7 @@ import {
   SOURCE_TYPES,
   VENUE_TYPES,
 } from "./models.ts";
+import { isUuid } from "./identity.ts";
 import type {
   CanonicalVenue,
   EvidenceRecord,
@@ -142,7 +143,11 @@ const validateSearchFacets = (facets: CanonicalVenue["search_facets"] | undefine
 export function validateCanonicalVenue(venue: Partial<CanonicalVenue>): ValidationResult {
   const errors: string[] = [];
 
-  if (!isNonEmptyString(venue.id)) errors.push("id is required");
+  if (!isNonEmptyString(venue.id)) {
+    errors.push("id is required");
+  } else if (!isUuid(venue.id)) {
+    errors.push("id must be a valid UUID");
+  }
   if (!isNonEmptyString(venue.slug)) errors.push("slug is required");
   if (!isNonEmptyString(venue.name)) errors.push("name is required");
   if (!isNonEmptyString(venue.city)) errors.push("city is required");
@@ -191,8 +196,16 @@ export function validateCanonicalVenue(venue: Partial<CanonicalVenue>): Validati
 export function validateEvidenceRecord(record: Partial<EvidenceRecord>): ValidationResult {
   const errors: string[] = [];
 
-  if (!isNonEmptyString(record.id)) errors.push("id is required");
-  if (!isNonEmptyString(record.venue_id)) errors.push("venue_id is required");
+  if (!isNonEmptyString(record.id)) {
+    errors.push("id is required");
+  } else if (!isUuid(record.id)) {
+    errors.push("id must be a valid UUID");
+  }
+  if (!isNonEmptyString(record.venue_id)) {
+    errors.push("venue_id is required");
+  } else if (!isUuid(record.venue_id)) {
+    errors.push("venue_id must be a valid UUID");
+  }
   if (!record.source_type || !SOURCE_TYPES.includes(record.source_type)) errors.push("source_type is invalid");
   if (!isNonEmptyString(record.source_label)) errors.push("source_label is required");
   if (!isIsoDate(record.extracted_at)) errors.push("extracted_at must be ISO date string");
@@ -214,7 +227,11 @@ export function validateEvidenceRecord(record: Partial<EvidenceRecord>): Validat
 export function validateScoreRecord(score: Partial<ScoreRecord>): ValidationResult {
   const errors: string[] = [];
 
-  if (!isNonEmptyString(score.venue_id)) errors.push("venue_id is required");
+  if (!isNonEmptyString(score.venue_id)) {
+    errors.push("venue_id is required");
+  } else if (!isUuid(score.venue_id)) {
+    errors.push("venue_id must be a valid UUID");
+  }
   if (!isNonEmptyString(score.score_version)) errors.push("score_version is required");
 
   SCORE_FIELDS.forEach((field) => {

@@ -1,5 +1,5 @@
 {
-  "id": "tomoko-spa-los-angeles",
+  "id": "e316985b-d15e-5c87-b4fa-99cc4613c829",
   "slug": "tomoko-spa-los-angeles",
   "name": "Tomoko Spa",
   "city": "Los Angeles",
@@ -36,7 +36,7 @@
   ],
   "provenance": {
     "discovered_from": "directory_seed",
-    "last_canonicalized_at": "2026-03-12T21:18:09.512Z"
+    "last_canonicalized_at": "2026-03-12T22:04:02.411Z"
   },
   "source_urls": [
     "file:///workspace/dip/content/venues/los-angeles/tomoko-spa.yml",
@@ -53,7 +53,7 @@
       "No score record generated yet."
     ]
   },
-  "last_verified_at": "2026-03-12T21:18:09.512Z",
+  "last_verified_at": "2026-03-12T22:04:02.411Z",
   "created_at": "2026-03-12T21:14:38.904Z",
-  "updated_at": "2026-03-12T21:18:09.512Z"
+  "updated_at": "2026-03-12T22:04:02.411Z"
 }

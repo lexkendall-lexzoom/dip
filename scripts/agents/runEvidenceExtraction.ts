@@ -3,6 +3,7 @@ import path from "path";
 import { fileURLToPath } from "url";
 import type { CanonicalVenue, EvidenceRecord, SourceType } from "../../lib/schema/models.ts";
 import { validateCanonicalVenue, validateEvidenceRecord } from "../../lib/schema/validation.ts";
+import { createStableEvidenceId } from "../../lib/schema/identity.ts";
 import { runReviewEvidenceAgent } from "../ingestion/reviewEvidenceAgent.ts";
 
 type SourcePayload = {
@@ -174,9 +175,20 @@ export function extractEvidence(input: ExtractionInput): EvidenceRecord[] {
 
   buildFactualClaims(input.canonical).forEach((claim) => claimRows.push({ source: factualSource, claim }));
 
-  return dedupeClaims(claimRows).map((entry, index) => {
+  return dedupeClaims(claimRows).map((entry) => {
+    const fingerprint = [
+      input.canonical.id,
+      entry.source.source_type,
+      entry.source.source_url,
+      entry.source.source_label,
+      entry.claim.claim_type,
+      entry.claim.claim_key,
+      String(entry.claim.claim_value),
+      entry.claim.excerpt.slice(0, 500),
+    ].join("::");
+
     const record: EvidenceRecord = {
-      id: `${input.canonical.id}-ev-${index + 1}`,
+      id: createStableEvidenceId(fingerprint),
       venue_id: input.canonical.id,
       source_type: entry.source.source_type,
       source_url: entry.source.source_url,

@@ -1,0 +1,47 @@
+[
+  {
+    "id": "d9532b55-4f70-5263-b0e3-364176966bdd",
+    "venue_id": "f30ec7c3-2a1d-5f9b-9d4c-61e7828942c6",
+    "source_type": "manual",
+    "source_url": "file:///workspace/dip/content/venues/san-francisco/international-orange.yml",
+    "source_label": "Canonical venue metadata",
+    "extracted_at": "2026-03-12T22:04:07.785Z",
+    "claim_type": "factual",
+    "claim_key": "website_present",
+    "claim_value": true,
+    "confidence": 0.99,
+    "excerpt": "https://internationalorange.com/",
+    "agent_name": "evidence-extraction-agent-v1",
+    "human_verified": false
+  },
+  {
+    "id": "8a7cf05b-89d0-509f-bc45-3c0b7053bb59",
+    "venue_id": "f30ec7c3-2a1d-5f9b-9d4c-61e7828942c6",
+    "source_type": "manual",
+    "source_url": "file:///workspace/dip/content/venues/san-francisco/international-orange.yml",
+    "source_label": "Canonical venue metadata",
+    "extracted_at": "2026-03-12T22:04:07.785Z",
+    "claim_type": "factual",
+    "claim_key": "source_url_count",
+    "claim_value": 2,
+    "confidence": 0.95,
+    "excerpt": "file:///workspace/dip/content/venues/san-francisco/international-orange.yml, https://internationalorange.com/",
+    "agent_name": "evidence-extraction-agent-v1",
+    "human_verified": false
+  },
+  {
+    "id": "2f554e27-13f3-5e77-8071-b50443ab6579",
+    "venue_id": "f30ec7c3-2a1d-5f9b-9d4c-61e7828942c6",
+    "source_type": "manual",
+    "source_url": "file:///workspace/dip/content/venues/san-francisco/international-orange.yml",
+    "source_label": "Canonical venue metadata",
+    "extracted_at": "2026-03-12T22:04:07.785Z",
+    "claim_type": "factual",
+    "claim_key": "venue_type",
+    "claim_value": "other",
+    "confidence": 0.98,
+    "excerpt": "other",
+    "agent_name": "evidence-extraction-agent-v1",
+    "human_verified": false
+  }
+]

@@ -1,0 +1,47 @@
+[
+  {
+    "id": "ad011eda-3ca5-5b2e-85cf-140c7d6cac0e",
+    "venue_id": "03decee4-2169-5dcc-b0ab-0df2eb0a9928",
+    "source_type": "manual",
+    "source_url": "file:///workspace/dip/content/venues/miami/the-spa-at-the-standard.yml",
+    "source_label": "Canonical venue metadata",
+    "extracted_at": "2026-03-12T22:04:07.798Z",
+    "claim_type": "factual",
+    "claim_key": "website_present",
+    "claim_value": true,
+    "confidence": 0.99,
+    "excerpt": "https://standardhotels.com",
+    "agent_name": "evidence-extraction-agent-v1",
+    "human_verified": false
+  },
+  {
+    "id": "0f4640b0-9803-50e3-a17c-8aa01fa6fddf",
+    "venue_id": "03decee4-2169-5dcc-b0ab-0df2eb0a9928",
+    "source_type": "manual",
+    "source_url": "file:///workspace/dip/content/venues/miami/the-spa-at-the-standard.yml",
+    "source_label": "Canonical venue metadata",
+    "extracted_at": "2026-03-12T22:04:07.798Z",
+    "claim_type": "factual",
+    "claim_key": "source_url_count",
+    "claim_value": 2,
+    "confidence": 0.95,
+    "excerpt": "file:///workspace/dip/content/venues/miami/the-spa-at-the-standard.yml, https://standardhotels.com",
+    "agent_name": "evidence-extraction-agent-v1",
+    "human_verified": false
+  },
+  {
+    "id": "caf97f3f-5535-5b00-a37a-99f69b20e0d7",
+    "venue_id": "03decee4-2169-5dcc-b0ab-0df2eb0a9928",
+    "source_type": "manual",
+    "source_url": "file:///workspace/dip/content/venues/miami/the-spa-at-the-standard.yml",
+    "source_label": "Canonical venue metadata",
+    "extracted_at": "2026-03-12T22:04:07.798Z",
+    "claim_type": "factual",
+    "claim_key": "venue_type",
+    "claim_value": "other",
+    "confidence": 0.98,
+    "excerpt": "other",
+    "agent_name": "evidence-extraction-agent-v1",
+    "human_verified": false
+  }
+]

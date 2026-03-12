@@ -1,0 +1,47 @@
+[
+  {
+    "id": "e277046f-74c4-5166-a9a6-cd060b92d364",
+    "venue_id": "e316985b-d15e-5c87-b4fa-99cc4613c829",
+    "source_type": "manual",
+    "source_url": "file:///workspace/dip/content/venues/los-angeles/tomoko-spa.yml",
+    "source_label": "Canonical venue metadata",
+    "extracted_at": "2026-03-12T22:04:07.799Z",
+    "claim_type": "factual",
+    "claim_key": "website_present",
+    "claim_value": true,
+    "confidence": 0.99,
+    "excerpt": "https://tomokojapanesespa.com/",
+    "agent_name": "evidence-extraction-agent-v1",
+    "human_verified": false
+  },
+  {
+    "id": "f30c0cea-c764-5337-b07a-ecb7f79ada3b",
+    "venue_id": "e316985b-d15e-5c87-b4fa-99cc4613c829",
+    "source_type": "manual",
+    "source_url": "file:///workspace/dip/content/venues/los-angeles/tomoko-spa.yml",
+    "source_label": "Canonical venue metadata",
+    "extracted_at": "2026-03-12T22:04:07.799Z",
+    "claim_type": "factual",
+    "claim_key": "source_url_count",
+    "claim_value": 2,
+    "confidence": 0.95,
+    "excerpt": "file:///workspace/dip/content/venues/los-angeles/tomoko-spa.yml, https://tomokojapanesespa.com/",
+    "agent_name": "evidence-extraction-agent-v1",
+    "human_verified": false
+  },
+  {
+    "id": "71d9913a-f7f4-5a39-8447-970a28f66904",
+    "venue_id": "e316985b-d15e-5c87-b4fa-99cc4613c829",
+    "source_type": "manual",
+    "source_url": "file:///workspace/dip/content/venues/los-angeles/tomoko-spa.yml",
+    "source_label": "Canonical venue metadata",
+    "extracted_at": "2026-03-12T22:04:07.799Z",
+    "claim_type": "factual",
+    "claim_key": "venue_type",
+    "claim_value": "other",
+    "confidence": 0.98,
+    "excerpt": "other",
+    "agent_name": "evidence-extraction-agent-v1",
+    "human_verified": false
+  }
+]

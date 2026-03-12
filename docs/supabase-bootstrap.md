@@ -12,6 +12,15 @@ This repo includes:
 Codex and some sandboxed CI environments may not be able to reach Supabase due to proxy/egress rules.
 Do **not** assume remote application succeeded unless the command returns a successful Supabase response.
 
+## Venue identity contract (important)
+
+DipDays now uses a split venue identity model end-to-end:
+
+- `venues.id` is a canonical UUID (internal + database foreign-key identity).
+- `venues.slug` is the stable human-readable identifier (filenames, URLs, search payload references).
+
+Do not sync slug-like IDs into UUID key columns. If canonical/evidence/score artifacts were generated before this contract, regenerate processed artifacts before sync.
+
 ## Required environment variables
 
 - `SUPABASE_SERVICE_KEY` (required for all bootstrap/sync scripts)

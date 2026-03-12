@@ -1,5 +1,5 @@
 {
-  "id": "schwet-new-york-city",
+  "id": "d4581130-0f25-50de-b848-c4e14df2c67a",
   "slug": "schwet-new-york-city",
   "name": "Schwet",
   "city": "New York",
@@ -43,7 +43,7 @@
   ],
   "provenance": {
     "discovered_from": "directory_seed",
-    "last_canonicalized_at": "2026-03-12T21:17:18.201Z"
+    "last_canonicalized_at": "2026-03-12T22:04:03.271Z"
   },
   "source_urls": [
     "file:///workspace/dip/content/venues/new-york-city/schwet.yml",
@@ -60,7 +60,7 @@
       "No score record generated yet."
     ]
   },
-  "last_verified_at": "2026-03-12T21:17:18.201Z",
+  "last_verified_at": "2026-03-12T22:04:03.271Z",
   "created_at": "2026-03-12T21:13:47.501Z",
-  "updated_at": "2026-03-12T21:17:18.201Z"
+  "updated_at": "2026-03-12T22:04:03.271Z"
 }

@@ -1,0 +1,47 @@
+[
+  {
+    "id": "f8fc68d7-f22d-5c80-bce6-a72f7c1f89ab",
+    "venue_id": "d87db7e3-86b6-5339-8261-604a44610212",
+    "source_type": "manual",
+    "source_url": "file:///workspace/dip/content/venues/miami/higherdose-at-1-hotel.yml",
+    "source_label": "Canonical venue metadata",
+    "extracted_at": "2026-03-12T22:04:07.784Z",
+    "claim_type": "factual",
+    "claim_key": "website_present",
+    "claim_value": true,
+    "confidence": 0.99,
+    "excerpt": "https://www.1hotels.com/south-beach",
+    "agent_name": "evidence-extraction-agent-v1",
+    "human_verified": false
+  },
+  {
+    "id": "df68aaf0-0d11-533a-89f1-d92d8e647b3f",
+    "venue_id": "d87db7e3-86b6-5339-8261-604a44610212",
+    "source_type": "manual",
+    "source_url": "file:///workspace/dip/content/venues/miami/higherdose-at-1-hotel.yml",
+    "source_label": "Canonical venue metadata",
+    "extracted_at": "2026-03-12T22:04:07.784Z",
+    "claim_type": "factual",
+    "claim_key": "source_url_count",
+    "claim_value": 2,
+    "confidence": 0.95,
+    "excerpt": "file:///workspace/dip/content/venues/miami/higherdose-at-1-hotel.yml, https://www.1hotels.com/south-beach",
+    "agent_name": "evidence-extraction-agent-v1",
+    "human_verified": false
+  },
+  {
+    "id": "a1917ea3-0d4a-5da3-8c47-bd8062b89531",
+    "venue_id": "d87db7e3-86b6-5339-8261-604a44610212",
+    "source_type": "manual",
+    "source_url": "file:///workspace/dip/content/venues/miami/higherdose-at-1-hotel.yml",
+    "source_label": "Canonical venue metadata",
+    "extracted_at": "2026-03-12T22:04:07.784Z",
+    "claim_type": "factual",
+    "claim_key": "venue_type",
+    "claim_value": "other",
+    "confidence": 0.98,
+    "excerpt": "other",
+    "agent_name": "evidence-extraction-agent-v1",
+    "human_verified": false
+  }
+]

@@ -1,5 +1,5 @@
 {
-  "id": "russian-and-turkish-baths-new-york",
+  "id": "06466999-543a-5f36-b0bf-6cff66f99c9b",
   "slug": "russian-and-turkish-baths-new-york",
   "name": "Russian & Turkish Baths",
   "city": "New York",
@@ -53,7 +53,7 @@
   ],
   "provenance": {
     "discovered_from": "directory_seed",
-    "last_canonicalized_at": "2026-03-12T21:17:18.200Z"
+    "last_canonicalized_at": "2026-03-12T22:04:03.268Z"
   },
   "source_urls": [
     "https://www.russianturkishbaths.com",
@@ -70,7 +70,7 @@
       "No score record generated yet."
     ]
   },
-  "last_verified_at": "2026-03-12T21:17:18.200Z",
+  "last_verified_at": "2026-03-12T22:04:03.268Z",
   "created_at": "2026-03-12T00:00:00.000Z",
-  "updated_at": "2026-03-12T21:17:18.200Z"
+  "updated_at": "2026-03-12T22:04:03.268Z"
 }

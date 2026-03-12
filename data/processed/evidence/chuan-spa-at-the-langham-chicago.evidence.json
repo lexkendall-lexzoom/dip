@@ -1,0 +1,47 @@
+[
+  {
+    "id": "36f92fa6-67ef-598a-a8ed-6f27610a800f",
+    "venue_id": "f717fb77-3d2f-5118-9b7e-d15fed63ce8a",
+    "source_type": "manual",
+    "source_url": "file:///workspace/dip/content/venues/chicago/chuan-spa-at-the-langham.yml",
+    "source_label": "Canonical venue metadata",
+    "extracted_at": "2026-03-12T22:04:07.781Z",
+    "claim_type": "factual",
+    "claim_key": "website_present",
+    "claim_value": true,
+    "confidence": 0.99,
+    "excerpt": "https://www.langhamhotels.com/en/the-langham/chicago/wellness/chuan-spa/",
+    "agent_name": "evidence-extraction-agent-v1",
+    "human_verified": false
+  },
+  {
+    "id": "981be52a-e46b-59dd-946a-5829629a781b",
+    "venue_id": "f717fb77-3d2f-5118-9b7e-d15fed63ce8a",
+    "source_type": "manual",
+    "source_url": "file:///workspace/dip/content/venues/chicago/chuan-spa-at-the-langham.yml",
+    "source_label": "Canonical venue metadata",
+    "extracted_at": "2026-03-12T22:04:07.781Z",
+    "claim_type": "factual",
+    "claim_key": "source_url_count",
+    "claim_value": 2,
+    "confidence": 0.95,
+    "excerpt": "file:///workspace/dip/content/venues/chicago/chuan-spa-at-the-langham.yml, https://www.langhamhotels.com/en/the-langham/chicago/wellness/chuan-spa/",
+    "agent_name": "evidence-extraction-agent-v1",
+    "human_verified": false
+  },
+  {
+    "id": "73806f1f-7e44-5fbc-8dd9-e148cabd65c8",
+    "venue_id": "f717fb77-3d2f-5118-9b7e-d15fed63ce8a",
+    "source_type": "manual",
+    "source_url": "file:///workspace/dip/content/venues/chicago/chuan-spa-at-the-langham.yml",
+    "source_label": "Canonical venue metadata",
+    "extracted_at": "2026-03-12T22:04:07.781Z",
+    "claim_type": "factual",
+    "claim_key": "venue_type",
+    "claim_value": "other",
+    "confidence": 0.98,
+    "excerpt": "other",
+    "agent_name": "evidence-extraction-agent-v1",
+    "human_verified": false
+  }
+]

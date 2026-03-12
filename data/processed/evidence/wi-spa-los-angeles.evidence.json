@@ -1,0 +1,47 @@
+[
+  {
+    "id": "395f4c24-06e3-56af-8fa8-e315d826fc3a",
+    "venue_id": "b9e64672-00df-5e17-9663-5fc3c123da50",
+    "source_type": "manual",
+    "source_url": "file:///workspace/dip/content/venues/los-angeles/wi-spa.yml",
+    "source_label": "Canonical venue metadata",
+    "extracted_at": "2026-03-12T22:04:07.799Z",
+    "claim_type": "factual",
+    "claim_key": "website_present",
+    "claim_value": true,
+    "confidence": 0.99,
+    "excerpt": "https://wispausa.com/",
+    "agent_name": "evidence-extraction-agent-v1",
+    "human_verified": false
+  },
+  {
+    "id": "4599a20b-d77f-5d12-bef4-5f2c6d087d6b",
+    "venue_id": "b9e64672-00df-5e17-9663-5fc3c123da50",
+    "source_type": "manual",
+    "source_url": "file:///workspace/dip/content/venues/los-angeles/wi-spa.yml",
+    "source_label": "Canonical venue metadata",
+    "extracted_at": "2026-03-12T22:04:07.799Z",
+    "claim_type": "factual",
+    "claim_key": "source_url_count",
+    "claim_value": 2,
+    "confidence": 0.95,
+    "excerpt": "file:///workspace/dip/content/venues/los-angeles/wi-spa.yml, https://wispausa.com/",
+    "agent_name": "evidence-extraction-agent-v1",
+    "human_verified": false
+  },
+  {
+    "id": "e6e05c5f-dfd3-5aff-96b2-820be36e2f71",
+    "venue_id": "b9e64672-00df-5e17-9663-5fc3c123da50",
+    "source_type": "manual",
+    "source_url": "file:///workspace/dip/content/venues/los-angeles/wi-spa.yml",
+    "source_label": "Canonical venue metadata",
+    "extracted_at": "2026-03-12T22:04:07.799Z",
+    "claim_type": "factual",
+    "claim_key": "venue_type",
+    "claim_value": "other",
+    "confidence": 0.98,
+    "excerpt": "other",
+    "agent_name": "evidence-extraction-agent-v1",
+    "human_verified": false
+  }
+]

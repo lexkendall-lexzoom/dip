@@ -7,7 +7,7 @@ This document defines the stable contracts for DipDays ranking infrastructure.
 `CanonicalVenue` is the durable identity record for a venue.
 
 It is intentionally split into:
-- **Identity**: `id`, `slug`, `name`
+- **Identity**: `id` (UUID), `slug` (stable human-readable key), `name`
 - **Location**: `city`, `region?`, `country`, `coordinates`
 - **Taxonomy**: `venue_type`, `categories`, `features`
 - **Provenance references**: `source_urls`, optional `website`
@@ -26,6 +26,7 @@ Final rankability is still determined by score computation.
 `EvidenceRecord` is the atomic claim-support unit for scoring.
 
 Required core fields preserve provenance and traceability:
+- Evidence IDs are UUIDs; `venue_id` must reference `CanonicalVenue.id` (UUID)
 - source information (`source_type`, `source_url`, `source_label`)
 - claim information (`claim_type`, `claim_key`, `claim_value`)
 - confidence (`confidence` in `[0,1]`)

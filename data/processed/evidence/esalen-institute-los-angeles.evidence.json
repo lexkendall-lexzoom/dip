@@ -1,0 +1,47 @@
+[
+  {
+    "id": "486433aa-bfc0-5351-8420-51137822af8e",
+    "venue_id": "5af01f81-0c35-5282-bd1a-19739600c472",
+    "source_type": "manual",
+    "source_url": "file:///workspace/dip/content/venues/los-angeles/esalen-institute.yml",
+    "source_label": "Canonical venue metadata",
+    "extracted_at": "2026-03-12T22:04:07.782Z",
+    "claim_type": "factual",
+    "claim_key": "website_present",
+    "claim_value": true,
+    "confidence": 0.99,
+    "excerpt": "https://www.esalen.org",
+    "agent_name": "evidence-extraction-agent-v1",
+    "human_verified": false
+  },
+  {
+    "id": "81b4bc5e-1303-5d1f-aea4-253b6a06f691",
+    "venue_id": "5af01f81-0c35-5282-bd1a-19739600c472",
+    "source_type": "manual",
+    "source_url": "file:///workspace/dip/content/venues/los-angeles/esalen-institute.yml",
+    "source_label": "Canonical venue metadata",
+    "extracted_at": "2026-03-12T22:04:07.782Z",
+    "claim_type": "factual",
+    "claim_key": "source_url_count",
+    "claim_value": 2,
+    "confidence": 0.95,
+    "excerpt": "file:///workspace/dip/content/venues/los-angeles/esalen-institute.yml, https://www.esalen.org",
+    "agent_name": "evidence-extraction-agent-v1",
+    "human_verified": false
+  },
+  {
+    "id": "6576b8e2-359e-5e6d-85ae-bbfd50f29715",
+    "venue_id": "5af01f81-0c35-5282-bd1a-19739600c472",
+    "source_type": "manual",
+    "source_url": "file:///workspace/dip/content/venues/los-angeles/esalen-institute.yml",
+    "source_label": "Canonical venue metadata",
+    "extracted_at": "2026-03-12T22:04:07.782Z",
+    "claim_type": "factual",
+    "claim_key": "venue_type",
+    "claim_value": "other",
+    "confidence": 0.98,
+    "excerpt": "other",
+    "agent_name": "evidence-extraction-agent-v1",
+    "human_verified": false
+  }
+]

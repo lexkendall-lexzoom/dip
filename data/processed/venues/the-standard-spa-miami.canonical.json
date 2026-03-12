@@ -1,5 +1,5 @@
 {
-  "id": "the-standard-spa-miami",
+  "id": "9b778076-01d7-5b96-b45d-8de2d2e5d794",
   "slug": "the-standard-spa-miami",
   "name": "The Standard Spa",
   "city": "Miami",
@@ -36,7 +36,7 @@
   ],
   "provenance": {
     "discovered_from": "directory_seed",
-    "last_canonicalized_at": "2026-03-12T21:18:35.238Z"
+    "last_canonicalized_at": "2026-03-12T22:04:02.851Z"
   },
   "source_urls": [
     "file:///workspace/dip/content/venues/miami/the-standard-spa.yml",
@@ -53,7 +53,7 @@
       "No score record generated yet."
     ]
   },
-  "last_verified_at": "2026-03-12T21:18:35.238Z",
+  "last_verified_at": "2026-03-12T22:04:02.851Z",
   "created_at": "2026-03-12T21:15:04.610Z",
-  "updated_at": "2026-03-12T21:18:35.238Z"
+  "updated_at": "2026-03-12T22:04:02.851Z"
 }
