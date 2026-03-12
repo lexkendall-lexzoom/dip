@@ -8,6 +8,9 @@
     "sync:supabase": "tsx scripts/supabase/syncProcessedData.ts",
     "sync:supabase:ci": "NODE_ENV=production npm run sync:supabase",
     "verify:supabase-schema": "tsx scripts/supabase/verifyCoreSchema.ts",
+    "import:seed:venues": "node scripts/import_seed_venues.ts",
+    "populate:launch": "node --experimental-strip-types scripts/agents/runLaunchCities.ts",
+    "populate:city": "node --experimental-strip-types scripts/agents/runLaunchCities.ts --city"
     "import:seed:venues": "node scripts/import_seed_venues.ts"
   },
   "dependencies": {
