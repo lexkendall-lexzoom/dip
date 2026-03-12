@@ -2,8 +2,6 @@ import fs from "fs";
 import path from "path";
 import type { EvidenceRecord } from "../../lib/schema/models.ts";
 import { validateEvidenceRecord } from "../../lib/schema/validation.ts";
-import { EvidenceRecord } from "../../lib/schema/models";
-import { validateEvidenceRecord } from "../../lib/schema/validation";
 
 const dedupeKey = (record: EvidenceRecord): string =>
   [record.venue_id, record.claim_type, record.claim_key, String(record.claim_value), record.source_url ?? ""].join("::");

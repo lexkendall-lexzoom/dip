@@ -55,6 +55,8 @@ const mergeClearDuplicates = (candidates: CandidateVenueRaw[]): CandidateVenueRa
       source_urls: Array.from(new Set([...current.source_urls, ...candidate.source_urls])),
       snippets: [...current.snippets, ...candidate.snippets],
       candidate_categories: Array.from(new Set([...current.candidate_categories, ...candidate.candidate_categories])),
+      enrichment_sources: Array.from(new Set([...(current.enrichment_sources ?? []), ...(candidate.enrichment_sources ?? [])])),
+      review_sources: Array.from(new Set([...(current.review_sources ?? []), ...(candidate.review_sources ?? [])])),
       source_provenance: [...current.source_provenance, ...candidate.source_provenance],
       website: current.website ?? candidate.website,
       address: current.address ?? candidate.address,

@@ -10,6 +10,43 @@ export type EditorialStatus = typeof EDITORIAL_STATUSES[number];
 export const VENUE_TYPES = ["bathhouse", "sauna", "contrast_therapy", "spa", "wellness_studio", "other"] as const;
 export type VenueType = typeof VENUE_TYPES[number];
 
+export const PRIMARY_CATEGORIES = [
+  "Luxury Bathhouse",
+  "Social Sauna",
+  "Traditional Banya",
+  "Social Wellness Club",
+  "Neighborhood Spa",
+  "Regional Spa Resort",
+] as const;
+export type PrimaryCategory = typeof PRIMARY_CATEGORIES[number];
+
+export interface SearchFacets {
+  neighborhood?: string;
+  borough?: string;
+  has_sauna: boolean;
+  has_cold_plunge: boolean;
+  has_steam_room: boolean;
+  has_hot_pool: boolean;
+  has_thermal_circuit: boolean;
+  has_guided_rituals: boolean;
+  has_breathwork: boolean;
+  has_treatments: boolean;
+  has_massages: boolean;
+  has_bodywork: boolean;
+  has_recovery_clinic: boolean;
+  has_iv_therapy: boolean;
+  has_hyperbaric: boolean;
+  has_red_light: boolean;
+  has_cryotherapy: boolean;
+}
+
+export interface CanonicalProvenance {
+  discovered_from: string;
+  enriched_from?: string[];
+  review_sources?: string[];
+  last_canonicalized_at: string;
+}
+
 export type RankingEligibilityState = {
   is_eligible: boolean;
   evaluated_at: string;
@@ -18,12 +55,9 @@ export type RankingEligibilityState = {
 };
 
 export interface CanonicalVenue {
-  // identity
   id: string;
   slug: string;
   name: string;
-
-  // location
   city: string;
   region?: string;
   country: string;
@@ -31,17 +65,15 @@ export interface CanonicalVenue {
     lat: number;
     lng: number;
   };
-
-  // taxonomy
   website?: string;
   categories: string[];
   features: string[];
   venue_type: VenueType;
-
-  // provenance
+  primary_category: PrimaryCategory;
+  search_facets: SearchFacets;
+  search_tags: string[];
+  provenance: CanonicalProvenance;
   source_urls: string[];
-
-  // state
   editorial_status: EditorialStatus;
   ranking_eligibility: RankingEligibilityState;
   last_verified_at?: string;
@@ -120,6 +152,8 @@ export interface CandidateVenueRaw {
     text: string;
   }>;
   candidate_categories: string[];
+  enrichment_sources?: string[];
+  review_sources?: string[];
   source_provenance: Array<{
     source_type: SourceType | "directory_seed";
     source_url: string;

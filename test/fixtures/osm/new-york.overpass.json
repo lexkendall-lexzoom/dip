@@ -1,0 +1,28 @@
+{
+  "elements": [
+    {
+      "type": "node",
+      "id": 101,
+      "lat": 40.7201,
+      "lon": -73.9982,
+      "tags": {
+        "name": "Fixture Sauna House",
+        "leisure": "sauna",
+        "addr:city": "New York",
+        "addr:country": "USA",
+        "website": "https://fixturesauna.example"
+      }
+    },
+    {
+      "type": "way",
+      "id": 202,
+      "center": { "lat": 40.7261, "lon": -74.0020 },
+      "tags": {
+        "name": "Fixture Public Bath",
+        "amenity": "public_bath",
+        "addr:city": "New York",
+        "addr:country": "USA"
+      }
+    }
+  ]
+}

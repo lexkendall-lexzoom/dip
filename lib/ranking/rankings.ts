@@ -1,9 +1,12 @@
 import type { CanonicalVenue, ScoreRecord } from "../schema/models.ts";
-import { CanonicalVenue, ScoreRecord } from "../schema/models";
 
 export type RankingFilter = {
   category?: string;
   feature?: string;
+  primary_category?: CanonicalVenue["primary_category"];
+  search_tag?: string;
+  facet?: keyof CanonicalVenue["search_facets"];
+  facet_value?: boolean;
   city?: string;
   country?: string;
   ranking_eligible?: boolean;
@@ -19,6 +22,16 @@ const applyFilters = (rows: RankedVenue[], filters: RankingFilter = {}): RankedV
   rows.filter(({ venue, score }) => {
     if (filters.category && !venue.categories.includes(filters.category)) return false;
     if (filters.feature && !venue.features.includes(filters.feature)) return false;
+    if (filters.primary_category && venue.primary_category !== filters.primary_category) return false;
+    if (filters.search_tag && !venue.search_tags.includes(filters.search_tag)) return false;
+
+    if (filters.facet) {
+      const expected = filters.facet_value ?? true;
+      const facetValue = venue.search_facets[filters.facet];
+      if (typeof facetValue === "boolean" && facetValue !== expected) return false;
+      if (typeof facetValue !== "boolean" && expected) return false;
+    }
+
     if (filters.city && venue.city !== filters.city) return false;
     if (filters.country && venue.country !== filters.country) return false;
     if (filters.ranking_eligible !== undefined && score.ranking_eligible !== filters.ranking_eligible) return false;
@@ -69,9 +82,9 @@ export function getTopBathhousesWorldwide(venues: CanonicalVenue[], scores: Scor
 }
 
 export function getBestSocialSaunas(venues: CanonicalVenue[], scores: ScoreRecord[], limit = 20): RankedVenue[] {
-  return rankVenues(venues, scores, { category: "Social Sauna" }, limit);
+  return rankVenues(venues, scores, { primary_category: "Social Sauna" }, limit);
 }
 
 export function getBestContrastTherapyVenues(venues: CanonicalVenue[], scores: ScoreRecord[], limit = 20): RankedVenue[] {
-  return rankVenues(venues, scores, { category: "Contrast Therapy" }, limit);
+  return rankVenues(venues, scores, { facet: "has_cold_plunge", facet_value: true }, limit);
 }

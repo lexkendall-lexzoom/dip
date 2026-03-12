@@ -1,27 +1,32 @@
 # Supabase Bootstrap for DipDays
 
-This repo includes a deterministic SQL migration for the current DipDays operational schema:
+This repo includes:
 
-- `db/migrations/001_init_dipdays.sql`
-
-And a bootstrap runner:
-
-- `scripts/supabase/createCoreTables.mjs`
+- schema migration: `db/migrations/001_init_dipdays.sql`
+- bootstrap runner: `scripts/supabase/createCoreTables.mjs`
+- schema verifier: `scripts/supabase/verifyCoreSchema.ts`
+- processed artifact sync: `scripts/supabase/syncProcessedData.ts`
 
 ## Important sandbox note
 
-Codex and some CI/sandbox environments may be unable to reach Supabase over the network (proxy/egress restrictions).
-Do **not** assume remote schema application succeeded unless the migration command returns a successful Supabase response.
+Codex and some sandboxed CI environments may not be able to reach Supabase due to proxy/egress rules.
+Do **not** assume remote application succeeded unless the command returns a successful Supabase response.
 
-## Environment variables
+## Required environment variables
 
-Required:
+- `SUPABASE_SERVICE_KEY` (required for all bootstrap/sync scripts)
+- `DATABASE_URL` (required when `SUPABASE_BOOTSTRAP_MODE=database-url`)
+- `SUPABASE_URL` (required for schema verification and sync)
 
-- `SUPABASE_SERVICE_KEY`
-- `DATABASE_URL` (when running with `SUPABASE_BOOTSTRAP_MODE=database-url`)
-- `SUPABASE_URL` (when running with `SUPABASE_BOOTSTRAP_MODE=sql-over-http`)
+## Run order (required)
 
-## Local commands
+Run schema bootstrap and schema verification **before** running city pipeline DB sync:
+
+1. bootstrap core tables
+2. verify core schema
+3. run pipeline / sync
+
+## Local migration commands
 
 Preferred (direct Postgres):
 
@@ -41,11 +46,50 @@ export SUPABASE_BOOTSTRAP_MODE="sql-over-http"
 node scripts/supabase/createCoreTables.mjs
 ```
 
-## GitHub Actions example
+Verify core schema exists:
 
-Create `.github/workflows/supabase-migrate.yml` (included in this repo) and set these secrets:
+```bash
+export SUPABASE_URL="https://<project-ref>.supabase.co"
+export SUPABASE_SERVICE_KEY="..."
+npm run verify:supabase-schema
+```
+
+Sync processed city artifacts (stage 7 equivalent):
+
+```bash
+export SUPABASE_URL="https://<project-ref>.supabase.co"
+export SUPABASE_SERVICE_KEY="..."
+npm run sync:supabase -- new-york
+```
+
+## Smoke test
+
+With env vars set, this should complete successfully and upsert rows:
+
+```bash
+npm run sync:supabase -- new-york
+```
+
+## GitHub Actions commands
+
+Use repository secrets:
 
 - `SUPABASE_SERVICE_KEY`
 - `DATABASE_URL`
+- `SUPABASE_URL`
+- (future) agent provider keys such as OSM/Google keys when those integrations are added
 
-Then run the workflow manually or on your preferred trigger.
+CI should fail early if schema is missing by running schema verification before sync.
+
+
+## Seed venue import
+
+After schema bootstrap, you can import seed venues:
+
+```bash
+node scripts/import_seed_venues.ts data/venues/seed_nyc_hudson.json --dry-run
+node scripts/import_seed_venues.ts data/venues/seed_hudson_valley_additions.json --dry-run
+node scripts/import_seed_venues.ts data/venues/seed_hudson_valley_additions.json
+```
+
+The importer derives `primary_category`, `search_facets`, and `search_tags` using canonicalization helpers and skips duplicates by `name + city`.

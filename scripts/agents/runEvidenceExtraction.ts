@@ -3,6 +3,7 @@ import path from "path";
 import { fileURLToPath } from "url";
 import type { CanonicalVenue, EvidenceRecord, SourceType } from "../../lib/schema/models.ts";
 import { validateCanonicalVenue, validateEvidenceRecord } from "../../lib/schema/validation.ts";
+import { runReviewEvidenceAgent } from "../ingestion/reviewEvidenceAgent.ts";
 
 type SourcePayload = {
   source_type: SourceType;
@@ -216,20 +217,41 @@ const sourcePayloadPathForSlug = (sourceDir: string, slug: string): string => pa
 const isMain = process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url);
 
 if (isMain) {
-  const [canonicalInput = "data/processed/venues", sourceInput = "data/raw/sources", outputDir = "data/processed/evidence"] = process.argv.slice(2);
+  (async () => {
+    const args = process.argv.slice(2);
+    const positional = args.filter((arg) => !arg.startsWith("--"));
+    const [canonicalInput = "data/processed/venues", sourceInput = "data/raw/sources", outputDir = "data/processed/evidence"] = positional;
+    const reviewFixture = args.includes("--review-fixture") ? args[args.indexOf("--review-fixture") + 1] : undefined;
+    const withReviewEvidence = args.includes("--with-review-evidence");
 
-  const canonicalFiles = listCanonicalFiles(canonicalInput);
-  fs.mkdirSync(path.resolve(outputDir), { recursive: true });
+    const canonicalFiles = listCanonicalFiles(canonicalInput);
+    fs.mkdirSync(path.resolve(outputDir), { recursive: true });
 
-  canonicalFiles.forEach((canonicalFile) => {
-    const canonical = readJson<CanonicalVenue>(canonicalFile);
-    const sourceFile = sourcePayloadPathForSlug(sourceInput, canonical.slug);
-    const sources = fs.existsSync(sourceFile) ? asArray(readJson<SourcePayload | SourcePayload[]>(sourceFile)) : [];
+    for (const canonicalFile of canonicalFiles) {
+      const canonical = readJson<CanonicalVenue>(canonicalFile);
+      const sourceFile = sourcePayloadPathForSlug(sourceInput, canonical.slug);
+      const sources = fs.existsSync(sourceFile) ? asArray(readJson<SourcePayload | SourcePayload[]>(sourceFile)) : [];
 
-    const evidence = extractEvidence({ canonical, sources });
-    const outputPath = path.resolve(outputDir, `${canonical.slug}.evidence.json`);
-    fs.writeFileSync(outputPath, `${JSON.stringify(evidence, null, 2)}\n`, "utf8");
+      const evidence = extractEvidence({ canonical, sources });
+      const outputPath = path.resolve(outputDir, `${canonical.slug}.evidence.json`);
+      fs.writeFileSync(outputPath, `${JSON.stringify(evidence, null, 2)}\n`, "utf8");
 
-    process.stdout.write(`Wrote ${outputPath} (${evidence.length} records)\n`);
+      process.stdout.write(`Wrote ${outputPath} (${evidence.length} records)\n`);
+    }
+
+    if (withReviewEvidence) {
+      for (const canonicalFile of canonicalFiles) {
+        const canonical = readJson<CanonicalVenue>(canonicalFile);
+        await runReviewEvidenceAgent({
+          venueSlug: canonical.slug,
+          fixturePath: reviewFixture,
+          outputDir: path.resolve(outputDir),
+        });
+      }
+    }
+  })().catch((error) => {
+    const message = error instanceof Error ? error.message : String(error);
+    process.stderr.write(`${message}\n`);
+    process.exit(1);
   });
 }

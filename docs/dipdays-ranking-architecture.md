@@ -5,6 +5,33 @@ DipDays now separates discovery, evidence, scoring, and publishing so the system
 
 ## Data flow
 
+## Raw → Canonical → Derived persistence flow
+
+DipDays persists data in three explicit layers:
+
+1. **Raw source snapshots** (`data/raw/*`)
+   - Immutable provider snapshots from discovery/enrichment/review collection.
+2. **Canonical venue records** (`data/processed/venues/*.canonical.json`)
+   - Normalized venue truth with provenance (`discovered_from`, `enriched_from`, `review_sources`, `last_canonicalized_at`).
+3. **Derived artifacts** (`data/processed/evidence`, `data/processed/scores`, `data/processed/pipeline`, rankings/QA)
+   - Recomputable outputs used for ranking, QA, and reporting.
+
+This keeps source-of-truth boundaries clear while allowing evidence and scoring artifacts to be regenerated safely.
+
+## OSM-first discovery (new wiring)
+
+City discovery now runs as:
+
+1. `scripts/ingestion/osmDiscovery.ts` (required)
+   - Uses city `bbox`/`bboxes` from `configs/cities/{city}.json` by default.
+   - Supports `--tile`, `--bbox`, `--resume`, and `--dry`.
+   - Writes raw Overpass payloads to `data/raw/osm/{city}/{tile}.json` and flattened deduped candidates to `data/processed/discovery/{city}.json`.
+2. `scripts/ingestion/googleEnrich.ts` (optional)
+   - Enriches missing website/phone/address via Google Places when `GOOGLE_PLACES_API_KEY` is present.
+   - Writes `data/processed/discovery_enriched/{city}.json` and cache file.
+
+Canonicalization consumes the enriched candidate set when present.
+
 1. **Discovery Agent** (`scripts/ingestion/classifyVenue.ts`)
    - Reads raw venue input.
    - Produces two artifacts:
@@ -77,3 +104,14 @@ This contract supports:
 
 - Uses lightweight in-repo validation rather than introducing heavy schema dependencies.
 - Current classification remains heuristic for discovery, but its output is explicitly non-authoritative and evidence-backed.
+
+### Fixture-based offline checks
+
+When network access is restricted, run:
+
+```bash
+node scripts/ingestion/osmDiscovery.ts new-york --fixture=test/fixtures/osm/new-york.overpass.json --bbox=40.71,-74.02,40.73,-73.98
+node scripts/ingestion/googleEnrich.ts new-york --fixture=test/fixtures/google/new-york.enrich.json
+```
+
+This produces deterministic discovery outputs without external API calls.

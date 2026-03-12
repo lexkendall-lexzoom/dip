@@ -2,8 +2,6 @@ import fs from "fs";
 import path from "path";
 import type { CanonicalVenue, EvidenceRecord, VenueType } from "../../lib/schema/models.ts";
 import { validateCanonicalVenue, validateEvidenceRecord } from "../../lib/schema/validation.ts";
-import { CanonicalVenue, EvidenceRecord, VenueType } from "../../lib/schema/models";
-import { validateCanonicalVenue, validateEvidenceRecord } from "../../lib/schema/validation";
 
 type RawVenue = {
   name: string;
@@ -105,6 +103,7 @@ export function classifyVenue(rawVenue: RawVenue): { canonicalVenue: CanonicalVe
 
   const categories = inferCategories(features);
   const venueId = rawVenue.slug;
+  const timestamp = nowIso();
 
   const canonicalVenue: CanonicalVenue = {
     id: venueId,
@@ -125,11 +124,17 @@ export function classifyVenue(rawVenue: RawVenue): { canonicalVenue: CanonicalVe
     editorial_status: "draft",
     ranking_eligibility: {
       is_eligible: false,
+      evaluated_at: timestamp,
       reasons: ["Pending scoring and evidence thresholds."],
+      blockers: ["No score record generated yet."],
     },
-    last_verified_at: nowIso(),
-    created_at: nowIso(),
-    updated_at: nowIso(),
+    provenance: {
+      discovered_from: "manual",
+      last_canonicalized_at: timestamp,
+    },
+    last_verified_at: timestamp,
+    created_at: timestamp,
+    updated_at: timestamp,
   };
 
   const confidenceForFeature = (feature: string): number => (features.has(feature) ? 0.8 : 0);

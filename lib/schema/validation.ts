@@ -1,6 +1,7 @@
 import {
   CLAIM_TYPES,
   EDITORIAL_STATUSES,
+  PRIMARY_CATEGORIES,
   SOURCE_TYPES,
   VENUE_TYPES,
 } from "./models.ts";
@@ -10,23 +11,44 @@ import type {
   ScoreCategory,
   ScoreExplanation,
   ScoreRecord,
+  SearchFacets,
 } from "./models.ts";
-  CanonicalVenue,
-  EDITORIAL_STATUSES,
-  EvidenceRecord,
-  SOURCE_TYPES,
-  ScoreCategory,
-  ScoreExplanation,
-  ScoreRecord,
-  VENUE_TYPES,
-} from "./models";
 
 const isNonEmptyString = (value: unknown): value is string => typeof value === "string" && value.trim().length > 0;
 const isFiniteNumber = (value: unknown): value is number => typeof value === "number" && Number.isFinite(value);
 const isIsoDate = (value: unknown): value is string => isNonEmptyString(value) && !Number.isNaN(Date.parse(value));
 const inRange = (value: number, min: number, max: number): boolean => value >= min && value <= max;
 
+const validateStringArray = (value: unknown, field: string): string[] => {
+  const errors: string[] = [];
+  if (!Array.isArray(value)) {
+    errors.push(`${field} must be an array`);
+    return errors;
+  }
+  if ((value as unknown[]).some((item) => !isNonEmptyString(item))) {
+    errors.push(`${field} must contain only non-empty strings`);
+  }
+  return errors;
+};
+
 const SCORE_FIELDS: ScoreCategory[] = ["ritual_quality", "aesthetic_design", "social_energy", "facilities", "recovery_wellness"];
+const FACET_BOOLEAN_FIELDS: Array<keyof Omit<SearchFacets, "neighborhood" | "borough">> = [
+  "has_sauna",
+  "has_cold_plunge",
+  "has_steam_room",
+  "has_hot_pool",
+  "has_thermal_circuit",
+  "has_guided_rituals",
+  "has_breathwork",
+  "has_treatments",
+  "has_massages",
+  "has_bodywork",
+  "has_recovery_clinic",
+  "has_iv_therapy",
+  "has_hyperbaric",
+  "has_red_light",
+  "has_cryotherapy",
+];
 
 export type ValidationResult = {
   valid: boolean;
@@ -45,9 +67,7 @@ const validateExplanation = (explanation: ScoreExplanation | undefined): string[
   if (!Array.isArray(explanation.eligibility_blockers)) errors.push("eligibility_blockers must be an array");
   if (!Array.isArray(explanation.eligibility_caveats)) errors.push("eligibility_caveats must be an array");
 
-  if (!explanation.evidence_counts) {
-    errors.push("evidence_counts is required");
-  }
+  if (!explanation.evidence_counts) errors.push("evidence_counts is required");
 
   if (!explanation.category_diagnostics) {
     errors.push("category_diagnostics is required");
@@ -73,6 +93,52 @@ const validateExplanation = (explanation: ScoreExplanation | undefined): string[
   return errors;
 };
 
+const validateProvenance = (provenance: CanonicalVenue["provenance"] | undefined): string[] => {
+  const errors: string[] = [];
+  if (!provenance) {
+    errors.push("provenance is required");
+    return errors;
+  }
+
+  if (!isNonEmptyString(provenance.discovered_from)) {
+    errors.push("provenance.discovered_from is required");
+  }
+  if (provenance.enriched_from !== undefined) {
+    errors.push(...validateStringArray(provenance.enriched_from, "provenance.enriched_from"));
+  }
+  if (provenance.review_sources !== undefined) {
+    errors.push(...validateStringArray(provenance.review_sources, "provenance.review_sources"));
+  }
+  if (!isIsoDate(provenance.last_canonicalized_at)) {
+    errors.push("provenance.last_canonicalized_at must be ISO date string");
+  }
+
+  return errors;
+};
+
+const validateSearchFacets = (facets: CanonicalVenue["search_facets"] | undefined): string[] => {
+  const errors: string[] = [];
+  if (!facets) {
+    errors.push("search_facets is required");
+    return errors;
+  }
+
+  if (facets.neighborhood !== undefined && !isNonEmptyString(facets.neighborhood)) {
+    errors.push("search_facets.neighborhood must be a non-empty string when provided");
+  }
+  if (facets.borough !== undefined && !isNonEmptyString(facets.borough)) {
+    errors.push("search_facets.borough must be a non-empty string when provided");
+  }
+
+  for (const key of FACET_BOOLEAN_FIELDS) {
+    if (typeof facets[key] !== "boolean") {
+      errors.push(`search_facets.${key} must be boolean`);
+    }
+  }
+
+  return errors;
+};
+
 export function validateCanonicalVenue(venue: Partial<CanonicalVenue>): ValidationResult {
   const errors: string[] = [];
 
@@ -92,9 +158,18 @@ export function validateCanonicalVenue(venue: Partial<CanonicalVenue>): Validati
   if (!Array.isArray(venue.categories)) errors.push("categories must be an array");
   if (!Array.isArray(venue.features)) errors.push("features must be an array");
   if (!Array.isArray(venue.source_urls)) errors.push("source_urls must be an array");
+  if (!Array.isArray(venue.search_tags)) {
+    errors.push("search_tags must be an array");
+  } else if (venue.search_tags.some((tag) => !isNonEmptyString(tag))) {
+    errors.push("search_tags must not contain empty values");
+  }
 
   if (!venue.venue_type || !VENUE_TYPES.includes(venue.venue_type)) errors.push("venue_type is invalid");
+  if (!venue.primary_category || !PRIMARY_CATEGORIES.includes(venue.primary_category)) errors.push("primary_category is invalid");
   if (!venue.editorial_status || !EDITORIAL_STATUSES.includes(venue.editorial_status)) errors.push("editorial_status is invalid");
+
+  errors.push(...validateSearchFacets(venue.search_facets));
+  errors.push(...validateProvenance(venue.provenance));
 
   if (!venue.ranking_eligibility) {
     errors.push("ranking_eligibility is required");
@@ -124,15 +199,13 @@ export function validateEvidenceRecord(record: Partial<EvidenceRecord>): Validat
   if (!record.claim_type || !CLAIM_TYPES.includes(record.claim_type)) errors.push("claim_type is invalid");
   if (!isNonEmptyString(record.claim_key)) errors.push("claim_key is required");
   if (record.claim_value === undefined) errors.push("claim_value is required");
+  if (!isFiniteNumber(record.confidence) || !inRange(record.confidence, 0, 1)) errors.push("confidence must be in [0,1]");
 
-  if (!isFiniteNumber(record.confidence) || !inRange(record.confidence, 0, 1)) {
-    errors.push("confidence must be number in [0,1]");
-  }
-
-  if (record.source_url !== undefined && !isNonEmptyString(record.source_url)) errors.push("source_url must be non-empty string when provided");
-  if (record.claim_unit !== undefined && !isNonEmptyString(record.claim_unit)) errors.push("claim_unit must be non-empty string when provided");
-  if (record.agent_name !== undefined && !isNonEmptyString(record.agent_name)) errors.push("agent_name must be non-empty string when provided");
-  if (record.provenance_note !== undefined && !isNonEmptyString(record.provenance_note)) errors.push("provenance_note must be non-empty string when provided");
+  if (record.source_url !== undefined && !isNonEmptyString(record.source_url)) errors.push("source_url must be a non-empty string when provided");
+  if (record.claim_unit !== undefined && !isNonEmptyString(record.claim_unit)) errors.push("claim_unit must be a non-empty string when provided");
+  if (record.excerpt !== undefined && !isNonEmptyString(record.excerpt)) errors.push("excerpt must be a non-empty string when provided");
+  if (record.agent_name !== undefined && !isNonEmptyString(record.agent_name)) errors.push("agent_name must be a non-empty string when provided");
+  if (record.provenance_note !== undefined && !isNonEmptyString(record.provenance_note)) errors.push("provenance_note must be a non-empty string when provided");
   if (typeof record.human_verified !== "boolean") errors.push("human_verified must be boolean");
 
   return { valid: errors.length === 0, errors };
@@ -146,24 +219,20 @@ export function validateScoreRecord(score: Partial<ScoreRecord>): ValidationResu
 
   SCORE_FIELDS.forEach((field) => {
     const value = score[field];
-    if (!isFiniteNumber(value) || !inRange(value, 0, 10)) {
-      errors.push(`${field} must be numeric in [0,10]`);
+    if (!isFiniteNumber(value)) {
+      errors.push(`${field} must be a finite number`);
+      return;
     }
+    if (!inRange(value, 0, 10)) errors.push(`${field} must be in [0,10]`);
   });
 
-  if (!isFiniteNumber(score.overall) || !inRange(score.overall, 0, 10)) errors.push("overall must be numeric in [0,10]");
-  if (!isFiniteNumber(score.coverage_score) || !inRange(score.coverage_score, 0, 1)) errors.push("coverage_score must be numeric in [0,1]");
-  if (!isFiniteNumber(score.confidence_score) || !inRange(score.confidence_score, 0, 1)) errors.push("confidence_score must be numeric in [0,1]");
+  if (!isFiniteNumber(score.overall) || !inRange(score.overall, 0, 10)) errors.push("overall must be in [0,10]");
+  if (!isFiniteNumber(score.coverage_score) || !inRange(score.coverage_score, 0, 1)) errors.push("coverage_score must be in [0,1]");
+  if (!isFiniteNumber(score.confidence_score) || !inRange(score.confidence_score, 0, 1)) errors.push("confidence_score must be in [0,1]");
   if (typeof score.ranking_eligible !== "boolean") errors.push("ranking_eligible must be boolean");
   if (!isIsoDate(score.computed_at)) errors.push("computed_at must be ISO date string");
 
   errors.push(...validateExplanation(score.explanation));
-
-  if (score.scoring_metadata?.review_count !== undefined) {
-    if (!isFiniteNumber(score.scoring_metadata.review_count) || score.scoring_metadata.review_count < 0) {
-      errors.push("scoring_metadata.review_count must be >= 0");
-    }
-  }
 
   return { valid: errors.length === 0, errors };
 }
@@ -171,13 +240,16 @@ export function validateScoreRecord(score: Partial<ScoreRecord>): ValidationResu
 export function validateYamlPublishability(venue: CanonicalVenue, score: ScoreRecord): ValidationResult {
   const errors: string[] = [];
 
-  if (!venue.name || !venue.slug || !venue.city || !venue.country) {
-    errors.push("venue missing required display fields");
-  }
+  const venueValidation = validateCanonicalVenue(venue);
+  if (!venueValidation.valid) errors.push(...venueValidation.errors.map((error) => `venue.${error}`));
 
-  if (score.coverage_score < 0.35) {
-    errors.push("coverage score below publish threshold");
-  }
+  const scoreValidation = validateScoreRecord(score);
+  if (!scoreValidation.valid) errors.push(...scoreValidation.errors.map((error) => `score.${error}`));
+
+  if (venue.id !== score.venue_id) errors.push("venue.id must match score.venue_id");
+  if (venue.editorial_status === "draft") errors.push("editorial_status must not be draft for publishable output");
+  if (!score.ranking_eligible && score.confidence_score < 0.55) errors.push("score must be ranking_eligible or confidence_score >= 0.55");
+  if (score.coverage_score < 0.5) errors.push("coverage_score must be >= 0.5");
 
   return { valid: errors.length === 0, errors };
 }

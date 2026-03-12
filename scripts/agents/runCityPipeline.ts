@@ -1,12 +1,14 @@
 import fs from "fs";
 import path from "path";
 import { promises as fsp } from "fs";
+import { spawn } from "child_process";
 import { fileURLToPath } from "url";
 import { runDiscovery } from "./runDiscovery.ts";
 import { runCanonicalization } from "./runCanonicalization.ts";
 import { extractEvidence } from "./runEvidenceExtraction.ts";
 import { runQa } from "./runQa.ts";
 import { generateScores } from "../scoring/generateScores.ts";
+import { LAUNCH_CITY_SLUGS, runReviewEvidenceAgent } from "../ingestion/reviewEvidenceAgent.ts";
 import { generateVenueYaml } from "../ingestion/generateVenueYaml.ts";
 import { DIPSCORE_VERSION } from "../../lib/ranking/dipscore.ts";
 import type { CanonicalVenue, EvidenceRecord } from "../../lib/schema/models.ts";
@@ -77,6 +79,25 @@ const listCanonicalByCity = (citySlug: string): CanonicalVenue[] => {
 
 const sourcePayloadPath = (slug: string): string => path.resolve("data/raw/sources", `${slug}.sources.json`);
 
+
+const runNpmSync = async (citySlug: string): Promise<void> => {
+  await new Promise((resolve, reject) => {
+    const child = spawn("npm", ["run", "sync:supabase", "--", citySlug], {
+      stdio: "inherit",
+      shell: process.platform === "win32",
+    });
+
+    child.on("error", reject);
+    child.on("exit", (code) => {
+      if (code === 0) {
+        resolve(undefined);
+      } else {
+        reject(new Error(`Supabase sync failed with exit code ${code}`));
+      }
+    });
+  });
+};
+
 const parseArgs = (args: string[]): { citySlug: string; publish: boolean } => {
   const citySlug = args.find((arg) => !arg.startsWith("--"));
   if (!citySlug) {
@@ -125,7 +146,7 @@ export async function runCityPipeline(citySlug: string, publish = false): Promis
     const config = readJson<CityConfig>(configPath);
 
     // 1) discovery
-    const candidates = runDiscovery(config);
+    const candidates = await runDiscovery(config);
     metrics.candidates_found = candidates.length;
     const discoveryPath = path.resolve("data/raw/discovery", `${config.city_slug}.json`);
     await writeJson(discoveryPath, candidates);
@@ -150,6 +171,22 @@ export async function runCityPipeline(citySlug: string, publish = false): Promis
 
       const evidenceOutputPath = path.resolve("data/processed/evidence", `${venue.slug}.evidence.json`);
       await writeJson(evidenceOutputPath, evidence);
+    }
+
+    // 3b) review evidence enrichment (tier 3, optional fixture/live)
+    const reviewFixturePath = process.env.REVIEW_FIXTURE_PATH;
+    const canRunReviewEvidence = Boolean(reviewFixturePath || process.env.OUTSCRAPER_API_KEY);
+    const inLaunchScope = (LAUNCH_CITY_SLUGS as readonly string[]).includes(citySlug);
+    if (canRunReviewEvidence && inLaunchScope) {
+      await runReviewEvidenceAgent({
+        citySlug,
+        fixturePath: reviewFixturePath,
+        outputDir: path.resolve("data/processed/evidence"),
+      });
+    } else if (!canRunReviewEvidence) {
+      process.stdout.write("review evidence skipped (no REVIEW_FIXTURE_PATH or OUTSCRAPER_API_KEY)\n");
+    } else {
+      process.stdout.write(`review evidence skipped (${citySlug} is outside launch city scope)\n`);
     }
 
     // 4) scoring
@@ -198,6 +235,13 @@ export async function runCityPipeline(citySlug: string, publish = false): Promis
           metrics.published_pages_count += 1;
         }
       }
+    }
+
+    // 7) DB sync (only after QA passes)
+    if (metrics.review_flags_count === 0) {
+      await runNpmSync(citySlug);
+    } else {
+      process.stdout.write("db sync skipped (QA flags present)\n");
     }
 
     process.stdout.write(`candidates found: ${metrics.candidates_found}\n`);

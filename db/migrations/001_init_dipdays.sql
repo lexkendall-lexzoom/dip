@@ -7,15 +7,30 @@ create table if not exists public.venues (
   id uuid primary key default gen_random_uuid(),
   name text,
   city text,
+  state text,
   country text,
   lat double precision,
   lng double precision,
   website text,
   description text,
+  venue_type text,
   ritual_type text,
+  categories text[] default '{}'::text[],
+  features text[] default '{}'::text[],
+  primary_category text,
+  search_facets jsonb default '{}'::jsonb,
+  search_tags text[] default '{}'::text[],
   status text default 'pending_review',
   created_at timestamptz default now()
 );
+
+alter table public.venues add column if not exists state text;
+alter table public.venues add column if not exists venue_type text;
+alter table public.venues add column if not exists categories text[] default '{}'::text[];
+alter table public.venues add column if not exists features text[] default '{}'::text[];
+alter table public.venues add column if not exists primary_category text;
+alter table public.venues add column if not exists search_facets jsonb default '{}'::jsonb;
+alter table public.venues add column if not exists search_tags text[] default '{}'::text[];
 
 create table if not exists public.facilities (
   id uuid primary key default gen_random_uuid(),
