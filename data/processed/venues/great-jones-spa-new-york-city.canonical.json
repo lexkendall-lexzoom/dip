@@ -1,5 +1,5 @@
 {
-  "id": "great-jones-spa-new-york-city",
+  "id": "26a4884d-8c2b-589c-a5b5-3b66b28f5bcd",
   "slug": "great-jones-spa-new-york-city",
   "name": "Great Jones Spa",
   "city": "New York",
@@ -38,7 +38,7 @@
   ],
   "provenance": {
     "discovered_from": "directory_seed",
-    "last_canonicalized_at": "2026-03-12T21:17:18.198Z"
+    "last_canonicalized_at": "2026-03-12T22:04:03.265Z"
   },
   "source_urls": [
     "file:///workspace/dip/content/venues/new-york-city/great-jones-spa.yml",
@@ -55,7 +55,7 @@
       "No score record generated yet."
     ]
   },
-  "last_verified_at": "2026-03-12T21:17:18.198Z",
+  "last_verified_at": "2026-03-12T22:04:03.265Z",
   "created_at": "2026-03-12T21:13:47.498Z",
-  "updated_at": "2026-03-12T21:17:18.198Z"
+  "updated_at": "2026-03-12T22:04:03.265Z"
 }

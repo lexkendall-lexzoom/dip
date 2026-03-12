@@ -1,5 +1,5 @@
 {
-  "id": "chuan-spa-at-the-langham-chicago",
+  "id": "f717fb77-3d2f-5118-9b7e-d15fed63ce8a",
   "slug": "chuan-spa-at-the-langham-chicago",
   "name": "Chuan Spa at The Langham",
   "city": "Chicago",
@@ -36,7 +36,7 @@
   ],
   "provenance": {
     "discovered_from": "directory_seed",
-    "last_canonicalized_at": "2026-03-12T21:19:00.970Z"
+    "last_canonicalized_at": "2026-03-12T22:04:01.996Z"
   },
   "source_urls": [
     "file:///workspace/dip/content/venues/chicago/chuan-spa-at-the-langham.yml",
@@ -53,7 +53,7 @@
       "No score record generated yet."
     ]
   },
-  "last_verified_at": "2026-03-12T21:19:00.970Z",
+  "last_verified_at": "2026-03-12T22:04:01.996Z",
   "created_at": "2026-03-12T21:15:30.248Z",
-  "updated_at": "2026-03-12T21:19:00.970Z"
+  "updated_at": "2026-03-12T22:04:01.996Z"
 }

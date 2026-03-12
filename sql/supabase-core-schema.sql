@@ -5,6 +5,7 @@ create extension if not exists "pgcrypto";
 
 create table if not exists public.venues (
   id uuid primary key default gen_random_uuid(),
+  slug text unique,
   name text,
   city text,
   state text,
@@ -24,6 +25,7 @@ create table if not exists public.venues (
   created_at timestamptz default now()
 );
 
+alter table public.venues add column if not exists slug text;
 alter table public.venues add column if not exists state text;
 alter table public.venues add column if not exists venue_type text;
 alter table public.venues add column if not exists categories text[] default '{}'::text[];

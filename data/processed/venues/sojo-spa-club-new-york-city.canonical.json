@@ -1,5 +1,5 @@
 {
-  "id": "sojo-spa-club-new-york-city",
+  "id": "4be027ca-9106-59a1-a6da-6e875d64a7fc",
   "slug": "sojo-spa-club-new-york-city",
   "name": "SoJo Spa Club",
   "city": "New York",
@@ -41,7 +41,7 @@
   ],
   "provenance": {
     "discovered_from": "directory_seed",
-    "last_canonicalized_at": "2026-03-12T21:17:18.201Z"
+    "last_canonicalized_at": "2026-03-12T22:04:03.271Z"
   },
   "source_urls": [
     "file:///workspace/dip/content/venues/new-york-city/sojo-spa-club.yml",
@@ -58,7 +58,7 @@
       "No score record generated yet."
     ]
   },
-  "last_verified_at": "2026-03-12T21:17:18.201Z",
+  "last_verified_at": "2026-03-12T22:04:03.271Z",
   "created_at": "2026-03-12T21:13:47.501Z",
-  "updated_at": "2026-03-12T21:17:18.201Z"
+  "updated_at": "2026-03-12T22:04:03.271Z"
 }

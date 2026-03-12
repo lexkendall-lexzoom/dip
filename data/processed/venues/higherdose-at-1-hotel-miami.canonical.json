@@ -1,5 +1,5 @@
 {
-  "id": "higherdose-at-1-hotel-miami",
+  "id": "d87db7e3-86b6-5339-8261-604a44610212",
   "slug": "higherdose-at-1-hotel-miami",
   "name": "HigherDOSE at 1 Hotel",
   "city": "Miami",
@@ -36,7 +36,7 @@
   ],
   "provenance": {
     "discovered_from": "directory_seed",
-    "last_canonicalized_at": "2026-03-12T21:18:35.237Z"
+    "last_canonicalized_at": "2026-03-12T22:04:02.850Z"
   },
   "source_urls": [
     "file:///workspace/dip/content/venues/miami/higherdose-at-1-hotel.yml",
@@ -53,7 +53,7 @@
       "No score record generated yet."
     ]
   },
-  "last_verified_at": "2026-03-12T21:18:35.237Z",
+  "last_verified_at": "2026-03-12T22:04:02.850Z",
   "created_at": "2026-03-12T21:15:04.610Z",
-  "updated_at": "2026-03-12T21:18:35.237Z"
+  "updated_at": "2026-03-12T22:04:02.850Z"
 }

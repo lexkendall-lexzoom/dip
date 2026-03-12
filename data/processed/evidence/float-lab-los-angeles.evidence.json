@@ -1,0 +1,47 @@
+[
+  {
+    "id": "6131ded1-63f1-5d70-a19f-eee570dbf89d",
+    "venue_id": "d115c191-b8d9-57c3-b01c-b7c8a400750e",
+    "source_type": "manual",
+    "source_url": "file:///workspace/dip/content/venues/los-angeles/float-lab.yml",
+    "source_label": "Canonical venue metadata",
+    "extracted_at": "2026-03-12T22:04:07.783Z",
+    "claim_type": "factual",
+    "claim_key": "website_present",
+    "claim_value": true,
+    "confidence": 0.99,
+    "excerpt": "#",
+    "agent_name": "evidence-extraction-agent-v1",
+    "human_verified": false
+  },
+  {
+    "id": "18d28015-4dee-53aa-ad7c-7a8067b89e0f",
+    "venue_id": "d115c191-b8d9-57c3-b01c-b7c8a400750e",
+    "source_type": "manual",
+    "source_url": "file:///workspace/dip/content/venues/los-angeles/float-lab.yml",
+    "source_label": "Canonical venue metadata",
+    "extracted_at": "2026-03-12T22:04:07.783Z",
+    "claim_type": "factual",
+    "claim_key": "source_url_count",
+    "claim_value": 2,
+    "confidence": 0.95,
+    "excerpt": "file:///workspace/dip/content/venues/los-angeles/float-lab.yml, #",
+    "agent_name": "evidence-extraction-agent-v1",
+    "human_verified": false
+  },
+  {
+    "id": "c09f61fd-e0b2-5be0-879d-17387333dcfb",
+    "venue_id": "d115c191-b8d9-57c3-b01c-b7c8a400750e",
+    "source_type": "manual",
+    "source_url": "file:///workspace/dip/content/venues/los-angeles/float-lab.yml",
+    "source_label": "Canonical venue metadata",
+    "extracted_at": "2026-03-12T22:04:07.783Z",
+    "claim_type": "factual",
+    "claim_key": "venue_type",
+    "claim_value": "other",
+    "confidence": 0.98,
+    "excerpt": "other",
+    "agent_name": "evidence-extraction-agent-v1",
+    "human_verified": false
+  }
+]

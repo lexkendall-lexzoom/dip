@@ -1,0 +1,47 @@
+[
+  {
+    "id": "8352420e-4550-598d-a250-7edc3b7520e5",
+    "venue_id": "c7962b4a-6c1d-527c-99e7-44b6c5a0d67b",
+    "source_type": "manual",
+    "source_url": "file:///workspace/dip/content/venues/miami/faena-spa.yml",
+    "source_label": "Canonical venue metadata",
+    "extracted_at": "2026-03-12T22:04:07.782Z",
+    "claim_type": "factual",
+    "claim_key": "website_present",
+    "claim_value": true,
+    "confidence": 0.99,
+    "excerpt": "https://www.faena.com/miami-beach/wellness/faena-spa",
+    "agent_name": "evidence-extraction-agent-v1",
+    "human_verified": false
+  },
+  {
+    "id": "7642d1bd-5aa5-5a1c-b6d9-d81fffee4ad3",
+    "venue_id": "c7962b4a-6c1d-527c-99e7-44b6c5a0d67b",
+    "source_type": "manual",
+    "source_url": "file:///workspace/dip/content/venues/miami/faena-spa.yml",
+    "source_label": "Canonical venue metadata",
+    "extracted_at": "2026-03-12T22:04:07.782Z",
+    "claim_type": "factual",
+    "claim_key": "source_url_count",
+    "claim_value": 2,
+    "confidence": 0.95,
+    "excerpt": "file:///workspace/dip/content/venues/miami/faena-spa.yml, https://www.faena.com/miami-beach/wellness/faena-spa",
+    "agent_name": "evidence-extraction-agent-v1",
+    "human_verified": false
+  },
+  {
+    "id": "6dc0611f-8fe9-5bd1-963c-92630c465fc4",
+    "venue_id": "c7962b4a-6c1d-527c-99e7-44b6c5a0d67b",
+    "source_type": "manual",
+    "source_url": "file:///workspace/dip/content/venues/miami/faena-spa.yml",
+    "source_label": "Canonical venue metadata",
+    "extracted_at": "2026-03-12T22:04:07.782Z",
+    "claim_type": "factual",
+    "claim_key": "venue_type",
+    "claim_value": "other",
+    "confidence": 0.98,
+    "excerpt": "other",
+    "agent_name": "evidence-extraction-agent-v1",
+    "human_verified": false
+  }
+]

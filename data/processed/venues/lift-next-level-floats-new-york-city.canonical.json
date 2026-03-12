@@ -1,5 +1,5 @@
 {
-  "id": "lift-next-level-floats-new-york-city",
+  "id": "2c2d3d47-518a-5a06-9685-c13445e82240",
   "slug": "lift-next-level-floats-new-york-city",
   "name": "Lift / Next Level Floats",
   "city": "New York",
@@ -38,7 +38,7 @@
   ],
   "provenance": {
     "discovered_from": "directory_seed",
-    "last_canonicalized_at": "2026-03-12T21:17:18.198Z"
+    "last_canonicalized_at": "2026-03-12T22:04:03.265Z"
   },
   "source_urls": [
     "file:///workspace/dip/content/venues/new-york-city/lift-next-level-floats.yml",
@@ -55,7 +55,7 @@
       "No score record generated yet."
     ]
   },
-  "last_verified_at": "2026-03-12T21:17:18.198Z",
+  "last_verified_at": "2026-03-12T22:04:03.265Z",
   "created_at": "2026-03-12T21:13:47.498Z",
-  "updated_at": "2026-03-12T21:17:18.198Z"
+  "updated_at": "2026-03-12T22:04:03.265Z"
 }

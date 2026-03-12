@@ -1,5 +1,5 @@
 {
-  "id": "me-spa-and-wellness-miami",
+  "id": "b93c743a-d6c2-5649-8043-7e7eb028b36a",
   "slug": "me-spa-and-wellness-miami",
   "name": "Âme Spa & Wellness",
   "city": "Miami",
@@ -36,7 +36,7 @@
   ],
   "provenance": {
     "discovered_from": "directory_seed",
-    "last_canonicalized_at": "2026-03-12T21:18:35.234Z"
+    "last_canonicalized_at": "2026-03-12T22:04:02.812Z"
   },
   "source_urls": [
     "file:///workspace/dip/content/venues/miami/ame-spa-wellness.yml",
@@ -53,7 +53,7 @@
       "No score record generated yet."
     ]
   },
-  "last_verified_at": "2026-03-12T21:18:35.234Z",
+  "last_verified_at": "2026-03-12T22:04:02.812Z",
   "created_at": "2026-03-12T21:15:04.606Z",
-  "updated_at": "2026-03-12T21:18:35.234Z"
+  "updated_at": "2026-03-12T22:04:02.812Z"
 }

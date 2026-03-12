@@ -1,5 +1,5 @@
 {
-  "id": "esalen-institute-los-angeles",
+  "id": "5af01f81-0c35-5282-bd1a-19739600c472",
   "slug": "esalen-institute-los-angeles",
   "name": "Esalen Institute",
   "city": "Los Angeles",
@@ -38,7 +38,7 @@
   ],
   "provenance": {
     "discovered_from": "directory_seed",
-    "last_canonicalized_at": "2026-03-12T21:18:09.507Z"
+    "last_canonicalized_at": "2026-03-12T22:04:02.409Z"
   },
   "source_urls": [
     "file:///workspace/dip/content/venues/los-angeles/esalen-institute.yml",
@@ -55,7 +55,7 @@
       "No score record generated yet."
     ]
   },
-  "last_verified_at": "2026-03-12T21:18:09.507Z",
+  "last_verified_at": "2026-03-12T22:04:02.409Z",
   "created_at": "2026-03-12T21:14:38.902Z",
-  "updated_at": "2026-03-12T21:18:09.507Z"
+  "updated_at": "2026-03-12T22:04:02.409Z"
 }

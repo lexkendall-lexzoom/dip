@@ -5,6 +5,7 @@ import type {
   SearchFacets,
   VenueType,
 } from "./models.ts";
+import { createStableVenueId, isUuid } from "./identity.ts";
 
 export type AmbiguousDuplicate = {
   city: string;
@@ -321,8 +322,10 @@ export const toCanonicalVenue = (candidate: CandidateVenueRaw, existing?: Canoni
   const enrichedFrom = buildEnrichedFrom(candidate, existing);
   const reviewSources = buildReviewSources(candidate, existing);
 
+  const canonicalId = existing?.id && isUuid(existing.id) ? existing.id : createStableVenueId(slug);
+
   return {
-    id: existing?.id ?? slug,
+    id: canonicalId,
     slug,
     name: existing?.name ?? candidate.name,
     city: candidate.city,

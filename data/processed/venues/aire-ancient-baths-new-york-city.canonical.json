@@ -1,8 +1,8 @@
 {
-  "id": "aire-ancient-baths-new-york-city",
+  "id": "d07a68b6-37d6-5f70-9cff-3e744408961f",
   "slug": "aire-ancient-baths-new-york-city",
   "name": "AIRE Ancient Baths",
-  "city": "Los Angeles",
+  "city": "New York",
   "country": "USA",
   "coordinates": {
     "lat": 34.0522,
@@ -39,7 +39,7 @@
   ],
   "provenance": {
     "discovered_from": "directory_seed",
-    "last_canonicalized_at": "2026-03-12T21:18:09.504Z"
+    "last_canonicalized_at": "2026-03-12T22:04:03.259Z"
   },
   "source_urls": [
     "file:///workspace/dip/content/venues/new-york-city/aire-ancient-baths.yml",
@@ -57,7 +57,7 @@
       "No score record generated yet."
     ]
   },
-  "last_verified_at": "2026-03-12T21:18:09.504Z",
+  "last_verified_at": "2026-03-12T22:04:03.259Z",
   "created_at": "2026-03-12T21:13:47.494Z",
-  "updated_at": "2026-03-12T21:18:09.504Z"
+  "updated_at": "2026-03-12T22:04:03.259Z"
 }

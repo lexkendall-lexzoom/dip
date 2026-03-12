@@ -1,0 +1,47 @@
+[
+  {
+    "id": "c3c03911-7077-5025-b141-6f380f47545d",
+    "venue_id": "9d680df8-12d2-51f9-bf3d-79090a370f0b",
+    "source_type": "manual",
+    "source_url": "file:///workspace/dip/content/venues/san-francisco/kabuki-springs-spa.yml",
+    "source_label": "Canonical venue metadata",
+    "extracted_at": "2026-03-12T22:04:07.785Z",
+    "claim_type": "factual",
+    "claim_key": "website_present",
+    "claim_value": true,
+    "confidence": 0.99,
+    "excerpt": "https://kabukisprings.com/",
+    "agent_name": "evidence-extraction-agent-v1",
+    "human_verified": false
+  },
+  {
+    "id": "b55951ae-3811-595d-a33f-30ca9cfa326a",
+    "venue_id": "9d680df8-12d2-51f9-bf3d-79090a370f0b",
+    "source_type": "manual",
+    "source_url": "file:///workspace/dip/content/venues/san-francisco/kabuki-springs-spa.yml",
+    "source_label": "Canonical venue metadata",
+    "extracted_at": "2026-03-12T22:04:07.785Z",
+    "claim_type": "factual",
+    "claim_key": "source_url_count",
+    "claim_value": 2,
+    "confidence": 0.95,
+    "excerpt": "file:///workspace/dip/content/venues/san-francisco/kabuki-springs-spa.yml, https://kabukisprings.com/",
+    "agent_name": "evidence-extraction-agent-v1",
+    "human_verified": false
+  },
+  {
+    "id": "239ff1cb-ddb0-5937-8a22-9f469f8a298a",
+    "venue_id": "9d680df8-12d2-51f9-bf3d-79090a370f0b",
+    "source_type": "manual",
+    "source_url": "file:///workspace/dip/content/venues/san-francisco/kabuki-springs-spa.yml",
+    "source_label": "Canonical venue metadata",
+    "extracted_at": "2026-03-12T22:04:07.785Z",
+    "claim_type": "factual",
+    "claim_key": "venue_type",
+    "claim_value": "other",
+    "confidence": 0.98,
+    "excerpt": "other",
+    "agent_name": "evidence-extraction-agent-v1",
+    "human_verified": false
+  }
+]

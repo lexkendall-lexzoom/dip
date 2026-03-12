@@ -1,0 +1,47 @@
+[
+  {
+    "id": "1c12ded0-6370-5cd4-85e1-9a1e5ce7ade9",
+    "venue_id": "68efea38-0689-5e14-be20-3a777062a229",
+    "source_type": "manual",
+    "source_url": "file:///workspace/dip/content/venues/los-angeles/pause-studio.yml",
+    "source_label": "Canonical venue metadata",
+    "extracted_at": "2026-03-12T22:04:07.790Z",
+    "claim_type": "factual",
+    "claim_key": "website_present",
+    "claim_value": true,
+    "confidence": 0.99,
+    "excerpt": "https://pausestudio.com/",
+    "agent_name": "evidence-extraction-agent-v1",
+    "human_verified": false
+  },
+  {
+    "id": "e60c7766-05e1-5104-9977-0a4e5832073a",
+    "venue_id": "68efea38-0689-5e14-be20-3a777062a229",
+    "source_type": "manual",
+    "source_url": "file:///workspace/dip/content/venues/los-angeles/pause-studio.yml",
+    "source_label": "Canonical venue metadata",
+    "extracted_at": "2026-03-12T22:04:07.790Z",
+    "claim_type": "factual",
+    "claim_key": "source_url_count",
+    "claim_value": 2,
+    "confidence": 0.95,
+    "excerpt": "file:///workspace/dip/content/venues/los-angeles/pause-studio.yml, https://pausestudio.com/",
+    "agent_name": "evidence-extraction-agent-v1",
+    "human_verified": false
+  },
+  {
+    "id": "23ccfd8b-306f-5664-a4f6-d10a33c9ff08",
+    "venue_id": "68efea38-0689-5e14-be20-3a777062a229",
+    "source_type": "manual",
+    "source_url": "file:///workspace/dip/content/venues/los-angeles/pause-studio.yml",
+    "source_label": "Canonical venue metadata",
+    "extracted_at": "2026-03-12T22:04:07.790Z",
+    "claim_type": "factual",
+    "claim_key": "venue_type",
+    "claim_value": "other",
+    "confidence": 0.98,
+    "excerpt": "other",
+    "agent_name": "evidence-extraction-agent-v1",
+    "human_verified": false
+  }
+]

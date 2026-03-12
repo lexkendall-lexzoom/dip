@@ -1,0 +1,47 @@
+[
+  {
+    "id": "9ac6d3c6-c2d9-5246-b7d4-ef5776784107",
+    "venue_id": "9b778076-01d7-5b96-b45d-8de2d2e5d794",
+    "source_type": "manual",
+    "source_url": "file:///workspace/dip/content/venues/miami/the-standard-spa.yml",
+    "source_label": "Canonical venue metadata",
+    "extracted_at": "2026-03-12T22:04:07.798Z",
+    "claim_type": "factual",
+    "claim_key": "website_present",
+    "claim_value": true,
+    "confidence": 0.99,
+    "excerpt": "https://www.standardhotels.com/miami/properties/miami-beach",
+    "agent_name": "evidence-extraction-agent-v1",
+    "human_verified": false
+  },
+  {
+    "id": "85350bde-b1c8-53da-b3a8-a89bd16d6d37",
+    "venue_id": "9b778076-01d7-5b96-b45d-8de2d2e5d794",
+    "source_type": "manual",
+    "source_url": "file:///workspace/dip/content/venues/miami/the-standard-spa.yml",
+    "source_label": "Canonical venue metadata",
+    "extracted_at": "2026-03-12T22:04:07.798Z",
+    "claim_type": "factual",
+    "claim_key": "source_url_count",
+    "claim_value": 2,
+    "confidence": 0.95,
+    "excerpt": "file:///workspace/dip/content/venues/miami/the-standard-spa.yml, https://www.standardhotels.com/miami/properties/miami-beach",
+    "agent_name": "evidence-extraction-agent-v1",
+    "human_verified": false
+  },
+  {
+    "id": "c40a2ce2-b258-5305-9870-f4739a134665",
+    "venue_id": "9b778076-01d7-5b96-b45d-8de2d2e5d794",
+    "source_type": "manual",
+    "source_url": "file:///workspace/dip/content/venues/miami/the-standard-spa.yml",
+    "source_label": "Canonical venue metadata",
+    "extracted_at": "2026-03-12T22:04:07.798Z",
+    "claim_type": "factual",
+    "claim_key": "venue_type",
+    "claim_value": "other",
+    "confidence": 0.98,
+    "excerpt": "other",
+    "agent_name": "evidence-extraction-agent-v1",
+    "human_verified": false
+  }
+]

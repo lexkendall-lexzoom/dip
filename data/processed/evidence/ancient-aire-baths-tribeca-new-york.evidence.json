@@ -1,0 +1,62 @@
+[
+  {
+    "id": "f380e8f7-8d8f-5969-a539-61e99f8574f2",
+    "venue_id": "c19ba467-21ca-5ed5-9eaa-83168cf973e9",
+    "source_type": "aggregator",
+    "source_url": "https://beaire.com/en/aire-ancient-baths-newyork",
+    "source_label": "Canonical source URL",
+    "extracted_at": "2026-03-12T22:04:07.771Z",
+    "claim_type": "facilities",
+    "claim_key": "facility_completeness",
+    "claim_value": 8.1,
+    "confidence": 0.75,
+    "excerpt": "Ancient Aire Baths Tribeca in New York. Categories: Bathhouse.",
+    "agent_name": "evidence-extraction-agent-v1",
+    "human_verified": false
+  },
+  {
+    "id": "b52e1fef-1936-5a5a-8f5d-0e61f42bef33",
+    "venue_id": "c19ba467-21ca-5ed5-9eaa-83168cf973e9",
+    "source_type": "manual",
+    "source_url": "https://beaire.com/en/aire-ancient-baths-newyork",
+    "source_label": "Canonical venue metadata",
+    "extracted_at": "2026-03-12T22:04:07.771Z",
+    "claim_type": "factual",
+    "claim_key": "website_present",
+    "claim_value": true,
+    "confidence": 0.99,
+    "excerpt": "https://beaire.com/en/aire-ancient-baths-newyork",
+    "agent_name": "evidence-extraction-agent-v1",
+    "human_verified": false
+  },
+  {
+    "id": "582cbc82-914a-5913-ba26-5d8c7b1c9a29",
+    "venue_id": "c19ba467-21ca-5ed5-9eaa-83168cf973e9",
+    "source_type": "manual",
+    "source_url": "https://beaire.com/en/aire-ancient-baths-newyork",
+    "source_label": "Canonical venue metadata",
+    "extracted_at": "2026-03-12T22:04:07.771Z",
+    "claim_type": "factual",
+    "claim_key": "source_url_count",
+    "claim_value": 1,
+    "confidence": 0.95,
+    "excerpt": "https://beaire.com/en/aire-ancient-baths-newyork",
+    "agent_name": "evidence-extraction-agent-v1",
+    "human_verified": false
+  },
+  {
+    "id": "b13720b3-64f3-5155-b323-a3cc8b2aa0c9",
+    "venue_id": "c19ba467-21ca-5ed5-9eaa-83168cf973e9",
+    "source_type": "manual",
+    "source_url": "https://beaire.com/en/aire-ancient-baths-newyork",
+    "source_label": "Canonical venue metadata",
+    "extracted_at": "2026-03-12T22:04:07.771Z",
+    "claim_type": "factual",
+    "claim_key": "venue_type",
+    "claim_value": "bathhouse",
+    "confidence": 0.98,
+    "excerpt": "bathhouse",
+    "agent_name": "evidence-extraction-agent-v1",
+    "human_verified": false
+  }
+]

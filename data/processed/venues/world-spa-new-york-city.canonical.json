@@ -1,5 +1,5 @@
 {
-  "id": "world-spa-new-york-city",
+  "id": "50f9c5a5-711c-56ae-abd0-c6ce747df8e8",
   "slug": "world-spa-new-york-city",
   "name": "World Spa",
   "city": "New York",
@@ -43,7 +43,7 @@
   ],
   "provenance": {
     "discovered_from": "directory_seed",
-    "last_canonicalized_at": "2026-03-12T21:17:18.202Z"
+    "last_canonicalized_at": "2026-03-12T22:04:03.272Z"
   },
   "source_urls": [
     "file:///workspace/dip/content/venues/new-york-city/world-spa.yml",
@@ -60,7 +60,7 @@
       "No score record generated yet."
     ]
   },
-  "last_verified_at": "2026-03-12T21:17:18.202Z",
+  "last_verified_at": "2026-03-12T22:04:03.272Z",
   "created_at": "2026-03-12T21:13:47.502Z",
-  "updated_at": "2026-03-12T21:17:18.202Z"
+  "updated_at": "2026-03-12T22:04:03.272Z"
 }

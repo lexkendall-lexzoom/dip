@@ -1,0 +1,47 @@
+[
+  {
+    "id": "9dfa2bb9-f95e-558a-955d-df76088dafe3",
+    "venue_id": "26a4884d-8c2b-589c-a5b5-3b66b28f5bcd",
+    "source_type": "manual",
+    "source_url": "file:///workspace/dip/content/venues/new-york-city/great-jones-spa.yml",
+    "source_label": "Canonical venue metadata",
+    "extracted_at": "2026-03-12T22:04:07.784Z",
+    "claim_type": "factual",
+    "claim_key": "website_present",
+    "claim_value": true,
+    "confidence": 0.99,
+    "excerpt": "https://gjspa.com",
+    "agent_name": "evidence-extraction-agent-v1",
+    "human_verified": false
+  },
+  {
+    "id": "446348dd-f99b-5097-9556-15b0012b5bb6",
+    "venue_id": "26a4884d-8c2b-589c-a5b5-3b66b28f5bcd",
+    "source_type": "manual",
+    "source_url": "file:///workspace/dip/content/venues/new-york-city/great-jones-spa.yml",
+    "source_label": "Canonical venue metadata",
+    "extracted_at": "2026-03-12T22:04:07.784Z",
+    "claim_type": "factual",
+    "claim_key": "source_url_count",
+    "claim_value": 2,
+    "confidence": 0.95,
+    "excerpt": "file:///workspace/dip/content/venues/new-york-city/great-jones-spa.yml, https://gjspa.com",
+    "agent_name": "evidence-extraction-agent-v1",
+    "human_verified": false
+  },
+  {
+    "id": "9e779080-9e2d-50ec-b2b4-4f742fcd9d5f",
+    "venue_id": "26a4884d-8c2b-589c-a5b5-3b66b28f5bcd",
+    "source_type": "manual",
+    "source_url": "file:///workspace/dip/content/venues/new-york-city/great-jones-spa.yml",
+    "source_label": "Canonical venue metadata",
+    "extracted_at": "2026-03-12T22:04:07.784Z",
+    "claim_type": "factual",
+    "claim_key": "venue_type",
+    "claim_value": "other",
+    "confidence": 0.98,
+    "excerpt": "other",
+    "agent_name": "evidence-extraction-agent-v1",
+    "human_verified": false
+  }
+]
