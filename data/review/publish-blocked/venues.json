@@ -1,0 +1,31 @@
+{
+  "generated_at": "2026-03-11T00:00:00.000Z",
+  "count": 4,
+  "issues": [
+    {
+      "venue_id": "aire-ancient-baths-new-york",
+      "slug": "aire-ancient-baths-new-york",
+      "issue": "invalid_coordinates",
+      "severity": "error"
+    },
+    {
+      "venue_id": "ancient-aire-baths-tribeca-new-york",
+      "slug": "ancient-aire-baths-tribeca-new-york",
+      "issue": "invalid_coordinates",
+      "severity": "error"
+    },
+    {
+      "venue_id": "vabali-spa-berlin",
+      "slug": "vabali-spa-berlin",
+      "issue": "missing_required_canonical_fields",
+      "severity": "error",
+      "details": "ranking_eligibility.evaluated_at must be ISO date string; ranking_eligibility.blockers must be an array"
+    },
+    {
+      "venue_id": "wall-street-bath-and-spa-88-new-york",
+      "slug": "wall-street-bath-and-spa-88-new-york",
+      "issue": "invalid_coordinates",
+      "severity": "error"
+    }
+  ]
+}

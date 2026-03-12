@@ -1,0 +1,80 @@
+[
+  {
+    "name": "AIRE Ancient Baths New York",
+    "city": "New York",
+    "state": "NY",
+    "country": "USA",
+    "lat": 40.7192,
+    "lng": -74.0072,
+    "website": "https://beaire.com/en/aire-ancient-baths-newyork",
+    "venue_type": "bathhouse",
+    "categories": ["Bathhouse", "Ritual Bathhouse", "Contrast Therapy"],
+    "features": ["thermal_pool", "steam_room", "cold_plunge", "massage", "guided_sessions", "high_design"],
+    "notes": "Luxury thermal circuit experience in Tribeca."
+  },
+  {
+    "name": "Othership Flatiron",
+    "city": "New York",
+    "state": "NY",
+    "country": "USA",
+    "lat": 40.7413,
+    "lng": -73.9897,
+    "website": "https://www.othership.us",
+    "venue_type": "sauna",
+    "categories": ["Social Sauna", "Contrast Therapy"],
+    "features": ["sauna", "cold_plunge", "breathwork", "guided_sessions", "group_ritual", "community_events"],
+    "notes": "Ritual-led social sauna programming and breathwork sessions."
+  },
+  {
+    "name": "Russian & Turkish Baths",
+    "city": "New York",
+    "state": "NY",
+    "country": "USA",
+    "lat": 40.7278,
+    "lng": -73.9827,
+    "website": "https://www.russianturkishbaths.com",
+    "venue_type": "bathhouse",
+    "categories": ["Traditional Banya", "Bathhouse"],
+    "features": ["banya", "venik", "platza", "sauna", "steam_room", "cold_plunge", "community_events"],
+    "notes": "Historic East Village banyas with traditional platza rituals."
+  },
+  {
+    "name": "Remedy Place Flatiron",
+    "city": "New York",
+    "state": "NY",
+    "country": "USA",
+    "lat": 40.7424,
+    "lng": -73.9926,
+    "website": "https://www.remedyplace.com",
+    "venue_type": "wellness_studio",
+    "categories": ["Social Wellness Club", "Recovery Studio"],
+    "features": ["sauna", "cold_plunge", "iv_therapy", "hyperbaric", "red_light", "cryotherapy", "breathwork"],
+    "notes": "Recovery-first social wellness club with medical modalities."
+  },
+  {
+    "name": "Bathhouse Williamsburg",
+    "city": "Brooklyn",
+    "state": "NY",
+    "country": "USA",
+    "lat": 40.7188,
+    "lng": -73.9601,
+    "website": "https://www.abathhouse.com",
+    "venue_type": "bathhouse",
+    "categories": ["Bathhouse", "Social Sauna"],
+    "features": ["sauna", "cold_plunge", "steam_room", "thermal_pool", "massage", "urban"],
+    "notes": "Large urban bathhouse with social energy and thermal amenities."
+  },
+  {
+    "name": "SoJo Spa Club",
+    "city": "Edgewater",
+    "state": "NJ",
+    "country": "USA",
+    "lat": 40.8182,
+    "lng": -73.9752,
+    "website": "https://sojospaclub.com",
+    "venue_type": "spa",
+    "categories": ["Regional Spa Resort", "Bathhouse"],
+    "features": ["sauna", "steam_room", "thermal_pool", "hot_pool", "destination", "massage"],
+    "notes": "Large destination spa complex with expansive thermal circuit."
+  }
+]

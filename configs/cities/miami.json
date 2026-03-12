@@ -1,0 +1,18 @@
+{
+  "city": "Miami",
+  "city_slug": "miami",
+  "country": "USA",
+  "seed_sources": [
+    {
+      "source_label": "Miami wellness discovery sweep",
+      "source_url": "https://www.google.com/maps/search/miami+sauna+bathhouse"
+    }
+  ],
+  "max_candidates": 250,
+  "bbox": [
+    25.709,
+    -80.3198,
+    25.8557,
+    -80.1392
+  ]
+}

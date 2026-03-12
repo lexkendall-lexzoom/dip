@@ -1,0 +1,15 @@
+{
+  "city": "new-york",
+  "ran_at": "2026-03-11T22:34:07.548Z",
+  "score_version": "v1.2",
+  "candidates_found": 18,
+  "canonical_venues_written": 18,
+  "evidence_records_written": 62,
+  "scores_written": 18,
+  "ranking_eligible_count": 0,
+  "review_flags_count": 61,
+  "publish_blocked_count": 13,
+  "published_pages_count": 0,
+  "status": "success",
+  "error_message": null
+}

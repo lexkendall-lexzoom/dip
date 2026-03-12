@@ -1,0 +1,45 @@
+{
+  "city": "New York",
+  "city_slug": "new-york",
+  "content_city_slug": "new-york-city",
+  "country": "USA",
+  "seed_sources": [
+    {
+      "source_label": "NYC wellness discovery sweep",
+      "source_url": "https://www.google.com/maps/search/nyc+sauna+bathhouse"
+    }
+  ],
+  "manual_candidates": [
+    {
+      "name": "Wall Street Bath & Spa 88",
+      "website": "https://www.wallstreetbath.com",
+      "address": "88 Fulton St, New York, NY",
+      "source_urls": [
+        "https://www.wallstreetbath.com",
+        "https://www.google.com/maps/search/wall+street+bath+spa+88"
+      ],
+      "snippets": [
+        "Historic downtown bathhouse with banya and steam facilities.",
+        "Public listings mention Russian bathhouse rituals and sauna programming."
+      ]
+    },
+    {
+      "name": "Ancient Aire Baths Tribeca",
+      "website": "https://beaire.com/en/aire-ancient-baths-newyork",
+      "address": "88 Franklin St, New York, NY",
+      "source_urls": [
+        "https://beaire.com/en/aire-ancient-baths-newyork"
+      ],
+      "snippets": [
+        "Luxury bathhouse with thermal circuits and massage treatments."
+      ]
+    }
+  ],
+  "max_candidates": 250,
+  "bbox": [
+    40.4774,
+    -74.2591,
+    40.9176,
+    -73.7004
+  ]
+}
