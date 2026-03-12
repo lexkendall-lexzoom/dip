@@ -183,7 +183,7 @@ export const searchVenues = (query: string, limit = 20): SearchVenueResponse => 
       results: toResultShape(boroughRelaxed, venueMap),
     };
   }
-ex return {
+ return {
     query,
     intent,
     fallback_applied: false,
