@@ -1,0 +1,18 @@
+{
+  "city": "Chicago",
+  "city_slug": "chicago",
+  "country": "USA",
+  "seed_sources": [
+    {
+      "source_label": "Chicago wellness discovery sweep",
+      "source_url": "https://www.google.com/maps/search/chicago+sauna+bathhouse"
+    }
+  ],
+  "max_candidates": 250,
+  "bbox": [
+    41.6445,
+    -87.9401,
+    42.023,
+    -87.5237
+  ]
+}

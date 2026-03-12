@@ -1,0 +1,10 @@
+{
+  "place_id": "places/fixture-123",
+  "details": {
+    "websiteUri": "https://fixture-google.example",
+    "nationalPhoneNumber": "+1 212-555-0100",
+    "formattedAddress": "123 Fixture St, New York, NY",
+    "rating": 4.6,
+    "userRatingCount": 240
+  }
+}

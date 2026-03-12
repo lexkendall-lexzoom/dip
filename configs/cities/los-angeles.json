@@ -1,0 +1,18 @@
+{
+  "city": "Los Angeles",
+  "city_slug": "los-angeles",
+  "country": "USA",
+  "seed_sources": [
+    {
+      "source_label": "LA wellness discovery sweep",
+      "source_url": "https://www.google.com/maps/search/los+angeles+sauna+bathhouse"
+    }
+  ],
+  "max_candidates": 250,
+  "bbox": [
+    33.7037,
+    -118.6682,
+    34.3373,
+    -118.1553
+  ]
+}

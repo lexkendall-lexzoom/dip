@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-03-11T00:00:00.000Z",
+  "count": 3,
+  "issues": [
+    {
+      "venue_id": "aire-ancient-baths-new-york",
+      "slug": "aire-ancient-baths-new-york",
+      "issue": "missing_score_record",
+      "severity": "error"
+    },
+    {
+      "venue_id": "ancient-aire-baths-tribeca-new-york",
+      "slug": "ancient-aire-baths-tribeca-new-york",
+      "issue": "missing_score_record",
+      "severity": "error"
+    },
+    {
+      "venue_id": "wall-street-bath-and-spa-88-new-york",
+      "slug": "wall-street-bath-and-spa-88-new-york",
+      "issue": "missing_score_record",
+      "severity": "error"
+    }
+  ]
+}

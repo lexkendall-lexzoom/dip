@@ -1,0 +1,65 @@
+{
+  "id": "wall-street-bath-and-spa-88-new-york",
+  "slug": "wall-street-bath-and-spa-88-new-york",
+  "name": "Wall Street Bath & Spa 88",
+  "city": "New York",
+  "country": "USA",
+  "coordinates": {
+    "lat": 0,
+    "lng": 0
+  },
+  "website": "https://www.wallstreetbath.com",
+  "categories": [
+    "Bathhouse",
+    "Sauna"
+  ],
+  "features": [],
+  "venue_type": "bathhouse",
+  "primary_category": "Traditional Banya",
+  "search_facets": {
+    "neighborhood": "Financial District",
+    "borough": "Manhattan",
+    "has_sauna": true,
+    "has_cold_plunge": false,
+    "has_steam_room": false,
+    "has_hot_pool": false,
+    "has_thermal_circuit": true,
+    "has_guided_rituals": false,
+    "has_breathwork": false,
+    "has_treatments": false,
+    "has_massages": false,
+    "has_bodywork": false,
+    "has_recovery_clinic": false,
+    "has_iv_therapy": false,
+    "has_hyperbaric": false,
+    "has_red_light": false,
+    "has_cryotherapy": false
+  },
+  "search_tags": [
+    "bathhouse",
+    "sauna-culture",
+    "traditional-banya"
+  ],
+  "provenance": {
+    "discovered_from": "google_places",
+    "last_canonicalized_at": "2026-03-12T18:55:19.556Z"
+  },
+  "source_urls": [
+    "https://www.wallstreetbath.com",
+    "https://www.google.com/maps/search/wall+street+bath+spa+88"
+  ],
+  "editorial_status": "draft",
+  "ranking_eligibility": {
+    "is_eligible": false,
+    "evaluated_at": "2026-03-11T00:00:00.000Z",
+    "reasons": [
+      "Awaiting evidence-backed scoring pass."
+    ],
+    "blockers": [
+      "No score record generated yet."
+    ]
+  },
+  "last_verified_at": "2026-03-12T18:55:19.556Z",
+  "created_at": "2026-03-11T00:00:00.000Z",
+  "updated_at": "2026-03-12T18:55:19.556Z"
+}

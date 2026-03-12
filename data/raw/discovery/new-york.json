@@ -1,0 +1,89 @@
+[
+  {
+    "name": "AIRE Ancient Baths",
+    "website": "https://beaire.com/en/aire-ancient-baths-new-york",
+    "city": "New York",
+    "country": "USA",
+    "source_urls": [
+      "file:///workspace/dip/content/venues/new-york-city/aire-ancient-baths.yml",
+      "https://beaire.com/en/aire-ancient-baths-new-york"
+    ],
+    "snippets": [
+      {
+        "source_url": "file:///workspace/dip/content/venues/new-york-city/aire-ancient-baths.yml",
+        "text": "Existing DipDays NYC venue candidate."
+      }
+    ],
+    "candidate_categories": [
+      "Bathhouse"
+    ],
+    "source_provenance": [
+      {
+        "source_type": "directory_seed",
+        "source_url": "file:///workspace/dip/content/venues/new-york-city/aire-ancient-baths.yml",
+        "source_label": "Existing DipDays venue directory",
+        "discovered_at": "2026-03-11T00:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "name": "Ancient Aire Baths Tribeca",
+    "website": "https://beaire.com/en/aire-ancient-baths-newyork",
+    "address": "88 Franklin St, New York, NY",
+    "city": "New York",
+    "country": "USA",
+    "source_urls": [
+      "https://beaire.com/en/aire-ancient-baths-newyork"
+    ],
+    "snippets": [
+      {
+        "source_url": "https://beaire.com/en/aire-ancient-baths-newyork",
+        "text": "Luxury bathhouse with thermal circuits and massage treatments."
+      }
+    ],
+    "candidate_categories": [
+      "Bathhouse"
+    ],
+    "source_provenance": [
+      {
+        "source_type": "manual",
+        "source_url": "https://beaire.com/en/aire-ancient-baths-newyork",
+        "source_label": "NYC wellness discovery sweep",
+        "discovered_at": "2026-03-11T00:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "name": "Wall Street Bath & Spa 88",
+    "website": "https://www.wallstreetbath.com",
+    "address": "88 Fulton St, New York, NY",
+    "city": "New York",
+    "country": "USA",
+    "source_urls": [
+      "https://www.wallstreetbath.com",
+      "https://www.google.com/maps/search/wall+street+bath+spa+88"
+    ],
+    "snippets": [
+      {
+        "source_url": "https://www.wallstreetbath.com",
+        "text": "Historic downtown bathhouse with banya and steam facilities."
+      },
+      {
+        "source_url": "https://www.wallstreetbath.com",
+        "text": "Public listings mention Russian bathhouse rituals and sauna programming."
+      }
+    ],
+    "candidate_categories": [
+      "Bathhouse",
+      "Sauna"
+    ],
+    "source_provenance": [
+      {
+        "source_type": "manual",
+        "source_url": "https://www.wallstreetbath.com",
+        "source_label": "NYC wellness discovery sweep",
+        "discovered_at": "2026-03-11T00:00:00.000Z"
+      }
+    ]
+  }
+]
