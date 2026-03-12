@@ -22,7 +22,21 @@ permalink: "/{{ item.citySlug }}/{{ item.venue.slug | default(item.fileSlug) }}/
     <meta property="og:url" content="https://dipdays.com/{{ citySlug }}/{{ v.slug | default(item.fileSlug) }}/" />
     {% if seo.social_image %}<meta property="og:image" content="{{ seo.social_image | assetUrl }}" />{% endif %}
     <meta name="twitter:card" content="summary_large_image" />
-    {% if v.website_url %}<script type="application/ld+json">{"@context":"https://schema.org","@type":"LocalBusiness","name":"{{ v.name }}","url":"{{ v.website_url }}","address":{"@type":"PostalAddress","addressLocality":"{{ v.city }}"},"areaServed":"{{ v.city }}"}</script>{% endif %}
+    <script type="application/ld+json">
+    {
+      "@context":"https://schema.org",
+      "@type":"LocalBusiness",
+      "name":{{ v.name | json }},
+      "url":{{ ("https://dipdays.com/" + citySlug + "/" + (v.slug | default(item.fileSlug)) + "/") | json }},
+      {% if v.website_url %}"sameAs":{{ v.website_url | json }},{% endif %}
+      {% if seo.social_image or v.hero_image %}"image":{{ (seo.social_image | default(v.hero_image) | assetUrl) | json }},{% endif %}
+      "address":{
+        "@type":"PostalAddress",
+        "addressLocality":{{ v.city | default('') | json }}
+      },
+      "areaServed":{{ v.city | default('') | json }}
+    }
+    </script>
     <link rel="preload" href="/fonts/syne-700.ttf" as="font" type="font/ttf" crossorigin/>
   <link rel="preload" href="/fonts/playfair-display-400-italic.ttf" as="font" type="font/ttf" crossorigin/>
   <link rel="stylesheet" href="/fonts/fonts.css"/>

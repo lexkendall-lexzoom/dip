@@ -83,12 +83,14 @@ const computeIntentBoost = (venue: CanonicalVenue, intent: QueryIntent, reviewEv
     if ((venue.search_facets as Record<string, unknown>)[facetKey] === true) {
       boost += facetBoost ?? 0;
       reasons.push(`${facetKey.replace(/^has_/, "").replace(/_/g, " ")} intent match`);
+      reasons.push(`Boosted for ${facetKey.replace(/^has_/, "").replace(/_/g, " ")}`);
     }
   }
 
   if (weights.category_boosts[venue.primary_category]) {
     boost += weights.category_boosts[venue.primary_category] ?? 0;
     reasons.push(`${venue.primary_category} category match`);
+    reasons.push(`Boosted for ${venue.primary_category.toLowerCase()} category match`);
   }
 
   const venueTags = new Set(venue.search_tags.map((tag) => tag.toLowerCase()));
@@ -96,6 +98,7 @@ const computeIntentBoost = (venue: CanonicalVenue, intent: QueryIntent, reviewEv
     if (venueTags.has(tag.toLowerCase())) {
       boost += tagBoost;
       reasons.push(`${tag.replace(/-/g, " ")} tag match`);
+      reasons.push(`Boosted for ${tag} tag match`);
     }
   }
 
@@ -109,6 +112,7 @@ const computeIntentBoost = (venue: CanonicalVenue, intent: QueryIntent, reviewEv
       if (signalBoost <= 0) continue;
       boost += signalBoost;
       reasons.push(`${signal.signal.replace(/_/g, " ")} evidence support`);
+      reasons.push(`Boosted for ${signal.signal.replace(/_/g, " ")} evidence`);
     }
   }
 
@@ -130,6 +134,38 @@ const buildReasons = (
   reviewArtifact,
   maxReasons: 5,
 });
+const buildReasons = (venue: CanonicalVenue, intent: QueryIntent, boostReasons: string[]): string[] => {
+  const reasons: string[] = [];
+
+  if (intent.preferred_category && venue.primary_category === intent.preferred_category) {
+    reasons.push(`Matches ${intent.preferred_category.toLowerCase()} archetype`);
+  }
+
+  const matchedFacets = Object.entries(intent.required_facets)
+    .filter(([key, value]) => value && (venue.search_facets as Record<string, unknown>)[key] === true)
+    .map(([key]) => key.replace(/^has_/, "").replace(/_/g, " "));
+  if (matchedFacets.length > 0) {
+    reasons.push(`Has ${matchedFacets.join(" and ")}`);
+  }
+
+  if (intent.location.borough && venue.search_facets.borough?.toLowerCase() === intent.location.borough) {
+    reasons.push(`Located in ${venue.search_facets.borough}`);
+  } else if (intent.location.neighborhood && venue.search_facets.neighborhood?.toLowerCase() === intent.location.neighborhood) {
+    reasons.push(`Located in ${venue.search_facets.neighborhood}`);
+  } else if (intent.location.city && venue.city.toLowerCase().replace(/\s+/g, "-") === intent.location.city) {
+    reasons.push(`Located in ${venue.city}`);
+  }
+
+  if (boostReasons.length > 0) {
+    reasons.push(...boostReasons.slice(0, 2));
+  }
+
+  if (reasons.length === 0) {
+    reasons.push("Matched structured search filters");
+  }
+
+  return reasons;
+};
 
 export const rankSearchResults = (filteredVenues: CanonicalVenue[], intent: QueryIntent, options: RankSearchOptions = {}): SearchResult[] => {
   const scores = options.scores ?? loadScores();
@@ -163,6 +199,7 @@ export const rankSearchResults = (filteredVenues: CanonicalVenue[], intent: Quer
       venue_slug: row.venue.slug,
       score: Number(row.finalSearchScore.toFixed(2)),
       reasons: buildReasons(row.venue, intent, row.intentBoost.reasons, row.reviewArtifact),
+      reasons: buildReasons(row.venue, intent, row.intentBoost.reasons),
       boost_breakdown: row.intentBoost.reasons,
     }));
 };

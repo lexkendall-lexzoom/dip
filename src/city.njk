@@ -21,6 +21,31 @@ permalink: "/{{ cityPage.slug }}/"
   <meta property="og:url" content="https://dipdays.com/{{ cityPage.slug }}/" />
   {% if seo.social_image %}<meta property="og:image" content="{{ seo.social_image }}" />{% endif %}
   <meta name="twitter:card" content="summary" />
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"CollectionPage",
+    "name":{{ seo.title | default(pg.heading + " | Dip") | json }},
+    "url":{{ ("https://dipdays.com/" + cityPage.slug + "/") | json }},
+    "description":{{ seo.description | default('') | json }},
+    "about":["sauna","bathhouse","bath house","cold plunge","contrast bathing",{{ cityPage.slug | replace('-', ' ') | json }}],
+    "mainEntity":{
+      "@type":"ItemList",
+      "itemListElement":[
+        {% if cityPage.cards %}
+          {% for card in cityPage.cards %}
+          {
+            "@type":"ListItem",
+            "position":{{ loop.index }},
+            "url":{{ ("https://dipdays.com" + card.url) | json }},
+            "name":{{ card.title | json }}
+          }{% if not loop.last %},{% endif %}
+          {% endfor %}
+        {% endif %}
+      ]
+    }
+  }
+  </script>
   <link rel="preload" href="/fonts/syne-700.ttf" as="font" type="font/ttf" crossorigin/>
   <link rel="preload" href="/fonts/playfair-display-400-italic.ttf" as="font" type="font/ttf" crossorigin/>
   <link rel="stylesheet" href="/fonts/fonts.css"/>
