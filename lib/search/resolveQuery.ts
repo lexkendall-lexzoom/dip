@@ -101,21 +101,11 @@ const parseLocation = (normalized: string): QueryIntent["location"] => {
     return false;
   };
 
-const parseLocation = (normalized: string): QueryIntent["location"] => {
-  const location: QueryIntent["location"] = {};
-
   const inMatch = normalized.match(/\bin\s+([a-z\s-]+)/);
   const locationPhrase = inMatch?.[1]?.trim();
 
   if (locationPhrase) {
-    if (applyBorough(locationPhrase)) {
-      return location;
-    for (const borough of BOROUGHS) {
-      if (locationPhrase.includes(borough)) {
-        location.borough = borough;
-        return location;
-      }
-    }
+    if (applyBorough(locationPhrase)) return location;
 
     const cityAlias = CITY_ALIASES[locationPhrase];
     if (cityAlias) {
@@ -127,24 +117,10 @@ const parseLocation = (normalized: string): QueryIntent["location"] => {
     return location;
   }
 
-  if (applyBorough(normalized)) {
-    return location;
-  }
-
-  for (const borough of BOROUGHS) {
-    if (containsTerm(normalized, borough)) {
-      location.borough = borough;
-      location.city = "new-york";
-  for (const borough of BOROUGHS) {
-    if (normalized.includes(borough)) {
-      location.borough = borough;
-      return location;
-    }
-  }
+  if (applyBorough(normalized)) return location;
 
   for (const [alias, city] of Object.entries(CITY_ALIASES)) {
     if (containsTerm(normalized, alias)) {
-    if (normalized.includes(alias)) {
       location.city = city;
       return location;
     }
