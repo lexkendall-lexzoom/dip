@@ -15,5 +15,5 @@ jobs:
           node-version: 20
           cache: npm
       - run: npm ci
-      - run: npm run audit:search-readiness
+      - run: npm run qa:search-ready
       - run: npm run build
