@@ -3,23 +3,26 @@
     "version": "1.0.0",
     "private": true,
     "scripts": {
-          "build": "eleventy",
-          "start": "eleventy --serve",
-          "sync:supabase": "tsx scripts/supabase/syncProcessedData.ts",
-          "sync:supabase:ci": "NODE_ENV=production npm run sync:supabase",
-          "verify:supabase-schema": "tsx scripts/supabase/verifyCoreSchema.ts",
-          "import:seed:venues": "node scripts/import_seed_venues.ts",
-          "qa:search-ready": "tsx scripts/qa/auditSearchReadiness.ts",
-          "populate:launch": "node --experimental-strip-types scripts/agents/runLaunchCities.ts",
-          "populate:city": "node --experimental-strip-types scripts/agents/runLaunchCities.ts --city",
-          "api-search-ready": "tsx scripts/qa/buildSearchReadiness.ts"
+        "build": "eleventy",
+        "start": "eleventy --serve",
+        "sync:supabase": "tsx scripts/supabase/syncProcessedData.ts",
+        "sync:supabase:ci": "NODE_ENV=production npm run sync:supabase",
+        "verify:supabase-schema": "tsx scripts/supabase/verifyCoreSchema.ts",
+        "import:seed:venues": "node scripts/import_seed_venues.ts",
+        "qa:search-ready": "tsx scripts/qa/auditSearchReadiness.ts",
+        "populate:launch": "node --experimental-strip-types scripts/agents/runLaunchCities.ts",
+        "populate:city": "node --experimental-strip-types scripts/agents/runLaunchCities.ts --city",
+        "api-search-ready": "tsx scripts/qa/buildSearchReadiness.ts",
+        "test:search": "node --experimental-strip-types scripts/tests/verifyDipDays.ts search",
+        "test:api": "node --experimental-strip-types scripts/tests/verifyDipDays.ts api",
+        "test:data": "node --experimental-strip-types scripts/tests/verifyDipDays.ts data"
     },
     "dependencies": {
-          "@11ty/eleventy": "^2.0.1",
-          "js-yaml": "^4.1.0",
-          "@supabase/supabase-js": "^2.53.0"
+        "@11ty/eleventy": "^2.0.1",
+        "js-yaml": "^4.1.0",
+        "@supabase/supabase-js": "^2.53.0"
     },
     "devDependencies": {
-          "tsx": "^4.20.5"
+        "tsx": "^4.20.5"
     }
 }
