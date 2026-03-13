@@ -1,4 +1,5 @@
 import {
+  BATHING_STYLES,
   CLAIM_TYPES,
   EDITORIAL_STATUSES,
   PRIMARY_CATEGORIES,
@@ -170,7 +171,9 @@ export function validateCanonicalVenue(venue: Partial<CanonicalVenue>): Validati
   }
 
   if (!venue.venue_type || !VENUE_TYPES.includes(venue.venue_type)) errors.push("venue_type is invalid");
+  if (!venue.category || !PRIMARY_CATEGORIES.includes(venue.category)) errors.push("category is invalid");
   if (!venue.primary_category || !PRIMARY_CATEGORIES.includes(venue.primary_category)) errors.push("primary_category is invalid");
+  if (!venue.bathing_style || !BATHING_STYLES.includes(venue.bathing_style)) errors.push("bathing_style is invalid");
   if (!venue.editorial_status || !EDITORIAL_STATUSES.includes(venue.editorial_status)) errors.push("editorial_status is invalid");
 
   errors.push(...validateSearchFacets(venue.search_facets));

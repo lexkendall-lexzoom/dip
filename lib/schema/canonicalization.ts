@@ -1,4 +1,5 @@
 import type {
+  BathingStyle,
   CandidateVenueRaw,
   CanonicalVenue,
   PrimaryCategory,
@@ -6,6 +7,7 @@ import type {
   VenueType,
 } from "./models.ts";
 import { createStableVenueId, isUuid } from "./identity.ts";
+import { classifyBathingStyle } from "./bathingStyle.ts";
 
 export type AmbiguousDuplicate = {
   city: string;
@@ -287,6 +289,11 @@ const buildReviewSources = (candidate: CandidateVenueRaw, existing?: CanonicalVe
   return reviewSources.size > 0 ? [...reviewSources].sort() : undefined;
 };
 
+const classifyBathingStyleWithFallback = (features: string[], existing?: CanonicalVenue): BathingStyle => {
+  if (existing?.bathing_style) return existing.bathing_style;
+  return classifyBathingStyle({ features });
+};
+
 export const toCanonicalVenue = (candidate: CandidateVenueRaw, existing?: CanonicalVenue): CanonicalVenue => {
   const timestamp = new Date().toISOString();
   const slug = existing?.slug ?? createStableSlug(candidate.name, candidate.city);
@@ -319,6 +326,7 @@ export const toCanonicalVenue = (candidate: CandidateVenueRaw, existing?: Canoni
     facets,
   });
   const discoveredFrom = inferDiscoveredFrom(candidate, existing);
+  const bathingStyle = classifyBathingStyleWithFallback(features, existing);
   const enrichedFrom = buildEnrichedFrom(candidate, existing);
   const reviewSources = buildReviewSources(candidate, existing);
 
@@ -335,7 +343,9 @@ export const toCanonicalVenue = (candidate: CandidateVenueRaw, existing?: Canoni
     categories,
     features,
     venue_type: venueType,
+    category: primaryCategory,
     primary_category: primaryCategory,
+    bathing_style: bathingStyle,
     search_facets: facets,
     search_tags: searchTags,
     provenance: {

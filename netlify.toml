@@ -21,3 +21,18 @@
   from = "/api/search"
   to = "/.netlify/functions/search"
   status = 200
+
+[[redirects]]
+  from = "/venues"
+  to = "/.netlify/functions/venues/venues"
+  status = 200
+
+[[redirects]]
+  from = "/venues/search"
+  to = "/.netlify/functions/venues/venues/search"
+  status = 200
+
+[[redirects]]
+  from = "/venues/:id"
+  to = "/.netlify/functions/venues/venues/:id"
+  status = 200
