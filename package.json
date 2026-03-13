@@ -10,6 +10,7 @@
     "verify:supabase-schema": "tsx scripts/supabase/verifyCoreSchema.ts",
     "import:seed:venues": "node scripts/import_seed_venues.ts",
     "qa:search-ready": "tsx scripts/qa/auditSearchReadiness.ts",
+    "healthcheck:search": "node -e \"import('./lib/search/loadSearchData.ts').then(m=>m.loadSearchData()).then(()=>process.exit(0)).catch(e=>{console.error(e);process.exit(1);});\"",
     "populate:launch": "node --experimental-strip-types scripts/agents/runLaunchCities.ts",
     "populate:city": "node --experimental-strip-types scripts/agents/runLaunchCities.ts --city"
   },
