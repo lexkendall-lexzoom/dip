@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-12T21:19:01.664Z",
+  "generated_at": "2026-03-13T17:15:30.862Z",
   "city_slugs": [
     "new-york",
     "san-francisco",
@@ -18,19 +18,19 @@
       "ready": 5,
       "not_ready": 0
     },
-    "los-angeles": {
-      "venues": 8,
-      "ready": 8,
-      "not_ready": 0
-    },
     "new-york": {
-      "venues": 17,
-      "ready": 17,
+      "venues": 19,
+      "ready": 19,
       "not_ready": 0
     },
     "san-francisco": {
       "venues": 4,
       "ready": 4,
+      "not_ready": 0
+    },
+    "los-angeles": {
+      "venues": 6,
+      "ready": 6,
       "not_ready": 0
     },
     "miami": {

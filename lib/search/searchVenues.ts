@@ -82,6 +82,13 @@ const withFallbackLocation = (intent: ReturnType<typeof resolveQuery>, step: "dr
   };
 };
 
+const withRelaxedFacets = (intent: ReturnType<typeof resolveQuery>) => ({
+  ...intent,
+  required_facets: {},
+  preferred_category: undefined,
+  preferred_tags: [],
+});
+
 const humanizeLocation = (value: string): string => value.replace(/-/g, " ").replace(/\b\w/g, (c) => c.toUpperCase());
 
 const createFallbackNote = (intent: ReturnType<typeof resolveQuery>, fallbackIntent: ReturnType<typeof resolveQuery>): string => {
@@ -120,15 +127,6 @@ export const searchVenues = (query: string, limit = 20): SearchVenueResponse => 
     };
   }
 
-  if (!intent.location.neighborhood && !intent.location.borough) {
-    return {
-      query,
-      intent,
-      fallback_applied: false,
-      results: [],
-    };
-  }
-
   const neighborhoodRelaxedIntent = withFallbackLocation(intent, "drop-neighborhood");
   const neighborhoodRelaxed = runRanking(neighborhoodRelaxedIntent);
   if (neighborhoodRelaxed.length > 0 && neighborhoodRelaxedIntent !== intent) {
@@ -151,6 +149,21 @@ export const searchVenues = (query: string, limit = 20): SearchVenueResponse => 
       fallback_note: createFallbackNote(intent, boroughRelaxedIntent),
       results: toResultShape(boroughRelaxed, venueMap),
     };
+  }
+
+  if (Object.keys(intent.required_facets).length > 0) {
+    const facetRelaxedIntent = withRelaxedFacets(intent);
+    const facetRelaxed = runRanking(facetRelaxedIntent);
+    if (facetRelaxed.length > 0) {
+      const locationScope = humanizeLocation(intent.location.neighborhood ?? intent.location.borough ?? intent.location.city ?? "nearby areas");
+      return {
+        query,
+        intent,
+        fallback_applied: true,
+        fallback_note: `No exact amenity matches found. Showing top wellness venues in ${locationScope}.`,
+        results: toResultShape(facetRelaxed, venueMap),
+      };
+    }
   }
 
   return {
