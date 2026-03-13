@@ -7,9 +7,9 @@
 
 [functions]
   included_files = [
-    "data/processed/venues/*.canonical.json",
-    "data/processed/scores/*.score.json",
-    "data/processed/evidence/*.reviews.evidence.json"
+    "data/processed/venues/**",
+    "data/processed/scores/**",
+    "data/processed/evidence/**"
   ]
 
 [[headers]]
