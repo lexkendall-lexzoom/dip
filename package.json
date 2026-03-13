@@ -10,8 +10,11 @@
     "verify:supabase-schema": "tsx scripts/supabase/verifyCoreSchema.ts",
     "import:seed:venues": "node scripts/import_seed_venues.ts",
     "qa:search-ready": "tsx scripts/qa/auditSearchReadiness.ts",
-    "populate:launch": "node --experimental-strip-types scripts/agents/runLaunchCities.ts",
-    "populate:city": "node --experimental-strip-types scripts/agents/runLaunchCities.ts --city"
+    "api-search-ready": "tsx scripts/qa/auditSearchReadiness.ts",
+    "audit:search-readiness": "tsx scripts/qa/auditSearchReadiness.ts",
+    "build:local": "npm run audit:search-readiness && npm run build",
+    "populate:launch": "tsx --transpileOnly scripts/agents/runLaunchCities.ts",
+    "populate:city": "tsx --transpileOnly scripts/agents/runLaunchCities.ts --city"
   },
   "dependencies": {
     "@11ty/eleventy": "^2.0.1",
