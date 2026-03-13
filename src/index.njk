@@ -13,8 +13,10 @@ permalink: /
 <meta property="og:description" content="{{ homepage.seo.description | default('The best bathhouses, saunas, thermal baths, and cold plunges in your city.') }}"/>
 <meta property="og:type" content="website"/>
 <meta property="og:url" content="https://dipdays.com/"/>
-{% if homepage.seo.social_image %}<meta property="og:image" content="{{ homepage.seo.social_image }}"/>{% endif %}
-<meta name="twitter:card" content="summary"/>
+{%- set ogImage = homepage.seo.social_image if homepage.seo.social_image else "https://dipdays.com/images/uploads/aire-tribeca-3.jpg" -%}
+<meta property="og:image" content="{{ ogImage }}"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="{{ ogImage }}"/>
 <script type="application/ld+json">
 {
   "@context":"https://schema.org",
@@ -550,7 +552,7 @@ footer{background:var(--ink);border-top:1px solid rgba(255,255,255,.08);padding:
 </main>
 
 <footer>
-  <span class="fc">© 2025 Dip Days · dipdays.co</span>
+  <span class="fc">© 2025 Dip Days · dipdays.com</span>
   <ul class="fl"><li><a href="#">About</a></li><li><a href="#">Contact</a></li></ul>
 </footer>
 
