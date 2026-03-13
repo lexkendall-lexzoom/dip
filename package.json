@@ -11,7 +11,8 @@
     "import:seed:venues": "node scripts/import_seed_venues.ts",
     "qa:search-ready": "tsx scripts/qa/auditSearchReadiness.ts",
     "populate:launch": "node --experimental-strip-types scripts/agents/runLaunchCities.ts",
-    "populate:city": "node --experimental-strip-types scripts/agents/runLaunchCities.ts --city"
+    "populate:city": "node --experimental-strip-types scripts/agents/runLaunchCities.ts --city",
+    "api-search-ready": "tsx scripts/qa/auditSearchReadiness.ts"
   },
   "dependencies": {
     "@11ty/eleventy": "^2.0.1",
