@@ -35,6 +35,13 @@ const parseArgs = (args: string[]): { citySlugs: string[] } => {
   };
 };
 
+export function runAuditSearchReadinessMain(args: string[]): void {
+  const parsedArgs = parseArgs(args);
+  const summary = auditSearchReadiness(parsedArgs.citySlugs);
+  process.stdout.write(`search-ready venues: ${summary.totals.ready}/${summary.totals.venues}\n`);
+  process.stdout.write(`issues: ${summary.totals.not_ready}\n`);
+}
+
 const listCanonical = (): CanonicalVenue[] => {
   const directory = path.resolve("data/processed/venues");
   if (!fs.existsSync(directory)) return [];
@@ -122,8 +129,5 @@ export function auditSearchReadiness(citySlugs: string[]): AuditSummary {
 const isMain = process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url);
 
 if (isMain) {
-  const args = parseArgs(process.argv.slice(2));
-  const summary = auditSearchReadiness(args.citySlugs);
-  process.stdout.write(`search-ready venues: ${summary.totals.ready}/${summary.totals.venues}\n`);
-  process.stdout.write(`issues: ${summary.totals.not_ready}\n`);
+  runAuditSearchReadinessMain(process.argv.slice(2));
 }
