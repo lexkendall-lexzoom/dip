@@ -2,6 +2,7 @@ import type { CanonicalVenue, ScoreRecord } from "../schema/models.ts";
 
 export type RankingFilter = {
   category?: string;
+  bathing_style?: CanonicalVenue["bathing_style"];
   feature?: string;
   primary_category?: CanonicalVenue["primary_category"];
   search_tag?: string;
@@ -21,6 +22,7 @@ export type RankedVenue = {
 const applyFilters = (rows: RankedVenue[], filters: RankingFilter = {}): RankedVenue[] =>
   rows.filter(({ venue, score }) => {
     if (filters.category && !venue.categories.includes(filters.category)) return false;
+    if (filters.bathing_style && venue.bathing_style !== filters.bathing_style) return false;
     if (filters.feature && !venue.features.includes(filters.feature)) return false;
     if (filters.primary_category && venue.primary_category !== filters.primary_category) return false;
     if (filters.search_tag && !venue.search_tags.includes(filters.search_tag)) return false;

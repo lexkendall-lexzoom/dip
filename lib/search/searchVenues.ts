@@ -15,7 +15,9 @@ export type SearchVenueResponse = {
     city: string;
     neighborhood?: string;
     borough?: string;
+    category: CanonicalVenue["category"];
     primary_category: CanonicalVenue["primary_category"];
+    bathing_style: CanonicalVenue["bathing_style"];
     score: number;
     website?: string;
     search_tags: string[];
@@ -30,7 +32,9 @@ const toResultShape = (ranked: SearchResult[], venueMap: Map<string, CanonicalVe
       venue_id: row.venue_slug,
       name: row.venue,
       city: "",
+      category: "Neighborhood Spa" as const,
       primary_category: "Neighborhood Spa" as const,
+      bathing_style: "Modern Hybrid" as const,
       score: row.score,
       search_tags: [],
       reasons: row.reasons,
@@ -43,7 +47,9 @@ const toResultShape = (ranked: SearchResult[], venueMap: Map<string, CanonicalVe
     city: venue.city,
     neighborhood: venue.search_facets.neighborhood,
     borough: venue.search_facets.borough,
+    category: venue.category,
     primary_category: venue.primary_category,
+    bathing_style: venue.bathing_style,
     score: row.score,
     website: venue.website,
     search_tags: venue.search_tags,

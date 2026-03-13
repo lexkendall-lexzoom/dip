@@ -20,6 +20,18 @@ export const PRIMARY_CATEGORIES = [
 ] as const;
 export type PrimaryCategory = typeof PRIMARY_CATEGORIES[number];
 
+export const BATHING_STYLES = [
+  "Roman Thermal",
+  "Nordic Sauna",
+  "Russian Banya",
+  "Turkish Hammam",
+  "Korean Jjimjilbang",
+  "Japanese Onsen",
+  "Modern Hybrid",
+  "Other",
+] as const;
+export type BathingStyle = typeof BATHING_STYLES[number];
+
 export interface SearchFacets {
   neighborhood?: string;
   borough?: string;
@@ -69,7 +81,9 @@ export interface CanonicalVenue {
   categories: string[];
   features: string[];
   venue_type: VenueType;
+  category: PrimaryCategory;
   primary_category: PrimaryCategory;
+  bathing_style: BathingStyle;
   search_facets: SearchFacets;
   search_tags: string[];
   provenance: CanonicalProvenance;

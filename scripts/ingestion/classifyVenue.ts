@@ -1,6 +1,8 @@
 import fs from "fs";
 import path from "path";
 import type { CanonicalVenue, EvidenceRecord, VenueType } from "../../lib/schema/models.ts";
+import { classifyPrimaryCategory } from "../../lib/schema/canonicalization.ts";
+import { classifyBathingStyle } from "../../lib/schema/bathingStyle.ts";
 import { validateCanonicalVenue, validateEvidenceRecord } from "../../lib/schema/validation.ts";
 
 type RawVenue = {
@@ -102,6 +104,13 @@ export function classifyVenue(rawVenue: RawVenue): { canonicalVenue: CanonicalVe
   if (searchable.includes("therapy") || searchable.includes("recovery")) features.add("recovery_therapy");
 
   const categories = inferCategories(features);
+  const featureList = Array.from(features);
+  const primaryCategory = classifyPrimaryCategory({
+    name: rawVenue.name,
+    categories,
+    features: featureList,
+    venueType: detectVenueType(features),
+  });
   const venueId = rawVenue.slug;
   const timestamp = nowIso();
 
@@ -118,8 +127,11 @@ export function classifyVenue(rawVenue: RawVenue): { canonicalVenue: CanonicalVe
     },
     website: rawVenue.website,
     categories,
-    features: Array.from(features),
+    features: featureList,
     venue_type: detectVenueType(features),
+    category: primaryCategory,
+    primary_category: primaryCategory,
+    bathing_style: classifyBathingStyle({ features: featureList }),
     source_urls: rawVenue.source_urls ?? [rawVenue.website ?? ""].filter(Boolean),
     editorial_status: "draft",
     ranking_eligibility: {

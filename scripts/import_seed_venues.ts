@@ -8,6 +8,7 @@ import {
   classifyPrimaryCategory,
   createStableSlug,
 } from "../lib/schema/canonicalization.ts";
+import { classifyBathingStyle } from "../lib/schema/bathingStyle.ts";
 import type { CanonicalVenue, VenueType } from "../lib/schema/models.ts";
 import { validateCanonicalVenue } from "../lib/schema/validation.ts";
 
@@ -85,7 +86,9 @@ const toCanonicalVenue = (seed: SeedVenue): CanonicalVenue => {
     categories: seed.categories,
     features: seed.features,
     venue_type: venueType,
+    category: primaryCategory,
     primary_category: primaryCategory,
+    bathing_style: classifyBathingStyle({ features: seed.features }),
     search_facets: searchFacets,
     search_tags: searchTags,
     source_urls: seed.website ? [seed.website] : [],
@@ -157,7 +160,9 @@ export async function importSeedVenues(seedFilePath: string, dryRun = false): Pr
       ritual_type: canonical.venue_type,
       categories: canonical.categories,
       features: canonical.features,
+      category: canonical.category,
       primary_category: canonical.primary_category,
+      bathing_style: canonical.bathing_style,
       search_facets: canonical.search_facets,
       search_tags: canonical.search_tags,
       status: canonical.editorial_status,
