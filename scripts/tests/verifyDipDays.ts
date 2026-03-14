@@ -56,6 +56,32 @@ const verifySearchDataDegradesWithoutScores = () => {
   console.log(`${suiteLabel} data degradation works: missing scores/evidence does not break search dataset load.`);
 };
 
+const verifyDataRootResolutionFromNestedCwd = () => {
+  const fixtureRoot = fs.mkdtempSync(path.join(os.tmpdir(), "dip-search-root-fixture-"));
+  const fixtureVenueDir = path.join(fixtureRoot, "data/processed/venues");
+  const nestedCwd = path.join(fixtureRoot, "tmp/workdir/deeper");
+  fs.mkdirSync(fixtureVenueDir, { recursive: true });
+  fs.mkdirSync(nestedCwd, { recursive: true });
+
+  const sourceVenueDir = path.join(process.cwd(), "data/processed/venues");
+  const [firstVenueFile] = fs.readdirSync(sourceVenueDir).filter((file) => file.endsWith(".canonical.json"));
+  assert(typeof firstVenueFile === "string", "Expected at least one canonical venue fixture file.");
+  fs.copyFileSync(path.join(sourceVenueDir, firstVenueFile), path.join(fixtureVenueDir, firstVenueFile));
+
+  const originalCwd = process.cwd();
+  try {
+    process.chdir(nestedCwd);
+    const data = loadSearchData();
+    assert(data.venues.length > 0, "Expected venues to load from parent data root.");
+    assert(data.diagnostics.resolvedRoot === fixtureRoot, `Expected resolved root ${fixtureRoot}, got ${data.diagnostics.resolvedRoot}.`);
+  } finally {
+    process.chdir(originalCwd);
+    fs.rmSync(fixtureRoot, { recursive: true, force: true });
+  }
+
+  console.log(`${suiteLabel} data root resolution works from nested cwd.`);
+};
+
 const verifySearchResults = () => {
   const response = searchVenues("best sauna in new york", 5);
   assert(Array.isArray(response.results), "Search response results should be an array.");
@@ -93,6 +119,7 @@ const verifyApiHandler = async () => {
 const run = async () => {
   verifyDatasetLoads();
   verifySearchDataDegradesWithoutScores();
+  verifyDataRootResolutionFromNestedCwd();
   verifySearchResults();
   await verifyApiHandler();
   console.log(`${suiteLabel} all checks passed.`);

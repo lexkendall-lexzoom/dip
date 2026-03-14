@@ -1,6 +1,5 @@
 import fs from "node:fs";
 import path from "node:path";
-import { fileURLToPath } from "node:url";
 import type { CanonicalVenue, ScoreRecord } from "../schema/models.ts";
 import type { ReviewEvidenceArtifactMap } from "./rankSearchResults.ts";
 
@@ -42,31 +41,30 @@ const readJsonSafe = <T>(filePath: string): T | null => {
 const unique = (values: string[]): string[] => [...new Set(values.map((value) => path.resolve(value)))];
 
 const candidateRoots = (): string[] => {
-  const moduleDir = path.dirname(fileURLToPath(import.meta.url));
-  const roots = [process.cwd(), moduleDir, path.resolve(moduleDir, ".."), path.resolve(moduleDir, "../..")];
-
-  let cursor = moduleDir;
-  for (let i = 0; i < 8; i += 1) {
-    roots.push(cursor);
-    const next = path.dirname(cursor);
-    if (next === cursor) break;
-    cursor = next;
-  }
-
-  return unique(roots);
+  const cwd = process.cwd();
+  return unique([
+    cwd,
+    path.resolve(cwd, ".."),
+    path.resolve(cwd, "../.."),
+    path.resolve(cwd, "../../.."),
+    path.resolve("/var/task"),
+    path.resolve("/var/task/site"),
+    path.resolve("/opt/build/repo"),
+  ].filter((value): value is string => typeof value === "string" && value.length > 0));
 };
 
-const resolveDataRoot = (): { root: string | null; attemptedRoots: string[] } => {
+const resolveDataRoot = (): { root: string | null; attemptedRoots: string[]; attemptedVenueDirs: string[] } => {
   const attempts = candidateRoots();
+  const attemptedVenueDirs = attempts.map((root) => path.join(root, "data/processed/venues"));
 
-  for (const root of attempts) {
-    const venuesDir = path.join(root, "data/processed/venues");
+  for (const [index, root] of attempts.entries()) {
+    const venuesDir = attemptedVenueDirs[index];
     if (fs.existsSync(venuesDir)) {
-      return { root, attemptedRoots: attempts };
+      return { root, attemptedRoots: attempts, attemptedVenueDirs };
     }
   }
 
-  return { root: null, attemptedRoots: attempts };
+  return { root: null, attemptedRoots: attempts, attemptedVenueDirs };
 };
 
 const listJsonFiles = (dir: string, suffix: string): string[] => {
@@ -75,7 +73,7 @@ const listJsonFiles = (dir: string, suffix: string): string[] => {
 };
 
 export const loadSearchData = () => {
-  const { root, attemptedRoots } = resolveDataRoot();
+  const { root, attemptedRoots, attemptedVenueDirs } = resolveDataRoot();
 
   const fallbackRoot = attemptedRoots[0] ?? process.cwd();
   const resolvedRoot = root ?? fallbackRoot;
@@ -86,6 +84,10 @@ export const loadSearchData = () => {
   } satisfies Record<SearchDataKind, string>;
 
   if (!root) {
+    console.error("[search:data] failed to resolve data root", {
+      attemptedRoots,
+      attemptedVenueDirs,
+    });
     throw new SearchDataLoadError("Search dataset directories not found.", {
       venuesLoaded: 0,
       scoresLoaded: 0,
