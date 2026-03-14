@@ -251,6 +251,17 @@ collections:
             required: false
             field: { label: "Image", name: "image", widget: "image" }
 
+
+  - name: "venues"
+    label: "Venues"
+    format: "yaml"
+    extension: "yml"
+    folder: "content/venues/_universal"
+    create: true
+    slug: "{{slug}}"
+    summary: "{{venue.name}} · {{venue.city}}"
+    fields: *venue_fields
+
   - name: "venues_los_angeles"
     label: "Venues · Los Angeles"
     format: "yaml"

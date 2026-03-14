@@ -15,7 +15,9 @@
         "api-search-ready": "tsx scripts/qa/buildSearchReadiness.ts",
         "test:search": "node --experimental-strip-types scripts/tests/verifyDipDays.ts search",
         "test:api": "node --experimental-strip-types scripts/tests/verifyDipDays.ts api",
-        "test:data": "node --experimental-strip-types scripts/tests/verifyDipDays.ts data"
+        "test:data": "node --experimental-strip-types scripts/tests/verifyDipDays.ts data",
+        "venues:backfill:universal": "node scripts/migrations/backfillUniversalVenues.js",
+        "venues:backfill:universal:write": "node scripts/migrations/backfillUniversalVenues.js --write"
     },
     "dependencies": {
         "@11ty/eleventy": "^2.0.1",
