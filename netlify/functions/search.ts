@@ -33,23 +33,37 @@ export const handler = async (event: { queryStringParameters?: Record<string, st
     const response = searchVenues(query);
     return json(200, response);
   } catch (error) {
+    const errorMessage = error instanceof Error ? error.message : String(error);
+    const errorStack = error instanceof Error ? error.stack : undefined;
     if (error instanceof SearchDataLoadError) {
       console.error("[search] dataset load failed", {
+        query,
         message: error.message,
         diagnostics: error.details,
+        stack: errorStack,
       });
       return json(500, {
+        ok: false,
         error: "SEARCH_DATA_LOAD_FAILED",
         message: "Search dataset could not be loaded.",
+        query,
+        intent: null,
+        results: [],
       });
     }
 
     console.error("[search] request failed", {
-      error: error instanceof Error ? error.message : String(error),
+      query,
+      error: errorMessage,
+      stack: errorStack,
     });
     return json(500, {
+      ok: false,
       error: "SEARCH_INTERNAL_ERROR",
       message: "Search request failed.",
+      query,
+      intent: null,
+      results: [],
     });
   }
 };

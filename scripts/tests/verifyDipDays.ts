@@ -1,3 +1,6 @@
+import fs from "node:fs";
+import os from "node:os";
+import path from "node:path";
 import { loadSearchData } from "../../lib/search/loadSearchData.ts";
 import { searchVenues } from "../../lib/search/searchVenues.ts";
 import { handler as searchHandler } from "../../netlify/functions/search.ts";
@@ -25,6 +28,32 @@ const verifyDatasetLoads = () => {
   assert(venues.length > 0, "Expected canonical venues to load.");
   assert(scores.size > 0, "Expected score records to load.");
   console.log(`${suiteLabel} dataset loads: ${venues.length} venues, ${scores.size} scores from ${diagnostics.resolvedRoot}`);
+};
+
+
+const verifySearchDataDegradesWithoutScores = () => {
+  const fixtureRoot = fs.mkdtempSync(path.join(os.tmpdir(), "dip-search-fixture-"));
+  const fixtureVenueDir = path.join(fixtureRoot, "data/processed/venues");
+  fs.mkdirSync(fixtureVenueDir, { recursive: true });
+
+  const sourceVenueDir = path.join(process.cwd(), "data/processed/venues");
+  const [firstVenueFile] = fs.readdirSync(sourceVenueDir).filter((file) => file.endsWith(".canonical.json"));
+  assert(typeof firstVenueFile === "string", "Expected at least one canonical venue fixture file.");
+  fs.copyFileSync(path.join(sourceVenueDir, firstVenueFile), path.join(fixtureVenueDir, firstVenueFile));
+
+  const originalCwd = process.cwd();
+  try {
+    process.chdir(fixtureRoot);
+    const degradedData = loadSearchData();
+    assert(degradedData.venues.length > 0, "Expected venues to load when scores/evidence are missing.");
+    assert(degradedData.scores.size === 0, "Expected missing scores to degrade gracefully to empty map.");
+    assert(Object.keys(degradedData.reviewEvidence).length === 0, "Expected missing evidence to degrade gracefully to empty map.");
+  } finally {
+    process.chdir(originalCwd);
+    fs.rmSync(fixtureRoot, { recursive: true, force: true });
+  }
+
+  console.log(`${suiteLabel} data degradation works: missing scores/evidence does not break search dataset load.`);
 };
 
 const verifySearchResults = () => {
@@ -63,6 +92,7 @@ const verifyApiHandler = async () => {
 
 const run = async () => {
   verifyDatasetLoads();
+  verifySearchDataDegradesWithoutScores();
   verifySearchResults();
   await verifyApiHandler();
   console.log(`${suiteLabel} all checks passed.`);
