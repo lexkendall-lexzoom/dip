@@ -15,7 +15,7 @@ export function generateVenueFile(citySlug: string, normalizedVenue: NormalizedV
   fs.mkdirSync(outputDir, { recursive: true });
 
   if (fs.existsSync(outputPath)) {
-    process.stdout.write(`[skip] ${outputPath} already exists.\n`);
+    process.stdout.write(`[skip-existing] ${normalizedVenue.venue.slug} already exists\n`);
     return { status: "skipped_existing", outputPath };
   }
 
