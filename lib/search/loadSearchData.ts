@@ -27,6 +27,18 @@ export class SearchDataLoadError extends Error {
 
 const readJson = <T>(filePath: string): T => JSON.parse(fs.readFileSync(filePath, "utf8")) as T;
 
+const readJsonSafe = <T>(filePath: string): T | null => {
+  try {
+    return readJson<T>(filePath);
+  } catch (error) {
+    console.warn("[search:data] failed to parse JSON artifact", {
+      filePath,
+      error: error instanceof Error ? error.message : String(error),
+    });
+    return null;
+  }
+};
+
 const unique = (values: string[]): string[] => [...new Set(values.map((value) => path.resolve(value)))];
 
 const candidateRoots = (): string[] => {
@@ -49,8 +61,7 @@ const resolveDataRoot = (): { root: string | null; attemptedRoots: string[] } =>
 
   for (const root of attempts) {
     const venuesDir = path.join(root, "data/processed/venues");
-    const scoresDir = path.join(root, "data/processed/scores");
-    if (fs.existsSync(venuesDir) && fs.existsSync(scoresDir)) {
+    if (fs.existsSync(venuesDir)) {
       return { root, attemptedRoots: attempts };
     }
   }
@@ -85,17 +96,23 @@ export const loadSearchData = () => {
     });
   }
 
-  const venues = listJsonFiles(resolvedPaths.venues, ".canonical.json").map((file) => readJson<CanonicalVenue>(path.join(resolvedPaths.venues, file)));
+  const venues: CanonicalVenue[] = [];
+  for (const file of listJsonFiles(resolvedPaths.venues, ".canonical.json")) {
+    const venue = readJsonSafe<CanonicalVenue>(path.join(resolvedPaths.venues, file));
+    if (venue) venues.push(venue);
+  }
 
   const scores = new Map<string, ScoreRecord>();
   for (const file of listJsonFiles(resolvedPaths.scores, ".score.json")) {
-    const score = readJson<ScoreRecord>(path.join(resolvedPaths.scores, file));
+    const score = readJsonSafe<ScoreRecord>(path.join(resolvedPaths.scores, file));
+    if (!score) continue;
     scores.set(score.venue_id, score);
   }
 
   const reviewEvidence: ReviewEvidenceArtifactMap = {};
   for (const file of listJsonFiles(resolvedPaths.evidence, ".reviews.evidence.json")) {
-    const artifact = readJson<{ venue_id: string; source: string; review_count: number; signals: Array<{ signal: string; sentiment: number; confidence: number; evidence: string }> }>(path.join(resolvedPaths.evidence, file));
+    const artifact = readJsonSafe<{ venue_id: string; source: string; review_count: number; signals: Array<{ signal: string; sentiment: number; confidence: number; evidence: string }> }>(path.join(resolvedPaths.evidence, file));
+    if (!artifact) continue;
     reviewEvidence[artifact.venue_id] = artifact;
   }
 
@@ -108,7 +125,7 @@ export const loadSearchData = () => {
     attemptedRoots,
   };
 
-  if (venues.length === 0 || scores.size === 0) {
+  if (venues.length === 0) {
     throw new SearchDataLoadError("Search dataset files are missing or empty.", diagnostics);
   }
 
