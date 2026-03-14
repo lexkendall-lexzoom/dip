@@ -1,0 +1,26 @@
+---
+pagination:
+  data: directory.cityFacetPages
+  size: 1
+  alias: page
+permalink: "{{ page.path }}"
+---
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>{{ page.name }} in {{ page.cityName }} | DipDays</title>
+  <meta name="description" content="{{ page.intro }}" />
+  {% if not page.indexable %}<meta name="robots" content="noindex,follow" />{% endif %}
+</head>
+<body>
+  <h1>{{ page.name }} in {{ page.cityName }}</h1>
+  <p><strong>{{ page.kindLabel }} page.</strong> {{ page.intro }}</p>
+  <ul>
+    {% for venue in page.venues %}
+    <li><a href="{{ venue.path }}">{{ venue.name }}</a> · {{ venue.primary_category }}</li>
+    {% endfor %}
+  </ul>
+</body>
+</html>
