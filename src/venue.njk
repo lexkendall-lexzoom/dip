@@ -8,19 +8,16 @@ permalink: "/{{ item.citySlug }}/{{ item.venue.slug | default(item.fileSlug) }}/
 {%- set v = item.venue -%}
 {%- set seo = item.seo -%}
 {%- set citySlug = item.citySlug -%}
-{%- set cityName = v.city | default(citySlug | replace('-', ' ') | title) -%}
-{%- set effectiveTitle = seo.title | default(v.seo_title) | default(v.name + " | Dip") -%}
-{%- set effectiveDescription = seo.description | default(v.seo_description) | default(v.description_short) | default('') -%}
 <!DOCTYPE html>
 <html lang="en">
   <head>
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>{{ effectiveTitle }}</title>
-    <meta name="description" content="{{ effectiveDescription }}" />
+      <title>{{ seo.title | default(v.name + " | Dip") }}</title>
+    <meta name="description" content="{{ seo.description | default('') }}" />
     <link rel="canonical" href="https://dipdays.com/{{ citySlug }}/{{ v.slug | default(item.fileSlug) }}/" />
-    <meta property="og:title" content="{{ seo.title | default(v.seo_title) | default(v.name + ' Review | Dip') }}" />
-    <meta property="og:description" content="{{ effectiveDescription }}" />
+    <meta property="og:title" content="{{ seo.title | default(v.name + ' Review | Dip') }}" />
+    <meta property="og:description" content="{{ seo.description | default('') }}" />
     <meta property="og:type" content="article" />
     <meta property="og:url" content="https://dipdays.com/{{ citySlug }}/{{ v.slug | default(item.fileSlug) }}/" />
     {% if seo.social_image %}<meta property="og:image" content="{{ seo.social_image | assetUrl }}" />{% endif %}
@@ -31,14 +28,13 @@ permalink: "/{{ item.citySlug }}/{{ item.venue.slug | default(item.fileSlug) }}/
       "@type":"LocalBusiness",
       "name":{{ v.name | json }},
       "url":{{ ("https://dipdays.com/" + citySlug + "/" + (v.slug | default(item.fileSlug)) + "/") | json }},
-      {% if v.website_url or v.website %}"sameAs":{{ (v.website_url | default(v.website)) | json }},{% endif %}
+      {% if v.website_url %}"sameAs":{{ v.website_url | json }},{% endif %}
       {% if seo.social_image or v.hero_image %}"image":{{ (seo.social_image | default(v.hero_image) | assetUrl) | json }},{% endif %}
       "address":{
         "@type":"PostalAddress",
-        {% if v.address %}"streetAddress":{{ v.address | json }},{% endif %}
-        "addressLocality":{{ cityName | json }}
+        "addressLocality":{{ v.city | default('') | json }}
       },
-      "areaServed":{{ cityName | json }}
+      "areaServed":{{ v.city | default('') | json }}
     }
     </script>
     <link rel="preload" href="/fonts/syne-700.ttf" as="font" type="font/ttf" crossorigin/>
@@ -110,30 +106,25 @@ permalink: "/{{ item.citySlug }}/{{ item.venue.slug | default(item.fileSlug) }}/
                     {% if v.subtitle %}<p class="sub">{{ v.subtitle }}</p>{% endif %}
                     <div class="facts">
                             {% if v.neighborhood %}<div class="fact"><b>Neighborhood</b>{{ v.neighborhood }}</div>{% endif %}
-                            {% if v.price or v.price_range %}<div class="fact"><b>Price</b>{{ v.price | default(v.price_range) }}</div>{% endif %}
+                            {% if v.price %}<div class="fact"><b>Price</b>{{ v.price }}</div>{% endif %}
                             <div class="fact"><b>Score</b>{{ v.score | default("Coming soon") }}</div>
                             {% if v.date_reviewed %}<div class="fact"><b>Date reviewed</b>{{ v.date_reviewed }}</div>{% endif %}
                             {% if v.hours %}<div class="fact wide"><b>Hours</b>{{ v.hours }}</div>{% endif %}
-                            {% if v.primary_category %}<div class="fact"><b>Category</b>{{ v.primary_category }}</div>{% endif %}
-                            {% if v.bathing_style %}<div class="fact"><b>Bathing style</b>{{ v.bathing_style }}</div>{% endif %}
                     </div>
                     {% if v.best_for %}<p style="margin:12px 0 0"><strong>Best for:</strong> {{ v.best_for }}</p>{% endif %}
-                    {% if v.amenities and v.amenities.length > 0 %}<p style="margin:12px 0 0"><strong>Amenities:</strong> {% for amenity in v.amenities %}{{ amenity.amenity | default(amenity) }}{% if not loop.last %}, {% endif %}{% endfor %}</p>{% endif %}
-                    {% if v.website_url or v.website %}<a class="cta" href="{{ v.website_url | default(v.website) }}" target="_blank" rel="noopener noreferrer">Official Website &rarr;</a>{% endif %}
-                    {% if v.booking_url %}<a class="cta" style="margin-left:8px" href="{{ v.booking_url }}" target="_blank" rel="noopener noreferrer">Book now &rarr;</a>{% endif %}
+                    {% if v.website_url %}<a class="cta" href="{{ v.website_url }}" target="_blank" rel="noopener noreferrer">Official Website &rarr;</a>{% endif %}
               </article>
             <article class="box reviewbox">
                   <h2 class="review-title">Dip Review</h2>
-                  <p class="desc">{{ v.review | default(v.description_long) | default("Review coming soon.") }}</p>
+                  <p class="desc">{{ v.review | default("Review coming soon.") }}</p>
             </article>
         </section>
-      {% set galleryItems = v.gallery_images | default(v.gallery) %}
-      {% if galleryItems and galleryItems.length > 0 %}
+      {% if v.gallery_images and v.gallery_images.length > 0 %}
       <section class="box carousel-box">
           <h2 class="carousel-title">Venue Photos</h2>
           <div class="carousel" data-carousel>
                 <div class="carousel-track" data-track>
-                  {% for img in galleryItems %}
+                  {% for img in v.gallery_images %}
                     {%- set imgSrc = (img.image | default(img.src) | default(img.url) | default(img)) | assetUrl -%}
                     {% if imgSrc %}
                         <div class="slide"><img src="{{ imgSrc }}" alt="{{ v.name }} photo {{ loop.index }}" loading="eager" decoding="async" onerror="this.remove();this.closest('.slide').classList.add('placeholder');this.closest('.slide').textContent='Photo unavailable';"/></div>
@@ -145,7 +136,7 @@ permalink: "/{{ item.citySlug }}/{{ item.venue.slug | default(item.fileSlug) }}/
                 <div class="controls">
                         <button class="btn" type="button" data-prev>&#8592; Prev</button>
                         <div class="dots">
-                          {% for img in galleryItems %}
+                          {% for img in v.gallery_images %}
                                   <button class="dot{% if loop.first %} active{% endif %}" type="button" data-dot="{{ loop.index0 }}" aria-label="Slide {{ loop.index }}"></button>
                           {% endfor %}
                         </div>
