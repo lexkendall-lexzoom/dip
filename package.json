@@ -11,7 +11,7 @@
         "import:seed:venues": "node scripts/import_seed_venues.ts",
         "qa:search-ready": "tsx scripts/qa/auditSearchReadiness.ts",
         "populate:launch": "node --experimental-strip-types scripts/agents/runLaunchCities.ts",
-        "populate:city": "node --experimental-strip-types scripts/agents/runLaunchCities.ts --city",
+        "populate:city": "tsx scripts/agents/runCityPopulation.ts",
         "api-search-ready": "tsx scripts/qa/buildSearchReadiness.ts",
         "test:search": "node --experimental-strip-types scripts/tests/verifyDipDays.ts search",
         "test:api": "node --experimental-strip-types scripts/tests/verifyDipDays.ts api",

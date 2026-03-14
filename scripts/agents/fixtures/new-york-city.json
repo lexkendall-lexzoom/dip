@@ -1,0 +1,35 @@
+[
+  {
+    "name": "Othership Flatiron",
+    "city": "New York City",
+    "region": "New York",
+    "country": "United States",
+    "website_url": "https://othership.us",
+    "address": "23 W 20th St, New York, NY 10011",
+    "source_urls": [
+      "https://othership.us"
+    ]
+  },
+  {
+    "name": "Bathhouse Flatiron",
+    "city": "New York City",
+    "region": "New York",
+    "country": "United States",
+    "website_url": "https://www.abathhouse.com",
+    "address": "14 W 22nd St, New York, NY 10010",
+    "source_urls": [
+      "https://www.abathhouse.com"
+    ]
+  },
+  {
+    "name": "AIRE Ancient Baths New York",
+    "city": "New York City",
+    "region": "New York",
+    "country": "United States",
+    "website_url": "https://beaire.com/en/aire-ancient-baths-newyork",
+    "address": "88 Franklin St, New York, NY 10013",
+    "source_urls": [
+      "https://beaire.com/en/aire-ancient-baths-newyork"
+    ]
+  }
+]
