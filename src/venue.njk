@@ -1,200 +1,34 @@
 ---
 pagination:
-  data: venues
+  data: directory.venuePages
   size: 1
-  alias: item
-permalink: "/{{ item.citySlug }}/{{ item.venue.slug | default(item.fileSlug) }}/"
+  alias: page
+permalink: "{{ page.path }}"
 ---
-{%- set v = item.venue -%}
-{%- set seo = item.seo -%}
-{%- set citySlug = item.citySlug -%}
-{%- set cityName = v.city | default(citySlug | replace('-', ' ') | title) -%}
-{%- set effectiveTitle = seo.title | default(v.seo_title) | default(v.name + " | Dip") -%}
-{%- set effectiveDescription = seo.description | default(v.seo_description) | default(v.description_short) | default('') -%}
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-      <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>{{ effectiveTitle }}</title>
-    <meta name="description" content="{{ effectiveDescription }}" />
-    <link rel="canonical" href="https://dipdays.com/{{ citySlug }}/{{ v.slug | default(item.fileSlug) }}/" />
-    <meta property="og:title" content="{{ seo.title | default(v.seo_title) | default(v.name + ' Review | Dip') }}" />
-    <meta property="og:description" content="{{ effectiveDescription }}" />
-    <meta property="og:type" content="article" />
-    <meta property="og:url" content="https://dipdays.com/{{ citySlug }}/{{ v.slug | default(item.fileSlug) }}/" />
-    {% if seo.social_image %}<meta property="og:image" content="{{ seo.social_image | assetUrl }}" />{% endif %}
-    <meta name="twitter:card" content="summary_large_image" />
-    <script type="application/ld+json">
-    {
-      "@context":"https://schema.org",
-      "@type":"LocalBusiness",
-      "name":{{ v.name | json }},
-      "url":{{ ("https://dipdays.com/" + citySlug + "/" + (v.slug | default(item.fileSlug)) + "/") | json }},
-      {% if v.website_url or v.website %}"sameAs":{{ (v.website_url | default(v.website)) | json }},{% endif %}
-      {% if seo.social_image or v.hero_image %}"image":{{ (seo.social_image | default(v.hero_image) | assetUrl) | json }},{% endif %}
-      "address":{
-        "@type":"PostalAddress",
-        {% if v.address %}"streetAddress":{{ v.address | json }},{% endif %}
-        "addressLocality":{{ cityName | json }}
-      },
-      "areaServed":{{ cityName | json }}
-    }
-    </script>
-    <link rel="preload" href="/fonts/syne-700.ttf" as="font" type="font/ttf" crossorigin/>
-  <link rel="preload" href="/fonts/playfair-display-400-italic.ttf" as="font" type="font/ttf" crossorigin/>
-  <link rel="stylesheet" href="/fonts/fonts.css"/>
-    <style>
-          :root{--ink:#111;--page:#f3f0e8;--card:#fff;--mist:#d8d4ca;--teal:#0b7c78;--font-sans:'Syne',ui-sans-serif,system-ui,-apple-system,'Segoe UI',sans-serif;--font-serif:'Playfair Display',Georgia,'Times New Roman',serif;}
-          *{box-sizing:border-box}
-          html{max-width:100%;overflow-x:hidden}
-          body{margin:0;background:var(--page);color:var(--ink);font-family:var(--font-sans);font-size-adjust:.52;max-width:100%;overflow-x:hidden}
-          main{max-width:100%;overflow-x:hidden}
-          @supports not (font-size-adjust:1){body{font-size-adjust:none}}
-          .sub,.desc{font-size-adjust:.48}
-          .shell{max-width:1240px;width:100%;margin:0 auto;padding:30px 24px 64px;overflow-x:hidden}
-          .back{display:inline-block;margin-bottom:16px;color:var(--teal);font-size:11px;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;font-weight:700}
-          .hero-media{position:relative;border:2px solid var(--ink);aspect-ratio:16/9;overflow:hidden;background:#ddd}
-          .hero-media::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.2),rgba(0,0,0,.45));pointer-events:none}
-          .hero-media > img{width:100%;height:100%;object-fit:cover;display:block}
-          .chips{position:absolute;left:14px;top:14px;display:flex;gap:8px;flex-wrap:wrap;z-index:3}
-          .chip{background:rgba(17,17,17,.88);color:#fff;padding:6px 10px;font-size:10px;letter-spacing:.12em;text-transform:uppercase}
-          .details-grid{display:grid;grid-template-columns:.85fr 1.25fr;gap:20px;margin-top:20px}
-          .box{background:var(--card);border:2px solid var(--ink);padding:20px}
-          .fieldbox{min-height:270px}
-          .reviewbox{min-height:340px}
-          h1{margin:0 0 10px;font-family:var(--font-sans);font-weight:800;font-size:clamp(32px,3.4vw,52px);line-height:.95;letter-spacing:-.03em;text-rendering:geometricPrecision;-webkit-font-smoothing:antialiased}
-          .sub{font-family:var(--font-serif);font-style:italic;color:#555;margin:0 0 14px}
-          .facts{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-          .fact{border:1px solid var(--mist);background:#faf8f3;padding:10px;min-height:72px}
-          .fact b{display:block;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:#666;margin-bottom:4px}
-          .fact.wide{grid-column:1 / -1;min-height:60px}
-          .cta{display:inline-block;margin-top:14px;padding:10px 14px;background:#111;color:#fff;text-decoration:none;font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:700}
-          .review-title,.carousel-title{margin:0 0 10px;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:#666}
-          .desc{line-height:1.75;margin:0;font-size:16px}
-          .carousel-box{margin-top:16px}
-          .carousel{position:relative}
-          .carousel-track{position:relative;overflow:hidden;border:2px solid var(--ink);background:#111;aspect-ratio:16/9}
-          .slide{position:absolute;inset:0;display:none;align-items:center;justify-content:center;color:#fff;text-transform:uppercase;letter-spacing:.08em}
-          .slide.active{display:flex}
-          .slide img{width:100%;height:100%;object-fit:cover;display:block}
-          .slide.placeholder{background:linear-gradient(135deg,#20403f,#3e6662);font-size:12px}
-          .controls{display:flex;justify-content:space-between;align-items:center;margin-top:10px}
-          .btn{background:#111;color:#fff;border:none;padding:9px 12px;font-size:11px;letter-spacing:.12em;text-transform:uppercase;cursor:pointer}
-          .dots{display:flex;gap:8px}
-          .dot{width:9px;height:9px;border-radius:50%;background:#c7c2b8;border:none;cursor:pointer}
-          .dot.active{background:#0b7c78}
-          @media (max-width: 980px){
-                  .shell{padding:20px 12px 40px}
-                  .details-grid{grid-template-columns:1fr}
-                  .facts{grid-template-columns:1fr}
-                  .fieldbox,.reviewbox{min-height:auto}
-                  .desc{font-size:15px}
-                  .btn{padding:8px 10px;font-size:10px}
-          }
-        </style>
-  </head>
-  <body>
-    <main class="shell">
-        <a class="back" href="/#venue=/{{ citySlug }}/{{ v.slug | default(item.fileSlug) }}/">&#8592; Back to Dip directory</a>
-        <section class="hero-media" aria-label="Venue hero image">
-              {% if v.hero_image %}<img src="{{ v.hero_image | assetUrl }}" alt="{{ v.name }} hero image" loading="eager"/>{% endif %}
-              <div class="chips">
-                {% if v.best_for %}<span class="chip">{{ v.best_for | truncate(30, true) }}</span>{% endif %}
-                <span class="chip">{{ citySlug | replace("-", " ") | upper | truncate(3, false, "") }} Score {{ v.score | default("Coming soon") }}</span>
-              </div>
-        </section>
-        <section class="details-grid">
-              <article class="box fieldbox">
-                      <h1>{{ v.name }}</h1>
-                    {% if v.subtitle %}<p class="sub">{{ v.subtitle }}</p>{% endif %}
-                    <div class="facts">
-                            {% if v.neighborhood %}<div class="fact"><b>Neighborhood</b>{{ v.neighborhood }}</div>{% endif %}
-                            {% if v.price or v.price_range %}<div class="fact"><b>Price</b>{{ v.price | default(v.price_range) }}</div>{% endif %}
-                            <div class="fact"><b>Score</b>{{ v.score | default("Coming soon") }}</div>
-                            {% if v.date_reviewed %}<div class="fact"><b>Date reviewed</b>{{ v.date_reviewed }}</div>{% endif %}
-                            {% if v.hours %}<div class="fact wide"><b>Hours</b>{{ v.hours }}</div>{% endif %}
-                            {% if v.primary_category %}<div class="fact"><b>Category</b>{{ v.primary_category }}</div>{% endif %}
-                            {% if v.bathing_style %}<div class="fact"><b>Bathing style</b>{{ v.bathing_style }}</div>{% endif %}
-                    </div>
-                    {% if v.best_for %}<p style="margin:12px 0 0"><strong>Best for:</strong> {{ v.best_for }}</p>{% endif %}
-                    {% if v.amenities and v.amenities.length > 0 %}<p style="margin:12px 0 0"><strong>Amenities:</strong> {% for amenity in v.amenities %}{{ amenity.amenity | default(amenity) }}{% if not loop.last %}, {% endif %}{% endfor %}</p>{% endif %}
-                    {% if v.website_url or v.website %}<a class="cta" href="{{ v.website_url | default(v.website) }}" target="_blank" rel="noopener noreferrer">Official Website &rarr;</a>{% endif %}
-                    {% if v.booking_url %}<a class="cta" style="margin-left:8px" href="{{ v.booking_url }}" target="_blank" rel="noopener noreferrer">Book now &rarr;</a>{% endif %}
-              </article>
-            <article class="box reviewbox">
-                  <h2 class="review-title">Dip Review</h2>
-                  <p class="desc">{{ v.review | default(v.description_long) | default("Review coming soon.") }}</p>
-            </article>
-        </section>
-      {% set galleryItems = v.gallery_images | default(v.gallery) %}
-      {% if galleryItems and galleryItems.length > 0 %}
-      <section class="box carousel-box">
-          <h2 class="carousel-title">Venue Photos</h2>
-          <div class="carousel" data-carousel>
-                <div class="carousel-track" data-track>
-                  {% for img in galleryItems %}
-                    {%- set imgSrc = (img.image | default(img.src) | default(img.url) | default(img)) | assetUrl -%}
-                    {% if imgSrc %}
-                        <div class="slide"><img src="{{ imgSrc }}" alt="{{ v.name }} photo {{ loop.index }}" loading="eager" decoding="async" onerror="this.remove();this.closest('.slide').classList.add('placeholder');this.closest('.slide').textContent='Photo unavailable';"/></div>
-                    {% else %}
-                        <div class="slide placeholder">Photo Unavailable</div>
-                    {% endif %}
-                  {% endfor %}
-                </div>
-                <div class="controls">
-                        <button class="btn" type="button" data-prev>&#8592; Prev</button>
-                        <div class="dots">
-                          {% for img in galleryItems %}
-                                  <button class="dot{% if loop.first %} active{% endif %}" type="button" data-dot="{{ loop.index0 }}" aria-label="Slide {{ loop.index }}"></button>
-                          {% endfor %}
-                        </div>
-                        <button class="btn" type="button" data-next>Next &#8594;</button>
-                </div>
-          </div>
-      </section>
-      {% endif %}
-    </main>
-  <script>
-    (function() {
-        document.querySelectorAll('[data-carousel]').forEach((carousel) => {
-              const track = carousel.querySelector('[data-track]');
-              const slides = Array.from(track.children);
-              const dots = Array.from(carousel.querySelectorAll('[data-dot]'));
-              const prevBtn = carousel.querySelector('[data-prev]');
-              const nextBtn = carousel.querySelector('[data-next]');
-              if (slides.length === 0) {
-                carousel.style.display = 'none';
-                return;
-              }
-              if (slides.length === 1) {
-                if (prevBtn) prevBtn.style.display = 'none';
-                if (nextBtn) nextBtn.style.display = 'none';
-              }
-              let index = 0;
-              function render() {
-                      slides.forEach((slide, i) => slide.classList.toggle('active', i === index));
-                      dots.forEach((d, i) => d.classList.toggle('active', i === index));
-              }
-              if (prevBtn) {
-                prevBtn.addEventListener('click', () => {
-                  index = (index - 1 + slides.length) % slides.length;
-                  render();
-                });
-              }
-              if (nextBtn) {
-                nextBtn.addEventListener('click', () => {
-                  index = (index + 1) % slides.length;
-                  render();
-                });
-              }
-              dots.forEach((dot, i) => dot.addEventListener('click', () => {
-                index = i;
-                render();
-              }));
-              render();
-        });
-    })();
-  </script>
-  </body>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>{{ page.name }} in {{ page.cityName }} | DipDays</title>
+  <meta name="description" content="{{ page.name }} is listed in the DipDays directory for {{ page.cityName }}." />
+  <script type="application/ld+json">{{ page.schema | json }}</script>
+</head>
+<body>
+  <h1>{{ page.name }}</h1>
+  <p>{{ page.cityName }} · {{ page.categoryName }}</p>
+  {% if page.website %}<p><a href="{{ page.website }}">Official website</a></p>{% endif %}
+
+  <h2>Internal links</h2>
+  <ul>
+    <li><a href="{{ page.linkGraph.city.path }}">{{ page.linkGraph.city.name }} page</a>{% if not page.linkGraph.city.indexable %} (noindex){% endif %}</li>
+    <li><a href="{{ page.linkGraph.category.path }}">{{ page.linkGraph.category.name }} category</a>{% if not page.linkGraph.category.indexable %} (noindex){% endif %}</li>
+    {% if page.linkGraph.bathingStyle %}
+    <li><a href="{{ page.linkGraph.bathingStyle.path }}">{{ page.linkGraph.bathingStyle.name }} in {{ page.cityName }}</a>{% if not page.linkGraph.bathingStyle.indexable %} (noindex){% endif %}</li>
+    {% endif %}
+    {% for amenity in page.linkGraph.amenities %}
+    <li><a href="{{ amenity.path }}">{{ amenity.name }}</a>{% if not amenity.indexable %} (noindex){% endif %}</li>
+    {% endfor %}
+  </ul>
+</body>
 </html>

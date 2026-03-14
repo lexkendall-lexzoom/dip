@@ -1,0 +1,35 @@
+---
+pagination:
+  data: directory.categoryPages
+  size: 1
+  alias: page
+permalink: "{{ page.path }}"
+---
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>{{ page.name }} Venues | DipDays</title>
+  <meta name="description" content="{{ page.intro }}" />
+  {% if not page.indexable %}<meta name="robots" content="noindex,follow" />{% endif %}
+</head>
+<body>
+  <h1>{{ page.name }}</h1>
+  <p>{{ page.intro }}</p>
+
+  <h2>Venues</h2>
+  <ul>
+    {% for venue in page.venues %}
+    <li><a href="{{ venue.path }}">{{ venue.name }}</a> · {{ venue.cityName }}</li>
+    {% endfor %}
+  </ul>
+
+  <h2>Cities with this category</h2>
+  <ul>
+    {% for city in page.cities %}
+    <li><a href="{{ city.path }}">{{ city.cityName }}</a> ({{ city.count }}){% if not city.indexable %} noindex{% endif %}</li>
+    {% endfor %}
+  </ul>
+</body>
+</html>
