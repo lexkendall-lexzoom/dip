@@ -24,6 +24,74 @@ module.exports = function(eleventyConfig) {
     }
   }
 
+
+
+  function normalizeVenueData(data) {
+    const venue = (data && typeof data === "object" && data.venue && typeof data.venue === "object") ? data.venue : {};
+    const seo = (data && typeof data === "object" && data.seo && typeof data.seo === "object") ? data.seo : {};
+
+    const legacyGallery = Array.isArray(venue.gallery_images)
+      ? venue.gallery_images
+          .map((image) => {
+            if (typeof image === 'string') return image;
+            if (image && typeof image === 'object') return image.image || image.src || image.url || '';
+            return '';
+          })
+          .filter(Boolean)
+      : [];
+
+    const gallery = Array.isArray(venue.gallery)
+      ? venue.gallery
+          .map((item) => {
+            if (typeof item === 'string') return item;
+            if (item && typeof item === 'object') return item.image || item.src || item.url || '';
+            return '';
+          })
+          .filter((item) => typeof item === 'string' && item.trim().length > 0)
+      : legacyGallery;
+
+    const sourceUrls = Array.isArray(venue.source_urls)
+      ? venue.source_urls
+          .map((item) => {
+            if (typeof item === 'string') return item;
+            if (item && typeof item === 'object') return item.source_url || item.url || '';
+            return '';
+          })
+          .filter((item) => typeof item === 'string' && item.trim().length > 0)
+      : [];
+
+    // Keep both legacy and new keys so existing templates/pages continue to render while CMS moves to the new schema.
+    const normalizedVenue = {
+      ...venue,
+      status: venue.status || 'draft',
+      short_description: venue.short_description || venue.best_for || venue.subtitle || '',
+      long_description: venue.long_description || venue.review || '',
+      tagline: venue.tagline || venue.subtitle || '',
+      price_tier: venue.price_tier || venue.price || '',
+      last_verified_at: venue.last_verified_at || venue.date_reviewed || '',
+      gallery,
+      gallery_images: gallery.map((image) => ({ image })),
+      subtitle: venue.subtitle || venue.tagline || '',
+      review: venue.review || venue.long_description || '',
+      best_for: venue.best_for || venue.short_description || '',
+      price: venue.price || venue.price_tier || '',
+      date_reviewed: venue.date_reviewed || venue.last_verified_at || '',
+      hero_image: venue.hero_image || venue.seo_image || seo.social_image || gallery[0] || '',
+      source_urls: sourceUrls,
+    };
+
+    return {
+      ...data,
+      seo: {
+        ...seo,
+        title: seo.title || normalizedVenue.seo_title || '',
+        description: seo.description || normalizedVenue.seo_description || '',
+        social_image: seo.social_image || normalizedVenue.seo_image || normalizedVenue.hero_image || '',
+      },
+      venue: normalizedVenue,
+    };
+  }
+
   // ── Global data: homepage ───────────────────────────────
   eleventyConfig.addGlobalData("homepage", () => {
     return readYaml(path.join(__dirname, 'content', 'homepage.yml'));
@@ -59,7 +127,7 @@ module.exports = function(eleventyConfig) {
       const cityPath = path.join(venuesDir, cityDir);
       const files = fs.readdirSync(cityPath).filter(f => f.endsWith('.yml'));
       for (const file of files) {
-        const data = readYaml(path.join(cityPath, file));
+        const data = normalizeVenueData(readYaml(path.join(cityPath, file)));
         const slug = file.replace('.yml', '');
         results.push({
           citySlug: cityDir,
