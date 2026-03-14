@@ -1,50 +1,90 @@
 ---
 pagination:
-  data: directory.cityPages
+  data: cityPages
   size: 1
-  alias: page
-permalink: "{{ page.path }}"
+  alias: cityPage
+permalink: "/{{ cityPage.slug }}/"
 ---
-<!doctype html>
+{%- set pg = cityPage.page -%}
+{%- set seo = cityPage.seo -%}
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>{{ page.name }} Bathhouses, Saunas & Cold Plunges | DipDays</title>
-  <meta name="description" content="{{ page.intro }}" />
-  {% if not page.indexable %}<meta name="robots" content="noindex,follow" />{% endif %}
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{ seo.title | default(pg.heading + " | Dip") }}</title>
+  <meta name="description" content="{{ seo.description | default('') }}" />
+  <link rel="canonical" href="https://dipdays.com/{{ cityPage.slug }}/" />
+  <meta property="og:title" content="{{ seo.title | default(pg.heading + ' | Dip') }}" />
+  <meta property="og:description" content="{{ seo.description | default('') }}" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://dipdays.com/{{ cityPage.slug }}/" />
+  {% if seo.social_image %}<meta property="og:image" content="{{ seo.social_image }}" />{% endif %}
+  <meta name="twitter:card" content="summary" />
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"CollectionPage",
+    "name":{{ seo.title | default(pg.heading + " | Dip") | json }},
+    "url":{{ ("https://dipdays.com/" + cityPage.slug + "/") | json }},
+    "description":{{ seo.description | default('') | json }},
+    "about":["sauna","bathhouse","bath house","cold plunge","contrast bathing",{{ cityPage.slug | replace('-', ' ') | json }}],
+    "mainEntity":{
+      "@type":"ItemList",
+      "itemListElement":[
+        {% if cityPage.cards %}
+          {% for card in cityPage.cards %}
+          {
+            "@type":"ListItem",
+            "position":{{ loop.index }},
+            "url":{{ ("https://dipdays.com" + card.url) | json }},
+            "name":{{ card.title | json }}
+          }{% if not loop.last %},{% endif %}
+          {% endfor %}
+        {% endif %}
+      ]
+    }
+  }
+  </script>
+  <link rel="preload" href="/fonts/syne-700.ttf" as="font" type="font/ttf" crossorigin/>
+  <link rel="preload" href="/fonts/playfair-display-400-italic.ttf" as="font" type="font/ttf" crossorigin/>
+  <link rel="stylesheet" href="/fonts/fonts.css"/>
+  <style>
+    :root{--ink:#111;--page:#f3f0e8;--card:#fff;--mist:#d8d4ca;--teal:#0b7c78;--teal-dark:#085a57;--font-sans:'Syne',ui-sans-serif,system-ui,-apple-system,'Segoe UI',sans-serif;--font-serif:'Playfair Display',Georgia,serif;}
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--page);color:var(--ink);font-family:var(--font-sans)}
+    .shell{max-width:1040px;margin:0 auto;padding:36px 24px 64px}
+    .back{display:inline-block;color:var(--teal);font-size:12px;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;font-weight:700;margin-bottom:20px}
+    h1{margin:0 0 14px;font-size:clamp(36px,4.3vw,62px);line-height:.95;letter-spacing:-.03em}
+    .intro{margin:0 0 22px;font-family:var(--font-serif);font-style:italic;color:#555;line-height:1.7;max-width:820px}
+    .hero-media{width:100%;aspect-ratio:16/7;object-fit:cover;border:2px solid var(--ink);margin:8px 0 20px}
+    .cards{display:grid;gap:14px}
+    .card{display:block;background:var(--card);border:2px solid var(--ink);padding:20px;text-decoration:none;color:inherit;transition:transform .15s ease, box-shadow .15s ease, border-color .15s ease}
+    .card-media{display:block;width:100%;aspect-ratio:16/8;object-fit:cover;border:1px solid var(--mist);margin-bottom:12px}
+    .card:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 rgba(0,0,0,.16);border-color:var(--teal)}
+    .card h2{margin:0 0 8px;font-size:clamp(26px,2.6vw,40px);line-height:1;letter-spacing:-.02em}
+    .card p{margin:0;color:#444;line-height:1.65}
+    .eyebrow{margin:0 0 8px;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:#666}
+  </style>
 </head>
 <body>
-  <h1>{{ page.name }}</h1>
-  <p>{{ page.intro }}</p>
-
-  <h2>Featured venues</h2>
-  <ul>
-    {% for venue in page.featuredVenues %}
-    <li><a href="{{ venue.path }}">{{ venue.name }}</a> · {{ venue.primary_category }}</li>
-    {% endfor %}
-  </ul>
-
-  <h2>Top categories in {{ page.name }}</h2>
-  <ul>
-    {% for category in page.topCategories %}
-    <li>
-      <a href="{{ category.path }}">{{ category.name }}</a>
-      ({{ category.count }})
-      {% if not category.indexable %}<small>noindex</small>{% endif %}
-    </li>
-    {% endfor %}
-  </ul>
-
-  <h2>Relevant amenities</h2>
-  <ul>
-    {% for amenity in page.relevantAmenities %}
-    <li>
-      <a href="{{ amenity.path }}">{{ amenity.name }}</a>
-      ({{ amenity.count }})
-      {% if not amenity.indexable %}<small>noindex</small>{% endif %}
-    </li>
-    {% endfor %}
-  </ul>
+  <main class="shell">
+    <a class="back" href="/cities/">← All cities</a>
+    <h1>{{ pg.heading }}</h1>
+    {% if pg.hero_image %}<img class="hero-media" src="{{ pg.hero_image }}" alt="{{ pg.heading }}" />{% endif %}
+    <p class="intro">{{ pg.intro }}</p>
+    <section class="cards">
+      {% if cityPage.cards %}
+        {% for card in cityPage.cards %}
+      <a class="card" href="{{ card.url }}">
+        {% if card.image %}<img class="card-media" src="{{ card.image }}" alt="{{ card.title }}" loading="lazy" />{% endif %}
+        <p class="eyebrow">{{ card.eyebrow }}</p>
+        <h2>{{ card.title }}</h2>
+        <p>{{ card.description }}</p>
+      </a>
+        {% endfor %}
+      {% endif %}
+    </section>
+  </main>
 </body>
 </html>

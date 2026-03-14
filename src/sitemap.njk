@@ -4,20 +4,20 @@ eleventyExcludeFromCollections: true
 ---
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://dipdays.com/</loc></url>
-  {% for city in directory.cityPages %}
-    {% if city.indexable %}<url><loc>https://dipdays.com{{ city.path }}</loc></url>{% endif %}
+  <url>
+    <loc>https://dipdays.com/</loc>
+  </url>
+  <url>
+    <loc>https://dipdays.com/cities/</loc>
+  </url>
+  {% for city in cityPages %}
+  <url>
+    <loc>https://dipdays.com/{{ city.slug }}/</loc>
+  </url>
   {% endfor %}
-  {% for venue in directory.venuePages %}
-    <url><loc>https://dipdays.com{{ venue.path }}</loc></url>
-  {% endfor %}
-  {% for category in directory.categoryPages %}
-    {% if category.indexable %}<url><loc>https://dipdays.com{{ category.path }}</loc></url>{% endif %}
-  {% endfor %}
-  {% for amenity in directory.amenityPages %}
-    {% if amenity.indexable %}<url><loc>https://dipdays.com{{ amenity.path }}</loc></url>{% endif %}
-  {% endfor %}
-  {% for facet in directory.cityFacetPages %}
-    {% if facet.indexable %}<url><loc>https://dipdays.com{{ facet.path }}</loc></url>{% endif %}
+  {% for item in venues %}
+  <url>
+    <loc>https://dipdays.com/{{ item.citySlug }}/{{ item.venue.slug | default(item.fileSlug) }}/</loc>
+  </url>
   {% endfor %}
 </urlset>
