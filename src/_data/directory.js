@@ -29,6 +29,54 @@ function normalizeAmenity(feature) {
   return { slug, name: titleize(slug) };
 }
 
+function toArray(value) {
+  if (Array.isArray(value)) return value.filter(Boolean);
+  return value ? [value] : [];
+}
+
+function normalizeImage(value) {
+  if (!value) return null;
+  if (typeof value === 'string') return value;
+  if (typeof value === 'object') return value.url || value.src || value.image || null;
+  return null;
+}
+
+function deriveRating(venue) {
+  const rawValue = venue.rating || venue.rating_value || venue.average_rating || venue.avg_rating;
+  const ratingValue = rawValue != null ? Number(rawValue) : null;
+  if (!ratingValue || Number.isNaN(ratingValue)) return undefined;
+
+  const rawCount = venue.review_count || venue.rating_count || venue.reviews_count || venue.total_reviews;
+  const ratingCount = rawCount != null ? Number(rawCount) : undefined;
+
+  return {
+    '@type': 'AggregateRating',
+    ratingValue,
+    ...(ratingCount && !Number.isNaN(ratingCount) ? { ratingCount } : {})
+  };
+}
+
+function deriveAddress(venue) {
+  const searchFacets = venue.search_facets || {};
+  const address = {
+    '@type': 'PostalAddress',
+    ...(venue.address || venue.street_address ? { streetAddress: venue.address || venue.street_address } : {}),
+    ...(searchFacets.neighborhood ? { addressLocality: searchFacets.neighborhood } : {}),
+    city: venue.city,
+    country: venue.country,
+    ...(venue.postal_code ? { postalCode: venue.postal_code } : {})
+  };
+
+  return {
+    '@type': 'PostalAddress',
+    ...(address.streetAddress ? { streetAddress: address.streetAddress } : {}),
+    ...(address.addressLocality || address.city ? { addressLocality: address.city || address.addressLocality } : {}),
+    ...(address.addressRegion ? { addressRegion: address.addressRegion } : {}),
+    ...(address.postalCode ? { postalCode: address.postalCode } : {}),
+    ...(address.country ? { addressCountry: address.country } : {})
+  };
+}
+
 function getVenueTypes(venue) {
   const base = ['LocalBusiness'];
   const isSpa = (venue.categories || []).some((c) => /spa/i.test(c)) || /spa/i.test(venue.primary_category || '');
@@ -174,7 +222,11 @@ module.exports = () => {
     intro: `Find venues with ${amenity.name.toLowerCase()} across DipDays cities.`
   })).sort((a, b) => b.venueCount - a.venueCount);
 
-  const cityFacetPages = [...cityCategoryMap.values(), ...cityAmenityMap.values()]
+  const cityFacetPages = [...cityCategoryMap.values(), ...cityAmenityMap.values(), ...cityBathingMap.values().map((item) => ({
+    ...item,
+    cityName: cityMap.get(item.citySlug)?.name || titleize(item.citySlug),
+    facetType: 'bathing-style'
+  }))]
     .filter((item) => !venueSlugSet.has(`${item.citySlug}/${item.slug}`))
     .reduce((acc, item) => {
       const key = `${item.citySlug}/${item.slug}`;
@@ -189,8 +241,10 @@ module.exports = () => {
     path: `/${item.citySlug}/${item.slug}/`,
     intro: item.facetType === 'category'
       ? `${item.name} culture in ${item.cityName}: a focused list of top places from DipDays data.`
-      : `${item.name} spots in ${item.cityName}: compare venues with this amenity.`,
-    kindLabel: item.facetType === 'category' ? 'Category' : 'Amenity'
+      : item.facetType === 'amenity'
+        ? `${item.name} spots in ${item.cityName}: compare venues with this amenity.`
+        : `${item.name} bathing style in ${item.cityName}: discover this format across local venues.`,
+    kindLabel: item.facetType === 'category' ? 'Category' : item.facetType === 'amenity' ? 'Amenity' : 'Bathing style'
   })).sort((a, b) => b.venueCount - a.venueCount);
 
   const venuePages = venues.map((venue) => {
@@ -215,18 +269,19 @@ module.exports = () => {
         '@type': getVenueTypes(venue),
         name: venue.name,
         url: `https://dipdays.com/${venue.citySlug}/${venue.slug}/`,
-        image: [],
-        address: {
-          '@type': 'PostalAddress',
-          addressLocality: venue.city,
-          addressCountry: venue.country
-        },
+        image: [...new Set([
+          ...toArray(venue.images).map(normalizeImage),
+          ...toArray(venue.image).map(normalizeImage),
+          ...toArray(venue.photos).map(normalizeImage)
+        ].filter(Boolean))],
+        address: deriveAddress(venue),
         geo: venue.coordinates ? {
           '@type': 'GeoCoordinates',
           latitude: venue.coordinates.lat,
           longitude: venue.coordinates.lng
         } : undefined,
-        sameAs: venue.website ? [venue.website] : undefined
+        sameAs: venue.website ? [venue.website] : undefined,
+        aggregateRating: deriveRating(venue)
       }
     };
   });
