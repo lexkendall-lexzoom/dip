@@ -1,0 +1,19 @@
+seo:
+  title: AIRE Ancient Baths New York
+  description: Draft venue profile. Needs editorial review.
+  social_image: ''
+venue:
+  name: AIRE Ancient Baths New York
+  slug: aire-ancient-baths-new-york
+  status: draft
+  city: new-york-city
+  country: United States
+  short_description: Draft venue profile. Needs editorial review.
+  long_description: ''
+  address: 88 Franklin St, New York, NY 10013
+  website_url: https://beaire.com/en/aire-ancient-baths-newyork
+  primary_archetype: Other
+  hero_image: ''
+  gallery_images: []
+  source_urls:
+    - https://beaire.com/en/aire-ancient-baths-newyork

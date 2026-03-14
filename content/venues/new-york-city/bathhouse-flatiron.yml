@@ -1,0 +1,19 @@
+seo:
+  title: Bathhouse Flatiron
+  description: Draft venue profile. Needs editorial review.
+  social_image: ''
+venue:
+  name: Bathhouse Flatiron
+  slug: bathhouse-flatiron
+  status: draft
+  city: new-york-city
+  country: United States
+  short_description: Draft venue profile. Needs editorial review.
+  long_description: ''
+  address: 14 W 22nd St, New York, NY 10010
+  website_url: https://www.abathhouse.com
+  primary_archetype: Other
+  hero_image: ''
+  gallery_images: []
+  source_urls:
+    - https://www.abathhouse.com
