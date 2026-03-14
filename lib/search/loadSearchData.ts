@@ -1,5 +1,6 @@
 import fs from "node:fs";
 import path from "node:path";
+import { fileURLToPath } from "node:url";
 import type { CanonicalVenue, ScoreRecord } from "../schema/models.ts";
 import type { ReviewEvidenceArtifactMap } from "./rankSearchResults.ts";
 
@@ -29,9 +30,11 @@ const readJson = <T>(filePath: string): T => JSON.parse(fs.readFileSync(filePath
 const unique = (values: string[]): string[] => [...new Set(values.map((value) => path.resolve(value)))];
 
 const candidateRoots = (): string[] => {
-  const roots: string[] = [];
-  let cursor = process.cwd();
-  for (let i = 0; i < 10; i += 1) {
+  const moduleDir = path.dirname(fileURLToPath(import.meta.url));
+  const roots = [process.cwd(), moduleDir, path.resolve(moduleDir, ".."), path.resolve(moduleDir, "../..")];
+
+  let cursor = moduleDir;
+  for (let i = 0; i < 8; i += 1) {
     roots.push(cursor);
     const next = path.dirname(cursor);
     if (next === cursor) break;

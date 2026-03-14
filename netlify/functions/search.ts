@@ -33,7 +33,7 @@ export const handler = async (event: { queryStringParameters?: Record<string, st
     const response = searchVenues(query);
     return json(200, response);
   } catch (error) {
-    if (error instanceof SearchDataLoadError || (error as Error)?.name === "SearchDataLoadError") {
+    if (error instanceof SearchDataLoadError) {
       console.error("[search] dataset load failed", {
         message: error.message,
         diagnostics: error.details,
