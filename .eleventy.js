@@ -61,8 +61,10 @@ module.exports = function(eleventyConfig) {
       for (const file of files) {
         const data = readYaml(path.join(cityPath, file));
         const slug = file.replace('.yml', '');
+        const explicitCitySlug = data?.venue?.city_slug;
         results.push({
           citySlug: cityDir,
+          assignedCitySlug: explicitCitySlug || cityDir,
           fileSlug: slug,
           ...data
         });
