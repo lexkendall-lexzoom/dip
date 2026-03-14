@@ -106,85 +106,126 @@ collections:
         preview_path: "/chicago/"
         fields: *page_fields
 
-  - name: "venues_new_york_city"
-    label: "Venues · New York City"
+  - name: "venues"
+    label: "Venues"
+    description: "Universal editor for DipDays venue pages across all city folders."
     format: "yaml"
     extension: "yml"
-    folder: "content/venues/new-york-city"
-    create: true
+    folder: "content/venues"
+    create: false
     slug: "{{slug}}"
-    preview_path: "/new-york-city/{{slug}}/"
-    summary: "{{venue.name}}"
-    fields: &venue_fields
+    nested:
+      depth: 3
+      summary: "{{dirname}} / {{filename}}"
+    preview_path: "/{{path}}/"
+    identifier_field: "venue.name"
+    summary: "{{venue.city}} · {{venue.name}}"
+    sortable_fields: ["commit_date", "title", "venue.city", "venue.slug", "venue.status", "venue.last_verified_at"]
+    search_fields: ["venue.name", "venue.slug", "venue.city", "venue.region", "venue.country", "venue.neighborhood", "venue.primary_archetype", "venue.secondary_archetypes", "venue.amenities", "venue.rituals", "venue.atmosphere_tags", "venue.setting_tags", "venue.status"]
+    view_groups:
+      - label: "By City"
+        field: "venue.city"
+      - label: "By Status"
+        field: "venue.status"
+      - label: "By Archetype"
+        field: "venue.primary_archetype"
+    fields:
       - label: "SEO"
         name: "seo"
         widget: "object"
+        hint: "Optional overrides. Leave blank to fall back to defaults where available."
         fields:
-          - { label: "Page Title", name: "title", widget: "string" }
-          - { label: "Meta Description", name: "description", widget: "text" }
-          - { label: "Social Image", name: "social_image", widget: "image", required: false }
-      - label: "Venue Content"
+          - { label: "SEO · Title", name: "title", widget: "string", required: false, hint: "Override title tag for this venue page." }
+          - { label: "SEO · Description", name: "description", widget: "text", required: false, hint: "Short summary for search and social previews." }
+          - { label: "SEO · Image", name: "social_image", widget: "image", required: false, hint: "Open Graph/Twitter image." }
+      - label: "Venue"
         name: "venue"
         widget: "object"
         fields:
-          - { label: "Venue Name", name: "name", widget: "string" }
-          - { label: "City", name: "city", widget: "string" }
-          - { label: "Slug", name: "slug", widget: "string" }
-          - { label: "Subtitle", name: "subtitle", widget: "string", required: false }
-          - { label: "Hero Image", name: "hero_image", widget: "image", required: false }
-          - { label: "Neighborhood", name: "neighborhood", widget: "string", required: false }
-          - { label: "Price", name: "price", widget: "string", required: false }
-          - { label: "Score", name: "score", widget: "string", required: false }
-          - { label: "Date Reviewed", name: "date_reviewed", widget: "string", required: false }
-          - { label: "Hours", name: "hours", widget: "string", required: false }
-          - { label: "Best For", name: "best_for", widget: "string", required: false }
-          - { label: "Official Website URL", name: "website_url", widget: "string", required: false }
-          - { label: "Dip Review", name: "review", widget: "text", required: false }
-          - label: "Gallery Images"
+          - { label: "Basic Info · Name", name: "name", widget: "string", hint: "Public venue name." }
+          - { label: "Basic Info · Slug", name: "slug", widget: "string", hint: "URL segment for this venue page (keep stable)." }
+          - { label: "Basic Info · Tagline", name: "subtitle", widget: "string", required: false, hint: "Short one-line positioning statement." }
+          - { label: "Basic Info · Short Description", name: "short_description", widget: "text", required: false, hint: "1–2 sentence summary for listings/cards." }
+          - { label: "Basic Info · Long Description", name: "review", widget: "markdown", required: false, hint: "Main editorial review body shown on the venue page." }
+          - { label: "Location · City", name: "city", widget: "string", hint: "City display name (for example: New York City)." }
+          - { label: "Location · Region", name: "region", widget: "string", required: false, hint: "State/province/region." }
+          - { label: "Location · Country", name: "country", widget: "string", required: false, default: "United States" }
+          - { label: "Location · Neighborhood", name: "neighborhood", widget: "string", required: false }
+          - { label: "Location · Address", name: "address", widget: "text", required: false }
+          - { label: "Location · Latitude", name: "lat", widget: "number", value_type: "float", required: false, min: -90, max: 90 }
+          - { label: "Location · Longitude", name: "lng", widget: "number", value_type: "float", required: false, min: -180, max: 180 }
+          - { label: "Links · Website URL", name: "website_url", widget: "string", required: false }
+          - { label: "Links · Booking URL", name: "booking_url", widget: "string", required: false }
+          - { label: "Links · Instagram URL", name: "instagram_url", widget: "string", required: false }
+          - label: "Experience · Primary Archetype"
+            name: "primary_archetype"
+            widget: "select"
+            required: false
+            options: ["Luxury Bathhouse", "Social Sauna", "Traditional Banya", "Social Wellness Club", "Neighborhood Spa", "Regional Spa Resort", "Other"]
+          - label: "Experience · Secondary Archetypes"
+            name: "secondary_archetypes"
+            widget: "select"
+            required: false
+            multiple: true
+            options: ["Luxury Bathhouse", "Social Sauna", "Traditional Banya", "Social Wellness Club", "Neighborhood Spa", "Regional Spa Resort", "Other"]
+          - label: "Experience · Bathhouse Type"
+            name: "bathhouse_type"
+            widget: "select"
+            required: false
+            options: ["Roman Thermal", "Nordic Sauna", "Russian Banya", "Turkish Hammam", "Korean Jjimjilbang", "Japanese Onsen", "Modern Hybrid", "Other"]
+          - label: "Experience · Social Style"
+            name: "social_style"
+            widget: "select"
+            required: false
+            options: ["silent", "quiet", "mixed", "social", "event-driven"]
+          - label: "Experience · Atmosphere Tags"
+            name: "atmosphere_tags"
+            widget: "select"
+            required: false
+            multiple: true
+            options: ["candlelit", "minimalist", "luxury", "rustic", "nature-forward", "urban", "intimate", "high-energy", "serene", "ritual-focused"]
+          - label: "Experience · Setting Tags"
+            name: "setting_tags"
+            widget: "select"
+            required: false
+            multiple: true
+            options: ["hotel", "standalone", "members-club", "warehouse", "historic", "rooftop", "waterfront", "resort", "residential", "downtown"]
+          - label: "Amenities / Rituals · Amenities"
+            name: "amenities"
+            widget: "select"
+            required: false
+            multiple: true
+            options: ["sauna", "steam_room", "cold_plunge", "hot_pool", "thermal_circuit", "massage", "bodywork", "facials", "cryotherapy", "red_light", "compression", "recovery_clinic", "iv_therapy", "breathwork", "movement_classes", "lounges", "food_and_beverage"]
+          - label: "Amenities / Rituals · Rituals"
+            name: "rituals"
+            widget: "select"
+            required: false
+            multiple: true
+            options: ["aufguss", "guided_ritual", "sound_bath", "tea_ceremony", "scrub", "contrast_cycle", "community_event", "meditation", "breathwork_session", "seasonal_programming"]
+          - { label: "Amenities / Rituals · Hours", name: "hours", widget: "text", required: false }
+          - { label: "Amenities / Rituals · Price Tier", name: "price_tier", widget: "select", required: false, options: ["$", "$$", "$$$", "$$$$"] }
+          - { label: "Amenities / Rituals · Reservation Required", name: "reservation_required", widget: "boolean", required: false, default: false }
+          - { label: "Media · Hero Image", name: "hero_image", widget: "image", required: false }
+          - label: "Media · Gallery"
             name: "gallery_images"
             widget: "list"
+            required: false
+            hint: "Add supporting venue images."
             field: { label: "Image", name: "image", widget: "image" }
-
-  - name: "venues_los_angeles"
-    label: "Venues · Los Angeles"
-    format: "yaml"
-    extension: "yml"
-    folder: "content/venues/los-angeles"
-    create: true
-    slug: "{{slug}}"
-    preview_path: "/los-angeles/{{slug}}/"
-    summary: "{{venue.name}}"
-    fields: *venue_fields
-
-  - name: "venues_miami"
-    label: "Venues · Miami"
-    format: "yaml"
-    extension: "yml"
-    folder: "content/venues/miami"
-    create: true
-    slug: "{{slug}}"
-    preview_path: "/miami/{{slug}}/"
-    summary: "{{venue.name}}"
-    fields: *venue_fields
-
-  - name: "venues_san_francisco"
-    label: "Venues · San Francisco"
-    format: "yaml"
-    extension: "yml"
-    folder: "content/venues/san-francisco"
-    create: true
-    slug: "{{slug}}"
-    preview_path: "/san-francisco/{{slug}}/"
-    summary: "{{venue.name}}"
-    fields: *venue_fields
-
-  - name: "venues_chicago"
-    label: "Venues · Chicago"
-    format: "yaml"
-    extension: "yml"
-    folder: "content/venues/chicago"
-    create: true
-    slug: "{{slug}}"
-    preview_path: "/chicago/{{slug}}/"
-    summary: "{{venue.name}}"
-    fields: *venue_fields
+          - { label: "SEO · Override Title", name: "seo_title", widget: "string", required: false }
+          - { label: "SEO · Override Description", name: "seo_description", widget: "text", required: false }
+          - { label: "SEO · Override Image", name: "seo_image", widget: "image", required: false }
+          - { label: "SEO · Canonical Path Override", name: "canonical_path_override", widget: "string", required: false, hint: "Optional path override beginning with /." }
+          - { label: "Publishing / Internal · Status", name: "status", widget: "select", required: false, default: "draft", options: ["draft", "reviewed", "published"] }
+          - { label: "Publishing / Internal · Featured", name: "featured", widget: "boolean", required: false, default: false }
+          - { label: "Publishing / Internal · Editor Notes", name: "editor_notes", widget: "markdown", required: false, hint: "Internal notes only." }
+          - label: "Publishing / Internal · Source URLs"
+            name: "source_urls"
+            widget: "list"
+            required: false
+            field: { label: "Source URL", name: "source_url", widget: "string" }
+          - { label: "Publishing / Internal · Last Verified At", name: "last_verified_at", widget: "datetime", required: false, format: "YYYY-MM-DDTHH:mm:ss.SSS[Z]", date_format: "YYYY-MM-DD", time_format: "HH:mm" }
+          - { label: "Legacy · Date Reviewed", name: "date_reviewed", widget: "string", required: false }
+          - { label: "Legacy · Best For", name: "best_for", widget: "string", required: false }
+          - { label: "Legacy · Price", name: "price", widget: "string", required: false }
+          - { label: "Legacy · Score", name: "score", widget: "string", required: false, hint: "Existing page-compatible field. Do not use for canonical scoring." }
