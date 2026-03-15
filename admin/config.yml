@@ -147,6 +147,9 @@ collections:
           - { label: "Basic Info · Tagline", name: "subtitle", widget: "string", required: false, hint: "Short one-line positioning statement." }
           - { label: "Basic Info · Short Description", name: "short_description", widget: "text", required: false, hint: "1–2 sentence summary for listings/cards." }
           - { label: "Basic Info · Long Description", name: "review", widget: "markdown", required: false, hint: "Main editorial review body shown on the venue page." }
+          - { label: "Basic Info · Editorial Summary", name: "editorial_summary", widget: "text", required: false, hint: "80–120 word wellness editorial summary shown near the top of the venue page." }
+          - { label: "Ratings · DipScore", name: "score", widget: "string", required: false, hint: "Displayed as DipScore on the venue page. Do not modify scoring logic." }
+          - { label: "Ratings · Audience Rating", name: "audience_rating", widget: "string", required: false, hint: "Public audience rating (for example: 4.5)." }
           - { label: "Location · City", name: "city", widget: "string", hint: "City display name (for example: New York City)." }
           - { label: "Location · Region", name: "region", widget: "string", required: false, hint: "State/province/region." }
           - { label: "Location · Country", name: "country", widget: "string", required: false, default: "United States" }
@@ -157,6 +160,7 @@ collections:
           - { label: "Links · Website URL", name: "website_url", widget: "string", required: false }
           - { label: "Links · Booking URL", name: "booking_url", widget: "string", required: false }
           - { label: "Links · Instagram URL", name: "instagram_url", widget: "string", required: false }
+          - { label: "Links · Booking Link Override", name: "booking_link", widget: "string", required: false, hint: "Optional override used by the venue page booking CTA." }
           - label: "Experience · Primary Archetype"
             name: "primary_archetype"
             widget: "select"
@@ -205,6 +209,22 @@ collections:
           - { label: "Amenities / Rituals · Hours", name: "hours", widget: "text", required: false }
           - { label: "Amenities / Rituals · Price Tier", name: "price_tier", widget: "select", required: false, options: ["$", "$$", "$$$", "$$$$"] }
           - { label: "Amenities / Rituals · Reservation Required", name: "reservation_required", widget: "boolean", required: false, default: false }
+          - label: "Ritual Experience · Ritual Tags"
+            name: "ritual_tags"
+            widget: "list"
+            required: false
+            hint: "Display tags shown in the hero block (for example: Banya, Cold Plunge, Steam)."
+            field: { label: "Tag", name: "ritual_tag", widget: "string" }
+          - { label: "Ritual Experience · Sauna", name: "sauna", widget: "string", required: false }
+          - { label: "Ritual Experience · Steam Room", name: "steam_room", widget: "string", required: false }
+          - { label: "Ritual Experience · Cold Plunge", name: "cold_plunge", widget: "string", required: false }
+          - { label: "Ritual Experience · Hammam", name: "hammam", widget: "string", required: false }
+          - { label: "Ritual Experience · Social Space", name: "social_space", widget: "string", required: false }
+          - { label: "Ritual Experience · Food Bar", name: "food_bar", widget: "string", required: false }
+          - { label: "Ritual Experience · Massage", name: "massage", widget: "string", required: false }
+          - { label: "Pricing · Day Pass Price", name: "day_pass_price", widget: "string", required: false }
+          - { label: "Pricing · Membership Price", name: "membership_price", widget: "string", required: false }
+          - { label: "Pricing · Opening Hours", name: "opening_hours", widget: "text", required: false }
           - { label: "Media · Hero Image", name: "hero_image", widget: "image", required: false }
           - label: "Media · Gallery"
             name: "gallery_images"
@@ -212,6 +232,14 @@ collections:
             required: false
             hint: "Add supporting venue images."
             field: { label: "Image", name: "image", widget: "image" }
+          - label: "Media · Instagram Posts"
+            name: "instagram_posts"
+            widget: "list"
+            required: false
+            hint: "Add Instagram embed URLs to include in the horizontal gallery."
+            fields:
+              - { label: "Embed URL", name: "embed_url", widget: "string", required: false }
+              - { label: "Post URL", name: "url", widget: "string", required: false }
           - { label: "SEO · Override Title", name: "seo_title", widget: "string", required: false }
           - { label: "SEO · Override Description", name: "seo_description", widget: "text", required: false }
           - { label: "SEO · Override Image", name: "seo_image", widget: "image", required: false }
@@ -228,4 +256,3 @@ collections:
           - { label: "Legacy · Date Reviewed", name: "date_reviewed", widget: "string", required: false }
           - { label: "Legacy · Best For", name: "best_for", widget: "string", required: false }
           - { label: "Legacy · Price", name: "price", widget: "string", required: false }
-          - { label: "Legacy · Score", name: "score", widget: "string", required: false, hint: "Existing page-compatible field. Do not use for canonical scoring." }
