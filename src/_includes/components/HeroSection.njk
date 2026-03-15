@@ -1,0 +1,17 @@
+<section class="hero-section">
+  <div class="hero-image" aria-label="Venue hero image">
+    {% if v.hero_image %}<img src="{{ v.hero_image | assetUrl }}" alt="{{ v.name }} hero image" loading="eager" decoding="async" />{% endif %}
+  </div>
+  <article class="panel">
+    <h1>{{ v.name }}</h1>
+    <p class="city">{{ v.city | default(citySlug | replace('-', ' ')) }}</p>
+    {% include "components/RatingsBlock.njk" %}
+    {% if ritualTags.length %}
+      <p class="eyebrow" style="margin-bottom:8px">Ritual Tags</p>
+      <div class="tags">{% for tag in ritualTags %}<span class="tag">{{ tag }}</span>{% endfor %}</div>
+    {% elif v.best_for %}
+      <p class="eyebrow" style="margin-bottom:8px">Ritual Tags</p>
+      <div class="tags"><span class="tag">{{ v.best_for }}</span></div>
+    {% endif %}
+  </article>
+</section>

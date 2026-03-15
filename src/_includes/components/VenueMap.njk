@@ -1,0 +1,8 @@
+<article class="panel">
+  <h2 class="eyebrow">Map</h2>
+  {% if latitude and longitude %}
+    <iframe class="map-frame" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q={{ latitude }},{{ longitude }}&z=14&output=embed" title="{{ v.name }} location"></iframe>
+  {% else %}
+    <p class="copy">Map coordinates are not yet published for this venue.</p>
+  {% endif %}
+</article>

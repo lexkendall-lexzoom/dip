@@ -1,0 +1,18 @@
+<section class="gallery-wrap panel">
+  <h2 class="eyebrow">Image Gallery</h2>
+  <div class="gallery-track">
+    {% if v.hero_image %}<article class="gallery-card"><img src="{{ v.hero_image | assetUrl }}" alt="{{ v.name }} hero" loading="lazy" decoding="async"/></article>{% endif %}
+    {% for img in v.gallery_images | default([]) %}
+      {% if loop.index <= 12 %}
+        {%- set imgSrc = (img.image | default(img.src) | default(img.url) | default(img)) | assetUrl -%}
+        {% if imgSrc %}<article class="gallery-card"><img src="{{ imgSrc }}" alt="{{ v.name }} photo {{ loop.index }}" loading="lazy" decoding="async"/></article>{% endif %}
+      {% endif %}
+    {% endfor %}
+    {% for ig in instagramEmbeds %}
+      {% if loop.index <= 3 %}
+        {%- set igUrl = ig.embed_url | default(ig.url) | default(ig) -%}
+        {% if igUrl %}<article class="gallery-card"><iframe src="{{ igUrl }}" title="Instagram post {{ loop.index }}" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe></article>{% endif %}
+      {% endif %}
+    {% endfor %}
+  </div>
+</section>

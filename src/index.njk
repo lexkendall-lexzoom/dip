@@ -317,6 +317,15 @@ footer{background:var(--ink);border-top:1px solid rgba(255,255,255,.08);padding:
 
 
 
+
+/* HOMEPAGE DISCOVERY */
+.discovery-shell{max-width:1280px;margin:18px auto 0;padding:0 44px 20px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.discovery-block{background:#fff;border:2px solid var(--ink);padding:16px}
+.discovery-block h2{font-size:12px;letter-spacing:.12em;text-transform:uppercase;margin-bottom:8px}
+.discovery-block p,.discovery-block li{font-size:13px;color:#444;line-height:1.45}
+.chip-row{display:flex;flex-wrap:wrap;gap:8px}.chip-row span,.chip-row a{font-size:11px;padding:5px 9px;background:var(--teal-bg);border:1px solid #cde3e1;color:var(--teal);text-decoration:none}
+.mini-cards{display:grid;gap:8px}.mini-cards a{font-size:12px;color:var(--ink);text-decoration:none;padding:8px;border:1px solid var(--mist)}
+
 /* SEARCH V1 */
 .search-wrap{max-width:1280px;margin:0 auto;padding:0 44px 24px}
 .search-panel{background:#fff;border:2px solid var(--ink);box-shadow:6px 6px 0 var(--ink);padding:18px}
@@ -343,6 +352,7 @@ footer{background:var(--ink);border-top:1px solid rgba(255,255,255,.08);padding:
 @media(max-width:900px){
   .hero{grid-template-columns:1fr;padding:72px 22px 40px;gap:36px}
   .search-wrap{padding:0 18px 18px}
+  .discovery-shell{grid-template-columns:1fr;padding:0 18px 18px}
   .search-form{flex-direction:column}
 
   .hero-right-col{display:none}
@@ -415,6 +425,8 @@ footer{background:var(--ink);border-top:1px solid rgba(255,255,255,.08);padding:
     <div id="search-results" class="search-results"></div>
   </section>
 </div>
+
+{% include "components/HomepageDiscovery.njk" %}
 
 <!-- CITY NAVIGATION -->
 <div class="city-nav" id="city-nav">

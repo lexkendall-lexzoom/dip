@@ -1,0 +1,17 @@
+<article class="panel">
+  <h2 class="eyebrow">Ritual Experience</h2>
+  <div class="ritual-grid">
+    {% for ritual in [
+      {"k":"sauna","i":"♨️","v":v.sauna},
+      {"k":"steam room","i":"💨","v":v.steam_room},
+      {"k":"cold plunge","i":"🧊","v":v.cold_plunge},
+      {"k":"hammam","i":"🛁","v":v.hammam},
+      {"k":"hot spring","i":"🌋","v":v.hot_spring},
+      {"k":"social space","i":"🫖","v":v.social_space},
+      {"k":"food bar","i":"🥗","v":v.food_bar},
+      {"k":"massage","i":"💆","v":v.massage}
+    ] %}
+      <div class="ritual-item">{{ ritual.i }} <strong>{{ ritual.k | title }}</strong><br/>{{ ritual.v | default('Not listed') }}</div>
+    {% endfor %}
+  </div>
+</article>
