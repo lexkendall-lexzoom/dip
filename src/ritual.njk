@@ -1,0 +1,13 @@
+---
+pagination:
+  data: ritualPages
+  size: 1
+  alias: ritual
+permalink: "/ritual/{{ ritual.slug }}/"
+---
+<!doctype html><html><body>
+<h1>{{ ritual.label }}</h1>
+<p>{{ ritual.label }} ritual description and context.</p>
+<h2>Global Venues</h2><ul>{% for item in ritual.venues %}<li><a href="/{{ item.citySlug }}/{{ item.venue.slug | default(item.fileSlug) }}/">{{ item.venue.name }}</a></li>{% endfor %}</ul>
+<h2>Top Cities</h2><ul>{% for city in ritual.topCities %}<li><a href="/city/{{ city.slug }}/">{{ city.label }}</a> ({{ city.count }})</li>{% endfor %}</ul>
+</body></html>

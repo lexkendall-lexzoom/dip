@@ -2,6 +2,9 @@ const fs = require('fs');
 const path = require('path');
 const yaml = require('js-yaml');
 const nunjucks = require('nunjucks');
+const CORE_TYPES = ['sauna', 'steam_bath', 'hot_spring', 'thermal_bath', 'cold_plunge', 'bathhouse', 'spa_ritual'];
+const CULTURAL_TRADITIONS = ['finnish_sauna', 'russian_banya', 'japanese_onsen', 'japanese_sento', 'korean_jjimjilbang', 'turkish_hammam', 'roman_thermal_bath', 'icelandic_geothermal_pool', 'indigenous_sweat_lodge'];
+const MODERN_FORMATS = ['urban_bathhouse', 'luxury_bathhouse', 'social_sauna', 'wellness_spa', 'hot_spring_resort'];
 
 module.exports = function(eleventyConfig) {
 
@@ -92,6 +95,26 @@ module.exports = function(eleventyConfig) {
     };
   }
 
+
+
+  const toSlug = (value) => String(value || '')
+    .toLowerCase()
+    .trim()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-|-$/g, '');
+
+  const startCase = (value) => String(value || '')
+    .replace(/[_-]+/g, ' ')
+    .replace(/\b\w/g, (ch) => ch.toUpperCase());
+
+  const ritualLabelMap = {
+    sauna: 'Sauna',
+    onsen: 'Onsen',
+    banya: 'Banya',
+    hammam: 'Hammam',
+    'hot-spring': 'Hot Spring',
+  };
+
   // ── Global data: homepage ───────────────────────────────
   eleventyConfig.addGlobalData("homepage", () => {
     return readYaml(path.join(__dirname, 'content', 'homepage.yml'));
@@ -129,15 +152,126 @@ module.exports = function(eleventyConfig) {
       for (const file of files) {
         const data = normalizeVenueData(readYaml(path.join(cityPath, file)));
         const slug = file.replace('.yml', '');
+        const venue = data.venue || {};
+        const lat = typeof venue.lat === 'number' ? venue.lat : Number(venue.lat);
+        const lng = typeof venue.lng === 'number' ? venue.lng : Number(venue.lng);
+        const cityMetadata = {
+          city: venue.city || cityDir.replace(/-/g, ' '),
+          country: venue.country || '',
+          lat: Number.isFinite(lat) ? lat : 0,
+          lng: Number.isFinite(lng) ? lng : 0,
+        };
+
         results.push({
           citySlug: cityDir,
           fileSlug: slug,
-          ...data
+          ...data,
+          venue: {
+            ...venue,
+            city_metadata: venue.city_metadata || cityMetadata,
+          },
         });
       }
     }
     return results;
   });
+
+
+
+  eleventyConfig.addGlobalData("taxonomy", () => ({
+    core_types: CORE_TYPES,
+    cultural_traditions: CULTURAL_TRADITIONS,
+    modern_formats: MODERN_FORMATS,
+  }));
+
+  eleventyConfig.addGlobalData("cityTaxonomyPages", () => {
+    const fallbackVenues = (() => {
+      const venuesDir = path.join(__dirname, 'content', 'venues');
+      const rows = [];
+      if (!fs.existsSync(venuesDir)) return rows;
+      const cityDirs = fs.readdirSync(venuesDir).filter(d => fs.statSync(path.join(venuesDir, d)).isDirectory());
+      cityDirs.forEach((cityDir) => {
+        fs.readdirSync(path.join(venuesDir, cityDir)).filter(f => f.endsWith('.yml')).forEach((file) => {
+          const data = normalizeVenueData(readYaml(path.join(venuesDir, cityDir, file)));
+          rows.push({ citySlug: cityDir, fileSlug: file.replace('.yml', ''), ...data });
+        });
+      });
+      return rows;
+    })();
+
+    const cityMap = new Map();
+    fallbackVenues.forEach((item) => {
+      const citySlug = item.citySlug || toSlug(item.venue?.city || '');
+      if (!citySlug) return;
+      const venue = item.venue || {};
+      const score = Number(venue.score);
+      const list = cityMap.get(citySlug) || [];
+      list.push({ ...item, score: Number.isFinite(score) ? score : 0 });
+      cityMap.set(citySlug, list);
+    });
+
+    const desired = [
+      'new-york','london','helsinki','tokyo','seoul','sydney','mexico-city','san-francisco','berlin','paris','madrid','miami','los-angeles','budapest','istanbul','reykjavik','bangkok','dubai'
+    ];
+
+    return desired.map((slug) => {
+      const cityVenues = cityMap.get(slug) || [];
+      const rituals = new Map();
+      cityVenues.forEach(({ venue }) => {
+        (venue.ritual_elements || venue.rituals || []).forEach((ritual) => {
+          const key = toSlug(ritual).replace(/_/g, '-');
+          rituals.set(key, (rituals.get(key) || 0) + 1);
+        });
+        if (venue.core_type) {
+          const key = toSlug(venue.core_type).replace(/_/g, '-');
+          rituals.set(key, (rituals.get(key) || 0) + 1);
+        }
+      });
+      const topRituals = [...rituals.entries()].sort((a,b)=>b[1]-a[1]).slice(0,5).map(([key,count])=>({ key, label: startCase(key), count }));
+      const featuredVenues = [...cityVenues].sort((a,b)=>b.score-a.score).slice(0,6);
+      return { slug, cityName: startCase(slug), venues: cityVenues, topRituals, featuredVenues };
+    });
+  });
+
+  eleventyConfig.addGlobalData("ritualPages", () => {
+    const rituals = [
+      { slug: 'sauna', label: 'Sauna', aliases: ['sauna'] },
+      { slug: 'onsen', label: 'Onsen', aliases: ['onsen', 'japanese_onsen', 'hot_spring'] },
+      { slug: 'banya', label: 'Banya', aliases: ['banya', 'russian_banya'] },
+      { slug: 'hammam', label: 'Hammam', aliases: ['hammam', 'turkish_hammam'] },
+      { slug: 'hot-spring', label: 'Hot Spring', aliases: ['hot-spring', 'hot_spring'] },
+    ];
+    const venuesDir = path.join(__dirname, 'content', 'venues');
+    const all = [];
+    if (fs.existsSync(venuesDir)) {
+      fs.readdirSync(venuesDir).filter(d => fs.statSync(path.join(venuesDir, d)).isDirectory()).forEach((cityDir) => {
+        fs.readdirSync(path.join(venuesDir, cityDir)).filter(f => f.endsWith('.yml')).forEach((file) => {
+          const data = normalizeVenueData(readYaml(path.join(venuesDir, cityDir, file)));
+          all.push({ citySlug: cityDir, fileSlug: file.replace('.yml',''), ...data });
+        });
+      });
+    }
+
+    return rituals.map((ritual) => {
+      const matches = all.filter((item) => {
+        const v = item.venue || {};
+        const values = [v.core_type, v.cultural_tradition, ...(v.ritual_elements || []), ...(v.rituals || [])]
+          .map((it) => toSlug(String(it || '')).replace(/_/g, '-'));
+        return ritual.aliases.some((alias) => values.includes(toSlug(alias).replace(/_/g, '-')));
+      });
+      const cityCounts = new Map();
+      matches.forEach((item) => cityCounts.set(item.citySlug, (cityCounts.get(item.citySlug) || 0) + 1));
+      const topCities = [...cityCounts.entries()].sort((a,b)=>b[1]-a[1]).slice(0,6).map(([slug,count])=>({ slug, label:startCase(slug), count }));
+      return { ...ritual, venues: matches, topCities };
+    });
+  });
+
+  eleventyConfig.addGlobalData("cityRitualPages", () => ([
+    { ritual: 'sauna', city: 'helsinki' },
+    { ritual: 'onsen', city: 'tokyo' },
+    { ritual: 'banya', city: 'new-york' },
+    { ritual: 'hammam', city: 'istanbul' },
+  ].map((item) => ({ ...item, ritualLabel: ritualLabelMap[item.ritual] || startCase(item.ritual), cityLabel: startCase(item.city) }))));
 
   // ── Nunjucks filter: safe output for HTML ───────────────
   eleventyConfig.addFilter("safe", function(value) {

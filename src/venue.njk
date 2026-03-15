@@ -110,6 +110,10 @@ permalink: "/{{ item.citySlug }}/{{ item.venue.slug | default(item.fileSlug) }}/
                             <div class="fact"><b>Score</b>{{ v.score | default("Coming soon") }}</div>
                             {% if v.date_reviewed %}<div class="fact"><b>Date reviewed</b>{{ v.date_reviewed }}</div>{% endif %}
                             {% if v.hours %}<div class="fact wide"><b>Hours</b>{{ v.hours }}</div>{% endif %}
+                            {% if v.core_type %}<div class="fact"><b>Core Ritual Type</b>{{ v.core_type | replace('_', ' ') }}</div>{% endif %}
+                            {% if v.cultural_tradition %}<div class="fact"><b>Cultural Tradition</b>{{ v.cultural_tradition | replace('_', ' ') }}</div>{% endif %}
+                            {% if v.modern_format %}<div class="fact"><b>Modern Format</b>{{ v.modern_format | replace('_', ' ') }}</div>{% endif %}
+                            {% if v.ritual_elements and v.ritual_elements.length > 0 %}<div class="fact wide"><b>Ritual Elements</b>{{ v.ritual_elements | join(' + ') | replace('_', ' ') }}</div>{% endif %}
                     </div>
                     {% if v.best_for %}<p style="margin:12px 0 0"><strong>Best for:</strong> {{ v.best_for }}</p>{% endif %}
                     {% if v.website_url %}<a class="cta" href="{{ v.website_url }}" target="_blank" rel="noopener noreferrer">Official Website &rarr;</a>{% endif %}
