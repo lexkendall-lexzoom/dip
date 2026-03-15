@@ -1,0 +1,40 @@
+<section class="discovery-shell">
+  <article class="discovery-block">
+    <h2>Search hero</h2>
+    <p>Search by city, ritual, or mood to find your next recovery session.</p>
+  </article>
+  <article class="discovery-block">
+    <h2>Trending rituals</h2>
+    <div class="chip-row">
+      <span>Cold Plunge</span><span>Aufguss Sauna</span><span>Steam Ritual</span><span>Hammam</span>
+    </div>
+  </article>
+  <article class="discovery-block">
+    <h2>Map discovery</h2>
+    <p>Scan nearby venues visually and compare neighborhoods at a glance.</p>
+  </article>
+  <article class="discovery-block">
+    <h2>Featured venues</h2>
+    <div class="mini-cards">
+      {% for item in venues | sort(false, false, 'venue.score') %}
+        {% if loop.index <= 4 %}
+          <a href="/{{ item.citySlug }}/{{ item.venue.slug | default(item.fileSlug) }}/">{{ item.venue.name }}</a>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </article>
+  <article class="discovery-block">
+    <h2>Top collections</h2>
+    <ul>
+      <li>Best social bathhouses</li>
+      <li>Quiet recovery sanctuaries</li>
+      <li>High-heat contrast circuits</li>
+    </ul>
+  </article>
+  <article class="discovery-block">
+    <h2>Cities explorer</h2>
+    <div class="chip-row">
+      {% for city in cityPages %}<a href="/{{ city.slug }}/">{{ city.name | default(city.slug | replace('-', ' ')) }}</a>{% endfor %}
+    </div>
+  </article>
+</section>

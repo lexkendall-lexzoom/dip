@@ -1,0 +1,15 @@
+{% if related.length %}
+<section class="panel" style="margin-top:18px">
+  <h2 class="eyebrow">Related Venues</h2>
+  <div class="cards">
+    {% for rv in (related | sort(false, false, 'venue.score')) %}
+      {% if loop.index <= 4 %}
+        <a class="card" href="/{{ rv.citySlug }}/{{ rv.venue.slug | default(rv.fileSlug) }}/">
+          <b>{{ rv.venue.name }}</b>
+          <span>{{ rv.venue.city | default(rv.citySlug | replace('-', ' ')) }} · DipScore {{ rv.venue.score | default('—') }}</span>
+        </a>
+      {% endif %}
+    {% endfor %}
+  </div>
+</section>
+{% endif %}
