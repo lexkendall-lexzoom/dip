@@ -18,7 +18,17 @@ export function generateVenueYaml(venue: CanonicalVenue, score: ScoreRecord, edi
     slug: venue.slug,
     city: venue.city,
     country: venue.country,
+    city_metadata: venue.city_metadata ?? {
+      city: venue.city,
+      country: venue.country,
+      lat: venue.coordinates.lat,
+      lng: venue.coordinates.lng,
+    },
     categories: venue.categories,
+    core_type: venue.core_type,
+    cultural_tradition: venue.cultural_tradition,
+    modern_format: venue.modern_format,
+    ritual_elements: venue.ritual_elements,
     features: venue.features,
     dip_scores: {
       ritual_quality: score.ritual_quality,

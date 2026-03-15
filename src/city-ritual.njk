@@ -1,0 +1,13 @@
+---
+pagination:
+  data: cityRitualPages
+  size: 1
+  alias: page
+permalink: "/{{ page.ritual }}/{{ page.city }}/"
+---
+<!doctype html><html><body>
+<h1>{{ page.ritualLabel }} in {{ page.cityLabel }}</h1>
+<p>SEO landing page for {{ page.ritualLabel }} experiences in {{ page.cityLabel }}.</p>
+<p><a href="/city/{{ page.city }}/">Explore {{ page.cityLabel }}</a></p>
+<p><a href="/ritual/{{ page.ritual }}/">Explore {{ page.ritualLabel }}</a></p>
+</body></html>

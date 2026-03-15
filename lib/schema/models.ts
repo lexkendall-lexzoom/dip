@@ -1,3 +1,5 @@
+import type { CoreType, CulturalTradition, ModernFormat } from "./taxonomy.ts";
+
 export const SOURCE_TYPES = ["official_site", "review", "editorial", "aggregator", "manual"] as const;
 export type SourceType = typeof SOURCE_TYPES[number];
 
@@ -81,6 +83,16 @@ export interface CanonicalVenue {
   categories: string[];
   features: string[];
   venue_type: VenueType;
+  core_type?: CoreType;
+  cultural_tradition?: CulturalTradition;
+  modern_format?: ModernFormat;
+  ritual_elements?: CoreType[];
+  city_metadata?: {
+    city: string;
+    country: string;
+    lat: number;
+    lng: number;
+  };
   category: PrimaryCategory;
   primary_category: PrimaryCategory;
   bathing_style: BathingStyle;

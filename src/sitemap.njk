@@ -15,6 +15,21 @@ eleventyExcludeFromCollections: true
     <loc>https://dipdays.com/{{ city.slug }}/</loc>
   </url>
   {% endfor %}
+  {% for city in cityTaxonomyPages %}
+  <url>
+    <loc>https://dipdays.com/city/{{ city.slug }}/</loc>
+  </url>
+  {% endfor %}
+  {% for ritual in ritualPages %}
+  <url>
+    <loc>https://dipdays.com/ritual/{{ ritual.slug }}/</loc>
+  </url>
+  {% endfor %}
+  {% for page in cityRitualPages %}
+  <url>
+    <loc>https://dipdays.com/{{ page.ritual }}/{{ page.city }}/</loc>
+  </url>
+  {% endfor %}
   {% for item in venues %}
   <url>
     <loc>https://dipdays.com/{{ item.citySlug }}/{{ item.venue.slug | default(item.fileSlug) }}/</loc>

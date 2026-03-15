@@ -1,0 +1,32 @@
+---
+pagination:
+  data: cityTaxonomyPages
+  size: 1
+  alias: city
+permalink: "/city/{{ city.slug }}/"
+---
+<!doctype html><html><body>
+<h1>{{ city.cityName }}</h1>
+<div id="map">Map cluster view for {{ city.cityName }}</div>
+<h2>Top Rituals</h2><ul>{% for ritual in city.topRituals %}<li>{{ ritual.label }} ({{ ritual.count }})</li>{% endfor %}</ul>
+<h2>Featured Venues</h2><ul>{% for item in city.featuredVenues %}<li><a href="/{{ item.citySlug }}/{{ item.venue.slug | default(item.fileSlug) }}/">{{ item.venue.name }}</a></li>{% endfor %}</ul>
+<h2>Venue List</h2><ul>{% for item in city.venues %}<li>{{ item.venue.name }}</li>{% endfor %}</ul>
+<script>
+const clusterRows = [
+{% for item in city.venues %}
+  {
+    city: {{ city.slug | json }},
+    ritual: {{ (item.venue.core_type | default('unknown')) | json }},
+    dipScore: {{ item.score | default(0) }},
+    lat: {{ item.venue.city_metadata.lat | default(0) }},
+    lng: {{ item.venue.city_metadata.lng | default(0) }}
+  }{% if not loop.last %},{% endif %}
+{% endfor %}
+];
+window.cityClusters = {
+  byCity: clusterRows,
+  byRitualType: clusterRows.reduce((acc,row)=>{const k=row.ritual||'unknown';(acc[k]=acc[k]||[]).push(row);return acc;},{}),
+  byDipScore: clusterRows.slice().sort((a,b)=>b.dipScore-a.dipScore)
+};
+</script>
+</body></html>

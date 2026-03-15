@@ -6,6 +6,7 @@ import {
   SOURCE_TYPES,
   VENUE_TYPES,
 } from "./models.ts";
+import { CORE_TYPES, CULTURAL_TRADITIONS, MODERN_FORMATS } from "./taxonomy.ts";
 import { isUuid } from "./identity.ts";
 import type {
   CanonicalVenue,
@@ -176,6 +177,24 @@ export function validateCanonicalVenue(venue: Partial<CanonicalVenue>): Validati
   if (!venue.bathing_style || !BATHING_STYLES.includes(venue.bathing_style)) errors.push("bathing_style is invalid");
   if (!venue.editorial_status || !EDITORIAL_STATUSES.includes(venue.editorial_status)) errors.push("editorial_status is invalid");
 
+
+  if (venue.core_type !== undefined && !CORE_TYPES.includes(venue.core_type)) errors.push("core_type is invalid");
+  if (venue.cultural_tradition !== undefined && !CULTURAL_TRADITIONS.includes(venue.cultural_tradition)) errors.push("cultural_tradition is invalid");
+  if (venue.modern_format !== undefined && !MODERN_FORMATS.includes(venue.modern_format)) errors.push("modern_format is invalid");
+  if (venue.ritual_elements !== undefined) {
+    if (!Array.isArray(venue.ritual_elements)) {
+      errors.push("ritual_elements must be an array when provided");
+    } else if (venue.ritual_elements.some((ritual) => !CORE_TYPES.includes(ritual))) {
+      errors.push("ritual_elements contains invalid entries");
+    }
+  }
+
+  if (venue.city_metadata !== undefined) {
+    if (!isNonEmptyString(venue.city_metadata.city)) errors.push("city_metadata.city is required when city_metadata is provided");
+    if (!isNonEmptyString(venue.city_metadata.country)) errors.push("city_metadata.country is required when city_metadata is provided");
+    if (!isFiniteNumber(venue.city_metadata.lat) || !inRange(venue.city_metadata.lat, -90, 90)) errors.push("city_metadata.lat must be in [-90,90]");
+    if (!isFiniteNumber(venue.city_metadata.lng) || !inRange(venue.city_metadata.lng, -180, 180)) errors.push("city_metadata.lng must be in [-180,180]");
+  }
   errors.push(...validateSearchFacets(venue.search_facets));
   errors.push(...validateProvenance(venue.provenance));
 
