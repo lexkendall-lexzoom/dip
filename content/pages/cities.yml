@@ -1,6 +1,6 @@
 seo:
   title: "Dip Cities | Bathhouse, Sauna, and Cold Plunge Guides"
-  description: "Explore Dip city guides for bathhouses, saunas, thermal spas, and cold plunge spots. Start with New York City, Los Angeles, Miami, San Francisco, and Chicago."
+  description: "Explore Dip city guides for bathhouses, saunas, thermal spas, and cold plunge spots. New York City, Los Angeles, Miami, San Francisco, Chicago, and Berlin."
   social_image: ""
 page:
   heading: "Dip City Guides"
@@ -31,4 +31,9 @@ cards:
     title: "Chicago"
     description: "Strong hotel spa options and high-quality thermal circuits."
     url: "/chicago/"
+    image: ""
+  - eyebrow: "City Guide"
+    title: "Berlin"
+    description: "Europe's sauna culture at its best — Vabali and beyond."
+    url: "/berlin/"
     image: ""

@@ -1,0 +1,16 @@
+seo:
+  title: "Berlin Bathhouses, Saunas & Cold Plunge Directory | Dip"
+  description: "Dip's Berlin guide to bathhouses, saunas, and thermal spa experiences with DipScores, editorial picks, and practical details."
+  social_image: "https://cherylhoward.com/wp-content/uploads/2015/09/Vabali-Spa-in-Berlin-Outdoor-Pool.jpeg"
+page:
+  heading: "Berlin Bathhouses, Saunas & Cold Plunge Directory"
+  intro: "Berlin has one of Europe's strongest sauna cultures — from the urban sanctuary of Vabali to the public bath tradition that still runs through the city's neighborhoods. Each venue is independently scored by Dip."
+  hero_image: "https://cherylhoward.com/wp-content/uploads/2015/09/Vabali-Spa-in-Berlin-Outdoor-Pool.jpeg"
+cards:
+  - eyebrow: "Venue Page"
+    title: "Vabali Spa Berlin"
+    description: "An Indonesian-inspired urban sanctuary in Moabit — 6 saunas, outdoor pool, landscaped gardens, and day-long thermal rituals."
+    url: "/berlin/vabali-spa-berlin/"
+    image: "https://cherylhoward.com/wp-content/uploads/2015/09/Vabali-Spa-in-Berlin-Outdoor-Pool.jpeg"
+    score: "8.9"
+    audience_rating: "4.7"

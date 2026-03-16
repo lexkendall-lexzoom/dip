@@ -65,6 +65,12 @@ permalink: "/{{ cityPage.slug }}/"
     .card h2{margin:0 0 8px;font-size:clamp(26px,2.6vw,40px);line-height:1;letter-spacing:-.02em}
     .card p{margin:0;color:#444;line-height:1.65}
     .eyebrow{margin:0 0 8px;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:#666}
+    .card-scores{display:flex;gap:10px;margin-top:10px;flex-wrap:wrap}
+    .score-badge{display:flex;flex-direction:column;align-items:center;padding:8px 14px;border:1.5px solid var(--ink);background:#faf8f3;min-width:90px}
+    .score-badge b{font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:#666;margin-bottom:3px}
+    .score-badge span{font-size:22px;font-weight:800;letter-spacing:-.03em;color:var(--teal)}
+    .score-badge.audience span{color:#b87c3a}
+    .score-badge .score-na{font-size:13px;color:#aaa;font-weight:700}
   </style>
 </head>
 <body>
@@ -81,6 +87,24 @@ permalink: "/{{ cityPage.slug }}/"
         <p class="eyebrow">{{ card.eyebrow }}</p>
         <h2>{{ card.title }}</h2>
         <p>{{ card.description }}</p>
+        <div class="card-scores">
+          <div class="score-badge">
+            <b>Dip Score</b>
+            {% if card.score and card.score != "Coming soon" and card.score != "pending" %}
+              <span>{{ card.score }}</span>
+            {% else %}
+              <span class="score-na">Soon</span>
+            {% endif %}
+          </div>
+          <div class="score-badge audience">
+            <b>Audience</b>
+            {% if card.audience_rating %}
+              <span>{{ card.audience_rating }}</span>
+            {% else %}
+              <span class="score-na">—</span>
+            {% endif %}
+          </div>
+        </div>
       </a>
         {% endfor %}
       {% endif %}
