@@ -1,7 +1,7 @@
 {
   "id": "b93c743a-d6c2-5649-8043-7e7eb028b36a",
   "slug": "me-spa-and-wellness-miami",
-  "name": "Âme Spa & Wellness",
+  "name": "\u00c2me Spa & Wellness",
   "city": "Miami",
   "country": "USA",
   "coordinates": {
@@ -55,5 +55,7 @@
   },
   "last_verified_at": "2026-03-12T22:04:02.812Z",
   "created_at": "2026-03-12T21:15:04.606Z",
-  "updated_at": "2026-03-12T22:04:02.812Z"
+  "updated_at": "2026-03-12T22:04:02.812Z",
+  "category": "Neighborhood Spa",
+  "bathing_style": "Modern Hybrid"
 }
