@@ -1,37 +1,23 @@
-name: Vabali Spa Berlin
-slug: vabali-spa-berlin
-city: Berlin
-country: Germany
-categories:
-  - Social Sauna
-  - Contrast Therapy
-  - Ritual Bathhouse
-  - Recovery Studio
-features:
-  - sauna
-  - steam_room
-  - cold_plunge
-  - thermal_pool
-  - aufguss
-  - ritual_programming
-  - guided_sessions
-  - social_lounges
-  - community_events
-  - group_ritual
-  - massage
-  - breathwork
-  - classes
-  - recovery_therapy
-dip_scores:
-  ritual_quality: 9.01
-  aesthetic_design: 9
-  social_energy: 8.1
-  facilities: 9.2
-  recovery_wellness: 8.3
-  overall: 8.86
-ranking_metadata:
-  score_version: v1.1
-  ranking_eligible: true
-  confidence_score: 0.73
-  coverage_score: 0.79
-last_verified_at: '2026-03-06T00:00:00.000Z'
+seo:
+  title: 'Vabali Spa Berlin Review: Price, Hours, What to Know | Dip'
+  description: Dip review of Vabali Spa Berlin with pricing, hours, neighborhood notes, and who it is best for.
+  social_image: 'https://cherylhoward.com/wp-content/uploads/2015/09/Vabali-Spa-in-Berlin-Outdoor-Pool.jpeg'
+venue:
+  name: Vabali Spa Berlin
+  city: Berlin
+  slug: vabali-spa-berlin
+  subtitle: Editorial review, practical details, and booking context from Dip.
+  hero_image: 'https://cherylhoward.com/wp-content/uploads/2015/09/Vabali-Spa-in-Berlin-Outdoor-Pool.jpeg'
+  neighborhood: Moabit, Berlin
+  price: 'from €43.50'
+  score: '8.9'
+  date_reviewed: March 2026
+  hours: Daily · 9am–midnight
+  best_for: Aufguss rituals, social bathing, textile-free wellness, long sauna days.
+  website_url: https://www.vabali.de/en/berlin/
+  review: Twenty thousand square metres of Balinese-inspired wellness three minutes from Berlin Hauptbahnhof. Ten infusion saunas with ceremonies every half hour, a heated outdoor pool, indoor pool, cold plunges, waterbeds, and a gamelan orchestra soundtrack recorded on-site in Bali. Serious about ritual. The aufguss ceremonies are among the best in Europe.
+  gallery_images:
+    - 'https://cherylhoward.com/wp-content/uploads/2015/09/Vabali-Spa-in-Berlin-Outdoor-Pool.jpeg'
+    - 'https://cherylhoward.com/wp-content/uploads/2015/09/Vabali-Spa-Berlin-Cheryl-Howard.jpeg'
+    - 'https://cherylhoward.com/wp-content/uploads/2015/09/Vabali-Spa-in-Berlin-Pool-e1443287360901.jpeg'
+    - 'https://cherylhoward.com/wp-content/uploads/2015/09/Vabali-Spa-in-Berlin-Relaxing-Outdoors.jpeg'
