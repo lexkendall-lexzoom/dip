@@ -1,22 +1,29 @@
 seo:
-  title: The Spa at The Standard Review | Dip
-  description: Editorial venue profile for The Spa at The Standard in Miami.
-  social_image: https://duvx7h32ggrur.cloudfront.net/attachments/5ce802c61221789ea1043a5c74dd59a84fa8f7bb/store/optimize_v1_landscape/480/270/60/jpeg/6bd7e9c0d1e8561178be80bcaf3a59705d35cbb843e75e059cfe54c47b9e/stmia_2024_johannvazquez_gardens_04.jpg
+  title: "The Spa at The Standard Miami Review: Price, Hours, What to Know | Dip"
+  description: Dip review of The Standard Spa on Belle Isle, Miami — waterside hammocks, hot tub, cold plunge, and a spa culture that predates Miami wellness trends.
+  social_image: "https://duvx7h32ggrur.cloudfront.net/attachments/5ce802c61221789ea1043a5c74dd59a84fa8f7bb/store/optimize_v1_landscape/480/270/60/jpeg/6bd7e9c0d1e8561178be80bcaf3a59705d35cbb843e75e059cfe54c47b9e/stmia_2024_johannvazquez_gardens_04.jpg"
 venue:
   name: The Spa at The Standard
   city: Miami
   slug: the-spa-at-the-standard
-  subtitle: ""
-  hero_image: https://duvx7h32ggrur.cloudfront.net/attachments/5ce802c61221789ea1043a5c74dd59a84fa8f7bb/store/optimize_v1_landscape/480/270/60/jpeg/6bd7e9c0d1e8561178be80bcaf3a59705d35cbb843e75e059cfe54c47b9e/stmia_2024_johannvazquez_gardens_04.jpg
+  subtitle: Editorial review, practical details, and booking context from Dip.
+  hero_image: "https://duvx7h32ggrur.cloudfront.net/attachments/5ce802c61221789ea1043a5c74dd59a84fa8f7bb/store/optimize_v1_landscape/480/270/60/jpeg/6bd7e9c0d1e8561178be80bcaf3a59705d35cbb843e75e059cfe54c47b9e/stmia_2024_johannvazquez_gardens_04.jpg"
   neighborhood: Belle Isle, Miami Beach
   price: from $75
   score: "8.2"
-  date_reviewed: ""
-  hours: Daily · Hotel + non-guest access
-  best_for: ""
-  website_url: https://standardhotels.com
-  review: ""
+  date_reviewed: March 2026
+  hours: Daily · Hotel + non-guest day access available
+  best_for: Waterside soaking, Miami classic spa day, couples, anyone who wants ambiance over intensity.
+  website_url: "https://standardhotels.com"
+  review: >-
+    The Standard on Belle Isle has a longer claim on Miami spa culture than
+    almost anything else in the city. The outdoor hot tub sits above the
+    causeway water; the mud tub is communal and correctly absurd; the
+    waterside hammocks are where afternoons go to dissolve. The treatments are
+    strong, the architecture is mid-century and light-filled, and the
+    clientele mixes in-the-know Miamians with design-hotel regulars from
+    elsewhere. Day passes are available. Go on a weekday if you can.
   gallery_images:
-    - https://duvx7h32ggrur.cloudfront.net/attachments/5ce802c61221789ea1043a5c74dd59a84fa8f7bb/store/optimize_v1_landscape/480/270/60/jpeg/6bd7e9c0d1e8561178be80bcaf3a59705d35cbb843e75e059cfe54c47b9e/stmia_2024_johannvazquez_gardens_04.jpg
-    - https://duvx7h32ggrur.cloudfront.net/attachments/b8deb1a49e806bf802dfd81ad0ed6b8b8a091e9e/store/optimize_v1/480/60/jpeg/581f9c7088044e5473c97c86efa99a50921495e2853782cba444991981fe/thestandardspamiami_pool.jpg
-    - https://duvx7h32ggrur.cloudfront.net/attachments/f89f62eecc35a87d2aaaf9de960cf08dd6c788fd/store/optimize_v1/480/60/jpeg/c0b2dc684471c8085487504001e4a3eb7531ee0caf4fca8a8f0869b3f14b/stmia_2024_johannvazquez_dock_02-1-.jpg
+    - "https://duvx7h32ggrur.cloudfront.net/attachments/5ce802c61221789ea1043a5c74dd59a84fa8f7bb/store/optimize_v1_landscape/480/270/60/jpeg/6bd7e9c0d1e8561178be80bcaf3a59705d35cbb843e75e059cfe54c47b9e/stmia_2024_johannvazquez_gardens_04.jpg"
+    - "https://duvx7h32ggrur.cloudfront.net/attachments/b8deb1a49e806bf802dfd81ad0ed6b8b8a091e9e/store/optimize_v1/480/60/jpeg/581f9c7088044e5473c97c86efa99a50921495e2853782cba444991981fe/thestandardspamiami_pool.jpg"
+    - "https://duvx7h32ggrur.cloudfront.net/attachments/f89f62eecc35a87d2aaaf9de960cf08dd6c788fd/store/optimize_v1/480/60/jpeg/c0b2dc684471c8085487504001e4a3eb7531ee0caf4fca8a8f0869b3f14b/stmia_2024_johannvazquez_dock_02-1-.jpg"

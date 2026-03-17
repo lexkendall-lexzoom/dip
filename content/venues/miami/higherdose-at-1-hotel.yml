@@ -1,22 +1,30 @@
 seo:
-  title: HigherDOSE at 1 Hotel Review | Dip
-  description: Editorial venue profile for HigherDOSE at 1 Hotel in Miami.
-  social_image: https://cdn.bfldr.com/TU9NUD0C/at/gxgr3jbfpmkhktx3gh8xz/1_Hotels_MIA_Poolside_02_0370.jpg
+  title: "HigherDOSE at 1 Hotel Miami Review: Price, Hours, What to Know | Dip"
+  description: Dip review of HigherDOSE at 1 Hotel South Beach — infrared sauna suites, cold plunge, IV therapy, and biohacking wellness in a luxury beach hotel setting.
+  social_image: "https://cdn.bfldr.com/TU9NUD0C/at/gxgr3jbfpmkhktx3gh8xz/1_Hotels_MIA_Poolside_02_0370.jpg"
 venue:
   name: HigherDOSE at 1 Hotel
   city: Miami
   slug: higherdose-at-1-hotel
-  subtitle: ''
-  hero_image: https://cdn.bfldr.com/TU9NUD0C/at/gxgr3jbfpmkhktx3gh8xz/1_Hotels_MIA_Poolside_02_0370.jpg
-  neighborhood: ''
-  price: ''
-  score: ''
-  date_reviewed: ''
-  hours: ''
-  best_for: ''
-  website_url: https://www.1hotels.com/south-beach
-  review: ''
+  subtitle: Editorial review, practical details, and booking context from Dip.
+  hero_image: "https://cdn.bfldr.com/TU9NUD0C/at/gxgr3jbfpmkhktx3gh8xz/1_Hotels_MIA_Poolside_02_0370.jpg"
+  neighborhood: South Beach, Miami Beach
+  price: from $85
+  score: "7.8"
+  date_reviewed: March 2026
+  hours: Daily · By appointment
+  best_for: Biohacker-adjacent wellness, infrared sauna sessions, recovery after a long weekend, guests of 1 Hotel.
+  website_url: "https://www.1hotels.com/south-beach"
+  review: >-
+    HigherDOSE brings its infrared sauna and cold plunge formula to 1 Hotel
+    South Beach, which is a sensible partnership: the hotel's eco-luxury guest
+    runs toward biohacking anyway. The infrared suites are private and
+    bookable by the hour; the cold plunge is properly cold. The setting inside
+    a sustainably designed South Beach property adds a narrative layer. This
+    is not a full-day thermal spa — it is a focused recovery session. For 90
+    minutes of heat and cold with IV therapy available if you want it, the 1
+    Hotel location delivers.
   gallery_images:
-    - https://cdn.bfldr.com/TU9NUD0C/at/gxgr3jbfpmkhktx3gh8xz/1_Hotels_MIA_Poolside_02_0370.jpg
-    - https://cdn.crowdriff.com/in-use/1a9571de-dd45-f3d4-8817-011046f58a00/orig.jpg
-    - https://cdn.crowdriff.com/in-use/8ce25659-0460-e7e3-b69f-27cf390e7f6c/orig.jpg
+    - "https://cdn.bfldr.com/TU9NUD0C/at/gxgr3jbfpmkhktx3gh8xz/1_Hotels_MIA_Poolside_02_0370.jpg"
+    - "https://cdn.crowdriff.com/in-use/1a9571de-dd45-f3d4-8817-011046f58a00/orig.jpg"
+    - "https://cdn.crowdriff.com/in-use/8ce25659-0460-e7e3-b69f-27cf390e7f6c/orig.jpg"

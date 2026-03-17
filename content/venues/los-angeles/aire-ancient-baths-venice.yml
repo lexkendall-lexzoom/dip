@@ -1,22 +1,30 @@
 seo:
-  title: AIRE Ancient Baths Venice Review | Dip
-  description: Editorial venue profile for AIRE Ancient Baths Venice in Los Angeles.
-  social_image: https://beaire.com/sites/default/files/styles/hero/public/2022-06/aire-ancient-baths-venice-beach.jpg
+  title: "AIRE Ancient Baths Venice Beach Review: Price, Hours, What to Know | Dip"
+  description: Dip review of AIRE Ancient Baths in Venice Beach LA — Roman thermal bathing steps from the boardwalk, with candlelit pools and the full AIRE sequence.
+  social_image: "https://beaire.com/sites/default/files/styles/hero/public/2022-06/aire-ancient-baths-venice-beach.jpg"
 venue:
   name: AIRE Ancient Baths Venice
   city: Los Angeles
   slug: aire-ancient-baths-venice
-  subtitle: ''
-  hero_image: https://beaire.com/sites/default/files/styles/hero/public/2022-06/aire-ancient-baths-venice-beach.jpg
-  neighborhood: Venice
+  subtitle: Editorial review, practical details, and booking context from Dip.
+  hero_image: "https://beaire.com/sites/default/files/styles/hero/public/2022-06/aire-ancient-baths-venice-beach.jpg"
+  neighborhood: Venice, Los Angeles
   price: from $65
-  score: '8.8'
-  date_reviewed: ''
+  score: "8.8"
+  date_reviewed: March 2026
   hours: Daily 9am–11pm · Reservation required
-  best_for: ''
-  website_url: https://beaire.com
-  review: ''
+  best_for: Date night, LA newcomers to thermal bathing, beach-day extension, groups who want ceremony.
+  website_url: "https://beaire.com"
+  review: >-
+    There is something dissonant and exactly right about AIRE's Venice
+    location — Roman thermal pools two blocks from a beach boardwalk. The
+    candlelit sequence travels here intact: warm bath, hot bath, cold bath,
+    float pool, wine bath if you opted in. AIRE's trick, as always, is
+    treating the temperature gradient as a structure rather than a menu.
+    Venice adds a rooftop element that the New York location lacks. Book far
+    ahead in season, arrive without an agenda, and let the sequence do its
+    work.
   gallery_images:
-    - https://beaire.com/sites/default/files/styles/hero/public/2022-06/aire-ancient-baths-venice-beach.jpg
-    - https://beaire.com/sites/default/files/styles/location_slide/public/2022-06/aire-ancient-baths-venice-beach.jpg
-    - https://beaire.com/sites/default/files/_dsc4514_1_easy-resize.com_.jpg
+    - "https://beaire.com/sites/default/files/styles/hero/public/2022-06/aire-ancient-baths-venice-beach.jpg"
+    - "https://beaire.com/sites/default/files/styles/location_slide/public/2022-06/aire-ancient-baths-venice-beach.jpg"
+    - "https://beaire.com/sites/default/files/_dsc4514_1_easy-resize.com_.jpg"

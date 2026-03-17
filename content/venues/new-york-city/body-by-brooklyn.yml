@@ -1,19 +1,30 @@
 seo:
-  title: 'Body by Brooklyn Review: Price, Hours, What to Know | Dip'
-  description: 'Dip review of Body by Brooklyn in Clinton Hill — 10,000 sq ft bathhouse with Russian sauna, arctic cold plunge, steam room, hot tub, and VIP suites.'
-  social_image: ''
+  title: "Body by Brooklyn Review: Price, Hours, What to Know | Dip"
+  description: Dip review of Body by Brooklyn in Clinton Hill — 10,000 sq ft bathhouse with Russian sauna, arctic cold plunge, steam room, hot tub, and VIP suites.
+  social_image: "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&h=450&fit=crop&q=80"
 venue:
-  name: 'Body by Brooklyn'
-  city: 'New York City'
-  slug: 'body-by-brooklyn'
-  subtitle: 'Editorial review, practical details, and booking context from Dip.'
-  hero_image: ''
-  neighborhood: 'Clinton Hill, Brooklyn'
-  price: 'from $65'
-  score: '7.9'
-  date_reviewed: 'March 2026'
-  hours: 'Mon, Wed–Thu 10am–8pm · Fri–Sat 10am–9pm · Sun 10am–8pm · Closed Tuesday'
-  best_for: 'couples spa day, VIP suites, full treatment menu, Russian banya with cocktail bar'
-  website_url: 'https://bodybybrooklyn.com'
-  review: 'Body by Brooklyn is Clinton Hill's 10,000-square-foot neighborhood spa with genuine bathhouse credentials — a Russian sauna running 175–190°F, a Swedish sauna, an arctic cold plunge, eucalyptus steam room, and a thermal hot tub, all anchored by a full dry lounge with fireplace, day beds, and a bar. Day passes run $65–$75 depending on day; VIP suites add a private jacuzzi, steam shower, and champagne for groups or couples looking to extend the occasion. The treatment menu is expansive: facials, deep tissue, platza, body wraps. It skews more spa than banya but covers both worlds.'
-  gallery_images: []
+  name: Body by Brooklyn
+  city: New York City
+  slug: body-by-brooklyn
+  subtitle: Editorial review, practical details, and booking context from Dip.
+  hero_image: "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&h=450&fit=crop&q=80"
+  neighborhood: Clinton Hill, Brooklyn
+  price: from $65
+  score: "7.9"
+  date_reviewed: March 2026
+  hours: Mon, Wed–Thu 10am–8pm · Fri–Sat 10am–9pm · Sun 10am–8pm · Closed Tuesday
+  best_for: Couples spa day, VIP suites, full treatment menu, Russian banya with cocktail bar.
+  website_url: "https://bodybybrooklyn.com"
+  review: >-
+    Body by Brooklyn is Clinton Hill's 10,000-square-foot neighborhood spa
+    with genuine bathhouse credentials — a Russian sauna running 175–190°F, a
+    Swedish sauna, an arctic cold plunge, eucalyptus steam room, and a thermal
+    hot tub, all anchored by a full dry lounge with fireplace, day beds, and a
+    bar. Day passes run $65–$75 depending on day; VIP suites add a private
+    jacuzzi, steam shower, and champagne for groups or couples looking to
+    extend the occasion. The treatment menu is expansive: facials, deep
+    tissue, platza, body wraps. It skews more spa than banya but covers both
+    worlds.
+  gallery_images:
+    - "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&h=450&fit=crop&q=80"
+    - "https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=800&h=450&fit=crop&q=80"

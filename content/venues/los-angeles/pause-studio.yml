@@ -1,22 +1,29 @@
 seo:
-  title: Pause Studio Review | Dip
-  description: Editorial venue profile for Pause Studio in Los Angeles.
-  social_image: https://pausestudio.com/pause_opengraph.png
+  title: "Pause Studio LA Review: Price, Hours, What to Know | Dip"
+  description: Dip review of Pause Studio in Los Angeles — float tanks, infrared sauna, and a wellness studio built around the idea that stillness is the practice.
+  social_image: "https://pausestudio.com/pause_opengraph.png"
 venue:
   name: Pause Studio
   city: Los Angeles
   slug: pause-studio
-  subtitle: ''
-  hero_image: https://pausestudio.com/pause_opengraph.png
-  neighborhood: ''
-  price: ''
-  score: ''
-  date_reviewed: ''
-  hours: ''
-  best_for: ''
-  website_url: https://pausestudio.com/
-  review: ''
+  subtitle: Editorial review, practical details, and booking context from Dip.
+  hero_image: "https://pausestudio.com/pause_opengraph.png"
+  neighborhood: Los Angeles
+  price: from $60
+  score: "7.5"
+  date_reviewed: March 2026
+  hours: Daily · By appointment
+  best_for: Float tank beginners, infrared sauna, anyone wanting a calm solo wellness hour in the city.
+  website_url: "https://pausestudio.com/"
+  review: >-
+    Pause does not try to be a bathhouse or a social wellness club. It is a
+    float-and-sauna studio with a clear intention: give you an hour of actual
+    stillness in a city that commodifies everything including relaxation. The
+    float pods are private, the infrared sauna is well-maintained, and the
+    booking system keeps sessions uncrowded. For an LA wellness market full of
+    social programming and guided experiences, Pause makes a sensible
+    counterpoint — just you, a tank, and silence.
   gallery_images:
-    - https://pausestudio.com/pause_opengraph.png
-    - https://images.ctfassets.net/xlosfajxk15z/5C52RQjD883N284DYqt6DS/ef8a407f63e175c8b10d72fafc0a7de3/our_benefit_card_image1.png
-    - https://images.ctfassets.net/xlosfajxk15z/58KWdgoPP5xWIh0xPJgZpc/1ee5c86700d2a3f070d78362bc4bbb9f/amenities.png
+    - "https://pausestudio.com/pause_opengraph.png"
+    - "https://images.ctfassets.net/xlosfajxk15z/5C52RQjD883N284DYqt6DS/ef8a407f63e175c8b10d72fafc0a7de3/our_benefit_card_image1.png"
+    - "https://images.ctfassets.net/xlosfajxk15z/58KWdgoPP5xWIh0xPJgZpc/1ee5c86700d2a3f070d78362bc4bbb9f/amenities.png"

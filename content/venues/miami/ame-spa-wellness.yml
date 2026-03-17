@@ -1,22 +1,29 @@
 seo:
-  title: Âme Spa & Wellness Review | Dip
-  description: Editorial venue profile for Âme Spa & Wellness in Miami.
-  social_image: https://symphony.cdn.tambourine.com/ame-spa/media/spa-gallery-13-5e9a950cdb1b5.jpg
+  title: "Âme Spa & Wellness Miami Review: Price, Hours, What to Know | Dip"
+  description: "Dip review of Âme Spa & Wellness at SLS Brickell in Miami — luxury spa with a hydrotherapy circuit, private treatment suites, and a rooftop pool."
+  social_image: "https://symphony.cdn.tambourine.com/ame-spa/media/spa-gallery-13-5e9a950cdb1b5.jpg"
 venue:
-  name: Âme Spa & Wellness
+  name: "Âme Spa & Wellness"
   city: Miami
   slug: ame-spa-wellness
-  subtitle: ''
-  hero_image: https://symphony.cdn.tambourine.com/ame-spa/media/spa-gallery-13-5e9a950cdb1b5.jpg
-  neighborhood: ''
-  price: ''
-  score: ''
-  date_reviewed: ''
-  hours: ''
-  best_for: ''
-  website_url: https://www.amewellness.com/
-  review: ''
+  subtitle: Editorial review, practical details, and booking context from Dip.
+  hero_image: "https://symphony.cdn.tambourine.com/ame-spa/media/spa-gallery-13-5e9a950cdb1b5.jpg"
+  neighborhood: Brickell, Miami
+  price: from $150
+  score: "7.5"
+  date_reviewed: March 2026
+  hours: Daily · Reservation required
+  best_for: Hotel spa day, couples treatments, Brickell business travelers who want recovery.
+  website_url: "https://www.amewellness.com/"
+  review: >-
+    Âme Spa at SLS Brickell is a full hotel spa in the European tradition —
+    steam room, sauna, hydrotherapy circuit, treatment rooms done in a cool
+    minimal palette. The address is Brickell, which means it catches the
+    finance-world clientele who need the full-service option and do not want
+    to drive to South Beach for it. The execution is reliable: skilled
+    therapists, clean facilities, no pretension. Not a destination spa in the
+    grand-pilgrimage sense, but a well-run option for the Brickell corridor.
   gallery_images:
-    - https://symphony.cdn.tambourine.com/ame-spa/media/spa-gallery-13-5e9a950cdb1b5.jpg
-    - https://symphony.cdn.tambourine.com/ame-spa/media/ame-spa-home-services-beauty-5e7289a7d6f95.jpg
-    - https://symphony.cdn.tambourine.com/ame-spa/media/ame-spa-home-services-body-therapy-5e7289f7b3acb.jpg
+    - "https://symphony.cdn.tambourine.com/ame-spa/media/spa-gallery-13-5e9a950cdb1b5.jpg"
+    - "https://symphony.cdn.tambourine.com/ame-spa/media/ame-spa-home-services-beauty-5e7289a7d6f95.jpg"
+    - "https://symphony.cdn.tambourine.com/ame-spa/media/ame-spa-home-services-body-therapy-5e7289f7b3acb.jpg"
