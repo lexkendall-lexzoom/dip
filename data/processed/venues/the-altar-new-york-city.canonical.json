@@ -62,5 +62,23 @@
   "created_at": "2026-03-12T21:13:47.501Z",
   "updated_at": "2026-03-12T22:04:03.272Z",
   "category": "Neighborhood Spa",
-  "bathing_style": "Nordic Sauna"
+  "bathing_style": "Nordic Sauna",
+  "ritual_archetype": "contrast_therapy",
+  "facility_tags": [
+    "sauna",
+    "cold_plunge",
+    "guided_rituals",
+    "massage_treatments",
+    "bodywork",
+    "hyperbaric"
+  ],
+  "design_style": "minimalist_nordic",
+  "social_energy": "relaxed_ambient",
+  "recovery_features": [
+    "cold_immersion",
+    "heat_therapy",
+    "contrast_therapy",
+    "massage_recovery",
+    "hyperbaric_oxygen"
+  ]
 }

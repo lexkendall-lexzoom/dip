@@ -61,5 +61,22 @@
   "created_at": "2026-03-12T21:13:47.500Z",
   "updated_at": "2026-03-12T22:04:03.268Z",
   "category": "Neighborhood Spa",
-  "bathing_style": "Modern Hybrid"
+  "bathing_style": "Modern Hybrid",
+  "ritual_archetype": "contrast_therapy",
+  "facility_tags": [
+    "cold_plunge",
+    "thermal_pool",
+    "thermal_circuit",
+    "guided_rituals",
+    "massage_treatments",
+    "bodywork"
+  ],
+  "design_style": "industrial_social",
+  "social_energy": "communal_social",
+  "recovery_features": [
+    "cold_immersion",
+    "contrast_therapy",
+    "massage_recovery",
+    "thermal_soaking"
+  ]
 }

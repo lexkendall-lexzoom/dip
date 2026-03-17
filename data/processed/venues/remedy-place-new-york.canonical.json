@@ -76,5 +76,29 @@
   "created_at": "2026-03-12T00:00:00.000Z",
   "updated_at": "2026-03-12T22:04:03.267Z",
   "category": "Social Wellness Club",
-  "bathing_style": "Nordic Sauna"
+  "bathing_style": "Nordic Sauna",
+  "ritual_archetype": "contrast_therapy",
+  "facility_tags": [
+    "sauna",
+    "cold_plunge",
+    "thermal_pool",
+    "breathwork",
+    "massage_treatments",
+    "bodywork",
+    "red_light_therapy",
+    "iv_therapy",
+    "hyperbaric"
+  ],
+  "design_style": "minimalist_nordic",
+  "social_energy": "communal_social",
+  "recovery_features": [
+    "cold_immersion",
+    "heat_therapy",
+    "contrast_therapy",
+    "breathwork",
+    "massage_recovery",
+    "red_light",
+    "iv_therapy",
+    "hyperbaric_oxygen"
+  ]
 }

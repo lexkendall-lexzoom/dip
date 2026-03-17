@@ -57,5 +57,18 @@
   "created_at": "2026-03-12T21:15:04.610Z",
   "updated_at": "2026-03-12T22:04:02.851Z",
   "category": "Neighborhood Spa",
-  "bathing_style": "Modern Hybrid"
+  "bathing_style": "Modern Hybrid",
+  "ritual_archetype": "hotel_spa",
+  "facility_tags": [
+    "cold_plunge",
+    "thermal_pool",
+    "thermal_circuit",
+    "massage_treatments"
+  ],
+  "design_style": "luxury_hotel",
+  "social_energy": "active_energetic",
+  "recovery_features": [
+    "cold_immersion",
+    "thermal_soaking"
+  ]
 }

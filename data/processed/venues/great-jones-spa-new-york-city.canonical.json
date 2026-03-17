@@ -59,5 +59,14 @@
   "created_at": "2026-03-12T21:13:47.498Z",
   "updated_at": "2026-03-12T22:04:03.265Z",
   "category": "Neighborhood Spa",
-  "bathing_style": "Modern Hybrid"
+  "bathing_style": "Modern Hybrid",
+  "ritual_archetype": "contrast_therapy",
+  "facility_tags": [
+    "wellness_services"
+  ],
+  "design_style": "contemporary_wellness",
+  "social_energy": "active_energetic",
+  "recovery_features": [
+    "contrast_therapy"
+  ]
 }

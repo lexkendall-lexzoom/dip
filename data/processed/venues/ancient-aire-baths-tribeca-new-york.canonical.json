@@ -59,5 +59,15 @@
   "created_at": "2026-03-12T21:13:47.497Z",
   "updated_at": "2026-03-12T22:04:03.264Z",
   "category": "Neighborhood Spa",
-  "bathing_style": "Modern Hybrid"
+  "bathing_style": "Modern Hybrid",
+  "ritual_archetype": "historic_thermal",
+  "facility_tags": [
+    "thermal_pool",
+    "thermal_circuit"
+  ],
+  "design_style": "historic_atmospheric",
+  "social_energy": "relaxed_ambient",
+  "recovery_features": [
+    "general_wellness"
+  ]
 }

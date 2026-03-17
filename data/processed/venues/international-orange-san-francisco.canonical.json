@@ -58,5 +58,16 @@
   "created_at": "2026-03-12T21:14:13.207Z",
   "updated_at": "2026-03-12T22:04:03.660Z",
   "category": "Neighborhood Spa",
-  "bathing_style": "Modern Hybrid"
+  "bathing_style": "Modern Hybrid",
+  "ritual_archetype": "historic_thermal",
+  "facility_tags": [
+    "steam_room",
+    "guided_rituals",
+    "hammam"
+  ],
+  "design_style": "contemporary_wellness",
+  "social_energy": "quiet_contemplative",
+  "recovery_features": [
+    "general_wellness"
+  ]
 }

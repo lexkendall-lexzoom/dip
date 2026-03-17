@@ -57,5 +57,20 @@
   "created_at": "2026-03-12T21:15:04.610Z",
   "updated_at": "2026-03-12T22:04:02.850Z",
   "category": "Neighborhood Spa",
-  "bathing_style": "Modern Hybrid"
+  "bathing_style": "Modern Hybrid",
+  "ritual_archetype": "nordic_sauna",
+  "facility_tags": [
+    "sauna",
+    "cold_plunge",
+    "thermal_pool",
+    "iv_therapy"
+  ],
+  "design_style": "luxury_hotel",
+  "social_energy": "relaxed_ambient",
+  "recovery_features": [
+    "cold_immersion",
+    "heat_therapy",
+    "iv_therapy",
+    "thermal_soaking"
+  ]
 }

@@ -57,5 +57,20 @@
   "created_at": "2026-03-12T21:15:04.606Z",
   "updated_at": "2026-03-12T22:04:02.812Z",
   "category": "Neighborhood Spa",
-  "bathing_style": "Modern Hybrid"
+  "bathing_style": "Modern Hybrid",
+  "ritual_archetype": "steam_ritual",
+  "facility_tags": [
+    "sauna",
+    "steam_room",
+    "thermal_circuit",
+    "massage_treatments",
+    "iv_therapy"
+  ],
+  "design_style": "minimalist_nordic",
+  "social_energy": "romantic_intimate",
+  "recovery_features": [
+    "heat_therapy",
+    "iv_therapy",
+    "thermal_soaking"
+  ]
 }

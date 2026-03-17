@@ -59,5 +59,16 @@
   "created_at": "2026-03-12T21:14:38.902Z",
   "updated_at": "2026-03-12T22:04:02.409Z",
   "category": "Neighborhood Spa",
-  "bathing_style": "Modern Hybrid"
+  "bathing_style": "Modern Hybrid",
+  "ritual_archetype": "hotel_spa",
+  "facility_tags": [
+    "thermal_pool",
+    "iv_therapy"
+  ],
+  "design_style": "contemporary_wellness",
+  "social_energy": "quiet_contemplative",
+  "recovery_features": [
+    "iv_therapy",
+    "thermal_soaking"
+  ]
 }

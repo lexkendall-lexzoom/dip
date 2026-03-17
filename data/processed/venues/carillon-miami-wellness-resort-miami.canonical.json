@@ -59,5 +59,19 @@
   "created_at": "2026-03-12T21:15:04.609Z",
   "updated_at": "2026-03-12T22:04:02.849Z",
   "category": "Regional Spa Resort",
-  "bathing_style": "Modern Hybrid"
+  "bathing_style": "Modern Hybrid",
+  "ritual_archetype": "historic_thermal",
+  "facility_tags": [
+    "cold_plunge",
+    "steam_room",
+    "thermal_pool",
+    "thermal_circuit",
+    "hammam"
+  ],
+  "design_style": "luxury_hotel",
+  "social_energy": "active_energetic",
+  "recovery_features": [
+    "cold_immersion",
+    "thermal_soaking"
+  ]
 }
