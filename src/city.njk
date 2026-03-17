@@ -13,10 +13,10 @@ permalink: "/{{ cityPage.slug }}/"
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>{{ seo.title | default(pg.heading + " | Dip") }}</title>
-  <meta name="description" content="{{ seo.description | default('') }}" />
+  <meta name="description" content="{{ seo.description | default(pg.intro | truncate(155, true, '') if pg.intro else '') }}" />
   <link rel="canonical" href="https://dipdays.com/{{ cityPage.slug }}/" />
   <meta property="og:title" content="{{ seo.title | default(pg.heading + ' | Dip') }}" />
-  <meta property="og:description" content="{{ seo.description | default('') }}" />
+  <meta property="og:description" content="{{ seo.description | default(pg.intro | truncate(155, true, '') if pg.intro else '') }}" />
   <meta property="og:type" content="article" />
   <meta property="og:url" content="https://dipdays.com/{{ cityPage.slug }}/" />
   {% if seo.social_image %}<meta property="og:image" content="{{ seo.social_image }}" />{% endif %}

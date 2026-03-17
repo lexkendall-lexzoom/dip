@@ -13,11 +13,13 @@ permalink: "/{{ item.citySlug }}/{{ item.venue.slug | default(item.fileSlug) }}/
   <head>
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>{{ seo.title | default(v.name + " | Dip") }}</title>
-    <meta name="description" content="{{ seo.description | default('') }}" />
+      <title>{{ seo.title | default(v.name + " — " + v.city + " Bathhouse | Dip") }}</title>
+    {%- set _metaFallback = ((v.tagline if v.tagline else (v.review | truncate(150, true, '') if v.review else '')) + " — Discover " + v.name + " on Dip.") -%}
+    {%- set _metaDesc = seo.description if seo.description else _metaFallback -%}
+    <meta name="description" content="{{ _metaDesc }}" />
     <link rel="canonical" href="https://dipdays.com/{{ citySlug }}/{{ v.slug | default(item.fileSlug) }}/" />
-    <meta property="og:title" content="{{ seo.title | default(v.name + ' Review | Dip') }}" />
-    <meta property="og:description" content="{{ seo.description | default('') }}" />
+    <meta property="og:title" content="{{ seo.title | default(v.name + ' — ' + v.city + ' Bathhouse | Dip') }}" />
+    <meta property="og:description" content="{{ _metaDesc }}" />
     <meta property="og:type" content="article" />
     <meta property="og:url" content="https://dipdays.com/{{ citySlug }}/{{ v.slug | default(item.fileSlug) }}/" />
     {% if seo.social_image %}<meta property="og:image" content="{{ seo.social_image | assetUrl }}" />{% endif %}
@@ -25,13 +27,17 @@ permalink: "/{{ item.citySlug }}/{{ item.venue.slug | default(item.fileSlug) }}/
     <script type="application/ld+json">
     {
       "@context":"https://schema.org",
-      "@type":"LocalBusiness",
+      "@type":"SpaOrBeautyService",
       "name":{{ v.name | json }},
       "url":{{ ("https://dipdays.com/" + citySlug + "/" + (v.slug | default(item.fileSlug)) + "/") | json }},
       {% if v.website_url %}"sameAs":{{ v.website_url | json }},{% endif %}
       {% if seo.social_image or v.hero_image %}"image":{{ (seo.social_image | default(v.hero_image) | assetUrl) | json }},{% endif %}
+      {% if v.price %}"priceRange":{{ v.price | json }},{% endif %}
+      {% if v.hours %}"openingHours":{{ v.hours | json }},{% endif %}
+      {% if v.score and v.score != "Coming soon" and v.score != "pending" %}"aggregateRating":{"@type":"AggregateRating","ratingValue":{{ v.score | json }},"bestRating":"10","worstRating":"0","reviewCount":"1"},{% endif %}
       "address":{
         "@type":"PostalAddress",
+        {% if v.neighborhood %}"streetAddress":{{ v.neighborhood | json }},{% endif %}
         "addressLocality":{{ v.city | default('') | json }}
       },
       "areaServed":{{ v.city | default('') | json }}
