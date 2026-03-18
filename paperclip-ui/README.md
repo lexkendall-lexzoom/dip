@@ -15,7 +15,7 @@ Open `http://localhost:3000`.
 ## Required environment variable
 
 ```bash
-NEXT_PUBLIC_OPENCLAW_API=https://87.99.139.137
+NEXT_PUBLIC_OPENCLAW_API=http://87.99.139.137:3000
 ```
 
 ## Expected OpenClaw endpoints
