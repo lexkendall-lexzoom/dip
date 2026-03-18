@@ -1,5 +1,7 @@
+const DEFAULT_API_BASE_URL = 'http://87.99.139.137:3000';
+
 export const API_BASE_URL =
-  process.env.NEXT_PUBLIC_OPENCLAW_API ?? 'https://87.99.139.137';
+  process.env.NEXT_PUBLIC_OPENCLAW_API?.trim() || DEFAULT_API_BASE_URL;
 
 export type Agent = {
   id: string;
@@ -15,36 +17,70 @@ export type LogItem = {
   level?: string;
 };
 
-export async function fetchAgents(): Promise<Agent[]> {
-  const response = await fetch(`${API_BASE_URL}/agents`, { cache: 'no-store' });
-  if (!response.ok) {
-    throw new Error(`Unable to fetch agents (${response.status})`);
-  }
+const mockAgents: Agent[] = [
+  { id: 'agent-discovery', name: 'Discovery Agent', status: 'idle' },
+  { id: 'agent-classifier', name: 'Classifier Agent', status: 'idle' },
+  { id: 'agent-review', name: 'Review Agent', status: 'idle' }
+];
 
-  return response.json();
+const mockLogs: LogItem[] = [
+  {
+    id: 'mock-1',
+    timestamp: new Date().toISOString(),
+    agent_id: 'system',
+    level: 'warn',
+    message:
+      'OpenClaw API is currently unreachable. Showing fallback mock data so the UI remains usable.'
+  }
+];
+
+async function safeFetch<T>(
+  endpoint: string,
+  options: RequestInit,
+  fallback: T,
+  allowFallbackForStatuses: number[] = [0]
+): Promise<T> {
+  try {
+    const response = await fetch(`${API_BASE_URL}${endpoint}`, options);
+
+    if (!response.ok) {
+      if (allowFallbackForStatuses.includes(response.status)) {
+        return fallback;
+      }
+
+      if (response.status >= 500 || response.status === 403 || response.status === 404) {
+        return fallback;
+      }
+
+      throw new Error(`API request failed (${response.status})`);
+    }
+
+    return response.json() as Promise<T>;
+  } catch {
+    return fallback;
+  }
+}
+
+export async function fetchAgents(): Promise<Agent[]> {
+  return safeFetch('/agents', { cache: 'no-store' }, mockAgents);
 }
 
 export async function runAgent(agentId: string): Promise<{ message?: string; run_id?: string }> {
-  const response = await fetch(`${API_BASE_URL}/run`, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json'
+  return safeFetch(
+    '/run',
+    {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({ agent_id: agentId })
     },
-    body: JSON.stringify({ agent_id: agentId })
-  });
-
-  if (!response.ok) {
-    throw new Error(`Unable to run agent (${response.status})`);
-  }
-
-  return response.json();
+    {
+      message: `OpenClaw API unavailable. Mock run accepted for ${agentId}.`
+    }
+  );
 }
 
 export async function fetchLogs(): Promise<LogItem[]> {
-  const response = await fetch(`${API_BASE_URL}/logs`, { cache: 'no-store' });
-  if (!response.ok) {
-    throw new Error(`Unable to fetch logs (${response.status})`);
-  }
-
-  return response.json();
+  return safeFetch('/logs', { cache: 'no-store' }, mockLogs);
 }
