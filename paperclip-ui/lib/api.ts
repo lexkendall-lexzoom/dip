@@ -34,39 +34,46 @@ const mockLogs: LogItem[] = [
   }
 ];
 
+type SafeFetchResult<T> = {
+  data: T;
+  fallbackUsed: boolean;
+};
+
 async function safeFetch<T>(
   endpoint: string,
   options: RequestInit,
   fallback: T,
   allowFallbackForStatuses: number[] = [0]
-): Promise<T> {
+): Promise<SafeFetchResult<T>> {
   try {
     const response = await fetch(`${API_BASE_URL}${endpoint}`, options);
 
     if (!response.ok) {
-      if (allowFallbackForStatuses.includes(response.status)) {
-        return fallback;
+      if (
+        allowFallbackForStatuses.includes(response.status) ||
+        response.status >= 500 ||
+        response.status === 403 ||
+        response.status === 404
+      ) {
+        return { data: fallback, fallbackUsed: true };
       }
 
-      if (response.status >= 500 || response.status === 403 || response.status === 404) {
-        return fallback;
-      }
-
-      throw new Error(`API request failed (${response.status})`);
+      return { data: fallback, fallbackUsed: true };
     }
 
-    return response.json() as Promise<T>;
+    return { data: (await response.json()) as T, fallbackUsed: false };
   } catch {
-    return fallback;
+    return { data: fallback, fallbackUsed: true };
   }
 }
 
 export async function fetchAgents(): Promise<Agent[]> {
-  return safeFetch('/agents', { cache: 'no-store' }, mockAgents);
+  const result = await safeFetch('/agents', { cache: 'no-store' }, mockAgents);
+  return result.data;
 }
 
 export async function runAgent(agentId: string): Promise<{ message?: string; run_id?: string }> {
-  return safeFetch(
+  const result = await safeFetch(
     '/run',
     {
       method: 'POST',
@@ -79,8 +86,16 @@ export async function runAgent(agentId: string): Promise<{ message?: string; run
       message: `OpenClaw API unavailable. Mock run accepted for ${agentId}.`
     }
   );
+
+  return result.data;
 }
 
 export async function fetchLogs(): Promise<LogItem[]> {
-  return safeFetch('/logs', { cache: 'no-store' }, mockLogs);
+  const result = await safeFetch('/logs', { cache: 'no-store' }, mockLogs);
+  return result.data;
+}
+
+export async function fetchApiStatus(): Promise<'Connected' | 'Fallback Mode'> {
+  const result = await safeFetch('/agents', { cache: 'no-store' }, mockAgents);
+  return result.fallbackUsed ? 'Fallback Mode' : 'Connected';
 }
