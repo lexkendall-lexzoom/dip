@@ -509,18 +509,34 @@ footer{background:var(--ink);border-top:1px solid rgba(255,255,255,.08);padding:
     {% for item in venues %}
     {% if item.citySlug == 'new-york-city' %}
       {%- set sv = item.venue -%}
-      <article class="vcard" data-detail-url="/{{ item.citySlug }}/{{ sv.slug | default(item.fileSlug) }}/">
+      {%- set detailUrl = "/"+ item.citySlug +"/"+ (sv.slug | default(item.fileSlug)) +"/" -%}
+      {%- set heroImg = sv.hero_image | default('') -%}
+      <article class="vcard" data-detail-url="{{ detailUrl }}">
+        <div class="cimg" onclick="window.location.href='{{ detailUrl }}'" style="cursor:pointer">
+          {% if heroImg %}
+            <img
+              src="{{ heroImg | assetUrl }}"
+              alt="{{ sv.name }}"
+              loading="lazy"
+              decoding="async"
+              width="500"
+              height="350"
+              sizes="240px"
+              onerror="this.style.display='none';this.parentElement.style.background='var(--mist)'"
+            />
+          {% endif %}
+        </div>
         <div class="cbody">
           <div class="ctop">
             <div>
               <p class="chood">{{ sv.neighborhood | default('New York City') }}</p>
-              <h2 class="cname">{{ sv.name }}</h2>
+              <h2 class="cname"><a href="{{ detailUrl }}" style="color:inherit;text-decoration:none">{{ sv.name }}</a></h2>
             </div>
           </div>
           {% if sv.review %}<p class="crev">{{ sv.review }}</p>{% endif %}
           <div class="cfoot">
             <span class="cprice">{{ sv.price | default('See details') }}</span>
-            <a class="cvisit" href="/{{ item.citySlug }}/{{ sv.slug | default(item.fileSlug) }}/">Dip Review &rarr;</a>
+            <a class="cvisit" href="{{ detailUrl }}">Dip Review &rarr;</a>
           </div>
         </div>
       </article>
