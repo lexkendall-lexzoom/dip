@@ -1,13 +1,13 @@
 seo:
   title: 'Brooklyn Banya Review: Price, Hours, What to Know | Dip'
   description: Dip review of Brooklyn Banya in Sheepshead Bay with pricing, hours, neighborhood notes, and who it is best for.
-  social_image: 'https://images.unsplash.com/photo-1527637040694-60b17b13f9df?w=1200&h=630&fit=crop&q=80'
+  social_image: 'https://static.wixstatic.com/media/574f29_21a6d9aab8c048f79ee1763e7002d712~mv2.jpg/v1/fill/w_1200,h_630,al_c,q_85,enc_auto/brooklynbanya.jpg'
 venue:
   name: Brooklyn Banya
   city: New York City
   slug: brooklyn-banya
   subtitle: Editorial review, practical details, and booking context from Dip.
-  hero_image: 'https://images.unsplash.com/photo-1527637040694-60b17b13f9df?w=800&h=560&fit=crop&q=80'
+  hero_image: 'https://static.wixstatic.com/media/574f29_21a6d9aab8c048f79ee1763e7002d712~mv2.jpg/v1/fill/w_1536,h_783,al_c,q_85,enc_auto/brooklynbanya.jpg'
   neighborhood: Sheepshead Bay, Brooklyn
   price: from $60
   score: '7.9'
@@ -17,4 +17,7 @@ venue:
   website_url: https://www.brooklynbanya.com
   review: A straightforward neighborhood banya in Sheepshead Bay where the draw is the thing itself — serious steam, cold water, and regulars who know what they came for. No frills, no branding refresh, no cocktail menu. Go for the banya room and the contrast cycle, and leave everything else at the door.
   gallery_images:
-    - 'https://images.unsplash.com/photo-1527637040694-60b17b13f9df?w=800&h=560&fit=crop&q=80'
+    - 'https://static.wixstatic.com/media/574f29_21a6d9aab8c048f79ee1763e7002d712~mv2.jpg/v1/fill/w_1536,h_783,al_c,q_85,enc_auto/brooklynbanya.jpg'
+    - 'https://static.wixstatic.com/media/11062b_710855b40af241829e80fd9a3b83c833~mv2.jpeg/v1/fill/w_1200,h_675,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Dry%20Sauna.jpeg'
+    - 'https://static.wixstatic.com/media/c4b59e_2c5e0ac1488247f2b50752251de94532~mv2.jpg/v1/fill/w_800,h_600,al_c,q_85,enc_auto/brooklynbanya-2.jpg'
+    - 'https://static.wixstatic.com/media/c4b59e_0eafbb37b1af4d0d823d2e7382e065de~mv2.jpg/v1/fill/w_800,h_600,al_c,q_85,enc_auto/brooklynbanya-3.jpg'
