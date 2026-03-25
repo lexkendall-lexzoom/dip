@@ -30,6 +30,26 @@ export type NormalizedVenueFile = {
   };
 };
 
+const inferPrimaryArchetype = (venue: EnrichedVenue): string => {
+  const haystack = [
+    venue.name,
+    venue.short_description,
+    venue.long_description,
+    ...(venue.amenities ?? []),
+    ...(venue.rituals ?? []),
+  ]
+    .filter(Boolean)
+    .join(" ")
+    .toLowerCase();
+
+  if (/\bhammam\b/.test(haystack)) return "Hammam";
+  if (/\bbath\s?house\b|\bbanya\b|\bthermal baths?\b/.test(haystack)) return "Bathhouse";
+  if (/\bcold plunge\b|\bcontrast\b/.test(haystack)) return "Contrast Therapy";
+  if (/\bsauna\b/.test(haystack)) return "Sauna";
+  if (/\bspa\b/.test(haystack)) return "Spa";
+  return "Other";
+};
+
 export function normalizeVenue(enrichedVenue: EnrichedVenue): NormalizedVenueFile {
   const slug = enrichedVenue.slug?.trim() || slugify(enrichedVenue.name);
   const citySlug = slugify(enrichedVenue.city);
@@ -58,7 +78,7 @@ export function normalizeVenue(enrichedVenue: EnrichedVenue): NormalizedVenueFil
       website_url: enrichedVenue.website_url,
       booking_url: enrichedVenue.booking_url,
       instagram_url: enrichedVenue.instagram_url,
-      primary_archetype: "Other",
+      primary_archetype: inferPrimaryArchetype(enrichedVenue),
       amenities: enrichedVenue.amenities,
       rituals: enrichedVenue.rituals,
       hours: enrichedVenue.hours,
