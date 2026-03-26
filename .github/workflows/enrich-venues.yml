@@ -1,0 +1,68 @@
+name: Enrich NYC Venue Scores
+
+# Runs on the 1st of every month at 6 AM UTC.
+# Also triggerable manually via the GitHub Actions UI (workflow_dispatch).
+on:
+  schedule:
+    - cron: '0 6 1 * *'
+  workflow_dispatch:
+    inputs:
+      venue:
+        description: 'Single venue slug to process (leave blank for all NYC venues)'
+        required: false
+        default: ''
+      dry_run:
+        description: 'Dry run — print output but do not write YAMLs'
+        type: boolean
+        required: false
+        default: false
+
+jobs:
+  enrich:
+    name: Fetch Google Places + compute scores
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write   # needed to commit updated YAMLs back to the repo
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Node 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run enrichment script
+        env:
+          SUPABASE_URL:         ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+        run: |
+          ARGS=""
+          if [ -n "${{ github.event.inputs.venue }}" ]; then
+            ARGS="$ARGS --venue=${{ github.event.inputs.venue }}"
+          fi
+          if [ "${{ github.event.inputs.dry_run }}" = "true" ]; then
+            ARGS="$ARGS --dry-run"
+          fi
+          node scripts/enrich-nyc-venues.js $ARGS
+
+      - name: Commit updated venue YAMLs
+        if: ${{ github.event.inputs.dry_run != 'true' }}
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add content/venues/new-york-city/
+          if git diff --staged --quiet; then
+            echo "No venue data changed — nothing to commit."
+          else
+            git commit -m "chore: refresh NYC venue community scores and keywords [skip ci]"
+            git push
+          fi
