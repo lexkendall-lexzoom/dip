@@ -273,6 +273,15 @@ module.exports = function(eleventyConfig) {
     { ritual: 'hammam', city: 'istanbul' },
   ].map((item) => ({ ...item, ritualLabel: ritualLabelMap[item.ritual] || startCase(item.ritual), cityLabel: startCase(item.city) }))));
 
+  // ── Nunjucks filter: community_score (0–5) → star string ─
+  eleventyConfig.addFilter("stars", function(score) {
+    const val  = Math.round((parseFloat(score) || 0) * 2) / 2; // round to nearest 0.5
+    const full = Math.min(5, Math.floor(val));
+    const half = (val - full) >= 0.5 ? 1 : 0;
+    const empty = Math.max(0, 5 - full - half);
+    return '★'.repeat(full) + (half ? '½' : '') + '☆'.repeat(empty);
+  });
+
   // ── Nunjucks filter: safe output for HTML ───────────────
   eleventyConfig.addFilter("safe", function(value) {
     return value;
