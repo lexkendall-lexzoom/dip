@@ -1,10 +1,10 @@
 name: Enrich NYC Venue Scores
 
-# Runs on the 1st of every month at 6 AM UTC.
+# Runs on the 1st and 15th of every month at 6 AM UTC (bi-weekly).
 # Also triggerable manually via the GitHub Actions UI (workflow_dispatch).
 on:
   schedule:
-    - cron: '0 6 1 * *'
+    - cron: '0 6 1,15 * *'
   workflow_dispatch:
     inputs:
       venue:
