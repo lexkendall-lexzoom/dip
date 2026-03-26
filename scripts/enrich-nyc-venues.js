@@ -51,24 +51,21 @@ async function loadSecretsFromVault() {
     auth: { autoRefreshToken: false, persistSession: false },
   });
 
-  const { data, error } = await supabase
-    .schema('vault')
-    .from('decrypted_secrets')
-    .select('name, decrypted_secret')
-    .in('name', ['Anthropic API key', 'google places api']);
+  async function getSecret(name) {
+    const { data, error } = await supabase.rpc('get_vault_secret', { secret_name: name });
+    if (error) throw new Error(`Vault RPC failed for "${name}": ${error.message}`);
+    if (!data)  throw new Error(`Secret "${name}" not found in Vault`);
+    return data;
+  }
 
-  if (error) throw new Error(`Vault fetch failed: ${error.message}`);
-
-  const raw = Object.fromEntries(
-    (data || []).map(row => [row.name, row.decrypted_secret])
-  );
-
-  if (!raw['Anthropic API key'])  throw new Error('"Anthropic API key" not found in Vault');
-  if (!raw['google places api'])  throw new Error('"google places api" not found in Vault');
+  const [anthropicKey, googleKey] = await Promise.all([
+    getSecret('Anthropic API key'),
+    getSecret('google places api'),
+  ]);
 
   return {
-    ANTHROPIC_API_KEY:    raw['Anthropic API key'],
-    GOOGLE_PLACES_API_KEY: raw['google places api'],
+    ANTHROPIC_API_KEY:     anthropicKey,
+    GOOGLE_PLACES_API_KEY: googleKey,
   };
 }
 
