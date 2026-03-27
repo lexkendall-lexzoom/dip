@@ -68,7 +68,7 @@ main{max-width:100%;overflow-x:hidden}
 
 /* NAV */
 nav{position:sticky;top:0;z-index:400;display:flex;align-items:center;justify-content:space-between;padding:0 44px;height:60px;background:var(--page);border-bottom:2px solid var(--ink)}
-.logo{text-decoration:none;font-family:var(--font-sans);font-size:27.456px;font-weight:800;letter-spacing:-.02em;color:var(--ink);display:inline-flex;align-items:center;line-height:1;text-rendering:geometricPrecision;-webkit-font-smoothing:antialiased}
+.logo{text-decoration:none;font-family:var(--font-sans);font-size:31px;font-weight:800;letter-spacing:-.02em;color:var(--ink);display:inline-flex;align-items:center;line-height:1;text-rendering:geometricPrecision;-webkit-font-smoothing:antialiased}
 .logo span{color:var(--teal)}
 .nav-r{display:flex;align-items:center;gap:28px}
 .nav-links{display:flex;align-items:stretch;gap:24px;list-style:none;height:100%}
@@ -93,7 +93,7 @@ nav{position:sticky;top:0;z-index:400;display:flex;align-items:center;justify-co
 .hero{padding:60px 44px 52px;max-width:1280px;margin:0 auto;display:grid;grid-template-columns:1.1fr .9fr;gap:60px;align-items:start}
 .h-ey{font-size:10px;letter-spacing:.26em;text-transform:uppercase;color:var(--teal);margin-bottom:16px;display:flex;align-items:center;gap:10px}
 .h-ey::before{content:'';width:20px;height:2px;background:var(--teal)}
-.h-title{font-family:var(--font-sans);font-size:clamp(35.2px,4.4vw,60.8px);font-weight:800;line-height:.94;letter-spacing:-.03em;color:var(--ink);margin-bottom:20px}
+.h-title{font-family:var(--font-sans);font-size:clamp(39px,4.9vw,68px);font-weight:800;line-height:.94;letter-spacing:-.03em;color:var(--ink);margin-bottom:20px}
 .h-title span{color:var(--teal)}
 .h-sub{font-family:var(--font-serif);font-size:17px;font-style:italic;line-height:1.65;color:#555;max-width:420px;margin-bottom:32px}
 .capture{background:var(--ink);padding:22px}
@@ -308,6 +308,15 @@ nav{position:sticky;top:0;z-index:400;display:flex;align-items:center;justify-co
 .cs-form button{padding:13px 15px;background:var(--teal);color:#fff;border:none;font-family:var(--font-sans);font-size:10px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;cursor:pointer;transition:background .2s}
 .cs-form button:hover{background:var(--teal-d)}
 .cs-note{font-size:10px;color:rgba(255,255,255,.17);margin-top:9px}
+/* SCORING EXPLAINER */
+.scoring-explainer{border-top:2px solid var(--ink);margin-top:52px;padding:52px 44px}
+.scoring-inner{max-width:700px;margin:0 auto}
+.scoring-title{font-family:var(--font-sans);font-size:13px;font-weight:800;letter-spacing:.22em;text-transform:uppercase;color:var(--teal);margin-bottom:20px}
+.scoring-body{font-family:var(--font-serif);font-size:15px;font-style:italic;line-height:1.75;color:#555;margin-bottom:10px}
+.scoring-body strong{font-style:normal;color:var(--ink)}
+.scoring-list{font-family:var(--font-serif);font-size:15px;font-style:italic;line-height:1.75;color:#555;margin:4px 0 12px 0;padding-left:18px}
+.scoring-list li{margin-bottom:4px}
+.scoring-list strong{font-style:normal;color:var(--ink)}
 
 footer{background:var(--ink);border-top:1px solid rgba(255,255,255,.08);padding:22px 44px;display:flex;justify-content:space-between;align-items:center}
 .fc{font-size:11px;color:rgba(255,255,255,.2)}
@@ -324,8 +333,11 @@ footer{background:var(--ink);border-top:1px solid rgba(255,255,255,.08);padding:
 .search-title{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--stone);font-weight:700}
 .search-note{font-size:12px;color:#666}
 .search-form{display:flex;gap:10px}
-.search-input{flex:1;padding:12px 14px;border:2px solid var(--ink);font-family:var(--font-sans);font-size:14px;outline:none}
+.search-input-wrap{position:relative;flex:1;display:flex}
+.search-input{flex:1;padding:12px 38px 12px 14px;border:2px solid var(--ink);font-family:var(--font-sans);font-size:14px;outline:none}
 .search-input:focus{border-color:var(--teal)}
+.search-clear{position:absolute;right:10px;top:50%;transform:translateY(-50%);background:none;border:none;color:#999;font-size:15px;cursor:pointer;line-height:1;padding:4px 6px;display:none;align-items:center;justify-content:center}
+.search-clear:hover{color:var(--ink)}
 .search-btn{padding:12px 16px;border:none;background:var(--teal);color:#fff;font-size:10px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;cursor:pointer;white-space:nowrap}
 .search-btn[disabled]{opacity:.7;cursor:wait}
 .search-status{margin-top:10px;font-size:12px;color:#555}
@@ -351,6 +363,7 @@ footer{background:var(--ink);border-top:1px solid rgba(255,255,255,.08);padding:
   .fbar{position:static;top:auto}
   .vcard{flex-direction:column}.cimg{width:100%;height:180px}
   .cs-in{grid-template-columns:1fr;gap:32px}.cs{padding:48px 18px}
+  .scoring-explainer{padding:40px 18px}
   footer{padding:18px;flex-direction:column;gap:12px}
 }
 @media(max-width:600px){.h-title{font-size:41.6px}}
@@ -408,7 +421,10 @@ footer{background:var(--ink);border-top:1px solid rgba(255,255,255,.08);padding:
       <p class="search-note">Try: “best sauna in Brooklyn”</p>
     </div>
     <form class="search-form" id="search-form">
-      <input id="search-input" class="search-input" type="text" placeholder="Search for “best sauna in Brooklyn”" autocomplete="off" />
+      <div class="search-input-wrap">
+        <input id="search-input" class="search-input" type="text" placeholder="Search for “best sauna in Brooklyn”" autocomplete="off" />
+        <button type="button" id="search-clear" class="search-clear" aria-label="Clear search">✕</button>
+      </div>
       <button id="search-submit" class="search-btn" type="submit">Search</button>
     </form>
     <p id="search-status" class="search-status" role="status" aria-live="polite"></p>
@@ -533,7 +549,6 @@ footer{background:var(--ink);border-top:1px solid rgba(255,255,255,.08);padding:
               <h2 class="cname"><a href="{{ detailUrl }}" style="color:inherit;text-decoration:none">{{ sv.name }}</a></h2>
             </div>
           </div>
-          {% if sv.review %}<p class="crev">{{ sv.review }}</p>{% endif %}
           <div class="cfoot">
             <span class="cprice">{{ sv.price | default('See details') }}</span>
             <a class="cvisit" href="{{ detailUrl }}">Dip Review &rarr;</a>
@@ -544,6 +559,25 @@ footer{background:var(--ink);border-top:1px solid rgba(255,255,255,.08);padding:
     {% endfor %}
   </div>
 </div>
+
+<!-- ABOUT SCORING -->
+<section class="scoring-explainer">
+  <div class="scoring-inner">
+    <h2 class="scoring-title">How Dip Scoring Works</h2>
+    <p class="scoring-body">Dip uses a blended scoring system to help you quickly understand the quality of a bathhouse.</p>
+    <p class="scoring-body">The <strong>Dip Index</strong> is our primary score. It combines:</p>
+    <ul class="scoring-list">
+      <li>Our editorial review, based on firsthand visits</li>
+      <li>Community ratings aggregated from trusted sources</li>
+    </ul>
+    <p class="scoring-body">This gives a more complete view, balancing expert perspective with real-world sentiment.</p>
+    <p class="scoring-body">On each venue page, you can also see:</p>
+    <ul class="scoring-list">
+      <li><strong>Our Review</strong> — Dip's editorial score</li>
+      <li><strong>Community</strong> — aggregated guest ratings</li>
+    </ul>
+  </div>
+</section>
 
 <!-- COMING SOON STRIP -->
 <section class="cs" id="cs">
@@ -1349,6 +1383,7 @@ const VENUE_PAGE_DATA_BY_PATH = {
     path: "/" ~ item.citySlug ~ "/" ~ (item.venue.slug | default(item.fileSlug)) ~ "/",
     citySlug: item.citySlug,
     score: item.venue.score,
+    dipIndex: item.venue.dip_index | default(""),
     review: item.venue.review | default(""),
     price: item.venue.price | default(""),
     hours: item.venue.hours | default(""),
@@ -1399,6 +1434,8 @@ function applyVenuePageOverrides() {
 
     const parsedScore = source.score == null || source.score === '' ? null : Number(source.score);
     if (Number.isFinite(parsedScore)) v.score = parsedScore;
+    const parsedDipIndex = source.dipIndex == null || source.dipIndex === '' ? null : Number(source.dipIndex);
+    if (Number.isFinite(parsedDipIndex)) v._dipIndex = parsedDipIndex;
     if (source.review) v.review = source.review;
     if (source.price) v.price = source.price;
     if (source.hours) v.hours = source.hours;
@@ -1682,7 +1719,28 @@ async function submitSearchQuery(query, { updateUrl = true } = {}) {
 function initSearchUi() {
   const form = document.getElementById('search-form');
   const input = document.getElementById('search-input');
+  const clearBtn = document.getElementById('search-clear');
   if (!form || !input) return;
+
+  function updateClearBtn() {
+    if (clearBtn) clearBtn.style.display = input.value ? 'flex' : 'none';
+  }
+
+  function resetSearch() {
+    input.value = '';
+    updateClearBtn();
+    const status = document.getElementById('search-status');
+    const results = document.getElementById('search-results');
+    if (status) { status.textContent = ''; status.classList.remove('error'); }
+    if (results) results.innerHTML = '';
+    const u = new URL(window.location.href);
+    u.searchParams.delete('q');
+    window.history.replaceState({}, '', u.pathname + (u.search !== '?' ? u.search : '') + u.hash);
+    input.focus();
+  }
+
+  input.addEventListener('input', updateClearBtn);
+  if (clearBtn) clearBtn.addEventListener('click', resetSearch);
 
   form.addEventListener('submit', async (event) => {
     event.preventDefault();
@@ -1693,6 +1751,7 @@ function initSearchUi() {
   const initialQuery = (url.searchParams.get('q') || '').trim();
   if (initialQuery) {
     input.value = initialQuery;
+    updateClearBtn();
     submitSearchQuery(initialQuery, { updateUrl: false });
   }
 }
@@ -1966,11 +2025,13 @@ function renderCard(v) {
   const isUp = v.type === 'upcoming';
   const hasColdPlunge = venueHasColdPlunge(v);
   const imgReq = getVenueImageRequest(normalizeImagePath(v.img));
-  const scoreValue = typeof v.score === 'number' ? v.score : Number(v.score);
+  const displayScore = (v._dipIndex != null && Number.isFinite(v._dipIndex))
+    ? v._dipIndex
+    : (typeof v.score === 'number' ? v.score : Number(v.score));
   const scoreHtml = isUp
     ? `<div class="cscore w"><span class="cop-lbl">Opening</span><span class="cop-when">${v.openWhen}</span></div>`
-    : Number.isFinite(scoreValue)
-      ? `<div class="cscore"><span class="cscore-n">${scoreValue.toFixed(1)}</span><span class="cscore-d">/ 10</span></div>`
+    : Number.isFinite(displayScore)
+      ? `<div class="cscore"><span class="cscore-n">${displayScore.toFixed(1)}</span><span class="cscore-d">DIP INDEX</span></div>`
       : `<div class="cscore"><span class="cop-lbl" style="color:var(--teal)">Now Open</span></div>`;
   const gfTags = v.gf.map(g => `<span class="gft${isUp?' w':''}">${g}</span>`).join('');
   const detailUrl = v._detailUrl || VENUE_PAGE_PATHS[v.id] || '';
@@ -1984,8 +2045,9 @@ function renderCard(v) {
   const tags = getVenueTags(v);
   const occLabels = {date:'🕯️ Date Night',meeting:'🤝 Business Meeting',solo:'🧘 Solo Unwind',scene:'🎉 The Scene',group:'👥 Group Day',recovery:'⚡ Recovery'};
   const occBadges = occs.map(o=>`<span class="occ-badge occ-${o}">${occLabels[o]||o}</span>`).join('');
-  return `<article class="vcard${isUp?' upc':''}" id="${v.id}" data-type="${v.type}" data-occ="${occs.join(' ')}" data-tags="${tags.join(' ')}" data-coldplunge="${hasColdPlunge ? '1' : '0'}" data-detail-url="${detailUrl}">
-    <div class="cimg" ${detailUrl ? `onclick="window.location.href='${detailUrl}'" style="cursor:pointer"` : ""}>
+  const cardClick = (!isUp && detailUrl) ? `onclick="if(!event.target.closest('a')){window.location.href='${detailUrl}'}" style="cursor:pointer"` : '';
+  return `<article class="vcard${isUp?' upc':''}" id="${v.id}" data-type="${v.type}" data-occ="${occs.join(' ')}" data-tags="${tags.join(' ')}" data-coldplunge="${hasColdPlunge ? '1' : '0'}" data-detail-url="${detailUrl}" ${cardClick}>
+    <div class="cimg">
       <img src="${imgReq.src}"${imgReq.srcset ? ` srcset="${imgReq.srcset}"` : ''} alt="${v.name}" loading="lazy" decoding="async" width="500" height="350" sizes="${imgReq.sizes}"
         onerror="this.style.display='none';this.parentElement.style.background='${grad}'"
         style="width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s"/>
@@ -2001,7 +2063,6 @@ function renderCard(v) {
         ${scoreHtml}
       </div>
       <div class="cgf">${gfTags}</div>
-      <p class="crev">${v.review}</p>
       <div class="cfoot">
         <span class="cprice">${v.price}</span>
         <span class="chours">${v.hours}</span>
