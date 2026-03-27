@@ -128,7 +128,7 @@ permalink: "/{{ item.citySlug }}/{{ item.venue.slug | default(item.fileSlug) }}/
                     <div class="facts">
                             {% if v.neighborhood %}<div class="fact"><b>Neighborhood</b>{{ v.neighborhood }}</div>{% endif %}
                             {% if v.price %}<div class="fact"><b>Price</b>{{ v.price }}</div>{% endif %}
-                            <div class="fact"><b>Score</b>{{ v.score | default("Coming soon") }}</div>
+                            <div class="fact"><b>Dip Review Score</b>{{ v.score | default("Coming soon") }}</div>
                             {% if v.date_reviewed %}<div class="fact"><b>Date reviewed</b>{{ v.date_reviewed }}</div>{% endif %}
                             {% if v.hours %}<div class="fact wide"><b>Hours</b>{{ v.hours }}</div>{% endif %}
                             {% if v.core_type %}<div class="fact"><b>Core Ritual Type</b>{{ v.core_type | replace('_', ' ') }}</div>{% endif %}
