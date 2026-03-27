@@ -15,8 +15,13 @@ venue:
   hours: Daily · Day pass from $90
   best_for: Contrast therapy routines, recovery sessions, and reset days.
   website_url: https://sojospa.com
-  review: Technically New Jersey, spiritually New York. The rooftop infinity pool with Manhattan views is one of the genuinely great moments in this metro area. 240,000 sq ft, 19 water features, seven sauna rooms. Take the NJ Transit bus from Port Authority — it's fifteen minutes and completely worth it.
+  review: >-
+    Technically New Jersey, spiritually New York. The rooftop infinity pool with Manhattan views is one of the genuinely
+    great moments in this metro area. 240,000 sq ft, 19 water features, seven sauna rooms. Take the NJ Transit bus from
+    Port Authority — it's fifteen minutes and completely worth it.
   gallery_images:
     - https://sojospaclub.com/wp-content/uploads/2023/02/sojo-loop-fallback.jpg
     - https://sojospaclub.com/wp-content/uploads/2022/12/Copy-of-Aerial-View-of-Infinity-Pool-scaled-e1677598201515.jpg
     - https://sojospaclub.com/wp-content/uploads/2022/12/Copy-of-Copy-of-sojo_spa_291.jpg
+  community_score: '4.4'
+  dip_index: '8.3'
