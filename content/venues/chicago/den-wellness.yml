@@ -1,13 +1,13 @@
 seo:
   title: "Den Wellness Chicago Review: Price, Hours, What to Know | Dip"
   description: Dip review of Den Wellness in River North Chicago — cold plunge, infrared sauna, guided sessions, and a social wellness model that actually works.
-  social_image: "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=500&h=350&fit=crop&q=80"
+  social_image: ""
 venue:
   name: Den Wellness
   city: Chicago
   slug: den-wellness
   subtitle: Editorial review, practical details, and booking context from Dip.
-  hero_image: "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=500&h=350&fit=crop&q=80"
+  hero_image: ""
   neighborhood: River North, Chicago
   price: from $45
   score: "7.8"
@@ -25,4 +25,4 @@ venue:
     the staff remembers names. At $45 a session it is the most accessible
     well-executed contrast therapy in Chicago.
   gallery_images:
-    - "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=500&h=350&fit=crop&q=80"
+    - ""

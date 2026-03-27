@@ -711,7 +711,7 @@ const CITIES = {
        hours:'Daily · Session-based',
        url:'https://spa88.com',
        lat:40.7075,lng:-74.0108,
-       img:'https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=500&h=350&fit=crop&q=80'},
+       img:''},
 
       {id:'nyc16',num:17,name:'CityWell Brooklyn',hood:'Williamsburg, Brooklyn',type:'spa',price:'from $65',score:8.0,
        gf:['Neighborhood spa','Outdoor tubs','Quiet reset'],
@@ -735,7 +735,7 @@ const CITIES = {
        hours:'Daily · Check schedule',
        url:'https://bathclubny.com',
        lat:40.6207,lng:-73.9586,
-       img:'https://images.unsplash.com/photo-1519823551278-64ac92734fb1?w=500&h=350&fit=crop&q=80'},
+       img:''},
 
       {id:'nyc19',num:20,name:'King Spa',hood:'Palisades Park, NJ',type:'korean',price:'from $80',score:8.1,
        gf:['Jjimjilbang day','Korean spa','Group-friendly'],
@@ -751,7 +751,7 @@ const CITIES = {
        hours:'Daily · By appointment',
        url:'https://www.recoverienyc.com',
        lat:40.7290,lng:-73.9926,
-       img:'https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=500&h=350&fit=crop&q=80'},
+       img:''},
     ],
     upcoming:[
       {id:'nycu1',num:12,name:'Schwet',hood:'Tribeca, Manhattan',type:'upcoming',price:'$150 / 2.5 hrs',score:null,
@@ -932,7 +932,7 @@ const CITIES = {
        review:'Chicago\'s cleanest answer to the sauna-and-cold-plunge trend. Infrared and traditional Finnish sauna, ice plunge, and a social lounge designed around community rather than isolation. Sessions book fast — plan ahead.',
        hours:'Daily · Session-based',url:'https://denwellness.com',
        lat:41.8920,lng:-87.6290,
-       img:'https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=500&h=350&fit=crop&q=80'},
+       img:''},
     ],upcoming:[]
   },
 
@@ -984,7 +984,7 @@ const CITIES = {
        review:'Austin\'s most dedicated float operation. Multiple tank options, clean facilities, and a staff that actually knows what float therapy does to your nervous system. East Austin location means you can go after dinner and walk to something good.',
        hours:'Daily 9am–10pm · By appointment',url:'https://austinfloatcenter.com',
        lat:30.2660,lng:-97.7210,
-       img:'https://images.unsplash.com/photo-1518732714860-b62714ce0c59?w=500&h=350&fit=crop&q=80'},
+       img:''},
     ],upcoming:[]
   },
 
@@ -1003,7 +1003,7 @@ const CITIES = {
        review:'A neighborhood wellness studio on 14th Street doing salt therapy, infrared sauna, and IV drips for the Shaw crowd. Small, well-curated, and genuinely useful for the urban body under chronic stress.',
        hours:'Daily · By appointment',url:'https://saltandjuniper.com',
        lat:38.9162,lng:-77.0301,
-       img:'https://images.unsplash.com/photo-1607962837359-5e7e89f86776?w=500&h=350&fit=crop&q=80'},
+       img:''},
     ],upcoming:[]
   },
 
@@ -1060,7 +1060,7 @@ const CITIES = {
        review:'The best float center in Colorado, and particularly useful at 5,280 feet where altitude does things to your body. The zero-gravity tanks are serious — one of the better places to decompress before or after a ski weekend.',
        hours:'Daily 9am–9pm · By appointment',url:'https://glowfloat.com',
        lat:39.7196,lng:-104.9513,
-       img:'https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?w=500&h=350&fit=crop&q=80'},
+       img:''},
     ],upcoming:[]
   },
 
@@ -1098,7 +1098,7 @@ const CITIES = {
        review:'The St. Regis spa in Aspen delivers what you come to Aspen for — exceptional everything, in a mountain setting, without visible effort. The heated outdoor pool in winter with snowflakes falling is one of the genuinely great spa moments you can have in the American West.',
        hours:'Daily · Reservation required',url:'https://www.stregisaspen.com',
        lat:39.1910,lng:-106.8200,
-       img:'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=500&h=350&fit=crop&q=80'},
+       img:''},
     ],upcoming:[]
   },
 
@@ -1193,7 +1193,7 @@ const CITIES = {
        review:'Eau Palm Beach brings a more contemporary take to the Palm Beach spa formula — the oceanfront setting, the contrast hydrotherapy pools, and the whimsical design language make it the younger, louder counterpart to The Breakers a mile up the coast.',
        hours:'Daily · Reservation required',url:'https://eaupalmbeach.com',
        lat:26.7220,lng:-80.0360,
-       img:'https://images.unsplash.com/photo-1551882547-ff40c63fe2e2?w=500&h=350&fit=crop&q=80'},
+       img:''},
     ],upcoming:[]
   },
 
@@ -1231,7 +1231,7 @@ const CITIES = {
        review:'A halotherapy salt cave in East Nashville that serves the neighborhood\'s wellness-curious population with genuine quality. Forty-five minutes in the salt room, excellent for respiratory issues, stress, and the general conditions of being a person who lives in a city.',
        hours:'Daily · By appointment',url:'#',
        lat:36.1754,lng:-86.7531,
-       img:'https://images.unsplash.com/photo-1607962837359-5e7e89f86776?w=500&h=350&fit=crop&q=80'},
+       img:''},
     ],upcoming:[]
   },
 
@@ -1279,7 +1279,7 @@ const CITIES = {
        review:'Orange County\'s most dedicated float operation — clean, professionally run, with multiple tank options and a staff that understands what they\'re doing. In a county not exactly overflowing with serious wellness options, Papakea stands clearly apart.',
        hours:'Daily · By appointment',url:'https://papakeafloat.com',
        lat:33.6846,lng:-117.8265,
-       img:'https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?w=500&h=350&fit=crop&q=80'},
+       img:''},
     ],upcoming:[]
   },
 
@@ -1959,7 +1959,7 @@ function renderCard(v) {
   const gfTags = v.gf.map(g => `<span class="gft${isUp?' w':''}">${g}</span>`).join('');
   const detailUrl = v._detailUrl || VENUE_PAGE_PATHS[v.id] || '';
   const visitLink = isUp
-    ? `<a href="${v.url}" target="_blank" rel="noopener noreferrer" class="cvisit w" aria-label="Follow ${v.name} (opens in a new tab)">Follow →</a>`
+    ? `<a href="${v.url}" target="_blank" rel="noopener noreferrer" class="cvisit w" aria-label="Follow ${v.name} (opens in a new tab)" onclick="event.stopPropagation()">Follow →</a>`
     : detailUrl
       ? `<a href="${detailUrl}" class="cvisit" aria-label="Read Dip review for ${v.name}">Dip Review →</a>`
       : `<a href="${v.url}" target="_blank" rel="noopener noreferrer" class="cvisit" aria-label="Visit ${v.name} website (opens in a new tab)">Website →</a>`;
@@ -1968,7 +1968,7 @@ function renderCard(v) {
   const tags = getVenueTags(v);
   const occLabels = {date:'🕯️ Date Night',meeting:'🤝 Business Meeting',solo:'🧘 Solo Unwind',scene:'🎉 The Scene',group:'👥 Group Day',recovery:'⚡ Recovery'};
   const occBadges = occs.map(o=>`<span class="occ-badge occ-${o}">${occLabels[o]||o}</span>`).join('');
-  return `<article class="vcard${isUp?' upc':''}" id="${v.id}" data-type="${v.type}" data-occ="${occs.join(' ')}" data-tags="${tags.join(' ')}" data-coldplunge="${hasColdPlunge ? '1' : '0'}" data-detail-url="${detailUrl}">
+  return `<article class="vcard${isUp?' upc':''}" id="${v.id}" data-type="${v.type}" data-occ="${occs.join(' ')}" data-tags="${tags.join(' ')}" data-coldplunge="${hasColdPlunge ? '1' : '0'}" data-detail-url="${detailUrl}"${detailUrl ? ` onclick="window.location.href='${detailUrl}'" style="cursor:pointer"` : ''}>
     <div class="cimg" ${detailUrl ? `onclick="window.location.href='${detailUrl}'" style="cursor:pointer"` : ""}>
       <img src="${imgReq.src}"${imgReq.srcset ? ` srcset="${imgReq.srcset}"` : ''} alt="${v.name}" loading="lazy" decoding="async" width="500" height="350" sizes="${imgReq.sizes}"
         onerror="this.style.display='none';this.parentElement.style.background='${grad}'"
