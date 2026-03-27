@@ -1,29 +1,30 @@
 seo:
-  title: "QC NY Review: Price, Hours, What to Know | Dip"
-  description: Dip review of QC NY on Governors Island — 55,000 sq ft Italian thermal spa with infinity pools overlooking Manhattan. Pricing, hours, and who it is best for.
-  social_image: "https://www.qcny.com/wp-content/uploads/2023/05/qcny-outdoor-pool-skyline.jpg"
+  title: 'QC NY Review: Price, Hours, What to Know | Dip'
+  description: >-
+    Dip review of QC NY on Governors Island — 55,000 sq ft Italian thermal spa with infinity pools overlooking
+    Manhattan. Pricing, hours, and who it is best for.
+  social_image: https://www.qcny.com/wp-content/uploads/2023/05/qcny-outdoor-pool-skyline.jpg
 venue:
   name: QC NY
   city: New York City
   slug: qc-ny
   subtitle: Editorial review, practical details, and booking context from Dip.
-  hero_image: "https://www.qcny.com/wp-content/uploads/2023/05/qcny-outdoor-pool-skyline.jpg"
+  hero_image: https://www.qcny.com/wp-content/uploads/2023/05/qcny-outdoor-pool-skyline.jpg
   neighborhood: Governors Island, NYC
   price: from $98
-  score: "9.2"
+  score: '9.2'
   date_reviewed: March 2026
   hours: Sun–Thu 9am–10pm · Fri–Sat 9am–11pm (seasonal ferry required)
   best_for: Date night, full-day immersion, NYC skyline views, Italian thermal circuit.
-  website_url: "https://www.qcny.com"
+  website_url: https://www.qcny.com
   review: >-
-    QC NY is New York City's most transportive spa experience — an Italian
-    thermal sanctuary occupying 55,000 square feet of a Victorian military
-    barracks on Governors Island, with heated infinity pools that frame the
-    Lower Manhattan skyline in a way that feels almost impossibly cinematic.
-    The thermal circuit spans 20+ experiences: multi-themed saunas, infrared
-    beds, ice rooms, salt chambers, and Vichy showers, all arranged with the
-    unhurried logic of a QC Terme property. The ferry crossing is part of the
-    ritual. Admission includes robe, towel, locker, and sandals.
+    QC NY is New York City's most transportive spa experience — an Italian thermal sanctuary occupying 55,000 square
+    feet of a Victorian military barracks on Governors Island, with heated infinity pools that frame the Lower Manhattan
+    skyline in a way that feels almost impossibly cinematic. The thermal circuit spans 20+ experiences: multi-themed
+    saunas, infrared beds, ice rooms, salt chambers, and Vichy showers, all arranged with the unhurried logic of a QC
+    Terme property. The ferry crossing is part of the ritual. Admission includes robe, towel, locker, and sandals.
   gallery_images:
-    - "https://www.qcny.com/wp-content/uploads/2023/05/qcny-outdoor-pool-skyline.jpg"
-    - "https://www.qcny.com/wp-content/uploads/2023/05/qcny-sauna.jpg"
+    - https://www.qcny.com/wp-content/uploads/2023/05/qcny-outdoor-pool-skyline.jpg
+    - https://www.qcny.com/wp-content/uploads/2023/05/qcny-sauna.jpg
+  community_score: '4.7'
+  dip_index: '9.3'

@@ -1,13 +1,13 @@
 seo:
   title: 'Brooklyn Banya Review: Price, Hours, What to Know | Dip'
   description: Dip review of Brooklyn Banya in Sheepshead Bay with pricing, hours, neighborhood notes, and who it is best for.
-  social_image: 'https://images.unsplash.com/photo-1527637040694-60b17b13f9df?w=1200&h=630&fit=crop&q=80'
+  social_image: https://images.unsplash.com/photo-1527637040694-60b17b13f9df?w=1200&h=630&fit=crop&q=80
 venue:
   name: Brooklyn Banya
   city: New York City
   slug: brooklyn-banya
   subtitle: Editorial review, practical details, and booking context from Dip.
-  hero_image: 'https://images.unsplash.com/photo-1527637040694-60b17b13f9df?w=800&h=560&fit=crop&q=80'
+  hero_image: https://images.unsplash.com/photo-1527637040694-60b17b13f9df?w=800&h=560&fit=crop&q=80
   neighborhood: Sheepshead Bay, Brooklyn
   price: from $60
   score: '7.9'
@@ -15,6 +15,11 @@ venue:
   hours: Daily · Check schedule
   best_for: Traditional banya, steam room regulars, cold plunge, neighborhood locals.
   website_url: https://www.brooklynbanya.com
-  review: A straightforward neighborhood banya in Sheepshead Bay where the draw is the thing itself — serious steam, cold water, and regulars who know what they came for. No frills, no branding refresh, no cocktail menu. Go for the banya room and the contrast cycle, and leave everything else at the door.
+  review: >-
+    A straightforward neighborhood banya in Sheepshead Bay where the draw is the thing itself — serious steam, cold
+    water, and regulars who know what they came for. No frills, no branding refresh, no cocktail menu. Go for the banya
+    room and the contrast cycle, and leave everything else at the door.
   gallery_images:
-    - 'https://images.unsplash.com/photo-1527637040694-60b17b13f9df?w=800&h=560&fit=crop&q=80'
+    - https://images.unsplash.com/photo-1527637040694-60b17b13f9df?w=800&h=560&fit=crop&q=80
+  community_score: '4.2'
+  dip_index: '8.1'

@@ -1,27 +1,28 @@
 seo:
-  title: "Float Lab LA Review: Price, Hours, What to Know | Dip"
-  description: Dip review of Float Lab in West Los Angeles — one of the original float tank studios in the US, stripped-down and serious about sensory deprivation.
-  social_image: "https://floatlab.com/wp-content/uploads/float-lab-chamber.jpg"
+  title: 'Float Lab LA Review: Price, Hours, What to Know | Dip'
+  description: >-
+    Dip review of Float Lab in West Los Angeles — one of the original float tank studios in the US, stripped-down and
+    serious about sensory deprivation.
+  social_image: https://floatlab.com/wp-content/uploads/float-lab-chamber.jpg
 venue:
   name: Float Lab
   city: Los Angeles
   slug: float-lab
   subtitle: Editorial review, practical details, and booking context from Dip.
-  hero_image: "https://floatlab.com/wp-content/uploads/float-lab-chamber.jpg"
+  hero_image: https://floatlab.com/wp-content/uploads/float-lab-chamber.jpg
   neighborhood: West Los Angeles
   price: from $75
-  score: "7.5"
+  score: '7.5'
   date_reviewed: March 2026
   hours: Daily · By appointment
   best_for: Sensory deprivation regulars, deep rest, anyone processing something big, float tank beginners who want no frills.
-  website_url: "https://floatlab.com"
+  website_url: https://floatlab.com
   review: >-
-    Float Lab is not trying to be a wellness destination — it is a float tank
-    studio that has been doing this since before float tanks became a
-    lifestyle product. The chambers are large, the magnesium water is dense,
-    and the staff are matter-of-fact in the way that signals expertise. West
-    LA has newer, shinier options. Float Lab has the track record. First
-    float, expect forty-five minutes to stop thinking about floating. Return
-    visits are where it pays off.
+    Float Lab is not trying to be a wellness destination — it is a float tank studio that has been doing this since
+    before float tanks became a lifestyle product. The chambers are large, the magnesium water is dense, and the staff
+    are matter-of-fact in the way that signals expertise. West LA has newer, shinier options. Float Lab has the track
+    record. First float, expect forty-five minutes to stop thinking about floating. Return visits are where it pays off.
   gallery_images:
-    - "https://floatlab.com/wp-content/uploads/float-lab-chamber.jpg"
+    - https://floatlab.com/wp-content/uploads/float-lab-chamber.jpg
+  community_score: '4.4'
+  dip_index: '8.0'

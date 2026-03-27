@@ -1,29 +1,31 @@
 seo:
-  title: "Archimedes Banya San Francisco Review: Price, Hours, What to Know | Dip"
-  description: Dip review of Archimedes Banya in San Francisco — Russian steam banya, cold plunge pools, outdoor hot tub, and platza treatments in the Bay Area.
-  social_image: "https://banyasf.com/wp-content/uploads/2023/02/Yoga-Veritcal.jpeg"
+  title: 'Archimedes Banya San Francisco Review: Price, Hours, What to Know | Dip'
+  description: >-
+    Dip review of Archimedes Banya in San Francisco — Russian steam banya, cold plunge pools, outdoor hot tub, and
+    platza treatments in the Bay Area.
+  social_image: https://banyasf.com/wp-content/uploads/2023/02/Yoga-Veritcal.jpeg
 venue:
   name: Archimedes Banya
   city: San Francisco
   slug: archimedes-banya
   subtitle: Editorial review, practical details, and booking context from Dip.
-  hero_image: "https://banyasf.com/wp-content/uploads/2023/02/Yoga-Veritcal.jpeg"
+  hero_image: https://banyasf.com/wp-content/uploads/2023/02/Yoga-Veritcal.jpeg
   neighborhood: SOMA / Dogpatch, San Francisco
   price: from $45
-  score: "8.5"
+  score: '8.5'
   date_reviewed: March 2026
   hours: Thu–Mon 12pm–10pm · Closed Tue–Wed
   best_for: Russian banya experience, platza treatments, cold plunge, SF regulars who know what a banya is.
-  website_url: "https://banyasf.com/"
+  website_url: https://banyasf.com/
   review: >-
-    Archimedes runs hot — the Russian steam banya hits 180°F and nobody
-    apologizes for it. The outdoor deck has a cold plunge pool and a hot tub,
-    the platza service involves oak or birch branches and someone who knows
-    what they are doing, and the whole facility has the easy-going authority
-    of a place that does not need to explain itself to newcomers. Thursday
-    through Monday, $45 admission, cash-friendly. The Bay Area has very few
-    real banyas; Archimedes is the right one.
+    Archimedes runs hot — the Russian steam banya hits 180°F and nobody apologizes for it. The outdoor deck has a cold
+    plunge pool and a hot tub, the platza service involves oak or birch branches and someone who knows what they are
+    doing, and the whole facility has the easy-going authority of a place that does not need to explain itself to
+    newcomers. Thursday through Monday, $45 admission, cash-friendly. The Bay Area has very few real banyas; Archimedes
+    is the right one.
   gallery_images:
-    - "https://banyasf.com/wp-content/uploads/2023/02/Yoga-Veritcal.jpeg"
-    - "https://i0.wp.com/banyasf.com/wp-content/uploads/2022/12/cold_tub6-1.webp?fit=768%2C512&ssl=1"
-    - "https://i0.wp.com/banyasf.com/wp-content/uploads/2022/12/parnaya8.jpg?fit=1024%2C683&ssl=1"
+    - https://banyasf.com/wp-content/uploads/2023/02/Yoga-Veritcal.jpeg
+    - https://i0.wp.com/banyasf.com/wp-content/uploads/2022/12/cold_tub6-1.webp?fit=768%2C512&ssl=1
+    - https://i0.wp.com/banyasf.com/wp-content/uploads/2022/12/parnaya8.jpg?fit=1024%2C683&ssl=1
+  community_score: '4.5'
+  dip_index: '8.7'

@@ -1,29 +1,30 @@
 seo:
-  title: "Mermaid Spa Review: Price, Hours, What to Know | Dip"
-  description: Dip review of Mermaid Spa in Sea Gate, Brooklyn — authentic Russian banya with three steam rooms, ice plunge pools, and a restaurant. Pricing and hours.
-  social_image: "https://images.unsplash.com/photo-1618377370499-a36a9d51c7c5?w=800&h=450&fit=crop&q=80"
+  title: 'Mermaid Spa Review: Price, Hours, What to Know | Dip'
+  description: >-
+    Dip review of Mermaid Spa in Sea Gate, Brooklyn — authentic Russian banya with three steam rooms, ice plunge pools,
+    and a restaurant. Pricing and hours.
+  social_image: https://images.unsplash.com/photo-1618377370499-a36a9d51c7c5?w=800&h=450&fit=crop&q=80
 venue:
   name: Mermaid Spa
   city: New York City
   slug: mermaid-spa
   subtitle: Editorial review, practical details, and booking context from Dip.
-  hero_image: "https://images.unsplash.com/photo-1618377370499-a36a9d51c7c5?w=800&h=450&fit=crop&q=80"
+  hero_image: https://images.unsplash.com/photo-1618377370499-a36a9d51c7c5?w=800&h=450&fit=crop&q=80
   neighborhood: Sea Gate, Brooklyn
   price: from $45
-  score: "8.4"
+  score: '8.4'
   date_reviewed: March 2026
-  hours: "Sep 15–May 15: Mon–Fri 8am–midnight · Sat–Sun 7am–midnight · Summer hours vary"
+  hours: 'Sep 15–May 15: Mon–Fri 8am–midnight · Sat–Sun 7am–midnight · Summer hours vary'
   best_for: Russian banya purists, platza massage, long weekend soaks, off-the-beaten-path.
-  website_url: "https://mermaidspa.us"
+  website_url: https://mermaidspa.us
   review: >-
-    Mermaid Spa is Brooklyn's most authentic Russian banya — a wood-and-slate
-    lodge marooned in the quiet enclave of Sea Gate, where three full steam
-    rooms, a scorching dry sauna, a Turkish bath, two tile ice pools, and a
-    circular jacuzzi constitute one of the city's most complete thermal
-    sequences. The clientele is regulars-first, the platza sessions with birch
-    or oak venik are the real draw, and the on-site Russian restaurant keeps
-    you from leaving prematurely. 4-hour timed admission; membership packages
-    available for the converted.
+    Mermaid Spa is Brooklyn's most authentic Russian banya — a wood-and-slate lodge marooned in the quiet enclave of Sea
+    Gate, where three full steam rooms, a scorching dry sauna, a Turkish bath, two tile ice pools, and a circular
+    jacuzzi constitute one of the city's most complete thermal sequences. The clientele is regulars-first, the platza
+    sessions with birch or oak venik are the real draw, and the on-site Russian restaurant keeps you from leaving
+    prematurely. 4-hour timed admission; membership packages available for the converted.
   gallery_images:
-    - "https://images.unsplash.com/photo-1618377370499-a36a9d51c7c5?w=800&h=450&fit=crop&q=80"
-    - "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&h=450&fit=crop&q=80"
+    - https://images.unsplash.com/photo-1618377370499-a36a9d51c7c5?w=800&h=450&fit=crop&q=80
+    - https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&h=450&fit=crop&q=80
+  community_score: '4.4'
+  dip_index: '8.6'

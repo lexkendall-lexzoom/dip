@@ -15,8 +15,12 @@ venue:
   hours: Sun–Thu 9am–1am · Fri–Sat 9am–3am
   best_for: Groups, destination spa days, all-day immersion.
   website_url: https://www.worldspanyc.com
-  review: America’s largest banya is a true full-day destination. Seven sauna rooms, a snow room, and a Moroccan hammam make this one of the most comprehensive thermal circuits in NYC. The value proposition improves the longer you stay.
+  review: >-
+    America’s largest banya is a true full-day destination. Seven sauna rooms, a snow room, and a Moroccan hammam make
+    this one of the most comprehensive thermal circuits in NYC. The value proposition improves the longer you stay.
   gallery_images:
     - https://worldspa.com/wp-content/uploads/2024/02/WorldSpa_038.jpg
     - https://worldspa.com/wp-content/uploads/2024/02/WorldSpa_039.jpg
     - https://worldspa.com/wp-content/uploads/2024/02/WorldSpa_041.jpg
+  community_score: '4.5'
+  dip_index: '8.5'

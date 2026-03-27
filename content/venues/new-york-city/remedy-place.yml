@@ -1,13 +1,15 @@
 seo:
   title: 'Remedy Place Review: Price, Hours, What to Know | Dip'
   description: Dip review of Remedy Place in New York City with pricing, hours, and what to expect before booking.
-  social_image: https://cdn.sanity.io/images/jptxcgmn/production/3158497d1fca43ce863df9e06c8c97763d6c44c1-6123x4082.jpg?w=1200&q=85&fit=clip&auto=format
+  social_image: >-
+    https://cdn.sanity.io/images/jptxcgmn/production/3158497d1fca43ce863df9e06c8c97763d6c44c1-6123x4082.jpg?w=1200&q=85&fit=clip&auto=format
 venue:
   name: Remedy Place
   city: New York City
   slug: remedy-place
   subtitle: Editorial review, practical details, and booking context from Dip.
-  hero_image: https://cdn.sanity.io/images/jptxcgmn/production/3158497d1fca43ce863df9e06c8c97763d6c44c1-6123x4082.jpg?w=1200&q=85&fit=clip&auto=format
+  hero_image: >-
+    https://cdn.sanity.io/images/jptxcgmn/production/3158497d1fca43ce863df9e06c8c97763d6c44c1-6123x4082.jpg?w=1200&q=85&fit=clip&auto=format
   neighborhood: Flatiron + SoHo
   price: from $30
   score: '7.5'
@@ -15,8 +17,16 @@ venue:
   hours: Daily · Members + walk-ins
   best_for: Contrast therapy routines, recovery sessions, and reset days.
   website_url: https://remedyplace.com
-  review: Ice baths, infrared, hyperbaric O₂, NAD+ drips — the menu reads like a longevity conference agenda, and it delivers. The social club concept is real. Two Manhattan locations. Walk-ins from $30, memberships from $9,000/year if you're in that world.
+  review: >-
+    Ice baths, infrared, hyperbaric O₂, NAD+ drips — the menu reads like a longevity conference agenda, and it delivers.
+    The social club concept is real. Two Manhattan locations. Walk-ins from $30, memberships from $9,000/year if you're
+    in that world.
   gallery_images:
-    - https://cdn.sanity.io/images/jptxcgmn/production/3158497d1fca43ce863df9e06c8c97763d6c44c1-6123x4082.jpg?w=1200&q=85&fit=clip&auto=format
-    - https://cdn.sanity.io/images/jptxcgmn/production/f45c1f11b41340a59152aa402fcc5062f0382b5c-1920x1080.jpg?rect=0,36,1920,1008&w=1200&h=630
-    - https://cdn.sanity.io/images/jptxcgmn/production/d38b947aabf0f08a12c820c17cbd42a70bdec89b-1440x800.jpg?rect=553,0,593,800&w=2048&q=85&fit=clip&auto=format
+    - >-
+      https://cdn.sanity.io/images/jptxcgmn/production/3158497d1fca43ce863df9e06c8c97763d6c44c1-6123x4082.jpg?w=1200&q=85&fit=clip&auto=format
+    - >-
+      https://cdn.sanity.io/images/jptxcgmn/production/f45c1f11b41340a59152aa402fcc5062f0382b5c-1920x1080.jpg?rect=0,36,1920,1008&w=1200&h=630
+    - >-
+      https://cdn.sanity.io/images/jptxcgmn/production/d38b947aabf0f08a12c820c17cbd42a70bdec89b-1440x800.jpg?rect=553,0,593,800&w=2048&q=85&fit=clip&auto=format
+  community_score: '4.4'
+  dip_index: '8.0'
