@@ -8,6 +8,7 @@ venue:
   name: QC NY
   city: New York City
   slug: qc-ny
+  id: qc-ny
   subtitle: Editorial review, practical details, and booking context from Dip.
   hero_image: https://www.qcny.com/wp-content/uploads/2023/05/qcny-outdoor-pool-skyline.jpg
   neighborhood: Governors Island, NYC

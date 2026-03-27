@@ -8,6 +8,7 @@ venue:
   name: The Brooklyn Bathhouse
   city: New York City
   slug: brooklyn-bathhouse
+  id: brooklyn-bathhouse
   subtitle: Editorial review, practical details, and booking context from Dip.
   hero_image: ''
   neighborhood: Prospect-Lefferts Gardens, Brooklyn

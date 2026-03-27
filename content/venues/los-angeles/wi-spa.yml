@@ -8,6 +8,7 @@ venue:
   name: Wi Spa
   city: Los Angeles
   slug: wi-spa
+  id: wi-spa
   subtitle: Editorial review, practical details, and booking context from Dip.
   hero_image: https://wispausa.com/wp-content/uploads/2021/08/slide_2-scaled.jpg
   neighborhood: Koreatown, Los Angeles

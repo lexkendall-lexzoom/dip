@@ -8,6 +8,7 @@ venue:
   name: International Orange
   city: San Francisco
   slug: international-orange
+  id: international-orange
   subtitle: Editorial review, practical details, and booking context from Dip.
   hero_image: https://internationalorange.com/cdn/shop/files/WEBSITE_facial.png?v=1686599403&width=1120
   neighborhood: Fillmore, San Francisco

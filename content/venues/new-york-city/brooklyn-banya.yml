@@ -2,33 +2,25 @@ seo:
   title: "Brooklyn Banya Review: Price, Hours, What to Know | Dip"
   description: Dip review of Brooklyn Banya in Sheepshead Bay with pricing, hours,
     neighborhood notes, and who it is best for.
-  social_image: https://images.unsplash.com/photo-1527637040694-60b17b13f9df?w=1200&h=630&fit=crop&q=80
+  social_image: 'https://brooklynbanya.wordpress.com/wp-content/uploads/2014/04/brooklyn-banya-bath-house-2.jpg'
 venue:
-  gallery_images:
-    - https://images.unsplash.com/photo-1527637040694-60b17b13f9df?w=800&h=560&fit=crop&q=80
-  date_reviewed: March 2026
-  price: from $60
-  city: New York City
   name: Brooklyn Banya
+  city: New York City
   slug: brooklyn-banya
-  website_url: https://www.brooklynbanya.com
-  primary_archetype: Traditional Banya
+  id: brooklyn-banya
+  subtitle: Editorial review, practical details, and booking context from Dip.
+  hero_image: brooklynbanya1.webp
   neighborhood: Sheepshead Bay, Brooklyn
+  price: from $60
+  score: '7.9'
+  date_reviewed: March 2026
+  hours: Daily · Check schedule
   best_for: Traditional banya, steam room regulars, cold plunge, neighborhood locals.
   website_url: https://www.brooklynbanya.com
+  primary_archetype: Traditional Banya
+  status: published
+  country: USA
   review: A straightforward neighborhood banya in Sheepshead Bay where the draw is the thing itself — serious steam, cold water, and regulars who know what they came for. No frills, no branding refresh, no cocktail menu. Go for the banya room and the contrast cycle, and leave everything else at the door.
+  short_description: Experience traditional wellness and authentic bathhouse rituals in the heart of Brooklyn. Detox, relax, and rejuvenate your body and mind.
   gallery_images:
     - 'https://brooklynbanya.wordpress.com/wp-content/uploads/2014/04/brooklyn-banya-bath-house-2.jpg'
-  hours: Daily · Check schedule
-  score: "7.9"
-  status: published
-  hero_image: brooklynbanya1.webp
-  country: USA
-  subtitle: Editorial review, practical details, and booking context from Dip.
-  review: A straightforward neighborhood banya in Sheepshead Bay where the draw is
-    the thing itself — serious steam, cold water, and regulars who know what
-    they came for. No frills, no branding refresh, no cocktail menu. Go for the
-    banya room and the contrast cycle, and leave everything else at the door.
-  short_description: Experience traditional wellness and authentic bathhouse
-    rituals in the heart of Brooklyn. Detox, relax, and rejuvenate your body and
-    mind.

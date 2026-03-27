@@ -6,6 +6,7 @@ venue:
   name: Pause Studio
   city: Los Angeles
   slug: pause-studio
+  id: pause-studio
   subtitle: Editorial review, practical details, and booking context from Dip.
   hero_image: "https://pausestudio.com/pause_opengraph.png"
   neighborhood: Los Angeles

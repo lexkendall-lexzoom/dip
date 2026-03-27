@@ -64,7 +64,7 @@ html{scroll-behavior:smooth;max-width:100%;overflow-x:hidden}
 body{background:var(--page);color:var(--ink);font-family:var(--font-sans);overflow-x:hidden;max-width:100%;font-size-adjust:.52}
 main{max-width:100%;overflow-x:hidden}
 @supports not (font-size-adjust:1){body{font-size-adjust:none}}
-.h-sub,.cap-t,.crev,.cc-sub,.cs-s,.cop-when,.cscore-n{font-size-adjust:.48}
+.h-sub,.cap-t,.cc-sub,.cs-s,.cop-when,.cscore-n{font-size-adjust:.48}
 
 /* NAV */
 nav{position:sticky;top:0;z-index:400;display:flex;align-items:center;justify-content:space-between;padding:0 44px;height:60px;background:var(--page);border-bottom:2px solid var(--ink)}
@@ -230,6 +230,7 @@ nav{position:sticky;top:0;z-index:400;display:flex;align-items:center;justify-co
 
 /* VENUE CARDS */
 .vcard{display:flex;margin-bottom:2px;background:var(--card);border:2px solid var(--ink);transition:box-shadow .25s,transform .25s;position:relative}
+a.vcard{text-decoration:none;color:inherit}
 .vcard:hover{box-shadow:6px 6px 0 var(--ink);transform:translate(-2px,-2px)}
 .vcard.flash{animation:fl .8s ease}
 @keyframes fl{0%,100%{background:#fff}40%,60%{background:#eaf4f3}}
@@ -262,8 +263,6 @@ nav{position:sticky;top:0;z-index:400;display:flex;align-items:center;justify-co
 .cgf{display:flex;flex-wrap:wrap;gap:4px;margin:9px 0}
 .gft{font-size:9px;letter-spacing:.09em;text-transform:uppercase;color:var(--teal-d);background:var(--teal-bg);padding:3px 8px;font-weight:700;border:1px solid rgba(11,124,120,.12)}
 .gft.w{color:#7a5c20;background:#f5ecd8;border-color:rgba(196,154,74,.18)}
-.crev{font-family:var(--font-serif);font-size:14px;font-style:italic;line-height:1.7;color:#333;margin-bottom:12px;flex:1}
-.crev::before{content:'\201C';font-size:28px;color:var(--teal);line-height:0;vertical-align:-.22em;margin-right:2px;font-style:normal}
 .cfoot{display:flex;align-items:center;justify-content:space-between;padding-top:11px;border-top:1px solid var(--mist);gap:8px}
 .cprice{font-family:var(--font-sans);font-size:15px;font-weight:800;color:var(--ink)}
 .cprice small{font-size:10px;font-weight:400;color:var(--stone);margin-left:2px}
@@ -1339,122 +1338,32 @@ const CITIES = {
 // Cities order
 const CITY_ORDER = ['nyc','la','miami','sf','chicago','scottsdale','austin','dc','seattle','boston','denver','boulder','sandiego','aspen','napa','sonoma','hamptons','sedona','palmbeach','nantucket','jacksonhole','nashville','charlotte','irvine','arlington'];
 const CITY_NAMES = {nyc:'New York City',la:'Los Angeles',miami:'Miami',sf:'San Francisco',chicago:'Chicago',scottsdale:'Scottsdale',austin:'Austin',dc:'Washington DC',seattle:'Seattle',boston:'Boston',denver:'Denver',boulder:'Boulder',sandiego:'San Diego',aspen:'Aspen',napa:'Napa Valley',sonoma:'Sonoma',hamptons:'The Hamptons',sedona:'Sedona',palmbeach:'Palm Beach',nantucket:'Nantucket',jacksonhole:'Jackson Hole',nashville:'Nashville',charlotte:'Charlotte',irvine:'Irvine',arlington:'Arlington'};
-const VENUE_PAGE_PATHS = {
-  nyc1:'/new-york-city/bathhouse-williamsburg/',
-  nyc2:'/new-york-city/akari-sauna/',
-  nyc3:'/new-york-city/aire-ancient-baths/',
-  nyc4:'/new-york-city/russian-and-turkish-baths/',
-  nyc5:'/new-york-city/world-spa/',
-  nyc6:'/new-york-city/othership-flatiron/',
-  nyc6b:'/new-york-city/othership-williamsburg/',
-  nyc7:'/new-york-city/remedy-place/',
-  nyc8:'/new-york-city/great-jones-spa/',
-  nyc9:'/new-york-city/sojo-spa-club/',
-  nyc10:'/new-york-city/spa-castle/',
-  nyc11:'/new-york-city/lift-next-level-floats/',
-  nycu1:'/new-york-city/schwet/',
-  nycu2:'/new-york-city/the-altar/',
-  nycu3:'/new-york-city/lore-bathing-club/',
-  nycu4:'/new-york-city/saint/',
-  // Los Angeles
-  la1:'/los-angeles/wi-spa/',
-  la2:'/los-angeles/aire-ancient-baths-venice/',
-  la3:'/los-angeles/beverly-hot-springs/',
-  la4:'/los-angeles/othership-la/',
-  la5:'/los-angeles/float-lab/',
-  la6:'/los-angeles/esalen-institute/',
-  // Miami
-  mia1:'/miami/carillon-miami-wellness-resort/',
-  mia2:'/miami/the-spa-at-the-standard/',
-  mia3:'/miami/faena-spa/',
-  // San Francisco
-  sf1:'/san-francisco/archimedes-banya/',
-  sf2:'/san-francisco/kabuki-springs-spa/',
-  sf3:'/san-francisco/international-orange/',
-  // Chicago
-  chi1:'/chicago/russian-vapor-baths/',
-  chi2:'/chicago/chuan-spa-at-the-langham/',
-  chi3:'/chicago/den-wellness/'
-};
+// Auto-generated at build time from content/venues/**/*.yml
+// Key = venue.id (fileSlug). Value = { path, img, score, price, hours, name, hood }.
+// Do NOT hand-edit — add a YAML file instead.
+const VENUE_DETAIL_DATA = {{ venuePagePaths | dump | safe }};
 
-const VENUE_PAGE_DATA_BY_PATH = {
-{% for item in venues %}
-  "/{{ item.citySlug }}/{{ item.venue.slug | default(item.fileSlug) }}/": {{ {
-    path: "/" ~ item.citySlug ~ "/" ~ (item.venue.slug | default(item.fileSlug)) ~ "/",
-    citySlug: item.citySlug,
-    score: item.venue.score,
-    dipIndex: item.venue.dip_index | default(""),
-    review: item.venue.review | default(""),
-    price: item.venue.price | default(""),
-    hours: item.venue.hours | default(""),
-    img: item.venue.hero_image | default("") | assetUrl,
-    name: item.venue.name | default(""),
-    hood: item.venue.neighborhood | default(""),
-    bestFor: item.venue.best_for | default("")
-  } | json }}{% if not loop.last %},{% endif %}
-{% endfor %}
-};
-
+// Maps city JS key → URL slug. Used by CITY_SLUG_TO_KEY for hash-based navigation.
 const CITY_KEY_TO_SLUG = {
-  nyc: 'new-york-city',
-  la: 'los-angeles',
-  miami: 'miami',
-  sf: 'san-francisco',
-  chicago: 'chicago'
+  nyc:'new-york-city', la:'los-angeles', miami:'miami', sf:'san-francisco',
+  chicago:'chicago', scottsdale:'scottsdale', austin:'austin', dc:'washington-dc',
+  seattle:'seattle', boston:'boston', denver:'denver', boulder:'boulder',
+  sandiego:'san-diego', aspen:'aspen', napa:'napa-valley', sonoma:'sonoma',
+  hamptons:'the-hamptons', sedona:'sedona', palmbeach:'palm-beach',
+  nantucket:'nantucket', jacksonhole:'jackson-hole', nashville:'nashville',
+  charlotte:'charlotte', irvine:'irvine', arlington:'arlington'
 };
 
-function normalizeKey(value) {
-  return String(value || '')
+// Converts a venue display name to the fileSlug used as the key in VENUE_DETAIL_DATA.
+// Must match the logic used to derive YAML filenames.
+function toDetailSlug(name) {
+  return String(name || '')
     .toLowerCase()
     .replace(/&/g, 'and')
-    .replace(/[^a-z0-9]+/g, ' ')
-    .trim();
+    .replace(/['\u2018\u2019]/g, '')
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-|-$/g, '');
 }
-
-const VENUE_PAGE_DATA_BY_CITY_NAME = Object.values(VENUE_PAGE_DATA_BY_PATH).reduce((acc, item) => {
-  if (!item || !item.citySlug || !item.name) return acc;
-  acc[`${item.citySlug}::${normalizeKey(item.name)}`] = item;
-  return acc;
-}, {});
-
-function applyVenuePageOverrides() {
-  const mergeVenue = (v, cityKey) => {
-    const explicitDetailUrl = VENUE_PAGE_PATHS[v.id];
-    const citySlug = CITY_KEY_TO_SLUG[cityKey] || '';
-    const inferredKey = citySlug ? `${citySlug}::${normalizeKey(v.name)}` : '';
-    const source =
-      (explicitDetailUrl && VENUE_PAGE_DATA_BY_PATH[explicitDetailUrl]) ||
-      (inferredKey && VENUE_PAGE_DATA_BY_CITY_NAME[inferredKey]);
-    if (!source) return;
-
-    if (source.path) {
-      v._detailUrl = source.path;
-      if (!VENUE_PAGE_PATHS[v.id]) VENUE_PAGE_PATHS[v.id] = source.path;
-    }
-
-    const parsedScore = source.score == null || source.score === '' ? null : Number(source.score);
-    if (Number.isFinite(parsedScore)) v.score = parsedScore;
-    const parsedDipIndex = source.dipIndex == null || source.dipIndex === '' ? null : Number(source.dipIndex);
-    if (Number.isFinite(parsedDipIndex)) v._dipIndex = parsedDipIndex;
-    if (source.review) v.review = source.review;
-    if (source.price) v.price = source.price;
-    if (source.hours) v.hours = source.hours;
-    if (source.img) v.img = source.img;
-    if (source.name) v.name = source.name;
-    if (source.hood) v.hood = source.hood;
-    if (source.bestFor && (!Array.isArray(v.gf) || v.gf.length === 0)) {
-      v.gf = String(source.bestFor).split(',').map((t) => t.trim()).filter(Boolean);
-    }
-  };
-
-  Object.entries(CITIES).forEach(([cityKey, city]) => {
-    if (!city) return;
-    (city.venues || []).forEach((v) => mergeVenue(v, cityKey));
-    (city.upcoming || []).forEach((v) => mergeVenue(v, cityKey));
-  });
-}
-
-applyVenuePageOverrides();
 
 const FILTER_TAGS = {
   steam: 'Steam',
@@ -1793,7 +1702,9 @@ function updateVenuesMenu(cid) {
   if(!menu || !toggle) return;
   const city = CITIES[cid];
   const all = city ? [...(city.venues||[]), ...(city.upcoming||[])] : [];
-  const links = all.filter(v => VENUE_PAGE_PATHS[v.id]).map(v => ({name:v.name, href:VENUE_PAGE_PATHS[v.id]}));
+  const links = all
+    .filter(v => VENUE_DETAIL_DATA[toDetailSlug(v.name)])
+    .map(v => ({name: v.name, href: VENUE_DETAIL_DATA[toDetailSlug(v.name)].path}));
   menu.innerHTML = `<div class="vm-city">${CITY_NAMES[cid] || 'City'} Venues</div>` +
     (links.length
       ? links.map(v => `<a href="${v.href}" role="menuitem">${v.name}</a>`).join('')
@@ -2024,31 +1935,50 @@ function getVenueImageRequest(url) {
 function renderCard(v) {
   const isUp = v.type === 'upcoming';
   const hasColdPlunge = venueHasColdPlunge(v);
-  const imgReq = getVenueImageRequest(normalizeImagePath(v.img));
-  const displayScore = (v._dipIndex != null && Number.isFinite(v._dipIndex))
-    ? v._dipIndex
-    : (typeof v.score === 'number' ? v.score : Number(v.score));
+
+  // ── Resolve detail data from build-time YAML-derived map ──────────────
+  const slug = toDetailSlug(v.name);
+  const detail = VENUE_DETAIL_DATA[slug] || null;
+  const detailUrl = detail ? detail.path : '';
+
+  if (!isUp && !detailUrl) {
+    console.warn(`[Dip] No detail page for "${v.name}" (id: ${v.id}, slug attempted: "${slug}")`);
+  }
+
+  // ── Image: YAML hero_image > hardcoded img field ───────────────────────
+  const img = (detail && detail.img) || v.img || '';
+  const imgReq = getVenueImageRequest(normalizeImagePath(img));
+
+  // ── Score: YAML score > hardcoded score ───────────────────────────────
+  const yamlScore = (detail && detail.score != null && detail.score !== '') ? Number(detail.score) : null;
+  const rawScore = Number.isFinite(yamlScore) ? yamlScore : (typeof v.score === 'number' ? v.score : Number(v.score));
   const scoreHtml = isUp
     ? `<div class="cscore w"><span class="cop-lbl">Opening</span><span class="cop-when">${v.openWhen}</span></div>`
-    : Number.isFinite(displayScore)
-      ? `<div class="cscore"><span class="cscore-n">${displayScore.toFixed(1)}</span><span class="cscore-d">DIP INDEX</span></div>`
+    : Number.isFinite(rawScore)
+      ? `<div class="cscore"><span class="cscore-n">${rawScore.toFixed(1)}</span><span class="cscore-d">DIP INDEX</span></div>`
       : `<div class="cscore"><span class="cop-lbl" style="color:var(--teal)">Now Open</span></div>`;
+
   const gfTags = v.gf.map(g => `<span class="gft${isUp?' w':''}">${g}</span>`).join('');
-  const detailUrl = v._detailUrl || VENUE_PAGE_PATHS[v.id] || '';
-  const visitLink = isUp
-    ? `<a href="${v.url}" target="_blank" rel="noopener noreferrer" class="cvisit w" aria-label="Follow ${v.name} (opens in a new tab)" onclick="event.stopPropagation()">Follow →</a>`
-    : detailUrl
-      ? `<a href="${detailUrl}" class="cvisit" aria-label="Read Dip review for ${v.name}">Dip Review →</a>`
-      : `<a href="${v.url}" target="_blank" rel="noopener noreferrer" class="cvisit" aria-label="Visit ${v.name} website (opens in a new tab)">Website →</a>`;
   const grad = getGrad(isUp ? 'upcoming' : v.type);
   const occs = OCC[v.id] || [];
   const tags = getVenueTags(v);
   const occLabels = {date:'🕯️ Date Night',meeting:'🤝 Business Meeting',solo:'🧘 Solo Unwind',scene:'🎉 The Scene',group:'👥 Group Day',recovery:'⚡ Recovery'};
   const occBadges = occs.map(o=>`<span class="occ-badge occ-${o}">${occLabels[o]||o}</span>`).join('');
-  return `<article class="vcard${isUp?' upc':''}" id="${v.id}" data-type="${v.type}" data-occ="${occs.join(' ')}" data-tags="${tags.join(' ')}" data-coldplunge="${hasColdPlunge ? '1' : '0'}" data-detail-url="${detailUrl}"${detailUrl ? ` onclick="window.location.href='${detailUrl}'" style="cursor:pointer"` : ''}>
-    <div class="cimg" ${detailUrl ? `onclick="window.location.href='${detailUrl}'" style="cursor:pointer"` : ""}>
-  const cardClick = (!isUp && detailUrl) ? `onclick="if(!event.target.closest('a')){window.location.href='${detailUrl}'}" style="cursor:pointer"` : '';
-  return `<article class="vcard${isUp?' upc':''}" id="${v.id}" data-type="${v.type}" data-occ="${occs.join(' ')}" data-tags="${tags.join(' ')}" data-coldplunge="${hasColdPlunge ? '1' : '0'}" data-detail-url="${detailUrl}" ${cardClick}>
+
+  // ── Visit link: no nested <a> when card itself is an <a> ──────────────
+  // When detailUrl exists the card is already an anchor; use <span> for footer label.
+  // When isUp with detailUrl, external Follow link uses <span>+onclick so it stays valid.
+  const visitLink = isUp
+    ? (detailUrl
+        ? `<span class="cvisit w" role="button" style="cursor:pointer" onclick="event.stopPropagation();window.open('${v.url}','_blank','noopener,noreferrer')" aria-label="Follow ${v.name} (opens in a new tab)">Follow →</span>`
+        : `<a href="${v.url}" target="_blank" rel="noopener noreferrer" class="cvisit w" aria-label="Follow ${v.name} (opens in a new tab)">Follow →</a>`)
+    : detailUrl
+      ? `<span class="cvisit" aria-hidden="true">Dip Review →</span>`
+      : `<a href="${v.url}" target="_blank" rel="noopener noreferrer" class="cvisit" aria-label="Visit ${v.name} website (opens in a new tab)">Website →</a>`;
+
+  // ── Card inner HTML ────────────────────────────────────────────────────
+  const attrs = `class="vcard${isUp?' upc':''}" id="${v.id}" data-type="${v.type}" data-occ="${occs.join(' ')}" data-tags="${tags.join(' ')}" data-coldplunge="${hasColdPlunge ? '1' : '0'}" data-detail-url="${detailUrl}"`;
+  const inner = `
     <div class="cimg">
       <img src="${imgReq.src}"${imgReq.srcset ? ` srcset="${imgReq.srcset}"` : ''} alt="${v.name}" loading="lazy" decoding="async" width="500" height="350" sizes="${imgReq.sizes}"
         onerror="this.style.display='none';this.parentElement.style.background='${grad}'"
@@ -2060,7 +1990,7 @@ function renderCard(v) {
       <div class="ctop">
         <div>
           <div class="chood${isUp?' w':''}">${v.hood}</div>
-          <h3 class="cname">${detailUrl ? `<a href="${detailUrl}" style="color:inherit;text-decoration:none">${v.name}</a>` : v.name}</h3>
+          <h3 class="cname">${v.name}</h3>
         </div>
         ${scoreHtml}
       </div>
@@ -2071,8 +2001,13 @@ function renderCard(v) {
         ${visitLink}
       </div>
       ${occBadges ? `<div class="occ-badges">${occBadges}</div>` : ''}
-    </div>
-  </article>`;
+    </div>`;
+
+  // Wrap in <a> when a detail page exists (single nav element, no nested links).
+  // Fall back to <article> for venues without a detail page.
+  return detailUrl
+    ? `<a href="${detailUrl}" ${attrs}>${inner}\n  </a>`
+    : `<article ${attrs}>${inner}\n  </article>`;
 }
 
 function venueHasColdPlunge(v) {
@@ -2233,7 +2168,8 @@ function openMapVenueReview(id) {
   const city = CITIES[currentCity];
   const pool = city ? [...(city.venues || []), ...(city.upcoming || [])] : [];
   const venue = pool.find((item) => item.id === id);
-  const detailUrl = (venue && venue._detailUrl) || VENUE_PAGE_PATHS[id] || '';
+  const detail = venue ? VENUE_DETAIL_DATA[toDetailSlug(venue.name)] : null;
+  const detailUrl = detail ? detail.path : '';
 
   if (detailUrl) {
     window.location.href = detailUrl;
