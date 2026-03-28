@@ -178,6 +178,42 @@ module.exports = function(eleventyConfig) {
 
 
 
+  // ── Global data: venue detail paths (id → rich object) ──
+  // Key  = venue.id field from YAML (falls back to fileSlug).
+  // Value = { path, img, score, price, hours, name, hood }
+  // Consumed by the landing page instead of the old hand-written VENUE_PAGE_PATHS.
+  eleventyConfig.addGlobalData("venuePagePaths", () => {
+    const venuesDir = path.join(__dirname, 'content', 'venues');
+    const result = {};
+    if (!fs.existsSync(venuesDir)) return result;
+
+    const cityDirs = fs.readdirSync(venuesDir).filter(d =>
+      fs.statSync(path.join(venuesDir, d)).isDirectory()
+    );
+
+    for (const cityDir of cityDirs) {
+      const cityPath = path.join(venuesDir, cityDir);
+      const files = fs.readdirSync(cityPath).filter(f => f.endsWith('.yml'));
+      for (const file of files) {
+        const data = readYaml(path.join(cityPath, file));
+        const venue = (data && data.venue) ? data.venue : {};
+        const fileSlug = file.replace('.yml', '');
+        const id = venue.id || fileSlug;
+        const pageSlug = venue.slug || fileSlug;
+        result[id] = {
+          path:  `/${cityDir}/${pageSlug}/`,
+          img:   venue.hero_image || '',
+          score: venue.score != null ? String(venue.score) : '',
+          price: venue.price || '',
+          hours: venue.hours || '',
+          name:  venue.name  || '',
+          hood:  venue.neighborhood || '',
+        };
+      }
+    }
+    return result;
+  });
+
   eleventyConfig.addGlobalData("taxonomy", () => ({
     core_types: CORE_TYPES,
     cultural_traditions: CULTURAL_TRADITIONS,

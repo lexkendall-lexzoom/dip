@@ -12,6 +12,7 @@ venue:
   city: New York City
   name: AIRE Ancient Baths
   slug: aire-ancient-baths
+  id: aire-ancient-baths
   website_url: https://beaire.com
   neighborhood: Tribeca, Manhattan
   best_for: Date night, special occasions, full sensory immersion.

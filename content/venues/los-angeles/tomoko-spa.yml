@@ -8,6 +8,7 @@ venue:
   name: Tomoko Spa
   city: Los Angeles
   slug: tomoko-spa
+  id: tomoko-spa
   subtitle: Editorial review, practical details, and booking context from Dip.
   hero_image: https://img1.wsimg.com/isteam/ip/ab64c5f9-8201-4e2a-ba60-0996a71d0e0b/romantic-japanese-spa-in-beverly-hills.png
   neighborhood: Beverly Hills, Los Angeles

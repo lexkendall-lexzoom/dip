@@ -1,4 +1,7 @@
 seo:
+  title: "Body by Brooklyn Review: Price, Hours, What to Know | Dip"
+  description: Dip review of Body by Brooklyn in Clinton Hill — 10,000 sq ft bathhouse with Russian sauna, arctic cold plunge, steam room, hot tub, and VIP suites.
+  social_image: "https://bodybybrooklyn.com/wp-content/uploads/2020/06/slider-image-2.jpg"
   title: 'Body by Brooklyn Review: Price, Hours, What to Know | Dip'
   description: >-
     Dip review of Body by Brooklyn in Clinton Hill — 10,000 sq ft bathhouse with Russian sauna, arctic cold plunge,
@@ -8,7 +11,9 @@ venue:
   name: Body by Brooklyn
   city: New York City
   slug: body-by-brooklyn
+  id: body-by-brooklyn
   subtitle: Editorial review, practical details, and booking context from Dip.
+  hero_image: "https://bodybybrooklyn.com/wp-content/uploads/2020/06/slider-image-2.jpg"
   hero_image: https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&h=450&fit=crop&q=80
   neighborhood: Clinton Hill, Brooklyn
   price: from $65

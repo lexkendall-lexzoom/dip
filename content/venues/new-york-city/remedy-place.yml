@@ -7,6 +7,7 @@ venue:
   name: Remedy Place
   city: New York City
   slug: remedy-place
+  id: remedy-place
   subtitle: Editorial review, practical details, and booking context from Dip.
   hero_image: >-
     https://cdn.sanity.io/images/jptxcgmn/production/3158497d1fca43ce863df9e06c8c97763d6c44c1-6123x4082.jpg?w=1200&q=85&fit=clip&auto=format

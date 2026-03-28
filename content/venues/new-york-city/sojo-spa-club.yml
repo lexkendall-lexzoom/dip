@@ -6,6 +6,7 @@ venue:
   name: SoJo Spa Club
   city: New York City
   slug: sojo-spa-club
+  id: sojo-spa-club
   subtitle: Editorial review, practical details, and booking context from Dip.
   hero_image: https://sojospaclub.com/wp-content/uploads/2023/02/sojo-loop-fallback.jpg
   neighborhood: Edgewater, NJ · 15 min from Midtown

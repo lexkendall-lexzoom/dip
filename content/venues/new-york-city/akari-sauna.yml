@@ -6,6 +6,7 @@ venue:
   name: Akari Sauna
   city: New York City
   slug: akari-sauna
+  id: akari-sauna
   subtitle: Editorial review, practical details, and booking context from Dip.
   hero_image: https://cdn.prod.website-files.com/64ee5979ef5937fc52001f92/67f940039615508640a13d94_AKARI-21_3_11zon.jpg
   neighborhood: Williamsburg + Greenpoint

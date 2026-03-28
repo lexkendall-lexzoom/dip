@@ -8,6 +8,7 @@ venue:
   name: Beverly Hot Springs
   city: Los Angeles
   slug: beverly-hot-springs
+  id: beverly-hot-springs
   subtitle: Editorial review, practical details, and booking context from Dip.
   hero_image: https://beverlyhotsprings.com/wp-content/uploads/2018/10/women-936549_1920.jpg
   neighborhood: East Hollywood, Los Angeles
@@ -26,6 +27,5 @@ venue:
   gallery_images:
     - https://beverlyhotsprings.com/wp-content/uploads/2018/10/women-936549_1920.jpg
     - https://beverlyhotsprings.com/wp-content/uploads/2018/10/bodytreatments.jpg
-    - https://beverlyhotsprings.com/wp-content/uploads/2018/10/shutterstock_147839732-1.jpg
   community_score: '4.3'
   dip_index: '8.4'

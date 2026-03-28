@@ -6,6 +6,7 @@ venue:
   name: Schwet
   city: New York City
   slug: schwet
+  id: schwet
   subtitle: Editorial review, practical details, and booking context from Dip.
   hero_image: https://framerusercontent.com/images/rG5S8rrqmS6RsKtRaJrujb8FmE0.png
   neighborhood: Tribeca, Manhattan
