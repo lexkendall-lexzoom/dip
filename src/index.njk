@@ -1341,7 +1341,7 @@ const CITY_NAMES = {nyc:'New York City',la:'Los Angeles',miami:'Miami',sf:'San F
 // Auto-generated at build time from content/venues/**/*.yml
 // Key = venue.id (fileSlug). Value = { path, img, score, price, hours, name, hood }.
 // Do NOT hand-edit — add a YAML file instead.
-const VENUE_DETAIL_DATA = {{ venuePagePaths | dump | safe }};
+const VENUE_DETAIL_DATA = {{ venuePagePaths | json }};
 
 // Maps city JS key → URL slug. Used by CITY_SLUG_TO_KEY for hash-based navigation.
 const CITY_KEY_TO_SLUG = {
