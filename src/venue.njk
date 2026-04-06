@@ -8,6 +8,7 @@ permalink: "/{{ item.citySlug }}/{{ item.venue.slug | default(item.fileSlug) }}/
 {%- set v = item.venue -%}
 {%- set seo = item.seo -%}
 {%- set citySlug = item.citySlug -%}
+{%- set _dipIndexVal = v.dip_index if v.dip_index else (v.dip_scores.overall_dip_score if v.dip_scores else null) -%}
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -137,11 +138,11 @@ permalink: "/{{ item.citySlug }}/{{ item.venue.slug | default(item.fileSlug) }}/
                             {% if v.ritual_elements and v.ritual_elements.length > 0 %}<div class="fact wide"><b>Ritual Elements</b>{{ v.ritual_elements | join(' + ') | replace('_', ' ') }}</div>{% endif %}
                     </div>
 
-                    {%- if v.dip_index -%}
+                    {%- if _dipIndexVal -%}
                     <div class="dip-panel">
                       <div class="dip-index-row">
                         <span class="dip-index-label">DIP Index</span>
-                        <span class="dip-index-val">{{ v.dip_index }}</span>
+                        <span class="dip-index-val">{{ _dipIndexVal }}</span>
                       </div>
                       <div class="dip-scores">
                         {%- if v.score and v.score != "Coming soon" -%}
@@ -155,6 +156,26 @@ permalink: "/{{ item.citySlug }}/{{ item.venue.slug | default(item.fileSlug) }}/
                           <span class="dip-score-label">Community</span>
                           <span class="dip-score-num">{{ v.community_score }} <span class="stars">{{ v.community_score | stars }}</span></span>
                         </div>
+                        {%- endif -%}
+                        {%- if v.dip_scores and not v.community_score -%}
+                        {%- if v.dip_scores.facilities_ritual -%}
+                        <div class="dip-score-item">
+                          <span class="dip-score-label">Facilities</span>
+                          <span class="dip-score-num">{{ v.dip_scores.facilities_ritual }}</span>
+                        </div>
+                        {%- endif -%}
+                        {%- if v.dip_scores.design_atmosphere -%}
+                        <div class="dip-score-item">
+                          <span class="dip-score-label">Design</span>
+                          <span class="dip-score-num">{{ v.dip_scores.design_atmosphere }}</span>
+                        </div>
+                        {%- endif -%}
+                        {%- if v.dip_scores.recovery_value -%}
+                        <div class="dip-score-item">
+                          <span class="dip-score-label">Recovery</span>
+                          <span class="dip-score-num">{{ v.dip_scores.recovery_value }}</span>
+                        </div>
+                        {%- endif -%}
                         {%- endif -%}
                       </div>
                       {%- if v.positive_keywords and v.positive_keywords.length > 0 -%}
