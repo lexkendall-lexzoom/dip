@@ -6,6 +6,7 @@ venue:
   name: Reunion Baths
   city: New York City
   slug: reunion-baths
+  id: reunion-baths
   subtitle: Editorial preview, practical details, and opening context from Dip.
   hero_image: /images/uploads/reunion-baths-hero.png
   neighborhood: Brooklyn

@@ -6,6 +6,7 @@ venue:
   name: Akari Sauna
   city: New York City
   slug: akari-sauna
+  id: akari-sauna
   subtitle: Editorial review, practical details, and booking context from Dip.
   hero_image: https://cdn.prod.website-files.com/64ee5979ef5937fc52001f92/67f940039615508640a13d94_AKARI-21_3_11zon.jpg
   neighborhood: Williamsburg + Greenpoint
@@ -15,7 +16,10 @@ venue:
   hours: Mon–Thu 8am–10pm · Fri–Sun 8am–8pm
   best_for: Solo ritual, discerning regulars, daily habit.
   website_url: https://www.akarisauna.com
-  review: The hardest wellness membership to get in New York right now, and it is not close. Rooted in Japanese sentō tradition by a founder who grew up going to public baths in Tokyo, Akari is what that looks like when you bring it to Brooklyn and do it right. Small, quiet, currently sold out at both locations.
+  review: >-
+    The hardest wellness membership to get in New York right now, and it is not close. Rooted in Japanese sentō
+    tradition by a founder who grew up going to public baths in Tokyo, Akari is what that looks like when you bring it
+    to Brooklyn and do it right. Small, quiet, currently sold out at both locations.
   gallery_images:
     - https://cdn.prod.website-files.com/64ee5979ef5937fc52001f92/67f940039615508640a13d94_AKARI-21_3_11zon.jpg
     - https://cdn.prod.website-files.com/64ee5979ef5937fc52001f92/67f940039615508640a13d94_AKARI-21_3_11zon-p-2000.jpg

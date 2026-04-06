@@ -1,13 +1,18 @@
 seo:
   title: 'Russian & Turkish Baths Review: Price, Hours, What to Know | Dip'
-  description: Dip review of Russian & Turkish Baths in the East Village with pricing, hours, and what makes it a historic NYC staple.
-  social_image: https://static.wixstatic.com/media/8c8383_65248793246e915170255dfa9766ff1f.jpg/v1/fit/w_2500,h_1330,al_c/8c8383_65248793246e915170255dfa9766ff1f.jpg
+  description: >-
+    Dip review of Russian & Turkish Baths in the East Village with pricing, hours, and what makes it a historic NYC
+    staple.
+  social_image: >-
+    https://static.wixstatic.com/media/8c8383_65248793246e915170255dfa9766ff1f.jpg/v1/fit/w_2500,h_1330,al_c/8c8383_65248793246e915170255dfa9766ff1f.jpg
 venue:
   name: Russian & Turkish Baths
   city: New York City
   slug: russian-and-turkish-baths
+  id: russian-and-turkish-baths
   subtitle: Editorial review, practical details, and booking context from Dip.
-  hero_image: https://static.wixstatic.com/media/8c8383_65248793246e915170255dfa9766ff1f.jpg/v1/fit/w_2500,h_1330,al_c/8c8383_65248793246e915170255dfa9766ff1f.jpg
+  hero_image: >-
+    https://static.wixstatic.com/media/8c8383_65248793246e915170255dfa9766ff1f.jpg/v1/fit/w_2500,h_1330,al_c/8c8383_65248793246e915170255dfa9766ff1f.jpg
   neighborhood: East Village, Manhattan
   price: from $60
   score: '8.8'

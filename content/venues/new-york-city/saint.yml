@@ -6,6 +6,7 @@ venue:
   name: SAINT
   city: New York City
   slug: saint
+  id: saint
   subtitle: Editorial review, practical details, and booking context from Dip.
   hero_image: https://framerusercontent.com/images/hoN88F3Z7oX9sX2ryWGdHsJRZ5s.png
   neighborhood: Chelsea, Manhattan

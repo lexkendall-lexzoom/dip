@@ -14,6 +14,7 @@ venue:
   city: New York City
   name: Lore Bathing Club
   slug: lore-bathing-club
+  id: lore-bathing-club
   website_url: https://www.lorebathingclub.com
   neighborhood: NoHo, Manhattan
   best_for: Daily ritual seekers, design-forward aesthetics, serious regulars, membership value.

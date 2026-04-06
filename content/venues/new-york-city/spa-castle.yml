@@ -6,6 +6,7 @@ venue:
   name: Spa Castle
   city: New York City
   slug: spa-castle
+  id: spa-castle
   subtitle: Editorial review, practical details, and booking context from Dip.
   hero_image: https://ny.spacastleusa.com/wp-content/uploads/2024/03/327A3713-scaled.jpg
   neighborhood: College Point, Queens
@@ -15,7 +16,10 @@ venue:
   hours: Daily 9am–10pm · $110 weekends
   best_for: Korean jjimjilbang experience, full-day value, outer-borough locals.
   website_url: https://ny.spacastleusa.com/
-  review: Five floors of Korean spa in College Point with a gold pyramid sauna and no time limit. Not a cool place. A very good place — the kind you drive 45 minutes to and wonder why you don't go every week. Recently renovated, still completely no-frills.
+  review: >-
+    Five floors of Korean spa in College Point with a gold pyramid sauna and no time limit. Not a cool place. A very
+    good place — the kind you drive 45 minutes to and wonder why you don't go every week. Recently renovated, still
+    completely no-frills.
   gallery_images:
     - https://ny.spacastleusa.com/wp-content/uploads/2024/03/327A3713-scaled.jpg
     - https://ny.spacastleusa.com/wp-content/uploads/2024/03/327A3716-scaled.jpg

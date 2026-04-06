@@ -6,6 +6,7 @@ venue:
   name: 'Akari Sauna Williamsburg'
   city: 'New York City'
   slug: 'akari-sauna-williamsburg'
+  id: akari-sauna-williamsburg
   subtitle: 'Editorial review, practical details, and booking context from Dip.'
   hero_image: ''
   neighborhood: 'Williamsburg, Brooklyn'

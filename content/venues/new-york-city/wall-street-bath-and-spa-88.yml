@@ -1,13 +1,14 @@
 seo:
   title: 'Wall Street Bath & Spa 88 Review: Price, Hours, What to Know | Dip'
   description: Dip review of Wall Street Bath & Spa 88 in the Financial District with pricing, hours, neighborhood notes, and who it is best for.
-  social_image: 'https://images.unsplash.com/photo-1573539264709-77c2da0ef9be?w=1200&h=630&fit=crop&q=80'
+  social_image: ''
 venue:
   name: Wall Street Bath & Spa 88
   city: New York City
   slug: wall-street-bath-and-spa-88
+  id: wall-street-bath-and-spa-88
   subtitle: Editorial review, practical details, and booking context from Dip.
-  hero_image: 'https://images.unsplash.com/photo-1573539264709-77c2da0ef9be?w=800&h=560&fit=crop&q=80'
+  hero_image: ''
   neighborhood: Financial District, Manhattan
   price: See website
   score: 'pending'

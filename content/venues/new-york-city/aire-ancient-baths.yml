@@ -12,11 +12,12 @@ venue:
   city: New York City
   name: AIRE Ancient Baths
   slug: aire-ancient-baths
+  id: aire-ancient-baths
   website_url: https://beaire.com
   neighborhood: Tribeca, Manhattan
   best_for: Date night, special occasions, full sensory immersion.
   hours: Daily 9am–11pm · Reservation required
-  score: "8.2"
+  score: '8.2'
   hero_image: https://beaire.com/sites/default/files/bg_banner_reserva_h.jpg
   subtitle: Editorial review, practical details, and booking context from Dip.
   review: Imagine this. You are in a 140-year-old textile factory, candlelit, moving between pools that swing from genuinely hot to actually cold, and it still does not feel theatrical. That is the trick AIRE pulls off. Do the wine bath once and respect the silence policy every time.

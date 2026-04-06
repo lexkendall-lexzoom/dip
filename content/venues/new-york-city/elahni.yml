@@ -6,6 +6,7 @@ venue:
   name: 'Elahni'
   city: 'New York City'
   slug: 'elahni'
+  id: elahni
   subtitle: 'Editorial review, practical details, and booking context from Dip.'
   hero_image: ''
   neighborhood: 'NoMad, Manhattan'

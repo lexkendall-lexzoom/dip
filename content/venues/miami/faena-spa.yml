@@ -1,30 +1,37 @@
 seo:
-  title: "Faena Spa Miami Beach Review: Price, Hours, What to Know | Dip"
-  description: Dip review of Faena Spa in Miami Beach — a wildly designed spa inside the Faena Hotel with an indoor pool, gold-accented interiors, and treatments worth the price.
-  social_image: "https://www.faena.com/sites/default/files/styles/big_callout_d/public/2026-01/20251201-DJI_0184.jpg?h=24bee1e6&itok=haw6OXCR"
+  title: 'Faena Spa Miami Beach Review: Price, Hours, What to Know | Dip'
+  description: >-
+    Dip review of Faena Spa in Miami Beach — a wildly designed spa inside the Faena Hotel with an indoor pool,
+    gold-accented interiors, and treatments worth the price.
+  social_image: >-
+    https://www.faena.com/sites/default/files/styles/big_callout_d/public/2026-01/20251201-DJI_0184.jpg?h=24bee1e6&itok=haw6OXCR
 venue:
   name: Faena Spa
   city: Miami
   slug: faena-spa
+  id: faena-spa
   subtitle: Editorial review, practical details, and booking context from Dip.
-  hero_image: "https://www.faena.com/sites/default/files/styles/big_callout_d/public/2026-01/20251201-DJI_0184.jpg?h=24bee1e6&itok=haw6OXCR"
+  hero_image: >-
+    https://www.faena.com/sites/default/files/styles/big_callout_d/public/2026-01/20251201-DJI_0184.jpg?h=24bee1e6&itok=haw6OXCR
   neighborhood: Mid-Beach, Miami Beach
   price: from $100
-  score: "8.0"
+  score: '8.0'
   date_reviewed: March 2026
   hours: Daily · Reservation required
   best_for: Design-forward spa day, couples, hotel guests, anyone who wants a visually extraordinary treatment space.
-  website_url: "https://www.faena.com/miami-beach/wellness/faena-spa"
+  website_url: https://www.faena.com/miami-beach/wellness/faena-spa
   review: >-
-    Faena is one of the most aesthetically committed hotels in the Americas,
-    and the spa holds that standard. Gold leaf, crimson upholstery, a
-    surrealist sensibility that should be excessive and somehow holds. The
-    indoor pool and steam facilities are available to day guests; the
-    treatment rooms are purpose-designed around specific ritual sequences. The
-    price point is real — this is not a budget spa day — but the craft matches
-    the setting. For Miami Beach, where wellness has a tendency to prioritize
-    scene over experience, Faena's spa is the exception.
+    Faena is one of the most aesthetically committed hotels in the Americas, and the spa holds that standard. Gold leaf,
+    crimson upholstery, a surrealist sensibility that should be excessive and somehow holds. The indoor pool and steam
+    facilities are available to day guests; the treatment rooms are purpose-designed around specific ritual sequences.
+    The price point is real — this is not a budget spa day — but the craft matches the setting. For Miami Beach, where
+    wellness has a tendency to prioritize scene over experience, Faena's spa is the exception.
   gallery_images:
-    - "https://www.faena.com/sites/default/files/styles/big_callout_d/public/2026-01/20251201-DJI_0184.jpg?h=24bee1e6&itok=haw6OXCR"
-    - "https://www.faena.com/sites/default/files/styles/split_callout_d/public/2025-10/TK_POOL_FAENA_GRV_02%20copy.jpg?h=3f0ecbee&itok=64rGY9L5"
-    - "https://www.faena.com/sites/default/files/styles/split_callout_d/public/2025-10/01.%20Hotel%20Exterior.jpg?h=3e8da8cb&itok=chBMvq7D"
+    - >-
+      https://www.faena.com/sites/default/files/styles/big_callout_d/public/2026-01/20251201-DJI_0184.jpg?h=24bee1e6&itok=haw6OXCR
+    - >-
+      https://www.faena.com/sites/default/files/styles/split_callout_d/public/2025-10/TK_POOL_FAENA_GRV_02%20copy.jpg?h=3f0ecbee&itok=64rGY9L5
+    - >-
+      https://www.faena.com/sites/default/files/styles/split_callout_d/public/2025-10/01.%20Hotel%20Exterior.jpg?h=3e8da8cb&itok=chBMvq7D
+  community_score: '4.4'
+  dip_index: '8.3'
