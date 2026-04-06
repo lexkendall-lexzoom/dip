@@ -1,5 +1,5 @@
 seo:
-  title: 'AIRE Ancient Baths Review: Price, Hours, What to Know | Dip'
+  title: "AIRE Ancient Baths Review: Price, Hours, What to Know | Dip"
   description: Dip review of AIRE Ancient Baths in Tribeca with pricing, hours, and practical notes for first-time visitors.
   social_image: https://beaire.com/sites/default/files/bg_banner_reserva_h.jpg
 venue:
@@ -20,9 +20,50 @@ venue:
   score: '8.2'
   hero_image: https://beaire.com/sites/default/files/bg_banner_reserva_h.jpg
   subtitle: Editorial review, practical details, and booking context from Dip.
-  review: >-
-    Imagine this. You are in a 140-year-old textile factory, candlelit, moving between pools that swing from genuinely
-    hot to actually cold, and it still does not feel theatrical. That is the trick AIRE pulls off. Do the wine bath once
-    and respect the silence policy every time.
-  community_score: '4.6'
-  dip_index: '8.6'
+  review: Imagine this. You are in a 140-year-old textile factory, candlelit, moving between pools that swing from genuinely hot to actually cold, and it still does not feel theatrical. That is the trick AIRE pulls off. Do the wine bath once and respect the silence policy every time.
+  one_line_verdict: NYC's most cinematic bathing experience — a candlelit Spanish thermal circuit in a 140-year-old Tribeca factory building that earns every dollar of its price.
+  editorial_overview: |
+    AIRE Ancient Baths is the Spanish thermal spa concept's only North American outpost, installed inside a 1882 textile factory in Tribeca. The design premise — candlelit stone pools, raw brick arches, no visible technology — is executed with genuine conviction rather than theme-park approximation. The thermal circuit spans six pools ranging from 100°F to 55°F, plus a steam bath, salt room, and Hammam ritual treatments. Silence is enforced throughout. This is not a social bathing space.
+
+    The price point ($150+ for the basic circuit, treatments running to $300+) tracks closer to a hotel spa than a community bathhouse. What you're paying for is the atmosphere, the architecture, and an unusually complete removal from the experience of being in New York City. For two hours, the candlelight and the silence do their job.
+
+    The core insight: AIRE sells ritual over recovery. The thermal extremes are real but less aggressive than a dedicated contrast-therapy venue. People come here for the feeling of ceremony — the pools, the dim light, the enforced quiet — rather than to push their physiological limits. Understand that distinction before you book.
+  vibe: Romantic, hushed, and deliberately removed from the city. Couples on anniversary evenings, solo visitors seeking genuine quiet, tourists who've done their research. The silence policy self-selects for people who actually want stillness rather than a social spa.
+  facility_breakdown: Six pools across a wide thermal range, steam room, Hammam ritual room, and a wine bath experience that lives up to its novelty. The architecture is the facility — pools are architecturally integrated into arched brick chambers that make the thermal circuit feel like discovery. Locker rooms are practical, not luxurious. The add-on treatments (Hammam, massages) are legitimately good and worth the premium if you're already there.
+  pros:
+    - Architecture is genuinely exceptional — no comparable bathhouse setting in NYC
+    - Silence policy enforced effectively, creating rare urban stillness
+    - Full thermal range with real hot and cold extremes
+    - Wine bath is exactly the kind of absurd luxury worth doing once
+    - No day-of availability pressure — it's always by reservation
+  cons:
+    - At $150+ for the base circuit, it's a special-occasion spend, not a weekly habit
+    - Not a contrast-therapy venue — the thermal work is atmospheric, not physiological
+    - No phone policy is strictly enforced (pro or con depending on your intentions)
+    - The darkness and quiet can feel constraining for first-timers expecting a social experience
+  not_ideal_for: People who want to talk, anyone seeking a social evening, contrast-therapy purists who need ice baths below 50°F.
+  pro_move: Book the Hammam ritual treatment as an add-on to the basic circuit entry — it elevates the visit from nice bath to full sensory ritual, and the combined price is still below most Manhattan hotel spa rates.
+  value_read: The base circuit is expensive for 2 hours of pools. The experience is expensive for what it delivers in architectural terms. For a special occasion — anniversary, first trip to New York, a meaningful evening — the price-to-memory ratio is exceptional. As a recovery tool, the ROI is weaker.
+  scene_summary: AIRE is a date-night institution and a tourist destination — one of a handful of NYC experiences genuinely worth the hype for international visitors and local couples alike. It competes with high-end restaurant experiences for the same occasion spend. The brand has maintained consistent quality across years without significant decay in the product.
+  crowd_profile: 28–50, heavily couple-oriented, mix of NYC finance/creative professionals and tourists who planned ahead. Behavior is quiet and inward by design. Solo visitors are common and comfortable. The space draws people who treat this as an occasion rather than a habit — arrival energy has a low-grade ceremony to it.
+  time_of_day_dynamics: Evening sessions (after 7pm) are the peak experience — candlelight has maximum effect, the city noise recedes, and the thermal contrast feels most dramatic. Daytime sessions are quieter and less atmospheric but also less crowded. Weekend evening slots are the hardest to book. Weekday afternoon is the sweet spot for those who want solitude over atmosphere.
+  popularity_trend: steady
+  booking_difficulty: Moderate — book 7–10 days ahead for preferred slots, especially weekend evenings. Weekday availability is usually accessible 2–3 days out.
+  social_energy_level: 2
+  laptop_free_vibe: true
+  influencer_density: low
+  repeat_vs_tourist_mix: Roughly 50/50 — strong tourist draw for its architecture and concept, but a meaningful repeat base of NYC residents who return for occasions and anniversaries.
+  dip_scores:
+    facilities_ritual: 8.0
+    design_atmosphere: 9.5
+    social_energy: 2.0
+    recovery_value: 7.0
+    service_flow: 8.5
+    overall_dip_score: 8.2
+  audience_sentiment_snapshot: Near-universally praised for atmosphere and design. Criticism focuses on price relative to the thermal experience depth (pools don't go as cold as dedicated contrast venues). TripAdvisor and Google heavily weighted toward couples on special occasions. Date-night recommendation frequency is among the highest of any NYC wellness venue.
+  editorial_last_updated: '2026-04-05'
+  source_urls:
+    - https://beaire.com
+    - https://www.yelp.com/biz/aire-ancient-baths-new-york
+    - https://www.tripadvisor.com/Attraction_Review-g60763-d7113720-Reviews-AIRE_Ancient_Baths.html
+  confidence_level: high

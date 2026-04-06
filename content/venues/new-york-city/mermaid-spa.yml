@@ -45,6 +45,51 @@ venue:
     from leaving prematurely. 4-hour timed admission; membership packages
     available for the converted.
   gallery_images:
-    - "https://mermaidspa.us/wp-content/uploads/2022/12/photo_2022-12-10_21-10-39.jpg"
-  seo_image: mermaidspa1.webp
-  social_style: social
+    - "https://images.unsplash.com/photo-1618377370499-a36a9d51c7c5?w=800&h=450&fit=crop&q=80"
+    - "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&h=450&fit=crop&q=80"
+  one_line_verdict: Brooklyn's most complete Russian banya — physically remote, completely authentic, and worth the trip if you take the thermal ritual seriously.
+  editorial_overview: |
+    Mermaid Spa sits at the end of a peninsula in Sea Gate — a gated private neighborhood at the southwestern tip of Brooklyn, one of the city's least-known residential enclaves. Getting there requires a bus to Coney Island and a walk through a security checkpoint. This is not incidental to the experience. The journey filters the crowd, and the crowd is what makes this place.
+
+    Three steam rooms, a dry sauna, a Turkish bath, two tile ice plunge pools, a jacuzzi, and a Russian restaurant that keeps the visit from ending too soon. The steam rooms run at the high end of what banya heat means — these are not gentle European-style saunas. The platza sessions with fresh birch or oak venik branches are the defining feature: an attendant flogs and sweeps you with heated branches in a rhythmic pattern that drives circulation and opens pores in a way that nothing else replicates.
+
+    The non-obvious thing: Mermaid Spa operates on banya time, which is different from NYC time. You go for 4 hours minimum. You eat at the restaurant. You do the steam, you do the cold pool, you rest, you do it again. The cycle matters. People who rush it miss the point. The regulars — who have been coming for decades — know that the second and third cycle, after the body has fully surrendered to the heat, is when the real therapeutic work happens.
+  vibe: Russian banya traditionalist with a particular Brooklyn character. Regulars aged 40–70+ form the backbone. A growing cohort of younger visitors who've discovered the place through word of mouth. The atmosphere is authentic and unhurried — conversations happen naturally in the steam room between people who share a cultural relationship with the ritual.
+  facility_breakdown: Three steam rooms covering wet Russian steam, a dry sauna, and a Turkish hammam. Two tile ice pools (tile is thermally significant — the cold holds differently than metal). Circular jacuzzi. Platza services with fresh venik available. Full Russian restaurant on premises. 4-hour admission format. Membership packages available for regulars.
+  pros:
+    - The most authentic Russian banya in Brooklyn — the real cultural practice, not the branded version
+    - Three distinct steam room environments plus dry sauna gives complete variety
+    - Platza with fresh venik is a genuinely transformative service
+    - Sea Gate location means it's rarely crowded — the distance self-selects for committed visitors
+    - Russian restaurant anchors a full-day commitment that becomes the proper format
+  cons:
+    - Sea Gate is genuinely remote — public transit requires 45+ minutes from Manhattan
+    - Seasonal hours (limited summer hours) require checking before you go
+    - 4-hour admission format doesn't suit casual short visits
+    - The facility is weathered — this is not a designed wellness experience
+  not_ideal_for: People seeking a modern spa aesthetic, anyone with less than 3 hours, visitors who aren't prepared for an intensely authentic Eastern European banya culture.
+  pro_move: Go in winter — the contrast between the steam rooms and the cold outside air is heightened, the crowds are smallest, and the restaurant draws people to linger in a way that summer doesn't. Book a platza session for the second steam cycle, not the first.
+  value_read: At $45 for 4 hours plus a reasonable platza add-on, this is one of the best thermal values in the city's outer boroughs. The restaurant is affordable and genuinely good. Total spend for a complete day is substantially below any comparable Manhattan experience.
+  scene_summary: Mermaid Spa is a living cultural artifact — one of the last places in NYC where you can experience the Russian banya tradition in its original form, practiced by people for whom it's never been a wellness trend. For serious banya enthusiasts, it's a pilgrimage destination. For curious newcomers who make the trip, it consistently becomes a revelation.
+  crowd_profile: Russian and Eastern European regulars (40–70+) form the majority, supplemented by younger outer-borough Brooklynites who've found it and become devoted. The cultural specificity of the space creates a natural selectivity — people who find their way to Sea Gate are generally there with intention. Behavior is communal and unhurried, with steam room conversation a genuine part of the ritual.
+  time_of_day_dynamics: Mornings (opening through noon) are the regulars' window — the quietest and most authentic time. Afternoon fills with visitors making a day of it. Evenings extend late (midnight) and attract a later-in-the-week crowd. Weekend days are the most socially active. Summer hours are reduced — check before going.
+  popularity_trend: steady
+  booking_difficulty: Easy — walk-in most days. The remote location keeps the space naturally uncrowded. Platza sessions are first-come on busy days; weekday mornings have no wait.
+  social_energy_level: 6
+  laptop_free_vibe: true
+  influencer_density: low
+  repeat_vs_tourist_mix: Overwhelmingly repeat — the core clientele are multi-decade regulars. A small but growing cohort of first-timers who found it through DipDays or wellness word of mouth. The first-timers reliably become regulars.
+  dip_scores:
+    facilities_ritual: 9.0
+    design_atmosphere: 6.5
+    social_energy: 6.0
+    recovery_value: 9.0
+    service_flow: 7.5
+    overall_dip_score: 8.4
+  audience_sentiment_snapshot: Intense loyalty from regulars, consistent discovery excitement from first-timers who made the trip. The platza service generates the most specific praise. The remote location is simultaneously the most common complaint and the most praised feature. Yelp and Google reviews consistently describe it as "the real thing."
+  editorial_last_updated: '2026-04-05'
+  source_urls:
+    - https://mermaidspa.us
+    - https://www.yelp.com/biz/mermaid-spa-brooklyn
+    - https://www.google.com/maps/place/Mermaid+Spa
+  confidence_level: medium

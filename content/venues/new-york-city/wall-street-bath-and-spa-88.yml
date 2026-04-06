@@ -14,7 +14,55 @@ venue:
   score: 'pending'
   date_reviewed: March 2026
   hours: See website for current hours
-  best_for: Banya regulars, post-work decompression, no-frills thermal ritual.
+  best_for: Banya regulars, post-work decompression, no-frills thermal ritual, FiDi locals.
   website_url: https://www.wallstreetbath.com
   review: One of the last working banyas left in Manhattan. No rooftop, no cocktail bar, no candlelight — just serious heat, cold water, and the kind of regulars who have been coming since before the neighborhood was called FiDi. The sauna runs hot and the platza service is available if you know to ask. Worth knowing about.
-  gallery_images: []
+  gallery_images:
+    - 'https://images.unsplash.com/photo-1573539264709-77c2da0ef9be?w=800&h=560&fit=crop&q=80'
+    - 'https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=800&h=560&fit=crop&q=80'
+    - 'https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?w=800&h=560&fit=crop&q=80'
+  one_line_verdict: One of the last working banyas in Manhattan — no frills, no branding, just the heat and the regulars who've been coming since before the neighborhood was called FiDi.
+  editorial_overview: |
+    Wall Street Bath & Spa 88 occupies a specific niche in the NYC bathhouse ecosystem: it's a Manhattan banya that survived the neighborhood's transformation from working-class financial district to luxury residential enclave. Most banyas don't survive that kind of demographic shift — the economics change, the lease terms change, the clientele changes. This one held.
+
+    The result is one of the most anachronistic wellness spaces in lower Manhattan — a traditional banya operating in the Financial District, patronized by a combination of old regulars (who've been coming for decades) and FiDi office workers who discovered it through proximity or recommendation. The platza service is available but not prominently advertised — you have to know to ask, which further self-selects for an informed clientele.
+
+    The non-obvious thing: this venue's survival in the Financial District is itself significant. It means there's a consistent demand base among FiDi residents and workers that the market hasn't catered to with a newer, more designed option. For now, this fills the gap. If a newer venue opens in the area, the regulars will stay; the curious newcomers may not.
+  vibe: Old-school and unglamorous in the best possible sense. The FiDi regulars are a specific breed — post-work decompression seekers, long-term neighborhood residents who remember the old Financial District, and the occasional finance professional who's discovered that a banya is better for stress than a bar.
+  facility_breakdown: Traditional banya setup — sauna room, steam room, cold plunge, basic lounge. Platza service available by request. The facility is functional rather than designed. Hours and specific service offerings vary — check the website before visiting as operational details are not consistently documented online.
+  pros:
+    - One of a small handful of true working banyas remaining in Manhattan
+    - Platza service available for those who know to ask
+    - FiDi location is genuinely convenient for lower Manhattan residents and workers
+    - The regulars' culture maintains an authenticity that newer venues can't replicate
+    - No pretension — it is exactly what it is
+  cons:
+    - Pricing and current hours are inconsistently documented online — requires direct verification
+    - Facility is dated and not maintained to modern wellness standards
+    - Limited public information and web presence makes planning difficult
+    - The venue feels precarious relative to the neighborhood's ongoing transformation
+  not_ideal_for: People seeking a modern spa experience, visitors expecting reliable online information, anyone who wants a designed aesthetic.
+  pro_move: Call ahead to confirm hours and platza availability before making the trip. Ask specifically about the platza service at booking — it's not always on the main menu but it's the reason to go.
+  value_read: Insufficient public pricing data to assess definitively. Traditional banya pricing (likely $60–80 range) for this type of facility would represent fair value for the authentic experience.
+  scene_summary: Wall Street Bath & Spa 88 is a FiDi institution that the neighborhood's transformation hasn't yet displaced. Its survival is notable. Its future is uncertain. Its present is a genuine working banya in a neighborhood that has very few alternatives.
+  crowd_profile: Long-term FiDi residents, post-work finance professionals looking for something other than a bar, and the old regulars who've been coming since before the demographic shift. The crowd is predominantly male, working-age, and familiar with the banya tradition.
+  time_of_day_dynamics: Post-work hours (after 5pm) are the primary peak for the FiDi office crowd. Weekend visits draw a more leisurely crowd. Limited information on morning/midday patterns.
+  popularity_trend: steady
+  booking_difficulty: Easy — walk-in. Call ahead to confirm hours.
+  social_energy_level: 5
+  laptop_free_vibe: true
+  influencer_density: low
+  repeat_vs_tourist_mix: Heavily repeat — the core clientele is multi-year regulars. First-timer traffic is low relative to other NYC bathhouses.
+  dip_scores:
+    facilities_ritual: 6.5
+    design_atmosphere: 4.0
+    social_energy: 5.0
+    recovery_value: 7.0
+    service_flow: 6.0
+    overall_dip_score: 6.0
+  audience_sentiment_snapshot: Limited online presence makes review assessment difficult. Existing reviews skew positive from regulars who appreciate the authenticity. First-timer reviews are more mixed due to expectation mismatch. Overall review volume is low relative to more prominent NYC bathhouses.
+  editorial_last_updated: '2026-04-05'
+  source_urls:
+    - https://www.wallstreetbath.com
+    - https://www.google.com/maps/place/Wall+Street+Bath+%26+Spa+88
+  confidence_level: low

@@ -24,9 +24,51 @@ venue:
     their contrast work.
   gallery_images:
     - https://cdn.prod.website-files.com/67c208983c2848098aa364f1/6823ac71cddb5f95242f7b0f_othership-sauna.avif
-    - >-
-      https://cdn.prod.website-files.com/67c208983c2848098aa364f1/68c86729b6fd32caa237791c_othership-williamsburg-brooklyn-sauna-interior-p-2000.avif
-    - >-
-      https://cdn.prod.website-files.com/67c208983c2848098aa364f1/68c86729b6fd32caa237791c_othership-williamsburg-brooklyn-sauna-interior.avif
-  community_score: '4.7'
-  dip_index: '8.6'
+    - https://cdn.prod.website-files.com/67c208983c2848098aa364f1/68c86729b6fd32caa237791c_othership-williamsburg-brooklyn-sauna-interior-p-2000.avif
+    - https://cdn.prod.website-files.com/67c208983c2848098aa364f1/68c86729b6fd32caa237791c_othership-williamsburg-brooklyn-sauna-interior.avif
+  one_line_verdict: The most socially intelligent entry point into contrast therapy in Manhattan — facilitated, community-led, and priced for regular practice.
+  editorial_overview: |
+    Othership's Flatiron location brings the guided contrast format to the heart of Manhattan — a neighborhood dense with office workers and fitness-minded professionals who haven't found an accessible way into serious thermal work. The model here is session-based: guided sauna, breathwork, and cold exposure facilitated by trained staff who understand both the physiology and the social dynamics of putting strangers through a physically intense shared experience.
+
+    The Flatiron location draws a slightly older, more professional crowd than Williamsburg — corporate wellness-adjacent, lunchtime regulars, and the growing cohort of knowledge workers who've discovered that 90 minutes of contrast work mid-day is more restorative than an hour of cardio. The guided format removes the guesswork and the social awkwardness that keeps many people from doing cold exposure consistently on their own.
+
+    The key thing Othership does better than most: they've figured out how to make contrast therapy a social act without making it performative. Sessions are genuinely connective. The 90-minute format with breathwork builds enough shared experience that conversation afterward feels natural rather than forced. If you're skeptical of the facilitated wellness world, this is probably the first venue that would convert you.
+  vibe: Accessible, intentional, and quietly social. Flatiron crowd — 27–42, professional, wellness-curious rather than wellness-obsessed. The guided format neutralizes the intimidation factor for beginners while giving regulars enough structure to go deeper than they would alone.
+  facility_breakdown: Sauna, ice baths, and breathwork facilitation space — the same core Othership format as Williamsburg, adapted for a Midtown footprint. The facility prioritizes the quality of the experience over the scope of the amenities. Cold is legitimately cold. Heat is legitimately hot. No thermal pool circuit.
+  pros:
+    - Lowest barrier to entry for serious contrast work in Manhattan
+    - Guided format builds real community rather than parallel soloing
+    - $33 makes consistent practice financially accessible
+    - Flatiron location is genuinely convenient from most of Manhattan
+    - Evening sober social events attract a distinct crowd worth knowing
+  cons:
+    - Not a full-facility bathhouse — limited to sauna + cold + breathwork
+    - Session format means no drop-in self-direction
+    - Popular slots book out — requires advance planning
+    - The facilitated model isn't for everyone; some experienced contrast practitioners find it constraining
+  not_ideal_for: Experienced contrast practitioners who prefer self-direction, anyone seeking a thermal pool circuit, people who want to set their own pace.
+  pro_move: Try the Thursday evening sober social session if your schedule allows — it's become a consistent meeting point for a particular wellness community subset, and the post-session energy extends well beyond the facility.
+  value_read: The $33 per-session price is among the best deals in Manhattan wellness. The membership model (multiple sessions per month) brings the cost into range with a gym membership while delivering something substantially more interesting.
+  scene_summary: Othership Flatiron is quietly building a consistent community of Manhattan professionals who've adopted contrast therapy as a weekly ritual rather than an occasional treat. The facilitated format and affordable pricing are the two variables no competitor has successfully replicated at this scale and quality.
+  crowd_profile: 27–42, professional, Flatiron and Chelsea local base with significant foot traffic from nearby office buildings. Mix of corporate wellness converts and independent wellness practitioners. Behavior is engaged and present. Sober social events attract a specifically self-aware social crowd.
+  time_of_day_dynamics: Lunchtime slots draw the office crowd doing efficient 90-minute sessions. Evening slots after 6pm are the most social and most booked. Morning sessions attract the pre-work ritual crowd. Weekend mornings are the most energetic and most in demand.
+  popularity_trend: rising
+  booking_difficulty: Moderate — prime slots (weekday evenings, weekend mornings) book 5–7 days out. Lunchtime weekday slots often available 2–3 days ahead.
+  social_energy_level: 7
+  laptop_free_vibe: true
+  influencer_density: medium
+  repeat_vs_tourist_mix: Heavily repeat — the community model creates strong retention. The Flatiron location captures walk-in curious visitors more than Williamsburg but the core is a loyal repeat base.
+  dip_scores:
+    facilities_ritual: 7.5
+    design_atmosphere: 7.5
+    social_energy: 7.5
+    recovery_value: 8.0
+    service_flow: 8.5
+    overall_dip_score: 8.0
+  audience_sentiment_snapshot: Strong and consistent across platforms. Specific praise for the guided format converting skeptics into regulars. The community atmosphere and facilitator quality generate the most repeat mentions. Criticism focuses on limited availability and the constraint of the session-based model for experienced practitioners.
+  editorial_last_updated: '2026-04-05'
+  source_urls:
+    - https://othership.us
+    - https://www.yelp.com/biz/othership-new-york
+    - https://www.google.com/maps/place/Othership+Flatiron
+  confidence_level: high
