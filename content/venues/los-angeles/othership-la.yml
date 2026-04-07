@@ -1,28 +1,35 @@
 seo:
-  title: "Othership LA Review: Price, Hours, What to Know | Dip"
-  description: Dip review of Othership LA in West Hollywood — guided breathwork, sauna, and cold plunge sessions designed around emotional reset rather than passive soaking.
-  social_image: "https://cdn.prod.website-files.com/67c208983c2848098aa364f1/683e3fec9b02873351d4e675_othership-relaxing-sauna-group-session.webp"
+  title: 'Othership LA Review: Price, Hours, What to Know | Dip'
+  description: >-
+    Dip review of Othership LA in West Hollywood — guided breathwork, sauna, and cold plunge sessions designed around
+    emotional reset rather than passive soaking.
+  social_image: >-
+    https://cdn.prod.website-files.com/67c208983c2848098aa364f1/683e3fec9b02873351d4e675_othership-relaxing-sauna-group-session.webp
 venue:
   name: Othership LA
   city: Los Angeles
   slug: othership-la
+  id: othership-la
   subtitle: Editorial review, practical details, and booking context from Dip.
-  hero_image: "https://cdn.prod.website-files.com/67c208983c2848098aa364f1/683e3fec9b02873351d4e675_othership-relaxing-sauna-group-session.webp"
+  hero_image: >-
+    https://cdn.prod.website-files.com/67c208983c2848098aa364f1/683e3fec9b02873351d4e675_othership-relaxing-sauna-group-session.webp
   neighborhood: West Hollywood, Los Angeles
   price: from $55
-  score: "7.8"
+  score: '7.8'
   date_reviewed: March 2026
   hours: Daily · Session-based booking
   best_for: Guided breathwork, emotional reset, sauna-and-plunge first-timers, group sessions.
-  website_url: "https://othership.us"
+  website_url: https://othership.us
   review: >-
-    Othership imports its Toronto formula to West Hollywood and it lands:
-    sixty-minute guided sessions that move you through a sauna, a cold plunge,
-    and a breathwork sequence that someone actually designed rather than
-    improvised. The facilitation is the product, not just the hardware. Where
-    other contrast studios leave you to self-regulate, Othership holds the
-    tempo — breath in the heat, surrender in the cold. LA's wellness market
-    has plenty of passive options. This one asks you to participate.
+    Othership imports its Toronto formula to West Hollywood and it lands: sixty-minute guided sessions that move you
+    through a sauna, a cold plunge, and a breathwork sequence that someone actually designed rather than improvised. The
+    facilitation is the product, not just the hardware. Where other contrast studios leave you to self-regulate,
+    Othership holds the tempo — breath in the heat, surrender in the cold. LA's wellness market has plenty of passive
+    options. This one asks you to participate.
   gallery_images:
-    - "https://cdn.prod.website-files.com/67c208983c2848098aa364f1/683e3fec9b02873351d4e675_othership-relaxing-sauna-group-session.webp"
-    - "https://cdn.prod.website-files.com/67c208983c2848098aa364f1/683e3fec9b02873351d4e675_othership-relaxing-sauna-group-session.webp"
+    - >-
+      https://cdn.prod.website-files.com/67c208983c2848098aa364f1/683e3fec9b02873351d4e675_othership-relaxing-sauna-group-session.webp
+    - >-
+      https://cdn.prod.website-files.com/67c208983c2848098aa364f1/683e3fec9b02873351d4e675_othership-relaxing-sauna-group-session.webp
+  community_score: '4.6'
+  dip_index: '8.4'

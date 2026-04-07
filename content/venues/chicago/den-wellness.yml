@@ -1,28 +1,30 @@
 seo:
-  title: "Den Wellness Chicago Review: Price, Hours, What to Know | Dip"
-  description: Dip review of Den Wellness in River North Chicago — cold plunge, infrared sauna, guided sessions, and a social wellness model that actually works.
-  social_image: "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=500&h=350&fit=crop&q=80"
+  title: 'Den Wellness Chicago Review: Price, Hours, What to Know | Dip'
+  description: >-
+    Dip review of Den Wellness in River North Chicago — cold plunge, infrared sauna, guided sessions, and a social
+    wellness model that actually works.
+  social_image: https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=500&h=350&fit=crop&q=80
 venue:
   name: Den Wellness
   city: Chicago
   slug: den-wellness
+  id: den-wellness
   subtitle: Editorial review, practical details, and booking context from Dip.
-  hero_image: "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=500&h=350&fit=crop&q=80"
+  hero_image: https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=500&h=350&fit=crop&q=80
   neighborhood: River North, Chicago
   price: from $45
-  score: "7.8"
+  score: '7.8'
   date_reviewed: March 2026
   hours: Daily · Session-based booking
   best_for: Cold plunge first-timers, post-workout recovery, social wellness with a crew.
-  website_url: "https://denwellness.com"
+  website_url: https://denwellness.com
   review: >-
-    Den runs structured sessions — meaning you are not left to wander but
-    guided through a cold plunge and infrared sauna sequence with breathwork
-    prompts and a facilitator who knows when to push and when to back off.
-    River North is not the obvious location for this kind of thing, which is
-    precisely why it works: the office crowd stumbles in skeptical and leaves
-    converted. The community angle is genuine — regulars recognize each other,
-    the staff remembers names. At $45 a session it is the most accessible
-    well-executed contrast therapy in Chicago.
+    Den runs structured sessions — meaning you are not left to wander but guided through a cold plunge and infrared
+    sauna sequence with breathwork prompts and a facilitator who knows when to push and when to back off. River North is
+    not the obvious location for this kind of thing, which is precisely why it works: the office crowd stumbles in
+    skeptical and leaves converted. The community angle is genuine — regulars recognize each other, the staff remembers
+    names. At $45 a session it is the most accessible well-executed contrast therapy in Chicago.
   gallery_images:
-    - "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=500&h=350&fit=crop&q=80"
+    - https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=500&h=350&fit=crop&q=80
+  community_score: '4.5'
+  dip_index: '8.3'

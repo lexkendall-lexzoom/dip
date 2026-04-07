@@ -6,6 +6,7 @@ venue:
   name: World Spa
   city: New York City
   slug: world-spa
+  id: world-spa
   subtitle: Editorial review, practical details, and booking context from Dip.
   hero_image: https://worldspa.com/wp-content/uploads/2024/02/WorldSpa_038.jpg
   neighborhood: Bed-Stuy, Brooklyn
@@ -15,8 +16,54 @@ venue:
   hours: Sun–Thu 9am–1am · Fri–Sat 9am–3am
   best_for: Groups, destination spa days, all-day immersion.
   website_url: https://www.worldspanyc.com
-  review: America’s largest banya is a true full-day destination. Seven sauna rooms, a snow room, and a Moroccan hammam make this one of the most comprehensive thermal circuits in NYC. The value proposition improves the longer you stay.
+  review: America's largest banya is a true full-day destination. Seven sauna rooms, a snow room, and a Moroccan hammam make this one of the most comprehensive thermal circuits in NYC. The value proposition improves the longer you stay.
   gallery_images:
     - https://worldspa.com/wp-content/uploads/2024/02/WorldSpa_038.jpg
     - https://worldspa.com/wp-content/uploads/2024/02/WorldSpa_039.jpg
     - https://worldspa.com/wp-content/uploads/2024/02/WorldSpa_041.jpg
+  one_line_verdict: America's largest banya — seven sauna rooms, late-night hours, and a value proposition that rewards staying all day.
+  editorial_overview: |
+    World Spa opened in Bed-Stuy in 2021 and immediately claimed a category no one else had staked out in NYC: the serious, comprehensive banya destination that happens to also function as a late-night third space. Seven sauna rooms including a Russian banya, Finnish sauna, infrared, salt room, Himalayan salt cave, and a snow room. A Moroccan hammam. Multiple pools. Late hours (3am Friday–Saturday) that turn a thermal circuit into an evening out.
+
+    The scale is the point. World Spa is not a curated wellness experience — it's a sprawling complex where you could spend six hours and not feel like you've overstayed. The building is big enough that even on busy nights it doesn't feel claustrophobic. The draw is variety and time — you come here for a full day or evening, not a tight 90-minute session.
+
+    The non-obvious insight: World Spa operates on a completely different social logic than Bathhouse Williamsburg or AIRE. This is a gathering place as much as a thermal facility. Groups — friends, families, couples, solo explorers — use the space as a base to linger, eat, and make an event of a Tuesday night. The late hours draw a particular post-11pm crowd that treats it like a wellness nightclub. Whether that's a feature or a bug depends entirely on what you came for.
+  vibe: Expansive, unpretentious, and socially open. Draws a genuinely diverse Brooklyn crowd — Russian-speaking regulars, Caribbean-American neighbors, wellness-curious professionals, and late-night groups who've discovered that a hammam at midnight is better than a bar. Less performative than Manhattan wellness venues.
+  facility_breakdown: Seven distinct sauna environments provides real variety — the progression from dry Finnish to wet Russian to infrared to salt room to snow room is a complete thermal education. The Moroccan hammam is a genuine facility with an attendant, not a decorative room. Multiple pools and a plunge area. The restaurant serves real food (not just smoothies). The changing facilities are functional and clean.
+  pros:
+    - The widest sauna variety of any venue in NYC
+    - Late hours on weekends make it genuinely accessible for people who work evenings
+    - Large footprint means it never feels overcrowded even when busy
+    - Full-service restaurant anchors an all-day or all-evening visit
+    - Pricing rewards time — the longer you stay, the more value per hour
+  cons:
+    - Bed-Stuy location requires intention — you're not walking here from Midtown
+    - The scale can feel overwhelming for people who prefer intimate spaces
+    - Design is functional rather than considered — some areas feel industrial
+    - Evening weekend crowd shifts the energy away from recovery and toward social
+  not_ideal_for: Anyone seeking quiet contemplation, people who want a tightly curated experience, Midtown visitors without 45+ minutes to spare on transit.
+  pro_move: Go on a weekday evening — the space is underutilized between 7pm and 11pm on weeknights, and you get access to all seven sauna rooms without waiting. The hammam on a quiet evening is the highlight.
+  value_read: At $90+ for full-day access, the math works strongly in your favor if you stay 4+ hours. The restaurant food quality is better than the price suggests. For groups splitting the cost of a semi-private room, the per-person value is exceptional.
+  scene_summary: World Spa is carving out a niche as NYC's thermal destination for people who want volume, variety, and time — rather than curated atmosphere and short, expensive sessions. The late-night hours are genuinely distinctive and have built a loyal post-midnight crowd that treats the space as something between a wellness venue and a social club.
+  crowd_profile: Broad demographic range — Russian banya regulars, young professionals from Crown Heights and Bed-Stuy, Haitian and Caribbean-American community members, and an expanding cohort of wellness-curious visitors who found the place through word of mouth. Behavior skews toward lingering and socializing rather than focused recovery work. Late-night crowds (after 11pm weekends) have a distinctly festive energy.
+  time_of_day_dynamics: Mornings and early afternoons are the quiet regulars' window — best for contemplative sauna work. Late afternoon through evening is peak general-admission energy. Post-11pm weekends develop their own social scene centered on the restaurant and lounge. The hammam operates on its own booking schedule — check ahead.
+  popularity_trend: rising
+  booking_difficulty: Easy — walk-in most days. No-time-limit format means capacity is rarely an issue. Some treatments should be reserved in advance.
+  social_energy_level: 6
+  laptop_free_vibe: true
+  influencer_density: low
+  repeat_vs_tourist_mix: Heavily repeat — the diverse local base keeps returning. Growing first-timer traffic as word spreads beyond Brooklyn, but the regulars' culture remains dominant.
+  dip_scores:
+    facilities_ritual: 9.0
+    design_atmosphere: 7.0
+    social_energy: 6.5
+    recovery_value: 8.5
+    service_flow: 7.5
+    overall_dip_score: 8.2
+  audience_sentiment_snapshot: Strong Google ratings driven by variety and value. Praise for the scope of the thermal experience and late-night hours. Criticism focuses on design inconsistency and navigation complexity in the large space. The hammam generates specific positive attention. Increasingly mentioned in NYC wellness guides as the best-value full-day option.
+  editorial_last_updated: '2026-04-05'
+  source_urls:
+    - https://www.worldspanyc.com
+    - https://www.yelp.com/biz/world-spa-brooklyn
+    - https://www.google.com/maps/place/World+Spa
+  confidence_level: high
