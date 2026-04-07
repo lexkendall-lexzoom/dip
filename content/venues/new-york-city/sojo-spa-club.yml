@@ -63,7 +63,8 @@ venue:
     recovery_value: 8.5
     service_flow: 7.5
     overall_dip_score: 8.0
-  audience_sentiment_snapshot: Consistently strong reviews with high mention frequency for the skyline views and value. The Korean body scrub service generates specific enthusiastic mentions. The most common barrier cited: "I didn't know how easy the bus was." Post-visit reviews often include some version of "I'm going back every month."
+  audience_sentiment_snapshot: >-
+    Consistently strong reviews with high mention frequency for the skyline views and value. The Korean body scrub service generates specific enthusiastic mentions. The most common barrier cited: "I didn't know how easy the bus was." Post-visit reviews often include some version of "I'm going back every month."
   editorial_last_updated: '2026-04-05'
   source_urls:
     - https://sojospa.com
