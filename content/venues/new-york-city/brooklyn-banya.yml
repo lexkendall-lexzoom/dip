@@ -9,7 +9,7 @@ venue:
   slug: brooklyn-banya
   id: brooklyn-banya
   subtitle: Editorial review, practical details, and booking context from Dip.
-  hero_image: brooklynbanya1.webp
+  hero_image: 'https://static.wixstatic.com/media/574f29_21a6d9aab8c048f79ee1763e7002d712~mv2.jpg/v1/fill/w_1536,h_783,al_c,q_85,enc_auto/brooklynbanya.jpg'
   neighborhood: Sheepshead Bay, Brooklyn
   price: from $60
   score: '7.9'

@@ -131,52 +131,35 @@ collections:
           # Basic Info
           - { label: "Name", name: "name", widget: "string", required: true }
           - { label: "Slug", name: "slug", widget: "string", required: true }
-          - { label: "Status", name: "status", widget: "select", required: true, options: ["draft", "review", "published", "archived"], default: "draft" }
-          - { label: "Featured", name: "featured", widget: "boolean", required: false, default: false }
-          - { label: "Short Description", name: "short_description", widget: "text", required: true }
-          - { label: "Long Description", name: "long_description", widget: "text", required: false }
-          - { label: "Tagline", name: "tagline", widget: "string", required: false }
+          - { label: "Subtitle", name: "subtitle", widget: "string", required: false }
           - { label: "Hero Image", name: "hero_image", widget: "image", required: false }
-          - label: "Gallery"
-            name: "gallery"
+          - label: "Gallery Images"
+            name: "gallery_images"
             widget: "list"
             required: false
             field: { label: "Image", name: "image", widget: "image", required: true }
 
+          # Editorial Content
+          - { label: "Review", name: "review", widget: "text", required: false }
+          - { label: "Best For", name: "best_for", widget: "string", required: false }
+          - { label: "DipScore", name: "score", widget: "string", required: false }
+          - { label: "Date Reviewed", name: "date_reviewed", widget: "string", required: false }
+
           # Location
           - { label: "City (slug)", name: "city", widget: "select", required: true, options: [{ label: "New York City", value: "new-york-city" }, { label: "Los Angeles", value: "los-angeles" }, { label: "Miami", value: "miami" }, { label: "San Francisco", value: "san-francisco" }, { label: "Chicago", value: "chicago" }, { label: "Berlin", value: "berlin" }] }
-          - { label: "Region", name: "region", widget: "string", required: false }
-          - { label: "Country", name: "country", widget: "string", required: true }
           - { label: "Neighborhood", name: "neighborhood", widget: "string", required: false }
           - { label: "Address", name: "address", widget: "string", required: false }
-          - { label: "Latitude", name: "lat", widget: "number", value_type: "float", required: false }
-          - { label: "Longitude", name: "lng", widget: "number", value_type: "float", required: false }
 
-          # Experience
-          - { label: "Primary Archetype", name: "primary_archetype", widget: "select", required: true, options: ["Luxury Bathhouse", "Social Sauna", "Traditional Banya", "Social Wellness Club", "Neighborhood Spa", "Regional Spa Resort", "Other"] }
-          - { label: "Secondary Archetypes", name: "secondary_archetypes", widget: "select", required: false, multiple: true, options: ["Luxury Bathhouse", "Social Sauna", "Traditional Banya", "Social Wellness Club", "Neighborhood Spa", "Regional Spa Resort", "Other"] }
-          - { label: "Atmosphere Tags", name: "atmosphere_tags", widget: "select", required: false, multiple: true, options: ["quiet", "social", "dimly-lit", "high-design", "ritual-led", "community", "recovery-focused"] }
-          - { label: "Social Style", name: "social_style", widget: "select", required: false, options: ["quiet", "balanced", "social", "event-driven"] }
-          - { label: "Setting Tags", name: "setting_tags", widget: "select", required: false, multiple: true, options: ["urban", "hotel", "destination", "waterfront", "nature", "underground"] }
-          - { label: "Bathhouse Type", name: "bathhouse_type", widget: "select", required: false, options: ["bathhouse", "sauna_club", "spa", "wellness_studio", "onsen", "hammam", "banya", "other"] }
+          # Practical Details
+          - { label: "Price", name: "price", widget: "string", required: false }
           - { label: "Hours", name: "hours", widget: "string", required: false }
-          - { label: "Price Tier", name: "price_tier", widget: "string", required: false }
-          - { label: "Reservation Required", name: "reservation_required", widget: "boolean", required: false, default: false }
-
-          # Amenities / Rituals
-          - { label: "Amenities", name: "amenities", widget: "select", required: false, multiple: true, options: ["sauna", "steam", "cold-plunge", "hot-pool", "thermal-circuit", "massage", "bodywork", "recovery-clinic", "iv-therapy", "hyperbaric", "red-light", "cryotherapy"] }
-          - { label: "Rituals", name: "rituals", widget: "select", required: false, multiple: true, options: ["guided-ritual", "aufguss", "venik", "sound-bath", "breathwork", "meditation", "contrast-circuit"] }
-
-          # SEO
-          - { label: "SEO Title", name: "seo_title", widget: "string", required: false }
-          - { label: "SEO Description", name: "seo_description", widget: "text", required: false }
-          - { label: "SEO Image", name: "seo_image", widget: "image", required: false }
-          - { label: "Canonical Path Override", name: "canonical_path_override", widget: "string", required: false }
-
-          # Publishing / Internal
           - { label: "Website URL", name: "website_url", widget: "string", required: false }
           - { label: "Booking URL", name: "booking_url", widget: "string", required: false }
           - { label: "Instagram URL", name: "instagram_url", widget: "string", required: false }
-          - { label: "Editor Notes", name: "editor_notes", widget: "text", required: false }
-          - { label: "Source URLs", name: "source_urls", widget: "list", required: false, field: { label: "Source URL", name: "source_url", widget: "string" } }
-          - { label: "Last Verified At", name: "last_verified_at", widget: "datetime", required: false, format: "YYYY-MM-DDTHH:mm:ss[Z]", date_format: "YYYY-MM-DD", time_format: "HH:mm" }
+
+          # Taxonomy (stored in YAML but not currently rendered in templates)
+          - { label: "Primary Archetype", name: "primary_archetype", widget: "select", required: false, options: ["Luxury Bathhouse", "Social Sauna", "Traditional Banya", "Social Wellness Club", "Neighborhood Spa", "Regional Spa Resort", "Other"] }
+          - { label: "Bathhouse Type", name: "bathhouse_type", widget: "select", required: false, options: ["bathhouse", "sauna_club", "spa", "wellness_studio", "onsen", "hammam", "banya", "other"] }
+          - { label: "Atmosphere Tags", name: "atmosphere_tags", widget: "select", required: false, multiple: true, options: ["quiet", "social", "dimly-lit", "high-design", "ritual-led", "community", "recovery-focused"] }
+          - { label: "Amenities", name: "amenities", widget: "select", required: false, multiple: true, options: ["sauna", "steam", "cold-plunge", "hot-pool", "thermal-circuit", "massage", "bodywork", "recovery-clinic", "iv-therapy", "hyperbaric", "red-light", "cryotherapy"] }
+          - { label: "Rituals", name: "rituals", widget: "select", required: false, multiple: true, options: ["guided-ritual", "aufguss", "venik", "sound-bath", "breathwork", "meditation", "contrast-circuit"] }
