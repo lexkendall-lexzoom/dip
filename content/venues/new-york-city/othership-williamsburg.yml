@@ -65,7 +65,8 @@ venue:
     recovery_value: 8.5
     service_flow: 8.5
     overall_dip_score: 8.1
-  audience_sentiment_snapshot: Strong reviews across all platforms with specific praise for the guided format and community atmosphere. Common theme: people came skeptical of the facilitated approach and left converted. Repeat-visitor mentions are unusually high for a wellness venue. Criticism focuses on booking difficulty for popular sessions and limited availability.
+  audience_sentiment_snapshot: >-
+    Strong reviews across all platforms with specific praise for the guided format and community atmosphere. Common theme: people came skeptical of the facilitated approach and left converted. Repeat-visitor mentions are unusually high for a wellness venue. Criticism focuses on booking difficulty for popular sessions and limited availability.
   editorial_last_updated: '2026-04-05'
   source_urls:
     - https://www.othership.us/williamsburg

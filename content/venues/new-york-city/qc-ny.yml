@@ -66,7 +66,8 @@ venue:
     recovery_value: 8.5
     service_flow: 9.0
     overall_dip_score: 9.2
-  audience_sentiment_snapshot: Overwhelmingly positive across all platforms. The most common praise: the views, the scale, the ferry ritual. The most common complaint: booking difficulty and weekend crowds at the outdoor pools. Consistent mentions in "best of NYC" wellness lists across press outlets. Instagram content from the outdoor infinity pool drives a significant portion of new bookings.
+  audience_sentiment_snapshot: >-
+    Overwhelmingly positive across all platforms. The most common praise: the views, the scale, the ferry ritual. The most common complaint: booking difficulty and weekend crowds at the outdoor pools. Consistent mentions in "best of NYC" wellness lists across press outlets. Instagram content from the outdoor infinity pool drives a significant portion of new bookings.
   editorial_last_updated: '2026-04-05'
   source_urls:
     - https://www.qcny.com

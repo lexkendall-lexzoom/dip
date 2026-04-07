@@ -63,7 +63,8 @@ venue:
     recovery_value: 8.5
     service_flow: 7.0
     overall_dip_score: 7.5
-  audience_sentiment_snapshot: Strong community loyalty from Korean-American visitors. Mixed reviews from visitors expecting a modern spa experience. The body scrub generates consistent five-star reviews. Common sentiment: "better than I expected, cheaper than I thought, farther than I'd like." Recent renovation reviews are notably more positive than pre-renovation.
+  audience_sentiment_snapshot: >-
+    Strong community loyalty from Korean-American visitors. Mixed reviews from visitors expecting a modern spa experience. The body scrub generates consistent five-star reviews. Common sentiment: "better than I expected, cheaper than I thought, farther than I'd like." Recent renovation reviews are notably more positive than pre-renovation.
   editorial_last_updated: '2026-04-05'
   source_urls:
     - https://ny.spacastleusa.com
