@@ -66,8 +66,8 @@ permalink: "/{{ item.citySlug }}/{{ item.venue.slug | default(item.fileSlug) }}/
       .slide img{width:100%;height:100%;object-fit:cover;display:block}
       .slide.placeholder{display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#20403f,#3e6662);color:#fff;font-size:12px;letter-spacing:.08em;text-transform:uppercase}
       .carousel-controls{position:absolute;bottom:0;left:0;right:0;display:flex;align-items:center;justify-content:space-between;padding:12px 14px;background:linear-gradient(0deg,rgba(0,0,0,.55) 0%,transparent 100%);z-index:4}
-      .c-btn{background:rgba(17,17,17,.75);color:#fff;border:1px solid rgba(255,255,255,.25);padding:7px 12px;font-size:10px;letter-spacing:.12em;text-transform:uppercase;cursor:pointer;font-family:var(--font-sans);font-weight:700;backdrop-filter:blur(4px)}
-      .c-btn:hover{background:rgba(17,17,17,.95)}
+      .c-btn{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.55);padding:7px 12px;font-size:10px;letter-spacing:.12em;text-transform:uppercase;cursor:pointer;font-family:var(--font-sans);font-weight:700}
+      .c-btn:hover{background:rgba(255,255,255,.15)}
       .dots{display:flex;gap:7px;align-items:center}
       .dot{width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.45);border:none;cursor:pointer;padding:0;transition:background .2s,transform .2s}
       .dot.active{background:#fff;transform:scale(1.25)}
@@ -203,6 +203,9 @@ permalink: "/{{ item.citySlug }}/{{ item.venue.slug | default(item.fileSlug) }}/
             {%- if v.modern_format -%}<div class="fact"><b>Modern Format</b><span>{{ v.modern_format | replace('_', ' ') }}</span></div>{%- endif -%}
             {%- if v.ritual_elements and v.ritual_elements.length > 0 -%}<div class="fact wide"><b>Ritual Elements</b><span>{{ v.ritual_elements | join(' + ') | replace('_', ' ') }}</span></div>{%- endif -%}
           </div>
+          {%- if v.website_url -%}
+          <a class="cta" style="margin-top:20px;display:inline-block" href="{{ v.website_url }}" target="_blank" rel="noopener noreferrer">Official Website &rarr;</a>
+          {%- endif -%}
         </section>
 
         <!-- RIGHT: scoring block -->
@@ -270,11 +273,6 @@ permalink: "/{{ item.citySlug }}/{{ item.venue.slug | default(item.fileSlug) }}/
             <strong>Best For</strong>
             {{ v.best_for }}
           </div>
-          {%- endif -%}
-
-          <!-- Official Website -->
-          {%- if v.website_url -%}
-          <a class="cta" href="{{ v.website_url }}" target="_blank" rel="noopener noreferrer">Official Website &rarr;</a>
           {%- endif -%}
         </aside>
 
