@@ -6,15 +6,62 @@ venue:
   name: 'Akari Sauna Williamsburg'
   city: 'New York City'
   slug: 'akari-sauna-williamsburg'
+  id: akari-sauna-williamsburg
   subtitle: 'Editorial review, practical details, and booking context from Dip.'
   hero_image: ''
   neighborhood: 'Williamsburg, Brooklyn'
   address: "202 Grand St, Brooklyn, NY 11211"
   price: 'from $165/mo (membership only, $35 guest pass)'
   score: '8.3'
+  community_score: '4.9'
   date_reviewed: 'March 2026'
   hours: 'Weekdays 8am–10pm · Weekends 9am–8pm · Members only, no walk-ins'
   best_for: 'sauna regulars, Japanese aesthetic, quiet contemplation, membership value'
   website_url: 'https://www.akarisauna.com'
   review: 'Akari is doing something deliberately countercultural in the NYC sauna scene: no day passes, no drop-ins, no noise. This Williamsburg outpost (202 Grand Street) and its Greenpoint sibling operate on membership only — monthly plans starting at $165, no long-term commitment — granting access to clean infrared saunas, cold plunge tubs, and quiet relaxation rooms designed around Japanese wabi-sabi principles. The result is a community of regulars who treat it as a daily ritual rather than an occasion. If you can commit, it earns its dues.'
   gallery_images: []
+  one_line_verdict: Akari's Williamsburg outpost — same membership-only Japanese sentō philosophy as Greenpoint, currently on waitlist like its sibling.
+  editorial_overview: |
+    Akari Sauna Williamsburg at 202 Grand Street is the second Brooklyn location of the Japanese-inspired membership sauna concept. It operates identically to the Greenpoint location — membership-only, no day passes, no walk-ins, monthly plans from $165 with no long-term commitment. The design follows the same wabi-sabi principles: natural materials, deliberate quiet, a complete absence of the ambient noise that defines most NYC wellness spaces.
+
+    The Williamsburg location differs from Greenpoint primarily in its neighborhood context. Grand Street puts it in the middle of established Williamsburg, more walkable from more of the neighborhood's residential core, and accessible from a different commute pattern than the Greenpoint location. Members of one can typically access both with their membership.
+
+    Both locations remain on waitlist. The same logic applies to both: this is the most considered daily bathing practice available in Brooklyn if you can get in. The $165/month entry point is deliberately priced for accessibility among people who will actually use it frequently, rather than for the premium signal of a high-priced membership.
+  vibe: Identical to Greenpoint — quiet, inward, and committed. Williamsburg's specific character adds a slightly younger creative energy to the membership mix, but the atmosphere inside the space is the same deliberate stillness.
+  facility_breakdown: Dry sauna, infrared sauna, cold plunge, and relaxation areas. Natural materials throughout. The physical space is small — appropriate for a sentō concept, which is about depth of experience rather than breadth of facilities.
+  pros:
+    - Same high-quality Japanese sentō execution as the Greenpoint location
+    - Grand Street Williamsburg location is convenient for that end of the neighborhood
+    - $165/month with no contract is the most accessible private wellness membership in NYC
+    - Members can typically access both Brooklyn locations
+    - The quiet is real and maintained
+  cons:
+    - On waitlist — currently inaccessible for new members
+    - No day passes, no guest access without membership
+    - Limited facility scope compared to full bathhouse venues
+    - No weekend evening access (closes at 8pm)
+  not_ideal_for: Anyone not on the waitlist, people seeking a broad thermal circuit, visitors wanting social or facilitated programming.
+  pro_move: Join the waitlist for both Brooklyn locations simultaneously. Membership availability varies by location — having both covered maximizes the chance of a timely opening.
+  value_read: Same as Greenpoint — exceptional value for members who use it frequently. The barrier is waitlist access, not price.
+  scene_summary: The Williamsburg location extends the Akari network without diluting it. Same concept, same quality, different neighborhood catchment. Both locations remaining on waitlist after extended operation is strong evidence that the model works and the demand is genuine.
+  crowd_profile: Williamsburg-specific membership skews slightly younger and more artist/founder adjacent than Greenpoint. Otherwise identical in terms of commitment level and behavioral norms. The Grand Street location draws from a slightly different residential base.
+  time_of_day_dynamics: Same pattern as Greenpoint. Morning through late afternoon is the daily ritual crowd. Weekends close at 8pm, compressing the evening visit window.
+  popularity_trend: peak
+  booking_difficulty: Waitlist only for new members. Existing members have full access during open hours.
+  social_energy_level: 2
+  laptop_free_vibe: true
+  influencer_density: low
+  repeat_vs_tourist_mix: Entirely repeat. Same logic as Greenpoint — the membership model has no tourist pathway.
+  dip_scores:
+    facilities_ritual: 9.0
+    design_atmosphere: 9.0
+    social_energy: 2.0
+    recovery_value: 9.0
+    service_flow: 8.5
+    overall_dip_score: 8.3
+  audience_sentiment_snapshot: Consistent with Greenpoint — strong member reviews, waitlist generating secondary conversation. Currently under-documented because the closed membership model limits the review pool. Press coverage mirrors the Greenpoint location.
+  editorial_last_updated: '2026-04-05'
+  source_urls:
+    - https://www.akarisauna.com
+    - https://www.google.com/maps/place/Akari+Sauna+Williamsburg
+  confidence_level: medium

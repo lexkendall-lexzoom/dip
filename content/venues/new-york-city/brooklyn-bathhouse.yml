@@ -1,20 +1,75 @@
 seo:
   title: 'The Brooklyn Bathhouse Review: Price, Hours, What to Know | Dip'
-  description: 'Dip review of The Brooklyn Bathhouse in Prospect-Lefferts Gardens — opened January 2025 with dry sauna, steam, two heated pools, cold plunge, and on-site pizzeria.'
+  description: >-
+    Dip review of The Brooklyn Bathhouse in Prospect-Lefferts Gardens — opened January 2025 with dry sauna, steam, two
+    heated pools, cold plunge, and on-site pizzeria.
   social_image: ''
 venue:
-  name: 'The Brooklyn Bathhouse'
-  city: 'New York City'
-  slug: 'brooklyn-bathhouse'
-  subtitle: 'Editorial review, practical details, and booking context from Dip.'
+  name: The Brooklyn Bathhouse
+  city: New York City
+  slug: brooklyn-bathhouse
+  id: brooklyn-bathhouse
+  subtitle: Editorial review, practical details, and booking context from Dip.
   hero_image: ''
-  neighborhood: 'Prospect-Lefferts Gardens, Brooklyn'
-  address: "731 Flatbush Ave, Brooklyn, NY 11226"
-  price: 'from $40'
+  neighborhood: Prospect-Lefferts Gardens, Brooklyn
+  price: from $40
   score: '8.1'
-  date_reviewed: 'March 2026'
-  hours: 'Open daily · Early Bird (9–9:30am) from $40 · Standard weekday from $50 · Weekend from $65 · Night Owl (2.5h before close) from $40–$50. Open until midnight.'
-  best_for: 'neighborhood wellness, accessible pricing, full thermal circuit, post-work unwinding'
-  website_url: 'https://www.brooklynbathhouse.nyc'
-  review: 'Opened in January 2025 at 731 Flatbush Avenue, The Brooklyn Bathhouse brings a proper thermal circuit to Prospect-Lefferts Gardens — a neighborhood that has needed one. The lineup is comprehensive: Finnish dry sauna, wet sauna, steam room, two heated pools at different temperatures, and a cold plunge, all priced with unusual accessibility for New York. Day passes run four hours with tiered pricing that rewards early birds and off-peak visitors. Zurilee Pizzeria on-site means you can make an evening of it.'
+  community_score: '4.5'
+  date_reviewed: March 2026
+  hours: >-
+    Open daily · Early Bird (9–9:30am) from $40 · Standard weekday from $50 · Weekend from $65 · Night Owl (2.5h before
+    close) from $40–$50. Open until midnight.
+  best_for: neighborhood wellness, accessible pricing, full thermal circuit, post-work unwinding
+  website_url: https://www.brooklynbathhouse.nyc
+  review: >-
+    Opened in January 2025 at 731 Flatbush Avenue, The Brooklyn Bathhouse brings a proper thermal circuit to
+    Prospect-Lefferts Gardens — a neighborhood that has needed one. The lineup is comprehensive: Finnish dry sauna, wet
+    sauna, steam room, two heated pools at different temperatures, and a cold plunge, all priced with unusual
+    accessibility for New York. Day passes run four hours with tiered pricing that rewards early birds and off-peak
+    visitors. Zurilee Pizzeria on-site means you can make an evening of it.
   gallery_images: []
+  one_line_verdict: A proper thermal circuit brought to a neighborhood that deserved one — the most accessibly priced bathhouse experience in Brooklyn.
+  editorial_overview: |
+    The Brooklyn Bathhouse opened in January 2025 on Flatbush Avenue in Prospect-Lefferts Gardens — a neighborhood that, until this point, had no local thermal facility to speak of. The venue's founders clearly understood their location: the pricing model is the most tiered and accessible of any new bathhouse in NYC, with early-bird and off-peak slots that make regular practice feasible for a neighborhood where $65 weekend day passes would function as a barrier rather than an invitation.
+
+    The thermal circuit is complete for the format: Finnish dry sauna, wet sauna, steam room, two heated pools at different temperatures, and a cold plunge. Four-hour admission slots. Zurilee Pizzeria operates on-site, which is either a distraction or the best thing about the venue depending on your priorities. Either way, it means the post-session social experience has somewhere to land.
+
+    The non-obvious thing about this venue: it matters that it's in Prospect-Lefferts Gardens specifically. PLG is one of the most economically and culturally diverse neighborhoods in Brooklyn, and the bathhouse pricing model appears to be a deliberate attempt to serve that diversity rather than displace it with a wellness amenity priced for the arriving demographic. Whether that holds as the venue matures is the thing to watch.
+  vibe: Neighborhood-first and genuinely accessible. Prospect-Lefferts Gardens and Crown Heights locals mixed with Flatbush Avenue regulars and wellness-curious newcomers. The crowd is diverse in a way that most new wellness venues in Brooklyn are not. Unpretentious and welcoming.
+  facility_breakdown: Finnish dry sauna, wet sauna, steam room, two heated pools at different temperatures, cold plunge. Four-hour timed admission. Tiered pricing that changes by time of day. Zurilee Pizzeria on-site for food. The facility is new and well-maintained. No Aufguss program or facilitated experiences — self-directed thermal circuit.
+  pros:
+    - Most accessibly priced thermal circuit in Brooklyn — Early Bird and Night Owl rates make regular practice realistic
+    - Full thermal circuit with meaningful temperature variety
+    - Prospect-Lefferts Gardens location serves an underserved neighborhood
+    - On-site pizzeria extends the visit and creates a social anchor
+    - Late hours (midnight) match actual Brooklyn schedules
+  cons:
+    - No hero image or much visual documentation yet — hard to know what you're walking into
+    - Very new — community and culture still forming
+    - No facilitated programming or sauna ceremony
+    - Four-hour cap limits all-day immersion visits
+  not_ideal_for: People seeking Aufguss ceremonies or facilitated contrast programs, anyone wanting the most designed aesthetic, destination visitors coming from far.
+  pro_move: Hit the Early Bird slot at 9am on a weekday — $40 entry, full circuit access, minimal crowd. The cold plunge at that hour is genuinely shocking in the best possible way, and the sauna works faster on a fresh body.
+  value_read: The tiered pricing model is the most thoughtful in NYC new-bathhouse openings. At $40 for Early Bird and $40–50 for Night Owl, the math works for a neighborhood practice. The $65 weekend rate is competitive with the market.
+  scene_summary: The Brooklyn Bathhouse is doing something genuinely interesting by bringing a quality thermal facility to a non-gentrifying-frontier Brooklyn neighborhood at accessible pricing. It's too new to fully assess its community trajectory, but the early signs — diverse crowd, regular attendance, growing local word of mouth — are positive. Rising trend.
+  crowd_profile: Prospect-Lefferts Gardens, Crown Heights, and Flatbush Avenue locals, predominately 25–45, with genuine demographic diversity that reflects the neighborhood. Growing cohort of wellness-curious Brooklynites from adjacent neighborhoods. Early stages of community formation — regulars are establishing but the culture is still setting.
+  time_of_day_dynamics: Early Bird (9–9:30am) is the lightest traffic and best-value window. Standard weekday afternoons fill gradually. Evening hours attract the post-work crowd. Night Owl sessions (final 2.5 hours before midnight) draw a late crowd that treats the space as a wind-down. Weekends are busiest at peak afternoon hours.
+  popularity_trend: rising
+  booking_difficulty: Easy — new venue, growing audience. Walk-in most times. Online booking available and recommended for peak weekend slots as the venue builds its community.
+  social_energy_level: 6
+  laptop_free_vibe: true
+  influencer_density: low
+  repeat_vs_tourist_mix: Building a repeat base — the neighborhood location and accessible pricing are working. Still accumulating the repeat-visitor culture that makes a bathhouse feel like a community institution.
+  dip_scores:
+    facilities_ritual: 8.0
+    design_atmosphere: 7.0
+    social_energy: 6.0
+    recovery_value: 8.0
+    service_flow: 8.0
+    overall_dip_score: 8.1
+  audience_sentiment_snapshot: Early reviews are strongly positive, with particular appreciation for the pricing model and neighborhood location. The pizzeria draws specific mention as an unexpected asset. Too new for broad review volume — currently under-documented relative to its actual quality.
+  editorial_last_updated: '2026-04-05'
+  source_urls:
+    - https://www.brooklynbathhouse.nyc
+    - https://www.google.com/maps/place/The+Brooklyn+Bathhouse
+  confidence_level: medium

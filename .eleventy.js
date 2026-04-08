@@ -178,6 +178,42 @@ module.exports = function(eleventyConfig) {
 
 
 
+  // ── Global data: venue detail paths (id → rich object) ──
+  // Key  = venue.id field from YAML (falls back to fileSlug).
+  // Value = { path, img, score, price, hours, name, hood }
+  // Consumed by the landing page instead of the old hand-written VENUE_PAGE_PATHS.
+  eleventyConfig.addGlobalData("venuePagePaths", () => {
+    const venuesDir = path.join(__dirname, 'content', 'venues');
+    const result = {};
+    if (!fs.existsSync(venuesDir)) return result;
+
+    const cityDirs = fs.readdirSync(venuesDir).filter(d =>
+      fs.statSync(path.join(venuesDir, d)).isDirectory()
+    );
+
+    for (const cityDir of cityDirs) {
+      const cityPath = path.join(venuesDir, cityDir);
+      const files = fs.readdirSync(cityPath).filter(f => f.endsWith('.yml'));
+      for (const file of files) {
+        const data = readYaml(path.join(cityPath, file));
+        const venue = (data && data.venue) ? data.venue : {};
+        const fileSlug = file.replace('.yml', '');
+        const id = venue.id || fileSlug;
+        const pageSlug = venue.slug || fileSlug;
+        result[id] = {
+          path:  `/${cityDir}/${pageSlug}/`,
+          img:   venue.hero_image || '',
+          score: venue.score != null ? String(venue.score) : '',
+          price: venue.price || '',
+          hours: venue.hours || '',
+          name:  venue.name  || '',
+          hood:  venue.neighborhood || '',
+        };
+      }
+    }
+    return result;
+  });
+
   eleventyConfig.addGlobalData("taxonomy", () => ({
     core_types: CORE_TYPES,
     cultural_traditions: CULTURAL_TRADITIONS,
@@ -272,6 +308,15 @@ module.exports = function(eleventyConfig) {
     { ritual: 'banya', city: 'new-york' },
     { ritual: 'hammam', city: 'istanbul' },
   ].map((item) => ({ ...item, ritualLabel: ritualLabelMap[item.ritual] || startCase(item.ritual), cityLabel: startCase(item.city) }))));
+
+  // ── Nunjucks filter: community_score (0–5) → star string ─
+  eleventyConfig.addFilter("stars", function(score) {
+    const val  = Math.round((parseFloat(score) || 0) * 2) / 2; // round to nearest 0.5
+    const full = Math.min(5, Math.floor(val));
+    const half = (val - full) >= 0.5 ? 1 : 0;
+    const empty = Math.max(0, 5 - full - half);
+    return '★'.repeat(full) + (half ? '½' : '') + '☆'.repeat(empty);
+  });
 
   // ── Nunjucks filter: safe output for HTML ───────────────
   eleventyConfig.addFilter("safe", function(value) {

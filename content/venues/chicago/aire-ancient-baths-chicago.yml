@@ -1,32 +1,34 @@
 seo:
-  title: "AIRE Ancient Baths Chicago Review: Price, Hours, What to Know | Dip"
-  description: Dip review of AIRE Ancient Baths Chicago in River North — candlelit thermal pools, wine baths, and the full AIRE sequence in a historic Michigan Avenue setting.
-  social_image: "https://beaire.com/sites/all/modules/beaire/img/centros/_CHI_1.jpg"
+  title: 'AIRE Ancient Baths Chicago Review: Price, Hours, What to Know | Dip'
+  description: >-
+    Dip review of AIRE Ancient Baths Chicago in River North — candlelit thermal pools, wine baths, and the full AIRE
+    sequence in a historic Michigan Avenue setting.
+  social_image: https://beaire.com/sites/all/modules/beaire/img/centros/_CHI_1.jpg
 venue:
   name: AIRE Ancient Baths Chicago
   city: Chicago
   slug: aire-ancient-baths-chicago
+  id: aire-ancient-baths-chicago
   subtitle: Editorial review, practical details, and booking context from Dip.
-  hero_image: "https://beaire.com/sites/all/modules/beaire/img/centros/_CHI_1.jpg"
+  hero_image: https://beaire.com/sites/all/modules/beaire/img/centros/_CHI_1.jpg
   neighborhood: River North, Chicago
   address: "217 N Des Plaines St, Chicago, IL 60661"
   price: from $95
-  score: "8.4"
+  score: '8.4'
   date_reviewed: March 2026
   hours: Daily 9am–11pm · Reservation required
   best_for: Date night, first-timers to thermal bathing, groups who want ceremony over intensity.
-  website_url: "https://beaire.com/en/aire-ancient-baths-chicago/airechicago_746/"
+  website_url: https://beaire.com/en/aire-ancient-baths-chicago/airechicago_746/
   review: >-
-    The AIRE formula travels well. Here it is tucked into the historic
-    Michigan Avenue corridor — candlelit, quiet, and running the same
-    Roman-Egyptian-Greek thermal sequence the New York location does. Cold
-    bath, warm bath, hot bath, float pool, wine bath if you booked it. What
-    AIRE understands that most hotel spas do not is that the ceremony matters
-    as much as the temperature. You are not checking into a service; you are
-    moving through something. The Chicago location is smaller than Tribeca but
-    executes the ritual cleanly. Bring someone. Respect the silence. Budget
+    The AIRE formula travels well. Here it is tucked into the historic Michigan Avenue corridor — candlelit, quiet, and
+    running the same Roman-Egyptian-Greek thermal sequence the New York location does. Cold bath, warm bath, hot bath,
+    float pool, wine bath if you booked it. What AIRE understands that most hotel spas do not is that the ceremony
+    matters as much as the temperature. You are not checking into a service; you are moving through something. The
+    Chicago location is smaller than Tribeca but executes the ritual cleanly. Bring someone. Respect the silence. Budget
     three hours minimum.
   gallery_images:
-    - "https://beaire.com/sites/all/modules/beaire/img/centros/_CHI_1.jpg"
-    - "https://beaire.com/sites/all/modules/beaire/img/centros/_CHI_2.jpg"
-    - "https://beaire.com/sites/all/modules/beaire/img/centros/_CHI_3.jpg"
+    - https://beaire.com/sites/all/modules/beaire/img/centros/_CHI_1.jpg
+    - https://beaire.com/sites/all/modules/beaire/img/centros/_CHI_2.jpg
+    - https://beaire.com/sites/all/modules/beaire/img/centros/_CHI_3.jpg
+  community_score: '4.7'
+  dip_index: '8.8'

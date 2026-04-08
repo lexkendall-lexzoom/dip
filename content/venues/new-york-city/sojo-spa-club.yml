@@ -6,18 +6,70 @@ venue:
   name: SoJo Spa Club
   city: New York City
   slug: sojo-spa-club
+  id: sojo-spa-club
   subtitle: Editorial review, practical details, and booking context from Dip.
   hero_image: https://sojospaclub.com/wp-content/uploads/2023/02/sojo-loop-fallback.jpg
   neighborhood: Edgewater, NJ · 15 min from Midtown
   address: "1414 Paterson Plank Rd, Edgewater, NJ 07020"
   price: from $90
   score: '8.0'
+  community_score: '3.9'
   date_reviewed: February 2026
   hours: Daily · Day pass from $90
-  best_for: Contrast therapy routines, recovery sessions, and reset days.
+  best_for: Full-day thermal immersion, Manhattan skyline views, Korean spa format, groups.
   website_url: https://sojospa.com
-  review: Technically New Jersey, spiritually New York. The rooftop infinity pool with Manhattan views is one of the genuinely great moments in this metro area. 240,000 sq ft, 19 water features, seven sauna rooms. Take the NJ Transit bus from Port Authority — it's fifteen minutes and completely worth it.
+  review: >-
+    Technically New Jersey, spiritually New York. The rooftop infinity pool with Manhattan views is one of the genuinely
+    great moments in this metro area. 240,000 sq ft, 19 water features, seven sauna rooms. Take the NJ Transit bus from
+    Port Authority — it's fifteen minutes and completely worth it.
   gallery_images:
     - https://sojospaclub.com/wp-content/uploads/2023/02/sojo-loop-fallback.jpg
     - https://sojospaclub.com/wp-content/uploads/2022/12/Copy-of-Aerial-View-of-Infinity-Pool-scaled-e1677598201515.jpg
     - https://sojospaclub.com/wp-content/uploads/2022/12/Copy-of-Copy-of-sojo_spa_291.jpg
+  one_line_verdict: The best full-day thermal value in the greater NYC area — technically New Jersey, functionally one of New York's greatest wellness destinations.
+  editorial_overview: |
+    SoJo Spa Club in Edgewater, New Jersey is 240,000 square feet of Korean spa infrastructure with a Manhattan skyline view that hits differently from a rooftop infinity pool. Nineteen water features, seven distinct sauna rooms, an indoor spa floor with Korean treatments, a full restaurant, an outdoor pool complex, and a rooftop that makes the 15-minute bus ride from Port Authority feel like a significant undercharge.
+
+    The Korean spa model here is fully realized — this is a proper jjimjilbang at resort scale. The thermal circuit is comprehensive: dry and wet saunas across multiple themed rooms, cold plunge pools, hot tubs, and relaxation areas. The outdoor pool and rooftop area are open seasonally and represent the best view-to-price ratio of any water feature in the NYC metro.
+
+    The transit reality deserves direct address: take the NJ Transit 158 bus from Port Authority to Edgewater. It costs about $3.50 and runs frequently. The Uber is $15 and also fine. There is no logical reason to avoid this venue because of the New Jersey designation. The rooftop infinity pool with Lower Manhattan across the Hudson is one of the cleanest dramatic moments available in the entire regional wellness scene.
+  vibe: Genuinely diverse and unpretentious. Korean-American community core alongside a broad cross-section of NYC area residents who've discovered the value. Families, couples, friend groups, solo day-trippers. The scale means you rarely feel crowded even on busy days.
+  facility_breakdown: Seven sauna rooms covering dry, wet, infrared, salt, and themed formats. Nineteen water features across indoor and outdoor areas. Korean spa floor with traditional treatment menu including body scrubs (때밀이) and massages. Full restaurant with Korean and American options. Seasonal outdoor pool and rooftop area. Locker facilities are large and well-organized.
+  pros:
+    - Rooftop infinity pool with Manhattan skyline view is a genuinely extraordinary feature
+    - 240,000 sq ft means you never feel the crowd even on weekends
+    - Korean spa floor with authentic body scrub service
+    - Day pass pricing is among the best value in the NYC metro area
+    - The transit ride is 15 minutes from Midtown — barely longer than many in-city commutes
+  cons:
+    - The New Jersey designation creates a psychological barrier that some visitors never get past
+    - Outdoor pool area is seasonal — winter visits miss the headline feature
+    - The scale can feel impersonal for people who prefer intimate spaces
+    - Restaurant is functional rather than excellent
+  not_ideal_for: People committed to staying within NYC limits, visitors who want a curated intimate experience, anyone who finds large-format venues overwhelming.
+  pro_move: Go on a weekday afternoon in late spring or early fall — outdoor and rooftop areas are open, crowds are thin, and the sunset view from the rooftop infinity pool with Manhattan lit up is among the great free (well, $90) moments in regional wellness.
+  value_read: $90 for full-day unlimited access to 19 water features, 7 saunas, and a Korean spa floor is probably the best price-to-facility ratio in the entire NYC metro area. The rooftop pool alone justifies the trip.
+  scene_summary: SoJo is a quietly essential part of the NYC wellness ecosystem — understated in the cultural conversation relative to its actual quality, which means it's reliably less crowded than comparable venues with less to offer. The rooftop infinity pool has become a word-of-mouth recommendation that drives new visitor flow. Steady trajectory; no signs of declining relevance.
+  crowd_profile: Diverse NYC metro cross-section — Korean-American community core, Manhattan professionals doing a day trip, couples on a budget date, family groups, solo wellness regulars. The scale accommodates all of these without friction. Behavior is relaxed and unhurried; the Korean spa ethos of spending time dominates over any wellness performance.
+  time_of_day_dynamics: Weekday mornings are the least crowded and best for an unhurried full circuit. Afternoon fills with day-trippers and groups. Evenings are quieter indoors but the rooftop closes earlier. Weekend afternoons are the busiest. Summer weekends require earlier arrival for rooftop access.
+  popularity_trend: steady
+  booking_difficulty: Easy — walk-in most days. Advance booking available online but rarely necessary except on peak summer weekend days.
+  social_energy_level: 5
+  laptop_free_vibe: true
+  influencer_density: low
+  repeat_vs_tourist_mix: Strong repeat base from the Korean-American community and NJ/NY regulars. Growing first-timer flow as the Manhattan skyline view gains word-of-mouth traction.
+  dip_scores:
+    facilities_ritual: 8.5
+    design_atmosphere: 7.5
+    social_energy: 5.0
+    recovery_value: 8.5
+    service_flow: 7.5
+    overall_dip_score: 8.0
+  audience_sentiment_snapshot: >-
+    Consistently strong reviews with high mention frequency for the skyline views and value. The Korean body scrub service generates specific enthusiastic mentions. The most common barrier cited: "I didn't know how easy the bus was." Post-visit reviews often include some version of "I'm going back every month."
+  editorial_last_updated: '2026-04-05'
+  source_urls:
+    - https://sojospa.com
+    - https://www.yelp.com/biz/sojo-spa-club-edgewater
+    - https://www.google.com/maps/place/SoJo+Spa+Club
+  confidence_level: high
