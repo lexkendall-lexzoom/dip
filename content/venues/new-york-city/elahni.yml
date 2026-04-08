@@ -10,6 +10,7 @@ venue:
   subtitle: 'Editorial review, practical details, and booking context from Dip.'
   hero_image: ''
   neighborhood: 'NoMad, Manhattan'
+  address: "12 W 27th St, New York, NY 10001"
   price: 'from $65'
   score: '8.6'
   date_reviewed: 'March 2026'

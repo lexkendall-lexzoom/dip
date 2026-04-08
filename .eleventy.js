@@ -328,6 +328,11 @@ module.exports = function(eleventyConfig) {
     return new nunjucks.runtime.SafeString(JSON.stringify(value));
   });
 
+  // ── Nunjucks filter: URL-encode a string for use in query parameters ──
+  eleventyConfig.addFilter("urlencode", function(value) {
+    return encodeURIComponent(value || "");
+  });
+
   // ── Nunjucks filter: normalize CMS image values to public paths ──
   eleventyConfig.addFilter("assetUrl", function(value) {
     if (typeof value !== "string") return "";
