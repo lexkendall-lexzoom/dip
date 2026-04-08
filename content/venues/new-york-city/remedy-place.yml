@@ -1,22 +1,77 @@
 seo:
   title: 'Remedy Place Review: Price, Hours, What to Know | Dip'
   description: Dip review of Remedy Place in New York City with pricing, hours, and what to expect before booking.
-  social_image: https://cdn.sanity.io/images/jptxcgmn/production/3158497d1fca43ce863df9e06c8c97763d6c44c1-6123x4082.jpg?w=1200&q=85&fit=clip&auto=format
+  social_image: >-
+    https://cdn.sanity.io/images/jptxcgmn/production/3158497d1fca43ce863df9e06c8c97763d6c44c1-6123x4082.jpg?w=1200&q=85&fit=clip&auto=format
 venue:
   name: Remedy Place
   city: New York City
   slug: remedy-place
+  id: remedy-place
   subtitle: Editorial review, practical details, and booking context from Dip.
-  hero_image: https://cdn.sanity.io/images/jptxcgmn/production/3158497d1fca43ce863df9e06c8c97763d6c44c1-6123x4082.jpg?w=1200&q=85&fit=clip&auto=format
+  hero_image: >-
+    https://cdn.sanity.io/images/jptxcgmn/production/3158497d1fca43ce863df9e06c8c97763d6c44c1-6123x4082.jpg?w=1200&q=85&fit=clip&auto=format
   neighborhood: Flatiron + SoHo
+  address: "12 W 21st St, New York, NY 10010"
   price: from $30
   score: '7.5'
+  community_score: '4.5'
   date_reviewed: February 2026
   hours: Daily · Members + walk-ins
-  best_for: Contrast therapy routines, recovery sessions, and reset days.
+  best_for: Longevity routines, ice bath recovery, NAD+ drips, high-performance recovery.
   website_url: https://remedyplace.com
-  review: Ice baths, infrared, hyperbaric O₂, NAD+ drips — the menu reads like a longevity conference agenda, and it delivers. The social club concept is real. Two Manhattan locations. Walk-ins from $30, memberships from $9,000/year if you're in that world.
+  review: >-
+    Ice baths, infrared, hyperbaric O₂, NAD+ drips — the menu reads like a longevity conference agenda, and it delivers.
+    The social club concept is real. Two Manhattan locations. Walk-ins from $30, memberships from $9,000/year if you're
+    in that world.
   gallery_images:
     - https://cdn.sanity.io/images/jptxcgmn/production/3158497d1fca43ce863df9e06c8c97763d6c44c1-6123x4082.jpg?w=1200&q=85&fit=clip&auto=format
     - https://cdn.sanity.io/images/jptxcgmn/production/f45c1f11b41340a59152aa402fcc5062f0382b5c-1920x1080.jpg?rect=0,36,1920,1008&w=1200&h=630
     - https://cdn.sanity.io/images/jptxcgmn/production/d38b947aabf0f08a12c820c17cbd42a70bdec89b-1440x800.jpg?rect=553,0,593,800&w=2048&q=85&fit=clip&auto=format
+  one_line_verdict: The longevity conference built as a social club — a high-concept recovery venue where the protocol is real but the status signaling is just as intentional.
+  editorial_overview: |
+    Remedy Place is the most finance-adjacent wellness venue in New York City, and it knows this. The concept — a social wellness club positioning recovery protocols as a social activity rather than solitary maintenance — reads like it was designed by someone who spent six months at longevity conferences and decided to replicate the vibe in a membership space. Ice baths, infrared saunas, hyperbaric oxygen chambers, NAD+ IV drips, PEMF mats, cryotherapy. Two Manhattan locations (Flatiron and SoHo). Walk-ins from $30; annual memberships starting at $9,000.
+
+    The walk-in experience at $30 is worth understanding: you get access to the ice bath and basic recovery stations, and it works as advertised. The venue is clean, well-staffed, and the protocols are legitimate. The IV drip services are the most medically supervised of any comparable venue in the city.
+
+    The non-obvious thing: Remedy Place is less about recovery optimization and more about controlled social exposure among a specific demographic. The $9,000 membership isn't primarily buying you access to better ice baths — it's buying you a social context. The people who join are partly there for the biohacking, but substantially there for the company of other people who are there for the biohacking. It's a social club with a health benefit narrative, and for its target audience, that's exactly what they want.
+  vibe: High-income, performance-oriented, and consciously networking. Finance, tech, and real estate adjacent. The crowd treats wellness as professional investment rather than personal indulgence. The social club framing creates deliberate visibility — being seen here is part of the value proposition for members.
+  facility_breakdown: Ice baths (properly cold, typically 39–50°F), infrared sauna rooms, hyperbaric oxygen chambers, cryotherapy pods, PEMF mats, and IV drip suites. The IV services are medically supervised with on-site practitioners. The facility design is clinical-meets-luxury — white, bright, minimal, intentionally different from the ambient wood-and-stone of competitor wellness venues. Two locations have slightly different service menus.
+  pros:
+    - IV drip services are the most medically credible of any NYC wellness venue
+    - Walk-in access at $30 makes individual protocols genuinely accessible
+    - Clean, well-staffed, reliably executed protocols
+    - The social club element is real — members form genuine connections
+    - Two Manhattan locations increases convenience for regulars
+  cons:
+    - The $9,000 membership price is a statement as much as a service tier
+    - The design and atmosphere skew clinical and performative
+    - The social club framing creates a visibility dynamic that's uncomfortable for some visitors
+    - Longevity protocol marketing can feel oversold relative to the actual evidence base
+  not_ideal_for: People who want a warm, atmospheric wellness experience. Anyone uncomfortable with visible status signaling. Solo visitors seeking anonymity.
+  pro_move: Walk-in for an ice bath and infrared session ($30–50) as a post-workout protocol. Skip the membership pitch unless the social networking dimension genuinely appeals to you. The walk-in ROI is solid; the membership ROI depends entirely on how much you value the community.
+  value_read: The walk-in tier is fairly priced for what it delivers. The membership tier is priced for the social value, not just the facility value — assess accordingly.
+  scene_summary: >-
+    Remedy Place is a reliable indicator of where NYC wellness meets finance culture. It's not the most authentic recovery venue in the city, but it's the most credible in the longevity-protocol category, and the social networking value is real for its target market. Trend direction: hype-driven growth with a strong membership core that sustains the brand beyond the initial buzz.
+  crowd_profile: 30–50, finance, tech, and real estate professionals. High-income, performance-oriented. Mix of members (who treat it as a regular social-professional habit) and walk-ins (who use it as a recovery tool). Behavior is networked — people know each other or are open to knowing each other. The ice bath waiting area functions like a club lounge.
+  time_of_day_dynamics: Mornings (pre-work) and lunch are the most active periods for recovery protocols. Evenings shift toward the social club dynamic — members lingering, introductions happening. Weekend afternoons have the most mixed crowd of regulars and curious walk-ins.
+  popularity_trend: hype-driven
+  booking_difficulty: Easy for walk-ins. Specific treatments (hyperbaric, IV drips) should be booked in advance. Membership access is by application.
+  social_energy_level: 6
+  laptop_free_vibe: false
+  influencer_density: medium
+  repeat_vs_tourist_mix: Member-heavy repeat base sustains the culture. Walk-in traffic includes a meaningful first-timer component. The brand's press visibility drives ongoing new visitor flow.
+  dip_scores:
+    facilities_ritual: 7.0
+    design_atmosphere: 7.5
+    social_energy: 6.5
+    recovery_value: 8.0
+    service_flow: 8.0
+    overall_dip_score: 7.5
+  audience_sentiment_snapshot: Generally positive with a notable polarization — enthusiastic members and cynical first-timers occupy opposite poles. The IV drip service generates the most consistently positive reviews. The membership price point generates significant skepticism in broader wellness communities. Reddit discussions trend toward "is this worth it" with mixed consensus.
+  editorial_last_updated: '2026-04-05'
+  source_urls:
+    - https://remedyplace.com
+    - https://www.yelp.com/biz/remedy-place-new-york
+    - https://www.google.com/maps/place/Remedy+Place
+  confidence_level: high

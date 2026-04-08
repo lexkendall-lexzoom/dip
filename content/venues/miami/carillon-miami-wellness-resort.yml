@@ -1,30 +1,33 @@
 seo:
-  title: "Carillon Miami Wellness Resort Review: Price, Hours, What to Know | Dip"
-  description: Dip review of Carillon Miami Wellness Resort on Miami Beach — 70,000 sq ft of thermal pools, treatments, and the most complete wellness facility in South Florida.
-  social_image: "https://d2jc232pjp0jj6.cloudfront.net/wp-content/uploads/sites/2/2020/03/20143520/home_hero2_poster-480x270.jpg"
+  title: 'Carillon Miami Wellness Resort Review: Price, Hours, What to Know | Dip'
+  description: >-
+    Dip review of Carillon Miami Wellness Resort on Miami Beach — 70,000 sq ft of thermal pools, treatments, and the
+    most complete wellness facility in South Florida.
+  social_image: https://d2jc232pjp0jj6.cloudfront.net/wp-content/uploads/sites/2/2020/03/20143520/home_hero2_poster-480x270.jpg
 venue:
   name: Carillon Miami Wellness Resort
   city: Miami
   slug: carillon-miami-wellness-resort
+  id: carillon-miami-wellness-resort
   subtitle: Editorial review, practical details, and booking context from Dip.
-  hero_image: "https://d2jc232pjp0jj6.cloudfront.net/wp-content/uploads/sites/2/2020/03/20143520/home_hero2_poster-480x270.jpg"
+  hero_image: https://d2jc232pjp0jj6.cloudfront.net/wp-content/uploads/sites/2/2020/03/20143520/home_hero2_poster-480x270.jpg
   neighborhood: Miami Beach
+  address: "6801 Collins Ave, Miami Beach, FL 33141"
   price: from $75
-  score: "8.7"
+  score: '8.7'
   date_reviewed: March 2026
   hours: Daily · Day pass from $75
   best_for: Full-day wellness retreat, fitness + spa combination, Miami Beach visits beyond the pool scene.
-  website_url: "https://www.carillonhotel.com/"
+  website_url: https://www.carillonhotel.com/
   review: >-
-    Carillon spans 70,000 square feet on Miami Beach and treats wellness as
-    architecture rather than amenity. The thermal circuit moves from hot pools
-    to steam rooms to cold plunge to hammam — the sequence is long enough that
-    you actually decompress rather than just check boxes. The fitness center
-    is world-class if you use it, but the spa side alone justifies the trip.
-    Day passes are available and worth it: you get access to everything, and
-    everything is genuinely good. The best wellness facility per square foot
-    in South Florida.
+    Carillon spans 70,000 square feet on Miami Beach and treats wellness as architecture rather than amenity. The
+    thermal circuit moves from hot pools to steam rooms to cold plunge to hammam — the sequence is long enough that you
+    actually decompress rather than just check boxes. The fitness center is world-class if you use it, but the spa side
+    alone justifies the trip. Day passes are available and worth it: you get access to everything, and everything is
+    genuinely good. The best wellness facility per square foot in South Florida.
   gallery_images:
-    - "https://d2jc232pjp0jj6.cloudfront.net/wp-content/uploads/sites/2/2020/03/20143520/home_hero2_poster-480x270.jpg"
-    - "https://d2jc232pjp0jj6.cloudfront.net/wp-content/uploads/sites/2/2020/03/03162140/home_expience_poster-480x320.jpg"
-    - "https://d2jc232pjp0jj6.cloudfront.net/wp-content/uploads/sites/2/2020/03/03171206/home_drone_poster-480x320.jpg"
+    - https://d2jc232pjp0jj6.cloudfront.net/wp-content/uploads/sites/2/2020/03/20143520/home_hero2_poster-480x270.jpg
+    - https://d2jc232pjp0jj6.cloudfront.net/wp-content/uploads/sites/2/2020/03/03162140/home_expience_poster-480x320.jpg
+    - https://d2jc232pjp0jj6.cloudfront.net/wp-content/uploads/sites/2/2020/03/03171206/home_drone_poster-480x320.jpg
+  community_score: '4.5'
+  dip_index: '8.8'

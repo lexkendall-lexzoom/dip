@@ -6,9 +6,11 @@ venue:
   name: 'Elahni'
   city: 'New York City'
   slug: 'elahni'
+  id: elahni
   subtitle: 'Editorial review, practical details, and booking context from Dip.'
   hero_image: 'https://www.elahni.com/elahni-og.png'
   neighborhood: 'NoMad, Manhattan'
+  address: "12 W 27th St, New York, NY 10001"
   price: 'from $65'
   score: '8.6'
   date_reviewed: 'March 2026'

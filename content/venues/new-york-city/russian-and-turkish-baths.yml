@@ -1,22 +1,75 @@
 seo:
   title: 'Russian & Turkish Baths Review: Price, Hours, What to Know | Dip'
-  description: Dip review of Russian & Turkish Baths in the East Village with pricing, hours, and what makes it a historic NYC staple.
-  social_image: https://static.wixstatic.com/media/8c8383_65248793246e915170255dfa9766ff1f.jpg/v1/fit/w_2500,h_1330,al_c/8c8383_65248793246e915170255dfa9766ff1f.jpg
+  description: >-
+    Dip review of Russian & Turkish Baths in the East Village with pricing, hours, and what makes it a historic NYC
+    staple.
+  social_image: >-
+    https://static.wixstatic.com/media/8c8383_65248793246e915170255dfa9766ff1f.jpg/v1/fit/w_2500,h_1330,al_c/8c8383_65248793246e915170255dfa9766ff1f.jpg
 venue:
   name: Russian & Turkish Baths
   city: New York City
   slug: russian-and-turkish-baths
+  id: russian-and-turkish-baths
   subtitle: Editorial review, practical details, and booking context from Dip.
-  hero_image: https://static.wixstatic.com/media/8c8383_65248793246e915170255dfa9766ff1f.jpg/v1/fit/w_2500,h_1330,al_c/8c8383_65248793246e915170255dfa9766ff1f.jpg
+  hero_image: >-
+    https://static.wixstatic.com/media/8c8383_65248793246e915170255dfa9766ff1f.jpg/v1/fit/w_2500,h_1330,al_c/8c8383_65248793246e915170255dfa9766ff1f.jpg
   neighborhood: East Village, Manhattan
+  address: "268 E 10th St, New York, NY 10009"
   price: from $60
   score: '8.8'
+  community_score: '3.7'
   date_reviewed: February 2026
-  hours: Daily · Gender-separated hours
+  hours: Daily · Gender-separated hours · See schedule
   best_for: Traditional bathhouse lovers, post-hangover reset, budget-conscious classics.
   website_url: https://www.russianturkishbaths.com
-  review: Open since 1892, this remains one of the city’s most iconic real-deal bathhouse experiences. The granite room is unique, the Platza scrub is a rite of passage, and the whole place is unapologetically old-school.
+  review: Open since 1892, this remains one of the city's most iconic real-deal bathhouse experiences. The granite room is unique, the Platza scrub is a rite of passage, and the whole place is unapologetically old-school.
   gallery_images:
     - https://static.wixstatic.com/media/8c8383_65248793246e915170255dfa9766ff1f.jpg/v1/fit/w_2500,h_1330,al_c/8c8383_65248793246e915170255dfa9766ff1f.jpg
     - https://static.wixstatic.com/media/8c8383_25843936c1fc4751b3ed06ba68e53e16~mv2.jpg/v1/fit/w_2500,h_1330,al_c/IMG_0422.jpg
     - https://static.wixstatic.com/media/8c8383_d1c9fe2b46c2e3ab82084968a669bc15.jpg/v1/fit/w_2500,h_1330,al_c/8c8383_d1c9fe2b46c2e3ab82084968a669bc15.jpg
+  one_line_verdict: New York's most storied bathhouse — open since 1892, still operating the same core experience, and still worth every dollar.
+  editorial_overview: |
+    The Russian & Turkish Baths on East 10th Street is one of the last physical links to New York's immigrant bathhouse culture. Open since 1892, the building has outlasted four or five complete reinventions of the East Village around it, and the interior has accumulated a quality that no new venue can manufacture: the patina of actual use. The granite room is the crown — volcanic rocks, intense dry heat, a low ceiling that concentrates the steam. The platza massage (an oak-leaf scrub performed by an attendant who has clearly done this for a very long time) is the defining experience.
+
+    The facility is not Instagram-ready. The pools are utilitarian, the changing rooms are basic, and the vibe runs somewhere between a neighborhood institution and a slightly chaotic social club. On coed days the crowd is eclectic — old Russian men, NYU professors, post-hangover millennials, actors from the neighborhood. It can feel loud. That's part of it.
+
+    The non-obvious truth about this place: it's one of the few wellness spaces in New York where social class genuinely disappears. The banker and the cab driver have been sitting in the same steam room here for decades. That porousness is rare and valuable — it's what keeps the place from becoming a product.
+  vibe: Unpolished, communal, and completely unselfconscious. The clientele ranges from lifelong regulars to curious newcomers to people who clearly need to sweat out last night. Conversation happens naturally and without performance. This is the opposite of a curated wellness experience.
+  facility_breakdown: Four key rooms — the Russian steam (granite room), the Turkish bath (wet steam), the sauna, and the outdoor area with cold plunge. The contrast cycle is complete. Platza services are offered throughout the day and worth booking in advance. The café serves basic banya food (herring, borsch, tea). Cold plunge is cold. Hot rooms are actually hot. Nothing is decorative.
+  pros:
+    - Granite room is one of the most intense steam environments in the city — genuinely therapeutic
+    - Platza massage is a legitimate rite of passage
+    - Price is fair for what you're getting — among the most accessible thermal experiences in Manhattan
+    - The mix of regulars creates authentic atmosphere that newer venues can't replicate
+    - Walk-in friendly on most weekdays
+  cons:
+    - Gender-separated schedule limits coed access to specific days/times — check before going
+    - Facilities are dated and not particularly clean by modern spa standards
+    - Can feel chaotic on busy coed days
+    - No booking system for platza — it's first-come in person
+  not_ideal_for: Anyone seeking design-forward aesthetics, couples wanting a romantic evening, first-timers who want hand-holding through the ritual.
+  pro_move: Go on a weekday, arrive early enough to get a platza slot, and plan for 3+ hours. The experience compounds over time — the first hour is acclimation, the second is when the ritual takes hold.
+  value_read: At $60 entry, this is among the best value thermal experiences in Manhattan. The platza is a reasonable add-on ($50–$75 depending on session length). The total spend is a fraction of newer competitors with a depth of experience that none of them can match.
+  scene_summary: The Russian & Turkish Baths are a living institution — not trending, not declining, simply continuing. They occupy a unique ecological niche as the real-deal alternative to every designed wellness experience in the city. For people who want to understand what bathhouse culture actually was before it became a lifestyle category, this is the primary text.
+  crowd_profile: Genuinely mixed — Russian and Eastern European regulars in their 50s–70s alongside East Village professionals in their 30s–40s alongside tourists who did their research. On coed days the crowd includes couples, groups of friends, and solo visitors. Behavior is direct and unselfconscious — people talk, relax, and engage without the self-monitoring of a trendier space.
+  time_of_day_dynamics: Weekday mornings are sparse and contemplative — the old regulars' time. Late mornings to afternoons on coed days are the social peak. Weekends bring the most mixed crowd with the most energy. Evening hours quiet down. Sunday coed days are the most dynamic and most crowded.
+  popularity_trend: steady
+  booking_difficulty: Easy — walk-in most days. Platza appointments should be made in advance (call ahead). No online booking required for entry.
+  social_energy_level: 7
+  laptop_free_vibe: true
+  influencer_density: low
+  repeat_vs_tourist_mix: Heavily repeat — the core clientele are multi-decade regulars. A consistent stream of first-timers and tourists who found it through research adds new blood without diluting the culture.
+  dip_scores:
+    facilities_ritual: 8.5
+    design_atmosphere: 7.0
+    social_energy: 7.5
+    recovery_value: 9.0
+    service_flow: 7.5
+    overall_dip_score: 8.8
+  audience_sentiment_snapshot: Beloved by long-term regulars and serious bathhouse enthusiasts. Complaints from newcomers focus on the dated facilities and schedule complexity. The platza treatment generates consistent five-star reviews. Reddit and Yelp treat this as an NYC institution with near-mythic status in the thermal bathing community.
+  editorial_last_updated: '2026-04-05'
+  source_urls:
+    - https://www.russianturkishbaths.com
+    - https://www.yelp.com/biz/russian-and-turkish-baths-new-york
+    - https://www.google.com/maps/place/Russian+%26+Turkish+Baths
+  confidence_level: high

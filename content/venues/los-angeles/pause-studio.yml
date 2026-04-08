@@ -6,9 +6,11 @@ venue:
   name: Pause Studio
   city: Los Angeles
   slug: pause-studio
+  id: pause-studio
   subtitle: Editorial review, practical details, and booking context from Dip.
   hero_image: "https://images.ctfassets.net/xlosfajxk15z/1bVrosg2rGAtxBScz8WR4H/63ad0797a24f7c99d63ac776df72441c/studio-hallway.png"
   neighborhood: Los Angeles
+  address: "937 N Sycamore Ave, Los Angeles, CA 90038"
   price: from $60
   score: "7.5"
   date_reviewed: March 2026

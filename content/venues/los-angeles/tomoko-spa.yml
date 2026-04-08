@@ -1,30 +1,33 @@
 seo:
-  title: "Tomoko Spa Beverly Hills Review: Price, Hours, What to Know | Dip"
-  description: "Dip review of Tomoko Spa in Beverly Hills — Japanese spa with private soaking tubs, shiatsu, and Japanesque ritual in the heart of LA's westside."
-  social_image: "https://img1.wsimg.com/isteam/ip/ab64c5f9-8201-4e2a-ba60-0996a71d0e0b/romantic-japanese-spa-in-beverly-hills.png"
+  title: 'Tomoko Spa Beverly Hills Review: Price, Hours, What to Know | Dip'
+  description: >-
+    Dip review of Tomoko Spa in Beverly Hills — Japanese spa with private soaking tubs, shiatsu, and Japanesque ritual
+    in the heart of LA's westside.
+  social_image: https://img1.wsimg.com/isteam/ip/ab64c5f9-8201-4e2a-ba60-0996a71d0e0b/romantic-japanese-spa-in-beverly-hills.png
 venue:
   name: Tomoko Spa
   city: Los Angeles
   slug: tomoko-spa
+  id: tomoko-spa
   subtitle: Editorial review, practical details, and booking context from Dip.
-  hero_image: "https://img1.wsimg.com/isteam/ip/ab64c5f9-8201-4e2a-ba60-0996a71d0e0b/romantic-japanese-spa-in-beverly-hills.png"
+  hero_image: https://img1.wsimg.com/isteam/ip/ab64c5f9-8201-4e2a-ba60-0996a71d0e0b/romantic-japanese-spa-in-beverly-hills.png
   neighborhood: Beverly Hills, Los Angeles
+  address: "141 S Beverly Dr, Beverly Hills, CA 90212"
   price: from $120
-  score: "7.5"
+  score: '7.5'
   date_reviewed: March 2026
   hours: Mon–Sat 10am–8pm · Sun 11am–7pm
   best_for: Japanese-style soaking, shiatsu treatments, couples, private ritual in Beverly Hills.
-  website_url: "https://tomokojapanesespa.com/"
+  website_url: https://tomokojapanesespa.com/
   review: >-
-    Tomoko occupies a Beverly Hills shopfront with more visual restraint than
-    most spas in a ten-mile radius, which is already a recommendation. The
-    offer is Japanese-leaning: private soaking tubs, shiatsu bodywork, and a
-    quiet that feels earned rather than designed. It is not a bathhouse in the
-    communal sense — you have your own private world — but the soaking
-    sequence and the bodywork are genuinely good. For couples or anyone
-    wanting a Japanese spa experience without a flight to Japan or a trip to a
-    Korean spa in Koreatown, Tomoko fills the gap precisely.
+    Tomoko occupies a Beverly Hills shopfront with more visual restraint than most spas in a ten-mile radius, which is
+    already a recommendation. The offer is Japanese-leaning: private soaking tubs, shiatsu bodywork, and a quiet that
+    feels earned rather than designed. It is not a bathhouse in the communal sense — you have your own private world —
+    but the soaking sequence and the bodywork are genuinely good. For couples or anyone wanting a Japanese spa
+    experience without a flight to Japan or a trip to a Korean spa in Koreatown, Tomoko fills the gap precisely.
   gallery_images:
     - "https://img1.wsimg.com/isteam/ip/ab64c5f9-8201-4e2a-ba60-0996a71d0e0b/romantic-japanese-spa-in-beverly-hills.png"
     - "https://img1.wsimg.com/isteam/ip/ab64c5f9-8201-4e2a-ba60-0996a71d0e0b/tomoko-japanese-spa-beverly-hills-best-massage.png"
     - "https://img1.wsimg.com/isteam/ip/ab64c5f9-8201-4e2a-ba60-0996a71d0e0b/Matcha%20Tomoko%20Spa-5400ee7.jpg"
+  community_score: '4.5'
+  dip_index: '8.1'

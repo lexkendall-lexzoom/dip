@@ -8,6 +8,8 @@ permalink: "/{{ item.citySlug }}/{{ item.venue.slug | default(item.fileSlug) }}/
 {%- set v = item.venue -%}
 {%- set seo = item.seo -%}
 {%- set citySlug = item.citySlug -%}
+{%- set _dipIndexVal = v.dip_index if v.dip_index else (v.dip_scores.overall_dip_score if v.dip_scores else null) -%}
+{%- set _hasGallery = v.gallery_images and v.gallery_images.length > 0 -%}
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -44,158 +46,322 @@ permalink: "/{{ item.citySlug }}/{{ item.venue.slug | default(item.fileSlug) }}/
     }
     </script>
     <link rel="preload" href="/fonts/syne-700.ttf" as="font" type="font/ttf" crossorigin/>
-  <link rel="preload" href="/fonts/playfair-display-400-italic.ttf" as="font" type="font/ttf" crossorigin/>
-  <link rel="stylesheet" href="/fonts/fonts.css"/>
+    <link rel="preload" href="/fonts/playfair-display-400-italic.ttf" as="font" type="font/ttf" crossorigin/>
+    <link rel="stylesheet" href="/fonts/fonts.css"/>
     <style>
-          :root{--ink:#111;--page:#f3f0e8;--card:#fff;--mist:#d8d4ca;--teal:#0b7c78;--font-sans:'Syne',ui-sans-serif,system-ui,-apple-system,'Segoe UI',sans-serif;--font-serif:'Playfair Display',Georgia,'Times New Roman',serif;}
-          *{box-sizing:border-box}
-          html{max-width:100%;overflow-x:hidden}
-          body{margin:0;background:var(--page);color:var(--ink);font-family:var(--font-sans);font-size-adjust:.52;max-width:100%;overflow-x:hidden}
-          main{max-width:100%;overflow-x:hidden}
-          @supports not (font-size-adjust:1){body{font-size-adjust:none}}
-          .sub,.desc{font-size-adjust:.48}
-          .shell{max-width:1240px;width:100%;margin:0 auto;padding:30px 24px 64px;overflow-x:hidden}
-          .back{display:inline-block;margin-bottom:16px;color:var(--teal);font-size:11px;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;font-weight:700}
-          .hero-media{position:relative;border:2px solid var(--ink);aspect-ratio:16/9;overflow:hidden;background:#ddd}
-          .hero-media::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.2),rgba(0,0,0,.45));pointer-events:none}
-          .hero-media > img{width:100%;height:100%;object-fit:cover;display:block}
-          .chips{position:absolute;left:14px;top:14px;display:flex;gap:8px;flex-wrap:wrap;z-index:3}
-          .chip{background:rgba(17,17,17,.88);color:#fff;padding:6px 10px;font-size:10px;letter-spacing:.12em;text-transform:uppercase}
-          .details-grid{display:grid;grid-template-columns:.85fr 1.25fr;gap:20px;margin-top:20px}
-          .box{background:var(--card);border:2px solid var(--ink);padding:20px}
-          .fieldbox{min-height:270px}
-          .reviewbox{min-height:340px}
-          h1{margin:0 0 10px;font-family:var(--font-sans);font-weight:800;font-size:clamp(32px,3.4vw,52px);line-height:.95;letter-spacing:-.03em;text-rendering:geometricPrecision;-webkit-font-smoothing:antialiased}
-          .sub{font-family:var(--font-serif);font-style:italic;color:#555;margin:0 0 14px}
-          .facts{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-          .fact{border:1px solid var(--mist);background:#faf8f3;padding:10px;min-height:72px}
-          .fact b{display:block;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:#666;margin-bottom:4px}
-          .fact.wide{grid-column:1 / -1;min-height:60px}
-          .cta{display:inline-block;margin-top:14px;padding:10px 14px;background:#111;color:#fff;text-decoration:none;font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:700}
-          .review-title,.carousel-title{margin:0 0 10px;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:#666}
-          .desc{line-height:1.75;margin:0;font-size:16px}
-          .carousel-box{margin-top:16px}
-          .carousel{position:relative}
-          .carousel-track{position:relative;overflow:hidden;border:2px solid var(--ink);background:#111;aspect-ratio:16/9}
-          .slide{position:absolute;inset:0;display:none;align-items:center;justify-content:center;color:#fff;text-transform:uppercase;letter-spacing:.08em}
-          .slide.active{display:flex}
-          .slide img{width:100%;height:100%;object-fit:cover;display:block}
-          .slide.placeholder{background:linear-gradient(135deg,#20403f,#3e6662);font-size:12px}
-          .controls{display:flex;justify-content:space-between;align-items:center;margin-top:10px}
-          .btn{background:#111;color:#fff;border:none;padding:9px 12px;font-size:11px;letter-spacing:.12em;text-transform:uppercase;cursor:pointer}
-          .dots{display:flex;gap:8px}
-          .dot{width:9px;height:9px;border-radius:50%;background:#c7c2b8;border:none;cursor:pointer}
-          .dot.active{background:#0b7c78}
-          @media (max-width: 980px){
-                  .shell{padding:20px 12px 40px}
-                  .details-grid{grid-template-columns:1fr}
-                  .facts{grid-template-columns:1fr}
-                  .fieldbox,.reviewbox{min-height:auto}
-                  .desc{font-size:15px}
-                  .btn{padding:8px 10px;font-size:10px}
-          }
-        </style>
+      :root{--ink:#111;--page:#f3f0e8;--card:#fff;--mist:#d8d4ca;--teal:#0b7c78;--font-sans:'Syne',ui-sans-serif,system-ui,-apple-system,'Segoe UI',sans-serif;--font-serif:'Playfair Display',Georgia,'Times New Roman',serif;}
+      *{box-sizing:border-box;margin:0;padding:0}
+      html{max-width:100%;overflow-x:hidden}
+      body{background:var(--page);color:var(--ink);font-family:var(--font-sans);font-size:15px;max-width:100%;overflow-x:hidden}
+      @supports not (font-size-adjust:1){body{font-size-adjust:none}}
+
+      /* ── Shell ── */
+      .shell{max-width:1240px;width:100%;margin:0 auto;padding:24px 20px 80px;overflow-x:hidden}
+      .back{display:inline-block;margin-bottom:14px;color:var(--teal);font-size:11px;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;font-weight:700}
+
+      /* ── Carousel ── */
+      .carousel-section{position:relative;border:2px solid var(--ink);overflow:hidden;background:#111;aspect-ratio:16/9;touch-action:pan-y;user-select:none}
+      .carousel-track{display:flex;height:100%;transition:transform .38s cubic-bezier(.4,0,.2,1);will-change:transform}
+      .slide{flex:0 0 100%;height:100%;position:relative}
+      .slide img{width:100%;height:100%;object-fit:cover;display:block}
+      .slide.placeholder{display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#20403f,#3e6662);color:#fff;font-size:12px;letter-spacing:.08em;text-transform:uppercase}
+      .carousel-controls{position:absolute;bottom:0;left:0;right:0;display:flex;align-items:center;justify-content:space-between;padding:12px 14px;background:linear-gradient(0deg,rgba(0,0,0,.55) 0%,transparent 100%);z-index:4}
+      .c-btn{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.55);padding:7px 12px;font-size:10px;letter-spacing:.12em;text-transform:uppercase;cursor:pointer;font-family:var(--font-sans);font-weight:700}
+      .c-btn:hover{background:rgba(255,255,255,.15)}
+      .dots{display:flex;gap:7px;align-items:center}
+      .dot{width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.45);border:none;cursor:pointer;padding:0;transition:background .2s,transform .2s}
+      .dot.active{background:#fff;transform:scale(1.25)}
+
+      /* ── Content grid ── */
+      .content-grid{display:grid;grid-template-columns:1fr;border-left:2px solid var(--ink);border-right:2px solid var(--ink);border-bottom:2px solid var(--ink)}
+
+      /* ── Venue identity (left) ── */
+      .venue-identity{padding:28px 24px 24px;border-bottom:2px solid var(--ink);background:var(--card)}
+      h1{font-family:var(--font-sans);font-weight:800;font-size:clamp(30px,5vw,52px);line-height:.93;letter-spacing:-.03em;margin-bottom:10px;text-rendering:geometricPrecision;-webkit-font-smoothing:antialiased}
+      .sub{font-family:var(--font-serif);font-style:italic;color:#666;font-size:14px;margin-bottom:20px;line-height:1.5}
+      .facts{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--mist);border:1px solid var(--mist)}
+      .fact{background:#faf8f3;padding:11px 12px}
+      .fact b{display:block;font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:#888;margin-bottom:4px;font-weight:700}
+      .fact span{font-size:13px;line-height:1.4;font-weight:600}
+      .fact.wide{grid-column:1 / -1}
+      .address-link{color:var(--teal);text-decoration:none}.address-link:hover{text-decoration:underline}
+
+      /* ── Scoring block (right) ── */
+      .scoring-block{padding:28px 24px 24px;background:var(--card)}
+      .score-header{display:flex;align-items:baseline;gap:10px;margin-bottom:20px;padding-bottom:18px;border-bottom:1px solid var(--mist)}
+      .dip-index-label{font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:#888;font-weight:700}
+      .dip-index-val{font-size:52px;font-weight:800;line-height:1;color:var(--teal);letter-spacing:-.04em;font-family:var(--font-sans)}
+      .primary-scores{display:flex;align-items:flex-start;margin-bottom:0;padding-bottom:16px;border-bottom:1px solid var(--mist)}
+      .subscore-divider{width:1px;background:var(--mist);align-self:stretch;margin:0 20px}
+      .subscore{display:flex;flex-direction:column;gap:5px}
+      .subscore-label{font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:#888;font-weight:700}
+      .subscore-val{font-size:20px;font-weight:800;letter-spacing:-.02em;color:var(--ink)}
+      .subscore.primary .subscore-val{font-size:22px}
+      .stars-val{color:#c8a100;font-size:20px;letter-spacing:.04em}
+      .facility-scores{display:flex;padding:16px 0;border-bottom:1px solid var(--mist);margin-bottom:16px}
+      .facility-scores .subscore{flex:1;padding-right:16px}
+      .facility-scores .subscore+.subscore{padding-left:16px;padding-right:16px;border-left:1px solid var(--mist)}
+      .kw-row{font-size:12px;line-height:1.6;margin-bottom:10px}
+      .kw-tag{display:inline-block;font-size:8px;letter-spacing:.1em;text-transform:uppercase;padding:2px 6px;margin-right:6px;font-weight:700;vertical-align:middle}
+      .kw-tag.pos{background:var(--teal);color:#fff}
+      .kw-tag.neg{background:#444;color:#fff}
+      .best-for-row{font-size:13px;line-height:1.55;margin-bottom:20px;padding-top:16px;border-top:1px solid var(--mist)}
+      .best-for-row strong{font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:#888;display:block;margin-bottom:4px;font-weight:700}
+      .cta{display:inline-block;padding:11px 16px;background:var(--ink);color:#fff;text-decoration:none;font-size:10px;letter-spacing:.16em;text-transform:uppercase;font-weight:700}
+      .cta:hover{background:var(--teal)}
+
+      /* ── DIP Review (full width) ── */
+      .review-section{border-left:2px solid var(--ink);border-right:2px solid var(--ink);border-bottom:2px solid var(--ink);border-top:2px solid var(--ink);margin-top:-2px;background:var(--card);padding:28px 24px}
+      .review-label{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:#888;font-weight:700;margin-bottom:14px}
+      .review-text{font-size:16px;line-height:1.8;color:#222}
+
+      /* ── Scoring footnote ── */
+      .scoring-explainer{margin-top:32px;padding:16px 0;border-top:1px solid var(--mist)}
+      .explainer-label{font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:#aaa;font-weight:700;margin-bottom:10px}
+      .explainer-intro{font-size:11px;line-height:1.6;color:#888;margin-bottom:12px}
+      .explainer-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px 28px}
+      .explainer-item{display:flex;flex-direction:column;gap:2px}
+      .explainer-cat{font-size:9px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:#999}
+      .explainer-desc{font-size:11px;line-height:1.55;color:#aaa}
+
+      /* ── Responsive ── */
+      @media(min-width:720px){
+        .content-grid{grid-template-columns:1fr 1fr}
+        .venue-identity{border-bottom:none;border-right:2px solid var(--ink)}
+        .dip-index-val{font-size:64px}
+        .review-section{padding:36px 32px}
+        .review-text{max-width:800px}
+      }
+      @media(min-width:1024px){
+        .shell{padding:28px 28px 80px}
+        .content-grid{grid-template-columns:.9fr 1.1fr}
+        .venue-identity{padding:32px 28px 28px}
+        .scoring-block{padding:32px 28px 28px}
+        .review-section{padding:36px 40px}
+        .review-text{font-size:17px}
+      }
+      @media(max-width:480px){
+        .facility-scores{flex-direction:column;gap:12px}
+        .facility-scores .subscore{padding:0;border:none}
+        .facility-scores .subscore+.subscore{padding:0;border-left:none;border-top:1px solid var(--mist);padding-top:12px}
+        .primary-scores{flex-wrap:wrap;gap:12px}
+        .subscore-divider{display:none}
+      }
+    </style>
   </head>
   <body>
     <main class="shell">
-        <a class="back" href="/#venue=/{{ citySlug }}/{{ v.slug | default(item.fileSlug) }}/">&#8592; Back to Dip directory</a>
-        <section class="hero-media" aria-label="Venue hero image">
-              {% if v.hero_image %}<img src="{{ v.hero_image | assetUrl }}" alt="{{ v.name }} hero image" loading="eager"/>{% endif %}
-              <div class="chips">
-                {% if v.best_for %}<span class="chip">{{ v.best_for | truncate(30, true) }}</span>{% endif %}
-                <span class="chip">{{ citySlug | replace("-", " ") | upper | truncate(3, false, "") }} Score {{ v.score | default("Coming soon") }}</span>
-              </div>
-        </section>
-        <section class="details-grid">
-              <article class="box fieldbox">
-                      <h1>{{ v.name }}</h1>
-                    {% if v.subtitle %}<p class="sub">{{ v.subtitle }}</p>{% endif %}
-                    <div class="facts">
-                            {% if v.neighborhood %}<div class="fact"><b>Neighborhood</b>{{ v.neighborhood }}</div>{% endif %}
-                            {% if v.price %}<div class="fact"><b>Price</b>{{ v.price }}</div>{% endif %}
-                            <div class="fact"><b>Score</b>{{ v.score | default("Coming soon") }}</div>
-                            {% if v.date_reviewed %}<div class="fact"><b>Date reviewed</b>{{ v.date_reviewed }}</div>{% endif %}
-                            {% if v.hours %}<div class="fact wide"><b>Hours</b>{{ v.hours }}</div>{% endif %}
-                            {% if v.core_type %}<div class="fact"><b>Core Ritual Type</b>{{ v.core_type | replace('_', ' ') }}</div>{% endif %}
-                            {% if v.cultural_tradition %}<div class="fact"><b>Cultural Tradition</b>{{ v.cultural_tradition | replace('_', ' ') }}</div>{% endif %}
-                            {% if v.modern_format %}<div class="fact"><b>Modern Format</b>{{ v.modern_format | replace('_', ' ') }}</div>{% endif %}
-                            {% if v.ritual_elements and v.ritual_elements.length > 0 %}<div class="fact wide"><b>Ritual Elements</b>{{ v.ritual_elements | join(' + ') | replace('_', ' ') }}</div>{% endif %}
-                    </div>
-                    {% if v.best_for %}<p style="margin:12px 0 0"><strong>Best for:</strong> {{ v.best_for }}</p>{% endif %}
-                    {% if v.website_url %}<a class="cta" href="{{ v.website_url }}" target="_blank" rel="noopener noreferrer">Official Website &rarr;</a>{% endif %}
-              </article>
-            <article class="box reviewbox">
-                  <h2 class="review-title">Dip Review</h2>
-                  <p class="desc">{{ v.review | default("Review coming soon.") }}</p>
-            </article>
-        </section>
-      {% if v.gallery_images and v.gallery_images.length > 0 %}
-      <section class="box carousel-box">
-          <h2 class="carousel-title">Venue Photos</h2>
-          <div class="carousel" data-carousel>
-                <div class="carousel-track" data-track>
-                  {% for img in v.gallery_images %}
-                    {%- set imgSrc = (img.image | default(img.src) | default(img.url) | default(img)) | assetUrl -%}
-                    {% if imgSrc %}
-                        <div class="slide"><img src="{{ imgSrc }}" alt="{{ v.name }} photo {{ loop.index }}" loading="eager" decoding="async" onerror="this.remove();this.closest('.slide').classList.add('placeholder');this.closest('.slide').textContent='Photo unavailable';"/></div>
-                    {% else %}
-                        <div class="slide placeholder">Photo Unavailable</div>
-                    {% endif %}
-                  {% endfor %}
-                </div>
-                <div class="controls">
-                        <button class="btn" type="button" data-prev>&#8592; Prev</button>
-                        <div class="dots">
-                          {% for img in v.gallery_images %}
-                                  <button class="dot{% if loop.first %} active{% endif %}" type="button" data-dot="{{ loop.index0 }}" aria-label="Slide {{ loop.index }}"></button>
-                          {% endfor %}
-                        </div>
-                        <button class="btn" type="button" data-next>Next &#8594;</button>
-                </div>
+      <a class="back" href="/#venue=/{{ citySlug }}/{{ v.slug | default(item.fileSlug) }}/">&#8592; Back to Dip directory</a>
+
+      <!-- ① CAROUSEL -->
+      <section class="carousel-section" aria-label="Venue photos" data-carousel>
+        <div class="carousel-track" data-track>
+          {%- if _hasGallery -%}
+            {%- for img in v.gallery_images -%}
+              {%- set imgSrc = (img.image | default(img.src) | default(img.url) | default(img)) | assetUrl -%}
+              {%- if imgSrc -%}
+                <div class="slide"><img src="{{ imgSrc }}" alt="{{ v.name }} photo {{ loop.index }}" loading="{% if loop.first %}eager{% else %}lazy{% endif %}" decoding="async" onerror="this.parentElement.classList.add('placeholder');this.remove()"/></div>
+              {%- else -%}
+                <div class="slide placeholder">Photo unavailable</div>
+              {%- endif -%}
+            {%- endfor -%}
+          {%- elif v.hero_image -%}
+            <div class="slide"><img src="{{ v.hero_image | assetUrl }}" alt="{{ v.name }}" loading="eager" decoding="async"/></div>
+          {%- else -%}
+            <div class="slide placeholder">{{ v.name }}</div>
+          {%- endif -%}
+        </div>
+        <div class="carousel-controls" data-controls>
+          <button class="c-btn" type="button" data-prev aria-label="Previous photo">&#8592; Prev</button>
+          <div class="dots">
+            {%- if _hasGallery -%}
+              {%- for img in v.gallery_images -%}
+                <button class="dot{% if loop.first %} active{% endif %}" type="button" data-dot="{{ loop.index0 }}" aria-label="Photo {{ loop.index }}"></button>
+              {%- endfor -%}
+            {%- else -%}
+              <button class="dot active" type="button" data-dot="0" aria-label="Photo 1"></button>
+            {%- endif -%}
           </div>
+          <button class="c-btn" type="button" data-next aria-label="Next photo">Next &#8594;</button>
+        </div>
       </section>
-      {% endif %}
+
+      <!-- ② CONTENT GRID -->
+      <div class="content-grid">
+
+        <!-- LEFT: venue identity + facts -->
+        <section class="venue-identity">
+          <h1>{{ v.name }}</h1>
+          {%- if v.subtitle -%}<p class="sub">{{ v.subtitle }}</p>{%- endif -%}
+          {%- if v.address -%}
+            {%- set _mapsQuery = v.address + ', ' + v.city -%}
+          {%- else -%}
+            {%- set _mapsQuery = v.name + ' ' + v.city -%}
+          {%- endif -%}
+          {%- set _mapsUrl = 'https://www.google.com/maps/search/?api=1&query=' + (_mapsQuery | urlencode) -%}
+          <div class="facts">
+            {%- if v.neighborhood -%}<div class="fact"><b>Neighborhood</b><span>{{ v.neighborhood }}</span></div>{%- endif -%}
+            {%- if v.price -%}<div class="fact"><b>Price</b><span>{{ v.price }}</span></div>{%- endif -%}
+            {%- if v.address -%}<div class="fact wide"><b>Address</b><span><a class="address-link" href="{{ _mapsUrl }}" target="_blank" rel="noopener noreferrer">{{ v.address }}</a></span></div>
+            {%- else -%}<div class="fact wide"><b>Find on Maps</b><span><a class="address-link" href="{{ _mapsUrl }}" target="_blank" rel="noopener noreferrer">View on Google Maps ↗</a></span></div>{%- endif -%}
+            <div class="fact"><b>Dip Review Score</b><span>{{ v.score | default("Coming soon") }}</span></div>
+            {%- if v.date_reviewed -%}<div class="fact"><b>Date Reviewed</b><span>{{ v.date_reviewed }}</span></div>{%- endif -%}
+            {%- if v.hours -%}<div class="fact wide"><b>Hours</b><span>{{ v.hours }}</span></div>{%- endif -%}
+            {%- if v.core_type -%}<div class="fact"><b>Core Ritual Type</b><span>{{ v.core_type | replace('_', ' ') }}</span></div>{%- endif -%}
+            {%- if v.cultural_tradition -%}<div class="fact"><b>Cultural Tradition</b><span>{{ v.cultural_tradition | replace('_', ' ') }}</span></div>{%- endif -%}
+            {%- if v.modern_format -%}<div class="fact"><b>Modern Format</b><span>{{ v.modern_format | replace('_', ' ') }}</span></div>{%- endif -%}
+            {%- if v.ritual_elements and v.ritual_elements.length > 0 -%}<div class="fact wide"><b>Ritual Elements</b><span>{{ v.ritual_elements | join(' + ') | replace('_', ' ') }}</span></div>{%- endif -%}
+          </div>
+          {%- if v.website_url -%}
+          <a class="cta" style="margin-top:20px;display:inline-block" href="{{ v.website_url }}" target="_blank" rel="noopener noreferrer">Official Website &rarr;</a>
+          {%- endif -%}
+        </section>
+
+        <!-- RIGHT: scoring block -->
+        <aside class="scoring-block">
+          {%- if _dipIndexVal -%}
+          <!-- DIP Index -->
+          <div class="score-header">
+            <span class="dip-index-label">DIP Index</span>
+            <span class="dip-index-val">{{ _dipIndexVal }}</span>
+          </div>
+
+          <!-- Our Review + Community Review -->
+          <div class="primary-scores">
+            {%- if v.score and v.score != "Coming soon" -%}
+            <div class="subscore primary">
+              <span class="subscore-label">Our Review</span>
+              <span class="subscore-val">{{ v.score }}</span>
+            </div>
+            {%- endif -%}
+            {%- if v.community_score -%}
+            <div class="subscore-divider"></div>
+            <div class="subscore primary">
+              <span class="subscore-label">Community Review</span>
+              <span class="subscore-val stars-val">{{ v.community_score | stars }}</span>
+            </div>
+            {%- endif -%}
+          </div>
+
+          <!-- Facilities / Design / Ritual -->
+          {%- if v.dip_scores -%}
+          <div class="facility-scores">
+            {%- if v.dip_scores.facilities_ritual -%}
+            <div class="subscore">
+              <span class="subscore-label">Facilities</span>
+              <span class="subscore-val">{{ v.dip_scores.facilities_ritual }}</span>
+            </div>
+            {%- endif -%}
+            {%- if v.dip_scores.design_atmosphere -%}
+            <div class="subscore">
+              <span class="subscore-label">Design</span>
+              <span class="subscore-val">{{ v.dip_scores.design_atmosphere }}</span>
+            </div>
+            {%- endif -%}
+            {%- if v.dip_scores.recovery_value -%}
+            <div class="subscore">
+              <span class="subscore-label">Ritual</span>
+              <span class="subscore-val">{{ v.dip_scores.recovery_value }}</span>
+            </div>
+            {%- endif -%}
+          </div>
+          {%- endif -%}
+
+          <!-- keywords -->
+          {%- if v.positive_keywords and v.positive_keywords.length > 0 -%}
+          <p class="kw-row"><span class="kw-tag pos">Loved for</span>{{ v.positive_keywords | join(', ') | capitalize }}</p>
+          {%- endif -%}
+          {%- if v.negative_keywords and v.negative_keywords.length > 0 -%}
+          <p class="kw-row"><span class="kw-tag neg">Watch for</span>{{ v.negative_keywords | join(', ') | capitalize }}</p>
+          {%- endif -%}
+          {%- endif -%}
+
+          <!-- Best For -->
+          {%- if v.best_for -%}
+          <div class="best-for-row">
+            <strong>Best For</strong>
+            {{ v.best_for }}
+          </div>
+          {%- endif -%}
+        </aside>
+
+      </div>
+
+      <!-- ③ DIP REVIEW -->
+      <section class="review-section">
+        <p class="review-label">Dip Review</p>
+        <p class="review-text">{{ v.review | default("Review coming soon.") }}</p>
+      </section>
+
+      <!-- ④ SCORING FOOTNOTE -->
+      <section class="scoring-explainer" aria-label="About Dip scoring">
+        <p class="explainer-label">About Dip Scoring</p>
+        <p class="explainer-intro">Dip Index is our blended score, combining our editorial assessment with broader community consensus.</p>
+        <div class="explainer-grid">
+          <div class="explainer-item">
+            <span class="explainer-cat">Dip Review</span>
+            <span class="explainer-desc">Our editorial score, rated out of 10, based on the elements we believe matter most in the bathing experience.</span>
+          </div>
+          <div class="explainer-item">
+            <span class="explainer-cat">Facilities</span>
+            <span class="explainer-desc">The quality and range of the core bathing experience, from saunas and plunges to supporting physical infrastructure.</span>
+          </div>
+          <div class="explainer-item">
+            <span class="explainer-cat">Design</span>
+            <span class="explainer-desc">The atmosphere, materiality, visual identity, and overall aesthetic experience of the space.</span>
+          </div>
+          <div class="explainer-item">
+            <span class="explainer-cat">Ritual</span>
+            <span class="explainer-desc">How well the venue supports repeat use: whether it feels like a place you return to regularly, not just visit once.</span>
+          </div>
+          <div class="explainer-item">
+            <span class="explainer-cat">Community Review</span>
+            <span class="explainer-desc">The aggregated rating pulled from external review platforms, reflecting broader guest sentiment and lived experience. Rated out of five stars.</span>
+          </div>
+          <div class="explainer-item">
+            <span class="explainer-cat">Dip Index</span>
+            <span class="explainer-desc">The combined score that brings together both the Dip Review and the Community Review into one overall rating.</span>
+          </div>
+        </div>
+      </section>
+
     </main>
-  <script>
-    (function() {
-        document.querySelectorAll('[data-carousel]').forEach((carousel) => {
-              const track = carousel.querySelector('[data-track]');
-              const slides = Array.from(track.children);
-              const dots = Array.from(carousel.querySelectorAll('[data-dot]'));
-              const prevBtn = carousel.querySelector('[data-prev]');
-              const nextBtn = carousel.querySelector('[data-next]');
-              if (slides.length === 0) {
-                carousel.style.display = 'none';
-                return;
-              }
-              if (slides.length === 1) {
-                if (prevBtn) prevBtn.style.display = 'none';
-                if (nextBtn) nextBtn.style.display = 'none';
-              }
-              let index = 0;
-              function render() {
-                      slides.forEach((slide, i) => slide.classList.toggle('active', i === index));
-                      dots.forEach((d, i) => d.classList.toggle('active', i === index));
-              }
-              if (prevBtn) {
-                prevBtn.addEventListener('click', () => {
-                  index = (index - 1 + slides.length) % slides.length;
-                  render();
-                });
-              }
-              if (nextBtn) {
-                nextBtn.addEventListener('click', () => {
-                  index = (index + 1) % slides.length;
-                  render();
-                });
-              }
-              dots.forEach((dot, i) => dot.addEventListener('click', () => {
-                index = i;
-                render();
-              }));
-              render();
-        });
+
+    <script>
+    (function(){
+      document.querySelectorAll('[data-carousel]').forEach(function(carousel){
+        var track = carousel.querySelector('[data-track]');
+        var slides = Array.from(track.children);
+        var dots = Array.from(carousel.querySelectorAll('[data-dot]'));
+        var prevBtn = carousel.querySelector('[data-prev]');
+        var nextBtn = carousel.querySelector('[data-next]');
+        var n = slides.length;
+        if(n === 0){ carousel.style.display='none'; return; }
+        if(n === 1){
+          if(prevBtn) prevBtn.style.display='none';
+          if(nextBtn) nextBtn.style.display='none';
+          dots.forEach(function(d){ d.style.display='none'; });
+          return;
+        }
+        var idx = 0;
+        function go(i){
+          idx = ((i % n) + n) % n;
+          track.style.transform = 'translateX(-' + (idx * 100) + '%)';
+          dots.forEach(function(d,j){ d.classList.toggle('active', j===idx); });
+        }
+        if(prevBtn) prevBtn.addEventListener('click', function(){ go(idx-1); });
+        if(nextBtn) nextBtn.addEventListener('click', function(){ go(idx+1); });
+        dots.forEach(function(d,i){ d.addEventListener('click', function(){ go(i); }); });
+        // Touch swipe
+        var startX = 0;
+        carousel.addEventListener('touchstart', function(e){ startX = e.touches[0].clientX; }, {passive:true});
+        carousel.addEventListener('touchend', function(e){
+          var dx = e.changedTouches[0].clientX - startX;
+          if(Math.abs(dx) > 40) go(idx + (dx < 0 ? 1 : -1));
+        }, {passive:true});
+        go(0);
+      });
     })();
-  </script>
+    </script>
   </body>
 </html>
