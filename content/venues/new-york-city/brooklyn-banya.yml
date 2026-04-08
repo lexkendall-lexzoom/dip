@@ -9,6 +9,7 @@ venue:
   subtitle: Editorial review, practical details, and booking context from Dip.
   hero_image: 'https://images.unsplash.com/photo-1527637040694-60b17b13f9df?w=800&h=560&fit=crop&q=80'
   neighborhood: Sheepshead Bay, Brooklyn
+  address: "602 Coney Island Ave, Brooklyn, NY 11218"
   price: from $60
   score: '7.9'
   date_reviewed: March 2026

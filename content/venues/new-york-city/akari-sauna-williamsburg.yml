@@ -9,6 +9,7 @@ venue:
   subtitle: 'Editorial review, practical details, and booking context from Dip.'
   hero_image: ''
   neighborhood: 'Williamsburg, Brooklyn'
+  address: "202 Grand St, Brooklyn, NY 11211"
   price: 'from $165/mo (membership only, $35 guest pass)'
   score: '8.3'
   date_reviewed: 'March 2026'

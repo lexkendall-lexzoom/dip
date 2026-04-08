@@ -72,6 +72,7 @@ permalink: "/{{ item.citySlug }}/{{ item.venue.slug | default(item.fileSlug) }}/
           .fact b{display:block;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:#666;margin-bottom:4px}
           .fact.wide{grid-column:1 / -1;min-height:60px}
           .cta{display:inline-block;margin-top:14px;padding:10px 14px;background:#111;color:#fff;text-decoration:none;font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:700}
+          .address-link{color:var(--teal);text-decoration:none}.address-link:hover{text-decoration:underline}
           .review-title,.carousel-title{margin:0 0 10px;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:#666}
           .desc{line-height:1.75;margin:0;font-size:16px}
           .carousel-box{margin-top:16px}
@@ -110,9 +111,17 @@ permalink: "/{{ item.citySlug }}/{{ item.venue.slug | default(item.fileSlug) }}/
               <article class="box fieldbox">
                       <h1>{{ v.name }}</h1>
                     {% if v.subtitle %}<p class="sub">{{ v.subtitle }}</p>{% endif %}
+                    {%- if v.address -%}
+                      {%- set _mapsQuery = v.address + ', ' + v.city -%}
+                    {%- else -%}
+                      {%- set _mapsQuery = v.name + ' ' + v.city -%}
+                    {%- endif -%}
+                    {%- set _mapsUrl = 'https://www.google.com/maps/search/?api=1&query=' + (_mapsQuery | urlencode) -%}
                     <div class="facts">
                             {% if v.neighborhood %}<div class="fact"><b>Neighborhood</b>{{ v.neighborhood }}</div>{% endif %}
                             {% if v.price %}<div class="fact"><b>Price</b>{{ v.price }}</div>{% endif %}
+                            {% if v.address %}<div class="fact wide"><b>Address</b><a class="address-link" href="{{ _mapsUrl }}" target="_blank" rel="noopener noreferrer">{{ v.address }}</a></div>
+                            {% else %}<div class="fact wide"><b>Find on Maps</b><a class="address-link" href="{{ _mapsUrl }}" target="_blank" rel="noopener noreferrer">View on Google Maps ↗</a></div>{% endif %}
                             <div class="fact"><b>Score</b>{{ v.score | default("Coming soon") }}</div>
                             {% if v.date_reviewed %}<div class="fact"><b>Date reviewed</b>{{ v.date_reviewed }}</div>{% endif %}
                             {% if v.hours %}<div class="fact wide"><b>Hours</b>{{ v.hours }}</div>{% endif %}
