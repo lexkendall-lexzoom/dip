@@ -84,6 +84,7 @@ permalink: "/{{ item.citySlug }}/{{ item.venue.slug | default(item.fileSlug) }}/
       .fact b{display:block;font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:#888;margin-bottom:4px;font-weight:700}
       .fact span{font-size:13px;line-height:1.4;font-weight:600}
       .fact.wide{grid-column:1 / -1}
+      .address-link{color:var(--teal);text-decoration:none}.address-link:hover{text-decoration:underline}
 
       /* ── Scoring block (right) ── */
       .scoring-block{padding:28px 24px 24px;background:var(--card)}
@@ -192,9 +193,17 @@ permalink: "/{{ item.citySlug }}/{{ item.venue.slug | default(item.fileSlug) }}/
         <section class="venue-identity">
           <h1>{{ v.name }}</h1>
           {%- if v.subtitle -%}<p class="sub">{{ v.subtitle }}</p>{%- endif -%}
+          {%- if v.address -%}
+            {%- set _mapsQuery = v.address + ', ' + v.city -%}
+          {%- else -%}
+            {%- set _mapsQuery = v.name + ' ' + v.city -%}
+          {%- endif -%}
+          {%- set _mapsUrl = 'https://www.google.com/maps/search/?api=1&query=' + (_mapsQuery | urlencode) -%}
           <div class="facts">
             {%- if v.neighborhood -%}<div class="fact"><b>Neighborhood</b><span>{{ v.neighborhood }}</span></div>{%- endif -%}
             {%- if v.price -%}<div class="fact"><b>Price</b><span>{{ v.price }}</span></div>{%- endif -%}
+            {%- if v.address -%}<div class="fact wide"><b>Address</b><span><a class="address-link" href="{{ _mapsUrl }}" target="_blank" rel="noopener noreferrer">{{ v.address }}</a></span></div>
+            {%- else -%}<div class="fact wide"><b>Find on Maps</b><span><a class="address-link" href="{{ _mapsUrl }}" target="_blank" rel="noopener noreferrer">View on Google Maps ↗</a></span></div>{%- endif -%}
             <div class="fact"><b>Dip Review Score</b><span>{{ v.score | default("Coming soon") }}</span></div>
             {%- if v.date_reviewed -%}<div class="fact"><b>Date Reviewed</b><span>{{ v.date_reviewed }}</span></div>{%- endif -%}
             {%- if v.hours -%}<div class="fact wide"><b>Hours</b><span>{{ v.hours }}</span></div>{%- endif -%}
