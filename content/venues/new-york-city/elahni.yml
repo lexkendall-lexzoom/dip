@@ -1,13 +1,13 @@
 seo:
   title: 'Elahni Review: Price, Hours, What to Know | Dip'
   description: 'Dip review of Elahni in NoMad, NYC — guided temperature contrast sessions in a wellness speakeasy format, Finnish sauna to 39°F ice bath, adaptogenic tonic bar.'
-  social_image: ''
+  social_image: 'https://www.elahni.com/elahni-og.png'
 venue:
   name: 'Elahni'
   city: 'New York City'
   slug: 'elahni'
   subtitle: 'Editorial review, practical details, and booking context from Dip.'
-  hero_image: ''
+  hero_image: 'https://www.elahni.com/elahni-og.png'
   neighborhood: 'NoMad, Manhattan'
   price: 'from $65'
   score: '8.6'
@@ -16,4 +16,6 @@ venue:
   best_for: 'guided contrast therapy, nervous system reset, intimate group, non-alcoholic tonic bar'
   website_url: 'https://www.elahni.com'
   review: 'Elahni describes itself as a wellness speakeasy, and the phrase earns its keep. This intimate NoMad studio limits sessions to four guests at a time, guiding each through a Finnish sauna at 180°F followed by an ice bath held at 39°F — the thermal gap structured for nervous system impact, not just heat tolerance. The founders often run sessions themselves. Afterward, an adaptogenic tonic bar offers curated non-alcoholic beverages calibrated to desired states: energized or grounded. At $65 for a 60-minute semi-private session, it is priced accessibly for what amounts to one of the most intentional contrast experiences in the city.'
-  gallery_images: []
+  gallery_images:
+    - 'https://www.elahni.com/elahni-og.png'
+    - 'https://www.elahni.com/heat.webp'

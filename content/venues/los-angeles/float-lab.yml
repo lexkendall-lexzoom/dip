@@ -1,13 +1,13 @@
 seo:
   title: "Float Lab LA Review: Price, Hours, What to Know | Dip"
   description: Dip review of Float Lab in West Los Angeles — one of the original float tank studios in the US, stripped-down and serious about sensory deprivation.
-  social_image: "https://floatlab.com/wp-content/uploads/float-lab-chamber.jpg"
+  social_image: "https://framerusercontent.com/images/Zk4fw73VAxEtQSPvsoOrbH8njko.jpg"
 venue:
   name: Float Lab
   city: Los Angeles
   slug: float-lab
   subtitle: Editorial review, practical details, and booking context from Dip.
-  hero_image: "https://floatlab.com/wp-content/uploads/float-lab-chamber.jpg"
+  hero_image: "https://framerusercontent.com/images/Zk4fw73VAxEtQSPvsoOrbH8njko.jpg"
   neighborhood: West Los Angeles
   price: from $75
   score: "7.5"
@@ -24,4 +24,6 @@ venue:
     float, expect forty-five minutes to stop thinking about floating. Return
     visits are where it pays off.
   gallery_images:
-    - "https://floatlab.com/wp-content/uploads/float-lab-chamber.jpg"
+    - "https://framerusercontent.com/images/Zk4fw73VAxEtQSPvsoOrbH8njko.jpg"
+    - "https://framerusercontent.com/images/3VdO94v8QdZZmu7oy7JUKnuMOs.jpg"
+    - "https://framerusercontent.com/images/I3iBJUTQoYfe9ftytcitQhHRXc.webp"

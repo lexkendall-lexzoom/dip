@@ -1,13 +1,13 @@
 seo:
   title: 'Akari Sauna Williamsburg Review: Price, Hours, What to Know | Dip'
   description: 'Dip review of Akari Sauna Williamsburg — Japanese-inspired membership sauna studio at 202 Grand St with dry sauna, cold plunge, and quiet relaxation areas.'
-  social_image: ''
+  social_image: 'https://cdn.prod.website-files.com/64ee5979ef5937fc52001f92/67f940881987d02b410a7194_AKARI-34_11zon.jpg'
 venue:
   name: 'Akari Sauna Williamsburg'
   city: 'New York City'
   slug: 'akari-sauna-williamsburg'
   subtitle: 'Editorial review, practical details, and booking context from Dip.'
-  hero_image: ''
+  hero_image: 'https://cdn.prod.website-files.com/64ee5979ef5937fc52001f92/67f940881987d02b410a7194_AKARI-34_11zon.jpg'
   neighborhood: 'Williamsburg, Brooklyn'
   price: 'from $165/mo (membership only, $35 guest pass)'
   score: '8.3'
@@ -16,4 +16,7 @@ venue:
   best_for: 'sauna regulars, Japanese aesthetic, quiet contemplation, membership value'
   website_url: 'https://www.akarisauna.com'
   review: 'Akari is doing something deliberately countercultural in the NYC sauna scene: no day passes, no drop-ins, no noise. This Williamsburg outpost (202 Grand Street) and its Greenpoint sibling operate on membership only — monthly plans starting at $165, no long-term commitment — granting access to clean infrared saunas, cold plunge tubs, and quiet relaxation rooms designed around Japanese wabi-sabi principles. The result is a community of regulars who treat it as a daily ritual rather than an occasion. If you can commit, it earns its dues.'
-  gallery_images: []
+  gallery_images:
+    - 'https://cdn.prod.website-files.com/64ee5979ef5937fc52001f92/67f940881987d02b410a7194_AKARI-34_11zon.jpg'
+    - 'https://cdn.prod.website-files.com/64ee5979ef5937fc52001f92/655730cc3a93bb804630ccc2_home3.webp'
+    - 'https://cdn.prod.website-files.com/64ee5979ef5937fc52001f92/68364d8910eaeb6443c21c19_AKARI-kodak_800_c_41_10774_90560_200569_000249510032-min.jpg'

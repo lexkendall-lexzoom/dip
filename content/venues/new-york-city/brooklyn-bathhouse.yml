@@ -1,13 +1,13 @@
 seo:
   title: 'The Brooklyn Bathhouse Review: Price, Hours, What to Know | Dip'
   description: 'Dip review of The Brooklyn Bathhouse in Prospect-Lefferts Gardens — opened January 2025 with dry sauna, steam, two heated pools, cold plunge, and on-site pizzeria.'
-  social_image: ''
+  social_image: 'https://static.wixstatic.com/media/f8909d_87631c5bd099405c9d5c399209b9fd01~mv2.png'
 venue:
   name: 'The Brooklyn Bathhouse'
   city: 'New York City'
   slug: 'brooklyn-bathhouse'
   subtitle: 'Editorial review, practical details, and booking context from Dip.'
-  hero_image: ''
+  hero_image: 'https://static.wixstatic.com/media/f8909d_87631c5bd099405c9d5c399209b9fd01~mv2.png'
   neighborhood: 'Prospect-Lefferts Gardens, Brooklyn'
   price: 'from $40'
   score: '8.1'
@@ -16,4 +16,7 @@ venue:
   best_for: 'neighborhood wellness, accessible pricing, full thermal circuit, post-work unwinding'
   website_url: 'https://www.brooklynbathhouse.nyc'
   review: 'Opened in January 2025 at 731 Flatbush Avenue, The Brooklyn Bathhouse brings a proper thermal circuit to Prospect-Lefferts Gardens — a neighborhood that has needed one. The lineup is comprehensive: Finnish dry sauna, wet sauna, steam room, two heated pools at different temperatures, and a cold plunge, all priced with unusual accessibility for New York. Day passes run four hours with tiered pricing that rewards early birds and off-peak visitors. Zurilee Pizzeria on-site means you can make an evening of it.'
-  gallery_images: []
+  gallery_images:
+    - 'https://static.wixstatic.com/media/f8909d_87631c5bd099405c9d5c399209b9fd01~mv2.png'
+    - 'https://static.wixstatic.com/media/6df4f6_7b13a78574104be38d2ae23b827b58b9~mv2.jpg'
+    - 'https://static.wixstatic.com/media/6df4f6_19e19bf1e3cd49aa81da9c80f2b66b0e~mv2.jpg'
