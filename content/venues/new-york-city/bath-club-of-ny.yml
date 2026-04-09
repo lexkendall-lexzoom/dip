@@ -1,14 +1,14 @@
 seo:
   title: 'Bath Club of NY Review: Price, Hours, What to Know | Dip'
   description: Dip review of Bath Club of NY with pricing, hours, neighborhood notes, and who it is best for.
-  social_image: '/images/uploads/bath-club-ny-hero.jpg'
+  social_image: '/images/uploads/bath-club-ny-hero.png'
 venue:
   name: Bath Club of NY
   city: New York City
   slug: bath-club-of-ny
   id: bath-club-of-ny
   subtitle: Editorial review, practical details, and booking context from Dip.
-  hero_image: '/images/uploads/bath-club-ny-hero.jpg'
+  hero_image: '/images/uploads/bath-club-ny-hero.png'
   neighborhood: New York City
   address: TBD
   price: See website
@@ -20,11 +20,11 @@ venue:
   website_url: pending
   review: Traditional bathhouse with authentic sauna facilities and pool amenities. Community-focused thermal experience.
   gallery_images:
-    - '/images/uploads/bath-club-ny-hero.jpg'
-    - '/images/uploads/bath-club-ny-sauna-interior-1.jpg'
-    - '/images/uploads/bath-club-ny-sauna-interior-2.jpg'
-    - '/images/uploads/bath-club-ny-sauna-interior-3.jpg'
-    - '/images/uploads/bath-club-ny-sauna-interior-4.jpg'
+    - '/images/uploads/bath-club-ny-hero.png'
+    - '/images/uploads/bath-club-ny-sauna-interior-1.png'
+    - '/images/uploads/bath-club-ny-sauna-interior-2.png'
+    - '/images/uploads/bath-club-ny-sauna-interior-3.png'
+    - '/images/uploads/bath-club-ny-sauna-interior-4.png'
   one_line_verdict: Traditional bathhouse experience with pool and authentic sauna facilities.
   editorial_overview: |
     Bath Club of NY offers a traditional bathhouse experience combining a full-service pool facility with authentic sauna and steam rooms. The venue maintains traditional construction with natural wood and stone throughout.
