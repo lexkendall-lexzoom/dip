@@ -2,3 +2,6 @@ _site/
 node_modules/
 .env
 .env.local
+
+# Claude Code worktrees
+.claude/worktrees/
