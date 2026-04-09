@@ -3,16 +3,14 @@ seo:
   description: >-
     Dip review of Esalen Institute in Big Sur — cliffside natural hot spring baths open to the public 1–3am, one of the
     most singular bathing experiences in North America.
-  social_image: >-
-    https://cdn.prod.website-files.com/602d8561ae2fe6ec8347c903/694821f6e4ea152155821bfb_6941d327802703cecfad78e5_2026-Esalen_Cliffside_Emily-Miller-1500x775.jpeg
+  social_image: 'https://cdn.prod.website-files.com/602d8561ae2fe611c947c905/6674cad71a42bd68fc875e17_Hero-Homepage-AliKaukas_DSC_4155-2000x1440.jpg'
 venue:
   name: Esalen Institute
   city: Los Angeles
   slug: esalen-institute
   id: esalen-institute
   subtitle: Editorial review, practical details, and booking context from Dip.
-  hero_image: >-
-    https://cdn.prod.website-files.com/602d8561ae2fe6ec8347c903/694821f6e4ea152155821bfb_6941d327802703cecfad78e5_2026-Esalen_Cliffside_Emily-Miller-1500x775.jpeg
+  hero_image: 'https://cdn.prod.website-files.com/602d8561ae2fe611c947c905/6674cad71a42bd68fc875e17_Hero-Homepage-AliKaukas_DSC_4155-2000x1440.jpg'
   neighborhood: Big Sur, California
   address: "55000 CA-1, Big Sur, CA 93920"
   price: from $30
@@ -28,8 +26,8 @@ venue:
     themselves are modest — stone tubs, running mineral water, no amenities — but the location and the hour make them
     one of the most irreplaceable bathing experiences on the continent. Book weeks ahead. It fills completely.
   gallery_images:
-    - 'https://cdn.prod.website-files.com/602d8561ae2fe6ec8347c903/694821f6e4ea152155821bfb_6941d327802703cecfad78e5_2026-Esalen_Cliffside_Emily-Miller-1500x775.jpeg'
-    - 'https://cdn.prod.website-files.com/602d8561ae2fe6ec8347c903/694b5f92365d31b75684c9dc_694072e84028cc62b428e514_2024-Esalen_Massage-Hands_Kodiak-Greenwood-1500x775.jpeg'
-    - 'https://cdn.prod.website-files.com/602d8561ae2fe6ec8347c903/baths-flowers-water-stephanie-lewis.jpeg'
+    - 'https://cdn.prod.website-files.com/602d8561ae2fe611c947c905/6674cad71a42bd68fc875e17_Hero-Homepage-AliKaukas_DSC_4155-2000x1440.jpg'
+    - 'https://cdn.prod.website-files.com/602d8561ae2fe611c947c905/668442fcd8947935fd275dff_Hero-Homepage-Scholarship-Kodiak-Greenwood_MG_6138.jpg'
+    - 'https://cdn.prod.website-files.com/602d8561ae2fe6ec8347c903/6966d81339058366e7d796d8_6966b6ff0914c0ced57ba26e_2025-Esalen_water-forest-creek_Tim-Farrell-DSC_0180-1500x775.jpeg'
   community_score: '4.8'
   dip_index: '9.5'

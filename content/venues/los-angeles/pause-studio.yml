@@ -1,14 +1,14 @@
 seo:
   title: "Pause Studio LA Review: Price, Hours, What to Know | Dip"
   description: Dip review of Pause Studio in Los Angeles — float tanks, infrared sauna, and a wellness studio built around the idea that stillness is the practice.
-  social_image: "https://images.ctfassets.net/xlosfajxk15z/5C52RQjD883N284DYqt6DS/studio-hallway.png"
+  social_image: "https://images.ctfassets.net/xlosfajxk15z/otXiu0M6Y3JVbKOhhan2P/ae9fc125de5dae9b7553b204b6b1f455/hollywood_logo.png"
 venue:
   name: Pause Studio
   city: Los Angeles
   slug: pause-studio
   id: pause-studio
   subtitle: Editorial review, practical details, and booking context from Dip.
-  hero_image: "https://images.ctfassets.net/xlosfajxk15z/5C52RQjD883N284DYqt6DS/studio-hallway.png"
+  hero_image: "https://images.ctfassets.net/xlosfajxk15z/otXiu0M6Y3JVbKOhhan2P/ae9fc125de5dae9b7553b204b6b1f455/hollywood_logo.png"
   neighborhood: Los Angeles
   address: "937 N Sycamore Ave, Los Angeles, CA 90038"
   price: from $60
@@ -26,6 +26,6 @@ venue:
     social programming and guided experiences, Pause makes a sensible
     counterpoint — just you, a tank, and silence.
   gallery_images:
-    - "https://images.ctfassets.net/xlosfajxk15z/5C52RQjD883N284DYqt6DS/studio-hallway.png"
-    - "https://images.ctfassets.net/xlosfajxk15z/float-tank-interior/float.png"
-    - "https://images.ctfassets.net/xlosfajxk15z/contrast-therapy-setup/contrast-therapy.png"
+    - "https://images.ctfassets.net/xlosfajxk15z/otXiu0M6Y3JVbKOhhan2P/ae9fc125de5dae9b7553b204b6b1f455/hollywood_logo.png"
+    - "https://images.ctfassets.net/xlosfajxk15z/5c81390YpRn7rKSuWAO0Ks/1f1fecf6e3c1e7122d63fc92c362184d/wwd_logo.png"
+    - "https://images.ctfassets.net/xlosfajxk15z/5ToKF3iur9NMGc4NdgjyB2/534aa07e0b6535e927d90f90f71a6ff7/people_logo.png"
