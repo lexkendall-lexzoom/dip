@@ -1,0 +1,46 @@
+seo:
+  title: 'Bath Club of NY Review: Price, Hours, What to Know | Dip'
+  description: Dip review of Bath Club of NY with pricing, hours, neighborhood notes, and who it is best for.
+  social_image: '/images/uploads/bath-club-ny-hero.jpg'
+venue:
+  name: Bath Club of NY
+  city: New York City
+  slug: bath-club-of-ny
+  id: bath-club-of-ny
+  subtitle: Editorial review, practical details, and booking context from Dip.
+  hero_image: '/images/uploads/bath-club-ny-hero.jpg'
+  neighborhood: New York City
+  address: TBD
+  price: See website
+  score: 'pending'
+  community_score: pending
+  date_reviewed: April 2026
+  hours: See website for current hours
+  best_for: Traditional banya experience, pool swimming, community bathing, thermal circuit seekers
+  website_url: pending
+  review: Traditional bathhouse with authentic sauna facilities and pool amenities. Community-focused thermal experience.
+  gallery_images:
+    - '/images/uploads/bath-club-ny-hero.jpg'
+    - '/images/uploads/bath-club-ny-sauna-interior-1.jpg'
+    - '/images/uploads/bath-club-ny-sauna-interior-2.jpg'
+    - '/images/uploads/bath-club-ny-sauna-interior-3.jpg'
+    - '/images/uploads/bath-club-ny-sauna-interior-4.jpg'
+  one_line_verdict: Traditional bathhouse experience with pool and authentic sauna facilities.
+  editorial_overview: |
+    Bath Club of NY offers a traditional bathhouse experience combining a full-service pool facility with authentic sauna and steam rooms. The venue maintains traditional construction with natural wood and stone throughout.
+  vibe: Traditional bathhouse atmosphere with authentic thermal facilities
+  facility_breakdown: Indoor pool, multiple sauna rooms (wood and stone construction), traditional banya setup
+  pros:
+    - Full pool facility
+    - Multiple authentic sauna rooms
+    - Traditional construction
+  cons:
+    - Limited information available online
+  not_ideal_for: Modern spa seekers, those expecting contemporary amenities
+  scene_summary: Authentic traditional bathhouse with pool and sauna facilities
+  popularity_trend: steady
+  booking_difficulty: pending
+  social_energy_level: 5
+  laptop_free_vibe: true
+  influencer_density: low
+  repeat_vs_tourist_mix: Primarily repeat visitors
