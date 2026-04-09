@@ -1,36 +1,33 @@
 seo:
   title: 'Chuan Spa at The Langham Chicago Review: Price, Hours, What to Know | Dip'
-  description: >-
-    Dip review of Chuan Spa at The Langham Chicago — TCM-rooted treatments, indoor vitality pool, and a genuinely quiet
-    spa worth seeking out.
-  social_image: https://www.langhamhotels.com/content/dam/langhamhotels/dynamicmedia/global/wellness/chuan-spa/lhr-chuan-metal.jpeg
+  description: Dip review of Chuan Spa at The Langham Chicago — TCM-rooted treatments,
+    indoor vitality pool, and a genuinely quiet spa worth seeking out.
+  social_image: /images/uploads/chuan-spa-at-the-langham-hero.png
 venue:
   name: Chuan Spa at The Langham
   city: Chicago
   slug: chuan-spa-at-the-langham
   id: chuan-spa-at-the-langham
   subtitle: Editorial review, practical details, and booking context from Dip.
-  hero_image: https://www.langhamhotels.com/content/dam/langhamhotels/dynamicmedia/global/wellness/chuan-spa/lhr-chuan-metal.jpeg
+  hero_image: /images/uploads/chuan-spa-at-the-langham-hero.png
   neighborhood: Streeterville, Chicago
-  address: "330 N Wabash Ave, Chicago, IL 60611"
+  address: 330 N Wabash Ave, Chicago, IL 60611
   price: from $150
   score: '7.8'
   date_reviewed: March 2026
   hours: Daily 9am–9pm · Reservation required
-  best_for: Hotel guests, TCM-curious visitors, couples wanting a quiet full-service spa day.
+  best_for: Hotel guests, TCM-curious visitors, couples wanting a quiet full-service
+    spa day.
   website_url: https://www.langhamhotels.com/en/the-langham/chicago/wellness/chuan-spa/
-  review: >-
-    Chuan operates on five-element Traditional Chinese Medicine theory — Wood, Fire, Earth, Metal, Water — which sounds
-    like marketing until a practitioner actually uses it to shape your treatment. The Langham Chicago's spa is one of
-    the few hotel wellness offerings in the city that earns its price on merit. The indoor pool and vitality pool anchor
-    the experience; the treatment rooms are quiet and unhurried. Not a destination for contrast therapy purists, but for
-    anyone who wants skilled bodywork inside a genuinely calm environment, Chuan delivers. Book the Chuan Signature
+  review: Chuan operates on five-element Traditional Chinese Medicine theory — Wood,
+    Fire, Earth, Metal, Water — which sounds like marketing until a practitioner actually
+    uses it to shape your treatment. The Langham Chicago's spa is one of the few hotel
+    wellness offerings in the city that earns its price on merit. The indoor pool
+    and vitality pool anchor the experience; the treatment rooms are quiet and unhurried.
+    Not a destination for contrast therapy purists, but for anyone who wants skilled
+    bodywork inside a genuinely calm environment, Chuan delivers. Book the Chuan Signature
     Massage and block out the afternoon.
   gallery_images:
-    - >-
-      https://www.langhamhotels.com/content/dam/langhamhotels/dynamicmedia/global/wellness/chuan-spa/lhr-chuan-metal.jpeg
-    - https://www.langhamhotels.com/content/dam/langhamhotels/dynamicmedia/global/wellness/chuan-spa/lhr-chuan-wood.jpeg
-    - >-
-      https://www.langhamhotels.com/content/dam/langhamhotels/dynamicmedia/global/wellness/chuan-spa/lhr-chuan-water.jpeg
+  - /images/uploads/chuan-spa-at-the-langham-hero.png
   community_score: '4.5'
   dip_index: '8.3'

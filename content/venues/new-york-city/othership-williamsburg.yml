@@ -1,18 +1,17 @@
 seo:
   title: 'Othership Williamsburg Review: Price, Hours, What to Know | Dip'
-  description: Dip review of Othership Williamsburg in New York City with pricing, hours, and what to expect before booking.
-  social_image: >-
-    https://cdn.prod.website-files.com/67c208983c2848098aa364f1/68c86729b6fd32caa237791c_othership-williamsburg-brooklyn-sauna-interior.avif
+  description: Dip review of Othership Williamsburg in New York City with pricing,
+    hours, and what to expect before booking.
+  social_image: /images/uploads/othership-williamsburg-hero.jpg
 venue:
   name: Othership Williamsburg
   city: New York City
   slug: othership-williamsburg
   id: othership-williamsburg
   subtitle: Editorial review, practical details, and booking context from Dip.
-  hero_image: >-
-    https://cdn.prod.website-files.com/67c208983c2848098aa364f1/68c86729b6fd32caa237791c_othership-williamsburg-brooklyn-sauna-interior.avif
+  hero_image: /images/uploads/othership-williamsburg-hero.jpg
   neighborhood: Williamsburg, Brooklyn
-  address: "25 Kent Ave, Brooklyn, NY 11249"
+  address: 25 Kent Ave, Brooklyn, NY 11249
   price: from $33
   score: '8.1'
   community_score: '4.8'
@@ -20,46 +19,86 @@ venue:
   hours: Daily · Session-based booking
   best_for: Contrast therapy routines, recovery sessions, and reset days.
   website_url: https://www.othership.us/williamsburg
-  review: >-
-    The Brooklyn outpost of Othership lands right by Domino Park — cedar sauna, ice baths kept at 0–4°C, guided
-    breathwork sessions, and the same community-first ethos that made the brand. If you're in Brooklyn, this one's the
-    move.
+  review: The Brooklyn outpost of Othership lands right by Domino Park — cedar sauna,
+    ice baths kept at 0–4°C, guided breathwork sessions, and the same community-first
+    ethos that made the brand. If you're in Brooklyn, this one's the move.
   gallery_images:
-    - https://cdn.prod.website-files.com/67c208983c2848098aa364f1/68c86729b6fd32caa237791c_othership-williamsburg-brooklyn-sauna-interior.avif
-    - https://cdn.prod.website-files.com/67c208983c2848098aa364f1/68c86729b6fd32caa237791c_othership-williamsburg-brooklyn-sauna-interior-p-2000.avif
-    - https://cdn.prod.website-files.com/67c208983c2848098aa364f1/683e3fec9b02873351d4e675_othership-relaxing-sauna-group-session.webp
-  one_line_verdict: Guided contrast therapy with genuine community energy — the most accessible entry point into serious cold-hot work in Brooklyn.
-  editorial_overview: |
-    Othership Williamsburg sits near Domino Park and operates on the session-based guided model that Othership perfected in Toronto before expanding to New York. The format is deliberate: cedar sauna pushing 185°F, ice baths held at 0–4°C, and facilitated breathwork sessions that bridge the gap between the two extremes. Every session has a guide. The breathwork isn't decorative — it's functional pacing that helps people actually tolerate the contrast rather than just endure it.
+  - /images/uploads/othership-williamsburg-hero.jpg
+  one_line_verdict: Guided contrast therapy with genuine community energy — the most
+    accessible entry point into serious cold-hot work in Brooklyn.
+  editorial_overview: 'Othership Williamsburg sits near Domino Park and operates on
+    the session-based guided model that Othership perfected in Toronto before expanding
+    to New York. The format is deliberate: cedar sauna pushing 185°F, ice baths held
+    at 0–4°C, and facilitated breathwork sessions that bridge the gap between the
+    two extremes. Every session has a guide. The breathwork isn''t decorative — it''s
+    functional pacing that helps people actually tolerate the contrast rather than
+    just endure it.
 
-    What Othership figured out is that most people want to do contrast therapy but don't know how to do it effectively alone. The guided format solves for that. A facilitator manages timing, leads breath cues before cold exposure, and creates enough group cohesion that strangers feel comfortable sharing a significant physical experience. The result is a space with real community texture, not just a facility.
 
-    The Brooklyn outpost draws a younger, more fitness-adjacent crowd than the Flatiron location. Proximity to Domino Park and the Williamsburg waterfront means the pre-session and post-session energy is naturally social. This is the kind of place where people exchange numbers by the ice bath — and mean it.
-  vibe: Young, active, and community-oriented. Fitness-adjacent Williamsburg crowd aged 25–38. Pre-workout energy in the mornings, post-work decompression in the evenings. The guided format creates natural social moments that don't require effort.
-  facility_breakdown: Cedar sauna heated to 185°F+, ice baths maintained at 0–4°C (genuinely cold — Othership doesn't compromise on this), and breathwork facilitation space. Smaller footprint than a full bathhouse but purposefully sized for the session format. Showers, basic amenities. The facility is clean and thoughtfully maintained.
+    What Othership figured out is that most people want to do contrast therapy but
+    don''t know how to do it effectively alone. The guided format solves for that.
+    A facilitator manages timing, leads breath cues before cold exposure, and creates
+    enough group cohesion that strangers feel comfortable sharing a significant physical
+    experience. The result is a space with real community texture, not just a facility.
+
+
+    The Brooklyn outpost draws a younger, more fitness-adjacent crowd than the Flatiron
+    location. Proximity to Domino Park and the Williamsburg waterfront means the pre-session
+    and post-session energy is naturally social. This is the kind of place where people
+    exchange numbers by the ice bath — and mean it.
+
+    '
+  vibe: Young, active, and community-oriented. Fitness-adjacent Williamsburg crowd
+    aged 25–38. Pre-workout energy in the mornings, post-work decompression in the
+    evenings. The guided format creates natural social moments that don't require
+    effort.
+  facility_breakdown: Cedar sauna heated to 185°F+, ice baths maintained at 0–4°C
+    (genuinely cold — Othership doesn't compromise on this), and breathwork facilitation
+    space. Smaller footprint than a full bathhouse but purposefully sized for the
+    session format. Showers, basic amenities. The facility is clean and thoughtfully
+    maintained.
   pros:
-    - Ice baths are legitimately cold — 0–4°C is the real thing
-    - Guided sessions make contrast therapy accessible for beginners without dumbing it down for regulars
-    - Community energy is genuine — repeat visitors build real relationships
-    - Price point ($33) makes regular practice financially viable
-    - Brooklyn location is convenient for the neighborhood without requiring destination-level commitment
+  - Ice baths are legitimately cold — 0–4°C is the real thing
+  - Guided sessions make contrast therapy accessible for beginners without dumbing
+    it down for regulars
+  - Community energy is genuine — repeat visitors build real relationships
+  - Price point ($33) makes regular practice financially viable
+  - Brooklyn location is convenient for the neighborhood without requiring destination-level
+    commitment
   cons:
-    - Session-based format means you can't self-direct — you're on the guide's schedule
-    - No thermal pools or multi-room circuit — it's sauna + cold, not a full bathhouse
-    - Popular sessions book out quickly, especially weekend mornings
-    - Smaller capacity means late booking leaves you in suboptimal time slots
-  not_ideal_for: People who want a self-directed thermal circuit, anyone seeking a luxurious spa experience, regulars who've outgrown guided formats.
-  pro_move: Book the early morning session (7am or 8am) for the best combination of sparse crowd and maximum alertness benefit. The contrast work at that hour is physiologically and psychologically distinct from an evening session.
-  value_read: At $33 per session, it's among the best-priced contrast therapy experiences in the city. A monthly membership paying for 8+ sessions brings the per-session cost below any comparable alternative.
-  scene_summary: Othership Williamsburg is building a loyal repeat community around guided contrast work — a format that threads the needle between fitness culture and wellness culture without fully belonging to either. The brand's community ethos is genuine, not marketing language, which is what keeps people returning rather than moving on to the next thing.
-  crowd_profile: 24–38, creative and fitness-adjacent, Williamsburg and Greenpoint local base. Mix of solo visitors using it as a recovery protocol and friend groups who treat sessions as a shared activity. Behavior is engaged and present — the guided format keeps people in the experience rather than on their phones.
-  time_of_day_dynamics: Morning sessions have the most motivated crowd and best energy for the contrast work itself. Evening sessions draw the post-work decompression crowd and have a warmer social energy. Weekend sessions are the most booked and most energetic. Late-night slots (if available) have a niche following.
+  - Session-based format means you can't self-direct — you're on the guide's schedule
+  - No thermal pools or multi-room circuit — it's sauna + cold, not a full bathhouse
+  - Popular sessions book out quickly, especially weekend mornings
+  - Smaller capacity means late booking leaves you in suboptimal time slots
+  not_ideal_for: People who want a self-directed thermal circuit, anyone seeking a
+    luxurious spa experience, regulars who've outgrown guided formats.
+  pro_move: Book the early morning session (7am or 8am) for the best combination of
+    sparse crowd and maximum alertness benefit. The contrast work at that hour is
+    physiologically and psychologically distinct from an evening session.
+  value_read: At $33 per session, it's among the best-priced contrast therapy experiences
+    in the city. A monthly membership paying for 8+ sessions brings the per-session
+    cost below any comparable alternative.
+  scene_summary: Othership Williamsburg is building a loyal repeat community around
+    guided contrast work — a format that threads the needle between fitness culture
+    and wellness culture without fully belonging to either. The brand's community
+    ethos is genuine, not marketing language, which is what keeps people returning
+    rather than moving on to the next thing.
+  crowd_profile: 24–38, creative and fitness-adjacent, Williamsburg and Greenpoint
+    local base. Mix of solo visitors using it as a recovery protocol and friend groups
+    who treat sessions as a shared activity. Behavior is engaged and present — the
+    guided format keeps people in the experience rather than on their phones.
+  time_of_day_dynamics: Morning sessions have the most motivated crowd and best energy
+    for the contrast work itself. Evening sessions draw the post-work decompression
+    crowd and have a warmer social energy. Weekend sessions are the most booked and
+    most energetic. Late-night slots (if available) have a niche following.
   popularity_trend: rising
-  booking_difficulty: Moderate — popular sessions (weekend mornings, weekday evenings) book 5–7 days out. Off-peak slots available 2–3 days ahead.
+  booking_difficulty: Moderate — popular sessions (weekend mornings, weekday evenings)
+    book 5–7 days out. Off-peak slots available 2–3 days ahead.
   social_energy_level: 8
   laptop_free_vibe: true
   influencer_density: medium
-  repeat_vs_tourist_mix: Heavily repeat — the community-first model creates strong retention. First-timers are consistently present but the regulars set the culture.
+  repeat_vs_tourist_mix: Heavily repeat — the community-first model creates strong
+    retention. First-timers are consistently present but the regulars set the culture.
   dip_scores:
     facilities_ritual: 7.5
     design_atmosphere: 7.5
@@ -67,11 +106,14 @@ venue:
     recovery_value: 8.5
     service_flow: 8.5
     overall_dip_score: 8.1
-  audience_sentiment_snapshot: >-
-    Strong reviews across all platforms with specific praise for the guided format and community atmosphere. Common theme: people came skeptical of the facilitated approach and left converted. Repeat-visitor mentions are unusually high for a wellness venue. Criticism focuses on booking difficulty for popular sessions and limited availability.
+  audience_sentiment_snapshot: 'Strong reviews across all platforms with specific
+    praise for the guided format and community atmosphere. Common theme: people came
+    skeptical of the facilitated approach and left converted. Repeat-visitor mentions
+    are unusually high for a wellness venue. Criticism focuses on booking difficulty
+    for popular sessions and limited availability.'
   editorial_last_updated: '2026-04-05'
   source_urls:
-    - https://www.othership.us/williamsburg
-    - https://www.yelp.com/biz/othership-williamsburg
-    - https://www.google.com/maps/place/Othership+Williamsburg
+  - https://www.othership.us/williamsburg
+  - https://www.yelp.com/biz/othership-williamsburg
+  - https://www.google.com/maps/place/Othership+Williamsburg
   confidence_level: high
