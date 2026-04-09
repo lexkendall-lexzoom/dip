@@ -1,14 +1,14 @@
 seo:
   title: "Body by Brooklyn Review: Price, Hours, What to Know | Dip"
   description: Dip review of Body by Brooklyn in Clinton Hill — 10,000 sq ft bathhouse with Russian sauna, arctic cold plunge, steam room, hot tub, and VIP suites.
-  social_image: "https://bodybybrooklyn.com/wp-content/uploads/2020/06/slider-image-2.jpg"
+  social_image: "https://bodybybrooklyn.com/wp-content/uploads/2025/01/DSC_46.jpg"
 venue:
   name: Body by Brooklyn
   city: New York City
   slug: body-by-brooklyn
   id: body-by-brooklyn
   subtitle: Editorial review, practical details, and booking context from Dip.
-  hero_image: "https://bodybybrooklyn.com/wp-content/uploads/2020/06/slider-image-2.jpg"
+  hero_image: "https://bodybybrooklyn.com/wp-content/uploads/2025/01/DSC_46.jpg"
   neighborhood: Clinton Hill, Brooklyn
   address: "275 Park Ave, Brooklyn, NY 11205"
   price: from $65
@@ -26,8 +26,9 @@ venue:
     The treatment menu is expansive: facials, deep tissue, platza, body wraps. It skews more spa than banya but covers
     both worlds.
   gallery_images:
-    - "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&h=450&fit=crop&q=80"
-    - "https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=800&h=450&fit=crop&q=80"
+    - "https://bodybybrooklyn.com/wp-content/uploads/2025/01/DSC_46.jpg"
+    - "https://bodybybrooklyn.com/wp-content/uploads/2025/01/DSC_220.jpg"
+    - "https://bodybybrooklyn.com/wp-content/uploads/2025/01/WetLounge.jpg"
   one_line_verdict: Clinton Hill's full-service neighborhood spa-bathhouse hybrid — covers the couple's spa day and the serious banya visit without fully excelling at either.
   editorial_overview: |
     Body by Brooklyn has carved out a specific market position in Clinton Hill: the neighborhood spa that has actual bathhouse credentials. The Russian sauna runs 175–190°F, which is legitimately hot. The arctic cold plunge is legitimately cold. The eucalyptus steam room, thermal hot tub, and Swedish sauna form a complete contrast circuit. And then it also has VIP suites with private jacuzzis and champagne, a full treatment menu, and a cocktail bar.

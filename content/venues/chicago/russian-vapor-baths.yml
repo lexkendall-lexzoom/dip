@@ -3,14 +3,14 @@ seo:
   description: >-
     Dip review of Russian Vapor Baths in Chicago's Ukrainian Village — one of the last traditional Russian-Turkish baths
     in the Midwest, platza and all.
-  social_image: https://media.timeout.com/images/105895205/750/422/image.jpg
+  social_image: ''
 venue:
   name: Russian Vapor Baths
   city: Chicago
   slug: russian-vapor-baths
   id: russian-vapor-baths
   subtitle: Editorial review, practical details, and booking context from Dip.
-  hero_image: https://media.timeout.com/images/105895205/750/422/image.jpg
+  hero_image: ''
   neighborhood: Ukrainian Village, Chicago
   address: "1914 W Division St, Chicago, IL 60622"
   price: from $45
@@ -25,8 +25,6 @@ venue:
     by someone who learned the technique from someone who learned it in Russia. The clientele skews older, the
     atmosphere is unpretentious, and nobody is performing wellness. At $45 for a full session it is the best thermal
     value in the city. Call ahead — hours are informal and it is cash only.
-  gallery_images:
-    - https://media.timeout.com/images/105895205/750/422/image.jpg
-    - https://media.timeout.com/images/105895205/750/422/image.jpg
+  gallery_images: []
   community_score: '4.6'
   dip_index: '9.0'

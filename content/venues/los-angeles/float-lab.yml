@@ -3,14 +3,14 @@ seo:
   description: >-
     Dip review of Float Lab in West Los Angeles — one of the original float tank studios in the US, stripped-down and
     serious about sensory deprivation.
-  social_image: https://floatlab.com/wp-content/uploads/float-lab-chamber.jpg
+  social_image: 'https://cdn.prod.website-files.com/67c208983c2848098aa364f1/Zk4fw73V-float-chamber.webp'
 venue:
   name: Float Lab
   city: Los Angeles
   slug: float-lab
   id: float-lab
   subtitle: Editorial review, practical details, and booking context from Dip.
-  hero_image: https://floatlab.com/wp-content/uploads/float-lab-chamber.jpg
+  hero_image: 'https://cdn.prod.website-files.com/67c208983c2848098aa364f1/Zk4fw73V-float-chamber.webp'
   neighborhood: West Los Angeles
   address: "1025 Westwood Blvd, Suite B, Los Angeles, CA 90024"
   price: from $75
@@ -25,6 +25,8 @@ venue:
     are matter-of-fact in the way that signals expertise. West LA has newer, shinier options. Float Lab has the track
     record. First float, expect forty-five minutes to stop thinking about floating. Return visits are where it pays off.
   gallery_images:
-    - https://floatlab.com/wp-content/uploads/float-lab-chamber.jpg
+    - 'https://cdn.prod.website-files.com/67c208983c2848098aa364f1/Zk4fw73V-float-chamber.webp'
+    - 'https://cdn.prod.website-files.com/67c208983c2848098aa364f1/floatlab-interior-1.webp'
+    - 'https://cdn.prod.website-files.com/67c208983c2848098aa364f1/floatlab-interior-2.webp'
   community_score: '4.4'
   dip_index: '8.0'

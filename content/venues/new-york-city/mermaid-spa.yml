@@ -4,8 +4,9 @@ seo:
   social_image: "https://mermaidspa.us/wp-content/uploads/2022/12/photo_2022-12-10_21-10-39.jpg"
 venue:
   gallery_images:
-    - https://images.unsplash.com/photo-1618377370499-a36a9d51c7c5?w=800&h=450&fit=crop&q=80
-    - https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&h=450&fit=crop&q=80
+    - "https://mermaidspa.us/wp-content/uploads/2021/06/Russian-Banya.jpg"
+    - "https://mermaidspa.us/wp-content/uploads/2021/06/Steam-room.jpg"
+    - "https://mermaidspa.us/wp-content/uploads/2021/06/Ice-Cave.jpg"
   date_reviewed: March 2026
   price: from $45
   city: New York City

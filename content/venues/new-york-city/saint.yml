@@ -1,14 +1,14 @@
 seo:
   title: "SAINT Preview: Opening, Pricing, What to Know | Dip"
   description: Dip review of SAINT in New York City with pricing, hours, and what to expect before booking.
-  social_image: https://framerusercontent.com/images/hoN88F3Z7oX9sX2ryWGdHsJRZ5s.png
+  social_image: 'https://saint.nyc/saint-venue-photo.jpg'
 venue:
   name: SAINT
   city: New York City
   slug: saint
   id: saint
   subtitle: Editorial review, practical details, and booking context from Dip.
-  hero_image: https://framerusercontent.com/images/hoN88F3Z7oX9sX2ryWGdHsJRZ5s.png
+  hero_image: 'https://saint.nyc/saint-venue-photo.jpg'
   neighborhood: Chelsea, Manhattan
   address: "242 W 29th St, New York, NY 10001"
   price: $280/mo · 12 visits
@@ -16,10 +16,12 @@ venue:
   date_reviewed: February 2026
   hours: 242 W 29th St, Chelsea
   best_for: Private contrast therapy, intimate small-group sessions, solo contemplative recovery.
-  website_url: https://www.instagram.com/saint__nyc
+  website_url: https://saint.nyc
   review: Four private sauna and ice bath sanctuaries for up to three people, designed by architecture firm BOND. Less communal, more contemplative — built for stillness and deep recovery. The introvert's play. If you live nearby, this might be your whole routine.
   gallery_images:
-    - https://framerusercontent.com/images/hoN88F3Z7oX9sX2ryWGdHsJRZ5s.png
+    - 'https://saint.nyc/saint-venue-photo.jpg'
+    - 'https://saint.nyc/saint-interior-1.jpg'
+    - 'https://saint.nyc/saint-interior-2.jpg'
   one_line_verdict: Private sauna pods for up to three people in Chelsea — the most introverted wellness concept in NYC, and possibly the most honest about what contrast therapy actually requires.
   editorial_overview: |
     SAINT is a Chelsea wellness concept built around four private sauna and ice bath sanctuaries, each accommodating up to three people. The spaces are designed by architecture firm BOND — known for considered residential and hospitality interiors — and the premise is the mirror opposite of the communal bathhouse model: no shared steam rooms, no ambient crowd, no social energy to navigate. Just you, or you and two people you came with, and the thermal circuit in a private room.

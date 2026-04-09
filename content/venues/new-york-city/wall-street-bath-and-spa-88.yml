@@ -1,14 +1,14 @@
 seo:
   title: 'Wall Street Bath & Spa 88 Review: Price, Hours, What to Know | Dip'
   description: Dip review of Wall Street Bath & Spa 88 in the Financial District with pricing, hours, neighborhood notes, and who it is best for.
-  social_image: ''
+  social_image: 'https://cdn.tildacdn.com/tild3861-3836-4435-b162-claudiotesta218497.jpg'
 venue:
   name: Wall Street Bath & Spa 88
   city: New York City
   slug: wall-street-bath-and-spa-88
   id: wall-street-bath-and-spa-88
   subtitle: Editorial review, practical details, and booking context from Dip.
-  hero_image: ''
+  hero_image: 'https://cdn.tildacdn.com/tild3861-3836-4435-b162-claudiotesta218497.jpg'
   neighborhood: Financial District, Manhattan
   address: "88 Fulton St, New York, NY 10038"
   price: See website
@@ -20,9 +20,9 @@ venue:
   website_url: https://www.wallstreetbath.com
   review: One of the last working banyas left in Manhattan. No rooftop, no cocktail bar, no candlelight — just serious heat, cold water, and the kind of regulars who have been coming since before the neighborhood was called FiDi. The sauna runs hot and the platza service is available if you know to ask. Worth knowing about.
   gallery_images:
-    - 'https://images.unsplash.com/photo-1573539264709-77c2da0ef9be?w=800&h=560&fit=crop&q=80'
-    - 'https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=800&h=560&fit=crop&q=80'
-    - 'https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?w=800&h=560&fit=crop&q=80'
+    - 'https://cdn.tildacdn.com/tild3861-3836-4435-b162-claudiotesta218497.jpg'
+    - 'https://cdn.tildacdn.com/tild3-3963-4166-b839-spa-interior-1.png'
+    - 'https://cdn.tildacdn.com/tild3-3963-4166-b839-spa-interior-2.png'
   one_line_verdict: One of the last working banyas in Manhattan — no frills, no branding, just the heat and the regulars who've been coming since before the neighborhood was called FiDi.
   editorial_overview: |
     Wall Street Bath & Spa 88 occupies a specific niche in the NYC bathhouse ecosystem: it's a Manhattan banya that survived the neighborhood's transformation from working-class financial district to luxury residential enclave. Most banyas don't survive that kind of demographic shift — the economics change, the lease terms change, the clientele changes. This one held.
