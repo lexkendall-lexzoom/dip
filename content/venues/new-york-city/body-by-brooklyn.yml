@@ -1,66 +1,110 @@
 seo:
-  title: "Body by Brooklyn Review: Price, Hours, What to Know | Dip"
-  description: Dip review of Body by Brooklyn in Clinton Hill — 10,000 sq ft bathhouse with Russian sauna, arctic cold plunge, steam room, hot tub, and VIP suites.
-  social_image: "https://bodybybrooklyn.com/wp-content/uploads/2020/06/slider-image-2.jpg"
+  title: 'Body by Brooklyn Review: Price, Hours, What to Know | Dip'
+  description: Dip review of Body by Brooklyn in Clinton Hill — 10,000 sq ft bathhouse
+    with Russian sauna, arctic cold plunge, steam room, hot tub, and VIP suites.
+  social_image: /images/uploads/body-by-brooklyn-hero.png
 venue:
   name: Body by Brooklyn
   city: New York City
   slug: body-by-brooklyn
   id: body-by-brooklyn
   subtitle: Editorial review, practical details, and booking context from Dip.
-  hero_image: "https://bodybybrooklyn.com/wp-content/uploads/2020/06/slider-image-2.jpg"
+  hero_image: /images/uploads/body-by-brooklyn-hero.png
   neighborhood: Clinton Hill, Brooklyn
-  address: "275 Park Ave, Brooklyn, NY 11205"
+  address: 275 Park Ave, Brooklyn, NY 11205
   price: from $65
   score: '7.9'
   community_score: '3.8'
   date_reviewed: March 2026
   hours: Mon, Wed–Thu 10am–8pm · Fri–Sat 10am–9pm · Sun 10am–8pm · Closed Tuesday
-  best_for: Couples spa day, VIP suites, full treatment menu, Russian banya with cocktail bar.
+  best_for: Couples spa day, VIP suites, full treatment menu, Russian banya with cocktail
+    bar.
   website_url: https://bodybybrooklyn.com
-  review: >-
-    Body by Brooklyn is Clinton Hill's 10,000-square-foot neighborhood spa with genuine bathhouse credentials — a
-    Russian sauna running 175–190°F, a Swedish sauna, an arctic cold plunge, eucalyptus steam room, and a thermal hot
-    tub, all anchored by a full dry lounge with fireplace, day beds, and a bar. Day passes run $65–$75 depending on day;
-    VIP suites add a private jacuzzi, steam shower, and champagne for groups or couples looking to extend the occasion.
-    The treatment menu is expansive: facials, deep tissue, platza, body wraps. It skews more spa than banya but covers
-    both worlds.
+  review: 'Body by Brooklyn is Clinton Hill''s 10,000-square-foot neighborhood spa
+    with genuine bathhouse credentials — a Russian sauna running 175–190°F, a Swedish
+    sauna, an arctic cold plunge, eucalyptus steam room, and a thermal hot tub, all
+    anchored by a full dry lounge with fireplace, day beds, and a bar. Day passes
+    run $65–$75 depending on day; VIP suites add a private jacuzzi, steam shower,
+    and champagne for groups or couples looking to extend the occasion. The treatment
+    menu is expansive: facials, deep tissue, platza, body wraps. It skews more spa
+    than banya but covers both worlds.'
   gallery_images:
-    - "https://bodybybrooklyn.com/wp-content/uploads/2020/06/slider-image-2.jpg"
-    - "https://bodybybrooklyn.com/wp-content/uploads/2021/01/WetLounge.jpg"
-    - "https://bodybybrooklyn.com/wp-content/uploads/2021/01/DryLounge2-1.jpg"
-  one_line_verdict: Clinton Hill's full-service neighborhood spa-bathhouse hybrid — covers the couple's spa day and the serious banya visit without fully excelling at either.
-  editorial_overview: |
-    Body by Brooklyn has carved out a specific market position in Clinton Hill: the neighborhood spa that has actual bathhouse credentials. The Russian sauna runs 175–190°F, which is legitimately hot. The arctic cold plunge is legitimately cold. The eucalyptus steam room, thermal hot tub, and Swedish sauna form a complete contrast circuit. And then it also has VIP suites with private jacuzzis and champagne, a full treatment menu, and a cocktail bar.
+  - /images/uploads/body-by-brooklyn-hero.png
+  one_line_verdict: Clinton Hill's full-service neighborhood spa-bathhouse hybrid
+    — covers the couple's spa day and the serious banya visit without fully excelling
+    at either.
+  editorial_overview: 'Body by Brooklyn has carved out a specific market position
+    in Clinton Hill: the neighborhood spa that has actual bathhouse credentials. The
+    Russian sauna runs 175–190°F, which is legitimately hot. The arctic cold plunge
+    is legitimately cold. The eucalyptus steam room, thermal hot tub, and Swedish
+    sauna form a complete contrast circuit. And then it also has VIP suites with private
+    jacuzzis and champagne, a full treatment menu, and a cocktail bar.
 
-    This dual positioning — serving both the serious thermal practitioner and the couple doing a special occasion spa day — is either a strength or a weakness depending on what you came for. The banya crowd gets legitimate heat and cold without the designed-to-be-photographed quality of Bathhouse Williamsburg. The spa crowd gets a full treatment menu and a bar. Neither gets a venue that's optimized entirely for their experience.
 
-    The platza service is the best reason to go for banya practitioners — it's available here when it's hard to find elsewhere in Brooklyn, and the staff who perform it understand what they're doing. For couples, the VIP suite packages make sense as a special-occasion format that's priced more accessibly than anything in Manhattan.
-  vibe: Welcoming and neighborhood-anchored. Clinton Hill locals, couples doing a spa day, and fitness-adjacent Brooklynites make up the core. Less self-conscious than Williamsburg venues, more designed than the traditional banyas. Comfortable middle ground.
-  facility_breakdown: Russian sauna (175–190°F), Swedish sauna, eucalyptus steam room, arctic cold plunge, thermal hot tub, fireplace lounge, day beds, cocktail bar, and VIP suites with private jacuzzi and steam shower. Full treatment menu including massage, facials, body wraps, and platza. 10,000 sq ft total.
+    This dual positioning — serving both the serious thermal practitioner and the
+    couple doing a special occasion spa day — is either a strength or a weakness depending
+    on what you came for. The banya crowd gets legitimate heat and cold without the
+    designed-to-be-photographed quality of Bathhouse Williamsburg. The spa crowd gets
+    a full treatment menu and a bar. Neither gets a venue that''s optimized entirely
+    for their experience.
+
+
+    The platza service is the best reason to go for banya practitioners — it''s available
+    here when it''s hard to find elsewhere in Brooklyn, and the staff who perform
+    it understand what they''re doing. For couples, the VIP suite packages make sense
+    as a special-occasion format that''s priced more accessibly than anything in Manhattan.
+
+    '
+  vibe: Welcoming and neighborhood-anchored. Clinton Hill locals, couples doing a
+    spa day, and fitness-adjacent Brooklynites make up the core. Less self-conscious
+    than Williamsburg venues, more designed than the traditional banyas. Comfortable
+    middle ground.
+  facility_breakdown: Russian sauna (175–190°F), Swedish sauna, eucalyptus steam room,
+    arctic cold plunge, thermal hot tub, fireplace lounge, day beds, cocktail bar,
+    and VIP suites with private jacuzzi and steam shower. Full treatment menu including
+    massage, facials, body wraps, and platza. 10,000 sq ft total.
   pros:
-    - Complete thermal circuit with legitimate temperature extremes
-    - Platza service available — one of few Brooklyn venues offering it
-    - VIP suite format is genuinely useful for couples and small groups
-    - Clinton Hill location is accessible from multiple Brooklyn neighborhoods
-    - The cocktail bar works — the lounge atmosphere is warm and social
+  - Complete thermal circuit with legitimate temperature extremes
+  - Platza service available — one of few Brooklyn venues offering it
+  - VIP suite format is genuinely useful for couples and small groups
+  - Clinton Hill location is accessible from multiple Brooklyn neighborhoods
+  - The cocktail bar works — the lounge atmosphere is warm and social
   cons:
-    - Closed Tuesdays — check schedule
-    - The spa-banya hybrid positioning means it's not optimal for either use case
-    - Design is comfortable rather than considered — not a visual destination
-    - The bar and VIP suite focus can shift the energy away from recovery intent
-  not_ideal_for: Serious banya practitioners who want a traditional atmosphere, people seeking Aufguss or facilitated programming, first-timers who need guidance through the thermal circuit.
-  pro_move: If going for the banya experience, skip the VIP suite and book a platza session for midway through the thermal circuit. Book the cocktail bar for after, not before. The sequence matters.
-  value_read: At $65 weekday for a complete thermal circuit access, the value is solid. VIP suites are priced for occasion — $200–300+ range — which is competitive with Manhattan alternatives for a private group experience.
-  scene_summary: Body by Brooklyn is a reliable neighborhood spa with genuine banya infrastructure — a combination that's less common than it should be. It's not the most exciting option in Brooklyn, but it's a consistent, well-operated venue that serves real needs for the Clinton Hill neighborhood and surrounding area.
-  crowd_profile: Clinton Hill and Bedford-Stuyvesant locals aged 28–50, couple-dominant on weekends with a more solo practitioner skew on weekdays. Mix of spa-goers and banya enthusiasts comfortable enough to share the space. Cocktail bar draws a different crowd than the sauna — the two populations coexist without tension.
-  time_of_day_dynamics: Weekday afternoons are the quietest and best for contemplative thermal work. Weekends from early afternoon are couple and group oriented with the most social energy. Evening hours (up to 9pm Fri–Sat) have a more relaxed, lingering quality. Tuesday closure is the only significant schedule constraint.
+  - Closed Tuesdays — check schedule
+  - The spa-banya hybrid positioning means it's not optimal for either use case
+  - Design is comfortable rather than considered — not a visual destination
+  - The bar and VIP suite focus can shift the energy away from recovery intent
+  not_ideal_for: Serious banya practitioners who want a traditional atmosphere, people
+    seeking Aufguss or facilitated programming, first-timers who need guidance through
+    the thermal circuit.
+  pro_move: If going for the banya experience, skip the VIP suite and book a platza
+    session for midway through the thermal circuit. Book the cocktail bar for after,
+    not before. The sequence matters.
+  value_read: At $65 weekday for a complete thermal circuit access, the value is solid.
+    VIP suites are priced for occasion — $200–300+ range — which is competitive with
+    Manhattan alternatives for a private group experience.
+  scene_summary: Body by Brooklyn is a reliable neighborhood spa with genuine banya
+    infrastructure — a combination that's less common than it should be. It's not
+    the most exciting option in Brooklyn, but it's a consistent, well-operated venue
+    that serves real needs for the Clinton Hill neighborhood and surrounding area.
+  crowd_profile: Clinton Hill and Bedford-Stuyvesant locals aged 28–50, couple-dominant
+    on weekends with a more solo practitioner skew on weekdays. Mix of spa-goers and
+    banya enthusiasts comfortable enough to share the space. Cocktail bar draws a
+    different crowd than the sauna — the two populations coexist without tension.
+  time_of_day_dynamics: Weekday afternoons are the quietest and best for contemplative
+    thermal work. Weekends from early afternoon are couple and group oriented with
+    the most social energy. Evening hours (up to 9pm Fri–Sat) have a more relaxed,
+    lingering quality. Tuesday closure is the only significant schedule constraint.
   popularity_trend: steady
-  booking_difficulty: Easy to moderate — walk-in most weekdays. Weekend day passes and VIP suites should be booked in advance. Treatment appointments require advance booking.
+  booking_difficulty: Easy to moderate — walk-in most weekdays. Weekend day passes
+    and VIP suites should be booked in advance. Treatment appointments require advance
+    booking.
   social_energy_level: 6
   laptop_free_vibe: true
   influencer_density: low
-  repeat_vs_tourist_mix: Mix of neighborhood regulars and occasion visitors. The repeat rate is strong among Clinton Hill residents; the VIP suite format draws one-time occasion visitors who may not return regularly.
+  repeat_vs_tourist_mix: Mix of neighborhood regulars and occasion visitors. The repeat
+    rate is strong among Clinton Hill residents; the VIP suite format draws one-time
+    occasion visitors who may not return regularly.
   dip_scores:
     facilities_ritual: 7.5
     design_atmosphere: 6.5
@@ -68,10 +112,13 @@ venue:
     recovery_value: 7.5
     service_flow: 7.5
     overall_dip_score: 7.9
-  audience_sentiment_snapshot: Consistently positive reviews from neighborhood locals and couples. Platza service generates specific positive mentions. The cocktail bar and lounge atmosphere are praised for creating a social occasion out of the visit. Criticism focuses on the dated design and the hybrid positioning.
+  audience_sentiment_snapshot: Consistently positive reviews from neighborhood locals
+    and couples. Platza service generates specific positive mentions. The cocktail
+    bar and lounge atmosphere are praised for creating a social occasion out of the
+    visit. Criticism focuses on the dated design and the hybrid positioning.
   editorial_last_updated: '2026-04-05'
   source_urls:
-    - https://bodybybrooklyn.com
-    - https://www.yelp.com/biz/body-by-brooklyn-brooklyn
-    - https://www.google.com/maps/place/Body+by+Brooklyn
+  - https://bodybybrooklyn.com
+  - https://www.yelp.com/biz/body-by-brooklyn-brooklyn
+  - https://www.google.com/maps/place/Body+by+Brooklyn
   confidence_level: medium
