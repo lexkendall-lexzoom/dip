@@ -1,33 +1,33 @@
 seo:
   title: 'Wi Spa Koreatown LA Review: Price, Hours, What to Know | Dip'
-  description: Dip review of Wi Spa in Los Angeles Koreatown — five floors of Korean
-    jjimjilbang, rooftop pool, 24-hour access, and one of the most complete communal
-    spa experiences in the US.
-  social_image: /images/uploads/wi-spa-hero.jpg
+  description: >-
+    Dip review of Wi Spa in Los Angeles Koreatown — five floors of Korean jjimjilbang, rooftop pool, 24-hour access, and
+    one of the most complete communal spa experiences in the US.
+  social_image: https://wispausa.com/wp-content/uploads/2021/08/slide_2-scaled.jpg
 venue:
   name: Wi Spa
   city: Los Angeles
   slug: wi-spa
   id: wi-spa
   subtitle: Editorial review, practical details, and booking context from Dip.
-  hero_image: /images/uploads/wi-spa-hero.jpg
+  hero_image: https://wispausa.com/wp-content/uploads/2021/08/slide_2-scaled.jpg
   neighborhood: Koreatown, Los Angeles
-  address: 2700 Wilshire Blvd, Los Angeles, CA 90057
+  address: "2700 Wilshire Blvd, Los Angeles, CA 90057"
   price: from $35
   score: '8.5'
   date_reviewed: March 2026
   hours: 24 hours daily
-  best_for: Full Korean jjimjilbang experience, late-night soaking, families, first-time
-    jjimjilbang visitors.
+  best_for: Full Korean jjimjilbang experience, late-night soaking, families, first-time jjimjilbang visitors.
   website_url: https://wispausa.com/
-  review: Wi Spa is five floors of Korean jjimjilbang built for people who mean it.
-    The basement pools are gender-separate and serious — scalding, neutral, cold,
-    whirlpool, herbal — the main floor is coed in the traditional gown-and-shorts
-    setup with heated clay rooms, the roof has a pool. Open 24 hours, $35 admission,
-    everything included. Koreatown's version is the flagship of American Korean spas,
-    and at that price point and that scope, nothing else comes close. Bring a book,
-    eat the food court ramen, stay four hours.
+  review: >-
+    Wi Spa is five floors of Korean jjimjilbang built for people who mean it. The basement pools are gender-separate and
+    serious — scalding, neutral, cold, whirlpool, herbal — the main floor is coed in the traditional gown-and-shorts
+    setup with heated clay rooms, the roof has a pool. Open 24 hours, $35 admission, everything included. Koreatown's
+    version is the flagship of American Korean spas, and at that price point and that scope, nothing else comes close.
+    Bring a book, eat the food court ramen, stay four hours.
   gallery_images:
-  - /images/uploads/wi-spa-hero.jpg
+    - https://wispausa.com/wp-content/uploads/2021/08/slide_2-scaled.jpg
+    - https://wispausa.com/wp-content/uploads/2021/08/home-slide-roof-768x511.jpg
+    - https://wispausa.com/wp-content/uploads/2021/08/home-slide-eat-768x511.jpg
   community_score: '4.1'
   dip_index: '8.4'

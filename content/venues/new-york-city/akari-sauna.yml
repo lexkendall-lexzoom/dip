@@ -1,17 +1,16 @@
 seo:
   title: 'Akari Sauna Review: Price, Hours, What to Know | Dip'
-  description: Dip review of Akari Sauna in Brooklyn with membership context, hours,
-    and who it is best for.
-  social_image: /images/uploads/akari-sauna-hero.png
+  description: Dip review of Akari Sauna in Brooklyn with membership context, hours, and who it is best for.
+  social_image: https://cdn.prod.website-files.com/64ee5979ef5937fc52001f92/67f940039615508640a13d94_AKARI-21_3_11zon.jpg
 venue:
   name: Akari Sauna
   city: New York City
   slug: akari-sauna
   id: akari-sauna
   subtitle: Editorial review, practical details, and booking context from Dip.
-  hero_image: /images/uploads/akari-sauna-hero.png
+  hero_image: https://cdn.prod.website-files.com/64ee5979ef5937fc52001f92/67f940039615508640a13d94_AKARI-21_3_11zon.jpg
   neighborhood: Williamsburg + Greenpoint
-  address: 149 Franklin St, Brooklyn, NY 11222
+  address: "149 Franklin St, Brooklyn, NY 11222"
   price: Members only
   score: '9.2'
   community_score: '4.9'
@@ -19,90 +18,46 @@ venue:
   hours: Mon–Thu 8am–10pm · Fri–Sun 8am–8pm
   best_for: Solo ritual, discerning regulars, daily habit.
   website_url: https://www.akarisauna.com
-  review: The hardest wellness membership to get in New York right now, and it is
-    not close. Rooted in Japanese sentō tradition by a founder who grew up going to
-    public baths in Tokyo, Akari is what that looks like when you bring it to Brooklyn
-    and do it right. Small, quiet, currently sold out at both locations.
+  review: >-
+    The hardest wellness membership to get in New York right now, and it is not close. Rooted in Japanese sentō
+    tradition by a founder who grew up going to public baths in Tokyo, Akari is what that looks like when you bring it
+    to Brooklyn and do it right. Small, quiet, currently sold out at both locations.
   gallery_images:
-  - /images/uploads/akari-sauna-hero.png
-  - /images/uploads/akari-sauna-interior-1.webp
-  - /images/uploads/akari-sauna-interior-2.jpg
-  one_line_verdict: The most coveted wellness membership in New York — Japanese sentō
-    brought to Brooklyn with such fidelity that it's been sold out since it opened.
-  editorial_overview: 'Akari Sauna was founded by a Japanese-American who grew up
-    visiting public bathhouses in Tokyo and wanted to recreate the specific quality
-    of that experience in Brooklyn. Not the aesthetic — the actual quality. The sentō
-    tradition is built around daily use, quiet coexistence, and the accumulation of
-    small rituals that compound into something that can''t be replicated in a one-off
-    visit. Akari operates on that logic, which is why the membership-only model with
-    no day passes isn''t just a pricing strategy — it''s a design decision about what
-    kind of space this is.
+    - https://cdn.prod.website-files.com/64ee5979ef5937fc52001f92/67f940039615508640a13d94_AKARI-21_3_11zon.jpg
+    - https://cdn.prod.website-files.com/64ee5979ef5937fc52001f92/67f940039615508640a13d94_AKARI-21_3_11zon-p-2000.jpg
+    - https://cdn.prod.website-files.com/64ee5979ef5937fc52001f92/68364d8910eaeb6443c21c19_AKARI-kodak_800_c_41_10774_90560_200569_000249510032-min-p-2000.jpg
+  one_line_verdict: The most coveted wellness membership in New York — Japanese sentō brought to Brooklyn with such fidelity that it's been sold out since it opened.
+  editorial_overview: |
+    Akari Sauna was founded by a Japanese-American who grew up visiting public bathhouses in Tokyo and wanted to recreate the specific quality of that experience in Brooklyn. Not the aesthetic — the actual quality. The sentō tradition is built around daily use, quiet coexistence, and the accumulation of small rituals that compound into something that can't be replicated in a one-off visit. Akari operates on that logic, which is why the membership-only model with no day passes isn't just a pricing strategy — it's a design decision about what kind of space this is.
 
+    Both Brooklyn locations (Williamsburg and Greenpoint) have been sold out since shortly after opening. There is a waitlist. This is not manufactured scarcity — the spaces are physically small, membership is capped, and the founder has been consistent about not expanding faster than the product can support. The restraint is intentional and unusual.
 
-    Both Brooklyn locations (Williamsburg and Greenpoint) have been sold out since
-    shortly after opening. There is a waitlist. This is not manufactured scarcity
-    — the spaces are physically small, membership is capped, and the founder has been
-    consistent about not expanding faster than the product can support. The restraint
-    is intentional and unusual.
-
-
-    The non-obvious thing about Akari: it''s the only NYC wellness venue where the
-    physical space genuinely disappears. The saunas, the plunge, the relaxation areas
-    — everything is designed to support an internal experience rather than frame an
-    external one. You don''t photograph it. You don''t describe it well afterward.
-    You just go, and then you want to go again.
-
-    '
-  vibe: Quiet, internal, and deliberately countercultural to everything that NYC wellness
-    has become. The members are uniformly people who've found the space and committed
-    to it as a daily or near-daily practice. The atmosphere has the quality of a shared
-    secret — not exclusive in a status sense, but specific in a values sense.
-  facility_breakdown: Japanese-style sauna rooms, cold plunge, and quiet relaxation
-    spaces. The materials are natural and considered without being ostentatious. The
-    spaces are small — this is intentional. A sentō is not a destination; it's a neighborhood
-    institution. The facility is maintained meticulously.
+    The non-obvious thing about Akari: it's the only NYC wellness venue where the physical space genuinely disappears. The saunas, the plunge, the relaxation areas — everything is designed to support an internal experience rather than frame an external one. You don't photograph it. You don't describe it well afterward. You just go, and then you want to go again.
+  vibe: Quiet, internal, and deliberately countercultural to everything that NYC wellness has become. The members are uniformly people who've found the space and committed to it as a daily or near-daily practice. The atmosphere has the quality of a shared secret — not exclusive in a status sense, but specific in a values sense.
+  facility_breakdown: Japanese-style sauna rooms, cold plunge, and quiet relaxation spaces. The materials are natural and considered without being ostentatious. The spaces are small — this is intentional. A sentō is not a destination; it's a neighborhood institution. The facility is maintained meticulously.
   pros:
-  - The most refined sauna experience in NYC — Japanese sentō tradition translated
-    with fidelity
-  - Membership-only creates a genuine community of committed regulars
-  - Small space means it never feels institutional or crowded (for members)
-  - Materials and design reflect a deep understanding of what the practice requires
-  - $165/month membership pricing is among the most accessible of any NYC private
-    wellness club
+    - The most refined sauna experience in NYC — Japanese sentō tradition translated with fidelity
+    - Membership-only creates a genuine community of committed regulars
+    - Small space means it never feels institutional or crowded (for members)
+    - Materials and design reflect a deep understanding of what the practice requires
+    - $165/month membership pricing is among the most accessible of any NYC private wellness club
   cons:
-  - Sold out — the waitlist reality means most people can't access this right now
-  - Membership-only, no day passes, no guest access without member accompaniment
-  - Very small facility scope — no thermal pool, no Aufguss, no treatments
-  - Hours close earlier than many competitors (8pm weekends)
-  not_ideal_for: Anyone who can't get off the waitlist, people seeking social or community
-    events, visitors who want a full-circuit thermal experience.
-  pro_move: Get on the waitlist now at both locations. Membership availability opens
-    unpredictably when people leave. Akari Greenpoint and Akari Williamsburg share
-    a single waitlist — having your name on it is the only move available to non-members.
-  value_read: At $165/month with no contract for unlimited access, the membership
-    is among the best value in NYC private wellness. The challenge isn't the price;
-    it's the waitlist.
-  scene_summary: Akari Sauna represents the ceiling of what a focused, membership-based
-    sauna concept can become in New York. It's the reference point for every new venue
-    trying to build a community rather than a customer base. The waitlist is the best
-    evidence of a successfully executed product. Peak.
-  crowd_profile: Diverse but uniformly committed — architects, writers, designers,
-    founders, athletes who've found the space and reorganized their schedules around
-    it. Age range 25–50. Behavior is quiet and self-directed. The community aspect
-    emerges organically from repeated coexistence rather than from facilitated events.
-  time_of_day_dynamics: Morning sessions (8am–10am) are the focused daily-ritual crowd.
-    Midday is quieter. Late afternoon fills with after-work members. Weekend hours
-    close at 8pm, making Friday and Saturday evenings more compressed. The space feels
-    slightly different at each hour of the day — regulars know this and calibrate
-    their visits accordingly.
+    - Sold out — the waitlist reality means most people can't access this right now
+    - Membership-only, no day passes, no guest access without member accompaniment
+    - Very small facility scope — no thermal pool, no Aufguss, no treatments
+    - Hours close earlier than many competitors (8pm weekends)
+  not_ideal_for: Anyone who can't get off the waitlist, people seeking social or community events, visitors who want a full-circuit thermal experience.
+  pro_move: Get on the waitlist now at both locations. Membership availability opens unpredictably when people leave. Akari Greenpoint and Akari Williamsburg share a single waitlist — having your name on it is the only move available to non-members.
+  value_read: At $165/month with no contract for unlimited access, the membership is among the best value in NYC private wellness. The challenge isn't the price; it's the waitlist.
+  scene_summary: Akari Sauna represents the ceiling of what a focused, membership-based sauna concept can become in New York. It's the reference point for every new venue trying to build a community rather than a customer base. The waitlist is the best evidence of a successfully executed product. Peak.
+  crowd_profile: Diverse but uniformly committed — architects, writers, designers, founders, athletes who've found the space and reorganized their schedules around it. Age range 25–50. Behavior is quiet and self-directed. The community aspect emerges organically from repeated coexistence rather than from facilitated events.
+  time_of_day_dynamics: Morning sessions (8am–10am) are the focused daily-ritual crowd. Midday is quieter. Late afternoon fills with after-work members. Weekend hours close at 8pm, making Friday and Saturday evenings more compressed. The space feels slightly different at each hour of the day — regulars know this and calibrate their visits accordingly.
   popularity_trend: peak
-  booking_difficulty: Effectively inaccessible without membership. Waitlist only for
-    new members. No walk-in option. Guest passes require member sponsorship.
+  booking_difficulty: Effectively inaccessible without membership. Waitlist only for new members. No walk-in option. Guest passes require member sponsorship.
   social_energy_level: 2
   laptop_free_vibe: true
   influencer_density: low
-  repeat_vs_tourist_mix: Entirely repeat — by design. The membership model means there
-    are no tourists and no first-timers beyond the initial onboarding experience.
+  repeat_vs_tourist_mix: Entirely repeat — by design. The membership model means there are no tourists and no first-timers beyond the initial onboarding experience.
   dip_scores:
     facilities_ritual: 9.5
     design_atmosphere: 9.0
@@ -110,14 +65,10 @@ venue:
     recovery_value: 9.5
     service_flow: 9.0
     overall_dip_score: 9.2
-  audience_sentiment_snapshot: Consistent 5-star reviews from members describing it
-    as life-changing in routine terms — not as an exceptional one-off experience but
-    as a foundational weekly practice. The waitlist generates its own secondary conversation.
-    Press coverage uniformly treats it as the most thoughtfully executed wellness
-    concept in Brooklyn. No meaningful negative reviews from members.
+  audience_sentiment_snapshot: Consistent 5-star reviews from members describing it as life-changing in routine terms — not as an exceptional one-off experience but as a foundational weekly practice. The waitlist generates its own secondary conversation. Press coverage uniformly treats it as the most thoughtfully executed wellness concept in Brooklyn. No meaningful negative reviews from members.
   editorial_last_updated: '2026-04-05'
   source_urls:
-  - https://www.akarisauna.com
-  - https://www.yelp.com/biz/akari-sauna-brooklyn
-  - https://www.google.com/maps/place/Akari+Sauna
+    - https://www.akarisauna.com
+    - https://www.yelp.com/biz/akari-sauna-brooklyn
+    - https://www.google.com/maps/place/Akari+Sauna
   confidence_level: high

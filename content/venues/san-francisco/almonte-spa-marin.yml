@@ -1,30 +1,31 @@
 seo:
-  title: 'Almonte Spa Marin Review: Price, Hours, What to Know | Dip'
-  description: Dip review of Almonte Spa in Mill Valley, Marin County — private outdoor
-    soaking tubs in a redwood garden, Japanese-style bathing close to San Francisco.
-  social_image: /images/uploads/almonte-spa-marin-hero.png
+  title: "Almonte Spa Marin Review: Price, Hours, What to Know | Dip"
+  description: Dip review of Almonte Spa in Mill Valley, Marin County — private outdoor soaking tubs in a redwood garden, Japanese-style bathing close to San Francisco.
+  social_image: "https://static.wixstatic.com/media/906110_24f3c3e8d1ed4e57abbdcb270bf9e276%7Emv2_d_4134_3563_s_4_2.png/v1/fit/w_2500,h_1330,al_c/906110_24f3c3e8d1ed4e57abbdcb270bf9e276%7Emv2_d_4134_3563_s_4_2.png"
 venue:
   name: Almonte Spa (Marin)
   city: San Francisco
   slug: almonte-spa-marin
   id: almonte-spa-marin
   subtitle: Editorial review, practical details, and booking context from Dip.
-  hero_image: /images/uploads/almonte-spa-marin-hero.png
+  hero_image: "https://static.wixstatic.com/media/906110_24f3c3e8d1ed4e57abbdcb270bf9e276%7Emv2_d_4134_3563_s_4_2.png/v1/fit/w_2500,h_1330,al_c/906110_24f3c3e8d1ed4e57abbdcb270bf9e276%7Emv2_d_4134_3563_s_4_2.png"
   neighborhood: Mill Valley, Marin County
-  address: 158 Almonte Blvd, Mill Valley, CA 94941
+  address: "158 Almonte Blvd, Mill Valley, CA 94941"
   price: from $65
-  score: '8.0'
+  score: "8.0"
   date_reviewed: March 2026
   hours: Daily · By appointment
-  best_for: Private outdoor soaking, post-hike decompression, Japanese-style ritual
-    near the city, couples.
-  website_url: https://www.almontespa.com/
-  review: 'Mill Valley is twenty minutes from the Golden Gate and a different world
-    — redwoods, quiet, the kind of air that slows you down before you even reach the
-    door. Almonte leans into this: private outdoor soaking tubs in a garden setting,
-    Japanese bathing philosophy, and an atmosphere that genuinely borrows from the
-    environment rather than fighting it. Treatments are skilled and the staff understand
-    that you are here to actually stop. For a Bay Area soaking experience that earns
-    the drive, this is it.'
+  best_for: Private outdoor soaking, post-hike decompression, Japanese-style ritual near the city, couples.
+  website_url: "https://www.almontespa.com/"
+  review: >-
+    Mill Valley is twenty minutes from the Golden Gate and a different world —
+    redwoods, quiet, the kind of air that slows you down before you even reach
+    the door. Almonte leans into this: private outdoor soaking tubs in a
+    garden setting, Japanese bathing philosophy, and an atmosphere that
+    genuinely borrows from the environment rather than fighting it. Treatments
+    are skilled and the staff understand that you are here to actually stop.
+    For a Bay Area soaking experience that earns the drive, this is it.
   gallery_images:
-  - /images/uploads/almonte-spa-marin-hero.png
+    - "https://static.wixstatic.com/media/906110_24f3c3e8d1ed4e57abbdcb270bf9e276%7Emv2_d_4134_3563_s_4_2.png/v1/fit/w_2500,h_1330,al_c/906110_24f3c3e8d1ed4e57abbdcb270bf9e276%7Emv2_d_4134_3563_s_4_2.png"
+    - "https://static.wixstatic.com/media/906110_736e297926334f7a8f02b7f54476553b~mv2_d_4200_2803_s_4_2.jpeg/v1/fit/w_2500,h_1330,al_c/906110_736e297926334f7a8f02b7f54476553b~mv2_d_4200_2803_s_4_2.jpeg"
+    - "https://static.wixstatic.com/media/906110_dbe7f3eae9c943fb97c5a5dbabb3c57b~mv2_d_4134_3563_s_4_2.png/v1/fit/w_2500,h_1330,al_c/906110_dbe7f3eae9c943fb97c5a5dbabb3c57b~mv2_d_4134_3563_s_4_2.png"
