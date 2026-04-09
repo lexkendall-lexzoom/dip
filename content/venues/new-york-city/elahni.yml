@@ -1,58 +1,120 @@
 seo:
   title: 'Elahni Review: Price, Hours, What to Know | Dip'
-  description: 'Dip review of Elahni in NoMad, NYC — guided temperature contrast sessions in a wellness speakeasy format, Finnish sauna to 39°F ice bath, adaptogenic tonic bar.'
-  social_image: 'https://elahni.com/elahni-og.png'
+  description: Dip review of Elahni in NoMad, NYC — guided temperature contrast sessions
+    in a wellness speakeasy format, Finnish sauna to 39°F ice bath, adaptogenic tonic
+    bar.
+  social_image: /images/uploads/elahni-hero.png
 venue:
-  name: 'Elahni'
-  city: 'New York City'
-  slug: 'elahni'
+  name: Elahni
+  city: New York City
+  slug: elahni
   id: elahni
-  subtitle: 'Editorial review, practical details, and booking context from Dip.'
-  hero_image: 'https://elahni.com/elahni-og.png'
-  neighborhood: 'NoMad, Manhattan'
-  address: "12 W 27th St, New York, NY 10001"
-  price: 'from $65'
+  subtitle: Editorial review, practical details, and booking context from Dip.
+  hero_image: /images/uploads/elahni-hero.png
+  neighborhood: NoMad, Manhattan
+  address: 12 W 27th St, New York, NY 10001
+  price: from $65
   score: '8.6'
-  date_reviewed: 'March 2026'
-  hours: 'Sessions by reservation: Mon–Fri 12:30pm–6:30pm · Sat–Sun 6am–6pm (limited slots, max 4 guests per session)'
-  best_for: 'guided contrast therapy, nervous system reset, intimate group, non-alcoholic tonic bar'
-  website_url: 'https://www.elahni.com'
-  review: 'Elahni describes itself as a wellness speakeasy, and the phrase earns its keep. This intimate NoMad studio limits sessions to four guests at a time, guiding each through a Finnish sauna at 180°F followed by an ice bath held at 39°F — the thermal gap structured for nervous system impact, not just heat tolerance. The founders often run sessions themselves. Afterward, an adaptogenic tonic bar offers curated non-alcoholic beverages calibrated to desired states: energized or grounded. At $65 for a 60-minute semi-private session, it is priced accessibly for what amounts to one of the most intentional contrast experiences in the city.'
+  date_reviewed: March 2026
+  hours: 'Sessions by reservation: Mon–Fri 12:30pm–6:30pm · Sat–Sun 6am–6pm (limited
+    slots, max 4 guests per session)'
+  best_for: guided contrast therapy, nervous system reset, intimate group, non-alcoholic
+    tonic bar
+  website_url: https://www.elahni.com
+  review: 'Elahni describes itself as a wellness speakeasy, and the phrase earns its
+    keep. This intimate NoMad studio limits sessions to four guests at a time, guiding
+    each through a Finnish sauna at 180°F followed by an ice bath held at 39°F — the
+    thermal gap structured for nervous system impact, not just heat tolerance. The
+    founders often run sessions themselves. Afterward, an adaptogenic tonic bar offers
+    curated non-alcoholic beverages calibrated to desired states: energized or grounded.
+    At $65 for a 60-minute semi-private session, it is priced accessibly for what
+    amounts to one of the most intentional contrast experiences in the city.'
   gallery_images:
-    - 'https://elahni.com/elahni-og.png'
-    - 'https://elahni.com/heat.webp'
-  one_line_verdict: A four-person wellness speakeasy doing the most intentional guided contrast work in Manhattan — intimate, founder-run, and harder to book than the price suggests.
-  editorial_overview: |
-    Elahni is the most unusual entry in the NYC bathhouse category: a NoMad studio that limits every session to four guests, guides them through a structured Finnish sauna-to-ice bath contrast sequence, and follows it with an adaptogenic tonic bar serving non-alcoholic beverages calibrated by desired effect. The founders — who often run the sessions themselves — describe it as a wellness speakeasy. The phrase is accurate in its suggestion of intimacy and intentionality, if slightly overselling the secrecy.
+  - /images/uploads/elahni-hero.png
+  one_line_verdict: A four-person wellness speakeasy doing the most intentional guided
+    contrast work in Manhattan — intimate, founder-run, and harder to book than the
+    price suggests.
+  editorial_overview: 'Elahni is the most unusual entry in the NYC bathhouse category:
+    a NoMad studio that limits every session to four guests, guides them through a
+    structured Finnish sauna-to-ice bath contrast sequence, and follows it with an
+    adaptogenic tonic bar serving non-alcoholic beverages calibrated by desired effect.
+    The founders — who often run the sessions themselves — describe it as a wellness
+    speakeasy. The phrase is accurate in its suggestion of intimacy and intentionality,
+    if slightly overselling the secrecy.
 
-    The thermal sequence is genuinely structured: Finnish sauna at 180°F followed by an ice bath maintained at 39°F (colder than most NYC venues), with specific guidance on breathing technique, timing, and the transition between extremes. The 39°F ice bath is the differentiator — most venues keep cold exposure in the 50–55°F range, which is cold but not the threshold where the nervous system response becomes most pronounced. Elahni understands this and doesn't compromise on it.
 
-    The post-session tonic bar is not a gimmick. The adaptogenic formulations are actually thoughtfully composed, and the choice between an energizing and a grounding formula is a sensible decompression structure for people transitioning from intense contrast work back to their day. It's the part of the experience that makes the $65 price feel correctly calibrated rather than steep.
-  vibe: Intimate, guided, and deeply intentional. The four-person cap creates automatic closeness without forced community. The founders' presence means every session has an engaged facilitator who understands the practice rather than a service worker following a script. It attracts people who've found most wellness venues too big, too social, or too shallow.
-  facility_breakdown: Finnish sauna at 180°F, ice bath at 39°F (one of the coldest plunge temperatures available in NYC), and a post-session adaptogenic tonic bar. The physical space is deliberately small — a studio rather than a facility. The quality of execution in a small space is higher than in any large venue.
+    The thermal sequence is genuinely structured: Finnish sauna at 180°F followed
+    by an ice bath maintained at 39°F (colder than most NYC venues), with specific
+    guidance on breathing technique, timing, and the transition between extremes.
+    The 39°F ice bath is the differentiator — most venues keep cold exposure in the
+    50–55°F range, which is cold but not the threshold where the nervous system response
+    becomes most pronounced. Elahni understands this and doesn''t compromise on it.
+
+
+    The post-session tonic bar is not a gimmick. The adaptogenic formulations are
+    actually thoughtfully composed, and the choice between an energizing and a grounding
+    formula is a sensible decompression structure for people transitioning from intense
+    contrast work back to their day. It''s the part of the experience that makes the
+    $65 price feel correctly calibrated rather than steep.
+
+    '
+  vibe: Intimate, guided, and deeply intentional. The four-person cap creates automatic
+    closeness without forced community. The founders' presence means every session
+    has an engaged facilitator who understands the practice rather than a service
+    worker following a script. It attracts people who've found most wellness venues
+    too big, too social, or too shallow.
+  facility_breakdown: Finnish sauna at 180°F, ice bath at 39°F (one of the coldest
+    plunge temperatures available in NYC), and a post-session adaptogenic tonic bar.
+    The physical space is deliberately small — a studio rather than a facility. The
+    quality of execution in a small space is higher than in any large venue.
   pros:
-    - 39°F ice bath is one of the coldest contrast experiences available in NYC
-    - Four-person cap creates genuine intimacy and undivided facilitator attention
-    - Founders run many sessions personally — rare quality of care
-    - Adaptogenic tonic bar is a thoughtful post-session protocol
-    - $65 for a guided semi-private session is underpriced relative to comparable luxury wellness
+  - 39°F ice bath is one of the coldest contrast experiences available in NYC
+  - Four-person cap creates genuine intimacy and undivided facilitator attention
+  - Founders run many sessions personally — rare quality of care
+  - Adaptogenic tonic bar is a thoughtful post-session protocol
+  - $65 for a guided semi-private session is underpriced relative to comparable luxury
+    wellness
   cons:
-    - Four-person cap means availability is severely limited — books out quickly
-    - Weekday hours (12:30–6:30pm) exclude working professionals unless they can flex their schedule
-    - No thermal pool circuit — it's one hot, one cold, done
-    - The intimate format can feel intense for people who want anonymity
-  not_ideal_for: People who want a self-directed circuit, anyone with schedule constraints during weekday afternoon hours, solo visitors who find four-person guided sessions socially uncomfortable.
-  pro_move: Book the Saturday 6am session if you can function at that hour. The contrast work at dawn, on an empty stomach, with a fresh nervous system, produces a different quality of response than an afternoon session. The tonic bar afterward is genuinely useful at that hour.
-  value_read: $65 for what amounts to a private guided contrast therapy session is the best price-to-intentionality ratio of any NYC wellness offering. The four-person format means you're getting near-private service at group pricing.
-  scene_summary: Elahni is occupying a niche nobody else has — the ultra-intimate guided contrast studio at an accessible price point. The waitlist pressure on bookings suggests strong demand relative to capacity. The founder-run quality creates a ceiling that can't be replicated by scaling. Rising trend with genuine distinctiveness.
-  crowd_profile: 28–45, wellness practitioners and enthusiasts who've found the format and committed to it. Biohacking-adjacent without the status signaling of more finance-heavy venues. People who take the nervous system science seriously. Behavior during sessions is focused and present. The four-person format creates natural conversation after sessions.
-  time_of_day_dynamics: Weekday sessions (12:30–6:30pm) draw a flex-schedule professional and wellness practitioner crowd. Weekend mornings (from 6am) attract an early-rising committed wellness crowd. Saturday morning is the most booked and most energetically distinct session of the week. The guide calibrates session dynamics to who's in the room.
+  - Four-person cap means availability is severely limited — books out quickly
+  - Weekday hours (12:30–6:30pm) exclude working professionals unless they can flex
+    their schedule
+  - No thermal pool circuit — it's one hot, one cold, done
+  - The intimate format can feel intense for people who want anonymity
+  not_ideal_for: People who want a self-directed circuit, anyone with schedule constraints
+    during weekday afternoon hours, solo visitors who find four-person guided sessions
+    socially uncomfortable.
+  pro_move: Book the Saturday 6am session if you can function at that hour. The contrast
+    work at dawn, on an empty stomach, with a fresh nervous system, produces a different
+    quality of response than an afternoon session. The tonic bar afterward is genuinely
+    useful at that hour.
+  value_read: $65 for what amounts to a private guided contrast therapy session is
+    the best price-to-intentionality ratio of any NYC wellness offering. The four-person
+    format means you're getting near-private service at group pricing.
+  scene_summary: Elahni is occupying a niche nobody else has — the ultra-intimate
+    guided contrast studio at an accessible price point. The waitlist pressure on
+    bookings suggests strong demand relative to capacity. The founder-run quality
+    creates a ceiling that can't be replicated by scaling. Rising trend with genuine
+    distinctiveness.
+  crowd_profile: 28–45, wellness practitioners and enthusiasts who've found the format
+    and committed to it. Biohacking-adjacent without the status signaling of more
+    finance-heavy venues. People who take the nervous system science seriously. Behavior
+    during sessions is focused and present. The four-person format creates natural
+    conversation after sessions.
+  time_of_day_dynamics: Weekday sessions (12:30–6:30pm) draw a flex-schedule professional
+    and wellness practitioner crowd. Weekend mornings (from 6am) attract an early-rising
+    committed wellness crowd. Saturday morning is the most booked and most energetically
+    distinct session of the week. The guide calibrates session dynamics to who's in
+    the room.
   popularity_trend: rising
-  booking_difficulty: Hard relative to capacity — the four-person limit means even moderate demand fills slots quickly. Weekend sessions book 7–10 days out. Weekday afternoon slots available 3–5 days ahead.
+  booking_difficulty: Hard relative to capacity — the four-person limit means even
+    moderate demand fills slots quickly. Weekend sessions book 7–10 days out. Weekday
+    afternoon slots available 3–5 days ahead.
   social_energy_level: 4
   laptop_free_vibe: true
   influencer_density: low
-  repeat_vs_tourist_mix: Strongly repeat — the guided format and intimate space create high retention among people who've found it. First-timers are consistently present but the regulars set the quality of the experience.
+  repeat_vs_tourist_mix: Strongly repeat — the guided format and intimate space create
+    high retention among people who've found it. First-timers are consistently present
+    but the regulars set the quality of the experience.
   dip_scores:
     facilities_ritual: 8.0
     design_atmosphere: 7.5
@@ -60,9 +122,13 @@ venue:
     recovery_value: 9.5
     service_flow: 9.5
     overall_dip_score: 8.6
-  audience_sentiment_snapshot: Small but exceptionally strong review base. The most common sentiment is discovery surprise — people arriving with moderate expectations and leaving with the strongest possible response. The 39°F ice bath and founder-run sessions generate the most specific praise. Very low review volume due to intimate model, but signal quality is high.
+  audience_sentiment_snapshot: Small but exceptionally strong review base. The most
+    common sentiment is discovery surprise — people arriving with moderate expectations
+    and leaving with the strongest possible response. The 39°F ice bath and founder-run
+    sessions generate the most specific praise. Very low review volume due to intimate
+    model, but signal quality is high.
   editorial_last_updated: '2026-04-05'
   source_urls:
-    - https://www.elahni.com
-    - https://www.google.com/maps/place/Elahni
+  - https://www.elahni.com
+  - https://www.google.com/maps/place/Elahni
   confidence_level: medium
