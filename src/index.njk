@@ -542,16 +542,16 @@ footer{background:var(--ink);border-top:1px solid rgba(255,255,255,.08);padding:
 
 <div class="search-wrap" id="search">
   <section class="search-panel" aria-label="Dip search">
-    <div class=”search-head”>
-      <p class=”search-title”>Search DipDays</p>
-      <span class=”search-note”>Try: “cold plunge in manhattan”</span>
+    <div class="search-head" style="display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:12px">
+      <p class="search-title" style="font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--stone);font-weight:700">Search DipDays</p>
+      <span class="search-note" style="font-size:12px;color:#666">Try: “cold plunge in Manhattan”</span>
     </div>
-    <form class=”search-form” id=”search-form”>
-      <div class=”search-input-wrap”>
-        <input id=”search-input” class=”search-input” type=”text” placeholder='Search for “cold plunge in manhattan”' autocomplete=”off” />
+    <form class="search-form" id="search-form" style="display:flex;gap:10px">
+      <div class="search-input-wrap" style="position:relative;flex:1;display:flex">
+        <input id="search-input" class="search-input" type="text" placeholder='Search for “cold plunge in Manhattan”' autocomplete="off" style="flex:1;padding:12px 38px 12px 14px;border:2px solid var(--ink);font-family:var(--font-sans);font-size:14px;outline:none" />
         <button type="button" id="search-clear" class="search-clear" aria-label="Clear search">✕</button>
       </div>
-      <button id="search-submit" class="search-btn" type="submit">Search</button>
+      <button id="search-submit" class="search-btn" type="submit" style="padding:12px 16px;border:none;background:var(--teal);color:#fff;font-size:10px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;cursor:pointer;white-space:nowrap">Search</button>
     </form>
     <p id="search-status" class="search-status" role="status" aria-live="polite"></p>
     <div id="search-results" class="search-results"></div>
