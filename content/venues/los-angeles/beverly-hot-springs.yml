@@ -1,30 +1,32 @@
 seo:
-  title: "Beverly Hot Springs LA Review: Price, Hours, What to Know | Dip"
-  description: "Dip review of Beverly Hot Springs in East Hollywood — one of LA's only natural hot spring bathhouses, Korean-run, with body scrubs and gender-separate hours."
-  social_image: "https://beverlyhotsprings.com/wp-content/uploads/2018/10/women-936549_1920.jpg"
+  title: 'Beverly Hot Springs LA Review: Price, Hours, What to Know | Dip'
+  description: >-
+    Dip review of Beverly Hot Springs in East Hollywood — one of LA's only natural hot spring bathhouses, Korean-run,
+    with body scrubs and gender-separate hours.
+  social_image: https://beverlyhotsprings.com/wp-content/uploads/2018/10/women-936549_1920.jpg
 venue:
   name: Beverly Hot Springs
   city: Los Angeles
   slug: beverly-hot-springs
+  id: beverly-hot-springs
   subtitle: Editorial review, practical details, and booking context from Dip.
-  hero_image: "https://beverlyhotsprings.com/wp-content/uploads/2018/10/women-936549_1920.jpg"
+  hero_image: https://beverlyhotsprings.com/wp-content/uploads/2018/10/women-936549_1920.jpg
   neighborhood: East Hollywood, Los Angeles
+  address: "308 N Oxford Ave, Los Angeles, CA 90004"
   price: from $40
-  score: "8.2"
+  score: '8.2'
   date_reviewed: March 2026
   hours: Daily 9am–9pm · Gender-separate days (check website)
   best_for: Natural hot spring access, Korean body scrubs, solo soakers, anyone tired of manufactured wellness.
-  website_url: "https://beverlyhotsprings.com"
+  website_url: https://beverlyhotsprings.com
   review: >-
-    Beverly Hot Springs sits over one of Los Angeles' only natural underground
-    hot springs, which feeds the pools without any heating system. That fact
-    alone makes it worth understanding. The Korean-owned facility has been
-    here since 1984, the body scrub attendants are expert, and the clientele
-    mixes Korean regulars with curious newcomers in exactly the proportion you
-    want. Gender-separate days mean men and women alternately get the full
-    facility. No performance, no branding, just hot mineral water doing what
-    it has always done.
+    Beverly Hot Springs sits over one of Los Angeles' only natural underground hot springs, which feeds the pools
+    without any heating system. That fact alone makes it worth understanding. The Korean-owned facility has been here
+    since 1984, the body scrub attendants are expert, and the clientele mixes Korean regulars with curious newcomers in
+    exactly the proportion you want. Gender-separate days mean men and women alternately get the full facility. No
+    performance, no branding, just hot mineral water doing what it has always done.
   gallery_images:
-    - "https://beverlyhotsprings.com/wp-content/uploads/2018/10/women-936549_1920.jpg"
-    - "https://beverlyhotsprings.com/wp-content/uploads/2018/10/bodytreatments.jpg"
-    - "https://beverlyhotsprings.com/wp-content/uploads/2018/10/shutterstock_147839732-1.jpg"
+    - https://beverlyhotsprings.com/wp-content/uploads/2018/10/women-936549_1920.jpg
+    - https://beverlyhotsprings.com/wp-content/uploads/2018/10/bodytreatments.jpg
+  community_score: '4.3'
+  dip_index: '8.4'

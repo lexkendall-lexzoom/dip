@@ -6,15 +6,65 @@ venue:
   name: Schwet
   city: New York City
   slug: schwet
+  id: schwet
   subtitle: Editorial review, practical details, and booking context from Dip.
   hero_image: https://framerusercontent.com/images/rG5S8rrqmS6RsKtRaJrujb8FmE0.png
   neighborhood: Tribeca, Manhattan
+  address: "78 Franklin St, New York, NY 10013"
   price: $150 / 2.5 hrs
   score: Coming soon
   date_reviewed: February 2026
   hours: 78 Franklin St, Tribeca
-  best_for: Contrast therapy routines, recovery sessions, and reset days.
+  best_for: Bathhouse-club hybrid, creative community events, contrast therapy with a social program.
   website_url: https://www.instagram.com/getschwet
   review: European bathing tradition meets New York club culture — a banya, mineral pool, Japanese scrub room, 48°F cold plunge, plus a Parcelle wine program, fireplace lounge, dinner parties, and artist takeovers. Building a clubhouse as much as a bathhouse.
   gallery_images:
-    - https://framerusercontent.com/images/rG5S8rrqmS6RsKtRaJrujb8FmE0.png
+    - 'https://framerusercontent.com/images/rG5S8rrqmS6RsKtRaJrujb8FmE0.png'
+    - 'https://framerusercontent.com/images/iPZWogEejL9SDKV4NpOhjkLkD0c.png'
+    - 'https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fbbb44217-e218-4861-818d-85ae60652e03_6857x5023.heic'
+  one_line_verdict: The most culturally ambitious bathhouse opening in NYC — European thermal tradition fused with a Tribeca creative club, anchored by Parcelle wine and a genuine event program.
+  editorial_overview: |
+    Schwet is operating from a specific thesis: that bathhouse culture and New York creative club culture can occupy the same space without one defeating the other. At 78 Franklin Street in Tribeca, the facility includes a banya, mineral pool, Japanese scrub room, and a 48°F cold plunge on the thermal side — legitimately serious contrast infrastructure. On the cultural side: a Parcelle wine program (one of the best wine shops in the city), a fireplace lounge, dinner parties, and an artist takeover program.
+
+    The Parcelle partnership is the signal. Parcelle is a Tribeca natural wine institution with a specific clientele — creative directors, chefs, gallery people, the upper end of the food and beverage community. Schwet is not trying to attract the corporate wellness market or the biohacking crowd. It's building a clubhouse for a specific Tribeca creative community, and it's using a legitimately good thermal facility as the anchor.
+
+    At $150 for 2.5 hours, the pricing is premium but positions it accurately — this is not a budget thermal experience. The cultural programming (artist takeovers, dinner parties) is what differentiates it from a spa with a wine list. Whether that programming sustains at quality is the key question.
+  vibe: Creative Tribeca — art world adjacent, food and beverage community, the kind of people who have Parcelle in their rotation. The thermal facility is the reason, but the social programming is the draw. The 48°F cold plunge is for people who know what they're doing; the fireplace lounge is for everyone.
+  facility_breakdown: Banya, mineral pool, Japanese scrub room, and 48°F cold plunge (one of the coldest available in Manhattan). Fireplace lounge. Parcelle wine program integrated into the post-session experience. Event space for dinner parties and artist programming. The thermal side is genuinely comprehensive; the cultural side is what's unproven.
+  pros:
+    - 48°F cold plunge is among the coldest in Manhattan
+    - Parcelle partnership brings genuine cultural credibility rather than just a wine list
+    - Tribeca location positions it perfectly for the target community
+    - Artist takeover and dinner party programming creates an event rhythm that most wellness venues lack
+    - Japanese scrub room adds a body care dimension beyond the thermal circuit
+  cons:
+    - $150 for 2.5 hours is premium — the thermal facility alone may not justify it without the cultural programming
+    - Operating primarily through Instagram — full venue and booking details still limited
+    - The bathhouse-plus-club hybrid is an ambitious combination that carries execution risk
+    - The cultural programming quality will determine whether this lives up to its positioning
+  not_ideal_for: People seeking a pure thermal experience, budget-conscious visitors, anyone outside the Tribeca creative community who doesn't connect with the cultural programming.
+  pro_move: Time your first visit to coincide with an artist takeover or dinner party event. The cultural programming is what makes the $150 price point make sense; a standard 2.5-hour thermal session at that rate requires more justification.
+  value_read: The $150 rate is only good value if the cultural programming is active and resonant. For a pure thermal circuit, there are better-value options. For a thermal experience embedded in a genuine creative social context, there's nothing else like it in NYC.
+  scene_summary: Schwet is the most culturally interesting bathhouse concept in NYC right now — a legitimate thermal facility that's also a genuine attempt to build a creative community institution. The Parcelle partnership and event program are the differentiators. Still in early operating mode; the programming quality will determine whether this becomes a Tribeca institution or a beautiful concept that didn't scale.
+  crowd_profile: >-
+    Expected and early-observed: Tribeca and downtown creative community — gallery directors, chefs, designers, photographers, the food and beverage world. The wine program self-selects for this demographic. Age range 28–50. Behavior is social and unhurried.
+  time_of_day_dynamics: The event programming (artist takeovers, dinner parties) structures the week differently from standard thermal venues. Standard thermal sessions available outside event programming. Evening sessions have the most social energy.
+  popularity_trend: rising
+  booking_difficulty: Moderate — contact through Instagram. Session availability developing as operations stabilize.
+  social_energy_level: 8
+  laptop_free_vibe: true
+  influencer_density: medium
+  repeat_vs_tourist_mix: Building a repeat creative community base — that's the explicit goal. Too early to assess current mix.
+  dip_scores:
+    facilities_ritual: 8.5
+    design_atmosphere: 8.5
+    social_energy: 8.0
+    recovery_value: 8.0
+    service_flow: 7.0
+    overall_dip_score: 8.0
+  audience_sentiment_snapshot: Limited consumer reviews — operating through Instagram with a community-first approach that generates word-of-mouth before review volume. Design and creative press coverage is strong. The Parcelle connection drives credibility signals in food and beverage adjacent communities.
+  editorial_last_updated: '2026-04-05'
+  source_urls:
+    - https://www.instagram.com/getschwet
+    - https://www.google.com/maps/search/Schwet+Tribeca+NYC
+  confidence_level: low

@@ -1,14 +1,16 @@
 seo:
   title: "The Altar NYC Review: Price, Hours, What to Know | Dip"
   description: Dip preview of The Altar in Chelsea/Flatiron — 50-person sauna, cold plunge suite, hyperbaric chambers, and Aufguss programming for the longevity-minded.
-  social_image: "https://one22fifth.wpenginepowered.com/wp-content/uploads/2025/02/Atrium_Renders-1.jpeg"
+  social_image: "https://one22fifth.wpenginepowered.com/wp-content/uploads/2025/02/IV_Renders-Crop.jpg"
 venue:
   name: The Altar
   city: New York City
   slug: the-altar
+  id: the-altar
   subtitle: Editorial review, practical details, and booking context from Dip.
-  hero_image: "https://one22fifth.wpenginepowered.com/wp-content/uploads/2025/02/Atrium_Renders-1.jpeg"
+  hero_image: "https://one22fifth.wpenginepowered.com/wp-content/uploads/2025/02/IV_Renders-Crop.jpg"
   neighborhood: Chelsea / Flatiron, Manhattan
+  address: "122 5th Ave, New York, NY 10011"
   price: from $65
   score: "8.2"
   date_reviewed: March 2026
@@ -24,4 +26,51 @@ venue:
     than a recovery clinic, which is the right instinct. Opening in 2026;
     worth tracking.
   gallery_images:
-    - "https://one22fifth.wpenginepowered.com/wp-content/uploads/2025/02/Atrium_Renders-1.jpeg"
+    - "https://one22fifth.wpenginepowered.com/wp-content/uploads/2025/02/IV_Renders-Crop.jpg"
+    - "https://one22fifth.wpenginepowered.com/wp-content/uploads/2025/02/Shower_Render-Crop.jpg"
+  one_line_verdict: A fifty-person communal sauna with hyperbaric chambers and Aufguss programming — the most ambitious longevity-meets-ritual concept currently opening in NYC.
+  editorial_overview: |
+    The Altar is positioning itself between two established segments of the NYC wellness market: the communal bathhouse culture (Bathhouse Williamsburg, Othership) and the longevity-recovery clinic model (Remedy Place). The concept — a 50-person sauna room designed as a ceremonial space, paired with cold plunge suites, hyperbaric oxygen chambers, and PEMF mats — is ambitious in its attempt to hold both registers simultaneously.
+
+    The Fifth Avenue address (operating through 122 Fifth) puts it in the heart of the Flatiron wellness corridor, accessible to the office professional crowd while retaining enough ceremony in the programming to attract the committed longevity practitioners who treat their health stack as a primary project. Aufguss programming — facilitated sauna ceremonies with steam, eucalyptus, and structured breathing — is the centerpiece.
+
+    The "ritual chamber" design language is the right instinct: the failure mode for longevity-focused venues is that they feel clinical rather than transformative. The Altar appears to be designing against that explicitly. Opening in 2026 — actual experience data will follow.
+  vibe: Pre-opening — based on programming and positioning, expect a Flatiron professional crowd with longevity-orientation, Aufguss enthusiasts, and the biohacking-adjacent community that's been looking for a communal space beyond Remedy Place.
+  facility_breakdown: 50-person sauna designed as a ceremonial chamber, cold plunge suites, hyperbaric oxygen chambers, PEMF mats, and Aufguss programming. Pre-opening — full facility details subject to change. The scale of the sauna room (50-person capacity) is the largest dedicated Aufguss space announced in NYC.
+  pros:
+    - 50-person sauna capacity makes Aufguss ceremonies viable at a scale that smaller venues can't support
+    - Hyperbaric and PEMF integration addresses the longevity stack in a communal setting
+    - Fifth Avenue location is the most accessible major wellness venue address in Flatiron
+    - The "ritual chamber" design language suggests architectural intentionality
+    - Aufguss programming brings the European sauna ceremony culture to a venue with actual space for it
+  cons:
+    - Pre-opening — all assessments are based on announced programming, not experience
+    - Opening timeline subject to change
+    - The dual positioning (community ritual + biohacking) is ambitious and carries execution risk
+    - Fifth Avenue pricing expectations may exceed the $65 announced base
+  not_ideal_for: Anyone needing a venue that's open now, people who want the intimate small-group experience, visitors prioritizing thermal pool circuits over sauna-focused programming.
+  pro_move: Join the waitlist now and monitor opening announcements. The Aufguss programming in a 50-person ceremonial sauna room is a format with no direct NYC competitor at this scale.
+  value_read: At from $65, the price positioning is accessible if the programming delivers. The hyperbaric and PEMF add-ons will carry premium pricing — the base rate is the entry to the sauna and cold plunge circuit.
+  scene_summary: The Altar is the most anticipated 2026 wellness opening in NYC's bathhouse category. The combination of large-scale Aufguss ceremony and longevity modalities in a Fifth Avenue location has no direct precedent. Confidence in the concept is high based on team and design signals; execution confidence awaits opening data.
+  crowd_profile: >-
+    Expected: 28–50, Flatiron professional and longevity-oriented. Aufguss enthusiasts, biohackers, and the post-Othership crowd looking for the next evolution in guided communal wellness. The Fifth Avenue address will attract a more mixed Manhattan crowd as awareness builds.
+  time_of_day_dynamics: Pre-opening — Aufguss ceremonies will likely structure the day into distinct session blocks. Morning and evening programming expected to draw different demographic slices.
+  popularity_trend: rising
+  booking_difficulty: Pre-opening — join waitlist. Anticipated moderate to high on launch, especially for Aufguss ceremony slots.
+  social_energy_level: 7
+  laptop_free_vibe: true
+  influencer_density: medium
+  repeat_vs_tourist_mix: Expected to build a strong repeat Aufguss community from launch, with a consistent first-timer flow driven by the Fifth Avenue location.
+  dip_scores:
+    facilities_ritual: 8.5
+    design_atmosphere: 8.0
+    social_energy: 7.0
+    recovery_value: 8.5
+    service_flow: 7.5
+    overall_dip_score: 8.2
+  audience_sentiment_snapshot: Pre-opening. Strong press and design community interest. Instagram engagement indicates significant anticipation from the NYC wellness community. Actual consumer review data pending opening.
+  editorial_last_updated: '2026-04-05'
+  source_urls:
+    - https://www.instagram.com/thealtar_nyc
+    - https://one22fifth.wpenginepowered.com
+  confidence_level: low

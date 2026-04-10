@@ -1,29 +1,32 @@
 seo:
-  title: "International Orange SF Review: Price, Hours, What to Know | Dip"
-  description: "Dip review of International Orange in San Francisco's Fillmore district — hammam steam, skilled bodywork, and one of SF's most respected independent spa experiences."
-  social_image: "https://internationalorange.com/cdn/shop/files/WEBSITE_facial.png?v=1686599403&width=1120"
+  title: 'International Orange SF Review: Price, Hours, What to Know | Dip'
+  description: >-
+    Dip review of International Orange in San Francisco's Fillmore district — hammam steam, skilled bodywork, and one of
+    SF's most respected independent spa experiences.
+  social_image: https://internationalorange.com/cdn/shop/files/WEBSITE_facial.png?v=1686599403&width=1120
 venue:
   name: International Orange
   city: San Francisco
   slug: international-orange
+  id: international-orange
   subtitle: Editorial review, practical details, and booking context from Dip.
-  hero_image: "https://internationalorange.com/cdn/shop/files/WEBSITE_facial.png?v=1686599403&width=1120"
+  hero_image: https://internationalorange.com/cdn/shop/files/WEBSITE_facial.png?v=1686599403&width=1120
   neighborhood: Fillmore, San Francisco
+  address: "2044 Fillmore St, San Francisco, CA 94115"
   price: from $135
-  score: "7.8"
+  score: '7.8'
   date_reviewed: March 2026
   hours: Daily · By appointment
   best_for: Hammam steam ritual, skilled facial work, SF spa day off the tourist track, solo self-care.
-  website_url: "https://internationalorange.com/"
+  website_url: https://internationalorange.com/
   review: >-
-    International Orange has been a Fillmore fixture since 2002, which in San
-    Francisco wellness terms is practically geological. The hammam steam room
-    is the anchor — actual wet heat, argan oil body work, and a sequence that
-    feels traditional rather than branded. The facial practitioners are among
-    the best in the city, and the space has the calm of a place that earned
-    its reputation rather than purchasing it. Not the loudest option in SF,
-    which is the point.
+    International Orange has been a Fillmore fixture since 2002, which in San Francisco wellness terms is practically
+    geological. The hammam steam room is the anchor — actual wet heat, argan oil body work, and a sequence that feels
+    traditional rather than branded. The facial practitioners are among the best in the city, and the space has the calm
+    of a place that earned its reputation rather than purchasing it. Not the loudest option in SF, which is the point.
   gallery_images:
-    - "https://internationalorange.com/cdn/shop/files/WEBSITE_facial.png?v=1686599403&width=1120"
-    - "https://internationalorange.com/cdn/shop/files/WEB_massage.png?v=1686599200&width=1120"
-    - "https://internationalorange.com/cdn/shop/files/WEBSITE_ioe.png?v=1686599580&width=1120"
+    - https://internationalorange.com/cdn/shop/files/WEBSITE_facial.png?v=1686599403&width=1120
+    - https://internationalorange.com/cdn/shop/files/WEB_massage.png?v=1686599200&width=1120
+    - https://internationalorange.com/cdn/shop/files/WEBSITE_ioe.png?v=1686599580&width=1120
+  community_score: '4.6'
+  dip_index: '8.4'

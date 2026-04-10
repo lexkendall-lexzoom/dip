@@ -1,29 +1,33 @@
 seo:
-  title: "Esalen Institute Review: Hot Springs, Price, What to Know | Dip"
-  description: Dip review of Esalen Institute in Big Sur — cliffside natural hot spring baths open to the public 1–3am, one of the most singular bathing experiences in North America.
-  social_image: "https://cdn.prod.website-files.com/602d8561ae2fe6ec8347c903/694821f6e4ea152155821bfb_6941d327802703cecfad78e5_2026-Esalen_Cliffside_Emily-Miller-1500x775.jpeg"
+  title: 'Esalen Institute Review: Hot Springs, Price, What to Know | Dip'
+  description: >-
+    Dip review of Esalen Institute in Big Sur — cliffside natural hot spring baths open to the public 1–3am, one of the
+    most singular bathing experiences in North America.
+  social_image: 'https://cdn.prod.website-files.com/602d8561ae2fe611c947c905/6674cad71a42bd68fc875e17_Hero-Homepage-AliKaukas_DSC_4155-2000x1440.jpg'
 venue:
   name: Esalen Institute
   city: Los Angeles
   slug: esalen-institute
+  id: esalen-institute
   subtitle: Editorial review, practical details, and booking context from Dip.
-  hero_image: "https://cdn.prod.website-files.com/602d8561ae2fe6ec8347c903/694821f6e4ea152155821bfb_6941d327802703cecfad78e5_2026-Esalen_Cliffside_Emily-Miller-1500x775.jpeg"
+  hero_image: 'https://cdn.prod.website-files.com/602d8561ae2fe611c947c905/6674cad71a42bd68fc875e17_Hero-Homepage-AliKaukas_DSC_4155-2000x1440.jpg'
   neighborhood: Big Sur, California
+  address: "55000 CA-1, Big Sur, CA 93920"
   price: from $30
-  score: "9.5"
+  score: '9.5'
   date_reviewed: March 2026
   hours: Guests all day · Public access 1am–3am (reservation required)
   best_for: Cliffside soaking at night, Big Sur pilgrimage, solo retreat, anyone who wants the singular version of something.
-  website_url: "https://www.esalen.org"
+  website_url: https://www.esalen.org
   review: >-
-    The public bathing window at Esalen is 1am to 3am, which means you drive
-    Highway 1 in the dark, arrive at a famous counterculture institute on a
-    cliff above the Pacific, and lower yourself into a natural sulfur hot
-    spring with the ocean sixty feet below you. No phones allowed, nudity
-    standard, strangers become briefly intimate. The baths themselves are
-    modest — stone tubs, running mineral water, no amenities — but the
-    location and the hour make them one of the most irreplaceable bathing
-    experiences on the continent. Book weeks ahead. It fills completely.
+    The public bathing window at Esalen is 1am to 3am, which means you drive Highway 1 in the dark, arrive at a famous
+    counterculture institute on a cliff above the Pacific, and lower yourself into a natural sulfur hot spring with the
+    ocean sixty feet below you. No phones allowed, nudity standard, strangers become briefly intimate. The baths
+    themselves are modest — stone tubs, running mineral water, no amenities — but the location and the hour make them
+    one of the most irreplaceable bathing experiences on the continent. Book weeks ahead. It fills completely.
   gallery_images:
-    - "https://cdn.prod.website-files.com/602d8561ae2fe6ec8347c903/694821f6e4ea152155821bfb_6941d327802703cecfad78e5_2026-Esalen_Cliffside_Emily-Miller-1500x775.jpeg"
-    - "https://cdn.prod.website-files.com/602d8561ae2fe6ec8347c903/694b5f92365d31b75684c9dc_694072e84028cc62b428e514_2024-Esalen_Massage-Hands_Kodiak-Greenwood-1500x775.jpeg"
+    - 'https://cdn.prod.website-files.com/602d8561ae2fe611c947c905/6674cad71a42bd68fc875e17_Hero-Homepage-AliKaukas_DSC_4155-2000x1440.jpg'
+    - 'https://cdn.prod.website-files.com/602d8561ae2fe611c947c905/668442fcd8947935fd275dff_Hero-Homepage-Scholarship-Kodiak-Greenwood_MG_6138.jpg'
+    - 'https://cdn.prod.website-files.com/602d8561ae2fe6ec8347c903/6966d81339058366e7d796d8_6966b6ff0914c0ced57ba26e_2025-Esalen_water-forest-creek_Tim-Farrell-DSC_0180-1500x775.jpeg'
+  community_score: '4.8'
+  dip_index: '9.5'

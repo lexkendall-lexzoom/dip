@@ -1,29 +1,79 @@
 seo:
-  title: "QC NY Review: Price, Hours, What to Know | Dip"
-  description: Dip review of QC NY on Governors Island — 55,000 sq ft Italian thermal spa with infinity pools overlooking Manhattan. Pricing, hours, and who it is best for.
-  social_image: "https://www.qcny.com/wp-content/uploads/2023/05/qcny-outdoor-pool-skyline.jpg"
+  title: 'QC NY Review: Price, Hours, What to Know | Dip'
+  description: >-
+    Dip review of QC NY on Governors Island — 55,000 sq ft Italian thermal spa with infinity pools overlooking
+    Manhattan. Pricing, hours, and who it is best for.
+  social_image: 'https://ebookslanding.wpenginepowered.com/wp-content/uploads/2023/05/qcny-outdoor-pool-skyline.jpg'
 venue:
   name: QC NY
   city: New York City
   slug: qc-ny
+  id: qc-ny
   subtitle: Editorial review, practical details, and booking context from Dip.
-  hero_image: "https://www.qcny.com/wp-content/uploads/2023/05/qcny-outdoor-pool-skyline.jpg"
+  hero_image: https://www.qcny.com/wp-content/uploads/2023/05/qcny-outdoor-pool-skyline.jpg
   neighborhood: Governors Island, NYC
+  address: "112 Andes Rd, New York, NY 10004"
   price: from $98
-  score: "9.2"
+  score: '9.2'
+  community_score: '3.9'
   date_reviewed: March 2026
   hours: Sun–Thu 9am–10pm · Fri–Sat 9am–11pm (seasonal ferry required)
   best_for: Date night, full-day immersion, NYC skyline views, Italian thermal circuit.
-  website_url: "https://www.qcny.com"
+  website_url: https://www.qcny.com
   review: >-
-    QC NY is New York City's most transportive spa experience — an Italian
-    thermal sanctuary occupying 55,000 square feet of a Victorian military
-    barracks on Governors Island, with heated infinity pools that frame the
-    Lower Manhattan skyline in a way that feels almost impossibly cinematic.
-    The thermal circuit spans 20+ experiences: multi-themed saunas, infrared
-    beds, ice rooms, salt chambers, and Vichy showers, all arranged with the
-    unhurried logic of a QC Terme property. The ferry crossing is part of the
-    ritual. Admission includes robe, towel, locker, and sandals.
+    QC NY is New York City's most transportive spa experience — an Italian thermal sanctuary occupying 55,000 square
+    feet of a Victorian military barracks on Governors Island, with heated infinity pools that frame the Lower Manhattan
+    skyline in a way that feels almost impossibly cinematic. The thermal circuit spans 20+ experiences: multi-themed
+    saunas, infrared beds, ice rooms, salt chambers, and Vichy showers, all arranged with the unhurried logic of a QC
+    Terme property. The ferry crossing is part of the ritual. Admission includes robe, towel, locker, and sandals.
   gallery_images:
-    - "https://www.qcny.com/wp-content/uploads/2023/05/qcny-outdoor-pool-skyline.jpg"
-    - "https://www.qcny.com/wp-content/uploads/2023/05/qcny-sauna.jpg"
+    - "https://ebookslanding.wpenginepowered.com/wp-content/uploads/2023/05/qcny-outdoor-pool-skyline.jpg"
+    - "https://ebookslanding.wpenginepowered.com/wp-content/uploads/2023/05/qcny-sauna.jpg"
+    - "https://ebookslanding.wpenginepowered.com/wp-content/uploads/2023/05/qcny-spa-governors-island-pools1-scaled.jpg"
+  one_line_verdict: The most visually dramatic wellness experience in New York — a 55,000 sq ft Italian thermal spa with Manhattan skyline views that earns its destination status.
+  editorial_overview: |
+    QC NY operates on a different scale than anything else in the NYC wellness market. The Italian QC Terme group — which runs thermal spas inside the Colosseum, in Milan's historic baths, and across 24 European locations — brought their format to a Victorian military barracks on Governors Island in 2023. What they built is 55,000 square feet of thermal circuit: twenty-plus distinct experiences including multi-themed saunas, infrared stations, ice rooms, salt caves, Vichy showers, and the centerpiece heated infinity pools that frame the Lower Manhattan skyline from a distance that makes it feel unreal.
+
+    The ferry crossing to Governors Island is not incidental — it's the beginning of the experience. You are physically leaving New York City. By the time you arrive, the distance has already done work on your nervous system. The grounds are car-free. The pace slows.
+
+    The non-obvious insight about QC NY: the thermal circuit is genuinely comprehensive, but what people actually come for is the skyline. The outdoor infinity pool shot — Manhattan behind you, warm water around you — is one of the most photographed wellness moments in the city right now. That's partly why it's hard to book on weekends, and partly why it attracts a crowd that's as interested in the scenery as the circuit. The actual thermal work is excellent. The spectacle is what drives the demand.
+  vibe: Elevated and destination-oriented. A mix of couples treating this as a special occasion and wellness enthusiasts who came for the full circuit. The Italian hospitality model means staff interaction is warm rather than clinical. Lingering is encouraged.
+  facility_breakdown: 20+ distinct thermal stations across indoor and outdoor areas. The outdoor infinity pools are the headline but the indoor circuit is equally complete — themed sauna rooms, a proper ice room, multiple steam environments, salt cave, and relaxation areas with thoughtful design. Robe, towel, sandals, and locker included in admission. Food and drink options are available on-site and priced at Italian hospitality standards.
+  pros:
+    - Most dramatic visual setting of any NYC wellness venue — the skyline views are legitimately extraordinary
+    - Thermal circuit breadth is unmatched — 20+ experiences gives real exploration variety
+    - Included robe, towel, and sandals simplifies the logistics
+    - Ferry crossing creates psychological separation from the city
+    - Italian hospitality training shows in service quality
+  cons:
+    - Seasonal accessibility — ferry schedule limits winter and off-peak access
+    - Booking is genuinely difficult on weekends (book 2+ weeks ahead)
+    - The spectacle can feel performative — it's not a quiet meditative space
+    - Premium pricing ($98+) for what is, at its core, a thermal circuit
+  not_ideal_for: People who want a quiet contemplative session without crowds, winter visitors (ferry service is limited), anyone on a tight schedule.
+  pro_move: Book the earliest weekday morning slot available. The infinity pool at 9am with Manhattan waking up in the distance and no other guests in the water is the best single moment available in NYC wellness.
+  value_read: At $98 for a full day with all inclusions, QC NY is priced fairly against what it delivers. Compared to a dinner reservation or a hotel spa, the value is clear. The ferry logistics add a minor premium in planning time but that's part of what makes the experience distinct.
+  scene_summary: QC NY is currently the most aspirational thermal venue in New York — the one people recommend when they want to show someone the best the city has to offer. The Governors Island location creates genuine separation from the urban grind. The skyline views drive a significant content-creation culture among guests. It competes with hotel spa experiences and high-end restaurant evenings for the same occasion budget.
+  crowd_profile: 28–50, couple-dominant, mix of NYC professionals and tourists who planned specifically for this. Wellness enthusiasts who want the full thermal circuit alongside more casual visitors drawn by the views. Influencer presence is moderate to high — the outdoor pool is a content moment. Overall energy is celebratory rather than contemplative.
+  time_of_day_dynamics: Morning sessions are the hidden gem — uncrowded, full circuit access, skyline at dawn. Midday to afternoon is peak social energy. Evening sessions have a romantic quality as Manhattan lights up. Weekends are capacity-full by late morning. The ferry schedule dictates session windows more than traditional open/close hours.
+  popularity_trend: peak
+  booking_difficulty: Hard on weekends — book 10–14 days ahead minimum. Weekday slots available 5–7 days out. Walk-in is not realistic on any weekend day.
+  social_energy_level: 6
+  laptop_free_vibe: true
+  influencer_density: high
+  repeat_vs_tourist_mix: Roughly 40% repeat visitors (NYC residents who've made it a seasonal ritual), 60% first-timers, tourists, and occasion visitors. The tourist-to-regular balance is higher here than at most NYC venues due to the destination nature of the experience.
+  dip_scores:
+    facilities_ritual: 9.5
+    design_atmosphere: 9.5
+    social_energy: 6.0
+    recovery_value: 8.5
+    service_flow: 9.0
+    overall_dip_score: 9.2
+  audience_sentiment_snapshot: >-
+    Overwhelmingly positive across all platforms. The most common praise: the views, the scale, the ferry ritual. The most common complaint: booking difficulty and weekend crowds at the outdoor pools. Consistent mentions in "best of NYC" wellness lists across press outlets. Instagram content from the outdoor infinity pool drives a significant portion of new bookings.
+  editorial_last_updated: '2026-04-05'
+  source_urls:
+    - https://www.qcny.com
+    - https://www.yelp.com/biz/qc-ny-new-york
+    - https://www.google.com/maps/place/QC+NY
+  confidence_level: high
