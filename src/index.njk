@@ -64,11 +64,11 @@ html{scroll-behavior:smooth;max-width:100%;overflow-x:hidden}
 body{background:var(--page);color:var(--ink);font-family:var(--font-sans);overflow-x:hidden;max-width:100%;font-size-adjust:.52}
 main{max-width:100%;overflow-x:hidden}
 @supports not (font-size-adjust:1){body{font-size-adjust:none}}
-.h-sub,.cap-t,.crev,.cc-sub,.cs-s,.cop-when,.cscore-n{font-size-adjust:.48}
+.h-sub,.cap-t,.cc-sub,.cs-s,.cop-when,.cscore-n{font-size-adjust:.48}
 
 /* NAV */
 nav{position:sticky;top:0;z-index:400;display:flex;align-items:center;justify-content:space-between;padding:0 44px;height:60px;background:var(--page);border-bottom:2px solid var(--ink)}
-.logo{text-decoration:none;font-family:var(--font-sans);font-size:27.456px;font-weight:800;letter-spacing:-.02em;color:var(--ink);display:inline-flex;align-items:center;line-height:1;text-rendering:geometricPrecision;-webkit-font-smoothing:antialiased}
+.logo{text-decoration:none;font-family:var(--font-sans);font-size:37px;font-weight:800;letter-spacing:-.02em;color:var(--ink);display:inline-flex;align-items:center;line-height:1;text-rendering:geometricPrecision;-webkit-font-smoothing:antialiased}
 .logo span{color:var(--teal)}
 .nav-r{display:flex;align-items:center;gap:28px}
 .nav-links{display:flex;align-items:stretch;gap:24px;list-style:none;height:100%}
@@ -93,7 +93,7 @@ nav{position:sticky;top:0;z-index:400;display:flex;align-items:center;justify-co
 .hero{padding:60px 44px 52px;max-width:1280px;margin:0 auto;display:grid;grid-template-columns:1.1fr .9fr;gap:60px;align-items:start}
 .h-ey{font-size:10px;letter-spacing:.26em;text-transform:uppercase;color:var(--teal);margin-bottom:16px;display:flex;align-items:center;gap:10px}
 .h-ey::before{content:'';width:20px;height:2px;background:var(--teal)}
-.h-title{font-family:var(--font-sans);font-size:clamp(35.2px,4.4vw,60.8px);font-weight:800;line-height:.94;letter-spacing:-.03em;color:var(--ink);margin-bottom:20px}
+.h-title{font-family:var(--font-sans);font-size:clamp(31px,3.9vw,54px);font-weight:800;line-height:.94;letter-spacing:-.03em;color:var(--ink);margin-bottom:20px}
 .h-title span{color:var(--teal)}
 .h-sub{font-family:var(--font-serif);font-size:17px;font-style:italic;line-height:1.65;color:#555;max-width:420px;margin-bottom:32px}
 .capture{background:var(--ink);padding:22px}
@@ -129,7 +129,7 @@ nav{position:sticky;top:0;z-index:400;display:flex;align-items:center;justify-co
 .city-nav::-webkit-scrollbar{height:3px}
 .city-nav::-webkit-scrollbar-thumb{background:var(--teal)}
 .city-tabs{display:inline-flex;gap:0;padding:0}
-.ctab{padding:14px 22px;border:none;border-right:1px solid var(--mist);background:transparent;font-family:var(--font-sans);font-size:12px;font-weight:700;letter-spacing:.06em;color:var(--stone);cursor:pointer;transition:all .18s;white-space:nowrap}
+.ctab{padding:14px 22px;border:none;border-right:1px solid var(--mist);background:transparent;font-family:var(--font-sans);font-size:12px;font-weight:700;letter-spacing:.06em;line-height:1.2;font-size-adjust:none;color:var(--stone);cursor:pointer;transition:all .18s;white-space:nowrap}
 .ctab:hover{color:var(--ink);background:rgba(11,124,120,.06)}
 .ctab.on{background:var(--teal);color:#fff;border-color:var(--teal)}
 .ctab.cs{opacity:.45;cursor:default;font-weight:400;font-style:italic}
@@ -167,7 +167,7 @@ nav{position:sticky;top:0;z-index:400;display:flex;align-items:center;justify-co
 .fbar{position:sticky;top:60px;z-index:300;background:var(--page);border-top:2px solid var(--ink);border-bottom:2px solid var(--ink);padding:11px 44px;display:flex;align-items:center;gap:16px}
 .fl-lbl{font-size:9px;letter-spacing:.22em;text-transform:uppercase;color:var(--stone);white-space:nowrap;flex-shrink:0;font-weight:700}
 .fbtns{display:flex;gap:5px;flex-wrap:wrap}
-.fb{padding:5px 13px;border:1.5px solid var(--mist);background:transparent;font-family:var(--font-sans);font-size:11px;font-weight:700;letter-spacing:.06em;color:var(--stone);cursor:pointer;transition:all .18s}
+.fb{padding:5px 13px;border:1.5px solid var(--mist);background:transparent;font-family:var(--font-sans);font-size:11px;font-weight:700;letter-spacing:.06em;line-height:1.2;color:var(--stone);cursor:pointer;transition:all .18s}
 .fb:hover,.fb.on{background:var(--ink);color:#fff;border-color:var(--ink)}
 .fb.ub.on{background:var(--warm);border-color:var(--warm)}
 .fcnt{margin-left:auto;font-size:10px;color:var(--stone);white-space:nowrap;font-weight:700}
@@ -230,6 +230,7 @@ nav{position:sticky;top:0;z-index:400;display:flex;align-items:center;justify-co
 
 /* VENUE CARDS */
 .vcard{display:flex;margin-bottom:2px;background:var(--card);border:2px solid var(--ink);transition:box-shadow .25s,transform .25s;position:relative}
+a.vcard{text-decoration:none;color:inherit}
 .vcard:hover{box-shadow:6px 6px 0 var(--ink);transform:translate(-2px,-2px)}
 .vcard.flash{animation:fl .8s ease}
 @keyframes fl{0%,100%{background:#fff}40%,60%{background:#eaf4f3}}
@@ -262,8 +263,6 @@ nav{position:sticky;top:0;z-index:400;display:flex;align-items:center;justify-co
 .cgf{display:flex;flex-wrap:wrap;gap:4px;margin:9px 0}
 .gft{font-size:9px;letter-spacing:.09em;text-transform:uppercase;color:var(--teal-d);background:var(--teal-bg);padding:3px 8px;font-weight:700;border:1px solid rgba(11,124,120,.12)}
 .gft.w{color:#7a5c20;background:#f5ecd8;border-color:rgba(196,154,74,.18)}
-.crev{font-family:var(--font-serif);font-size:14px;font-style:italic;line-height:1.7;color:#333;margin-bottom:12px;flex:1}
-.crev::before{content:'\201C';font-size:28px;color:var(--teal);line-height:0;vertical-align:-.22em;margin-right:2px;font-style:normal}
 .cfoot{display:flex;align-items:center;justify-content:space-between;padding-top:11px;border-top:1px solid var(--mist);gap:8px}
 .cprice{font-family:var(--font-sans);font-size:15px;font-weight:800;color:var(--ink)}
 .cprice small{font-size:10px;font-weight:400;color:var(--stone);margin-left:2px}
@@ -308,6 +307,15 @@ nav{position:sticky;top:0;z-index:400;display:flex;align-items:center;justify-co
 .cs-form button{padding:13px 15px;background:var(--teal);color:#fff;border:none;font-family:var(--font-sans);font-size:10px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;cursor:pointer;transition:background .2s}
 .cs-form button:hover{background:var(--teal-d)}
 .cs-note{font-size:10px;color:rgba(255,255,255,.17);margin-top:9px}
+/* SCORING EXPLAINER */
+.scoring-explainer{border-top:2px solid var(--ink);margin-top:52px;padding:52px 44px}
+.scoring-inner{max-width:700px;margin:0 auto}
+.scoring-title{font-family:var(--font-sans);font-size:13px;font-weight:800;letter-spacing:.22em;text-transform:uppercase;color:var(--teal);margin-bottom:20px}
+.scoring-body{font-family:var(--font-serif);font-size:15px;font-style:italic;line-height:1.75;color:#555;margin-bottom:10px}
+.scoring-body strong{font-style:normal;color:var(--ink)}
+.scoring-list{font-family:var(--font-serif);font-size:15px;font-style:italic;line-height:1.75;color:#555;margin:4px 0 12px 0;padding-left:18px}
+.scoring-list li{margin-bottom:4px}
+.scoring-list strong{font-style:normal;color:var(--ink)}
 
 footer{background:var(--ink);border-top:1px solid rgba(255,255,255,.08);padding:22px 44px;display:flex;justify-content:space-between;align-items:center}
 .fc{font-size:11px;color:rgba(255,255,255,.2)}
@@ -324,8 +332,11 @@ footer{background:var(--ink);border-top:1px solid rgba(255,255,255,.08);padding:
 .search-title{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--stone);font-weight:700}
 .search-note{font-size:12px;color:#666}
 .search-form{display:flex;gap:10px}
-.search-input{flex:1;padding:12px 14px;border:2px solid var(--ink);font-family:var(--font-sans);font-size:14px;outline:none}
+.search-input-wrap{position:relative;flex:1;display:flex}
+.search-input{flex:1;padding:12px 38px 12px 14px;border:2px solid var(--ink);font-family:var(--font-sans);font-size:14px;outline:none}
 .search-input:focus{border-color:var(--teal)}
+.search-clear{position:absolute;right:10px;top:50%;transform:translateY(-50%);background:none;border:none;color:#999;font-size:15px;cursor:pointer;line-height:1;padding:4px 6px;display:none;align-items:center;justify-content:center}
+.search-clear:hover{color:var(--ink)}
 .search-btn{padding:12px 16px;border:none;background:var(--teal);color:#fff;font-size:10px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;cursor:pointer;white-space:nowrap}
 .search-btn[disabled]{opacity:.7;cursor:wait}
 .search-status{margin-top:10px;font-size:12px;color:#555}
@@ -340,20 +351,145 @@ footer{background:var(--ink);border-top:1px solid rgba(255,255,255,.08);padding:
 .search-tag{font-size:10px;letter-spacing:.08em;text-transform:uppercase;padding:4px 6px;background:#fff;border:1px solid #cdd8d7;color:#466}
 .search-link{font-size:11px;color:var(--teal);text-decoration:none;font-weight:700}
 
-@media(max-width:900px){
-  .hero{grid-template-columns:1fr;padding:72px 22px 40px;gap:36px}
-  .search-wrap{padding:0 18px 18px}
-  .search-form{flex-direction:column}
+/* ── MOBILE SHEET + DISCOVERY: hidden by default, active on mobile ── */
+.m-sheet{display:none;position:fixed;inset:0;z-index:1000}
+.m-disc{display:none}
+.m-hero-cta-row{display:none}
+.m-search-bar{display:none}
 
+@media(max-width:900px){
+  /* ── Nav ── */
+  nav{padding:0 18px}
+  .nav-links{display:none}
+
+  /* ── Hero: compact, no inline email box ── */
+  .hero{grid-template-columns:1fr;padding:40px 18px 24px;gap:0}
   .hero-right-col{display:none}
-  nav{padding:0 18px}.nav-links{display:none}
-  .map-wrap,.dir,.fbar{padding-left:18px;padding-right:18px}
-  .fbar{position:static;top:auto}
-  .vcard{flex-direction:column}.cimg{width:100%;height:180px}
-  .cs-in{grid-template-columns:1fr;gap:32px}.cs{padding:48px 18px}
-  footer{padding:18px;flex-direction:column;gap:12px}
+  .h-ey{margin-bottom:10px}
+  .h-title{font-size:38px;line-height:.96;margin-bottom:10px}
+  .h-sub{font-size:14px;margin-bottom:14px;max-width:none}
+  .capture{display:none}
+  .m-hero-cta-row{display:block}
+  .m-hero-notify{font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:var(--teal);font-weight:700;text-decoration:none;display:inline-flex;align-items:center;gap:5px}
+  .m-hero-notify:hover{color:var(--teal-d)}
+
+  /* ── Search: hidden inline, lives in sheet on mobile ── */
+  .search-wrap{display:none}
+  .m-search-bar{
+    display:flex;align-items:center;gap:10px;
+    width:100%;padding:10px 18px;
+    background:var(--page);border:none;
+    border-top:2px solid var(--ink);border-bottom:2px solid var(--ink);
+    cursor:pointer;font-family:var(--font-sans);transition:background .15s
+  }
+  .m-search-bar:hover,.m-search-bar:active{background:rgba(11,124,120,.06)}
+  .m-search-bar-txt{flex:1;font-size:13px;color:var(--stone);text-align:left}
+  /* Search panel styling inside the sheet */
+  #m-ssheet-body .search-panel{border:none;box-shadow:none;padding:0;background:transparent}
+  #m-ssheet-body .search-head{display:flex;margin-bottom:14px}
+  #m-ssheet-body .search-form{flex-direction:column;gap:10px}
+  #m-ssheet-body .search-input{font-size:15px;padding:12px 38px 12px 14px}
+  #m-ssheet-body .search-btn{padding:13px 16px;font-size:11px;width:100%}
+  #m-ssheet-body .search-results{margin-top:16px}
+
+  /* ── City nav ── */
+  .city-nav{height:37px;overflow-x:auto;overflow-y:hidden}
+  .city-tabs{height:33px}
+  .ctab{height:33px;padding:0 16px;font-size:11px;display:flex;align-items:center}
+  #city-guide-link{display:none}
+
+  /* ── Discovery bar (map / filter / mood) ── */
+  .m-disc{
+    display:flex;position:sticky;top:60px;z-index:290;
+    background:var(--page);border-top:2px solid var(--ink);border-bottom:2px solid var(--ink);
+    align-items:stretch
+  }
+  .m-disc-btn{
+    flex:1;display:flex;align-items:center;justify-content:center;gap:5px;
+    padding:11px 8px;border:none;border-right:1px solid var(--mist);
+    background:transparent;font-family:var(--font-sans);font-size:11px;
+    font-weight:700;letter-spacing:.05em;color:var(--stone);cursor:pointer;transition:all .18s;white-space:nowrap
+  }
+  .m-disc-btn:last-child{border-right:none}
+  .m-disc-btn:hover{background:rgba(11,124,120,.06);color:var(--ink)}
+  .m-disc-btn.m-active{background:var(--ink);color:#fff}
+  .m-disc-btn.m-map-on{background:var(--teal);color:#fff}
+  .m-disc-badge{
+    display:inline-flex;align-items:center;justify-content:center;
+    min-width:16px;height:16px;padding:0 4px;
+    background:var(--teal);color:#fff;font-size:9px;font-weight:800;border-radius:8px;line-height:1
+  }
+  .m-disc-btn.m-active .m-disc-badge{background:rgba(255,255,255,.28);color:#fff}
+
+  /* ── Map: hidden by default on mobile, toggled ── */
+  .map-wrap{display:none}
+  .map-wrap.m-show{display:block;padding:0 18px 16px}
+  #mapbox{height:260px}
+
+  /* ── Hide desktop-only elements ── */
+  .fbar{display:none!important}
+  .pf-wrap{display:none!important}
+
+  /* ── Directory ── */
+  .dir{padding:0}
+  .vcard{flex-direction:column;margin-bottom:0;border-left:none;border-right:none;border-top:2px solid var(--ink);border-bottom:none}
+  .vcard:hover{box-shadow:none;transform:none}
+  .cimg{width:100%;height:200px;aspect-ratio:auto;flex-shrink:0}
+  .cbody{padding:16px 18px}
+  .cname{font-size:20px}
+  #occ-banner{padding:12px 18px!important}
+
+  /* ── Bottom sheet ── */
+  .m-sheet{display:block;visibility:hidden;pointer-events:none}
+  .m-sheet.open{visibility:visible;pointer-events:auto}
+  .m-sheet-bd{position:absolute;inset:0;background:rgba(0,0,0,0);transition:background .28s}
+  .m-sheet.open .m-sheet-bd{background:rgba(0,0,0,.48)}
+  .m-sheet-p{
+    position:absolute;bottom:0;left:0;right:0;
+    background:var(--page);border-top:2px solid var(--ink);
+    transform:translateY(100%);transition:transform .3s cubic-bezier(.4,0,.2,1);
+    max-height:80vh;display:flex;flex-direction:column;overflow:hidden
+  }
+  .m-sheet.open .m-sheet-p{transform:translateY(0)}
+  .m-sheet-pull{width:36px;height:4px;background:var(--mist);border-radius:2px;margin:10px auto 0;flex-shrink:0}
+  .m-sheet-hr{display:flex;align-items:center;justify-content:space-between;padding:12px 18px;border-bottom:1px solid var(--mist);flex-shrink:0}
+  .m-sheet-t{font-size:10px;letter-spacing:.22em;text-transform:uppercase;font-weight:800;color:var(--ink)}
+  .m-sheet-x{background:none;border:none;color:var(--stone);cursor:pointer;font-size:18px;padding:0;line-height:1;font-family:var(--font-sans)}
+  .m-sheet-x:hover{color:var(--ink)}
+  .m-sheet-body{overflow-y:auto;padding:20px 18px 40px;-webkit-overflow-scrolling:touch;flex:1}
+
+  /* Filter sheet internals */
+  .m-fs-section{margin-bottom:20px}
+  .m-fs-lbl{font-size:9px;letter-spacing:.22em;text-transform:uppercase;color:var(--stone);font-weight:700;margin-bottom:10px;display:block}
+  .m-fs-btns{display:flex;gap:6px;flex-wrap:wrap}
+  .m-fs-btns .fb{font-size:12px;padding:8px 14px}
+
+  /* Mood sheet grid */
+  .m-pf-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+  .m-pf-grid .pf-card{min-width:0;padding:16px 12px}
+  .m-pf-grid .pf-card-name{font-size:12px}
+  .m-pf-grid .pf-card-sub{font-size:9px}
+  .m-pf-clear{
+    grid-column:1/-1;padding:12px;
+    border:1.5px dashed var(--mist);background:transparent;
+    font-family:var(--font-sans);font-size:11px;font-weight:700;
+    color:var(--stone);cursor:pointer;transition:all .18s;display:none;width:100%
+  }
+  .m-pf-clear:hover{border-color:var(--ink);color:var(--ink)}
+  .m-pf-clear.vis{display:block}
+
+  /* ── City header row (dynamically generated inline styles) ── */
+  .city-hdr-row h2{font-size-adjust:none!important;white-space:nowrap!important;font-size:10px!important;line-height:1.2!important}
+  .city-hdr-row span{font-size-adjust:none!important;font-size:10px!important;white-space:nowrap}
+  .city-hdr-row{margin-bottom:16px!important;flex-wrap:nowrap}
+
+  /* ── Bottom sections ── */
+  .scoring-explainer{padding:28px 18px;margin-top:0}
+  .cs{padding:40px 18px}
+  .cs-in{grid-template-columns:1fr;gap:28px}
+  footer{padding:16px 18px;flex-direction:column;gap:10px}
 }
-@media(max-width:600px){.h-title{font-size:41.6px}}
+@media(max-width:600px){.h-title{font-size:36px}}
 </style>
 </head>
 <body>
@@ -369,7 +505,7 @@ footer{background:var(--ink);border-top:1px solid rgba(255,255,255,.08);padding:
         <div class="venues-menu" id="venues-menu" role="menu" aria-label="Venue pages for current city"></div>
       </li>
     </ul>
-    <a href="#cs" class="nav-cta">Get Notified</a>
+    <a href="#cs" class="nav-cta">Join the List</a>
   </div>
 </nav>
 
@@ -389,6 +525,9 @@ footer{background:var(--ink);border-top:1px solid rgba(255,255,255,.08);padding:
       </form>
       <p class="cap-n">Free. One email. Unsubscribe any time.</p>
     </div>
+    <div class="m-hero-cta-row">
+      <a href="#cs" class="m-hero-notify">Get notified of new openings →</a>
+    </div>
   </div>
   <div class="hero-right-col">
     <div class="h-stats">
@@ -405,10 +544,13 @@ footer{background:var(--ink);border-top:1px solid rgba(255,255,255,.08);padding:
   <section class="search-panel" aria-label="Dip search">
     <div class="search-head">
       <p class="search-title">Search DipDays</p>
-      <p class="search-note">Try: “cold plunge in Manhattan”</p>
+      <span class="search-note">Try: “cold plunge in Manhattan”</span>
     </div>
     <form class="search-form" id="search-form">
-      <input id="search-input" class="search-input" type="text" placeholder="Search for “cold plunge in Manhattan”" autocomplete="off" />
+      <div class="search-input-wrap">
+        <input id="search-input" class="search-input" type="text" placeholder='Search for “cold plunge in Manhattan”' autocomplete="off" />
+        <button type="button" id="search-clear" class="search-clear" aria-label="Clear search">✕</button>
+      </div>
       <button id="search-submit" class="search-btn" type="submit">Search</button>
     </form>
     <p id="search-status" class="search-status" role="status" aria-live="polite"></p>
@@ -416,11 +558,36 @@ footer{background:var(--ink);border-top:1px solid rgba(255,255,255,.08);padding:
   </section>
 </div>
 
+<!-- MOBILE SEARCH TRIGGER -->
+<button class="m-search-bar" onclick="mOpenSearchSheet()" id="m-search-bar" aria-haspopup="dialog" aria-label="Search venues">
+  <svg width="15" height="15" viewBox="0 0 15 15" fill="none" aria-hidden="true"><circle cx="6.5" cy="6.5" r="5" stroke="currentColor" stroke-width="1.5"/><path d="M11 11L14 14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+  <span class="m-search-bar-txt">Search bathhouses, saunas...</span>
+  <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M4.5 2L8.5 6L4.5 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</button>
+
 <!-- CITY NAVIGATION -->
 <div class="city-nav" id="city-nav">
   <div class="city-tabs" id="city-tabs"></div>
 </div>
-<p style="max-width:1280px;margin:14px auto 0;padding:0 44px;font-size:12px;color:#555"><span id="cms-cities-cta-prefix">Prefer city-specific pages?</span> <a href="/cities/" style="color:#0b7c78;font-weight:700">Browse all Dip city guides →</a></p>
+<p id="city-guide-link" style="max-width:1280px;margin:14px auto 0;padding:0 44px;font-size:12px;color:#555"><span id="cms-cities-cta-prefix">Prefer city-specific pages?</span> <a href="/cities/" style="color:#0b7c78;font-weight:700">Browse all Dip city guides →</a></p>
+
+<!-- MOBILE DISCOVERY BAR -->
+<div class="m-disc" id="m-disc" role="toolbar" aria-label="Discovery controls">
+  <button class="m-disc-btn" id="m-map-btn" onclick="mToggleMap()" aria-pressed="false">
+    <svg width="13" height="13" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M1 2.5L5 1l4 2 4-1.5v10L9 13l-4-2-4 1.5V2.5z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round" fill="none"/><path d="M5 1v10M9 3v10" stroke="currentColor" stroke-width="1.4"/></svg>
+    Map
+  </button>
+  <button class="m-disc-btn" id="m-filter-btn" onclick="mOpenSheet('m-fsheet')" aria-haspopup="dialog">
+    <svg width="13" height="13" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M1 3h12M3 7h8M5 11h4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+    Filter
+    <span class="m-disc-badge" id="m-filter-badge" style="display:none" aria-hidden="true"></span>
+  </button>
+  <button class="m-disc-btn" id="m-mood-btn" onclick="mOpenSheet('m-msheet')" aria-haspopup="dialog">
+    <svg width="13" height="13" viewBox="0 0 14 14" fill="none" aria-hidden="true"><circle cx="7" cy="7" r="5.5" stroke="currentColor" stroke-width="1.4"/><path d="M4.5 8.5c.5 1 4 1 5 0" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/><circle cx="5" cy="5.5" r=".8" fill="currentColor"/><circle cx="9" cy="5.5" r=".8" fill="currentColor"/></svg>
+    Mood
+    <span class="m-disc-badge" id="m-mood-badge" style="display:none" aria-hidden="true"></span>
+  </button>
+</div>
 
 <!-- MAP -->
 <div class="map-wrap">
@@ -509,18 +676,33 @@ footer{background:var(--ink);border-top:1px solid rgba(255,255,255,.08);padding:
     {% for item in venues %}
     {% if item.citySlug == 'new-york-city' %}
       {%- set sv = item.venue -%}
-      <article class="vcard" data-detail-url="/{{ item.citySlug }}/{{ sv.slug | default(item.fileSlug) }}/">
+      {%- set detailUrl = "/"+ item.citySlug +"/"+ (sv.slug | default(item.fileSlug)) +"/" -%}
+      {%- set heroImg = sv.hero_image | default('') -%}
+      <article class="vcard" data-detail-url="{{ detailUrl }}">
+        <div class="cimg" onclick="window.location.href='{{ detailUrl }}'" style="cursor:pointer">
+          {% if heroImg %}
+            <img
+              src="{{ heroImg | assetUrl }}"
+              alt="{{ sv.name }}"
+              loading="lazy"
+              decoding="async"
+              width="500"
+              height="350"
+              sizes="240px"
+              onerror="this.style.display='none';this.parentElement.style.background='var(--mist)'"
+            />
+          {% endif %}
+        </div>
         <div class="cbody">
           <div class="ctop">
             <div>
               <p class="chood">{{ sv.neighborhood | default('New York City') }}</p>
-              <h2 class="cname">{{ sv.name }}</h2>
+              <h2 class="cname"><a href="{{ detailUrl }}" style="color:inherit;text-decoration:none">{{ sv.name }}</a></h2>
             </div>
           </div>
-          {% if sv.review %}<p class="crev">{{ sv.review }}</p>{% endif %}
           <div class="cfoot">
             <span class="cprice">{{ sv.price | default('See details') }}</span>
-            <a class="cvisit" href="/{{ item.citySlug }}/{{ sv.slug | default(item.fileSlug) }}/">Dip Review &rarr;</a>
+            <a class="cvisit" href="{{ detailUrl }}">Dip Review &rarr;</a>
           </div>
         </div>
       </article>
@@ -528,6 +710,25 @@ footer{background:var(--ink);border-top:1px solid rgba(255,255,255,.08);padding:
     {% endfor %}
   </div>
 </div>
+
+<!-- ABOUT SCORING -->
+<section class="scoring-explainer">
+  <div class="scoring-inner">
+    <h2 class="scoring-title">How Dip Scoring Works</h2>
+    <p class="scoring-body">Dip uses a blended scoring system to help you quickly understand the quality of a bathhouse.</p>
+    <p class="scoring-body">The <strong>Dip Index</strong> is our primary score. It combines:</p>
+    <ul class="scoring-list">
+      <li>Our editorial review, based on firsthand visits</li>
+      <li>Community ratings aggregated from trusted sources</li>
+    </ul>
+    <p class="scoring-body">This gives a more complete view, balancing expert perspective with real-world sentiment.</p>
+    <p class="scoring-body">On each venue page, you can also see:</p>
+    <ul class="scoring-list">
+      <li><strong>Our Review</strong> — Dip's editorial score</li>
+      <li><strong>Community</strong> — aggregated guest ratings</li>
+    </ul>
+  </div>
+</section>
 
 <!-- COMING SOON STRIP -->
 <section class="cs" id="cs">
@@ -679,7 +880,7 @@ const CITIES = {
        hours:'Mon-Fri 7am-11pm · Sat-Sun 8am-11pm',
        url:'https://www.lorebathingclub.com',
        lat:40.7273,lng:-73.9930,
-       img:'https://images.unsplash.com/photo-1584650000082-7e6c78f17b4a?w=500&h=350&fit=crop&q=80'},
+       img:'https://cdn.prod.website-files.com/682939c2f8a0c33aaa289209/682939c2f8a0c33aaa289234_hero_left.webp'},
 
       {id:'nyc12',num:13,name:'QC NY Spa',hood:'Governors Island, Manhattan',type:'bathhouse',price:'from $98',score:8.4,
        gf:['Luxury circuit','Skyline views','Steam + thermal'],
@@ -687,7 +888,7 @@ const CITIES = {
        hours:'Daily · Reservation recommended',
        url:'https://www.qcny.com',
        lat:40.6886,lng:-74.0186,
-       img:'https://images.unsplash.com/photo-1551882547-ff40c63fe2e2?w=500&h=350&fit=crop&q=80'},
+       img:'https://offloadmedia.feverup.com/secretnyc.co/wp-content/uploads/2022/03/25093457/qcpool.jpg'},
 
       {id:'nyc13',num:14,name:'Brooklyn Banya',hood:'Sheepshead Bay, Brooklyn',type:'bathhouse',price:'from $60',score:7.9,
        gf:['Traditional banya','Steam room','Cold plunge'],
@@ -695,7 +896,7 @@ const CITIES = {
        hours:'Daily · Check schedule',
        url:'https://www.brooklynbanya.com',
        lat:40.5858,lng:-73.9541,
-       img:'https://images.unsplash.com/photo-1527637040694-60b17b13f9df?w=500&h=350&fit=crop&q=80'},
+       img:'https://brooklynbanya.wordpress.com/wp-content/uploads/2014/04/brooklyn-banya-bath-house-2.jpg'},
 
       {id:'nyc14',num:15,name:'Mermaid Spa',hood:'Brighton Beach, Brooklyn',type:'bathhouse',price:'from $50',score:7.7,
        gf:['Classic Russian steam','Under $60','Neighborhood staple'],
@@ -703,7 +904,7 @@ const CITIES = {
        hours:'Daily · Call ahead',
        url:'https://www.mermaidspa.us',
        lat:40.5762,lng:-73.9653,
-       img:'https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=500&h=350&fit=crop&q=80'},
+       img:'https://mermaidspa.us/wp-content/uploads/2022/12/photo_2022-12-10_21-10-39.jpg'},
 
       {id:'nyc15',num:16,name:'Wall Street Bath & Spa',hood:'Financial District, Manhattan',type:'bathhouse',price:'from $55',score:7.8,
        gf:['Russian sauna','Steam','Downtown option'],
@@ -711,7 +912,7 @@ const CITIES = {
        hours:'Daily · Session-based',
        url:'https://spa88.com',
        lat:40.7075,lng:-74.0108,
-       img:'https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=500&h=350&fit=crop&q=80'},
+       img:'https://static.tildacdn.net/tild3830-3433-4435-b338-366661333666/88ba91d3-34c3-4622-8.png'},
 
       {id:'nyc16',num:17,name:'CityWell Brooklyn',hood:'Williamsburg, Brooklyn',type:'spa',price:'from $65',score:8.0,
        gf:['Neighborhood spa','Outdoor tubs','Quiet reset'],
@@ -735,7 +936,7 @@ const CITIES = {
        hours:'Daily · Check schedule',
        url:'https://bathclubny.com',
        lat:40.6207,lng:-73.9586,
-       img:'https://images.unsplash.com/photo-1519823551278-64ac92734fb1?w=500&h=350&fit=crop&q=80'},
+       img:''},
 
       {id:'nyc19',num:20,name:'King Spa',hood:'Palisades Park, NJ',type:'korean',price:'from $80',score:8.1,
        gf:['Jjimjilbang day','Korean spa','Group-friendly'],
@@ -743,7 +944,7 @@ const CITIES = {
        hours:'Daily · Day pass',
        url:'https://thekingspanj.com',
        lat:40.8461,lng:-73.9943,
-       img:'https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=500&h=350&fit=crop&q=80'},
+       img:'https://thekingspanj.com/cdn/shop/files/245504763_666970704238857_5608379035612468795_n.jpg?v=1689879344&width=1500'},
 
       {id:'nyc20',num:21,name:'Recoverie',hood:'NoHo, Manhattan',type:'spa',price:'from $45',score:8.0,
        gf:['Recovery studio','Contrast sessions','Guided protocols'],
@@ -751,7 +952,7 @@ const CITIES = {
        hours:'Daily · By appointment',
        url:'https://www.recoverienyc.com',
        lat:40.7290,lng:-73.9926,
-       img:'https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=500&h=350&fit=crop&q=80'},
+       img:'https://lirp.cdn-website.com/42e1ce53/dms3rep/multi/opt/Group+5634-6746f48f-1920w.png'},
     ],
     upcoming:[
       {id:'nycu1',num:12,name:'Schwet',hood:'Tribeca, Manhattan',type:'upcoming',price:'$150 / 2.5 hrs',score:null,
@@ -789,7 +990,7 @@ const CITIES = {
        hours:'Upper East Side, Manhattan',
        url:'https://www.instagram.com/othership/',
        lat:40.7738,lng:-73.9580,
-       img:'https://images.unsplash.com/photo-1574482620816-c13b8b19f7d1?w=500&h=350&fit=crop&q=80'},
+       img:'https://cdn.prod.website-files.com/67c208983c2848098aa364f1/683e3fec9b02873351d4e675_othership-relaxing-sauna-group-session.webp'},
 
       {id:'nycu6',num:17,name:'Reunion Baths',hood:'Brooklyn',type:'upcoming',price:'TBD',score:null,
        openWhen:'Spring 2026',
@@ -866,7 +1067,7 @@ const CITIES = {
        review:'Seventy thousand square feet of wellness on the north end of Miami Beach, and more serious about it than most. The thermal circuit is the anchor — hydrotherapy pools, sauna, steam — plus a roster of treatments that leans functional over indulgent.',
        hours:'Daily · Day pass from $75',url:'https://carillonhotel.com',
        lat:25.8631,lng:-80.1203,
-       img:'https://images.unsplash.com/photo-1551882547-ff40c63fe2e2?w=500&h=350&fit=crop&q=80'},
+       img:'https://d2jc232pjp0jj6.cloudfront.net/wp-content/uploads/sites/2/2020/03/20143520/home_hero2_poster-480x270.jpg'},
 
       {id:'mia2',num:2,name:'The Spa at The Standard',hood:'Belle Isle, Miami Beach',type:'bathhouse',price:'from $75',score:8.2,
        gf:['The scene','Poolside','Turkish hammam','Visitors'],
@@ -892,7 +1093,7 @@ const CITIES = {
        review:'An authentic Russian banya in Dogpatch that the Bay Area genuinely does not deserve but is very lucky to have. Three saunas including a banya at 200°F, cold plunge pools, eucalyptus steam, and a full menu of massage and body treatments. The platza service is the real deal.',
        hours:'Tue–Sun 10am–10pm · Mon 12pm–10pm',url:'https://banyasf.com',
        lat:37.7556,lng:-122.3872,
-       img:'https://images.unsplash.com/photo-1527637040694-60b17b13f9df?w=500&h=350&fit=crop&q=80'},
+       img:'https://banyasf.com/wp-content/uploads/2023/02/Yoga-Veritcal.jpeg'},
 
       {id:'sf2',num:2,name:'Kabuki Springs & Spa',hood:'Japantown',type:'bathhouse',price:'from $35',score:8.5,
        gf:['Japanese tradition','Value','Communal bathing','Locals'],
@@ -918,7 +1119,7 @@ const CITIES = {
        review:'A neighborhood Russian banya on Division Street that\'s been sweating Chicagoans since 1914. The schvitz room, oak-leaf platza, and cold pool are the entire experience — no upgrades, no wellness branding, no apologies. The most authentic bathhouse between New York and Los Angeles.',
        hours:'Daily · Call ahead',url:'https://www.russianvaporbaths.com',
        lat:41.9060,lng:-87.6720,
-       img:'https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=500&h=350&fit=crop&q=80'},
+       img:'https://media.timeout.com/images/105895205/750/422/image.jpg'},
 
       {id:'chi2',num:2,name:'Chuan Spa at The Langham',hood:'River North',type:'spa',price:'from $85',score:8.0,
        gf:['Luxury hotel spa','Business travel','Full service'],
@@ -932,7 +1133,7 @@ const CITIES = {
        review:'Chicago\'s cleanest answer to the sauna-and-cold-plunge trend. Infrared and traditional Finnish sauna, ice plunge, and a social lounge designed around community rather than isolation. Sessions book fast — plan ahead.',
        hours:'Daily · Session-based',url:'https://denwellness.com',
        lat:41.8920,lng:-87.6290,
-       img:'https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=500&h=350&fit=crop&q=80'},
+       img:''},
     ],upcoming:[]
   },
 
@@ -984,7 +1185,7 @@ const CITIES = {
        review:'Austin\'s most dedicated float operation. Multiple tank options, clean facilities, and a staff that actually knows what float therapy does to your nervous system. East Austin location means you can go after dinner and walk to something good.',
        hours:'Daily 9am–10pm · By appointment',url:'https://austinfloatcenter.com',
        lat:30.2660,lng:-97.7210,
-       img:'https://images.unsplash.com/photo-1518732714860-b62714ce0c59?w=500&h=350&fit=crop&q=80'},
+       img:''},
     ],upcoming:[]
   },
 
@@ -994,16 +1195,16 @@ const CITIES = {
       {id:'dc1',num:1,name:'The Spa at Mandarin Oriental',hood:'Southwest DC',type:'spa',price:'from $90',score:8.5,
        gf:['Luxury','Business travel','The Potomac views'],
        review:'The best hotel spa in DC by a clear margin. Oriental-inspired thermal circuit with heated marble loungers, vitality pool, and sauna. The kind of place where K Street attorneys decompress before flying back to their districts. Impeccable service.',
-       hours:'Daily · Reservation recommended',url:'https://www.mandarinoriental.com/washington-dc',
+       hours:'Daily · Reservation recommended',url:'https://www.mandarinoriental.com/en/washington-dc/the-wharf',
        lat:38.8815,lng:-77.0232,
-       img:'https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=500&h=350&fit=crop&q=80'},
+       img:'https://images.squarespace-cdn.com/content/v1/5a5596188dd0411a8df1b41a/1532560233285-UQY0U4NJVBK6VJVXQIY9/MOWAS-SPA-RECEPTION.jpg'},
 
       {id:'dc2',num:2,name:'Salt & Juniper',hood:'Shaw / 14th Street',type:'spa',price:'from $55',score:7.8,
        gf:['Locals\' pick','Halotherapy','Intimate'],
        review:'A neighborhood wellness studio on 14th Street doing salt therapy, infrared sauna, and IV drips for the Shaw crowd. Small, well-curated, and genuinely useful for the urban body under chronic stress.',
        hours:'Daily · By appointment',url:'https://saltandjuniper.com',
        lat:38.9162,lng:-77.0301,
-       img:'https://images.unsplash.com/photo-1607962837359-5e7e89f86776?w=500&h=350&fit=crop&q=80'},
+       img:''},
     ],upcoming:[]
   },
 
@@ -1060,7 +1261,7 @@ const CITIES = {
        review:'The best float center in Colorado, and particularly useful at 5,280 feet where altitude does things to your body. The zero-gravity tanks are serious — one of the better places to decompress before or after a ski weekend.',
        hours:'Daily 9am–9pm · By appointment',url:'https://glowfloat.com',
        lat:39.7196,lng:-104.9513,
-       img:'https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?w=500&h=350&fit=crop&q=80'},
+       img:''},
     ],upcoming:[]
   },
 
@@ -1072,14 +1273,14 @@ const CITIES = {
        review:'Set on the cliffs above the Torrey Pines golf course with views of the Pacific that you\'d pay just to sit and look at. The spa experience matches the setting — the outdoor eucalyptus steam garden alone is worth the drive from downtown. One of the best resort spas on the West Coast.',
        hours:'Daily · Reservation required',url:'https://www.torreypinesinn.com',
        lat:32.8979,lng:-117.2468,
-       img:'https://images.unsplash.com/photo-1602002418082-a4443978a5d5?w=500&h=350&fit=crop&q=80'},
+       img:'https://assets.resortpass.com/uploads/image/picture/41013/The-Lodge-at-Torrey-Pines_03.jpg'},
 
       {id:'sd2',num:2,name:'Kure Spa',hood:'Gaslamp / Little Italy',type:'sauna',price:'from $55',score:7.8,
        gf:['Infrared sauna','Cold plunge','Downtown'],
        review:'San Diego\'s most polished urban wellness studio, with infrared saunas, cold plunge, and recovery treatments designed for the active person. Two downtown locations. The contrast therapy sessions are well-programmed.',
        hours:'Daily · Session-based',url:'https://kurespa.com',
        lat:32.7190,lng:-117.1691,
-       img:'https://images.unsplash.com/photo-1574482620816-c13b8b19f7d1?w=500&h=350&fit=crop&q=80'},
+       img:'https://www.kurespa.com/files/theme/splash.jpg'},
     ],upcoming:[]
   },
 
@@ -1098,7 +1299,7 @@ const CITIES = {
        review:'The St. Regis spa in Aspen delivers what you come to Aspen for — exceptional everything, in a mountain setting, without visible effort. The heated outdoor pool in winter with snowflakes falling is one of the genuinely great spa moments you can have in the American West.',
        hours:'Daily · Reservation required',url:'https://www.stregisaspen.com',
        lat:39.1910,lng:-106.8200,
-       img:'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=500&h=350&fit=crop&q=80'},
+       img:''},
     ],upcoming:[]
   },
 
@@ -1110,14 +1311,14 @@ const CITIES = {
        review:'The oldest operating spa in California and still the best reason to drive to Calistoga. Volcanic ash mud baths heated by geothermal springs, mineral pools, and a main pool that\'s been in continuous use since 1860. Nothing in wine country feels more earned than this.',
        hours:'Daily · Reservation required',url:'https://indianspringscalistoga.com',
        lat:38.5791,lng:-122.5796,
-       img:'https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=500&h=350&fit=crop&q=80'},
+       img:'https://symphony.cdn.tambourine.com/indian-springs-calistoga/media/indiansprings-homepage-gallery-resort_0000s_0004_indian_springs_56_hr-5be465d8f011d-64c03e794fa62.jpg'},
 
       {id:'nap2',num:2,name:'Solage Calistoga',hood:'Calistoga',type:'resort',price:'from $85',score:8.8,
        gf:['The Mudslide','Modern resort','Geothermal pools'],
        review:'Solage modernized the Calistoga mud bath without losing the point. The signature Mudslide ritual — volcanic mud, mineral soak, blanket wrap — is a proper multi-step treatment. The geothermal pools are excellent. Worth the step up from Indian Springs in budget.',
        hours:'Daily · Reservation required',url:'https://solagecalistoga.com',
        lat:38.5810,lng:-122.5770,
-       img:'https://images.unsplash.com/photo-1601918774741-5b20e01c3f00?w=500&h=350&fit=crop&q=80'},
+       img:'https://winecountry-media.s3.amazonaws.com/24079-media-SOLAGE-Slideshow1-1600x800.jpg'},
     ],upcoming:[]
   },
 
@@ -1193,7 +1394,7 @@ const CITIES = {
        review:'Eau Palm Beach brings a more contemporary take to the Palm Beach spa formula — the oceanfront setting, the contrast hydrotherapy pools, and the whimsical design language make it the younger, louder counterpart to The Breakers a mile up the coast.',
        hours:'Daily · Reservation required',url:'https://eaupalmbeach.com',
        lat:26.7220,lng:-80.0360,
-       img:'https://images.unsplash.com/photo-1551882547-ff40c63fe2e2?w=500&h=350&fit=crop&q=80'},
+       img:''},
     ],upcoming:[]
   },
 
@@ -1231,7 +1432,7 @@ const CITIES = {
        review:'A halotherapy salt cave in East Nashville that serves the neighborhood\'s wellness-curious population with genuine quality. Forty-five minutes in the salt room, excellent for respiratory issues, stress, and the general conditions of being a person who lives in a city.',
        hours:'Daily · By appointment',url:'#',
        lat:36.1754,lng:-86.7531,
-       img:'https://images.unsplash.com/photo-1607962837359-5e7e89f86776?w=500&h=350&fit=crop&q=80'},
+       img:''},
     ],upcoming:[]
   },
 
@@ -1279,7 +1480,7 @@ const CITIES = {
        review:'Orange County\'s most dedicated float operation — clean, professionally run, with multiple tank options and a staff that understands what they\'re doing. In a county not exactly overflowing with serious wellness options, Papakea stands clearly apart.',
        hours:'Daily · By appointment',url:'https://papakeafloat.com',
        lat:33.6846,lng:-117.8265,
-       img:'https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?w=500&h=350&fit=crop&q=80'},
+       img:''},
     ],upcoming:[]
   },
 
@@ -1289,119 +1490,32 @@ const CITIES = {
 // Cities order
 const CITY_ORDER = ['nyc','la','miami','sf','chicago','scottsdale','austin','dc','seattle','boston','denver','boulder','sandiego','aspen','napa','sonoma','hamptons','sedona','palmbeach','nantucket','jacksonhole','nashville','charlotte','irvine','arlington'];
 const CITY_NAMES = {nyc:'New York City',la:'Los Angeles',miami:'Miami',sf:'San Francisco',chicago:'Chicago',scottsdale:'Scottsdale',austin:'Austin',dc:'Washington DC',seattle:'Seattle',boston:'Boston',denver:'Denver',boulder:'Boulder',sandiego:'San Diego',aspen:'Aspen',napa:'Napa Valley',sonoma:'Sonoma',hamptons:'The Hamptons',sedona:'Sedona',palmbeach:'Palm Beach',nantucket:'Nantucket',jacksonhole:'Jackson Hole',nashville:'Nashville',charlotte:'Charlotte',irvine:'Irvine',arlington:'Arlington'};
-const VENUE_PAGE_PATHS = {
-  nyc1:'/new-york-city/bathhouse-williamsburg/',
-  nyc2:'/new-york-city/akari-sauna/',
-  nyc3:'/new-york-city/aire-ancient-baths/',
-  nyc4:'/new-york-city/russian-and-turkish-baths/',
-  nyc5:'/new-york-city/world-spa/',
-  nyc6:'/new-york-city/othership-flatiron/',
-  nyc6b:'/new-york-city/othership-williamsburg/',
-  nyc7:'/new-york-city/remedy-place/',
-  nyc8:'/new-york-city/great-jones-spa/',
-  nyc9:'/new-york-city/sojo-spa-club/',
-  nyc10:'/new-york-city/spa-castle/',
-  nyc11:'/new-york-city/lift-next-level-floats/',
-  nycu1:'/new-york-city/schwet/',
-  nycu2:'/new-york-city/the-altar/',
-  nycu3:'/new-york-city/lore-bathing-club/',
-  nycu4:'/new-york-city/saint/',
-  // Los Angeles
-  la1:'/los-angeles/wi-spa/',
-  la2:'/los-angeles/aire-ancient-baths-venice/',
-  la3:'/los-angeles/beverly-hot-springs/',
-  la4:'/los-angeles/othership-la/',
-  la5:'/los-angeles/float-lab/',
-  la6:'/los-angeles/esalen-institute/',
-  // Miami
-  mia1:'/miami/carillon-miami-wellness-resort/',
-  mia2:'/miami/the-spa-at-the-standard/',
-  mia3:'/miami/faena-spa/',
-  // San Francisco
-  sf1:'/san-francisco/archimedes-banya/',
-  sf2:'/san-francisco/kabuki-springs-spa/',
-  sf3:'/san-francisco/international-orange/',
-  // Chicago
-  chi1:'/chicago/russian-vapor-baths/',
-  chi2:'/chicago/chuan-spa-at-the-langham/',
-  chi3:'/chicago/den-wellness/'
-};
+// Auto-generated at build time from content/venues/**/*.yml
+// Key = venue.id (fileSlug). Value = { path, img, score, price, hours, name, hood }.
+// Do NOT hand-edit — add a YAML file instead.
+const VENUE_DETAIL_DATA = {{ venuePagePaths | json }};
 
-const VENUE_PAGE_DATA_BY_PATH = {
-{% for item in venues %}
-  "/{{ item.citySlug }}/{{ item.venue.slug | default(item.fileSlug) }}/": {{ {
-    path: "/" ~ item.citySlug ~ "/" ~ (item.venue.slug | default(item.fileSlug)) ~ "/",
-    citySlug: item.citySlug,
-    score: item.venue.score,
-    review: item.venue.review | default(""),
-    price: item.venue.price | default(""),
-    hours: item.venue.hours | default(""),
-    img: item.venue.hero_image | default("") | assetUrl,
-    name: item.venue.name | default(""),
-    hood: item.venue.neighborhood | default(""),
-    bestFor: item.venue.best_for | default("")
-  } | json }}{% if not loop.last %},{% endif %}
-{% endfor %}
-};
-
+// Maps city JS key → URL slug. Used by CITY_SLUG_TO_KEY for hash-based navigation.
 const CITY_KEY_TO_SLUG = {
-  nyc: 'new-york-city',
-  la: 'los-angeles',
-  miami: 'miami',
-  sf: 'san-francisco',
-  chicago: 'chicago'
+  nyc:'new-york-city', la:'los-angeles', miami:'miami', sf:'san-francisco',
+  chicago:'chicago', scottsdale:'scottsdale', austin:'austin', dc:'washington-dc',
+  seattle:'seattle', boston:'boston', denver:'denver', boulder:'boulder',
+  sandiego:'san-diego', aspen:'aspen', napa:'napa-valley', sonoma:'sonoma',
+  hamptons:'the-hamptons', sedona:'sedona', palmbeach:'palm-beach',
+  nantucket:'nantucket', jacksonhole:'jackson-hole', nashville:'nashville',
+  charlotte:'charlotte', irvine:'irvine', arlington:'arlington'
 };
 
-function normalizeKey(value) {
-  return String(value || '')
+// Converts a venue display name to the fileSlug used as the key in VENUE_DETAIL_DATA.
+// Must match the logic used to derive YAML filenames.
+function toDetailSlug(name) {
+  return String(name || '')
     .toLowerCase()
     .replace(/&/g, 'and')
-    .replace(/[^a-z0-9]+/g, ' ')
-    .trim();
+    .replace(/['\u2018\u2019]/g, '')
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-|-$/g, '');
 }
-
-const VENUE_PAGE_DATA_BY_CITY_NAME = Object.values(VENUE_PAGE_DATA_BY_PATH).reduce((acc, item) => {
-  if (!item || !item.citySlug || !item.name) return acc;
-  acc[`${item.citySlug}::${normalizeKey(item.name)}`] = item;
-  return acc;
-}, {});
-
-function applyVenuePageOverrides() {
-  const mergeVenue = (v, cityKey) => {
-    const explicitDetailUrl = VENUE_PAGE_PATHS[v.id];
-    const citySlug = CITY_KEY_TO_SLUG[cityKey] || '';
-    const inferredKey = citySlug ? `${citySlug}::${normalizeKey(v.name)}` : '';
-    const source =
-      (explicitDetailUrl && VENUE_PAGE_DATA_BY_PATH[explicitDetailUrl]) ||
-      (inferredKey && VENUE_PAGE_DATA_BY_CITY_NAME[inferredKey]);
-    if (!source) return;
-
-    if (source.path) {
-      v._detailUrl = source.path;
-      if (!VENUE_PAGE_PATHS[v.id]) VENUE_PAGE_PATHS[v.id] = source.path;
-    }
-
-    const parsedScore = source.score == null || source.score === '' ? null : Number(source.score);
-    if (Number.isFinite(parsedScore)) v.score = parsedScore;
-    if (source.review) v.review = source.review;
-    if (source.price) v.price = source.price;
-    if (source.hours) v.hours = source.hours;
-    if (source.img) v.img = source.img;
-    if (source.name) v.name = source.name;
-    if (source.hood) v.hood = source.hood;
-    if (source.bestFor && (!Array.isArray(v.gf) || v.gf.length === 0)) {
-      v.gf = String(source.bestFor).split(',').map((t) => t.trim()).filter(Boolean);
-    }
-  };
-
-  Object.entries(CITIES).forEach(([cityKey, city]) => {
-    if (!city) return;
-    (city.venues || []).forEach((v) => mergeVenue(v, cityKey));
-    (city.upcoming || []).forEach((v) => mergeVenue(v, cityKey));
-  });
-}
-
-applyVenuePageOverrides();
 
 const FILTER_TAGS = {
   steam: 'Steam',
@@ -1571,11 +1685,18 @@ document.addEventListener('DOMContentLoaded', async () => {
   buildHeroList();
   initVenuesDropdown();
   initSearchUi();
+  // On mobile, move the search panel into the search sheet so all search logic stays unchanged
+  if (window.innerWidth <= 900) {
+    const panel = document.querySelector('#search .search-panel');
+    const sheetBody = document.getElementById('m-ssheet-body');
+    if (panel && sheetBody) sheetBody.appendChild(panel);
+  }
   const restored = restoreVenueFromHash();
   if (!restored) {
     switchCity('nyc', { scrollToDirectory: false });
   }
-  loadLeaflet();
+  // On desktop always load map; on mobile load on demand when user opens it
+  if (window.innerWidth > 900) loadLeaflet();
 });
 
 
@@ -1666,7 +1787,28 @@ async function submitSearchQuery(query, { updateUrl = true } = {}) {
 function initSearchUi() {
   const form = document.getElementById('search-form');
   const input = document.getElementById('search-input');
+  const clearBtn = document.getElementById('search-clear');
   if (!form || !input) return;
+
+  function updateClearBtn() {
+    if (clearBtn) clearBtn.style.display = input.value ? 'flex' : 'none';
+  }
+
+  function resetSearch() {
+    input.value = '';
+    updateClearBtn();
+    const status = document.getElementById('search-status');
+    const results = document.getElementById('search-results');
+    if (status) { status.textContent = ''; status.classList.remove('error'); }
+    if (results) results.innerHTML = '';
+    const u = new URL(window.location.href);
+    u.searchParams.delete('q');
+    window.history.replaceState({}, '', u.pathname + (u.search !== '?' ? u.search : '') + u.hash);
+    input.focus();
+  }
+
+  input.addEventListener('input', updateClearBtn);
+  if (clearBtn) clearBtn.addEventListener('click', resetSearch);
 
   form.addEventListener('submit', async (event) => {
     event.preventDefault();
@@ -1677,6 +1819,7 @@ function initSearchUi() {
   const initialQuery = (url.searchParams.get('q') || '').trim();
   if (initialQuery) {
     input.value = initialQuery;
+    updateClearBtn();
     submitSearchQuery(initialQuery, { updateUrl: false });
   }
 }
@@ -1718,7 +1861,9 @@ function updateVenuesMenu(cid) {
   if(!menu || !toggle) return;
   const city = CITIES[cid];
   const all = city ? [...(city.venues||[]), ...(city.upcoming||[])] : [];
-  const links = all.filter(v => VENUE_PAGE_PATHS[v.id]).map(v => ({name:v.name, href:VENUE_PAGE_PATHS[v.id]}));
+  const links = all
+    .filter(v => VENUE_DETAIL_DATA[toDetailSlug(v.name)])
+    .map(v => ({name: v.name, href: VENUE_DETAIL_DATA[toDetailSlug(v.name)].path}));
   menu.innerHTML = `<div class="vm-city">${CITY_NAMES[cid] || 'City'} Venues</div>` +
     (links.length
       ? links.map(v => `<a href="${v.href}" role="menuitem">${v.name}</a>`).join('')
@@ -1795,8 +1940,8 @@ function switchCity(cid, opts = {}) {
   activeOccasion = null;
   // Reset Perfect For cards
   document.querySelectorAll('.pf-card').forEach(c => c.classList.remove('on'));
-  const pfClear = document.getElementById('pf-clear');
-  if(pfClear) pfClear.classList.remove('vis');
+  document.querySelectorAll('.pf-clear, .m-pf-clear').forEach(el => el.classList.remove('vis'));
+  mUpdateDiscoveryBar();
   // Update tabs
   document.querySelectorAll('.ctab').forEach((t,i) => t.classList.toggle('on', CITY_ORDER[i]===cid));
   // Update filter buttons
@@ -1949,27 +2094,51 @@ function getVenueImageRequest(url) {
 function renderCard(v) {
   const isUp = v.type === 'upcoming';
   const hasColdPlunge = venueHasColdPlunge(v);
-  const imgReq = getVenueImageRequest(normalizeImagePath(v.img));
-  const scoreValue = typeof v.score === 'number' ? v.score : Number(v.score);
+
+  // ── Resolve detail data from build-time YAML-derived map ──────────────
+  const slug = toDetailSlug(v.name);
+  const detail = VENUE_DETAIL_DATA[slug] || null;
+  const detailUrl = detail ? detail.path : '';
+
+  if (!isUp && !detailUrl) {
+    console.warn(`[Dip] No detail page for "${v.name}" (id: ${v.id}, slug attempted: "${slug}")`);
+  }
+
+  // ── Image: YAML hero_image > hardcoded img field ───────────────────────
+  const img = (detail && detail.img) || v.img || '';
+  const imgReq = getVenueImageRequest(normalizeImagePath(img));
+
+  // ── Score: YAML score > hardcoded score ───────────────────────────────
+  const yamlScore = (detail && detail.score != null && detail.score !== '') ? Number(detail.score) : null;
+  const rawScore = Number.isFinite(yamlScore) ? yamlScore : (typeof v.score === 'number' ? v.score : Number(v.score));
   const scoreHtml = isUp
     ? `<div class="cscore w"><span class="cop-lbl">Opening</span><span class="cop-when">${v.openWhen}</span></div>`
-    : Number.isFinite(scoreValue)
-      ? `<div class="cscore"><span class="cscore-n">${scoreValue.toFixed(1)}</span><span class="cscore-d">/ 10</span></div>`
+    : Number.isFinite(rawScore)
+      ? `<div class="cscore"><span class="cscore-n">${rawScore.toFixed(1)}</span><span class="cscore-d">DIP INDEX</span></div>`
       : `<div class="cscore"><span class="cop-lbl" style="color:var(--teal)">Now Open</span></div>`;
+
   const gfTags = v.gf.map(g => `<span class="gft${isUp?' w':''}">${g}</span>`).join('');
-  const detailUrl = v._detailUrl || VENUE_PAGE_PATHS[v.id] || '';
-  const visitLink = isUp
-    ? `<a href="${v.url}" target="_blank" rel="noopener noreferrer" class="cvisit w" aria-label="Follow ${v.name} (opens in a new tab)">Follow →</a>`
-    : detailUrl
-      ? `<a href="${detailUrl}" class="cvisit" aria-label="Read Dip review for ${v.name}">Dip Review →</a>`
-      : `<a href="${v.url}" target="_blank" rel="noopener noreferrer" class="cvisit" aria-label="Visit ${v.name} website (opens in a new tab)">Website →</a>`;
   const grad = getGrad(isUp ? 'upcoming' : v.type);
   const occs = OCC[v.id] || [];
   const tags = getVenueTags(v);
   const occLabels = {date:'🕯️ Date Night',meeting:'🤝 Business Meeting',solo:'🧘 Solo Unwind',scene:'🎉 The Scene',group:'👥 Group Day',recovery:'⚡ Recovery'};
   const occBadges = occs.map(o=>`<span class="occ-badge occ-${o}">${occLabels[o]||o}</span>`).join('');
-  return `<article class="vcard${isUp?' upc':''}" id="${v.id}" data-type="${v.type}" data-occ="${occs.join(' ')}" data-tags="${tags.join(' ')}" data-coldplunge="${hasColdPlunge ? '1' : '0'}" data-detail-url="${detailUrl}">
-    <div class="cimg" ${detailUrl ? `onclick="window.location.href='${detailUrl}'" style="cursor:pointer"` : ""}>
+
+  // ── Visit link: no nested <a> when card itself is an <a> ──────────────
+  // When detailUrl exists the card is already an anchor; use <span> for footer label.
+  // When isUp with detailUrl, external Follow link uses <span>+onclick so it stays valid.
+  const visitLink = isUp
+    ? (detailUrl
+        ? `<span class="cvisit w" role="button" style="cursor:pointer" onclick="event.stopPropagation();window.open('${v.url}','_blank','noopener,noreferrer')" aria-label="Follow ${v.name} (opens in a new tab)">Follow →</span>`
+        : `<a href="${v.url}" target="_blank" rel="noopener noreferrer" class="cvisit w" aria-label="Follow ${v.name} (opens in a new tab)">Follow →</a>`)
+    : detailUrl
+      ? `<span class="cvisit" aria-hidden="true">Dip Review →</span>`
+      : `<a href="${v.url}" target="_blank" rel="noopener noreferrer" class="cvisit" aria-label="Visit ${v.name} website (opens in a new tab)">Website →</a>`;
+
+  // ── Card inner HTML ────────────────────────────────────────────────────
+  const attrs = `class="vcard${isUp?' upc':''}" id="${v.id}" data-type="${v.type}" data-occ="${occs.join(' ')}" data-tags="${tags.join(' ')}" data-coldplunge="${hasColdPlunge ? '1' : '0'}" data-detail-url="${detailUrl}"`;
+  const inner = `
+    <div class="cimg">
       <img src="${imgReq.src}"${imgReq.srcset ? ` srcset="${imgReq.srcset}"` : ''} alt="${v.name}" loading="lazy" decoding="async" width="500" height="350" sizes="${imgReq.sizes}"
         onerror="this.style.display='none';this.parentElement.style.background='${grad}'"
         style="width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s"/>
@@ -1980,20 +2149,24 @@ function renderCard(v) {
       <div class="ctop">
         <div>
           <div class="chood${isUp?' w':''}">${v.hood}</div>
-          <h3 class="cname">${detailUrl ? `<a href="${detailUrl}" style="color:inherit;text-decoration:none">${v.name}</a>` : v.name}</h3>
+          <h3 class="cname">${v.name}</h3>
         </div>
         ${scoreHtml}
       </div>
       <div class="cgf">${gfTags}</div>
-      <p class="crev">${v.review}</p>
       <div class="cfoot">
         <span class="cprice">${v.price}</span>
         <span class="chours">${v.hours}</span>
         ${visitLink}
       </div>
       ${occBadges ? `<div class="occ-badges">${occBadges}</div>` : ''}
-    </div>
-  </article>`;
+    </div>`;
+
+  // Wrap in <a> when a detail page exists (single nav element, no nested links).
+  // Fall back to <article> for venues without a detail page.
+  return detailUrl
+    ? `<a href="${detailUrl}" ${attrs}>${inner}\n  </a>`
+    : `<article ${attrs}>${inner}\n  </article>`;
 }
 
 function venueHasColdPlunge(v) {
@@ -2011,39 +2184,45 @@ function venueHasColdPlunge(v) {
 function setFilter(type, btn) {
   activeFilter = type;
   activeOccasion = null;
-  document.querySelectorAll('.fb').forEach(b => b.classList.remove('on'));
-  btn.classList.add('on');
+  // Sync active state across desktop bar + mobile sheet buttons
+  const onclickVal = btn.getAttribute('onclick');
+  document.querySelectorAll('.fb').forEach(b => b.classList.toggle('on', b.getAttribute('onclick') === onclickVal));
   document.querySelectorAll('.pf-card').forEach(c => c.classList.remove('on'));
-  document.getElementById('pf-clear').classList.remove('vis');
+  document.querySelectorAll('.pf-clear, .m-pf-clear').forEach(el => el.classList.remove('vis'));
   applyVisibility();
   scrollToFirstVisibleVenue();
+  if(window.innerWidth <= 900) mCloseSheet('m-fsheet');
+  mUpdateDiscoveryBar();
 }
 
 function setOccasion(occ, card) {
   activeOccasion = occ;
   activeFilter = 'all';
-  document.querySelectorAll('.pf-card').forEach(c => c.classList.remove('on'));
-  card.classList.add('on');
-  document.getElementById('pf-clear').classList.add('vis');
+  // Sync across main pf-wrap + mobile sheet cards
+  document.querySelectorAll('.pf-card').forEach(c => c.classList.toggle('on', c === card || c.getAttribute('onclick') === card.getAttribute('onclick')));
+  document.querySelectorAll('.pf-clear, .m-pf-clear').forEach(el => el.classList.add('vis'));
   document.querySelectorAll('.fb').forEach(b => b.classList.toggle('on', b.textContent.trim()==='All'));
   applyVisibility();
   scrollToFirstVisibleVenue();
+  mUpdateDiscoveryBar();
 }
 
 function clearOccasion() {
   activeOccasion = null;
   document.querySelectorAll('.pf-card').forEach(c => c.classList.remove('on'));
-  document.getElementById('pf-clear').classList.remove('vis');
+  document.querySelectorAll('.pf-clear, .m-pf-clear').forEach(el => el.classList.remove('vis'));
   document.querySelectorAll('.fb').forEach(b => b.classList.toggle('on', b.textContent.trim()==='All'));
   applyVisibility();
+  mUpdateDiscoveryBar();
 }
 
 function scrollToFirstVisibleVenue() {
   const firstVisible = Array.from(document.querySelectorAll('.vcard')).find((card) => card.style.display !== 'none');
   const anchor = firstVisible || document.getElementById('dir');
   if (!anchor) return;
+  const offset = window.innerWidth <= 900 ? 108 : 130;
   window.scrollTo({
-    top: Math.max(0, anchor.getBoundingClientRect().top + window.scrollY - 130),
+    top: Math.max(0, anchor.getBoundingClientRect().top + window.scrollY - offset),
     behavior: 'smooth'
   });
 }
@@ -2154,7 +2333,8 @@ function openMapVenueReview(id) {
   const city = CITIES[currentCity];
   const pool = city ? [...(city.venues || []), ...(city.upcoming || [])] : [];
   const venue = pool.find((item) => item.id === id);
-  const detailUrl = (venue && venue._detailUrl) || VENUE_PAGE_PATHS[id] || '';
+  const detail = venue ? VENUE_DETAIL_DATA[toDetailSlug(venue.name)] : null;
+  const detailUrl = detail ? detail.path : '';
 
   if (detailUrl) {
     window.location.href = detailUrl;
@@ -2184,6 +2364,75 @@ function submitEmail(e) {
   inp.value=''; inp.disabled=true; btn.disabled=true;
   setTimeout(()=>{btn.textContent=orig;inp.disabled=false;btn.disabled=false;},4000);
 }
+
+// ─── MOBILE UI ─────────────────────────────────────────
+let mMapVisible = false;
+
+function mOpenSearchSheet() {
+  mOpenSheet('m-ssheet');
+  requestAnimationFrame(() => {
+    const input = document.getElementById('search-input');
+    if (input) input.focus();
+  });
+}
+
+function mToggleMap() {
+  mMapVisible = !mMapVisible;
+  const mapWrap = document.querySelector('.map-wrap');
+  const btn = document.getElementById('m-map-btn');
+  if (!mapWrap || !btn) return;
+  mapWrap.classList.toggle('m-show', mMapVisible);
+  btn.classList.toggle('m-map-on', mMapVisible);
+  btn.setAttribute('aria-pressed', mMapVisible ? 'true' : 'false');
+  if (mMapVisible) {
+    if (!leafletMap) loadLeaflet();
+    requestAnimationFrame(() => mapWrap.scrollIntoView({behavior:'smooth', block:'nearest'}));
+  }
+}
+
+function mOpenSheet(id) {
+  const sheet = document.getElementById(id);
+  if (!sheet) return;
+  sheet.classList.add('open');
+  sheet.setAttribute('aria-hidden', 'false');
+  document.body.style.overflow = 'hidden';
+}
+
+function mCloseSheet(id) {
+  const sheet = document.getElementById(id);
+  if (!sheet) return;
+  sheet.classList.remove('open');
+  sheet.setAttribute('aria-hidden', 'true');
+  document.body.style.overflow = '';
+}
+
+function mUpdateDiscoveryBar() {
+  const filterBadge = document.getElementById('m-filter-badge');
+  const moodBadge = document.getElementById('m-mood-badge');
+  const filterBtn = document.getElementById('m-filter-btn');
+  const moodBtn = document.getElementById('m-mood-btn');
+  if (!filterBadge) return;
+
+  const filterActive = activeFilter !== 'all';
+  filterBadge.style.display = filterActive ? '' : 'none';
+  filterBtn.classList.toggle('m-active', filterActive);
+
+  const moodActive = !!activeOccasion;
+  moodBadge.style.display = moodActive ? '' : 'none';
+  moodBtn.classList.toggle('m-active', moodActive);
+}
+
+// Close sheets on swipe-down gesture
+(function() {
+  let startY = 0;
+  document.addEventListener('touchstart', e => { startY = e.touches[0].clientY; }, {passive:true});
+  document.addEventListener('touchend', e => {
+    const dy = e.changedTouches[0].clientY - startY;
+    if (dy > 60) {
+      document.querySelectorAll('.m-sheet.open').forEach(s => mCloseSheet(s.id));
+    }
+  }, {passive:true});
+})();
 </script>
 <script>
 // Mailchimp background submit (prevents page redirect)
@@ -2248,6 +2497,109 @@ function submitEmail(e) {
   });
 })();
 </script>
+<!-- MOBILE SEARCH SHEET -->
+<div class="m-sheet" id="m-ssheet" aria-hidden="true" role="dialog" aria-label="Search">
+  <div class="m-sheet-bd" onclick="mCloseSheet('m-ssheet')"></div>
+  <div class="m-sheet-p" style="max-height:92vh">
+    <div class="m-sheet-pull"></div>
+    <div class="m-sheet-hr">
+      <span class="m-sheet-t">Search DipDays</span>
+      <button class="m-sheet-x" onclick="mCloseSheet('m-ssheet')" aria-label="Close search">✕</button>
+    </div>
+    <div class="m-sheet-body" id="m-ssheet-body">
+      <!-- search panel moved here on mobile via JS -->
+    </div>
+  </div>
+</div>
+
+<!-- MOBILE FILTER SHEET -->
+<div class="m-sheet" id="m-fsheet" aria-hidden="true" role="dialog" aria-label="Filter venues">
+  <div class="m-sheet-bd" onclick="mCloseSheet('m-fsheet')"></div>
+  <div class="m-sheet-p">
+    <div class="m-sheet-pull"></div>
+    <div class="m-sheet-hr">
+      <span class="m-sheet-t">Filter Venues</span>
+      <button class="m-sheet-x" onclick="mCloseSheet('m-fsheet')" aria-label="Close filters">✕</button>
+    </div>
+    <div class="m-sheet-body">
+      <div class="m-fs-section">
+        <span class="m-fs-lbl">Venue Type</span>
+        <div class="m-fs-btns">
+          <button class="fb on" onclick="setFilter('all',this)">All</button>
+          <button class="fb" onclick="setFilter('bathhouse',this)">Bathhouse</button>
+          <button class="fb" onclick="setFilter('sauna',this)">Sauna</button>
+          <button class="fb" onclick="setFilter('spa',this)">Day Spa</button>
+          <button class="fb" onclick="setFilter('thermal',this)">Thermal</button>
+          <button class="fb" onclick="setFilter('coldplunge',this)">Cold Plunge</button>
+          <button class="fb" onclick="setFilter('float',this)">Float</button>
+          <button class="fb" onclick="setFilter('korean',this)">Korean</button>
+          <button class="fb" onclick="setFilter('springs',this)">Hot Springs</button>
+        </div>
+      </div>
+      <div class="m-fs-section">
+        <span class="m-fs-lbl">Experience</span>
+        <div class="m-fs-btns">
+          <button class="fb" onclick="setFilter('tag:steam',this)">Steam</button>
+          <button class="fb" onclick="setFilter('tag:guided-rituals',this)">Guided Rituals</button>
+          <button class="fb" onclick="setFilter('tag:social-sauna',this)">Social Sauna</button>
+          <button class="fb" onclick="setFilter('tag:luxury-bathhouse',this)">Luxury Bathhouse</button>
+          <button class="fb" onclick="setFilter('tag:traditional-banya',this)">Traditional Banya</button>
+          <button class="fb" onclick="setFilter('tag:neighborhood-spa',this)">Neighborhood Spa</button>
+          <button class="fb" onclick="setFilter('tag:social-wellness-club',this)">Social Wellness Club</button>
+          <button class="fb ub" onclick="setFilter('upcoming',this)">⬤ Opening Soon</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MOBILE MOOD SHEET -->
+<div class="m-sheet" id="m-msheet" aria-hidden="true" role="dialog" aria-label="Filter by mood">
+  <div class="m-sheet-bd" onclick="mCloseSheet('m-msheet')"></div>
+  <div class="m-sheet-p">
+    <div class="m-sheet-pull"></div>
+    <div class="m-sheet-hr">
+      <span class="m-sheet-t">Perfect For</span>
+      <button class="m-sheet-x" onclick="mCloseSheet('m-msheet')" aria-label="Close mood filter">✕</button>
+    </div>
+    <div class="m-sheet-body">
+      <div class="m-pf-grid">
+        <div class="pf-card date" onclick="setOccasion('date',this);mCloseSheet('m-msheet')">
+          <span class="pf-card-emoji">🕯️</span>
+          <span class="pf-card-name">Date Night</span>
+          <span class="pf-card-sub">Atmospheric &amp; intimate</span>
+        </div>
+        <div class="pf-card meeting" onclick="setOccasion('meeting',this);mCloseSheet('m-msheet')">
+          <span class="pf-card-emoji">🤝</span>
+          <span class="pf-card-name">Business Meeting</span>
+          <span class="pf-card-sub">Impress someone important</span>
+        </div>
+        <div class="pf-card solo" onclick="setOccasion('solo',this);mCloseSheet('m-msheet')">
+          <span class="pf-card-emoji">🧘</span>
+          <span class="pf-card-name">Solo Unwind</span>
+          <span class="pf-card-sub">Just you and the heat</span>
+        </div>
+        <div class="pf-card scene" onclick="setOccasion('scene',this);mCloseSheet('m-msheet')">
+          <span class="pf-card-emoji">🎉</span>
+          <span class="pf-card-name">The Scene</span>
+          <span class="pf-card-sub">Daybreaker &amp; event energy</span>
+        </div>
+        <div class="pf-card group" onclick="setOccasion('group',this);mCloseSheet('m-msheet')">
+          <span class="pf-card-emoji">👥</span>
+          <span class="pf-card-name">Group Day Out</span>
+          <span class="pf-card-sub">Bring your whole crew</span>
+        </div>
+        <div class="pf-card recovery" onclick="setOccasion('recovery',this);mCloseSheet('m-msheet')">
+          <span class="pf-card-emoji">⚡</span>
+          <span class="pf-card-name">Recovery Day</span>
+          <span class="pf-card-sub">Contrast, float, reset</span>
+        </div>
+        <button class="m-pf-clear" id="m-pf-clear" onclick="clearOccasion()">✕ Clear Selection</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 <script>
 if (window.netlifyIdentity) {
   window.netlifyIdentity.on('init', function(user) {
