@@ -118,10 +118,43 @@ permalink: "/{{ item.citySlug }}/{{ item.venue.slug | default(item.fileSlug) }}/
       .cta{display:inline-block;padding:11px 16px;background:var(--ink);color:#fff;text-decoration:none;font-size:10px;letter-spacing:.16em;text-transform:uppercase;font-weight:700}
       .cta:hover{background:var(--teal)}
 
-      /* ── DIP Review (full width) ── */
-      .review-section{border-left:2px solid var(--ink);border-right:2px solid var(--ink);border-bottom:2px solid var(--ink);border-top:2px solid var(--ink);margin-top:-2px;background:var(--card);padding:28px 24px}
-      .review-label{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:#888;font-weight:700;margin-bottom:14px}
-      .review-text{font-size:16px;line-height:1.8;color:#222}
+      /* ── Shared editorial sections ── */
+      .ed-section{border-left:2px solid var(--ink);border-right:2px solid var(--ink);border-bottom:2px solid var(--ink);margin-top:-2px;background:var(--card);padding:28px 24px}
+      .ed-label{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:#888;font-weight:700;margin-bottom:14px}
+      .ed-text{font-size:15px;line-height:1.75;color:#222}
+
+      /* ── Verdict (pull-quote) ── */
+      .verdict-section{border-top:2px solid var(--ink)}
+      .verdict-text{font-family:var(--font-serif);font-style:italic;font-size:clamp(18px,2.8vw,26px);line-height:1.5;color:var(--ink)}
+
+      /* ── Full review ── */
+      .editorial-body p{font-size:16px;line-height:1.85;color:#222}
+      .editorial-body p+p{margin-top:1.2em}
+
+      /* ── Pros & Cons ── */
+      .pros-cons{display:grid;grid-template-columns:1fr;padding:0}
+      .pros-col,.cons-col{padding:28px 24px}
+      .cons-col{border-top:2px solid var(--ink)}
+      .pro-con-list{list-style:none;padding:0;margin:0}
+      .pro-con-list li{font-size:14px;line-height:1.6;padding:10px 0 10px 14px;border-bottom:1px solid var(--mist)}
+      .pro-con-list li:last-child{border-bottom:none}
+      .pro-item{border-left:3px solid var(--teal)}
+      .con-item{border-left:3px solid #999}
+
+      /* ── Pro move callout ── */
+      .pro-move-box{background:#f0eeea;border-left:3px solid var(--teal);padding:16px 20px;margin-top:4px}
+      .pro-move-box p{font-size:14px;line-height:1.65;color:#333}
+
+      /* ── Detail grid (facility + value side by side) ── */
+      .detail-pair{display:grid;grid-template-columns:1fr;gap:0}
+      .detail-pair .detail-item{padding:20px 0}
+      .detail-pair .detail-item+.detail-item{border-top:1px solid var(--mist);padding-top:20px}
+
+      /* ── Know Before You Go sub-grid ── */
+      .kbyg-grid{display:grid;grid-template-columns:1fr;gap:0;margin-top:16px}
+      .kbyg-grid .kbyg-item{padding:16px 0}
+      .kbyg-grid .kbyg-item+.kbyg-item{border-top:1px solid var(--mist)}
+      .kbyg-sublabel{font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:#999;font-weight:700;margin-bottom:6px}
 
       /* ── Scoring footnote ── */
       .scoring-explainer{margin-top:32px;padding:16px 0;border-top:1px solid var(--mist)}
@@ -137,16 +170,24 @@ permalink: "/{{ item.citySlug }}/{{ item.venue.slug | default(item.fileSlug) }}/
         .content-grid{grid-template-columns:1fr 1fr}
         .venue-identity{border-bottom:none;border-right:2px solid var(--ink)}
         .dip-index-val{font-size:64px}
-        .review-section{padding:36px 32px}
-        .review-text{max-width:800px}
+        .ed-section{padding:36px 32px}
+        .editorial-body p{max-width:720px}
+        .pros-cons{grid-template-columns:1fr 1fr}
+        .pros-col{border-right:2px solid var(--ink)}
+        .cons-col{border-top:none}
+        .detail-pair{grid-template-columns:1fr 1fr;gap:0 32px}
+        .detail-pair .detail-item+.detail-item{border-top:none;border-left:1px solid var(--mist);padding-top:20px;padding-left:32px}
+        .kbyg-grid{grid-template-columns:1fr 1fr;gap:0 32px}
+        .kbyg-grid .kbyg-item+.kbyg-item{border-top:none}
       }
       @media(min-width:1024px){
         .shell{padding:28px 28px 80px}
         .content-grid{grid-template-columns:.9fr 1.1fr}
         .venue-identity{padding:32px 28px 28px}
         .scoring-block{padding:32px 28px 28px}
-        .review-section{padding:36px 40px}
-        .review-text{font-size:17px}
+        .ed-section{padding:36px 40px}
+        .editorial-body p{font-size:17px}
+        .pros-col,.cons-col{padding:36px 40px}
       }
       @media(max-width:480px){
         .facility-scores{flex-direction:column;gap:12px}
@@ -295,13 +336,135 @@ permalink: "/{{ item.citySlug }}/{{ item.venue.slug | default(item.fileSlug) }}/
 
       </div>
 
-      <!-- ③ DIP REVIEW -->
-      <section class="review-section">
-        <p class="review-label">Dip Review</p>
-        <p class="review-text">{{ v.review | default("Review coming soon.") }}</p>
+      <!-- ③ THE VERDICT -->
+      {%- if v.one_line_verdict -%}
+      <section class="ed-section verdict-section">
+        <p class="ed-label">The Verdict</p>
+        <p class="verdict-text">{{ v.one_line_verdict }}</p>
+      </section>
+      {%- endif -%}
+
+      <!-- ④ THE DIP REVIEW -->
+      <section class="ed-section">
+        <p class="ed-label">The Dip Review</p>
+        <div class="editorial-body">
+          {%- if v.editorial_overview -%}
+            {{ v.editorial_overview | paragraphs | safe }}
+          {%- else -%}
+            <p>{{ v.review | default("Review coming soon.") }}</p>
+          {%- endif -%}
+        </div>
       </section>
 
-      <!-- ④ SCORING FOOTNOTE -->
+      <!-- ⑤ THE VIBE -->
+      {%- if v.vibe -%}
+      <section class="ed-section">
+        <p class="ed-label">The Vibe</p>
+        <p class="ed-text">{{ v.vibe }}</p>
+      </section>
+      {%- endif -%}
+
+      <!-- ⑥ PROS & CONS -->
+      {%- if v.pros or v.cons -%}
+      <section class="ed-section" style="padding:0">
+        <div class="pros-cons">
+          <div class="pros-col">
+            <p class="ed-label">The Good</p>
+            {%- if v.pros -%}
+            <ul class="pro-con-list">
+              {%- for item in v.pros -%}
+              <li class="pro-item">{{ item }}</li>
+              {%- endfor -%}
+            </ul>
+            {%- endif -%}
+          </div>
+          <div class="cons-col">
+            <p class="ed-label">The Not So Good</p>
+            {%- if v.cons -%}
+            <ul class="pro-con-list">
+              {%- for item in v.cons -%}
+              <li class="con-item">{{ item }}</li>
+              {%- endfor -%}
+            </ul>
+            {%- endif -%}
+          </div>
+        </div>
+      </section>
+      {%- endif -%}
+
+      <!-- ⑦ THE DETAILS -->
+      {%- if v.facility_breakdown or v.value_read -%}
+      <section class="ed-section">
+        <p class="ed-label">The Details</p>
+        <div class="detail-pair">
+          {%- if v.facility_breakdown -%}
+          <div class="detail-item">
+            <p class="kbyg-sublabel">Facilities</p>
+            <p class="ed-text">{{ v.facility_breakdown }}</p>
+          </div>
+          {%- endif -%}
+          {%- if v.value_read -%}
+          <div class="detail-item">
+            <p class="kbyg-sublabel">Value</p>
+            <p class="ed-text">{{ v.value_read }}</p>
+          </div>
+          {%- endif -%}
+        </div>
+      </section>
+      {%- endif -%}
+
+      <!-- ⑧ KNOW BEFORE YOU GO -->
+      {%- if v.pro_move or v.not_ideal_for or v.time_of_day_dynamics -%}
+      <section class="ed-section">
+        <p class="ed-label">Know Before You Go</p>
+        {%- if v.pro_move -%}
+        <div class="pro-move-box">
+          <p class="kbyg-sublabel">Pro Move</p>
+          <p>{{ v.pro_move }}</p>
+        </div>
+        {%- endif -%}
+        <div class="kbyg-grid">
+          {%- if v.not_ideal_for -%}
+          <div class="kbyg-item">
+            <p class="kbyg-sublabel">Not Ideal For</p>
+            <p class="ed-text">{{ v.not_ideal_for }}</p>
+          </div>
+          {%- endif -%}
+          {%- if v.time_of_day_dynamics -%}
+          <div class="kbyg-item">
+            <p class="kbyg-sublabel">When to Go</p>
+            <p class="ed-text">{{ v.time_of_day_dynamics }}</p>
+          </div>
+          {%- endif -%}
+        </div>
+      </section>
+      {%- endif -%}
+
+      <!-- ⑨ THE SCENE -->
+      {%- if v.scene_summary or v.crowd_profile or v.audience_sentiment_snapshot -%}
+      <section class="ed-section">
+        <p class="ed-label">The Scene</p>
+        {%- if v.scene_summary -%}
+        <p class="ed-text" style="margin-bottom:16px">{{ v.scene_summary }}</p>
+        {%- endif -%}
+        <div class="kbyg-grid">
+          {%- if v.crowd_profile -%}
+          <div class="kbyg-item">
+            <p class="kbyg-sublabel">Who Goes</p>
+            <p class="ed-text">{{ v.crowd_profile }}</p>
+          </div>
+          {%- endif -%}
+          {%- if v.audience_sentiment_snapshot -%}
+          <div class="kbyg-item">
+            <p class="kbyg-sublabel">Community Sentiment</p>
+            <p class="ed-text" style="font-family:var(--font-serif);font-style:italic">{{ v.audience_sentiment_snapshot }}</p>
+          </div>
+          {%- endif -%}
+        </div>
+      </section>
+      {%- endif -%}
+
+      <!-- ⑩ SCORING FOOTNOTE -->
       <section class="scoring-explainer" aria-label="About Dip scoring">
         <p class="explainer-label">About Dip Scoring</p>
         <p class="explainer-intro">Dip Index is our blended score, combining our editorial assessment with broader community consensus.</p>
