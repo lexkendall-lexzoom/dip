@@ -319,9 +319,11 @@ module.exports = function(eleventyConfig) {
     return '★'.repeat(full) + (half ? '½' : '') + '☆'.repeat(empty);
   });
 
-  // ── Nunjucks filter: safe output for HTML ───────────────
-  eleventyConfig.addFilter("safe", function(value) {
-    return value;
+  // ── Nunjucks filter: split text on double-newlines into <p> tags ──
+  eleventyConfig.addFilter("paragraphs", function(value) {
+    if (!value) return "";
+    const html = value.split(/\n\n+/).filter(p => p.trim()).map(p => `<p>${p.trim()}</p>`).join("\n");
+    return new nunjucks.runtime.SafeString(html);
   });
 
   // ── Nunjucks filter: JSON output without HTML escaping ───
