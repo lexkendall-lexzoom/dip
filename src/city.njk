@@ -21,6 +21,14 @@ permalink: "/{{ cityPage.slug }}/"
   <meta property="og:url" content="https://dipdays.com/{{ cityPage.slug }}/" />
   {% if seo.social_image %}<meta property="og:image" content="{{ seo.social_image }}" />{% endif %}
   <meta name="twitter:card" content="summary" />
+  <!-- PWA -->
+  <link rel="manifest" href="/manifest.json"/>
+  <meta name="theme-color" content="#0b7c78"/>
+  <meta name="mobile-web-app-capable" content="yes"/>
+  <meta name="apple-mobile-web-app-capable" content="yes"/>
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+  <meta name="apple-mobile-web-app-title" content="Dip Days"/>
+  <link rel="apple-touch-icon" href="/icons/icon.svg"/>
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
@@ -110,5 +118,7 @@ permalink: "/{{ cityPage.slug }}/"
       {% endif %}
     </section>
   </main>
+  <script>if('serviceWorker'in navigator)window.addEventListener('load',function(){navigator.serviceWorker.register('/sw.js');});</script>
+  {% include "pwa-banner.njk" %}
 </body>
 </html>

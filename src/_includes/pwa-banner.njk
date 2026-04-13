@@ -1,0 +1,16 @@
+<div id="pwa-banner" style="display:none;position:fixed;bottom:0;left:0;right:0;z-index:9999;background:var(--ink,#111);color:rgba(255,255,255,.5);font-family:'Syne',ui-sans-serif,sans-serif;font-size:10px;letter-spacing:.1em;text-transform:uppercase;padding:8px 16px;display:flex;align-items:center;justify-content:space-between">
+  <span>Save for offline — tap <svg width="11" height="14" viewBox="0 0 14 17" fill="none" xmlns="http://www.w3.org/2000/svg" style="display:inline-block;vertical-align:middle;margin:0 2px;opacity:.8"><path d="M7 1v10M3.5 4L7 1l3.5 3M1 9v6h12V9" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg> then "Add to Home Screen"</span>
+  <button onclick="document.getElementById('pwa-banner').remove();localStorage.setItem('pwa-dismissed','1')" style="background:none;border:none;color:rgba(255,255,255,.3);cursor:pointer;font-size:14px;line-height:1;padding:0">×</button>
+</div>
+<script>
+(function(){
+  var ua = navigator.userAgent;
+  var isIOS = /iphone|ipad|ipod/i.test(ua);
+  var isSafari = /safari/i.test(ua) && !/crios|fxios|opios|chrome/i.test(ua);
+  var isStandalone = window.navigator.standalone;
+  var dismissed = localStorage.getItem('pwa-dismissed');
+  if(isIOS && isSafari && !isStandalone && !dismissed){
+    document.getElementById('pwa-banner').style.display='flex';
+  }
+})();
+</script>

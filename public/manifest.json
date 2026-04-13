@@ -1,0 +1,35 @@
+{
+  "name": "Dip Days",
+  "short_name": "Dip Days",
+  "description": "Discover the world's best bathhouses, saunas & thermal baths",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#f3f0e8",
+  "theme_color": "#0b7c78",
+  "categories": ["lifestyle", "travel", "food"],
+  "icons": [
+    {
+      "src": "/icons/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "maskable"
+    }
+  ],
+  "screenshots": [],
+  "shortcuts": [
+    {
+      "name": "Browse Cities",
+      "short_name": "Cities",
+      "description": "Explore bathhouses by city",
+      "url": "/cities/",
+      "icons": [{ "src": "/icons/icon.svg", "sizes": "any" }]
+    }
+  ]
+}

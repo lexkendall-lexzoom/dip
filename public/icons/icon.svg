@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <!-- Background -->
+  <rect width="512" height="512" fill="#0b7c78"/>
+  <!-- Water ripple rings -->
+  <ellipse cx="256" cy="360" rx="160" ry="32" fill="none" stroke="#085a57" stroke-width="18" opacity="0.7"/>
+  <ellipse cx="256" cy="360" rx="100" ry="20" fill="none" stroke="#085a57" stroke-width="14" opacity="0.5"/>
+  <!-- Droplet shape -->
+  <path d="M256 110 C256 110 156 230 156 300 C156 354 201 390 256 390 C311 390 356 354 356 300 C356 230 256 110 256 110Z" fill="white" opacity="0.95"/>
+  <!-- Inner teal droplet -->
+  <path d="M256 175 C256 175 196 262 196 308 C196 343 222 368 256 368 C290 368 316 343 316 308 C316 262 256 175 256 175Z" fill="#0b7c78"/>
+  <!-- Highlight on droplet -->
+  <ellipse cx="232" cy="262" rx="16" ry="26" fill="white" opacity="0.25" transform="rotate(-20 232 262)"/>
+</svg>

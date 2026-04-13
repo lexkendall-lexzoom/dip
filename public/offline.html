@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>You're Offline — Dip Days</title>
+  <meta name="theme-color" content="#0b7c78"/>
+  <link rel="manifest" href="/manifest.json"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=Playfair+Display:ital@1&display=swap"/>
+  <style>
+    :root {
+      --ink: #111;
+      --page: #f3f0e8;
+      --teal: #0b7c78;
+      --teal-d: #085a57;
+      --stone: #777;
+      --mist: #e0ddd4;
+      --font-sans: 'Syne', ui-sans-serif, system-ui, sans-serif;
+      --font-serif: 'Playfair Display', Georgia, serif;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { height: 100%; }
+    body {
+      background: var(--page);
+      color: var(--ink);
+      font-family: var(--font-sans);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 40px 24px;
+      text-align: center;
+    }
+
+    .icon {
+      width: 80px;
+      height: 80px;
+      margin-bottom: 32px;
+    }
+
+    .eyebrow {
+      font-size: 10px;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      color: var(--teal);
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+    .eyebrow::before,
+    .eyebrow::after {
+      content: '';
+      width: 20px;
+      height: 2px;
+      background: var(--teal);
+    }
+
+    h1 {
+      font-family: var(--font-sans);
+      font-size: clamp(28px, 6vw, 48px);
+      font-weight: 800;
+      letter-spacing: -.03em;
+      line-height: .95;
+      margin-bottom: 16px;
+    }
+    h1 span { color: var(--teal); }
+
+    .subtitle {
+      font-family: var(--font-serif);
+      font-size: 17px;
+      font-style: italic;
+      color: #555;
+      line-height: 1.65;
+      max-width: 360px;
+      margin: 0 auto 40px;
+    }
+
+    .actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 13px 28px;
+      font-family: var(--font-sans);
+      font-size: 10px;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      font-weight: 700;
+      text-decoration: none;
+      cursor: pointer;
+      border: none;
+      transition: background .2s, color .2s;
+    }
+    .btn-primary {
+      background: var(--ink);
+      color: #fff;
+    }
+    .btn-primary:hover { background: var(--teal); }
+    .btn-secondary {
+      background: transparent;
+      color: var(--ink);
+      border: 2px solid var(--ink);
+    }
+    .btn-secondary:hover { border-color: var(--teal); color: var(--teal); }
+
+    .note {
+      margin-top: 48px;
+      font-size: 11px;
+      color: var(--stone);
+      letter-spacing: .04em;
+    }
+
+    .logo {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      padding: 0 24px;
+      border-bottom: 2px solid var(--ink);
+      background: var(--page);
+      text-decoration: none;
+      font-weight: 800;
+      font-size: 24px;
+      letter-spacing: -.02em;
+      color: var(--ink);
+    }
+    .logo span { color: var(--teal); }
+  </style>
+</head>
+<body>
+  <a href="/" class="logo">Dip<span>.</span></a>
+
+  <svg class="icon" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <rect width="512" height="512" fill="#0b7c78"/>
+    <ellipse cx="256" cy="360" rx="160" ry="32" fill="none" stroke="#085a57" stroke-width="18" opacity="0.7"/>
+    <ellipse cx="256" cy="360" rx="100" ry="20" fill="none" stroke="#085a57" stroke-width="14" opacity="0.5"/>
+    <path d="M256 110 C256 110 156 230 156 300 C156 354 201 390 256 390 C311 390 356 354 356 300 C356 230 256 110 256 110Z" fill="white" opacity="0.95"/>
+    <path d="M256 175 C256 175 196 262 196 308 C196 343 222 368 256 368 C290 368 316 343 316 308 C316 262 256 175 256 175Z" fill="#0b7c78"/>
+    <ellipse cx="232" cy="262" rx="16" ry="26" fill="white" opacity="0.25" transform="rotate(-20 232 262)"/>
+  </svg>
+
+  <p class="eyebrow">No Connection</p>
+  <h1>You're <span>offline</span></h1>
+  <p class="subtitle">The waters are still — connect to the internet to explore bathhouses near you.</p>
+
+  <div class="actions">
+    <button class="btn btn-primary" onclick="window.location.reload()">Try Again</button>
+    <a href="/" class="btn btn-secondary">Go Home</a>
+  </div>
+
+  <p class="note">Pages you've already visited are still available below.</p>
+</body>
+</html>
