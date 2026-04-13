@@ -12,6 +12,14 @@
   {% if canonical %}<meta property="og:url" content="{{ canonical }}"/>{% endif %}
   {% if social_image %}<meta property="og:image" content="{{ social_image }}"/>{% endif %}
   <meta name="twitter:card" content="{{ twitter_card | default('summary') }}"/>
+  <!-- PWA -->
+  <link rel="manifest" href="/manifest.json"/>
+  <meta name="theme-color" content="#0b7c78"/>
+  <meta name="mobile-web-app-capable" content="yes"/>
+  <meta name="apple-mobile-web-app-capable" content="yes"/>
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+  <meta name="apple-mobile-web-app-title" content="Dip Days"/>
+  <link rel="apple-touch-icon" href="/icons/icon.svg"/>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Playfair+Display:ital,wght@0,500;1,400;1,500&display=swap"/>
@@ -19,5 +27,12 @@
 </head>
 <body>
   {% block body %}{{ content | safe }}{% endblock %}
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function() {
+        navigator.serviceWorker.register('/sw.js');
+      });
+    }
+  </script>
 </body>
 </html>
