@@ -25,9 +25,11 @@ venue:
     through Saturday. No time limit. The longer you stay, the better the math gets. The wellness press undercovers this
     place consistently. Don't make the same mistake.
   gallery_images:
-    - https://worldspa.com/wp-content/uploads/2024/02/WorldSpa_038.jpg
     - https://worldspa.com/wp-content/uploads/2024/02/WorldSpa_039.jpg
     - https://worldspa.com/wp-content/uploads/2024/02/WorldSpa_041.jpg
+  image_sources:
+    - website
+  image_confidence: medium
   one_line_verdict: >-
     The best bathhouse the wellness press consistently undercovers, open until 3am on weekends, with seven sauna
     environments and a social logic closer to a great third space than a wellness product.

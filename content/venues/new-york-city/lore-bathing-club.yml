@@ -4,11 +4,16 @@ seo:
   social_image: 'https://www.azuremagazine.com/wp-content/uploads/2025/12/Azure-Lore-Bathing-Club-Ilse-Crawford-Ringo-Studio-Hero.jpg'
 venue:
   gallery_images:
-    - 'https://www.azuremagazine.com/wp-content/uploads/2025/12/Azure-Lore-Bathing-Club-Ilse-Crawford-Ringo-Studio-Hero.jpg'
     - 'https://www.azuremagazine.com/wp-content/uploads/2025/12/Azure-Lore-Bathing-Club-Ilse-Crawford-Ringo-Studio-05.jpg'
     - 'https://www.azuremagazine.com/wp-content/uploads/2025/12/Azure-Lore-Bathing-Club-Ilse-Crawford-Ringo-Studio-03.jpg'
     - 'https://www.azuremagazine.com/wp-content/uploads/2025/12/Azure-Lore-Bathing-Club-Ilse-Crawford-Ringo-Studio-01.jpg'
     - 'https://cdn.prod.website-files.com/682939c2f8a0c33aaa289209/6945a2688f639d9a872b69cd_seandavidson_lore_11.jpg'
+    - 'https://cdn.prod.website-files.com/682939c2f8a0c33aaa289209/6945a26725252246c9321212_seandavidson_lore_15.jpg'
+    - 'https://cdn.prod.website-files.com/682939c2f8a0c33aaa289209/6945a26840f74dcb640d4a64_seandavidson_lore_7.jpg'
+    - 'https://cdn.prod.website-files.com/682939c2f8a0c33aaa289209/6945a26892f9e61d0843ddc2_seandavidson_lore_17.jpg'
+  image_sources:
+    - website
+  image_confidence: high
   date_reviewed: February 2026
   price: $225/mo · $55/session · $149/7-day pass
   city: New York City

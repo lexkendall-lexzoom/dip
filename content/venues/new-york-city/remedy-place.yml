@@ -27,9 +27,15 @@ venue:
     much as a health service. Yes, $9,000. For its target demographic, that is the product. The community score runs
     higher than ours because members love the social club; we're scoring the wellness.
   gallery_images:
-    - https://cdn.sanity.io/images/jptxcgmn/production/3158497d1fca43ce863df9e06c8c97763d6c44c1-6123x4082.jpg?w=1200&q=85&fit=clip&auto=format
-    - https://cdn.sanity.io/images/jptxcgmn/production/f45c1f11b41340a59152aa402fcc5062f0382b5c-1920x1080.jpg?rect=0,36,1920,1008&w=1200&h=630
-    - https://cdn.sanity.io/images/jptxcgmn/production/d38b947aabf0f08a12c820c17cbd42a70bdec89b-1440x800.jpg?rect=553,0,593,800&w=2048&q=85&fit=clip&auto=format
+    - https://cdn.sanity.io/images/jptxcgmn/production/f45c1f11b41340a59152aa402fcc5062f0382b5c-1920x1080.jpg?w=1920&q=85&fit=clip&auto=format
+    - https://cdn.sanity.io/images/jptxcgmn/production/d38b947aabf0f08a12c820c17cbd42a70bdec89b-1440x800.jpg?w=1920&q=85&fit=clip&auto=format
+    - https://cdn.sanity.io/images/jptxcgmn/production/15babf80348a5e4a7edb8b1b994befb245bd1e6c-4096x2731.jpg?w=1920&q=85&fit=clip&auto=format
+    - https://cdn.sanity.io/images/jptxcgmn/production/2172b377d07f26cdbb1190c234fcb2aebce3328f-4096x2730.jpg?w=1920&q=85&fit=clip&auto=format
+    - https://cdn.sanity.io/images/jptxcgmn/production/b22c05cda51c13f031370b959a365f9acb545317-4098x2732.jpg?w=1920&q=85&fit=clip&auto=format
+    - https://cdn.sanity.io/images/jptxcgmn/production/810df331c916334e868a0c15c1fc506d27a32371-1120x751.png?w=1920&q=85&fit=clip&auto=format
+  image_sources:
+    - website
+  image_confidence: high
   one_line_verdict: >-
     Finance wellness as a social product. The walk-in protocols are legitimate. The $9,000 membership is buying
     community as much as recovery. Yes, $9,000.

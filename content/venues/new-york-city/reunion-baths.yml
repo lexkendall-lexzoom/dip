@@ -21,8 +21,10 @@ venue:
     accessible social format. The concept addresses a real gap in the Brooklyn market. Pre-opening: no facility, no
     experience, no operational data. The positioning is correct. The proof is in the build-out. Worth following.
   gallery_images:
-    - image: /images/uploads/reunion-baths-hero.png
-    - image: /images/uploads/reunion-baths-experience.png
+    - /images/uploads/reunion-baths-experience.png
+  image_sources:
+    - website
+  image_confidence: low
   one_line_verdict: >-
     A community-first Brooklyn bathhouse concept proposing to fill a real gap. Promising on paper. But this category
     is decided by execution, not by Instagram presence.

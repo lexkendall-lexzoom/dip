@@ -25,9 +25,15 @@ venue:
     menu. The dual positioning serves two different customers simultaneously and handles the tension better than it
     probably should.
   gallery_images:
-    - "https://bodybybrooklyn.com/wp-content/uploads/2020/06/slider-image-2.jpg"
-    - "https://bodybybrooklyn.com/wp-content/uploads/2021/01/WetLounge.jpg"
     - "https://bodybybrooklyn.com/wp-content/uploads/2021/01/DryLounge2-1.jpg"
+    - "https://bodybybrooklyn.com/wp-content/uploads/2021/01/WetLounge.jpg"
+    - "https://bodybybrooklyn.com/wp-content/uploads/2021/01/VIPSuite.jpg"
+    - "https://bodybybrooklyn.com/wp-content/uploads/2025/04/DSC_220-copy-2-1-scaled.jpg"
+    - "https://bodybybrooklyn.com/wp-content/uploads/2025/04/DSC_46-2-1-scaled.jpg"
+    - "https://bodybybrooklyn.com/wp-content/uploads/2021/02/banner-amminities-about.jpg"
+  image_sources:
+    - website
+  image_confidence: high
   one_line_verdict: >-
     Clinton Hill's neighborhood spa-banya hybrid. Legitimate thermal credentials, a useful platza, and a cocktail bar that doesn't apologize for itself. Better for the neighborhood than the destination visitor.
   editorial_overview: |

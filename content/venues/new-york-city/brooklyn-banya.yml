@@ -2,7 +2,7 @@ seo:
   title: "Brooklyn Banya Review: Price, Hours, What to Know | Dip"
   description: Dip review of Brooklyn Banya in Sheepshead Bay with pricing, hours,
     neighborhood notes, and who it is best for.
-  social_image: 'https://brooklynbanya.wordpress.com/wp-content/uploads/2014/04/brooklyn-banya-bath-house-2.jpg'
+  social_image: 'https://static.wixstatic.com/media/574f29_21a6d9aab8c048f79ee1763e7002d712~mv2.jpg/v1/fill/w_1536,h_783,al_c,q_85,enc_auto/brooklynbanya.jpg'
 venue:
   name: Brooklyn Banya
   city: New York City
@@ -33,6 +33,9 @@ venue:
     - 'https://static.wixstatic.com/media/574f29_a5d9a1b8c9e7f2g1h3i4_4000~mv2.jpg'
     - 'https://static.wixstatic.com/media/574f29_b6e0a2c9d8f1g3h2i5j_4000~mv2.jpg'
     - 'https://static.wixstatic.com/media/574f29_c7f1b3d0e9g2h4i3j6k_4000~mv2.jpg'
+  image_sources:
+    - website
+  image_confidence: low
   one_line_verdict: >-
     A working banya in Sheepshead Bay where the regulars are the amenity. What they'll teach you about banya, nobody
     with better lighting can.

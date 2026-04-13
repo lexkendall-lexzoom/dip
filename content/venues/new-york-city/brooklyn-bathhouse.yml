@@ -27,9 +27,11 @@ venue:
     bathhouse that wants you back on a Tuesday, not just once for the novelty. Zurilee Pizzeria on site. It understood
     its assignment.
   gallery_images:
-    - 'https://static.wixstatic.com/media/6df4f6_e7395339f6af4a629ade2c2dfc8a930e~mv2.jpg'
     - 'https://static.wixstatic.com/media/f8909d_87631c5bd099405c9d5c399209b9fd01~mv2.png'
     - 'https://static.wixstatic.com/media/6df4f6_b4aeaeaee4c1481eaeb00012130388c8~mv2.png'
+  image_sources:
+    - website
+  image_confidence: medium
   one_line_verdict: >-
     The one that understood its assignment: bring a real thermal circuit to a neighborhood that needed one, at a price
     the neighborhood can actually use.
