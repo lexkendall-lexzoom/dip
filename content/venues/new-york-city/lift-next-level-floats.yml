@@ -29,6 +29,8 @@ venue:
   image_sources:
     - website
   image_confidence: high
+    - 'https://www.liftfloats.com/wp-content/uploads/2024/08/lift_logo_white.png'
+    - 'https://www.liftfloats.com/wp-content/uploads/2024/08/008-psychology.png'
   one_line_verdict: >-
     NYC's best float therapy, executed properly by people who understand the practice they're facilitating. The missing recovery modality you probably haven't integrated yet.
   editorial_overview: |
