@@ -24,9 +24,15 @@ venue:
     steam rooms, $60 weekday passes. The design is 2004. Nobody comes here for the aesthetic, and the aesthetic doesn't
     care. The waterfall is genuinely unlike anything else in Manhattan.
   gallery_images:
-    - https://media.timeout.com/images/100539965/750/422/image.jpg
     - https://www.gjspa.com/sites/default/files/styles/homepage_slideshow_slide/public/IMAGE%204_0.jpg?itok=35t_iXAd
     - https://www.gjspa.com/sites/default/files/styles/homepage_slideshow_slide/public/IMAGE%206_0.jpg?itok=0_u0P1yN
+    - https://www.gjspa.com/sites/default/files/styles/homepage_slideshow_slide/public/IMAGE%205.jpg?itok=xRcIm_ik
+    - https://www.gjspa.com/sites/default/files/styles/homepage_slideshow_slide/public/IMAGE%201a.jpg?itok=-28IgorU
+    - https://www.gjspa.com/sites/default/files/styles/homepage_slideshow_slide/public/IMAGE%207.jpg?itok=D1hRgySN
+    - https://www.gjspa.com/sites/default/files/styles/homepage_slideshow_slide/public/R1web_2.JPG?itok=RAy90m92
+  image_sources:
+    - website
+  image_confidence: medium
   one_line_verdict: >-
     A NoHo institution that's been quietly reliable for over twenty years. Not a discovery. Not a destination. Exactly
     what the neighborhood needs, and it knows it.

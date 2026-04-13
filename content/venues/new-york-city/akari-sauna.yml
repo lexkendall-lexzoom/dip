@@ -24,9 +24,13 @@ venue:
     The waitlist is not manufactured scarcity. The spaces are small, the membership is capped, and the founder has
     resisted expanding faster than the product can hold. Get on the list.
   gallery_images:
-    - https://cdn.prod.website-files.com/64ee5979ef5937fc52001f92/67f940039615508640a13d94_AKARI-21_3_11zon.jpg
     - https://cdn.prod.website-files.com/64ee5979ef5937fc52001f92/67f940039615508640a13d94_AKARI-21_3_11zon-p-2000.jpg
     - https://cdn.prod.website-files.com/64ee5979ef5937fc52001f92/68364d8910eaeb6443c21c19_AKARI-kodak_800_c_41_10774_90560_200569_000249510032-min-p-2000.jpg
+    - https://cdn.prod.website-files.com/64ee5979ef5937fc52001f92/67f940881987d02b410a7194_AKARI-34_11zon.jpg
+    - https://cdn.prod.website-files.com/64ee5979ef5937fc52001f92/655730cc3a93bb804630ccc2_home3.webp
+  image_sources:
+    - website
+  image_confidence: medium
   one_line_verdict: >-
     Japanese sentō executed with rare fidelity in Brooklyn, membership-only, sold out since opening. You don't
     photograph it. You don't describe it particularly well afterward. You just go again.

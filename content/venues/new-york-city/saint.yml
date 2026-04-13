@@ -23,9 +23,11 @@ venue:
     month for twelve visits, it's priced as a regular recovery tool, not an occasion. The private format is either the
     correct model for your practice or entirely wrong for it. No middle ground.
   gallery_images:
-    - 'https://saint.nyc/saint-venue-photo.jpg'
     - 'https://saint.nyc/saint-interior-1.jpg'
     - 'https://saint.nyc/saint-interior-2.jpg'
+  image_sources:
+    - website
+  image_confidence: low
   one_line_verdict: >-
     Four private sauna and ice bath sanctuaries in Chelsea, for people who've figured out that the communal part of communal wellness is the problem. A clean concept for a real use case.
   editorial_overview: |

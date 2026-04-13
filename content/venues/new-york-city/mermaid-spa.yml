@@ -3,10 +3,6 @@ seo:
   description: Dip review of Mermaid Spa in Sea Gate, Brooklyn — authentic Russian banya with three steam rooms, ice plunge pools, and a restaurant. Pricing and hours.
   social_image: "https://mermaidspa.us/wp-content/uploads/2022/12/photo_2022-12-10_21-10-39.jpg"
 venue:
-  gallery_images:
-    - "https://mermaidspa.us/wp-content/uploads/2021/06/Russian-Banya.jpg"
-    - "https://mermaidspa.us/wp-content/uploads/2021/06/Steam-room.jpg"
-    - "https://mermaidspa.us/wp-content/uploads/2021/06/Ice-Cave.jpg"
   date_reviewed: March 2026
   price: from $45
   city: New York City
@@ -43,6 +39,11 @@ venue:
     - "https://mermaidspa.us/wp-content/uploads/2021/06/Ice-Cave.jpg"
     - "https://mermaidspa.us/wp-content/uploads/2021/06/banya-7-min.jpg"
     - "https://mermaidspa.us/wp-content/uploads/2021/06/Rest-hall.jpg"
+    - "https://mermaidspa.us/wp-content/uploads/2021/06/banya-1-scaled.jpg"
+    - "https://mermaidspa.us/wp-content/uploads/2021/06/banya-24-min-scaled.jpg"
+  image_sources:
+    - website
+  image_confidence: high
   one_line_verdict: >-
     Brooklyn's most authentic Russian banya, marooned in Sea Gate with three steam rooms and platza sessions that
     justify the journey to Coney Island's western tip. Community scores don't capture what the regulars know.

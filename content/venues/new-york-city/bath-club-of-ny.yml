@@ -24,11 +24,13 @@ venue:
     full assessment difficult. For people who know what they're looking for in the traditional format, the direct
     inquiry is worth making. Call for current hours and pricing.
   gallery_images:
-    - '/images/uploads/bath-club-ny-hero.png'
     - '/images/uploads/bath-club-ny-sauna-interior-1.png'
     - '/images/uploads/bath-club-ny-sauna-interior-2.png'
     - '/images/uploads/bath-club-ny-sauna-interior-3.png'
     - '/images/uploads/bath-club-ny-sauna-interior-4.png'
+  image_sources:
+    - website
+  image_confidence: low
   one_line_verdict: >-
     A traditional bathhouse with pool and authentic sauna facilities. Limited public information prevents a full assessment, which in the traditional banya world is not necessarily a bad sign.
   editorial_overview: |

@@ -28,9 +28,11 @@ venue:
     times than you've been to the gym. The crowd is eclectic in a way no designed wellness venue can replicate. It is
     not Instagram-ready, and that is not incidental to what makes it irreplaceable.
   gallery_images:
-    - https://static.wixstatic.com/media/8c8383_65248793246e915170255dfa9766ff1f.jpg/v1/fit/w_2500,h_1330,al_c/8c8383_65248793246e915170255dfa9766ff1f.jpg
     - https://static.wixstatic.com/media/8c8383_25843936c1fc4751b3ed06ba68e53e16~mv2.jpg/v1/fit/w_2500,h_1330,al_c/IMG_0422.jpg
     - https://static.wixstatic.com/media/8c8383_d1c9fe2b46c2e3ab82084968a669bc15.jpg/v1/fit/w_2500,h_1330,al_c/8c8383_d1c9fe2b46c2e3ab82084968a669bc15.jpg
+  image_sources:
+    - website
+  image_confidence: medium
   one_line_verdict: >-
     Open since 1892, still operating the same core experience. The primary text for everything the new bathhouses are
     drawing from, and better than most of them.

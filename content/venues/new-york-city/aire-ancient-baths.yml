@@ -4,9 +4,17 @@ seo:
   social_image: https://beaire.com/sites/default/files/bg_banner_reserva_h.jpg
 venue:
   gallery_images:
-    - https://beaire.com/sites/default/files/bg_banner_reserva_h.jpg
+    - https://beaire.com/sites/default/files/galleryTri1_desktop.jpg
+    - https://beaire.com/sites/default/files/galleryTri2_desktop.jpg
+    - https://beaire.com/sites/default/files/galleryTri3_desktop.jpg
+    - https://beaire.com/sites/default/files/galleryTri4_desktop.jpg
+    - https://beaire.com/sites/default/files/galleryTri5_desktop.jpg
+    - https://beaire.com/sites/default/files/galleryTri6_desktop.jpg
     - /images/uploads/aire-tribeca-2.jpg
     - /images/uploads/aire-tribeca-3.jpg
+  image_sources:
+    - website
+  image_confidence: high
   date_reviewed: February 2026
   price: from $150
   city: New York City

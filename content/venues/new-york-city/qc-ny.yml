@@ -10,7 +10,7 @@ venue:
   slug: qc-ny
   id: qc-ny
   subtitle: Editorial review, practical details, and booking context from Dip.
-  hero_image: https://www.qcny.com/wp-content/uploads/2023/05/qcny-outdoor-pool-skyline.jpg
+  hero_image: 'https://ebookslanding.wpenginepowered.com/wp-content/uploads/2023/05/qcny-outdoor-pool-skyline.jpg'
   neighborhood: Governors Island, NYC
   address: "112 Andes Rd, New York, NY 10004"
   price: from $98
@@ -27,9 +27,11 @@ venue:
     the view. Both things are true simultaneously. Community reviews skew lower than they should, mostly from people
     who booked the wrong weekend slot and fought the crowd for it.
   gallery_images:
-    - "https://ebookslanding.wpenginepowered.com/wp-content/uploads/2023/05/qcny-outdoor-pool-skyline.jpg"
     - "https://ebookslanding.wpenginepowered.com/wp-content/uploads/2023/05/qcny-sauna.jpg"
     - "https://ebookslanding.wpenginepowered.com/wp-content/uploads/2023/05/qcny-spa-governors-island-pools1-scaled.jpg"
+  image_sources:
+    - website
+  image_confidence: medium
   one_line_verdict: >-
     A 55,000-square-foot Italian thermal spa on Governors Island where the skyline drives the bookings and the thermal
     circuit earns them. Your nervous system figured it out before you did.

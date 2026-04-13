@@ -24,8 +24,10 @@ venue:
     scale, and that's the genuinely novel element. If they execute, this matters. If they don't, it's another beautiful
     rendering.
   gallery_images:
-    - "https://one22fifth.wpenginepowered.com/wp-content/uploads/2025/02/IV_Renders-Crop.jpg"
     - "https://one22fifth.wpenginepowered.com/wp-content/uploads/2025/02/Shower_Render-Crop.jpg"
+  image_sources:
+    - website
+  image_confidence: low
   one_line_verdict: >-
     A fifty-person ceremonial sauna with longevity modalities and Aufguss programming, opening 2026 on Fifth Avenue. The most ambitious bathhouse concept currently in development in NYC.
   editorial_overview: |

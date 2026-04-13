@@ -24,8 +24,10 @@ venue:
     attention, it's the best price-to-intentionality ratio in NYC wellness. The four-person cap means it books out.
     Plan accordingly.
   gallery_images:
-    - 'https://elahni.com/elahni-og.png'
     - 'https://elahni.com/heat.webp'
+  image_sources:
+    - website
+  image_confidence: low
   one_line_verdict: >-
     A four-person wellness speakeasy doing the most intentional guided contrast work in Manhattan. Underpriced, hard to book, and the smug satisfaction of having found it is part of the appeal.
   editorial_overview: |
