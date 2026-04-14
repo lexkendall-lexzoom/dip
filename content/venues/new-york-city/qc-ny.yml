@@ -29,9 +29,16 @@ venue:
   gallery_images:
     - "https://ebookslanding.wpenginepowered.com/wp-content/uploads/2023/05/qcny-sauna.jpg"
     - "https://ebookslanding.wpenginepowered.com/wp-content/uploads/2023/05/qcny-spa-governors-island-pools1-scaled.jpg"
+    - "https://gov-island-site.s3.amazonaws.com/pages/_eventDetailImage/NY_PANORAMIC_SPA_POOL_SUNSET-2.jpg"
+    - "https://interiordesign.net/wp-content/uploads/2022/10/Interior-Design-QC-NY-Robert-D-Henry-Architects-idx221001_dw06.jpg"
+    - "https://interiordesign.net/wp-content/uploads/2022/10/Interior-Design-QC-NY-Robert-D-Henry-Architects-idx221001_dw05-1024x683.jpg"
+    - "https://interiordesign.net/wp-content/uploads/2022/10/Interior-Design-QC-NY-Robert-D-Henry-Architects-idx221001_dw07-1024x683.jpg"
+    - "https://lede-admin.appetitomagazine.com/wp-content/uploads/sites/53/2025/10/IMG_6546.jpeg"
+    - "https://lede-admin.appetitomagazine.com/wp-content/uploads/sites/53/2025/10/IMG_6552-1.jpeg"
   image_sources:
     - website
-  image_confidence: medium
+    - press
+  image_confidence: high
   one_line_verdict: >-
     A 55,000-square-foot Italian thermal spa on Governors Island where the skyline drives the bookings and the thermal
     circuit earns them. Your nervous system figured it out before you did.
