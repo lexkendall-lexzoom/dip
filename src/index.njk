@@ -1538,6 +1538,22 @@ function toDetailSlug(name) {
     .replace(/^-|-$/g, '');
 }
 
+// ─── Resolve effective score (YAML > hardcoded) for ranking ────────────
+function resolveScore(v) {
+  const detail = VENUE_DETAIL_DATA[toDetailSlug(v.name)] || null;
+  const yamlScore = (detail && detail.score != null && detail.score !== '') ? Number(detail.score) : null;
+  const raw = Number.isFinite(yamlScore) ? yamlScore : (typeof v.score === 'number' ? v.score : Number(v.score));
+  return Number.isFinite(raw) ? raw : -1;
+}
+
+// ─── Sort venues by score (descending) and assign rank-based numbers ───
+Object.values(CITIES).forEach(city => {
+  city.venues.sort((a, b) => resolveScore(b) - resolveScore(a));
+  city.venues.forEach((v, i) => { v.num = i + 1; });
+  const offset = city.venues.length;
+  city.upcoming.forEach((v, i) => { v.num = offset + i + 1; });
+});
+
 const FILTER_TAGS = {
   steam: 'Steam',
   'guided-rituals': 'Guided Rituals',
