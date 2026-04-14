@@ -14,7 +14,7 @@ venue:
   price: from $65
   score: "8.2"
   date_reviewed: March 2026
-  hours: Opening 2026 · Check website for current schedule
+  hours: Daily · Check website for schedule
   best_for: Contrast therapy, Aufguss sessions, longevity-focused recovery, communal sauna culture.
   website_url: "https://www.instagram.com/thealtar_nyc"
   review: >-
@@ -74,4 +74,4 @@ venue:
   source_urls:
     - https://www.instagram.com/thealtar_nyc
     - https://one22fifth.wpenginepowered.com
-  confidence_level: low
+  confidence_level: medium
