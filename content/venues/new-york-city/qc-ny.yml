@@ -3,14 +3,14 @@ seo:
   description: >-
     Dip review of QC NY on Governors Island — 55,000 sq ft Italian thermal spa with infinity pools overlooking
     Manhattan. Pricing, hours, and who it is best for.
-  social_image: 'https://ebookslanding.wpenginepowered.com/wp-content/uploads/2023/05/qcny-outdoor-pool-skyline.jpg'
+  social_image: 'https://www.qcny.com/wp-content/uploads/2025/09/EXPERIENCE_SUNSET-POOL-OVER-MANHATTAN_SLIDER-BANNER_DESKTOP_1182x640.jpg'
 venue:
   name: QC NY
   city: New York City
   slug: qc-ny
   id: qc-ny-spa
   subtitle: Editorial review, practical details, and booking context from Dip.
-  hero_image: 'https://ebookslanding.wpenginepowered.com/wp-content/uploads/2023/05/qcny-outdoor-pool-skyline.jpg'
+  hero_image: 'https://www.qcny.com/wp-content/uploads/2025/09/EXPERIENCE_SUNSET-POOL-OVER-MANHATTAN_SLIDER-BANNER_DESKTOP_1182x640.jpg'
   neighborhood: Governors Island, NYC
   address: "112 Andes Rd, New York, NY 10004"
   price: from $98
@@ -27,17 +27,16 @@ venue:
     the view. Both things are true simultaneously. Community reviews skew lower than they should, mostly from people
     who booked the wrong weekend slot and fought the crowd for it.
   gallery_images:
-    - "https://ebookslanding.wpenginepowered.com/wp-content/uploads/2023/05/qcny-sauna.jpg"
-    - "https://ebookslanding.wpenginepowered.com/wp-content/uploads/2023/05/qcny-spa-governors-island-pools1-scaled.jpg"
-    - "https://gov-island-site.s3.amazonaws.com/pages/_eventDetailImage/NY_PANORAMIC_SPA_POOL_SUNSET-2.jpg"
-    - "https://interiordesign.net/wp-content/uploads/2022/10/Interior-Design-QC-NY-Robert-D-Henry-Architects-idx221001_dw06.jpg"
-    - "https://interiordesign.net/wp-content/uploads/2022/10/Interior-Design-QC-NY-Robert-D-Henry-Architects-idx221001_dw05-1024x683.jpg"
-    - "https://interiordesign.net/wp-content/uploads/2022/10/Interior-Design-QC-NY-Robert-D-Henry-Architects-idx221001_dw07-1024x683.jpg"
-    - "https://lede-admin.appetitomagazine.com/wp-content/uploads/sites/53/2025/10/IMG_6546.jpeg"
-    - "https://lede-admin.appetitomagazine.com/wp-content/uploads/sites/53/2025/10/IMG_6552-1.jpeg"
+    - "https://www.qcny.com/wp-content/uploads/2025/09/EXPERIENCE_SUNSET-POOL-OVER-MANHATTAN_SLIDER-BANNER_DESKTOP_1182x640.jpg"
+    - "https://www.qcny.com/wp-content/uploads/2025/11/WIN25_NY_EXPERIENCE_Outdoor-Pools_card-overlay-slider_DESKTOP.jpg"
+    - "https://www.qcny.com/wp-content/uploads/2025/11/WIN25_NY_EXPERIENCE_Saunas_card-overlay-slider_DESKTOP.jpg"
+    - "https://www.qcny.com/wp-content/uploads/2025/09/EXPERIENCE_INDOOR-EXPERIENCE_SLIDER-BANNER_DESKTOP_1182x640.jpg"
+    - "https://www.qcny.com/wp-content/uploads/2025/04/NEW-YORK-WONDER-EXPERIENCE-STEAM-BATHS-CARD-OVERLAY-SLIDER-DESKTOP-417X520.jpg"
+    - "https://www.qcny.com/wp-content/uploads/2025/11/WIN25_NY_EXPERIENCE_hero_DESKTOP-1.jpg"
+    - "https://www.qcny.com/wp-content/uploads/2025/11/WIN25_NY_YOUR-COZY-RETREAT_two-columns_DESKTOP.jpg"
+    - "https://www.qcny.com/wp-content/uploads/2025/09/HOMEPAGE_WELLNESS-JOURNEY_GENERIC-CARD-CAROUSEL_DESKTOP_430x720.jpg"
   image_sources:
     - website
-    - press
   image_confidence: high
   one_line_verdict: >-
     A 55,000-square-foot Italian thermal spa on Governors Island where the skyline drives the bookings and the thermal
