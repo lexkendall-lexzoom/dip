@@ -15,6 +15,7 @@ venue:
   address: "135 Bridge Park Dr, Brooklyn, NY 11201"
   price: from $59
   score: '8.0'
+  community_score: '4.8'
   date_reviewed: April 2026
   hours: Tue–Fri 8am–9pm · Sat 9am–6pm · Sun 9am–4pm · Mon closed
   best_for: Recovery modalities, contrast therapy, athletes, boutique wellness sessions.
@@ -27,6 +28,9 @@ venue:
     staff who remember your name and your recovery goals.
   gallery_images:
     - 'https://lirp.cdn-website.com/42e1ce53/dms3rep/multi/opt/Group+5634-6746f48f-1920w.png'
+    - 'https://lirp.cdn-website.com/42e1ce53/dms3rep/multi/opt/DSC08246-b2dbf791-1920w.png'
+    - 'https://lirp.cdn-website.com/42e1ce53/dms3rep/multi/opt/DSC08307-2880w.png'
+    - 'https://lirp.cdn-website.com/42e1ce53/dms3rep/multi/opt/Core+Services+-+Contrast+-+Cold+-+side+by+side+6-2880w.png'
   image_sources:
     - website
   image_confidence: low

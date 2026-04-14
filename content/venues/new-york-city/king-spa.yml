@@ -12,8 +12,9 @@ venue:
   hero_image: 'https://thekingspanj.com/cdn/shop/files/245504763_666970704238857_5608379035612468795_n.jpg?v=1689879344&width=1500'
   neighborhood: Palisades Park, NJ
   address: "321 Commercial Ave, Palisades Park, NJ 07650"
-  price: from $70
+  price: from $59
   score: '8.1'
+  community_score: '3.8'
   date_reviewed: April 2026
   hours: Daily 9am–2am · Last entry 11pm
   best_for: Korean jjimjilbang, full-day soaking, body scrubs, affordable thermal variety.
@@ -22,10 +23,11 @@ venue:
     King Spa is the largest Korean spa on the East Coast, running ten specialty saunas, gender-separated bathing areas,
     hot pools, and a cafeteria serving real Korean food out of a Palisades Park facility that operates until 2am. The
     body scrubs are the signature service. The food is good enough that The Infatuation reviewed the restaurant
-    separately. At $70 weekday / $80 weekend for a full-day pass, it undercuts every comparable facility in the
-    tri-state area. The shuttle from Manhattan runs weekends. No re-entry.
+    separately. At $59 weekday / $69 weekend online ($70/$80 walk-in) for a full-day pass, it undercuts every
+    comparable facility in the tri-state area. The shuttle from Manhattan runs weekends. No re-entry.
   gallery_images:
     - 'https://thekingspanj.com/cdn/shop/files/245504763_666970704238857_5608379035612468795_n.jpg?v=1689879344&width=1500'
+    - 'https://thekingspanj.com/cdn/shop/files/bulhanjeongmak.jpg?v=1689953701&width=3200'
   image_sources:
     - website
   image_confidence: low
@@ -37,7 +39,7 @@ venue:
 
     The body scrubs are the reason many regulars come. Korean body scrubs — performed on a wet table by an experienced attendant — are categorically different from what "exfoliation" means at a Western spa. They're vigorous, thorough, and leave your skin feeling genuinely new. Basic, plus, and premium tiers are available. Book the premium if it's your first time. The difference is worth the upcharge.
 
-    At $70 weekday and $80 weekend for all-day access to every sauna and bathing area, King Spa is priced at roughly half what SoJo Spa Club charges across the river. The trade-off is aesthetic: King Spa is functional and community-oriented rather than designed for Instagram. The crowd is predominantly Korean families and regulars who treat this as a weekly ritual. That's the tell. When the regulars are families who've been coming for years, the value proposition is proven. Free shuttle service runs from Manhattan on weekends, though some users report inconsistent experiences with it. Drive or rideshare if you can.
+    At $59 weekday and $69 weekend (online pricing; $70/$80 walk-in) for all-day access to every sauna and bathing area, King Spa is priced at roughly half what SoJo Spa Club charges across the river. The trade-off is aesthetic: King Spa is functional and community-oriented rather than designed for Instagram. The crowd is predominantly Korean families and regulars who treat this as a weekly ritual. That's the tell. When the regulars are families who've been coming for years, the value proposition is proven. Free shuttle service runs from Manhattan on weekends, though some users report inconsistent experiences with it. Drive or rideshare if you can.
   vibe: Functional, community-oriented, and unpretentious. The energy is Korean family weekend — multigenerational groups, regulars in the communal areas watching TV, people napping in the lounge after a long sauna session. Nobody is performing wellness here.
   facility_breakdown: 10 specialty sauna rooms (traditional dry at 280°F, infrared, aroma, clay, ice room, and more), gender-separated bathing areas with hot pools and wet steam, cold plunge, relaxation lounges with TV, cafeteria serving Korean food, free Wi-Fi. Body scrub and massage services available at additional cost.
   pros:
@@ -53,7 +55,7 @@ venue:
     - No re-entry policy means you commit to the full visit
   not_ideal_for: Design-focused visitors, people who want a quick session, anyone without reliable transportation to NJ.
   pro_move: Go on a weekday morning, get the premium body scrub, eat at the cafeteria after, then cycle through the saunas. Budget four to five hours minimum. This is a day trip, not a quick visit.
-  value_read: Among the best value propositions in the NYC-area wellness market. A full day of genuine thermal variety plus Korean food for $70–80 is difficult to match anywhere in the tri-state area.
+  value_read: Among the best value propositions in the NYC-area wellness market. A full day of genuine thermal variety plus Korean food for $59–69 (online) is difficult to match anywhere in the tri-state area.
   scene_summary: King Spa is the jjimjilbang that Korean families in the tri-state area have known about for years. It's entering broader awareness as the NYC wellness market expands, but the core audience remains multigenerational Korean regulars. The Infatuation reviewing the restaurant independently tells you something about the crossover appeal.
   crowd_profile: Predominantly Korean families and regulars, 20s–70s. Growing cohort of non-Korean wellness enthusiasts who found it through word of mouth or reviews. Multigenerational groups are common. Solo visitors fit in easily.
   time_of_day_dynamics: Mornings are quiet — mostly solo regulars and retirees. Afternoons fill with families, especially weekends. Evenings bring a younger crowd taking advantage of the late hours. The late-night window (10pm–2am) is surprisingly peaceful.
@@ -71,7 +73,7 @@ venue:
     service_flow: 7.5
     overall_dip_score: 8.1
   audience_sentiment_snapshot: >-
-    Over 1,300 Yelp reviews with consistently positive sentiment around cleanliness, sauna variety, staff friendliness,
+    Google 4.1/5 (4,900+ reviews), Yelp 1,300+ reviews with consistently positive sentiment around cleanliness, sauna variety, staff friendliness,
     food quality, and value. Main complaints center on the Manhattan shuttle service reliability and incremental price
     increases over the years — though it remains the most affordable option in its category.
   editorial_last_updated: '2026-04-13'
