@@ -882,7 +882,7 @@ const CITIES = {
        lat:40.7551,lng:-73.9899,
        img:'https://cdn.prod.website-files.com/64ee5979ef5937fc52001f92/68364d8910eaeb6443c21c19_AKARI-kodak_800_c_41_10774_90560_200569_000249510032-min.jpg'},
 
-      {id:'nycu3',num:12,name:'Lore Bathing Club',hood:'NoHo, Manhattan',type:'contrast',price:'$225/mo · $55/session · $149/7-day pass',score:null,
+      {id:'nycu3',num:12,name:'Lore Bathing Club',hood:'NoHo, Manhattan',type:'contrast',price:'$225/mo · $55/session · $149/7-day pass',score:7.2,
        gf:['Daily use','Membership model','Contrast therapy'],
        review:'Designed for frequency, not occasion. Dry sauna, infrared sauna, and a serious cold plunge pool — built by alumni of Lifetime Fitness and NeueHouse who understand daily-use design. At $225/month for unlimited weekday access, it reframes bathing as routine rather than indulgence.',
        hours:'Mon-Fri 7am-11pm · Sat-Sun 8am-11pm',
@@ -969,6 +969,30 @@ const CITIES = {
        url:'https://www.abathhouse.com/flatiron',
        lat:40.7412,lng:-73.9908,
        img:'https://images.squarespace-cdn.com/content/v1/5f627ccbb290eb31d9234aee/f19e93df-842a-4e71-ac4f-1d3652032fae/240108_+Bathhouse+Flatiron_Pool_1997.jpg'},
+
+      {id:'nyc22',num:23,name:'SAINT',hood:'Chelsea, Manhattan',type:'sauna',price:'from $90',score:7.8,
+       gf:['Private rooms','Max 3 people','BOND architecture','Solitude'],
+       review:'Four private sauna and ice bath sanctuaries for up to three people, designed by architecture firm BOND. Less communal, more contemplative — built for stillness and deep recovery. The introvert\'s play. $90 per session or $280/month for twelve visits.',
+       hours:'Daily · By appointment',
+       url:'https://saint.nyc',
+       lat:40.7474,lng:-73.9930,
+       img:'https://www.teethmag.net/wp-content/uploads/2026/02/SL-SAINT-4_5-2.jpg'},
+
+      {id:'nyc23',num:24,name:'The Altar',hood:'Chelsea / Flatiron',type:'sauna',price:'from $65',score:8.2,
+       gf:['50-person sauna','Longevity crowd','Aufguss','Communal'],
+       review:'Fifty-person sauna designed as a ceremonial chamber, cold plunge suites, hyperbaric oxygen, PEMF mats, and Aufguss instructors who understand pacing. Going after the longevity crowd with a genuinely communal angle at 122 Fifth Avenue.',
+       hours:'Daily · Check website for schedule',
+       url:'https://thealtar.com',
+       lat:40.7408,lng:-73.9897,
+       img:'https://one22fifth.wpenginepowered.com/wp-content/uploads/2025/02/Atrium_Renders-1.jpeg'},
+
+      {id:'nyc24',num:25,name:'AIRE Ancient Baths UES',hood:'Upper East Side, Manhattan',type:'thermal',price:'from $150',score:8.5,
+       gf:['Date night','Special occasions','Flotarium','Thermal circuit'],
+       review:'The second NYC AIRE location in a historic former MoMA storage building on the Upper East Side. 9,600 sq ft of candlelit thermal baths plus the signature suspended Flotarium — a saltwater float bath unique to this location. Same silence-forward, candle-heavy approach as Tribeca.',
+       hours:'Daily · Reservation required',
+       url:'https://beaire.com',
+       lat:40.7622,lng:-73.9601,
+       img:'https://beaire.com/sites/default/files/bg_banner_reserva_h.jpg'},
     ],
     upcoming:[
       {id:'nycu1',num:12,name:'Schwet',hood:'Tribeca, Manhattan',type:'upcoming',price:'$150 / 2.5 hrs',score:null,
@@ -979,25 +1003,6 @@ const CITIES = {
        url:'https://www.instagram.com/getschwet',
        lat:40.7193,lng:-74.0075,
        img:'https://framerusercontent.com/images/rG5S8rrqmS6RsKtRaJrujb8FmE0.png'},
-
-      {id:'nycu2',num:13,name:'The Altar',hood:'Chelsea / Flatiron',type:'upcoming',price:'$65 / session',score:null,
-       openWhen:'Early 2026',
-       gf:['50-person sauna','Longevity crowd','$65 / session'],
-       review:'Fifty-person sauna, cold plunge suite, hyperbaric chambers, PEMF mats, and Aufguss instructors who also know how to cook. Going after the longevity crowd with a genuinely communal angle. The Fifth Avenue address positions it correctly.',
-       hours:'122 Fifth Ave, Chelsea/Flatiron',
-       url:'https://www.instagram.com/thealtar_nyc',
-       lat:40.7408,lng:-73.9897,
-       img:'https://one22fifth.wpenginepowered.com/wp-content/uploads/2025/02/Atrium_Renders-1.jpeg'},
-
-      {id:'nycu4',num:15,name:'SAINT',hood:'Chelsea, Manhattan',type:'upcoming',price:'$280/mo · 12 visits',score:null,
-       openWhen:'January 2026',
-       gf:['4 private rooms','Max 3 people','BOND architecture','Solitude'],
-       review:'Four private sauna and ice bath sanctuaries for up to three people, designed by architecture firm BOND. Less communal, more contemplative — built for stillness and deep recovery. The introvert\'s play. If you live nearby, this might be your whole routine.',
-       hours:'242 W 29th St, Chelsea',
-       url:'https://www.instagram.com/saint__nyc',
-       lat:40.7474,lng:-73.9930,
-       img:'https://framerusercontent.com/images/hoN88F3Z7oX9sX2ryWGdHsJRZ5s.png'},
-
 
       {id:'nycu5',num:16,name:'Othership Upper East Side',hood:'Upper East Side, Manhattan',type:'upcoming',price:'TBD',score:null,
        openWhen:'2027',
@@ -1556,8 +1561,10 @@ const VENUE_TAG_OVERRIDES = {
   nyc9:['steam','luxury-bathhouse'],
   nyc10:['steam','luxury-bathhouse'],
   nycu1:['steam','guided-rituals','social-sauna'],
-  nycu2:['guided-rituals','social-sauna'],
   nycu3:['guided-rituals','social-sauna'],
+  nyc22:['private-suite'],
+  nyc23:['guided-rituals','social-sauna'],
+  nyc24:['steam','luxury-bathhouse'],
   nyc12:['steam','luxury-bathhouse'],
   nyc13:['steam','traditional-banya'],
   nyc14:['steam','traditional-banya'],
@@ -1606,11 +1613,12 @@ const OCC = {
   nyc10:['group','recovery'],             // Spa Castle
   nyc11:['solo','recovery'],              // Lift/Floats
   nycu1:['date','scene','meeting'],       // Schwet
-  nycu2:['group','recovery','scene'],     // The Altar
   nycu3:['solo','recovery'],              // Lore Bathing Club
-  nycu4:['date','solo','meeting'],        // SAINT
   nyc20:['solo','recovery'],              // Recoverie
   nyc21:['date','group','scene'],          // Bathhouse Flatiron
+  nyc22:['solo','recovery'],               // SAINT
+  nyc23:['group','recovery','scene'],      // The Altar
+  nyc24:['date','meeting'],                // AIRE Ancient Baths UES
   nycu5:['scene','group','recovery'],     // Othership UES
   nycu6:['group','scene'],                // Reunion Baths
   nycu7:['solo','scene'],                 // Sund

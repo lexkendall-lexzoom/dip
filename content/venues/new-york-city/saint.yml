@@ -1,5 +1,5 @@
 seo:
-  title: "SAINT Preview: Opening, Pricing, What to Know | Dip"
+  title: "SAINT Review: Price, Hours, What to Know | Dip"
   description: Dip review of SAINT in New York City with pricing, hours, and what to expect before booking.
   social_image: 'https://www.teethmag.net/wp-content/uploads/2026/02/SL-SAINT-4_5-2.jpg'
 venue:
@@ -11,10 +11,10 @@ venue:
   hero_image: 'https://www.teethmag.net/wp-content/uploads/2026/02/SL-SAINT-4_5-2.jpg'
   neighborhood: Chelsea, Manhattan
   address: "242 W 29th St, New York, NY 10001"
-  price: $280/mo · 12 visits
-  score: Coming soon
+  price: from $90
+  score: '7.8'
   date_reviewed: February 2026
-  hours: 242 W 29th St, Chelsea
+  hours: Daily · By appointment
   best_for: Private contrast therapy, intimate small-group sessions, solo contemplative recovery.
   website_url: https://saint.nyc
   review: >-
@@ -80,4 +80,4 @@ venue:
   source_urls:
     - https://www.instagram.com/saint__nyc
     - https://www.google.com/maps/search/SAINT+Chelsea+NYC
-  confidence_level: low
+  confidence_level: medium
