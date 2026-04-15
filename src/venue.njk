@@ -24,8 +24,9 @@ permalink: "/{{ item.citySlug }}/{{ item.venue.slug | default(item.fileSlug) }}/
     <meta property="og:description" content="{{ _metaDesc }}" />
     <meta property="og:type" content="article" />
     <meta property="og:url" content="https://dipdays.com/{{ citySlug }}/{{ v.slug | default(item.fileSlug) }}/" />
-    {% if seo.social_image %}<meta property="og:image" content="{{ seo.social_image | assetUrl }}" />{% endif %}
+    <meta property="og:image" content="{{ (seo.social_image | assetUrl) if seo.social_image else 'https://dipdays.com/og-image.png' }}" />
     <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="{{ (seo.social_image | assetUrl) if seo.social_image else 'https://dipdays.com/og-image.png' }}" />
     <!-- PWA -->
     <link rel="manifest" href="/manifest.json"/>
     <meta name="theme-color" content="#0b7c78"/>

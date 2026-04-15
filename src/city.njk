@@ -19,8 +19,9 @@ permalink: "/{{ cityPage.slug }}/"
   <meta property="og:description" content="{{ seo.description | default(pg.intro | truncate(155, true, '') if pg.intro else '') }}" />
   <meta property="og:type" content="article" />
   <meta property="og:url" content="https://dipdays.com/{{ cityPage.slug }}/" />
-  {% if seo.social_image %}<meta property="og:image" content="{{ seo.social_image }}" />{% endif %}
+  <meta property="og:image" content="{{ seo.social_image if seo.social_image else 'https://dipdays.com/og-image.png' }}" />
   <meta name="twitter:card" content="summary" />
+  <meta name="twitter:image" content="{{ seo.social_image if seo.social_image else 'https://dipdays.com/og-image.png' }}" />
   <!-- PWA -->
   <link rel="manifest" href="/manifest.json"/>
   <meta name="theme-color" content="#0b7c78"/>

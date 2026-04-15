@@ -15,8 +15,9 @@ permalink: /cities/
   <meta property="og:description" content="{{ seo.description | default('') }}" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://dipdays.com/cities/" />
-  {% if seo.social_image %}<meta property="og:image" content="{{ seo.social_image }}" />{% endif %}
+  <meta property="og:image" content="{{ seo.social_image if seo.social_image else 'https://dipdays.com/og-image.png' }}" />
   <meta name="twitter:card" content="summary" />
+  <meta name="twitter:image" content="{{ seo.social_image if seo.social_image else 'https://dipdays.com/og-image.png' }}" />
   <!-- PWA -->
   <link rel="manifest" href="/manifest.json"/>
   <meta name="theme-color" content="#0b7c78"/>
