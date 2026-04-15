@@ -10,8 +10,9 @@
   {% if description %}<meta property="og:description" content="{{ description }}"/>{% endif %}
   <meta property="og:type" content="{{ og_type | default('website') }}"/>
   {% if canonical %}<meta property="og:url" content="{{ canonical }}"/>{% endif %}
-  {% if social_image %}<meta property="og:image" content="{{ social_image }}"/>{% endif %}
+  <meta property="og:image" content="{{ social_image | default('https://dipdays.com/og-image.png') }}"/>
   <meta name="twitter:card" content="{{ twitter_card | default('summary') }}"/>
+  <meta name="twitter:image" content="{{ social_image | default('https://dipdays.com/og-image.png') }}"/>
   <!-- PWA -->
   <link rel="manifest" href="/manifest.json"/>
   <meta name="theme-color" content="#0b7c78"/>
