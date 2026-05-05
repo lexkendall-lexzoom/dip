@@ -32,19 +32,29 @@ const SINGLE_VENUE = (process.argv.find(a => a.startsWith('--venue=')) || '').re
 let GOOGLE_KEY    = '';
 let ANTHROPIC_KEY = '';
 
-// ── Vault ────────────────────────────────────────────────────────────────────
+// ── Secrets ──────────────────────────────────────────────────────────────────
 
 /**
- * Connect to Supabase and fetch GOOGLE_PLACES_API_KEY + ANTHROPIC_API_KEY
- * from the vault.decrypted_secrets view.
- * Requires SUPABASE_URL and SUPABASE_SERVICE_KEY env vars.
+ * Load GOOGLE_PLACES_API_KEY and ANTHROPIC_API_KEY.
+ * Prefers direct env vars; falls back to Supabase Vault if not set.
  */
-async function loadSecretsFromVault() {
+async function loadSecrets() {
+  const googleKeyEnv    = process.env.GOOGLE_PLACES_API_KEY;
+  const anthropicKeyEnv = process.env.ANTHROPIC_API_KEY;
+
+  if (googleKeyEnv && anthropicKeyEnv) {
+    return {
+      GOOGLE_PLACES_API_KEY: googleKeyEnv,
+      ANTHROPIC_API_KEY:     anthropicKeyEnv,
+    };
+  }
+
+  // Fall back to Supabase Vault
   const supabaseUrl        = process.env.SUPABASE_URL;
   const supabaseServiceKey = process.env.SUPABASE_SERVICE_KEY;
 
-  if (!supabaseUrl)        throw new Error('Missing env var: SUPABASE_URL');
-  if (!supabaseServiceKey) throw new Error('Missing env var: SUPABASE_SERVICE_KEY');
+  if (!supabaseUrl)        throw new Error('Missing env var: SUPABASE_URL (needed for Vault fallback)');
+  if (!supabaseServiceKey) throw new Error('Missing env var: SUPABASE_SERVICE_KEY (needed for Vault fallback)');
 
   const { createClient } = await import('@supabase/supabase-js');
   const supabase = createClient(supabaseUrl, supabaseServiceKey, {
@@ -302,9 +312,8 @@ async function enrichVenue(filePath) {
 // ── Main ─────────────────────────────────────────────────────────────────────
 
 async function main() {
-  // Load secrets from Supabase Vault before touching any venue
-  process.stdout.write('Loading secrets from Supabase Vault… ');
-  const secrets = await loadSecretsFromVault();
+  process.stdout.write('Loading secrets… ');
+  const secrets = await loadSecrets();
   GOOGLE_KEY    = secrets.GOOGLE_PLACES_API_KEY;
   ANTHROPIC_KEY = secrets.ANTHROPIC_API_KEY;
   console.log('✓');
