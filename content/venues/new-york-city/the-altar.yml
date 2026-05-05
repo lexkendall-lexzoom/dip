@@ -24,10 +24,18 @@ venue:
     scale, and that's the genuinely novel element. If they execute, this matters. If they don't, it's another beautiful
     rendering.
   gallery_images:
+    - "https://one22fifth.wpenginepowered.com/wp-content/uploads/2025/02/IV_Renders-Crop.jpg"
     - "https://one22fifth.wpenginepowered.com/wp-content/uploads/2025/02/Shower_Render-Crop.jpg"
+    - "https://122fifthave.com/wp-content/uploads/2025/02/Atrium_Renders-1.jpeg"
+    - "https://cdn.sanity.io/images/nollro5b/production/ce27fde7259c682e44f2f8ccfc7feb85c0af3eaa-4919x3473.jpg"
+    - "https://cdn.sanity.io/images/nollro5b/production/68e0fc0ef27dd82709982884084752c2e3c45ac4-5602x3735.jpg"
+    - "https://cdn.sanity.io/images/nollro5b/production/4591097bb1042241c354e7c6aa325ef3f107ccef-3584x2376.jpg"
+    - "https://cdn.sanity.io/images/nollro5b/production/588b8c21d2424a739e4dc9109ffddaa4e22ec29c-5602x3735.jpg"
+    - "https://cdn.sanity.io/images/nollro5b/production/5d2bde8e98929e7cdf52ead4386376a78627a083-5484x3656.jpg"
   image_sources:
     - website
-  image_confidence: low
+    - the-altar.com
+  image_confidence: high
   one_line_verdict: >-
     A fifty-person ceremonial sauna with longevity modalities and Aufguss programming, opening 2026 on Fifth Avenue. The most ambitious bathhouse concept currently in development in NYC.
   editorial_overview: |
