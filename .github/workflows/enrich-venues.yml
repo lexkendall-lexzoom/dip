@@ -22,6 +22,9 @@ jobs:
     name: Fetch Google Places + compute scores
     runs-on: ubuntu-latest
 
+    env:
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
     permissions:
       contents: write   # needed to commit updated YAMLs back to the repo
 
